@@ -1,10 +1,10 @@
 # Raxx原版：V06–V08已经预填的范围
 
-由extract_raxx_variables.py从冻结原版及名字库生成，以下为原始预选，不是本次两个BD的专属名单。作者要求玩家检查不需要的武器／副手、职业和词缀，T7素材池保持较宽；本页不裁剪名单，也不生成filter。
+由extract_raxx_variables.py从冻结原版及名字库生成，以下为原始预选，仅作历史对照。当前[新基底](BASE_TEMPLATE.md)已把双／多T7与阶段单T7改为全1156项词缀范围，原R60／61合成一条；本页不代表当前配置。
 
 三条均启用、没有角色等级退出条件、不限具体subtype。原版出处：[冻结XML](../sources/Raxx%27s%20S5%20Ultimate%20Filter%20v1.0.txt)；填写原则与Strict候选见[变量审阅结论](STRICT_VARIABLE_REVIEW.md#equipment-purpose)。
 
-## V06／R48｜双崇高的装备范围
+## V06／R48｜Double Exalts (UNCHECK UNWANTED WPN & OH TYPES)
 
 装备范围：头盔、胸甲、腰带、靴子、手套、护身符、戒指、遗物、副手法器、盾牌、箭袋、双手斧、双手锤、双手长矛、双手长杖、双手剑、弓、单手斧、单手锤、权杖、单手剑、魔杖、匕首；底材不限／未选。
 
@@ -636,7 +636,7 @@
 | 1081 | 格挡时获得急速几率与急速效果 | Chance to gain Haste on Block and Haste Effect |
 | 1082 | 增加格挡效率与格挡时承受物理伤害总降 | Added Block Effectiveness and Less Physical Damage Taken on Block |
 
-## V07／R60｜宽T7武器／副手素材
+## V07／R60｜Tier 7 Wpns/OHs (CHECK WPN/OH TYPES & DMGS)
 
 装备范围：单手斧、单手锤、权杖、单手剑、魔杖、匕首、弓、副手法器、盾牌、箭袋、双手斧、双手锤、双手长矛、双手长杖、双手剑；底材不限／未选。
 
@@ -687,7 +687,7 @@
 | 7 | 虚空抗性 | Void Resistance |
 | 85 | 击中时施加感电几率 | Chance to Shock on Hit |
 
-## V08／R61｜宽T7护甲／饰品素材
+## V08／R61｜Tier 7 Armors (CHECK AFFIXES)
 
 装备范围：头盔、胸甲、腰带、靴子、手套、护身符、戒指、遗物；底材不限／未选。
 

@@ -1,5 +1,10 @@
 {
   "passed": true,
+  "active_template_loaded": true,
+  "template_rule_count": 162,
+  "template_full_affix_ids": 1156,
+  "stage_rule_requires_manual_disable": true,
+  "c1_c3_targets_equal_by_build_and_type": true,
   "variable_groups": 24,
   "blue_instructions_covered": 56,
   "strict_rules_recorded": 271,
@@ -44,5 +49,6 @@
   "user_reviewed_flay_idol_layers": 4,
   "filters_and_source_bytes_unchanged": true,
   "filter_generated": false,
+  "final_bd_filter_generated": false,
   "game_execution_tested": false
 }

@@ -1,12 +1,12 @@
 # LE-filter：Raxx 基底与双 BD 收集过滤器
 
-当前阶段：**以Raxx原版收集设计为准，Strict只用于提取需要填写的BD情报**。已抽出24组变量，完成提取程序并运行，交付[变量总表](docs/RAXX_VARIABLES.md)与[文字审阅结论](docs/STRICT_VARIABLE_REVIEW.md)。本轮没有生成或修改最终filter，等待审阅变量、候选与未决项。
+当前基底：**[LE Base Template v1](templates/LE-base-v1.xml)**，以Raxx原版为源，落实用户确认的T7四类收集策略。规则与玩家待办见[新基底说明](docs/BASE_TEMPLATE.md)。Strict仍只用于提取需要填写的BD情报；两个BD的最终filter尚未生成。
 
-先读[本轮审阅结论](docs/STRICT_VARIABLE_REVIEW.md)，再查[原版变量及保留门槛](docs/RAXX_VARIABLES.md)与[工作memo](docs/WORKING_MEMO.md)。当前默认Flay为主、Skeleton为副，共享按主，两者同等收集。旧187条XML及其说明保留作历史试制，包含Strict策略移植，**不作为本轮已认可的最终方案**；动态勾选界面尚未实施。
+先读[新基底说明](docs/BASE_TEMPLATE.md)，再查[BD情报审阅结论](docs/STRICT_VARIABLE_REVIEW.md)、[24组变量与当前门槛](docs/RAXX_VARIABLES.md)及[工作memo](docs/WORKING_MEMO.md)。当前默认Flay为主、Skeleton为副，共享按主，两者同等收集；通用模板尚未填写这些目标。旧187条XML及其说明保留作历史试制，包含Strict策略移植，**不作为本轮已认可的最终方案**；动态勾选界面尚未实施。
 
-[V05–V10的用途与过渡范围](docs/STRICT_VARIABLE_REVIEW.md#equipment-purpose)已展开：最佳T7、双崇高、宽T7制作储备与Havoc各有收集目的；只有V10的T6补收在85级退出，双T6仍可能由V06保留。
+[V05–V10的用途与过渡范围](docs/STRICT_VARIABLE_REVIEW.md#equipment-purpose)已更新：对应部位BD目标T7 → 任意双／多T7 → BD目标不限阶数＋T7 → 额外单T7阶段兜底。最后一类只有一条、默认开启，玩家阶段结束后手动关闭；关闭它保留前三类。原双T6常驻改为双／多T7，原V10的T6补收仍在85级退出。
 
-[原版宽池完整名单](docs/RAXX_DEFAULT_EQUIPMENT_POOLS.md)列出已经预填的V06／V07／V08范围：623／42／343项。待审阅指按BD裁剪，不是重新发明一份原版没有的范围。
+[原版宽池完整名单](docs/RAXX_DEFAULT_EQUIPMENT_POOLS.md)保留623／42／343项作为历史对照。新基底的全量池使用冻结词库全部1156个ID，装备范围保留原23类普通装备；双／多T7和额外单T7阶段池不再按BD裁剪。C1／C3的目标仍按BD与部位填写。
 
 最新神像修正见[Flay神像审阅](docs/FLAY_IDOL_REVIEW.md)：腐化不凑普通目标数量，Flay按用户指定记录1项候选／2项组合毕业四层。普通目标与腐化参考分别输出，原Strict保留供追溯。
 
@@ -16,20 +16,26 @@
 
 建议先读 [中文说明](docs/FILTER_GUIDE.md)和 [玩家待办清单](docs/PLAYER_TODO.md)，再按需要查 [163条完整规则索引](docs/RULE_INDEX.md)。视频讲解与当前文件的差异见 [视频与版本核对](docs/VIDEO_AND_VERSIONS.md)。
 
-这个基底预设由玩家完成待办：蓝字及功能规则名的大写文字说明要选哪些需求。当前文件的第29条默认关闭；第81/82/83条存在空选择，第99–126条也有空词缀列表。它们是待配置入口；填写或明确关闭之前，空选择可能扩大匹配范围。后续生成已配置、可复制的filter时可删除56条蓝色说明，将说明留在文档里。
+这个基底预设由玩家完成待办：C1／C3当前仍是Raxx目标示例，要用Strict部位目标替换。原R29职业隐藏保持关闭；原R81/82/83和R99–126等仍有未填入口，填写或明确关闭之前，空选择可能扩大匹配范围。R指冻结原版，B指新基底Order+1；原R61已并入阶段规则，后续编号发生变化。生成已配置、可复制filter时可删除56条蓝色说明，将说明留在文档里。
 
 ## 阅读与资料入口
 
 | 文件 | 用途 |
 |---|---|
 | [PLAN.md](PLAN.md) | 本阶段计划、验收条件与范围 |
+| [BASE_TEMPLATE.md](docs/BASE_TEMPLATE.md) | 当前四类收集规则、范围、退出方式和玩家待办 |
+| [LE-base-v1.xml](templates/LE-base-v1.xml) | 后续填写BD使用的162条可复现基底模板 |
+| [base-manifest.json](templates/base-manifest.json) | 模板哈希、原R／当前B映射、四类规则和全池范围 |
+| [scripts/build_base_template.py](scripts/build_base_template.py) | 从不变的原版重建用户确认的新基底 |
+| [scripts/verify_base_template.py](scripts/verify_base_template.py) | 核对变更边界、四类匹配和阶段关闭后的保护 |
+| [analysis/base-template-validation.json](analysis/base-template-validation.json) | 结构、全池与15个有限T7匹配案例的检查结果 |
 | [FILTER_GUIDE.md](docs/FILTER_GUIDE.md) | 用人能读懂的语言解释整套过滤器 |
 | [PLAYER_TODO.md](docs/PLAYER_TODO.md) | 蓝字和大写文字要求玩家完成的配置、可选功能与进度调整 |
-| [RAXX_VARIABLES.md](docs/RAXX_VARIABLES.md) | 当前24组填空／可选变量、原始默认值和保留门槛 |
+| [RAXX_VARIABLES.md](docs/RAXX_VARIABLES.md) | 当前24组变量、实际模板默认值及原R／当前B入口 |
 | [STRICT_VARIABLE_REVIEW.md](docs/STRICT_VARIABLE_REVIEW.md) | 当前Strict情报与变量匹配的文字结论，供Review |
 | [FLAY_IDOL_REVIEW.md](docs/FLAY_IDOL_REVIEW.md) | 神像腐化机制、普通目标分层及必须／可选词缀表达 |
 | [STRICT_IDOL_CLASSIFICATION.md](docs/STRICT_IDOL_CLASSIFICATION.md) | 自动提取Strict神像ID并区分非腐化／腐化，附来源 |
-| [analysis/raxx-variable-extraction.json](analysis/raxx-variable-extraction.json) | 变量候选、R入口、全部271条Strict条件与未决映射 |
+| [analysis/raxx-variable-extraction.json](analysis/raxx-variable-extraction.json) | 当前模板、变量候选、R／B入口、全部271条Strict条件与未决映射 |
 | [scripts/extract_raxx_variables.py](scripts/extract_raxx_variables.py) | 本轮离线提取程序，只输出数据和文档 |
 | [COMBINED_FILTER_GUIDE.md](docs/COMBINED_FILTER_GUIDE.md) | 历史试制的颜色、用途与待办 |
 | [RULES_REVIEW.md](docs/RULES_REVIEW.md) | 历史试制187条规则的中文条件、门槛、启用状态和提示 |
@@ -54,6 +60,8 @@
 
 ## 基底版本
 
+- 当前使用[LE Base Template v1](templates/LE-base-v1.xml)：162条，103启用、59关闭，仍含56条蓝色说明；原目标预填仅作示例，尚未配置为BD成品。
+- 下列163条事实描述冻结的Raxx原文；原文件保持字节不变。
 - [用户提供的上游文件](https://github.com/raxxanterax/GAMING/blob/main/Raxx%27s%20S5%20Ultimate%20Filter%20v1.0.txt)固定到提交 `57498b0901a7c099efdf931923c65271fdfdb993`。
 - 本地原文：[Raxx's S5 Ultimate Filter v1.0.txt](sources/Raxx%27s%20S5%20Ultimate%20Filter%20v1.0.txt)。扩展名为 `.txt`，内容是可导入的 Last Epoch XML。
 - 文件内部名称为 `Raxx's S5 Universal Filter`，描述为 `1.5 Circle of Fortune`，格式版本为9。
@@ -62,13 +70,15 @@
 
 ## 复现
 
-安装 Python 3 后，在仓库根目录重建本轮变量和审阅结论：
+安装 Python 3 后，在仓库根目录重建当前基底、检查并更新变量审阅结论：
 
 ```powershell
+python -X utf8 scripts/build_base_template.py
+python -X utf8 scripts/verify_base_template.py
 python -X utf8 scripts/extract_raxx_variables.py
 ```
 
-只使用标准库与已提交资料，不需要网络、.cache或Downloads。检查原版／Strict哈希、56条蓝字覆盖、38份部位池、20种目标及已有XML字节不变；记录全部271条Strict。它不生成filter，不从Strict移植门槛、进度或开关。
+只使用标准库与已提交资料，不需要网络、.cache或Downloads。模板构建只落实用户确认的四类；验证162条结构、1156全池、原版其他规则保持及15个有限案例。提取检查原版／Strict／模板哈希、56条蓝字覆盖、38份部位池、C1／C3的19份部位目标一致、20种暗金目标及XML字节不变，记录全部271条Strict。尚未生成两个BD成品或做客户端实测。
 
 以下命令用于**历史试制**，本轮不要执行：
 

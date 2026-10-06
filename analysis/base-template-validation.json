@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "rule_count": 162,
+  "full_affix_ids": 1156,
+  "unrelated_source_rules_unchanged": 141,
+  "bounded_t7_module_cases": [
+    {
+      "case": "target T7",
+      "expected": "C1",
+      "actual": "C1"
+    },
+    {
+      "case": "two unrelated T7",
+      "expected": "C2",
+      "actual": "C2"
+    },
+    {
+      "case": "three unrelated T7",
+      "expected": "C2",
+      "actual": "C2"
+    },
+    {
+      "case": "target low tier plus T7",
+      "expected": "C3",
+      "actual": "C3"
+    },
+    {
+      "case": "unrelated single T7",
+      "expected": "C4",
+      "actual": "C4"
+    },
+    {
+      "case": "phase off removes fallback",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "case": "phase off keeps target",
+      "expected": "C1",
+      "actual": "C1"
+    },
+    {
+      "case": "phase off keeps multi",
+      "expected": "C2",
+      "actual": "C2"
+    },
+    {
+      "case": "phase off keeps target plus T7",
+      "expected": "C3",
+      "actual": "C3"
+    },
+    {
+      "case": "corrupted zero FP still kept",
+      "expected": "C3",
+      "actual": "C3"
+    },
+    {
+      "case": "two IDs absent from old 623",
+      "expected": "C2",
+      "actual": "C2"
+    },
+    {
+      "case": "single ID absent from old broad pools",
+      "expected": "C4",
+      "actual": "C4"
+    },
+    {
+      "case": "double T6 has no permanent T7 protection",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "case": "idols are outside equipment scope",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "case": "target T7 wins even with another T7",
+      "expected": "C1",
+      "actual": "C1"
+    }
+  ],
+  "checks_whole_configured_filter": false,
+  "game_execution_tested": false
+}

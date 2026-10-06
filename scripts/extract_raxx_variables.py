@@ -15,10 +15,10 @@ VARIABLES = [
     ("V03", "中低潜能名单的取舍", [13, 14], [9, 10, 11], "保留／删除哪些名字；潜能门槛不变", ["planner"]),
     ("V04", "职业隐藏", [29], [25, 26, 27, 28], "排除职业req、启用状态、是否移动位置", []),
     ("V05", "各部位BIS目标", list(range(38, 48)), list(range(30, 36)), "装备类型、目标词缀；穿戴用途的底材／遗物类型", ["tier7"]),
-    ("V06", "双崇高的装备范围", [48], [36], "武器／副手类型；职业去留与V04协调", ["tier7"]),
-    ("V07", "宽T7武器／副手素材", [60], [49, 51, 52, 53, 54, 56, 57], "装备类型、宽词缀池；不加制作素材底材限制", ["tier7"]),
-    ("V08", "宽T7护甲／饰品素材", [61], [49, 51, 56, 57], "宽词缀池；不是将BIS池直接复制到宽池", ["tier7", "class_t7"]),
-    ("V09", "Havoc素材", [62], [58, 59], "装备类型、第一份宽T7池、第二份好词缀池", ["havoc"]),
+    ("V06", "双／多T7全量保护", [48], [36], "全量词缀与原23类装备；不按BD目标裁剪", []),
+    ("V07", "单T7阶段全量收集", [60], [49, 51, 52, 53, 54, 56, 57], "默认开启的一条阶段规则；玩家手动关闭", []),
+    ("V08", "原护甲宽池入口（已并入V07）", [61], [49, 51, 56, 57], "原R61仅追溯；新基底不再有独立规则", []),
+    ("V09", "BD目标不限阶数＋T7", [62], [58, 59], "按BD／装备类型绑定目标池；目标不限阶数、另有全池T7", ["tier7"]),
     ("V10", "T6目标素材", [63, 64], [49, 50, 51, 52, 53, 54, 55], "装备类型与更挑选的词缀池；保留84级上限", ["tier6"]),
     ("V11", "实验词缀", [68, 69], [65, 66, 67], "R68是否关闭；R69的目标词缀与是否启用", ["experimental"]),
     ("V12", "冠军词缀", [70], [65, 66], "目标词缀与是否启用；默认关闭", ["champion"]),
@@ -44,25 +44,13 @@ NOTES = {
         "原设计：优先标记各部位最想要的T7词缀，供直接穿戴或给暗金制作传奇。R38–47只要求所选目标中至少1条T≥7，没有角色等级上限。这里的BIS是值得查看的候选，不保证整件装备毕业；另外几条词缀、底材和制作潜能仍需查看。"
         "\n\n阶段：面向终局目标，过渡期掉落也收。只要最佳T7有价值，即使其他属性不理想，也可能值得留下作为制作素材。"
         "\n\n填写：Strict部位T7池提供候选，仍须按BD和装备类型绑定。武器／副手手位、直接穿戴底材需确认；作者仅建议穿戴用途选具体底材，传奇制作素材不据暗金底材反推同一subtype。"),
-    "V06": (
-        "原设计：额外保护双崇高装备，避免只按一条BD最佳T7筛选而漏掉多条高阶属性的候选。R48在原623项宽池中要求至少2条T≥6，覆盖预选23种装备类型，没有角色等级上限。T6＋T6、T7＋T6、T7＋T7均满足这个词缀门槛；合计比较为ANY，保存值14不构成要求。"
-        "\n\n阶段：终局仍保留的高阶候选，也可能在过渡期直接使用。两条高阶不保证两条都是当前BD最佳属性，也不保证整件毕业；这一层在85级后继续生效，不能与V10一起视为已退出。"
-        "\n\n填写：Strict只提供两BD出现的装备类型供裁剪，职业去留与V04协调。保留Raxx的宽池与至少两条T6门槛，不缩成两条BD目标，也不导入Strict的T7＋T6／双T7门槛。"),
-    "V07": (
-        "原设计：较宽地收集T7武器／副手，存入仓库供后续制作。R60在原42项池中要求至少1条T≥7，覆盖预选15种武器／副手类型，不限具体底材，没有角色等级上限。它比V05的最佳词缀目标宽，命中不代表已经适合直接穿戴。"
-        "\n\n阶段：终局制作储备，过渡期也可开始积累。作者强调T7池选较多可用词缀，并且制作素材不选具体subtype；不是把T7出现在哪个属性上都视为BD毕业。"
-        "\n\n填写：Strict能证明BD所用类型及窄目标池，不足以替代原宽池。原42项也不等于游戏全部词缀；需要补哪些、保留哪些仍待审阅，不自动用V05覆盖。"),
-    "V08": (
-        "原设计：与V07相同的T7制作储备，覆盖护甲／饰品／遗物。R61在原343项池中要求至少1条T≥7，覆盖预选8种装备类型，不限具体底材，没有角色等级上限。V07与V08按装备类别拆开，并非两个成长阶段。"
-        "\n\n阶段：终局制作储备，过渡期也收；一条宽池T7说明值得留作候选，不代表整件毕业。"
-        "\n\n填写：Strict部位目标与职业T7目标可补充情报，不能把整个R61改成BIS窄池或Strict的Class Specific规则。原宽池仍需审阅。"),
-    "V09": (
-        "原设计：收集可以尝试用Havoc把T7阶数洗到好词缀上的材料。R62要求同时满足：原491项宽池至少1条T≥7；原10项好词缀池至少命中1条、阶数不限；物品未腐化且属于预选23种装备类型。没有角色等级上限。好词缀不必已经是T7，同一条目标T7也可能同时满足两份条件，并非必须两条不同词缀。"
-        "\n\n阶段：通往终局的制作材料候选，尚不是制作成功的成品。[官方符文说明](https://support.lastepoch.com/hc/en-us/articles/46361877750043-Runes-and-Glyphs)规定Havoc在有4条未封印词缀的崇高物品上打乱未封印词缀阶数；原R62没有检查4条未封印或制作潜能，所以显示后仍需核对能否实际制作。"
-        "\n\n填写：Strict分别提供Wanted好词缀池与1156项通用T7池，后者不能当作BD好词缀。保留Raxx两份条件，不自动新增Strict的FP1／52或未封印门槛，也不改变原规则位置。"),
+    "V06": "用户确认的C2：原R48改为全量词缀中至少2条T≥7，原23类装备不限BD目标、没有角色等级退出。原623项池扩到冻结词库全部1156项，双T6／T7＋T6不再由此常驻保护。本层无需从Strict填写目标池。",
+    "V07": "用户确认的C4：原R60与R61合成一条，覆盖原23类装备及全1156项词缀，至少1条T≥7，默认启用、没有角色等级退出，由玩家阶段结束后手动关闭。它位于C1／C2／C3之后，实际兜底没有BD目标的单T7；关闭它保留前三类。本层不从Strict取窄池。",
+    "V08": "原R61已移除，其护甲／饰品／遗物范围并入V07的一条全类型阶段收集。V08编号仅用于追溯原版，不再是当前基底需要填写的独立入口。原42／343项池只作历史参考。",
+    "V09": "用户确认的C3：对应装备类型至少1条BD目标、阶数不限，同时全池至少1条T≥7。Strict部位T7规则只提供与V05相同的目标名单，不沿用其T7门槛；按BD／装备类型分别绑定。原R62的10项只是模板示例，必须替换；Wanted/Havoc全局混池保留在原Strict记录中，不取代部位绑定。新基底不加FP、未封印计数或未腐化限制，先匹配C1／C2，再由本层保护目标低阶＋非目标单T7。保留不保证可以Havoc制作。",
     "V10": (
         "原设计：T7尚未充裕时，补收更挑选的目标T6素材。R63／64要求至少1条所选目标T≥6，角色0–84级，85级起不再匹配；原武器／副手池16项，其他装备池338项，不限具体底材。门槛是T6及以上，并非恰好T6；T7往往先被前面的规则显示。"
-        "\n\n阶段：作者明确安排的过渡补充收集。85级是Raxx收紧拾取的策略，不是T6装备失去价值的游戏界线，也不要求玩家在85级换掉身上的T6。V06双崇高、实验物品或碎片等其他显示路径仍可能保留T6，不能据此断言85级后所有T6被隐藏。"
+        "\n\n阶段：作者明确安排的过渡补充收集。85级是Raxx收紧拾取的策略，不要求玩家换掉身上的T6。新V06只保护双／多T7，双T6不再由它常驻保护；实验物品或碎片等其他显示路径仍可能保留T6。V07单T7阶段层没有85级自动退出。"
         "\n\n填写：取Strict的类型／词缀，保留Raxx的0–84级条件；Strict的全等级收集不转移。T6也属于崇高，传奇制作的材料条件未限定只能T7，符合其他制作要求的T6也可使用，见[官方稀有度说明](https://support.lastepoch.com/hc/en-us/articles/46362011564187-Rarity)与[传奇制作说明](https://support.lastepoch.com/hc/en-us/articles/46361924310555-Legendary-Items)。"),
     "V11": "找到实验目标不等于本轮已启用R69。R68原本保留所有预选的稀有崇高实验物品，可选择关闭；不默认缩成BD的两项。两规则没有单独的实验词缀T6／T7门槛。",
     "V12": "关闭的通用Champion规则只能作为参考，不能证明两个BD需要全部冠军词缀。",
@@ -180,7 +168,8 @@ def gate_text(row):
 
 
 def main():
-    protected = sorted([*ROOT.glob("filters/*.xml"), ROOT / "sources/Raxx's S5 Ultimate Filter v1.0.txt", *ROOT.glob("sources/builds/maxroll-*-strict.xml")])
+    active = read_json("templates/base-manifest.json")
+    protected = sorted([*ROOT.glob("filters/*.xml"), ROOT / active["file"], ROOT / "sources/Raxx's S5 Ultimate Filter v1.0.txt", *ROOT.glob("sources/builds/maxroll-*-strict.xml")])
     hashes_before = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in protected}
     manifest, strict = read_json("sources/manifest.json"), read_json("sources/builds/maxroll-strict-manifest.json")
     def frozen(spec):
@@ -190,6 +179,9 @@ def main():
         return ET.fromstring(raw)
     base_nodes = sorted(frozen(manifest["baseline"]).find("rules"), key=lambda r: int(r.findtext("Order")))
     base = {i: inspect_rule(r) for i, r in enumerate(base_nodes, 1)}
+    template_nodes = sorted(frozen(active).find("rules"), key=lambda r: int(r.findtext("Order")))
+    current = {r: (b, inspect_rule(node)) for b, (r, node) in enumerate(zip(active["source_rule_order"], template_nodes, strict=True), 1)}
+    assert active["source"]["sha256"] == manifest["baseline"]["sha256"]
     ref = read_json("sources/game-reference.json")
     supplement = read_json(strict["reference_supplement"])
     for section in ["affixes", "uniques"]:
@@ -231,10 +223,8 @@ def main():
     variables = []
     for vid, title, slots, instructions, fields, families in VARIABLES:
         matches = [r for r in evidence if r["family"] in families]
-        if vid in {"V07", "V23"}:
+        if vid == "V23":
             matches = [r for r in matches if set(r["types"]) & set(base[60]["types"])]
-        if vid == "V08":
-            matches = [r for r in matches if r["family"] == "class_t7" or set(r["types"]) & set(base[61]["types"])]
         candidates = []
         for row in matches:
             ids = sorted(set(i for pool in row["affix_pools"] for i in pool))
@@ -251,6 +241,7 @@ def main():
                 selected = [i for i in selected if flags["is_set_item"][str(i)] == (vid == "V02")]
             target_slots = destinations(vid, slots, row)
             candidates.append({"build": row["build"], "x": row["x"], "enabled_in_source": row["enabled"], "candidate_raxx_slots": target_slots, "mapping_requires_review": vid in {"V05", "V19"} and len(target_slots) > 1, "types": row["types"], "subtypes": row["subtypes"], "affix_ids": ids, "affix_pools": row["affix_pools"] if vid not in {"V06", "V15", "V22", "V23"} else [], "unique_ids": selected})
+            candidates[-1]["candidate_template_slots"] = [current[n][0] for n in target_slots if n in current]
             if vid in {"V19", "V21"}:
                 classified = split_affixes(ids, flags["special_affix_type"])
                 candidates[-1]["corrupted_affix_ids"] = classified["corrupted_affix_ids"]
@@ -258,12 +249,15 @@ def main():
                 candidates[-1]["count_scope"] = "ordinary_target_affixes_only; corruption_status_unrestricted"
         variables.append({"id": vid, "title": title, "raxx_slots": slots, "instruction_slots": instructions, "editable_fields": fields,
                           "instruction_texts": {str(n): base[n]["name"] for n in instructions},
+                          "template_instruction_texts": {str(current[n][0]): current[n][1]["name"] for n in instructions if n in current},
+                          "template_slots": {str(n): current[n][0] for n in slots if n in current},
+                          "template_default_overrides": {str(current[n][0]): current[n][1] for n in slots if n in current and current[n][1] != base[n]},
                           "strict_families": families, "baseline_defaults": {str(n): base[n] for n in slots}, "evidence": candidates,
                           "status": "有启用来源候选，待审阅" if any(c["enabled_in_source"] for c in candidates) else "仅关闭来源参考，不自动采用" if candidates else "Strict未给出可直接填写的值", "interpretation": NOTES[vid]})
         if vid == "V02":
             variables[-1]["status"] = "两份目标名单均未发现套装；保留R16原预设"
-        elif vid in {"V07", "V08"}:
-            variables[-1]["status"] = "类型／目标已提取；宽素材池不能由Strict窄池直接决定"
+        elif vid in {"V06", "V07", "V08"}:
+            variables[-1]["status"] = {"V06": "用户确认：双／多T7全量常驻", "V07": "用户确认：一条全量阶段规则，玩家手动关闭", "V08": "已并入V07，不再填写"}[vid]
         elif vid in {"V22", "V23"}:
             variables[-1]["status"] = "仅有终局类型／底材参考；开荒证据缺失"
         elif vid in {"V16", "V18"}:
@@ -299,6 +293,8 @@ def main():
     def tier_map(tier):
         return {(r["build"], tuple(r["types"]), tuple(r["subtypes"])): sorted(r["affix_pools"][0]) for r in evidence if r["family"] == tier and r["enabled"]}
     tier_pools_equal = tier_map("tier6") == tier_map("tier7")
+    targets = {v["id"]: {(c["build"], tuple(c["types"]), tuple(c["subtypes"])): c["affix_ids"] for c in v["evidence"] if c["enabled_in_source"]} for v in variables if v["id"] in {"V05", "V09"}}
+    assert targets["V05"] == targets["V09"] and len(targets["V05"]) == 19
     blue = {n for n, r in base.items() if base_nodes[n - 1].findtext("color") == "12" and not r["enabled"]}
     fixed_instructions = {1, 2, 3, 4, 5, 6, 7, 17, 18}
     covered = fixed_instructions | {n for v in variables for n in v["instruction_slots"]}
@@ -311,57 +307,59 @@ def main():
     assert all(c["candidate_raxx_slots"] for v in variables for c in v["evidence"]), "Every candidate needs a Raxx input destination"
     assert len(idol_layers) == 4 and [c["affix_ids"] for c in idol_layers] == [[843, 854], [843, 854], [876, 886], [876, 886]]
     assert all(flags["special_affix_type"][str(i)] != 6 for v in variables if v["id"] in {"V19", "V21"} for c in v["evidence"] for i in c["affix_ids"])
-    result = {"stage": "Raxx variables and Strict evidence only; no output filter", "baseline": manifest["baseline"], "strict_inputs": strict["inputs"],
+    result = {"stage": "Active reusable base template and Strict evidence; no final BD filter", "baseline": manifest["baseline"], "active_template": active, "strict_inputs": strict["inputs"],
               "reference_files_sha256": {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in ["sources/game-reference.json", strict["reference_supplement"], "sources/builds/review-reference.json", "sources/builds/strict-variable-reference.json"]},
               "roles": {"main": "flay-mana-lich", "secondary": "skeleton-necromancer", "shared": "main", "role_assignment_is_default": True},
-              "variables": variables, "strict_rules": evidence, "target_ids": unique, "target_union": union, "r15_missing_targets": missing, "tier6_tier7_target_pools_equal": tier_pools_equal,
+              "variables": variables, "strict_rules": evidence, "target_ids": unique, "target_union": union, "r15_missing_targets": missing, "tier6_tier7_target_pools_equal": tier_pools_equal, "c1_c3_targets_equal_by_build_and_type": True,
               "user_reviewed_flay_idol_layers": idol_layers,
               "fixed_instruction_slots": sorted(fixed_instructions), "unmodified_files_sha256": hashes_before}
     catalog = [
-        "# Raxx原版：需要填写或审阅的变量", "",
-        "由extract_raxx_variables.py读取冻结原版后生成。R编号=原版Order+1。本表只登记变量和原始默认值，没有给出最终filter。", "",
-        "## 本轮保留的原版收集策略", "",
+        "# 新基底：需要填写或审阅的变量", "",
+        "当前基底为[LE Base Template v1](BASE_TEMPLATE.md)。R编号追溯冻结原版，B编号=新模板Order+1。V编号保留以便追溯；T7四类以C1→C2→C3→C4顺序匹配。本表读取真实新模板，未生成两个BD最终filter。", "",
+        "## 当前基底收集策略", "",
         "1. 稀有共通暗金：R15原名单143项保留，0LP也留。",
         "2. BD关联暗金：把目标名字补入同一个R15名单，0LP也留；不新增BD独立LP分层。",
         "3. 高潜能暗金：R12不限制名字，LP3／WW20起；R13／14仍用原名单与LP2／WW17、LP1／WW14门槛。",
         "4. 传奇、套装与资源：R8全部传奇、R16需要的套装、R19–24资源沿用原版。",
-        "5. 装备：BIS目标与宽T7制作素材分开；双崇高至少两条T6且没有等级退出；只有R63／64的T6过渡补充收集在85级退出。",
+        "5. 装备：BD目标T7、双／多T7全量、BD目标不限阶数＋T7、额外单T7阶段全量四类。阶段层默认开启且由玩家手动关闭；双T6不再由原R48常驻保护，原R63／64的T6过渡层仍在85级退出。",
         "6. 神像：BIS默认至少两项；过渡神像分别90／75级退出；祭坛R127至少一项、阶数不限。",
         "7. 早期腐化：R75只收已选腐化属性、角色0–59级；不添加全等级宽松腐化分支。",
         "8. R37的T8池与R163最终隐藏沿用原版，本轮不扩池或增加规则。", "",
-        "## 变量总表", "", "| 变量 | 填写内容 | R入口 | Strict能提供的情报 |", "|---|---|---|",
-        *[f"| {v['id']} {v['title']} | {v['editable_fields']} | {', '.join('R'+str(n) for n in v['raxx_slots'])} | {', '.join(v['strict_families']) or '需要玩家信息'} |" for v in variables], "",
-        "## 每个入口的原值与保留门槛", "",
+        "## 变量总表", "", "| 变量 | 填写内容 | 原R入口 | 当前B入口 | Strict情报／用户决定 |", "|---|---|---|---|---|",
+        *[f"| {v['id']} {v['title']} | {v['editable_fields']} | {', '.join('R'+str(n) for n in v['raxx_slots'])} | {', '.join('B'+str(n) for n in v['template_slots'].values()) or '已并入V07'} | {', '.join(v['strict_families']) or '用户决定／玩家信息'} |" for v in variables], "",
+        "## 当前基底入口与门槛", "",
     ]
-    review = ["# Strict提取结果：Raxx变量审阅结论", "", "从两份Strict提取BD情报，再匹配Raxx填空入口；另记录用户审阅确定的Flay神像定制。没有生成或更新最终XML。", "", "本次默认Flay为主、Skeleton为副；共享按主处理，两者同等收集。角色身份只作为情报归属，颜色尚未写入filter。", "", "## 先审阅的结论", "", f"1. 稀有共通暗金：保留R15原143项。", f"2. BD关联暗金：两份Strict各11种，共20种（共享253／416）；原R15缺{len(missing)}种：{names('uniques', missing)}。其余目标已在R15，无需重复加入。", "3. 本轮没有增加正文中的5种替代暗金，也没有导入Planner JSON中的精确神像组合；这些不是Strict直接导出的情报，另列后续核对。", "4. 19份部位T7池作为BIS候选，19份T6池作为T6候选；Raxx宽T7素材策略单独审阅。", "5. 神像普通与腐化词缀已分开，腐化不参与普通目标计数；Flay按用户审阅记录4条1／2项候选层，其他配对不自动推断。", "6. Strict的LP分层、FP52、全等级T6、通用Weaver／反伤、祭坛分层不直接移植；Flay单词缀层来自用户明确要求。", "", "以下变量与[变量总表](RAXX_VARIABLES.md)对应，X编号为各Strict文件的XML物理位置。原门槛见变量总表；来源门槛仅作为证据，不代表采用。", ""]
+    review = ["# 新基底：Strict变量审阅结论", "", "当前基底是[LE Base Template v1](BASE_TEMPLATE.md)，已落实用户确认的T7四类。此处提取BD填空情报，尚未生成两个BD的最终filter。", "", "本次默认Flay为主、Skeleton为副；共享按主处理，两者同等收集。角色身份作为情报归属，模板尚未填写两BD目标及显示身份。", "", "## 先审阅的结论", "", "1. 稀有共通暗金：保留原R15的143项。", f"2. BD关联暗金：两份Strict各11种，共20种（共享253／416）；原R15缺{len(missing)}种：{names('uniques', missing)}。其余目标已在R15，无需重复加入。", "3. 本轮没有增加正文中的5种替代暗金，也没有导入Planner JSON中的精确神像组合；这些不是Strict直接导出的情报。", "4. 19份部位目标池同时供C1目标T7与C3目标不限阶数＋T7使用，按BD／类型绑定；C2、C4全量池已由用户确认，不用Strict窄池填写。", "5. 神像普通与腐化已自动分开；Flay的4条1／2项候选层保持用户审阅结果，尚未填写到通用模板。", "6. Strict的LP分层、FP52、全等级T6、祭坛分层等不直接移植；C4手动退出来自本次用户确认，T6继续原0–84级过渡。", "", "以下与[变量总表](RAXX_VARIABLES.md)对应。R追溯原版，B为新模板位置，X为Strict物理位置；源门槛仅为证据。", ""]
     lookup = {(r["build"], r["x"]): r for r in evidence}
     for v in variables:
         catalog += [f"### {v['id']}｜{v['title']}", "", "可填字段：" + v["editable_fields"] + "。", "", "处理原则：" + v["interpretation"], ""]
-        for n, row in v["baseline_defaults"].items():
+        for r, n in v["template_slots"].items():
+            row = current[int(r)][1]
             pools = "/".join(names("affixes", p) if 0 < len(p) <= 15 else str(len(p)) + "项" for p in row["affix_pools"])
-            catalog.append(f"- R{n}（{'启用' if row['enabled'] else '关闭'}）：{scope(row)}；词缀池={pools or '无'}；名字名单={len(row['unique_ids'])}项；{gate_text(row)}。")
+            catalog.append(f"- B{n}（{'启用' if row['enabled'] else '关闭'}）：{scope(row)}；词缀池={pools or '无'}；名字名单={len(row['unique_ids'])}项；{gate_text(row)}。")
         catalog.append("")
         vid = v["id"]
         if vid == "V05":
             review += [
                 '<a id="equipment-purpose"></a>', "", "## V05–V10：收集目的与过渡范围", "",
-                "这6组是互相重叠的收集用途，不是依次开启的6个成长阶段。V05–V09没有角色等级退出条件，面向终局的物品也可以在过渡期收集；只有V10明确在85级停止补收。下表概括冻结原版，后面的Strict情报只用于填目标。", "",
-                "原版宽池已经预填：V06／R48有623项，V07／R60有42项，V08／R61有343项，并非空白待生成。它们是跨BD的通用预设；待审阅的是按所选BD保留／裁掉哪些。装备类型与全部逐项中英文名单见[原版宽池范围](RAXX_DEFAULT_EQUIPMENT_POOLS.md)。", "",
-                "| 变量／原入口 | 原设计目的 | 原版词缀／等级门槛 | 终局与过渡的关系 |", "|---|---|---|---|",
-                "| V05／R38–47 | 优先识别BD最佳T7，用于穿戴或传奇制作 | 至少1条指定目标T7+；无角色等级上限 | 终局目标候选，过渡期也收；不保证整件毕业 |",
-                "| V06／R48 | 保护双崇高等多条高阶属性的装备 | 宽池至少2条T6+；无角色等级上限 | 终局候选或材料，也可能用于过渡；T6＋T6在85级后仍收 |",
-                "| V07／R60 | 较宽地积累T7武器／副手制作素材 | 宽池至少1条T7+；无角色等级上限 | 终局制作储备，可提前积累 |",
-                "| V08／R61 | 较宽地积累T7护甲／饰品／遗物制作素材 | 宽池至少1条T7+；无角色等级上限 | 与V07同目的，按装备类别分开 |",
-                "| V09／R62 | 留下可尝试把T7洗到好词缀上的Havoc材料 | 宽池至少1条T7+，且至少1条好词缀不限T；未腐化；无角色等级上限 | 终局制作过程中的材料候选，不保证能制作或制作成功 |",
-                "| V10／R63–64 | T7不足时补收挑选过的T6目标素材 | 至少1条所选目标T6+；角色0–84级，85级退出 | 明确的过渡补充收集；不是所有T6的共同退出条件 |", "",
+                "当前采用用户确认的四类。C1→C2→C3→C4是匹配顺序，V编号只是沿用原入口编号。C1／C2／C3常驻；C4是默认开启、玩家手动结束的单T7收集阶段；V10另有0–84级T6过渡。", "",
+                "原623／42／343项预填池只作[历史对照](RAXX_DEFAULT_EQUIPMENT_POOLS.md)。新C2和C4使用冻结词库全部1156项及原23类装备，无需按BD裁剪；C3的T7计数也用全池，目标则按BD／类型绑定。", "",
+                "| 类别／变量 | 当前B入口／原R入口 | 当前条件 | 用途与退出 |", "|---|---|---|---|",
+                "| C1／V05 | B38–47／R38–47 | 对应类型至少1条BD目标T≥7 | 终局目标候选；过渡期也收，无等级退出 |",
+                "| C2／V06 | B48／R48 | 全池至少2条T≥7，不要求BD目标 | 双／多T7常驻保护；不再保护双T6或T7＋T6 |",
+                "| C3／V09 | B60／R62 | 对应类型至少1条BD目标、阶数不限，同时全池至少1条T≥7 | 留目标低阶＋非目标T7，无FP或未腐化收集限制；保留不保证可制作 |",
+                "| C4／V07 | B61／R60，合并R61 | 全池至少1条T≥7；前三类先匹配 | 额外单T7阶段兜底，默认开启，玩家手动关闭，无自动等级退出 |",
+                "| V08历史入口 | 原R61已移除 | 原护甲／饰品／遗物宽池并入C4 | 不再独立填写或开关 |",
+                "| V10 | B62–63／R63–64 | 至少1条所选目标T≥6，角色0–84级 | T7不足时补收目标T6，85级退出 |", "",
                 "### 用几个例子区分", "",
-                "以下只比较这6组，假设已正确填好装备类型和词缀池，其他条件也满足：", "",
-                "- 90级掉落一件只有1条BD最佳T7的装备：V05仍保留。它可能是穿戴或传奇制作候选，其他词缀不一定已经毕业。",
-                "- 90级掉落两条所选T6的装备：满足V06双崇高门槛，仍保留；V10退出不会取消这一层。",
-                "- 一条宽池T7在不想要的属性上，另有一条想要的T4：可能同时满足V07／V08制作储备与V09 Havoc候选，后续尝试调换阶数；无需好词缀已经T7。",
+                "以下只比较这些收集入口，假设BD／类型目标已正确填写：", "",
+                "- 90级掉落一件只有1条BD目标T7的装备：C1仍保留，其他词缀不一定毕业。",
+                "- 90级掉落两条非BD目标T7：C2仍保留；两条T6不再享受C2的常驻保护。",
+                "- 非目标T7＋对应部位的BD目标T4：C3保留；即使C4已经关闭也保留。",
+                "- 非目标单T7，整件没有BD目标：C4开启时保留，玩家关闭后撤掉这条兜底路径。实验／碎片等其他规则仍可能显示它。",
                 "- 只有一条所选目标T6的装备：80级可由V10补收；85级后这条补收路径退出。它是否被整个filter保留，还要看其他规则，不能据此断言全部隐藏。", "",
-                "在这6组内，原优先顺序是R38–47 → R48 → R60／61 → R62 → R63／64。多个条件可同时命中，显示取先匹配的提示；例如宽T7规则可能先于Havoc规则显示，不能仅凭提示判断物品只有一种用途。本轮解释不调整顺序。", "",
-                "依据：[冻结原版XML](../sources/Raxx%27s%20S5%20Ultimate%20Filter%20v1.0.txt)的条件及R30–36／R49–59蓝字；作者在视频[13:08起讲T6／T7与Havoc](https://www.youtube.com/watch?v=l3CRNP95YX8&t=788s)、[14:29起讲BIS](https://www.youtube.com/watch?v=l3CRNP95YX8&t=869s)。具体门槛以XML为准，终局／过渡用途结合作者说明解释。", "",
+                "当前优先顺序是B38–47 → B48 → B60 → B61 → B62／63。原R60移到R62之后，R61删除，避免全量阶段层先于目标候选显示。C4的XML写至少1条T7，通过先匹配前三类表达剩余单T7，不增加未经验证的最多1条条件。", "",
+                "原设计依据：[冻结原版XML](../sources/Raxx%27s%20S5%20Ultimate%20Filter%20v1.0.txt)及作者视频[13:08起](https://www.youtube.com/watch?v=l3CRNP95YX8&t=788s)、[14:29起](https://www.youtube.com/watch?v=l3CRNP95YX8&t=869s)。当前四类来自用户确认，真实模板与待办见[新基底说明](BASE_TEMPLATE.md)。", "",
             ]
         review += [f'<a id="{vid.lower()}"></a>', "", f"## {vid}｜{v['title']}", "", "结论状态：" + v["status"] + "。", "", v["interpretation"], ""]
         if vid == "V01":
@@ -375,19 +373,18 @@ def main():
         if vid in {"V02", "V03"}:
             review += ["两份主名单中的20项全部被冻结类型资料标为暗金，未发现BD套装目标，R16原21项继续保留。" if vid == "V02" else "本轮无依据裁剪原412项。20种BD目标已由V01的无潜能门槛名单保护，不必再增加潜能分层。", ""]
             continue
-        if vid in {"V06", "V07", "V08", "V22", "V23"}:
+        if vid in {"V06", "V07", "V08"}:
+            review += ["本项已按用户决定落实到[新基底](BASE_TEMPLATE.md)，不从Strict部位目标裁剪全量池。原值仅保留作追溯。", ""]
+            continue
+        if vid in {"V22", "V23"}:
             for slug in ["flay-mana-lich", "skeleton-necromancer"]:
                 candidates = [c for c in v["evidence"] if c["build"] == slug and c["enabled_in_source"]]
                 types = sorted({t for c in candidates for t in c["types"]})
                 review.append("- " + strict["inputs"][slug]["name"] + "可证明的终局类型：" + "、".join(ref["equipment_names"][t]["zh"] for t in types) + "。")
             review += ["", "具体目标词缀见[V05](#v05)；上述类型只表示情报范围。", ""]
-            if vid in {"V07", "V08"}:
-                original = set(base[v["raxx_slots"][0]]["affix_pools"][0])
-                wanted = {i for c in v["evidence"] if c["enabled_in_source"] for i in c["affix_ids"]}
-                review += [f"原宽池有{len(original)}项；Strict已知目标中，原宽池未包含：{names('affixes', sorted(wanted - original))}。这些是补充情报，不能据此删除宽池的其余可用属性。", ""]
             continue
         if vid == "V10" and tier_pools_equal:
-            review += ["程序逐部位核对：19份T6池与对应19份T7池的类型、底材和词缀列表完全相同，具体候选复用[V05](#v05)。相同的是Strict来源名单：Raxx的V05用于最佳T7候选，V10用于85级前补收T6，V07／V08另留宽T7制作储备；不能因此合成同一窄池或同一等级策略。", "", "T6来源定位：", ""]
+            review += ["程序逐部位核对：19份T6池与对应19份T7池的类型、底材和词缀列表完全相同，具体候选复用[V05](#v05)。相同的是Strict来源目标：C1要求目标T7，C3目标不限阶数但另须全池T7，V10要求目标T6且85级退出；C4全量阶段池不随BD收窄。", "", "T6来源定位：", ""]
             for slug in ["flay-mana-lich", "skeleton-necromancer"]:
                 review.append("- " + strict["inputs"][slug]["name"] + "：" + "、".join(scope(c).split("；")[0] + f" X{c['x']}" for c in v["evidence"] if c["build"] == slug) + "。")
             review += ["", "原R63／64的角色0–84级条件继续作为基准，不采用Strict的全等级拾取。", ""]
@@ -405,7 +402,7 @@ def main():
                 review.append(f"| {scope(c)} | {names('affixes', c['affix_ids'])} | {c['min_matching_ordinary_affixes']}项 | {c['tier']}；{'独立毕业声' if c['sound_role'] == 'graduation' else '普通提示'} |")
             review += ["", "这些层与Strict原规则有两点明确差别：腐化ID不凑普通目标数量；两项层也保留用户指定的Lagon底材。厚实一项层会保留只有886的神像，这是候选而非必有点燃。若要求876必有，可用独立词缀条件表达，尚未静默改成这个更严版本。", "", "普通／腐化分离已自动化，ID来自Strict、类别由词库查得，无需攻略；见[独立自动分类结果](STRICT_IDOL_CLASSIFICATION.md)。机制、攻略意图与必须／可选条件见[Flay神像审阅](FLAY_IDOL_REVIEW.md)。下面保留源规则对照，最后一列门槛针对源混合池，不能直接套到剥离后的普通池。", ""]
         if v["evidence"]:
-            review += ["| BD／来源 | 可参考R入口 | 类型／底材 | 普通目标（计数） | 腐化参考（不计数） | 原Strict门槛（混合池） |", "|---|---|---|---|---|---|"] if vid == "V19" else ["| BD／来源 | 可参考R入口 | 类型／底材 | 提取情报 | 来源门槛（仅参考） |", "|---|---|---|---|---|"]
+            review += ["| BD／来源 | 当前B入口／原R入口 | 类型／底材 | 普通目标（计数） | 腐化参考（不计数） | 原Strict门槛（混合池） |", "|---|---|---|---|---|---|"] if vid == "V19" else ["| BD／来源 | 当前B入口／原R入口 | 类型／底材 | 提取情报 | 来源门槛（仅参考） |", "|---|---|---|---|---|"]
             groups = {}
             for c in v["evidence"]:
                 source = lookup[(c["build"], c["x"])]
@@ -417,19 +414,20 @@ def main():
                 c = entries[0]
                 role = "主Flay" if c["build"] == "flay-mana-lich" else "副Skeleton"
                 refs = "／".join("X" + str(e["x"]) for e in entries)
-                ids = c["affix_pools"][0] if vid == "V09" else c["affix_ids"]
+                ids = c["affix_ids"]
                 detail = "定向底材候选，词缀条件不移植" if vid == "V15" else names("affixes", ids)
                 if vid == "V09":
-                    detail += "；另有1156项通用T7池"
+                    detail += "；本层目标阶数不限，T7计数用新基底全池"
                 gates = "／".join(dict.fromkeys(gate_text(lookup[(e["build"], e["x"])]) for e in entries))
-                cells = [role + " " + refs + ("（关闭，只参考）" if not c["enabled_in_source"] else ""), "／".join("R" + str(n) for n in c["candidate_raxx_slots"]) + ("（待判别）" if c["mapping_requires_review"] else ""), scope(c), detail, gates]
+                destination = "／".join("B" + str(n) for n in c["candidate_template_slots"]) + "（原" + "／".join("R" + str(n) for n in c["candidate_raxx_slots"]) + "）"
+                cells = [role + " " + refs + ("（关闭，只参考）" if not c["enabled_in_source"] else ""), destination + ("（待判别）" if c["mapping_requires_review"] else ""), scope(c), detail, gates]
                 if vid == "V19":
                     cells.insert(4, names("affixes", c["corrupted_affix_ids"]))
                 review.append("| " + " | ".join(s.replace("|", "/") for s in cells) + " |")
             review.append("")
         if not v["evidence"]:
             review += ["未导出可直接填写的候选；保留未决状态，不用空值冒充已配置。", ""]
-    review += ["## 仍需Review的决定", "", "- R15目标是否只采用这20种，或随后再加入有正文／Planner依据的替代品。", "- 宽T7素材池的保留范围；BIS窄池不能代替它。", "- Flay普通两项池与1／2项层已按用户要求记录；其他BD的普通词缀配对仍需确认，腐化不凑数。", "- Flay厚实一项层按用户列表可只有886；若要求点燃876必有，需明确采用必须条件。891备用来自攻略，未加入这4层。", "- 是否采用普通实验词缀、升华、定向底材、各类碎片；碎片必须结合库存。", "- 开荒是否在本次用途内；若需要，补开荒阶段的武器／副手及底材。", "- 原版R29／R69／R70默认关闭，R81／R82／R83等仍有待配置入口；本轮并未决定最终开关。", "", "## 程序与证据", "", "运行：`python -X utf8 scripts/extract_raxx_variables.py`。完整候选、原值与来源条件见[机器结果](../analysis/raxx-variable-extraction.json)，检查见[验证结果](../analysis/variable-extraction-validation.json)。冻结原版与两份Strict哈希校验通过；已有filter原文件保持不变。旧187条试制稿保留作历史，本轮Review以这份变量结论为准。", ""]
+    review += ["## 仍需Review的决定", "", "- R15目标是否只采用这20种，或随后再加入有正文／Planner依据的替代品。", "- C1／C3各目标与装备类型的绑定，尤其主手／副手及遗物；四类收集策略与C2／C4全量范围已确认。", "- Flay普通两项池与1／2项层已按用户要求记录；其他BD的普通词缀配对仍需确认，腐化不凑数。", "- Flay厚实一项层按用户列表可只有886；若要求点燃876必有，需明确采用必须条件。891备用来自攻略，未加入这4层。", "- 是否采用普通实验词缀、升华、定向底材、各类碎片；碎片必须结合库存。", "- 开荒是否在本次用途内；若需要，补开荒阶段的武器／副手及底材。", "- 原版R29／R69／R70默认关闭，R81／R82／R83等仍有待配置入口；这些开关尚未定制，C4默认开启、由玩家阶段结束后手动关闭已确定。", "", "## 程序与证据", "", "运行：`python -X utf8 scripts/extract_raxx_variables.py`；模板重建与验证见[新基底说明](BASE_TEMPLATE.md)。完整候选、原值与来源条件见[机器结果](../analysis/raxx-variable-extraction.json)，检查见[验证结果](../analysis/variable-extraction-validation.json)。冻结原版、两份Strict及当前模板均校验哈希；提取过程不改XML。旧187条试制稿保留作历史，两个BD的最终filter尚未生成。", ""]
     classification_doc = ["# Strict神像词缀：自动分类结果", "", "本页由extract_raxx_variables.py生成；无需攻略文字、Planner JSON或人工指定某个ID是否腐化。它只提取和分类情报，不生成filter。", "",
                           "Strict直接提供目标词缀ID，但没有逐词缀的腐化类别标签。程序读取已冻结的词缀数据库：specialAffixType=6归腐化，其余归非腐化；神像普通目标计数只使用非腐化池。这里不按中文名称猜测，腐化伤害（18）也不会因此被错判为腐化专属词缀。", "",
                           "CorruptionCondition描述物品是否腐化，与每个词缀的类别是两个不同字段。Strict选择了某项腐化属性，可以自动提取这个选择；其重要性、必须／可选以及备用关系仍由用户或攻略补充决定。", "",
@@ -441,17 +439,17 @@ def main():
         classification_doc.append(f"| {role} X{c['x']} | {kinds} | {names('affixes', c['non_corrupted_affix_ids'])} | {names('affixes', c['corrupted_affix_ids'])} |")
     classification_doc += ["", "Flay中型X17／X21的源池含843、854、1069、1070，自动分为普通843／854与腐化1069／1070；厚实X18／X22含876、886、1070，自动分为普通876／886与腐化1070。源ID和具体底材完整保存在[机器结果](../analysis/strict-idol-affix-classification.json)，词缀类别来自[冻结类型资料](../sources/builds/strict-variable-reference.json)。", "",
                            "这些源规则中的ID全部来自Strict。843／854等组合是否毕业、1069或1070是否追求，以及891备用关系属于另一层决策；见[Flay神像审阅](FLAY_IDOL_REVIEW.md)。", ""]
-    for path, data in [("analysis/raxx-variables.json", {"baseline": manifest["baseline"], "variables": [{k: v[k] for k in ["id", "title", "raxx_slots", "instruction_slots", "instruction_texts", "editable_fields", "baseline_defaults", "interpretation"]} for v in variables]}), ("analysis/raxx-variable-extraction.json", result), ("analysis/strict-idol-affix-classification.json", idol_classification)]:
+    for path, data in [("analysis/raxx-variables.json", {"baseline": manifest["baseline"], "active_template": active, "variables": [{k: v[k] for k in ["id", "title", "raxx_slots", "instruction_slots", "instruction_texts", "template_instruction_texts", "editable_fields", "baseline_defaults", "template_slots", "template_default_overrides", "interpretation"]} for v in variables]}), ("analysis/raxx-variable-extraction.json", result), ("analysis/strict-idol-affix-classification.json", idol_classification)]:
         (ROOT / path).write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     default_pools = ["# Raxx原版：V06–V08已经预填的范围", "",
-                     "由extract_raxx_variables.py从冻结原版及名字库生成，以下为原始预选，不是本次两个BD的专属名单。作者要求玩家检查不需要的武器／副手、职业和词缀，T7素材池保持较宽；本页不裁剪名单，也不生成filter。", "",
+                     "由extract_raxx_variables.py从冻结原版及名字库生成，以下为原始预选，仅作历史对照。当前[新基底](BASE_TEMPLATE.md)已把双／多T7与阶段单T7改为全1156项词缀范围，原R60／61合成一条；本页不代表当前配置。", "",
                      "三条均启用、没有角色等级退出条件、不限具体subtype。原版出处：[冻结XML](../sources/Raxx%27s%20S5%20Ultimate%20Filter%20v1.0.txt)；填写原则与Strict候选见[变量审阅结论](STRICT_VARIABLE_REVIEW.md#equipment-purpose)。", ""]
     for v in variables:
         if v["id"] not in {"V06", "V07", "V08"}:
             continue
         for n, row in v["baseline_defaults"].items():
             ids = row["affix_pools"][0]
-            default_pools += [f"## {v['id']}／R{n}｜{v['title']}", "", "装备范围：" + scope(row) + "。", "",
+            default_pools += [f"## {v['id']}／R{n}｜{row['name']}", "", "装备范围：" + scope(row) + "。", "",
                               "原门槛：" + gate_text(row) + f"。预选词缀共{len(ids)}项，下面按原列表顺序完整列出。", "",
                               "| ID | 中文 | 英文 |", "|---:|---|---|"]
             default_pools += [f"| {i} | {ref['affixes'][str(i)]['zh']} | {ref['affixes'][str(i)]['en']} |" for i in ids]
@@ -461,7 +459,7 @@ def main():
     hashes_after = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in protected}
     assert hashes_before == hashes_after, "Extraction must never modify source or output filters"
     assert sorted(ROOT.glob("filters/*.xml")) == [p for p in protected if p.parent == ROOT / "filters"], "No new filter may be created"
-    validation = {"passed": True, "variable_groups": len(variables), "blue_instructions_covered": len(blue), "strict_rules_recorded": len(evidence), "families": dict(sorted(Counter(r["family"] for r in evidence).items())), "enabled_tier_pools": 38, "target_unique_ids": len(union), "sets_in_planner_targets": sum(flags["is_set_item"][str(i)] for i in union), "r15_missing_targets": missing, "idol_corrupted_affixes_excluded_from_ordinary_counts": True, "strict_idol_rules_automatically_classified": len(idol_candidates), "guide_used_for_affix_classification": False, "user_reviewed_flay_idol_layers": len(idol_layers), "filters_and_source_bytes_unchanged": True, "filter_generated": False, "game_execution_tested": False}
+    validation = {"passed": True, "active_template_loaded": True, "template_rule_count": active["rule_count"], "template_full_affix_ids": len(active["full_affix_ids"]), "stage_rule_requires_manual_disable": active["layers"][3]["player_disables_manually"], "c1_c3_targets_equal_by_build_and_type": True, "variable_groups": len(variables), "blue_instructions_covered": len(blue), "strict_rules_recorded": len(evidence), "families": dict(sorted(Counter(r["family"] for r in evidence).items())), "enabled_tier_pools": 38, "target_unique_ids": len(union), "sets_in_planner_targets": sum(flags["is_set_item"][str(i)] for i in union), "r15_missing_targets": missing, "idol_corrupted_affixes_excluded_from_ordinary_counts": True, "strict_idol_rules_automatically_classified": len(idol_candidates), "guide_used_for_affix_classification": False, "user_reviewed_flay_idol_layers": len(idol_layers), "filters_and_source_bytes_unchanged": True, "filter_generated": False, "final_bd_filter_generated": False, "game_execution_tested": False}
     (ROOT / "analysis/variable-extraction-validation.json").write_text(json.dumps(validation, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps(validation, ensure_ascii=False))
 

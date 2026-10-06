@@ -1,26 +1,30 @@
 # 后续工作 memo
 
-更新时间：2026-10-06，日本时间。当前阅读顺序：README → STRICT_VARIABLE_REVIEW → RAXX_VARIABLES → 本memo；原始基底查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+更新时间：2026-10-06，日本时间。当前阅读顺序：README → BASE_TEMPLATE → STRICT_VARIABLE_REVIEW → RAXX_VARIABLES → 本memo；原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
-## 当前交付：Raxx变量与Strict情报，等待Review
+## 当前交付：用户确认的新基底与BD填空情报
 
-- 原版V06／V07／V08已有预选范围，623／42／343项，不是空池。新增RAXX_DEFAULT_EQUIPMENT_POOLS由提取脚本完整列出原始装备类型、门槛与词缀中英文，供直接审阅；“宽池待审”指按BD保留／裁剪，不是Strict缺少这些原值。本轮未改变候选或宽池。
-- V05–V10已展开原设计、原门槛、终局／过渡关系与例子，见STRICT_VARIABLE_REVIEW的equipment-purpose入口。它们是重叠的收集用途，不是6个成长阶段：V05最佳T7候选，V06双崇高保护，V07／V08宽T7制作储备，V09 Havoc制作候选，V10过渡T6补收。
-- 只有V10的R63／64限定角色0–84级。V05–V09无角色等级退出；V06至少2条T≥6，T6＋T6在85级后仍保留，合计ANY不启用保存值14。T6阶数不能自动等同过渡，也不能把V05单条最佳T7等同整件毕业。85级是作者的收集策略，不是装备作废或更换要求。
-- V09好词缀不限阶数，宽池T7可以在另一条不想要的属性上，两份条件也可能由同一条T7满足。Havoc实际要求4条未封印词缀；原R62无未封印计数或FP门槛，显示只作材料候选。本轮补充机制说明，不新增门槛、不移动R38–47／R48／R60–64顺序、不修改最终XML。
+- 当前后续使用templates/LE-base-v1.xml：162条（103启用／59关闭），仍含56条蓝色说明。scripts/build_base_template.py从原版重建，base-manifest.json记录原R／当前B映射、完整1156词缀ID及哈希；源Raxx、两份Strict、视频发布前原文和旧187条XML不改。模板尚未填两BD目标，不是最终成品。
+- 用户确认四类依次匹配：C1／V05对应类型BD目标T7；C2／V06任意双／多T7全量保护；C3／V09对应类型BD目标不限阶数＋全池T7；C4／V07额外单T7阶段全量兜底。C1／C2／C3常驻，C4默认开启，由玩家阶段结束后手动关闭，没有自动等级退出。
+- C2／C3的T7计数与C4用冻结version150全部1156个ID，C2／C4保留原23类普通装备（15类武器／副手＋8类其他），排除神像／祭坛，不按BD裁剪。原623／42／343项名单保留在RAXX_DEFAULT_EQUIPMENT_POOLS，仅作历史对照，不再是当前宽池待决项。未来版本新增ID需更新冻结资料并重建。
+- 原R60／61合为一条R60来源的阶段规则，移到R62之后；原R61删除。当前位置C1=B38–47、C2=B48、C3=B60、C4=B61，T6=B62／63（原R63／64）。之后原R编号比B大1。V08只保留历史入口，不再单独配置。其他功能规则相对次序不变；原R29职业隐藏保持关闭，后续不能让它抢先破坏全量保护。
+- C4用至少1条T≥7的有效XML条件，经C1／C2／C3先匹配后兜底剩余单T7，不伪造最多1条条件。关闭C4保留前三类，但其他实验／碎片规则仍可能显示非目标T7，不能承诺全部隐藏。
+- 原双T6／T7＋T6常驻R48改为至少2条T≥7。V10仍至少1条所选T≥6、角色0–84级，85级退出；C4手动退出与此无关。T6仍可由实验／碎片等其他路径保留；85级是收集策略，不要求丢弃身上T6。
+- C1与C3使用相同19份Strict部位目标，必须按BD／装备类型绑定。C3只移用目标名单，忽略Strict来源T7门槛，目标阶数不限；全池另至少1条T≥7。原R62的10项预填仍是模板示例，不能冒充两BD真实目标。Wanted/Havoc全局混池仍完整记录作证据，不取代部位绑定。
+- C3不加FP、未封印计数或未腐化收集限制，符合用户第三类就留；保留不保证可以制作。Havoc实际要求未腐化且4条未封印词缀；不能把规则显示写成制作可行或成功保证。T7在目标上时C1先匹配，多T7由C2先匹配。
 - 用户确认备用关系可作为后续补充，至少普通／腐化区分要自动化。Strict给ID但不给逐词缀腐化标签；split_affixes统一按冻结specialAffixType=6分类，供V13／V19／V21使用，不按名称或固定腐化ID名单猜测。未知ID查表报错，不默认普通。新增自动输出strict-idol-affix-classification.json与STRICT_IDOL_CLASSIFICATION.md，覆盖12条两BD神像源规则，保留源ID、底材、启用状态与出处，不依赖Guide／Planner。
 - 神像本轮修正：以前把普通与腐化ID混在同一个计数池，会让843＋1070误充双目标毕业。V19／V21按specialAffixType=6剥离腐化参考；affix_ids只含普通目标，corrupted_affix_ids独立，原affix_pools仍保留全部源ID。V13的早期腐化参考不删除。
 - 用户明确Flay：中型843＋854、厚实876＋886，各记录1项候选／2项组合毕业两层；都保留Weaver与Lagon，腐化状态不限、阶数不限，两项优先，声音不同。user_reviewed_flay_idol_layers记录4层，标明来源是用户审阅而非Strict等价复制。“毕业”只是普通组合齐全，不指满roll；其他BD配对仍待审阅。
 - 必须／选择条件可用多份AffixCondition共同满足，官方1.1已支持、原R62也有两份。照用户目前候选池，厚实只有886仍被保留；若要求876必有要明确采用必选条件，不静默收紧。891备用与最终祭坛1105需要腐化神像来自正文，不假称为Strict导出，也不自动加进这4层。机制及来源见FLAY_IDOL_REVIEW.md。
-- 用户已纠正方向：按照Raxx的设计；Strict是从BD导出的情报来源，用于填Raxx要求定制的变量，不把Strict的策略直接移植。明确要求本轮不要生成最终filter。
-- scripts/extract_raxx_variables.py提取24组变量；蓝字56条全部归入填空说明或固定说明。输出RAXX_VARIABLES、STRICT_VARIABLE_REVIEW、raxx-variables.json、raxx-variable-extraction.json与variable-extraction-validation.json。只用冻结原版、两份Strict和名字／类型参考；不读Planner JSON或攻略正文，不依赖.cache。
+- 用户已纠正方向：按Raxx设计，Strict仅填定制变量；本轮进一步明确四类T7政策要落实为新基底。允许生成通用模板，仍不生成两个BD最终filter，不直接移植Strict策略。
+- scripts/extract_raxx_variables.py读取实际新模板及冻结原版，提取24组变量；蓝字56条全部归入填空说明或固定说明。机器结果template_slots映射原R到当前B，template_default_overrides仅存有变化的B默认值，无变化入口继承baseline_defaults，避免重复巨大的原暗金roll字段；文档直接读实际模板展开全部当前门槛。数据与文档为RAXX_VARIABLES、STRICT_VARIABLE_REVIEW、raxx-variables.json、raxx-variable-extraction.json和variable-extraction-validation.json；不读Planner JSON或攻略正文，不依赖.cache。
 - 已提取两BD各11种暗金，共20种、无套装目标；R15原143项已有11种，追加缺少的9种可形成152项候选。原珍贵名单保持，所有BD目标0LP也留，不增加BD独立LP分层。旧25种目标包含额外5种正文替代，不能冒充Strict本身导出。
-- 38份部位T6／T7池两层逐部位相同，只提供窄目标情报；Raxx宽T7素材池不能被它们机械替换。保留R63／64在85级退出、R128／129在90／75级退出。原R127实际数量1、advanced=false，阶数不限，不能误写为T6门槛。R68原广池默认不缩到两个BD实验目标，R69是否采用另审。
-- Source family明确区分BD目标、generic_idol／generic_altar及maxroll_only_crafting；通用Weaver／反伤、通用祭坛与FP52不当作BD填空目标。Havoc只把第一份Wanted池当好词缀，1156项另一池是通用T7池。
+- 38份部位T6／T7池两层逐部位相同，C1／C3使用其中19份目标、V10复用对应T6名单；新C2／C4不能被它们缩窄。保留原R63／64在85级退出、R128／129在90／75级退出。原R127实际数量1、advanced=false，阶数不限，不能误写为T6门槛。R68原广池默认不缩到两个BD实验目标，R69是否采用另审。
+- Source family明确区分BD目标、generic_idol／generic_altar及maxroll_only_crafting；通用Weaver／反伤、通用祭坛与FP52不当作BD填空目标。原Strict Havoc第一份是全局Wanted池、另一份1156项是通用T7池；新C3按部位提目标，不以全局Wanted混池替代。
 - 底材／词缀／尺寸／BD绑定保留。Large Omen来源包含五职业底材，单职业入口映射标为待判别，不能因此声称五职业都要收集。开荒路线、排除职业、升华用途、真实紧缺库存不能从终局Strict自动确定。
 - sources/builds/strict-variable-reference.json固定20个目标的isSetItem和1156项specialAffixType，来自此前已验证哈希的version150缓存；运行期不读取缓存。名字来源沿用game-reference、maxroll-reference-supplement与7底材review-reference。
-- 程序检查来源哈希、完整271条Strict、56说明覆盖、变量目的地、通用池隔离；提取前后原版、Strict、旧filter字节不变，也不创建新的XML。验证不是游戏客户端实测。
-- 本阶段只运行python -X utf8 scripts/extract_raxx_variables.py。不执行generate_filter／verify_generated_filter／render_rules_review来重建旧试制，用户后续要求生成最终版本时先按本轮变量审阅结果重新设计。
+- 新模板验证检查162条排序、1156全池、141条无关源规则字段保持、15个有限T7模块案例（含关闭阶段后前三类仍留）；不声称整个未配置模板或客户端掉落实测通过。提取另检查来源／模板哈希、271条Strict、56说明覆盖、C1／C3目标一致；提取前后原版、Strict、模板、旧filter字节不变。
+- 当前复现依次python -X utf8 scripts/build_base_template.py、scripts/verify_base_template.py、scripts/extract_raxx_variables.py。不执行generate_filter／verify_generated_filter／render_rules_review来重建旧试制；新验证只复用verify_generated_filter中的纯predicate函数，未执行旧主程序。后续要求生成最终版本时，使用新基底并填写本轮已审阅变量。
 
 ## 上一轮历史试制：曾直接移植Strict条件
 
@@ -96,7 +100,7 @@
 
 ## 未来定制必须先解决的点
 
-下面R编号指未改动的原始基底。当前双BD成品的对应处理见本文开头，不把原文的空状态当作成品空状态。
+下面R编号指未改动的原始Raxx；新基底的四类变更以本文开头为准。旧双BD成品处理仅是历史，当前通用模板仍需填入具体BD。
 
 - 29：关闭且req=None，选择“不会收集的职业”之后才考虑启用。主玩和备刷BD的职业都属于保留范围。无职业限制装备不能靠它按BD筛选。
 - 37/38/39/81/82/136/137：类型列表为空。37的空类型是广泛收集T8的意图；其余条目不能仅按名字当成武器、副手或指定底材。

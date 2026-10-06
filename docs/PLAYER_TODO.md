@@ -2,7 +2,9 @@
 
 原 filter 是一套**待玩家配置的模板**。蓝字解释如何配置，功能规则名称里的大写文字也在布置待办。空选择、通用预填和未启用的可选规则，需要结合实际 BD 和收集用途处理；不能把它们当作已经完成的个人配置，也不直接据此判断作者写错了。
 
-本轮按这份原模板待办抽取变量，再从Strict提取BD情报，见[变量总表](RAXX_VARIABLES.md)和[当前审阅结论](STRICT_VARIABLE_REVIEW.md)。本轮不生成最终filter。旧Flay＋Skeleton试制曾采用Strict部分进度门槛，相关说明仅作历史。
+当前后续使用[新基底](BASE_TEMPLATE.md)：C1／C3按BD和装备类型填写目标；任意双／多T7全量保护无需裁剪；额外单T7阶段兜底只有一条[4 ALL T7 PHASE]（当前B61），默认开启，玩家阶段结束后手动关闭。原双T6常驻改为双／多T7，T6的0–84级过渡仍保留。下文原版第9／10项关于宽池裁剪的待办已由此决定替代，不用于新C2／C4。
+
+Strict情报见[变量总表](RAXX_VARIABLES.md)和[当前审阅结论](STRICT_VARIABLE_REVIEW.md)。新模板仍有Raxx目标示例和未填入口，尚未生成两个BD最终filter。旧Flay＋Skeleton试制曾采用Strict部分进度门槛，相关说明仅作历史。
 
 下列编号均是**原始基底的规则编号**，即 Order+1。来源为 [完整规则索引](RULE_INDEX.md) 和 [原始字段](../analysis/rules.json)。删去蓝字或增加规则后，成品编号会改变。
 
