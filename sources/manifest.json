@@ -1,0 +1,63 @@
+{
+  "research_date": "2026-10-06",
+  "timezone": "Asia/Tokyo",
+  "baseline": {
+    "local_path": "sources/Raxx's S5 Ultimate Filter v1.0.txt",
+    "upstream_repository": "raxxanterax/GAMING",
+    "upstream_path": "Raxx's S5 Ultimate Filter v1.0.txt",
+    "commit": "57498b0901a7c099efdf931923c65271fdfdb993",
+    "commit_time_utc": "2026-10-01T23:22:12Z",
+    "commit_subject": "Update Raxx's S5 Ultimate Filter v1.1.txt",
+    "git_blob_sha": "b451524609464960d26020332d5577e97f6e863b",
+    "sha256": "146465750ab794175676f73b7251ddba610c42c4508bb16b614b6d4982036288",
+    "bytes": 1275032,
+    "url": "https://github.com/raxxanterax/GAMING/blob/57498b0901a7c099efdf931923c65271fdfdb993/Raxx%27s%20S5%20Ultimate%20Filter%20v1.0.txt"
+  },
+  "video_era_filter": {
+    "local_path": "sources/video-era/Raxx-S5-2026-10-01.txt",
+    "commit": "3525e1672784a78a868e189fd278cce55c0eaf84",
+    "commit_time_utc": "2026-10-01T00:26:01Z",
+    "sha256": "f0e329df63af9737185bf6d5fdd71cb7663c932ddf954773c56c90a6d8c440ed",
+    "bytes": 1259608,
+    "url": "https://github.com/raxxanterax/GAMING/blob/3525e1672784a78a868e189fd278cce55c0eaf84/Raxx%27s%20S5%20Ultimate%20Filter%20v1.0.txt"
+  },
+  "video": {
+    "url": "https://www.youtube.com/watch?v=l3CRNP95YX8",
+    "id": "l3CRNP95YX8",
+    "title": "My Last Epoch Season 5 Universal Loot Filter & Start Plans",
+    "author": "Raxxanterax",
+    "published_time": "2026-10-01T05:00:02-07:00",
+    "length_seconds": 1271,
+    "evidence": "Full English auto-generated transcript exported through the browser; page metadata and chapter times read. No claim of full visual/audio review.",
+    "transcript_first_timestamp": "00:00",
+    "transcript_last_timestamp": "21:09",
+    "transcript_sha256": "57d61bb96f4494f4268802c93e9f346c8339e5db9ec54e4d40ed320345cde529",
+    "transcript_stored_in_repo": false
+  },
+  "reference_data": "sources/game-reference.json",
+  "official_mechanics_sources": [
+    {
+      "url": "https://support.lastepoch.com/hc/en-us/articles/46361669143067-Loot-Filter",
+      "use": "Priority and import; its 75-rule limit conflicts with the newer patch notes."
+    },
+    {
+      "url": "https://forum.lastepoch.com/t/last-epoch-shattered-omens-patch-notes/80571",
+      "section": "Quality of Life / Loot Filters",
+      "use": "200 rules; empty affix selection matches any; resource conditions; potential; recolor; beam and sound."
+    },
+    {
+      "url": "https://forum.lastepoch.com/t/loot-filter-rules/25125",
+      "use": "Default show behavior and condition categories."
+    },
+    {
+      "url": "https://lastepoch.com/1-5/patchnotes/",
+      "section": "Merchant's Guild; Loot Filter improvements",
+      "use": "Browser-rendered official page read. T6/T7 count and sealed-affix search changes belong to Merchant's Guild/Bazaar; they are not loot-filter guarantees. Variant affix category is a loot-filter change."
+    },
+    {
+      "url": "https://forum.lastepoch.com/t/new-uniques-coming-to-last-epoch-october-1/81777",
+      "use": "The new-unique announcement referenced by the video."
+    }
+  ],
+  "external_source_note": "Original filters belong to Raxxanterax; community reference data belongs to its providers. No repository-wide license is asserted for these source materials."
+}

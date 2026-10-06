@@ -1,0 +1,3 @@
+* text=auto eol=lf
+sources/*.txt -text
+sources/video-era/*.txt -text
