@@ -6,6 +6,8 @@
 
 [V05–V10的用途与过渡范围](docs/STRICT_VARIABLE_REVIEW.md#equipment-purpose)已展开：最佳T7、双崇高、宽T7制作储备与Havoc各有收集目的；只有V10的T6补收在85级退出，双T6仍可能由V06保留。
 
+[原版宽池完整名单](docs/RAXX_DEFAULT_EQUIPMENT_POOLS.md)列出已经预填的V06／V07／V08范围：623／42／343项。待审阅指按BD裁剪，不是重新发明一份原版没有的范围。
+
 最新神像修正见[Flay神像审阅](docs/FLAY_IDOL_REVIEW.md)：腐化不凑普通目标数量，Flay按用户指定记录1项候选／2项组合毕业四层。普通目标与腐化参考分别输出，原Strict保留供追溯。
 
 [Strict神像自动分类结果](docs/STRICT_IDOL_CLASSIFICATION.md)单独展示12条BD源规则：词缀ID来自Strict，腐化类别由冻结数据库自动查询，不依赖攻略。备用关系另作后续补充。

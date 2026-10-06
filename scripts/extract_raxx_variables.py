@@ -346,6 +346,7 @@ def main():
             review += [
                 '<a id="equipment-purpose"></a>', "", "## V05–V10：收集目的与过渡范围", "",
                 "这6组是互相重叠的收集用途，不是依次开启的6个成长阶段。V05–V09没有角色等级退出条件，面向终局的物品也可以在过渡期收集；只有V10明确在85级停止补收。下表概括冻结原版，后面的Strict情报只用于填目标。", "",
+                "原版宽池已经预填：V06／R48有623项，V07／R60有42项，V08／R61有343项，并非空白待生成。它们是跨BD的通用预设；待审阅的是按所选BD保留／裁掉哪些。装备类型与全部逐项中英文名单见[原版宽池范围](RAXX_DEFAULT_EQUIPMENT_POOLS.md)。", "",
                 "| 变量／原入口 | 原设计目的 | 原版词缀／等级门槛 | 终局与过渡的关系 |", "|---|---|---|---|",
                 "| V05／R38–47 | 优先识别BD最佳T7，用于穿戴或传奇制作 | 至少1条指定目标T7+；无角色等级上限 | 终局目标候选，过渡期也收；不保证整件毕业 |",
                 "| V06／R48 | 保护双崇高等多条高阶属性的装备 | 宽池至少2条T6+；无角色等级上限 | 终局候选或材料，也可能用于过渡；T6＋T6在85级后仍收 |",
@@ -442,7 +443,20 @@ def main():
                            "这些源规则中的ID全部来自Strict。843／854等组合是否毕业、1069或1070是否追求，以及891备用关系属于另一层决策；见[Flay神像审阅](FLAY_IDOL_REVIEW.md)。", ""]
     for path, data in [("analysis/raxx-variables.json", {"baseline": manifest["baseline"], "variables": [{k: v[k] for k in ["id", "title", "raxx_slots", "instruction_slots", "instruction_texts", "editable_fields", "baseline_defaults", "interpretation"]} for v in variables]}), ("analysis/raxx-variable-extraction.json", result), ("analysis/strict-idol-affix-classification.json", idol_classification)]:
         (ROOT / path).write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
-    for path, content in [("docs/RAXX_VARIABLES.md", catalog), ("docs/STRICT_VARIABLE_REVIEW.md", review), ("docs/STRICT_IDOL_CLASSIFICATION.md", classification_doc)]:
+    default_pools = ["# Raxx原版：V06–V08已经预填的范围", "",
+                     "由extract_raxx_variables.py从冻结原版及名字库生成，以下为原始预选，不是本次两个BD的专属名单。作者要求玩家检查不需要的武器／副手、职业和词缀，T7素材池保持较宽；本页不裁剪名单，也不生成filter。", "",
+                     "三条均启用、没有角色等级退出条件、不限具体subtype。原版出处：[冻结XML](../sources/Raxx%27s%20S5%20Ultimate%20Filter%20v1.0.txt)；填写原则与Strict候选见[变量审阅结论](STRICT_VARIABLE_REVIEW.md#equipment-purpose)。", ""]
+    for v in variables:
+        if v["id"] not in {"V06", "V07", "V08"}:
+            continue
+        for n, row in v["baseline_defaults"].items():
+            ids = row["affix_pools"][0]
+            default_pools += [f"## {v['id']}／R{n}｜{v['title']}", "", "装备范围：" + scope(row) + "。", "",
+                              "原门槛：" + gate_text(row) + f"。预选词缀共{len(ids)}项，下面按原列表顺序完整列出。", "",
+                              "| ID | 中文 | 英文 |", "|---:|---|---|"]
+            default_pools += [f"| {i} | {ref['affixes'][str(i)]['zh']} | {ref['affixes'][str(i)]['en']} |" for i in ids]
+            default_pools.append("")
+    for path, content in [("docs/RAXX_VARIABLES.md", catalog), ("docs/STRICT_VARIABLE_REVIEW.md", review), ("docs/STRICT_IDOL_CLASSIFICATION.md", classification_doc), ("docs/RAXX_DEFAULT_EQUIPMENT_POOLS.md", default_pools)]:
         (ROOT / path).write_text("\n".join(content).rstrip() + "\n", encoding="utf-8", newline="\n")
     hashes_after = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in protected}
     assert hashes_before == hashes_after, "Extraction must never modify source or output filters"
