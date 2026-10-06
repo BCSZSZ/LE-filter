@@ -2,6 +2,8 @@
 
 最新版成品：**[Flay＋Skeleton Necromancer v3](filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml)**，144条（133启用／11关闭），采用铁匠／开始／灵感／彗星四档，静音项无图标和光柱。旧v2保留不动。[四档分类与能力审阅](docs/SOUND_STYLE_REVIEW.md)、[全部提示索引](docs/CURRENT_ALERT_INDEX.md)、[使用说明](docs/CURRENT_FILTER_GUIDE.md)和[逐条条件](docs/CURRENT_RULES_REVIEW.md)对应当前成品。
 
+2026-10-07修正：T8降为铁匠兜底（G66），取消置顶彗星；T7条件只计恰好7阶，T8不凑双／多T7，也不冒充BD目标单T7。
+
 当前基底仍为[LE Base Template v1](templates/LE-base-v1.xml)，落实用户确认的T7四类，供后续定制。Strict提供目标情报，成品采用基底门槛；原Raxx与旧187条试制保留不动。
 
 先读[当前使用说明](docs/CURRENT_FILTER_GUIDE.md)，再查[新基底说明](docs/BASE_TEMPLATE.md)、[BD情报来源](docs/STRICT_VARIABLE_REVIEW.md)及[工作memo](docs/WORKING_MEMO.md)。Flay主套路粉色、Skeleton副套路蓝色，共享按主；两者同等收集。旧187条XML及其说明包含Strict策略移植，仅作历史；动态勾选界面尚未实施。
@@ -93,7 +95,7 @@ python -X utf8 scripts/verify_current_filter.py
 python -X utf8 scripts/render_current_filter.py
 ```
 
-只使用标准库与已提交资料，不需要网络、.cache或Downloads。模板验证162条结构与15个有限案例；提取核对源哈希、56蓝字覆盖、全部271条Strict与19份目标一致。成品验证144条结构、1156全池、20种暗金0／1LP路径、提示字段、排序、T6压缩等价及94个有限案例；44条其他规则的条件和开关保持，原364项roll边界保留。客户端导入、封印计数与实际听音尚未实测。完整分类与本轮收集范围变化见SOUND_STYLE_REVIEW。
+只使用标准库与已提交资料，不需要网络、.cache或Downloads。模板验证162条结构与15个有限案例；提取核对源哈希、56蓝字覆盖、全部271条Strict与19份目标一致。成品验证144条结构、1156全池、20种暗金0／1LP路径、提示字段、排序、T6压缩等价及100个有限案例，包含T8与一至四条真正T7的提示；42条其他规则的条件和开关保持，原364项roll边界保留。客户端导入、封印计数与实际听音尚未实测。完整分类与本轮收集范围变化见SOUND_STYLE_REVIEW。
 
 以下命令用于**历史试制**，本轮不要执行：
 

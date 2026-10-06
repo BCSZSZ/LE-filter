@@ -122,7 +122,7 @@ def main():
     base[48].find("nameOverride").text = "[C2 任意双／多T7]"
     base[60].find("nameOverride").text = "[C4 额外单T7阶段：手动关闭]"
     replace_ints(condition(base[37], "AffixCondition"), "affixes", m["full_affix_ids"])
-    base[37].find("nameOverride").text = "任意T8及以上：全量词缀池"
+    base[37].find("nameOverride").text = "[T8保留兜底：铁匠] 全量词缀池"
 
     for c in candidates("V11"):
         add(69, c, "experimental_optional", "Optional wanted experimentals (OFF)", c["affix_ids"], 1)
@@ -273,7 +273,15 @@ def main():
     entries = [e for e in entries if e[1]["source_raxx_rule"] not in {68, 69, 70}]
     insertion = next(i for i, (_, row) in enumerate(entries) if row["category"] == "C4")
     entries[insertion:insertion] = quality
-    peaks = [e for e in entries if e[1]["source_raxx_rule"] == 37 or (e[1]["category"] == "C2" and e[1]["minimum_t7"] == 4)]
+    # T8 is a separate fallback, not another T7 for target or multi-affix counts.
+    for r, row in entries:
+        if row["category"] in {"C1", "C2", "C3", "C4"}:
+            condition(r, "AffixCondition").find("comparsion").text = "EQUAL"
+    t8 = next(e for e in entries if e[1]["source_raxx_rule"] == 37)
+    entries.remove(t8)
+    insertion = next(i for i, (_, row) in enumerate(entries) if row["category"] == "C4")
+    entries.insert(insertion, t8)
+    peaks = [e for e in entries if e[1]["category"] == "C2" and e[1]["minimum_t7"] == 4]
     entries = peaks + [e for e in entries if e not in peaks]
 
     style = read_json(STYLE_REFERENCE)
@@ -282,7 +290,7 @@ def main():
         tier = row.get("alert_tier", {"C1": 2, "C3": 1, "bd_unique": 1, "bd_unique_lp1": 3,
                                      "idol_bis": 3, "idol_candidate": 2, "altar": 2,
                                      "experimental_optional": 1}.get(row["category"],
-                                     {8: 3, 15: 1, 16: 1, 37: 4, 68: 1, 70: 1}.get(row["source_raxx_rule"], 0)))
+                                     {8: 3, 15: 1, 16: 1, 37: 1, 68: 1, 70: 1}.get(row["source_raxx_rule"], 0)))
         if row["category"] in {"lp_unique", "ww_unique"}:
             tier = {1: 2, 2: 3, 3: 4}[row["lp_min"]] if row["category"] == "lp_unique" else {14: 2, 17: 3, 20: 4}[row["ww_min"]]
         name, sound, icon, size, color, beam = ALERTS[tier]
@@ -316,6 +324,8 @@ def main():
               "feedback_reference": {"local_path": STYLE_REFERENCE, "sha256": hashlib.sha256((ROOT / STYLE_REFERENCE).read_bytes()).hexdigest()},
               "feedback": {"tiers": ALERTS, "silent_map_icon_is_none": True, "ww_thresholds": [14, 17, 20],
                            "t7_priority": ["C2 (4+)", "C2 (3)", "C2 (2)", "C1", "C3", "C4"],
+                           "t7_exact_tier": 7, "t8_fallback_tier": 1,
+                           "t8_after_targets_and_experimentals": True,
                            "experimental_and_champion_before_phase": True,
                            "t6_rules": len(t6_groups), "t6_collection_unchanged": True, "per_rule_volume": False},
               "defaults": {"urgent_shards": False, "ascendance": False, "ordinary_experimentals": False,

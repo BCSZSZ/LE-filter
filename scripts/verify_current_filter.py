@@ -54,7 +54,7 @@ def main():
         for r, row in groups[cat]:
             a = condition(r, "AffixCondition")
             assert ids(a, "affixes/int") == full and a.findtext("advanced") == "true"
-            assert a.findtext("comparsionValue") == "7" and a.findtext("comparsion") == "MORE_OR_EQUAL"
+            assert a.findtext("comparsionValue") == "7" and a.findtext("comparsion") == "EQUAL"
             assert a.findtext("minOnTheSameItem") == (str(row["minimum_t7"]) if cat == "C2" else "1")
             assert a.findtext("combinedComparsion") == "ANY"
             assert {c.get(XSI + "type") for c in r.find("conditions")} == {"AffixCondition", "SubTypeCondition"}
@@ -77,6 +77,8 @@ def main():
                 assert len(affixes) == 2 and a.findtext("advanced") == "false"
             else:
                 assert a.findtext("advanced") == "true" and a.findtext("comparsionValue") == ("7" if cat == "C1" else "6")
+                if cat == "C1":
+                    assert a.findtext("comparsion") == "EQUAL"
             if cat == "target_t6":
                 level = condition(r, "CharacterLevelCondition")
                 assert (level.findtext("minimumLvl"), level.findtext("maximumLvl")) == ("0", "84")
@@ -116,9 +118,12 @@ def main():
         n = row["source_raxx_rule"]
         if (row["category"] == "base" and n not in filled) or row["category"] == "C4" or (row["category"] == "C2" and row["minimum_t7"] == 2):
             before, after = deepcopy(base[n]), deepcopy(r)
+            if row["category"] in {"C2", "C4"}:
+                condition(before, "AffixCondition").find("comparsion").text = "EQUAL"
+            else:
+                preserved += 1
             assert structure(before.find("conditions")) == structure(after.find("conditions")), n
             assert before.findtext("type") == after.findtext("type") and before.findtext("isEnabled") == after.findtext("isEnabled")
-            preserved += 1
     rare = next(r for r, row in zip(rules, rows) if row["category"] == "base" and row["source_raxx_rule"] == 15)
     old_objects = condition(base[15], "UniqueModifiersCondition").findall("Uniques")
     assert [structure(x) for x in condition(rare, "UniqueModifiersCondition").findall("Uniques")[:len(old_objects)]] == [structure(x) for x in old_objects]
@@ -159,6 +164,12 @@ def main():
         ("Any quadruple T7", "HELMET", {503: 7, 1: 7, 17: 7, 34: 7}, "C2", "COMMON"),
         ("Any T8 selected by original pool", "HELMET", {34: 8}, "base", "COMMON"),
         ("T8 outside old pool with phase OFF", "HELMET", {1156: 8}, "base", "COMMON", {"phase_on": False}),
+        ("T8 does not mask target T7", "HELMET", {1156: 8, 34: 7}, "C1", "MAIN"),
+        ("T8 plus one non-target T7 is not double T7", "HELMET", {1156: 8, 503: 7}, "base", "COMMON"),
+        ("T8 plus two real T7", "HELMET", {1156: 8, 503: 7, 1: 7}, "C2", "COMMON"),
+        ("T8 plus three real T7", "HELMET", {1156: 8, 503: 7, 1: 7, 17: 7}, "C2", "COMMON"),
+        ("T8 plus four real T7", "HELMET", {1156: 8, 503: 7, 1: 7, 17: 7, 34: 7}, "C2", "COMMON"),
+        ("T8 plus low target is not C3", "HELMET", {1156: 8, 34: 5}, "base", "COMMON"),
         ("Experimental T7 takes precedence over phase", "BOOTS", {674: 7}, "base", "COMMON"),
         ("Experimental target T6 takes precedence over transition", "BOOTS", {676: 6}, "base", "COMMON", {"level": 84}),
         ("Legendary with T8", "HELMET", {34: 8}, "base", "COMMON", {"rarity": "LEGENDARY"}),
@@ -182,14 +193,20 @@ def main():
             assert rules[number - 1].findtext("type") == "HIDE", name
         if "Experimental" in name:
             assert row["source_raxx_rule"] == 68 and row["alert_tier"] == 1
+        if row["source_raxx_rule"] == 37:
+            assert row["alert_tier"] == 1
         if category == "C2":
-            assert row["alert_tier"] == {2: 1, 3: 3, 4: 4}[sum(t >= 7 for t in affixes.values())]
+            assert row["alert_tier"] == {2: 1, 3: 3, 4: 4}[sum(t == 7 for t in affixes.values())]
         results.append({"case": name, "matched_rule": number, "category": category, "role": role, "sound": row["sound_name"]})
     graduation = {r.findtext("SoundId") for r, _ in groups["idol_bis"]}
     candidate = {r.findtext("SoundId") for r, _ in groups["idol_candidate"]}
     assert graduation == {"9"} and candidate == {"6"}
     t8 = next(r for r, row in zip(rules, rows) if row["source_raxx_rule"] == 37)
     assert ids(condition(t8, "AffixCondition"), "affixes/int") == full
+    t8_number = int(t8.findtext("Order")) + 1
+    assert max(row["number"] for _, row in groups["C3"]) < t8_number < m["stage_rule"]
+    assert max(row["number"] for row in rows if row["source_raxx_rule"] in {68, 69, 70}) < t8_number
+    assert rows[t8_number - 1]["alert_tier"] == 1
     # Only separate LP or WW ranges and unbounded unique selectors are modelled.
     def unique_match(item):
         for r, row in zip(rules, rows):
@@ -231,6 +248,7 @@ def main():
     result = {"passed": True, "rules": len(rules), "enabled": m["enabled"], "stage_rule": m["stage_rule"],
               "full_affix_ids": len(full), "target_uniques": len(m["target_union"]),
               "unchanged_condition_rules": preserved, "t6_expansion_equal_to_v2": True, "sound_and_icon_invariants": True, "bounded_cases": results,
+              "t7_exact_tier": 7, "t8_fallback_tier": 1,
               "game_execution_tested": False, "sealed_affix_counting_tested": False}
     (ROOT / "analysis/current-filter-validation.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps({k: v for k, v in result.items() if k != "bounded_cases"}))

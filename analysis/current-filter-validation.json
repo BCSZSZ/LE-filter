@@ -5,27 +5,27 @@
   "stage_rule": 67,
   "full_affix_ids": 1156,
   "target_uniques": 20,
-  "unchanged_condition_rules": 44,
+  "unchanged_condition_rules": 42,
   "t6_expansion_equal_to_v2": true,
   "sound_and_icon_invariants": true,
   "bounded_cases": [
     {
       "case": "Flay axe T7",
-      "matched_rule": 26,
+      "matched_rule": 25,
       "category": "C1",
       "role": "MAIN",
       "sound": "开始"
     },
     {
       "case": "Flay dagger T7",
-      "matched_rule": 27,
+      "matched_rule": 26,
       "category": "C1",
       "role": "MAIN",
       "sound": "开始"
     },
     {
       "case": "Necro axe T7",
-      "matched_rule": 36,
+      "matched_rule": 35,
       "category": "C1",
       "role": "SECONDARY",
       "sound": "开始"
@@ -46,42 +46,42 @@
     },
     {
       "case": "Necro helmet target",
-      "matched_rule": 37,
+      "matched_rule": 36,
       "category": "C1",
       "role": "SECONDARY",
       "sound": "开始"
     },
     {
       "case": "Shared belt target",
-      "matched_rule": 30,
+      "matched_rule": 29,
       "category": "C1",
       "role": "MAIN",
       "sound": "开始"
     },
     {
       "case": "Any double T7",
-      "matched_rule": 25,
+      "matched_rule": 24,
       "category": "C2",
       "role": "COMMON",
       "sound": "铁匠"
     },
     {
       "case": "Any triple T7",
-      "matched_rule": 24,
+      "matched_rule": 23,
       "category": "C2",
       "role": "COMMON",
       "sound": "灵感"
     },
     {
       "case": "Flay low target plus T7",
-      "matched_rule": 52,
+      "matched_rule": 51,
       "category": "C3",
       "role": "MAIN",
       "sound": "铁匠"
     },
     {
       "case": "Necro low target plus T7",
-      "matched_rule": 62,
+      "matched_rule": 61,
       "category": "C3",
       "role": "SECONDARY",
       "sound": "铁匠"
@@ -102,35 +102,35 @@
     },
     {
       "case": "Phase OFF target T7",
-      "matched_rule": 28,
+      "matched_rule": 27,
       "category": "C1",
       "role": "MAIN",
       "sound": "开始"
     },
     {
       "case": "Phase OFF double T7",
-      "matched_rule": 25,
+      "matched_rule": 24,
       "category": "C2",
       "role": "COMMON",
       "sound": "铁匠"
     },
     {
       "case": "Phase OFF Flay low target",
-      "matched_rule": 52,
+      "matched_rule": 51,
       "category": "C3",
       "role": "MAIN",
       "sound": "铁匠"
     },
     {
       "case": "Phase OFF Necro low target",
-      "matched_rule": 62,
+      "matched_rule": 61,
       "category": "C3",
       "role": "SECONDARY",
       "sound": "铁匠"
     },
     {
       "case": "Corrupted zero FP candidate",
-      "matched_rule": 52,
+      "matched_rule": 51,
       "category": "C3",
       "role": "MAIN",
       "sound": "铁匠"
@@ -228,63 +228,105 @@
     },
     {
       "case": "Double T7 takes precedence over target",
-      "matched_rule": 25,
+      "matched_rule": 24,
       "category": "C2",
       "role": "COMMON",
       "sound": "铁匠"
     },
     {
       "case": "Any quadruple T7",
-      "matched_rule": 2,
+      "matched_rule": 1,
       "category": "C2",
       "role": "COMMON",
       "sound": "彗星"
     },
     {
       "case": "Any T8 selected by original pool",
-      "matched_rule": 1,
+      "matched_rule": 66,
       "category": "base",
       "role": "COMMON",
-      "sound": "彗星"
+      "sound": "铁匠"
     },
     {
       "case": "T8 outside old pool with phase OFF",
-      "matched_rule": 1,
+      "matched_rule": 66,
       "category": "base",
+      "role": "COMMON",
+      "sound": "铁匠"
+    },
+    {
+      "case": "T8 does not mask target T7",
+      "matched_rule": 27,
+      "category": "C1",
+      "role": "MAIN",
+      "sound": "开始"
+    },
+    {
+      "case": "T8 plus one non-target T7 is not double T7",
+      "matched_rule": 66,
+      "category": "base",
+      "role": "COMMON",
+      "sound": "铁匠"
+    },
+    {
+      "case": "T8 plus two real T7",
+      "matched_rule": 24,
+      "category": "C2",
+      "role": "COMMON",
+      "sound": "铁匠"
+    },
+    {
+      "case": "T8 plus three real T7",
+      "matched_rule": 23,
+      "category": "C2",
+      "role": "COMMON",
+      "sound": "灵感"
+    },
+    {
+      "case": "T8 plus four real T7",
+      "matched_rule": 1,
+      "category": "C2",
       "role": "COMMON",
       "sound": "彗星"
     },
     {
+      "case": "T8 plus low target is not C3",
+      "matched_rule": 66,
+      "category": "base",
+      "role": "COMMON",
+      "sound": "铁匠"
+    },
+    {
       "case": "Experimental T7 takes precedence over phase",
-      "matched_rule": 64,
+      "matched_rule": 63,
       "category": "base",
       "role": "COMMON",
       "sound": "铁匠"
     },
     {
       "case": "Experimental target T6 takes precedence over transition",
-      "matched_rule": 64,
+      "matched_rule": 63,
       "category": "base",
       "role": "COMMON",
       "sound": "铁匠"
     },
     {
       "case": "Legendary with T8",
-      "matched_rule": 1,
+      "matched_rule": 2,
       "category": "base",
       "role": "COMMON",
-      "sound": "彗星"
+      "sound": "灵感"
     },
     {
       "case": "Legendary with four T7",
-      "matched_rule": 2,
+      "matched_rule": 1,
       "category": "C2",
       "role": "COMMON",
       "sound": "彗星"
     },
     {
       "case": "Legendary fallback",
-      "matched_rule": 3,
+      "matched_rule": 2,
       "category": "base",
       "role": "COMMON",
       "sound": "灵感"
@@ -312,362 +354,364 @@
     },
     {
       "case": "Target 8 LP=0",
-      "matched_rule": 13,
+      "matched_rule": 12,
       "category": "bd_unique",
       "role": "SECONDARY",
       "sound": "铁匠"
     },
     {
       "case": "Target 8 LP=1",
-      "matched_rule": 9,
+      "matched_rule": 8,
       "category": "bd_unique_lp1",
       "role": "SECONDARY",
       "sound": "灵感"
     },
     {
       "case": "Target 66 LP=0",
-      "matched_rule": 13,
+      "matched_rule": 12,
       "category": "bd_unique",
       "role": "SECONDARY",
       "sound": "铁匠"
     },
     {
       "case": "Target 66 LP=1",
-      "matched_rule": 9,
+      "matched_rule": 8,
       "category": "bd_unique_lp1",
       "role": "SECONDARY",
       "sound": "灵感"
     },
     {
       "case": "Target 208 LP=0",
-      "matched_rule": 13,
+      "matched_rule": 12,
       "category": "bd_unique",
       "role": "SECONDARY",
       "sound": "铁匠"
     },
     {
       "case": "Target 208 LP=1",
-      "matched_rule": 9,
+      "matched_rule": 8,
       "category": "bd_unique_lp1",
       "role": "SECONDARY",
       "sound": "灵感"
     },
     {
       "case": "Target 241 LP=0",
-      "matched_rule": 13,
+      "matched_rule": 12,
       "category": "bd_unique",
       "role": "SECONDARY",
       "sound": "铁匠"
     },
     {
       "case": "Target 241 LP=1",
-      "matched_rule": 9,
+      "matched_rule": 8,
       "category": "bd_unique_lp1",
       "role": "SECONDARY",
       "sound": "灵感"
     },
     {
       "case": "Target 253 LP=0",
-      "matched_rule": 12,
+      "matched_rule": 11,
       "category": "bd_unique",
       "role": "MAIN",
       "sound": "铁匠"
     },
     {
       "case": "Target 253 LP=1",
-      "matched_rule": 8,
+      "matched_rule": 7,
       "category": "bd_unique_lp1",
       "role": "MAIN",
       "sound": "灵感"
     },
     {
       "case": "Target 269 LP=0",
-      "matched_rule": 13,
+      "matched_rule": 12,
       "category": "bd_unique",
       "role": "SECONDARY",
       "sound": "铁匠"
     },
     {
       "case": "Target 269 LP=1",
-      "matched_rule": 9,
+      "matched_rule": 8,
       "category": "bd_unique_lp1",
       "role": "SECONDARY",
       "sound": "灵感"
     },
     {
       "case": "Target 277 LP=0",
-      "matched_rule": 12,
+      "matched_rule": 11,
       "category": "bd_unique",
       "role": "MAIN",
       "sound": "铁匠"
     },
     {
       "case": "Target 277 LP=1",
-      "matched_rule": 8,
+      "matched_rule": 7,
       "category": "bd_unique_lp1",
       "role": "MAIN",
       "sound": "灵感"
     },
     {
       "case": "Target 300 LP=0",
-      "matched_rule": 13,
+      "matched_rule": 12,
       "category": "bd_unique",
       "role": "SECONDARY",
       "sound": "铁匠"
     },
     {
       "case": "Target 300 LP=1",
-      "matched_rule": 9,
+      "matched_rule": 8,
       "category": "bd_unique_lp1",
       "role": "SECONDARY",
       "sound": "灵感"
     },
     {
       "case": "Target 342 LP=0",
-      "matched_rule": 12,
+      "matched_rule": 11,
       "category": "bd_unique",
       "role": "MAIN",
       "sound": "铁匠"
     },
     {
       "case": "Target 342 LP=1",
-      "matched_rule": 8,
+      "matched_rule": 7,
       "category": "bd_unique_lp1",
       "role": "MAIN",
       "sound": "灵感"
     },
     {
       "case": "Target 357 LP=0",
-      "matched_rule": 12,
+      "matched_rule": 11,
       "category": "bd_unique",
       "role": "MAIN",
       "sound": "铁匠"
     },
     {
       "case": "Target 357 LP=1",
-      "matched_rule": 8,
+      "matched_rule": 7,
       "category": "bd_unique_lp1",
       "role": "MAIN",
       "sound": "灵感"
     },
     {
       "case": "Target 372 LP=0",
-      "matched_rule": 12,
+      "matched_rule": 11,
       "category": "bd_unique",
       "role": "MAIN",
       "sound": "铁匠"
     },
     {
       "case": "Target 372 LP=1",
-      "matched_rule": 8,
+      "matched_rule": 7,
       "category": "bd_unique_lp1",
       "role": "MAIN",
       "sound": "灵感"
     },
     {
       "case": "Target 374 LP=0",
-      "matched_rule": 13,
+      "matched_rule": 12,
       "category": "bd_unique",
       "role": "SECONDARY",
       "sound": "铁匠"
     },
     {
       "case": "Target 374 LP=1",
-      "matched_rule": 9,
+      "matched_rule": 8,
       "category": "bd_unique_lp1",
       "role": "SECONDARY",
       "sound": "灵感"
     },
     {
       "case": "Target 415 LP=0",
-      "matched_rule": 12,
+      "matched_rule": 11,
       "category": "bd_unique",
       "role": "MAIN",
       "sound": "铁匠"
     },
     {
       "case": "Target 415 LP=1",
-      "matched_rule": 8,
+      "matched_rule": 7,
       "category": "bd_unique_lp1",
       "role": "MAIN",
       "sound": "灵感"
     },
     {
       "case": "Target 416 LP=0",
-      "matched_rule": 12,
+      "matched_rule": 11,
       "category": "bd_unique",
       "role": "MAIN",
       "sound": "铁匠"
     },
     {
       "case": "Target 416 LP=1",
-      "matched_rule": 8,
+      "matched_rule": 7,
       "category": "bd_unique_lp1",
       "role": "MAIN",
       "sound": "灵感"
     },
     {
       "case": "Target 420 LP=0",
-      "matched_rule": 12,
+      "matched_rule": 11,
       "category": "bd_unique",
       "role": "MAIN",
       "sound": "铁匠"
     },
     {
       "case": "Target 420 LP=1",
-      "matched_rule": 8,
+      "matched_rule": 7,
       "category": "bd_unique_lp1",
       "role": "MAIN",
       "sound": "灵感"
     },
     {
       "case": "Target 433 LP=0",
-      "matched_rule": 12,
+      "matched_rule": 11,
       "category": "bd_unique",
       "role": "MAIN",
       "sound": "铁匠"
     },
     {
       "case": "Target 433 LP=1",
-      "matched_rule": 8,
+      "matched_rule": 7,
       "category": "bd_unique_lp1",
       "role": "MAIN",
       "sound": "灵感"
     },
     {
       "case": "Target 469 LP=0",
-      "matched_rule": 12,
+      "matched_rule": 11,
       "category": "bd_unique",
       "role": "MAIN",
       "sound": "铁匠"
     },
     {
       "case": "Target 469 LP=1",
-      "matched_rule": 8,
+      "matched_rule": 7,
       "category": "bd_unique_lp1",
       "role": "MAIN",
       "sound": "灵感"
     },
     {
       "case": "Target 471 LP=0",
-      "matched_rule": 13,
+      "matched_rule": 12,
       "category": "bd_unique",
       "role": "SECONDARY",
       "sound": "铁匠"
     },
     {
       "case": "Target 471 LP=1",
-      "matched_rule": 9,
+      "matched_rule": 8,
       "category": "bd_unique_lp1",
       "role": "SECONDARY",
       "sound": "灵感"
     },
     {
       "case": "Target 475 LP=0",
-      "matched_rule": 12,
+      "matched_rule": 11,
       "category": "bd_unique",
       "role": "MAIN",
       "sound": "铁匠"
     },
     {
       "case": "Target 475 LP=1",
-      "matched_rule": 8,
+      "matched_rule": 7,
       "category": "bd_unique_lp1",
       "role": "MAIN",
       "sound": "灵感"
     },
     {
       "case": "Target 477 LP=0",
-      "matched_rule": 13,
+      "matched_rule": 12,
       "category": "bd_unique",
       "role": "SECONDARY",
       "sound": "铁匠"
     },
     {
       "case": "Target 477 LP=1",
-      "matched_rule": 9,
+      "matched_rule": 8,
       "category": "bd_unique_lp1",
       "role": "SECONDARY",
       "sound": "灵感"
     },
     {
       "case": "Any unique LP=1",
-      "matched_rule": 10,
+      "matched_rule": 9,
       "category": "lp_unique",
       "role": "COMMON",
       "sound": "开始"
     },
     {
       "case": "Any unique LP=2",
-      "matched_rule": 6,
+      "matched_rule": 5,
       "category": "lp_unique",
       "role": "COMMON",
       "sound": "灵感"
     },
     {
       "case": "Any unique LP=3",
-      "matched_rule": 4,
+      "matched_rule": 3,
       "category": "lp_unique",
       "role": "COMMON",
       "sound": "彗星"
     },
     {
       "case": "Any unique LP=4",
-      "matched_rule": 4,
+      "matched_rule": 3,
       "category": "lp_unique",
       "role": "COMMON",
       "sound": "彗星"
     },
     {
       "case": "Target WW=13",
-      "matched_rule": 12,
+      "matched_rule": 11,
       "category": "bd_unique",
       "role": "MAIN",
       "sound": "铁匠"
     },
     {
       "case": "Target WW=14",
-      "matched_rule": 11,
+      "matched_rule": 10,
       "category": "ww_unique",
       "role": "COMMON",
       "sound": "开始"
     },
     {
       "case": "Target WW=16",
-      "matched_rule": 11,
+      "matched_rule": 10,
       "category": "ww_unique",
       "role": "COMMON",
       "sound": "开始"
     },
     {
       "case": "Target WW=17",
-      "matched_rule": 7,
+      "matched_rule": 6,
       "category": "ww_unique",
       "role": "COMMON",
       "sound": "灵感"
     },
     {
       "case": "Target WW=19",
-      "matched_rule": 7,
+      "matched_rule": 6,
       "category": "ww_unique",
       "role": "COMMON",
       "sound": "灵感"
     },
     {
       "case": "Target WW=20",
-      "matched_rule": 5,
+      "matched_rule": 4,
       "category": "ww_unique",
       "role": "COMMON",
       "sound": "彗星"
     },
     {
       "case": "Target WW=28",
-      "matched_rule": 5,
+      "matched_rule": 4,
       "category": "ww_unique",
       "role": "COMMON",
       "sound": "彗星"
     }
   ],
+  "t7_exact_tier": 7,
+  "t8_fallback_tier": 1,
   "game_execution_tested": false,
   "sealed_affix_counting_tested": false
 }

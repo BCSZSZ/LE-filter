@@ -4,72 +4,72 @@
 
 | G | 名称 | 状态 | 声音 | 图标 | 光柱 |
 |---:|---|---|---|---|---|
-| 1 | 任意T8及以上：全量词缀池 | 启用 | 彗星 | 传奇 | LARGEST |
-| 2 | [C2 任意4条以上T7] | 启用 | 彗星 | 传奇 | LARGEST |
-| 3 | 基底通用／最终隐藏 | 启用 | 灵感 | 金色 | LARGE |
-| 4 | 任意暗金：LP≥3 | 启用 | 彗星 | 传奇 | LARGEST |
-| 5 | WW暗金：20+ | 启用 | 彗星 | 传奇 | LARGEST |
-| 6 | 任意暗金：LP=2 | 启用 | 灵感 | 金色 | LARGE |
-| 7 | WW暗金：17–19 | 启用 | 灵感 | 金色 | LARGE |
-| 8 | MAIN - BD目标暗金：LP=1 | 启用 | 灵感 | 金色 | LARGE |
-| 9 | SECONDARY - BD目标暗金：LP=1 | 启用 | 灵感 | 金色 | LARGE |
-| 10 | 任意暗金：LP=1 | 启用 | 开始 | 崇高 | MEDIUM |
-| 11 | WW暗金：14–16 | 启用 | 开始 | 崇高 | MEDIUM |
-| 12 | MAIN - BD目标暗金（0LP也留） | 启用 | 铁匠 | 稀有 | SMALL |
-| 13 | SECONDARY - BD目标暗金（0LP也留） | 启用 | 铁匠 | 稀有 | SMALL |
-| 14 | 珍贵名单WW1–13：静音保留 | 启用 | 静音 | 无 | NONE |
-| 15 | Raxx rare uniques + build whitelist (0 LP kept) | 启用 | 铁匠 | 稀有 | SMALL |
-| 16 | Rarest Set Items (ADD ONES YOU WANT) | 启用 | 铁匠 | 稀有 | SMALL |
-| 17 | Glyphs | 启用 | 静音 | 无 | NONE |
-| 18 | Keys & Resources | 启用 | 静音 | 无 | NONE |
-| 19 | Resonances | 启用 | 静音 | 无 | NONE |
-| 20 | Runes | 启用 | 静音 | 无 | NONE |
-| 21 | Shards | 启用 | 静音 | 无 | NONE |
-| 22 | Woven Echoes | 启用 | 静音 | 无 | NONE |
-| 23 | OFF - Class hide not selected | 关闭 | 静音 | 无 | NONE |
-| 24 | [C2 任意3条以上T7] | 启用 | 灵感 | 金色 | LARGE |
-| 25 | [C2 任意2条以上T7] | 启用 | 铁匠 | 稀有 | SMALL |
-| 26 | MAIN - [C1 BD目标T7] ONE_HANDED_AXE | 启用 | 开始 | 崇高 | MEDIUM |
-| 27 | MAIN - [C1 BD目标T7] ONE_HANDED_DAGGER | 启用 | 开始 | 崇高 | MEDIUM |
-| 28 | MAIN - [C1 BD目标T7] HELMET | 启用 | 开始 | 崇高 | MEDIUM |
-| 29 | MAIN - [C1 BD目标T7] BODY_ARMOR | 启用 | 开始 | 崇高 | MEDIUM |
-| 30 | MAIN - [C1 BD目标T7] BELT | 启用 | 开始 | 崇高 | MEDIUM |
-| 31 | MAIN - [C1 BD目标T7] BOOTS | 启用 | 开始 | 崇高 | MEDIUM |
-| 32 | MAIN - [C1 BD目标T7] GLOVES | 启用 | 开始 | 崇高 | MEDIUM |
-| 33 | MAIN - [C1 BD目标T7] AMULET | 启用 | 开始 | 崇高 | MEDIUM |
-| 34 | MAIN - [C1 BD目标T7] RING | 启用 | 开始 | 崇高 | MEDIUM |
-| 35 | MAIN - [C1 BD目标T7] RELIC | 启用 | 开始 | 崇高 | MEDIUM |
-| 36 | SECONDARY - [C1 BD目标T7] TWO_HANDED_AXE | 启用 | 开始 | 崇高 | MEDIUM |
-| 37 | SECONDARY - [C1 BD目标T7] HELMET | 启用 | 开始 | 崇高 | MEDIUM |
-| 38 | SECONDARY - [C1 BD目标T7] BODY_ARMOR | 启用 | 开始 | 崇高 | MEDIUM |
-| 39 | SECONDARY - [C1 BD目标T7] BELT | 启用 | 开始 | 崇高 | MEDIUM |
-| 40 | SECONDARY - [C1 BD目标T7] BOOTS | 启用 | 开始 | 崇高 | MEDIUM |
-| 41 | SECONDARY - [C1 BD目标T7] GLOVES | 启用 | 开始 | 崇高 | MEDIUM |
-| 42 | SECONDARY - [C1 BD目标T7] AMULET | 启用 | 开始 | 崇高 | MEDIUM |
-| 43 | SECONDARY - [C1 BD目标T7] RING | 启用 | 开始 | 崇高 | MEDIUM |
-| 44 | SECONDARY - [C1 BD目标T7] RELIC | 启用 | 开始 | 崇高 | MEDIUM |
-| 45 | MAIN - [C3 非目标单T7＋BD目标词缀] RELIC | 启用 | 铁匠 | 稀有 | SMALL |
-| 46 | MAIN - [C3 非目标单T7＋BD目标词缀] RING | 启用 | 铁匠 | 稀有 | SMALL |
-| 47 | MAIN - [C3 非目标单T7＋BD目标词缀] AMULET | 启用 | 铁匠 | 稀有 | SMALL |
-| 48 | MAIN - [C3 非目标单T7＋BD目标词缀] GLOVES | 启用 | 铁匠 | 稀有 | SMALL |
-| 49 | MAIN - [C3 非目标单T7＋BD目标词缀] BOOTS | 启用 | 铁匠 | 稀有 | SMALL |
-| 50 | MAIN - [C3 非目标单T7＋BD目标词缀] BELT | 启用 | 铁匠 | 稀有 | SMALL |
-| 51 | MAIN - [C3 非目标单T7＋BD目标词缀] BODY_ARMOR | 启用 | 铁匠 | 稀有 | SMALL |
-| 52 | MAIN - [C3 非目标单T7＋BD目标词缀] HELMET | 启用 | 铁匠 | 稀有 | SMALL |
-| 53 | MAIN - [C3 非目标单T7＋BD目标词缀] ONE_HANDED_DAGGER | 启用 | 铁匠 | 稀有 | SMALL |
-| 54 | MAIN - [C3 非目标单T7＋BD目标词缀] ONE_HANDED_AXE | 启用 | 铁匠 | 稀有 | SMALL |
-| 55 | SECONDARY - [C3 非目标单T7＋BD目标词缀] RELIC | 启用 | 铁匠 | 稀有 | SMALL |
-| 56 | SECONDARY - [C3 非目标单T7＋BD目标词缀] RING | 启用 | 铁匠 | 稀有 | SMALL |
-| 57 | SECONDARY - [C3 非目标单T7＋BD目标词缀] AMULET | 启用 | 铁匠 | 稀有 | SMALL |
-| 58 | SECONDARY - [C3 非目标单T7＋BD目标词缀] GLOVES | 启用 | 铁匠 | 稀有 | SMALL |
-| 59 | SECONDARY - [C3 非目标单T7＋BD目标词缀] BOOTS | 启用 | 铁匠 | 稀有 | SMALL |
-| 60 | SECONDARY - [C3 非目标单T7＋BD目标词缀] BELT | 启用 | 铁匠 | 稀有 | SMALL |
-| 61 | SECONDARY - [C3 非目标单T7＋BD目标词缀] BODY_ARMOR | 启用 | 铁匠 | 稀有 | SMALL |
-| 62 | SECONDARY - [C3 非目标单T7＋BD目标词缀] HELMET | 启用 | 铁匠 | 稀有 | SMALL |
-| 63 | SECONDARY - [C3 非目标单T7＋BD目标词缀] TWO_HANDED_AXE | 启用 | 铁匠 | 稀有 | SMALL |
-| 64 | Exalted Experimentals (TURN OFF IF YOU DON'T USE) | 启用 | 铁匠 | 稀有 | SMALL |
-| 65 | SECONDARY - Optional wanted experimentals (OFF) | 关闭 | 铁匠 | 稀有 | SMALL |
-| 66 | OFF - Champion targets not selected | 关闭 | 铁匠 | 稀有 | SMALL |
+| 1 | [C2 任意4条以上T7] | 启用 | 彗星 | 传奇 | LARGEST |
+| 2 | 基底通用／最终隐藏 | 启用 | 灵感 | 金色 | LARGE |
+| 3 | 任意暗金：LP≥3 | 启用 | 彗星 | 传奇 | LARGEST |
+| 4 | WW暗金：20+ | 启用 | 彗星 | 传奇 | LARGEST |
+| 5 | 任意暗金：LP=2 | 启用 | 灵感 | 金色 | LARGE |
+| 6 | WW暗金：17–19 | 启用 | 灵感 | 金色 | LARGE |
+| 7 | MAIN - BD目标暗金：LP=1 | 启用 | 灵感 | 金色 | LARGE |
+| 8 | SECONDARY - BD目标暗金：LP=1 | 启用 | 灵感 | 金色 | LARGE |
+| 9 | 任意暗金：LP=1 | 启用 | 开始 | 崇高 | MEDIUM |
+| 10 | WW暗金：14–16 | 启用 | 开始 | 崇高 | MEDIUM |
+| 11 | MAIN - BD目标暗金（0LP也留） | 启用 | 铁匠 | 稀有 | SMALL |
+| 12 | SECONDARY - BD目标暗金（0LP也留） | 启用 | 铁匠 | 稀有 | SMALL |
+| 13 | 珍贵名单WW1–13：静音保留 | 启用 | 静音 | 无 | NONE |
+| 14 | Raxx rare uniques + build whitelist (0 LP kept) | 启用 | 铁匠 | 稀有 | SMALL |
+| 15 | Rarest Set Items (ADD ONES YOU WANT) | 启用 | 铁匠 | 稀有 | SMALL |
+| 16 | Glyphs | 启用 | 静音 | 无 | NONE |
+| 17 | Keys & Resources | 启用 | 静音 | 无 | NONE |
+| 18 | Resonances | 启用 | 静音 | 无 | NONE |
+| 19 | Runes | 启用 | 静音 | 无 | NONE |
+| 20 | Shards | 启用 | 静音 | 无 | NONE |
+| 21 | Woven Echoes | 启用 | 静音 | 无 | NONE |
+| 22 | OFF - Class hide not selected | 关闭 | 静音 | 无 | NONE |
+| 23 | [C2 任意3条以上T7] | 启用 | 灵感 | 金色 | LARGE |
+| 24 | [C2 任意2条以上T7] | 启用 | 铁匠 | 稀有 | SMALL |
+| 25 | MAIN - [C1 BD目标T7] ONE_HANDED_AXE | 启用 | 开始 | 崇高 | MEDIUM |
+| 26 | MAIN - [C1 BD目标T7] ONE_HANDED_DAGGER | 启用 | 开始 | 崇高 | MEDIUM |
+| 27 | MAIN - [C1 BD目标T7] HELMET | 启用 | 开始 | 崇高 | MEDIUM |
+| 28 | MAIN - [C1 BD目标T7] BODY_ARMOR | 启用 | 开始 | 崇高 | MEDIUM |
+| 29 | MAIN - [C1 BD目标T7] BELT | 启用 | 开始 | 崇高 | MEDIUM |
+| 30 | MAIN - [C1 BD目标T7] BOOTS | 启用 | 开始 | 崇高 | MEDIUM |
+| 31 | MAIN - [C1 BD目标T7] GLOVES | 启用 | 开始 | 崇高 | MEDIUM |
+| 32 | MAIN - [C1 BD目标T7] AMULET | 启用 | 开始 | 崇高 | MEDIUM |
+| 33 | MAIN - [C1 BD目标T7] RING | 启用 | 开始 | 崇高 | MEDIUM |
+| 34 | MAIN - [C1 BD目标T7] RELIC | 启用 | 开始 | 崇高 | MEDIUM |
+| 35 | SECONDARY - [C1 BD目标T7] TWO_HANDED_AXE | 启用 | 开始 | 崇高 | MEDIUM |
+| 36 | SECONDARY - [C1 BD目标T7] HELMET | 启用 | 开始 | 崇高 | MEDIUM |
+| 37 | SECONDARY - [C1 BD目标T7] BODY_ARMOR | 启用 | 开始 | 崇高 | MEDIUM |
+| 38 | SECONDARY - [C1 BD目标T7] BELT | 启用 | 开始 | 崇高 | MEDIUM |
+| 39 | SECONDARY - [C1 BD目标T7] BOOTS | 启用 | 开始 | 崇高 | MEDIUM |
+| 40 | SECONDARY - [C1 BD目标T7] GLOVES | 启用 | 开始 | 崇高 | MEDIUM |
+| 41 | SECONDARY - [C1 BD目标T7] AMULET | 启用 | 开始 | 崇高 | MEDIUM |
+| 42 | SECONDARY - [C1 BD目标T7] RING | 启用 | 开始 | 崇高 | MEDIUM |
+| 43 | SECONDARY - [C1 BD目标T7] RELIC | 启用 | 开始 | 崇高 | MEDIUM |
+| 44 | MAIN - [C3 非目标单T7＋BD目标词缀] RELIC | 启用 | 铁匠 | 稀有 | SMALL |
+| 45 | MAIN - [C3 非目标单T7＋BD目标词缀] RING | 启用 | 铁匠 | 稀有 | SMALL |
+| 46 | MAIN - [C3 非目标单T7＋BD目标词缀] AMULET | 启用 | 铁匠 | 稀有 | SMALL |
+| 47 | MAIN - [C3 非目标单T7＋BD目标词缀] GLOVES | 启用 | 铁匠 | 稀有 | SMALL |
+| 48 | MAIN - [C3 非目标单T7＋BD目标词缀] BOOTS | 启用 | 铁匠 | 稀有 | SMALL |
+| 49 | MAIN - [C3 非目标单T7＋BD目标词缀] BELT | 启用 | 铁匠 | 稀有 | SMALL |
+| 50 | MAIN - [C3 非目标单T7＋BD目标词缀] BODY_ARMOR | 启用 | 铁匠 | 稀有 | SMALL |
+| 51 | MAIN - [C3 非目标单T7＋BD目标词缀] HELMET | 启用 | 铁匠 | 稀有 | SMALL |
+| 52 | MAIN - [C3 非目标单T7＋BD目标词缀] ONE_HANDED_DAGGER | 启用 | 铁匠 | 稀有 | SMALL |
+| 53 | MAIN - [C3 非目标单T7＋BD目标词缀] ONE_HANDED_AXE | 启用 | 铁匠 | 稀有 | SMALL |
+| 54 | SECONDARY - [C3 非目标单T7＋BD目标词缀] RELIC | 启用 | 铁匠 | 稀有 | SMALL |
+| 55 | SECONDARY - [C3 非目标单T7＋BD目标词缀] RING | 启用 | 铁匠 | 稀有 | SMALL |
+| 56 | SECONDARY - [C3 非目标单T7＋BD目标词缀] AMULET | 启用 | 铁匠 | 稀有 | SMALL |
+| 57 | SECONDARY - [C3 非目标单T7＋BD目标词缀] GLOVES | 启用 | 铁匠 | 稀有 | SMALL |
+| 58 | SECONDARY - [C3 非目标单T7＋BD目标词缀] BOOTS | 启用 | 铁匠 | 稀有 | SMALL |
+| 59 | SECONDARY - [C3 非目标单T7＋BD目标词缀] BELT | 启用 | 铁匠 | 稀有 | SMALL |
+| 60 | SECONDARY - [C3 非目标单T7＋BD目标词缀] BODY_ARMOR | 启用 | 铁匠 | 稀有 | SMALL |
+| 61 | SECONDARY - [C3 非目标单T7＋BD目标词缀] HELMET | 启用 | 铁匠 | 稀有 | SMALL |
+| 62 | SECONDARY - [C3 非目标单T7＋BD目标词缀] TWO_HANDED_AXE | 启用 | 铁匠 | 稀有 | SMALL |
+| 63 | Exalted Experimentals (TURN OFF IF YOU DON'T USE) | 启用 | 铁匠 | 稀有 | SMALL |
+| 64 | SECONDARY - Optional wanted experimentals (OFF) | 关闭 | 铁匠 | 稀有 | SMALL |
+| 65 | OFF - Champion targets not selected | 关闭 | 铁匠 | 稀有 | SMALL |
+| 66 | [T8保留兜底：铁匠] 全量词缀池 | 启用 | 铁匠 | 稀有 | SMALL |
 | 67 | [C4 额外单T7阶段：手动关闭] | 启用 | 静音 | 无 | NONE |
 | 68 | MAIN - [过渡T6：85级退出] ONE_HANDED_DAGGER/ONE_HANDED_AXE | 启用 | 静音 | 无 | NONE |
 | 69 | MAIN - [过渡T6：85级退出] RELIC | 启用 | 静音 | 无 | NONE |
