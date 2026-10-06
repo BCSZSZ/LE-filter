@@ -15,7 +15,7 @@ COLORS = {MAIN: "8", SECONDARY: "12"}
 STYLE_REFERENCE = "sources/filter-style-reference.json"
 # Name, sound, map icon, beam size, common label color, common beam color.
 ALERTS = {
-    0: ("静音", "1", "1", "NONE", "1", "0"),
+    0: ("静音", "1", "1", "NONE", None, None),
     1: ("铁匠", "14", "2", "SMALL", "3", "4"),
     2: ("开始", "6", "7", "MEDIUM", "4", "6"),
     3: ("灵感", "9", "8", "LARGE", "5", "7"),
@@ -259,14 +259,21 @@ def main():
     indices = [i for i, (_, row) in enumerate(entries) if row["category"] in {"C1", "C2"}]
     multi = next(e for e in entries if e[1]["category"] == "C2")
     multi_rules = []
-    for count, tier in [(4, 4), (3, 3), (2, 1)]:
+    for count, tier in [(3, 4), (2, 2)]:
         r, row = deepcopy(multi)
         condition(r, "AffixCondition").find("minOnTheSameItem").text = str(count)
         r.find("nameOverride").text = "[C2 任意" + str(count) + "条以上T7]"
         row.update(minimum_t7=count, alert_tier=tier)
         multi_rules.append((r, row))
     c1 = sorted((e for e in entries if e[1]["category"] == "C1"), key=lambda e: e[1]["role"] != "MAIN")
-    entries[min(indices):max(indices) + 1] = multi_rules + c1
+    double_targets = []
+    for r, row in c1:
+        tr, trow = deepcopy(r), deepcopy(row)
+        tr.find("conditions").append(deepcopy(condition(multi_rules[1][0], "AffixCondition")))
+        tr.find("nameOverride").text = r.findtext("nameOverride").replace("[C1 BD目标T7]", "[C2 双T7含BD目标]")
+        trow.update(category="C2_target", minimum_t7=2, alert_tier=3)
+        double_targets.append((tr, trow))
+    entries[min(indices):max(indices) + 1] = [multi_rules[0], *double_targets, multi_rules[1], *c1]
     indices = [i for i, (_, row) in enumerate(entries) if row["category"] == "target_t6"]
     entries[min(indices):max(indices) + 1] = sorted((entries[i] for i in indices), key=lambda e: e[1]["role"] != "MAIN")
     quality = [e for e in entries if e[1]["source_raxx_rule"] in {68, 69, 70}]
@@ -275,13 +282,15 @@ def main():
     entries[insertion:insertion] = quality
     # T8 is a separate fallback, not another T7 for target or multi-affix counts.
     for r, row in entries:
-        if row["category"] in {"C1", "C2", "C3", "C4"}:
-            condition(r, "AffixCondition").find("comparsion").text = "EQUAL"
+        if row["category"] in {"C1", "C2", "C2_target", "C3", "C4"}:
+            for a in r.find("conditions"):
+                if a.get(XSI + "type") == "AffixCondition" and a.findtext("advanced") == "true":
+                    a.find("comparsion").text = "EQUAL"
     t8 = next(e for e in entries if e[1]["source_raxx_rule"] == 37)
     entries.remove(t8)
     insertion = next(i for i, (_, row) in enumerate(entries) if row["category"] == "C4")
     entries.insert(insertion, t8)
-    peaks = [e for e in entries if e[1]["category"] == "C2" and e[1]["minimum_t7"] == 4]
+    peaks = [e for e in entries if e[1]["category"] == "C2" and e[1]["minimum_t7"] == 3]
     entries = peaks + [e for e in entries if e not in peaks]
 
     style = read_json(STYLE_REFERENCE)
@@ -298,9 +307,10 @@ def main():
         if row["owners"]:
             color, beam = ("8", "11") if row["role"] == "MAIN" else ("12", "15")
         for field, value in {"SoundId": sound, "MapIconId": icon, "BeamOverride": "true",
-                             "BeamSizeOverride": size, "BeamColorOverride": beam if tier else "0"}.items():
+                             "BeamSizeOverride": size}.items():
             r.find(field).text = value
-        if tier or not row["owners"]:
+        if tier:
+            r.find("BeamColorOverride").text = beam
             r.find("recolor").text = "true"
             r.find("color").text = color
             r.find("emphasized").text = str(tier >= 3).lower()
@@ -323,7 +333,8 @@ def main():
               "stage_rule": next(r["number"] for r in rows if r["category"] == "C4"),
               "feedback_reference": {"local_path": STYLE_REFERENCE, "sha256": hashlib.sha256((ROOT / STYLE_REFERENCE).read_bytes()).hexdigest()},
               "feedback": {"tiers": ALERTS, "silent_map_icon_is_none": True, "ww_thresholds": [14, 17, 20],
-                           "t7_priority": ["C2 (4+)", "C2 (3)", "C2 (2)", "C1", "C3", "C4"],
+                           "t7_priority": ["C2 (3+)", "C2_target (2 with BD T7)", "C2 (2)", "C1", "C3", "C4"],
+                           "silent_colors_preserved": True,
                            "t7_exact_tier": 7, "t8_fallback_tier": 1,
                            "t8_after_targets_and_experimentals": True,
                            "experimental_and_champion_before_phase": True,

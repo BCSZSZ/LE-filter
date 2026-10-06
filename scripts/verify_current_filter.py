@@ -45,9 +45,9 @@ def main():
                 if c.get(XSI + "type") == "SubTypeCondition" and not len(c.find("type")):
                     assert row["source_raxx_rule"] == 37, row["number"]
     groups = {cat: [(r, row) for r, row in zip(rules, rows) if row["category"] == cat]
-              for cat in ["C1", "C2", "C3", "C4", "target_t6", "idol_bis", "idol_candidate", "bd_unique"]}
+              for cat in ["C1", "C2", "C2_target", "C3", "C4", "target_t6", "idol_bis", "idol_candidate", "bd_unique"]}
     assert len(groups["C1"]) == len(groups["C3"]) == 19 and len(groups["target_t6"]) == 18
-    assert len(groups["C2"]) == 3 and len(groups["C4"]) == 1
+    assert len(groups["C2"]) == 2 and len(groups["C2_target"]) == 19 and len(groups["C4"]) == 1
     assert len(groups["bd_unique"]) == 2
     full = set(m["base_template"]["full_affix_ids"])
     for cat in ["C2", "C3", "C4"]:
@@ -64,7 +64,7 @@ def main():
     evidence = read_json("analysis/raxx-variable-extraction.json")
     wanted = {(c["build"], tuple(c["types"])): set(c["affix_ids"])
               for v in evidence["variables"] if v["id"] == "V05" for c in v["evidence"]}
-    for cat in ["C1", "C3", "target_t6"]:
+    for cat in ["C1", "C2_target", "C3", "target_t6"]:
         for r, row in groups[cat]:
             typ = tuple(t.text for t in condition(r, "SubTypeCondition").find("type"))
             affixes = [c for c in r.find("conditions") if c.get(XSI + "type") == "AffixCondition"]
@@ -76,17 +76,26 @@ def main():
             if cat == "C3":
                 assert len(affixes) == 2 and a.findtext("advanced") == "false"
             else:
-                assert a.findtext("advanced") == "true" and a.findtext("comparsionValue") == ("7" if cat == "C1" else "6")
-                if cat == "C1":
+                assert a.findtext("advanced") == "true" and a.findtext("comparsionValue") == ("6" if cat == "target_t6" else "7")
+                if cat != "target_t6":
                     assert a.findtext("comparsion") == "EQUAL"
+            if cat == "C2_target":
+                assert len(affixes) == 2 and row["alert_tier"] == 3
+                count = affixes[1]
+                assert ids(count, "affixes/int") == full and count.findtext("advanced") == "true"
+                assert count.findtext("minOnTheSameItem") == "2" and count.findtext("comparsion") == "EQUAL"
+                assert count.findtext("comparsionValue") == "7" and count.findtext("combinedComparsion") == "ANY"
             if cat == "target_t6":
                 level = condition(r, "CharacterLevelCondition")
                 assert (level.findtext("minimumLvl"), level.findtext("maximumLvl")) == ("0", "84")
-    assert [row["minimum_t7"] for _, row in groups["C2"]] == [4, 3, 2]
-    assert max(row["number"] for _, row in groups["C2"]) < min(row["number"] for _, row in groups["C1"])
+    assert [row["minimum_t7"] for _, row in groups["C2"]] == [3, 2]
+    assert groups["C2"][0][1]["number"] == 1 and groups["C2"][0][1]["alert_tier"] == 4
+    assert groups["C2"][0][1]["number"] < min(row["number"] for _, row in groups["C2_target"])
+    assert max(row["number"] for _, row in groups["C2_target"]) < groups["C2"][1][1]["number"]
+    assert groups["C2"][1][1]["number"] < min(row["number"] for _, row in groups["C1"])
     assert max(row["number"] for _, row in groups["C1"]) < min(row["number"] for _, row in groups["C3"])
     assert max(row["number"] for _, row in groups["C3"]) < m["stage_rule"]
-    for cat in ["C1", "C3", "target_t6"]:
+    for cat in ["C1", "C2_target", "C3", "target_t6"]:
         roles = [row["role"] for _, row in groups[cat]]
         assert roles == sorted(roles, key=lambda role: role != "MAIN")
     def expanded_t6(nodes):
@@ -112,6 +121,10 @@ def main():
     assert set().union(*(inspect_rule(r)["unique_ids"] for r, _ in groups["bd_unique"])) == set(m["target_union"])
     template = frozen(m["base_template"])
     base = dict(zip(m["base_template"]["source_rule_order"], sorted(template.find("rules"), key=lambda r: int(r.findtext("Order"))), strict=True))
+    for r, row in zip(rules, rows):
+        if not row["alert_tier"] and not row["owners"]:
+            assert all(r.findtext(f) == base[row["source_raxx_rule"]].findtext(f)
+                       for f in ["recolor", "color", "emphasized", "BeamColorOverride"]), row["number"]
     filled = {15, 29, 37, 70, 75, 81, 83, 85, 86, 87, 88, 128, 129, 136, 137}
     preserved = 0
     for r, row in zip(rules, rows):
@@ -160,7 +173,14 @@ def main():
         ("Necro ordinary idol pair", "IDOL_1x1_LAGON", {846: 1, 851: 1}, "idol_bis", "SECONDARY", {"base": 1}),
         ("Necro corruption is not second target", "IDOL_1x1_LAGON", {846: 1, 1068: 1}, "base", "COMMON", {"base": 1, "corrupted": True}),
         ("Necro large ordinary pair", "IDOL_1x3", {941: 1, 287: 1}, "idol_bis", "SECONDARY", {"base": 13}),
-        ("Double T7 takes precedence over target", "HELMET", {34: 7, 503: 7}, "C2", "COMMON"),
+        ("Double T7 takes precedence over target", "HELMET", {34: 7, 503: 7}, "C2_target", "MAIN"),
+        ("Necro double T7 target", "HELMET", {406: 7, 503: 7}, "C2_target", "SECONDARY"),
+        ("Shared double T7 target", "BELT", {52: 7, 503: 7}, "C2_target", "MAIN"),
+        ("Double T7 wrong-slot target", "HELMET", {718: 7, 503: 7}, "C2", "COMMON"),
+        ("Double T7 with only low target", "HELMET", {503: 7, 1: 7, 34: 5}, "C2", "COMMON"),
+        ("Triple T7 beats double target", "HELMET", {34: 7, 503: 7, 1: 7}, "C2", "COMMON"),
+        ("Legendary with three T7", "HELMET", {503: 7, 1: 7, 17: 7}, "C2", "COMMON", {"rarity": "LEGENDARY"}),
+        ("Phase OFF Necro double target", "HELMET", {406: 7, 503: 7}, "C2_target", "SECONDARY", {"phase_on": False}),
         ("Any quadruple T7", "HELMET", {503: 7, 1: 7, 17: 7, 34: 7}, "C2", "COMMON"),
         ("Any T8 selected by original pool", "HELMET", {34: 8}, "base", "COMMON"),
         ("T8 outside old pool with phase OFF", "HELMET", {1156: 8}, "base", "COMMON", {"phase_on": False}),
@@ -196,7 +216,9 @@ def main():
         if row["source_raxx_rule"] == 37:
             assert row["alert_tier"] == 1
         if category == "C2":
-            assert row["alert_tier"] == {2: 1, 3: 3, 4: 4}[sum(t == 7 for t in affixes.values())]
+            assert row["alert_tier"] == (4 if sum(t == 7 for t in affixes.values()) >= 3 else 2)
+        if category == "C2_target":
+            assert row["alert_tier"] == 3
         results.append({"case": name, "matched_rule": number, "category": category, "role": role, "sound": row["sound_name"]})
     graduation = {r.findtext("SoundId") for r, _ in groups["idol_bis"]}
     candidate = {r.findtext("SoundId") for r, _ in groups["idol_candidate"]}
@@ -248,7 +270,7 @@ def main():
     result = {"passed": True, "rules": len(rules), "enabled": m["enabled"], "stage_rule": m["stage_rule"],
               "full_affix_ids": len(full), "target_uniques": len(m["target_union"]),
               "unchanged_condition_rules": preserved, "t6_expansion_equal_to_v2": True, "sound_and_icon_invariants": True, "bounded_cases": results,
-              "t7_exact_tier": 7, "t8_fallback_tier": 1,
+              "t7_exact_tier": 7, "t8_fallback_tier": 1, "silent_colors_preserved": True,
               "game_execution_tested": False, "sealed_affix_counting_tested": False}
     (ROOT / "analysis/current-filter-validation.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps({k: v for k, v in result.items() if k != "bounded_cases"}))

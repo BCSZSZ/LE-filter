@@ -1,8 +1,8 @@
 {
   "passed": true,
-  "rules": 144,
-  "enabled": 133,
-  "stage_rule": 67,
+  "rules": 162,
+  "enabled": 151,
+  "stage_rule": 85,
   "full_affix_ids": 1156,
   "target_uniques": 20,
   "unchanged_condition_rules": 42,
@@ -11,227 +11,276 @@
   "bounded_cases": [
     {
       "case": "Flay axe T7",
-      "matched_rule": 25,
+      "matched_rule": 43,
       "category": "C1",
       "role": "MAIN",
       "sound": "开始"
     },
     {
       "case": "Flay dagger T7",
-      "matched_rule": 26,
+      "matched_rule": 44,
       "category": "C1",
       "role": "MAIN",
       "sound": "开始"
     },
     {
       "case": "Necro axe T7",
-      "matched_rule": 35,
+      "matched_rule": 53,
       "category": "C1",
       "role": "SECONDARY",
       "sound": "开始"
     },
     {
       "case": "Flay affix on Necro weapon",
-      "matched_rule": 67,
+      "matched_rule": 85,
       "category": "C4",
       "role": "COMMON",
       "sound": "静音"
     },
     {
       "case": "Weapon affix on helmet",
-      "matched_rule": 67,
+      "matched_rule": 85,
       "category": "C4",
       "role": "COMMON",
       "sound": "静音"
     },
     {
       "case": "Necro helmet target",
-      "matched_rule": 36,
+      "matched_rule": 54,
       "category": "C1",
       "role": "SECONDARY",
       "sound": "开始"
     },
     {
       "case": "Shared belt target",
-      "matched_rule": 29,
+      "matched_rule": 47,
       "category": "C1",
       "role": "MAIN",
       "sound": "开始"
     },
     {
       "case": "Any double T7",
-      "matched_rule": 24,
+      "matched_rule": 42,
       "category": "C2",
       "role": "COMMON",
-      "sound": "铁匠"
+      "sound": "开始"
     },
     {
       "case": "Any triple T7",
-      "matched_rule": 23,
+      "matched_rule": 1,
       "category": "C2",
       "role": "COMMON",
-      "sound": "灵感"
+      "sound": "彗星"
     },
     {
       "case": "Flay low target plus T7",
-      "matched_rule": 51,
+      "matched_rule": 69,
       "category": "C3",
       "role": "MAIN",
       "sound": "铁匠"
     },
     {
       "case": "Necro low target plus T7",
-      "matched_rule": 61,
+      "matched_rule": 79,
       "category": "C3",
       "role": "SECONDARY",
       "sound": "铁匠"
     },
     {
       "case": "Stage single T7",
-      "matched_rule": 67,
+      "matched_rule": 85,
       "category": "C4",
       "role": "COMMON",
       "sound": "静音"
     },
     {
       "case": "Phase OFF single T7",
-      "matched_rule": 144,
+      "matched_rule": 162,
       "category": "base",
       "role": "COMMON",
       "sound": "静音"
     },
     {
       "case": "Phase OFF target T7",
-      "matched_rule": 27,
+      "matched_rule": 45,
       "category": "C1",
       "role": "MAIN",
       "sound": "开始"
     },
     {
       "case": "Phase OFF double T7",
-      "matched_rule": 24,
+      "matched_rule": 42,
       "category": "C2",
       "role": "COMMON",
-      "sound": "铁匠"
+      "sound": "开始"
     },
     {
       "case": "Phase OFF Flay low target",
-      "matched_rule": 51,
+      "matched_rule": 69,
       "category": "C3",
       "role": "MAIN",
       "sound": "铁匠"
     },
     {
       "case": "Phase OFF Necro low target",
-      "matched_rule": 61,
+      "matched_rule": 79,
       "category": "C3",
       "role": "SECONDARY",
       "sound": "铁匠"
     },
     {
       "case": "Corrupted zero FP candidate",
-      "matched_rule": 51,
+      "matched_rule": 69,
       "category": "C3",
       "role": "MAIN",
       "sound": "铁匠"
     },
     {
       "case": "Target T6 at 84",
-      "matched_rule": 76,
+      "matched_rule": 94,
       "category": "target_t6",
       "role": "MAIN",
       "sound": "静音"
     },
     {
       "case": "Target T6 at 85",
-      "matched_rule": 144,
+      "matched_rule": 162,
       "category": "base",
       "role": "COMMON",
       "sound": "静音"
     },
     {
       "case": "Flay minor pair Lagon",
-      "matched_rule": 103,
+      "matched_rule": 121,
       "category": "idol_bis",
       "role": "MAIN",
       "sound": "灵感"
     },
     {
       "case": "Flay minor pair Weaver",
-      "matched_rule": 103,
+      "matched_rule": 121,
       "category": "idol_bis",
       "role": "MAIN",
       "sound": "灵感"
     },
     {
       "case": "Flay minor one target",
-      "matched_rule": 109,
+      "matched_rule": 127,
       "category": "idol_candidate",
       "role": "MAIN",
       "sound": "开始"
     },
     {
       "case": "Flay corruption is not second target",
-      "matched_rule": 109,
+      "matched_rule": 127,
       "category": "idol_candidate",
       "role": "MAIN",
       "sound": "开始"
     },
     {
       "case": "Flay corruption-only idol",
-      "matched_rule": 144,
+      "matched_rule": 162,
       "category": "base",
       "role": "COMMON",
       "sound": "静音"
     },
     {
       "case": "Flay stout pair",
-      "matched_rule": 104,
+      "matched_rule": 122,
       "category": "idol_bis",
       "role": "MAIN",
       "sound": "灵感"
     },
     {
       "case": "Flay stout single ignite",
-      "matched_rule": 110,
+      "matched_rule": 128,
       "category": "idol_candidate",
       "role": "MAIN",
       "sound": "开始"
     },
     {
       "case": "Flay stout optional resist",
-      "matched_rule": 110,
+      "matched_rule": 128,
       "category": "idol_candidate",
       "role": "MAIN",
       "sound": "开始"
     },
     {
       "case": "Necro ordinary idol pair",
-      "matched_rule": 105,
+      "matched_rule": 123,
       "category": "idol_bis",
       "role": "SECONDARY",
       "sound": "灵感"
     },
     {
       "case": "Necro corruption is not second target",
-      "matched_rule": 144,
+      "matched_rule": 162,
       "category": "base",
       "role": "COMMON",
       "sound": "静音"
     },
     {
       "case": "Necro large ordinary pair",
-      "matched_rule": 107,
+      "matched_rule": 125,
       "category": "idol_bis",
       "role": "SECONDARY",
       "sound": "灵感"
     },
     {
       "case": "Double T7 takes precedence over target",
-      "matched_rule": 24,
+      "matched_rule": 25,
+      "category": "C2_target",
+      "role": "MAIN",
+      "sound": "灵感"
+    },
+    {
+      "case": "Necro double T7 target",
+      "matched_rule": 34,
+      "category": "C2_target",
+      "role": "SECONDARY",
+      "sound": "灵感"
+    },
+    {
+      "case": "Shared double T7 target",
+      "matched_rule": 27,
+      "category": "C2_target",
+      "role": "MAIN",
+      "sound": "灵感"
+    },
+    {
+      "case": "Double T7 wrong-slot target",
+      "matched_rule": 42,
       "category": "C2",
       "role": "COMMON",
-      "sound": "铁匠"
+      "sound": "开始"
+    },
+    {
+      "case": "Double T7 with only low target",
+      "matched_rule": 42,
+      "category": "C2",
+      "role": "COMMON",
+      "sound": "开始"
+    },
+    {
+      "case": "Triple T7 beats double target",
+      "matched_rule": 1,
+      "category": "C2",
+      "role": "COMMON",
+      "sound": "彗星"
+    },
+    {
+      "case": "Legendary with three T7",
+      "matched_rule": 1,
+      "category": "C2",
+      "role": "COMMON",
+      "sound": "彗星"
+    },
+    {
+      "case": "Phase OFF Necro double target",
+      "matched_rule": 34,
+      "category": "C2_target",
+      "role": "SECONDARY",
+      "sound": "灵感"
     },
     {
       "case": "Any quadruple T7",
@@ -242,45 +291,45 @@
     },
     {
       "case": "Any T8 selected by original pool",
-      "matched_rule": 66,
+      "matched_rule": 84,
       "category": "base",
       "role": "COMMON",
       "sound": "铁匠"
     },
     {
       "case": "T8 outside old pool with phase OFF",
-      "matched_rule": 66,
+      "matched_rule": 84,
       "category": "base",
       "role": "COMMON",
       "sound": "铁匠"
     },
     {
       "case": "T8 does not mask target T7",
-      "matched_rule": 27,
+      "matched_rule": 45,
       "category": "C1",
       "role": "MAIN",
       "sound": "开始"
     },
     {
       "case": "T8 plus one non-target T7 is not double T7",
-      "matched_rule": 66,
+      "matched_rule": 84,
       "category": "base",
       "role": "COMMON",
       "sound": "铁匠"
     },
     {
       "case": "T8 plus two real T7",
-      "matched_rule": 24,
+      "matched_rule": 42,
       "category": "C2",
       "role": "COMMON",
-      "sound": "铁匠"
+      "sound": "开始"
     },
     {
       "case": "T8 plus three real T7",
-      "matched_rule": 23,
+      "matched_rule": 1,
       "category": "C2",
       "role": "COMMON",
-      "sound": "灵感"
+      "sound": "彗星"
     },
     {
       "case": "T8 plus four real T7",
@@ -291,21 +340,21 @@
     },
     {
       "case": "T8 plus low target is not C3",
-      "matched_rule": 66,
+      "matched_rule": 84,
       "category": "base",
       "role": "COMMON",
       "sound": "铁匠"
     },
     {
       "case": "Experimental T7 takes precedence over phase",
-      "matched_rule": 63,
+      "matched_rule": 81,
       "category": "base",
       "role": "COMMON",
       "sound": "铁匠"
     },
     {
       "case": "Experimental target T6 takes precedence over transition",
-      "matched_rule": 63,
+      "matched_rule": 81,
       "category": "base",
       "role": "COMMON",
       "sound": "铁匠"
@@ -333,21 +382,21 @@
     },
     {
       "case": "Shared Eternal Gauntlets",
-      "matched_rule": 90,
+      "matched_rule": 108,
       "category": "target_base",
       "role": "MAIN",
       "sound": "静音"
     },
     {
       "case": "Flay altar any tier",
-      "matched_rule": 111,
+      "matched_rule": 129,
       "category": "altar",
       "role": "MAIN",
       "sound": "开始"
     },
     {
       "case": "Necro altar any tier",
-      "matched_rule": 112,
+      "matched_rule": 130,
       "category": "altar",
       "role": "SECONDARY",
       "sound": "开始"
@@ -712,6 +761,7 @@
   ],
   "t7_exact_tier": 7,
   "t8_fallback_tier": 1,
+  "silent_colors_preserved": true,
   "game_execution_tested": false,
   "sealed_affix_counting_tested": false
 }

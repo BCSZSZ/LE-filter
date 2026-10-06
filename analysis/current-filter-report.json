@@ -1,6 +1,6 @@
 {
   "output": "filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml",
-  "output_sha256": "910d9c8d899b96a3b1776a1ae8b438ea60b6bf3725a1585a3cee4ab0c67a4e0f",
+  "output_sha256": "ddfb6889366162de32eaf4a9dbd050f23496a1d902189cff340b5ec444da6ec9",
   "base_template": {
     "name": "LE Base Template v1",
     "file": "templates/LE-base-v1.xml",
@@ -1441,14 +1441,14 @@
     ],
     "target_defaults_are_raxx_examples": true
   },
-  "extraction_sha256": "a54f2b67340f9132f3e0c947c473e35c7b8dc89fbedc675136fd275b739a7f71",
+  "extraction_sha256": "a6a00092b7244100a5b6cbddb8e77459d933e78aa778352812e39797cefc054a",
   "display": {
     "main": "flay-mana-lich",
     "secondary": "skeleton-necromancer",
     "shared_uses_main": true
   },
-  "rules": 144,
-  "enabled": 133,
+  "rules": 162,
+  "enabled": 151,
   "output_rules": [
     {
       "source_raxx_rule": 48,
@@ -1459,8 +1459,8 @@
       "number": 1,
       "role": "COMMON",
       "enabled": true,
-      "name": "[C2 任意4条以上T7]",
-      "minimum_t7": 4,
+      "name": "[C2 任意3条以上T7]",
+      "minimum_t7": 3,
       "alert_tier": 4,
       "sound_name": "彗星"
     },
@@ -1792,16 +1792,401 @@
       "sound_name": "静音"
     },
     {
-      "source_raxx_rule": 48,
-      "base_rule": 48,
-      "category": "C2",
-      "owners": [],
-      "strict_refs": [],
+      "source_raxx_rule": 38,
+      "base_rule": 38,
+      "category": "C2_target",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          71
+        ]
+      ],
       "number": 23,
-      "role": "COMMON",
+      "role": "MAIN",
       "enabled": true,
-      "name": "[C2 任意3条以上T7]",
-      "minimum_t7": 3,
+      "name": "MAIN - [C2 双T7含BD目标] ONE_HANDED_AXE",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 39,
+      "base_rule": 39,
+      "category": "C2_target",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          70
+        ]
+      ],
+      "number": 24,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [C2 双T7含BD目标] ONE_HANDED_DAGGER",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 40,
+      "base_rule": 40,
+      "category": "C2_target",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          69
+        ]
+      ],
+      "number": 25,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [C2 双T7含BD目标] HELMET",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 41,
+      "base_rule": 41,
+      "category": "C2_target",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          68
+        ]
+      ],
+      "number": 26,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [C2 双T7含BD目标] BODY_ARMOR",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 42,
+      "base_rule": 42,
+      "category": "C2_target",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          67
+        ]
+      ],
+      "number": 27,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [C2 双T7含BD目标] BELT",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 43,
+      "base_rule": 43,
+      "category": "C2_target",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          66
+        ]
+      ],
+      "number": 28,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [C2 双T7含BD目标] BOOTS",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 44,
+      "base_rule": 44,
+      "category": "C2_target",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          65
+        ]
+      ],
+      "number": 29,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [C2 双T7含BD目标] GLOVES",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 45,
+      "base_rule": 45,
+      "category": "C2_target",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          64
+        ]
+      ],
+      "number": 30,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [C2 双T7含BD目标] AMULET",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 46,
+      "base_rule": 46,
+      "category": "C2_target",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          63
+        ]
+      ],
+      "number": 31,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [C2 双T7含BD目标] RING",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 47,
+      "base_rule": 47,
+      "category": "C2_target",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          62
+        ]
+      ],
+      "number": 32,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [C2 双T7含BD目标] RELIC",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 38,
+      "base_rule": 38,
+      "category": "C2_target",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          81
+        ]
+      ],
+      "number": 33,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C2 双T7含BD目标] TWO_HANDED_AXE",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 40,
+      "base_rule": 40,
+      "category": "C2_target",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          80
+        ]
+      ],
+      "number": 34,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C2 双T7含BD目标] HELMET",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 41,
+      "base_rule": 41,
+      "category": "C2_target",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          79
+        ]
+      ],
+      "number": 35,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C2 双T7含BD目标] BODY_ARMOR",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 42,
+      "base_rule": 42,
+      "category": "C2_target",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          78
+        ]
+      ],
+      "number": 36,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C2 双T7含BD目标] BELT",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 43,
+      "base_rule": 43,
+      "category": "C2_target",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          77
+        ]
+      ],
+      "number": 37,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C2 双T7含BD目标] BOOTS",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 44,
+      "base_rule": 44,
+      "category": "C2_target",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          76
+        ]
+      ],
+      "number": 38,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C2 双T7含BD目标] GLOVES",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 45,
+      "base_rule": 45,
+      "category": "C2_target",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          75
+        ]
+      ],
+      "number": 39,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C2 双T7含BD目标] AMULET",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 46,
+      "base_rule": 46,
+      "category": "C2_target",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          74
+        ]
+      ],
+      "number": 40,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C2 双T7含BD目标] RING",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 47,
+      "base_rule": 47,
+      "category": "C2_target",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          73
+        ]
+      ],
+      "number": 41,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C2 双T7含BD目标] RELIC",
+      "minimum_t7": 2,
       "alert_tier": 3,
       "sound_name": "灵感"
     },
@@ -1811,13 +2196,13 @@
       "category": "C2",
       "owners": [],
       "strict_refs": [],
-      "number": 24,
+      "number": 42,
       "role": "COMMON",
       "enabled": true,
       "name": "[C2 任意2条以上T7]",
       "minimum_t7": 2,
-      "alert_tier": 1,
-      "sound_name": "铁匠"
+      "alert_tier": 2,
+      "sound_name": "开始"
     },
     {
       "source_raxx_rule": 38,
@@ -1832,7 +2217,7 @@
           71
         ]
       ],
-      "number": 25,
+      "number": 43,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C1 BD目标T7] ONE_HANDED_AXE",
@@ -1852,7 +2237,7 @@
           70
         ]
       ],
-      "number": 26,
+      "number": 44,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C1 BD目标T7] ONE_HANDED_DAGGER",
@@ -1872,7 +2257,7 @@
           69
         ]
       ],
-      "number": 27,
+      "number": 45,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C1 BD目标T7] HELMET",
@@ -1892,7 +2277,7 @@
           68
         ]
       ],
-      "number": 28,
+      "number": 46,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C1 BD目标T7] BODY_ARMOR",
@@ -1912,7 +2297,7 @@
           67
         ]
       ],
-      "number": 29,
+      "number": 47,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C1 BD目标T7] BELT",
@@ -1932,7 +2317,7 @@
           66
         ]
       ],
-      "number": 30,
+      "number": 48,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C1 BD目标T7] BOOTS",
@@ -1952,7 +2337,7 @@
           65
         ]
       ],
-      "number": 31,
+      "number": 49,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C1 BD目标T7] GLOVES",
@@ -1972,7 +2357,7 @@
           64
         ]
       ],
-      "number": 32,
+      "number": 50,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C1 BD目标T7] AMULET",
@@ -1992,7 +2377,7 @@
           63
         ]
       ],
-      "number": 33,
+      "number": 51,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C1 BD目标T7] RING",
@@ -2012,7 +2397,7 @@
           62
         ]
       ],
-      "number": 34,
+      "number": 52,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C1 BD目标T7] RELIC",
@@ -2032,7 +2417,7 @@
           81
         ]
       ],
-      "number": 35,
+      "number": 53,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [C1 BD目标T7] TWO_HANDED_AXE",
@@ -2052,7 +2437,7 @@
           80
         ]
       ],
-      "number": 36,
+      "number": 54,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [C1 BD目标T7] HELMET",
@@ -2072,7 +2457,7 @@
           79
         ]
       ],
-      "number": 37,
+      "number": 55,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [C1 BD目标T7] BODY_ARMOR",
@@ -2092,7 +2477,7 @@
           78
         ]
       ],
-      "number": 38,
+      "number": 56,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [C1 BD目标T7] BELT",
@@ -2112,7 +2497,7 @@
           77
         ]
       ],
-      "number": 39,
+      "number": 57,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [C1 BD目标T7] BOOTS",
@@ -2132,7 +2517,7 @@
           76
         ]
       ],
-      "number": 40,
+      "number": 58,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [C1 BD目标T7] GLOVES",
@@ -2152,7 +2537,7 @@
           75
         ]
       ],
-      "number": 41,
+      "number": 59,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [C1 BD目标T7] AMULET",
@@ -2172,7 +2557,7 @@
           74
         ]
       ],
-      "number": 42,
+      "number": 60,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [C1 BD目标T7] RING",
@@ -2192,7 +2577,7 @@
           73
         ]
       ],
-      "number": 43,
+      "number": 61,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [C1 BD目标T7] RELIC",
@@ -2212,7 +2597,7 @@
           62
         ]
       ],
-      "number": 44,
+      "number": 62,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C3 非目标单T7＋BD目标词缀] RELIC",
@@ -2232,7 +2617,7 @@
           63
         ]
       ],
-      "number": 45,
+      "number": 63,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C3 非目标单T7＋BD目标词缀] RING",
@@ -2252,7 +2637,7 @@
           64
         ]
       ],
-      "number": 46,
+      "number": 64,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C3 非目标单T7＋BD目标词缀] AMULET",
@@ -2272,7 +2657,7 @@
           65
         ]
       ],
-      "number": 47,
+      "number": 65,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C3 非目标单T7＋BD目标词缀] GLOVES",
@@ -2292,7 +2677,7 @@
           66
         ]
       ],
-      "number": 48,
+      "number": 66,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C3 非目标单T7＋BD目标词缀] BOOTS",
@@ -2312,7 +2697,7 @@
           67
         ]
       ],
-      "number": 49,
+      "number": 67,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C3 非目标单T7＋BD目标词缀] BELT",
@@ -2332,7 +2717,7 @@
           68
         ]
       ],
-      "number": 50,
+      "number": 68,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C3 非目标单T7＋BD目标词缀] BODY_ARMOR",
@@ -2352,7 +2737,7 @@
           69
         ]
       ],
-      "number": 51,
+      "number": 69,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C3 非目标单T7＋BD目标词缀] HELMET",
@@ -2372,7 +2757,7 @@
           70
         ]
       ],
-      "number": 52,
+      "number": 70,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C3 非目标单T7＋BD目标词缀] ONE_HANDED_DAGGER",
@@ -2392,7 +2777,7 @@
           71
         ]
       ],
-      "number": 53,
+      "number": 71,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [C3 非目标单T7＋BD目标词缀] ONE_HANDED_AXE",
@@ -2412,7 +2797,7 @@
           73
         ]
       ],
-      "number": 54,
+      "number": 72,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [C3 非目标单T7＋BD目标词缀] RELIC",
@@ -2432,7 +2817,7 @@
           74
         ]
       ],
-      "number": 55,
+      "number": 73,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [C3 非目标单T7＋BD目标词缀] RING",
@@ -2452,7 +2837,7 @@
           75
         ]
       ],
-      "number": 56,
+      "number": 74,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [C3 非目标单T7＋BD目标词缀] AMULET",
@@ -2472,7 +2857,7 @@
           76
         ]
       ],
-      "number": 57,
+      "number": 75,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [C3 非目标单T7＋BD目标词缀] GLOVES",
@@ -2492,7 +2877,7 @@
           77
         ]
       ],
-      "number": 58,
+      "number": 76,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [C3 非目标单T7＋BD目标词缀] BOOTS",
@@ -2512,7 +2897,7 @@
           78
         ]
       ],
-      "number": 59,
+      "number": 77,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [C3 非目标单T7＋BD目标词缀] BELT",
@@ -2532,7 +2917,7 @@
           79
         ]
       ],
-      "number": 60,
+      "number": 78,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [C3 非目标单T7＋BD目标词缀] BODY_ARMOR",
@@ -2552,7 +2937,7 @@
           80
         ]
       ],
-      "number": 61,
+      "number": 79,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [C3 非目标单T7＋BD目标词缀] HELMET",
@@ -2572,7 +2957,7 @@
           81
         ]
       ],
-      "number": 62,
+      "number": 80,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [C3 非目标单T7＋BD目标词缀] TWO_HANDED_AXE",
@@ -2585,7 +2970,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 63,
+      "number": 81,
       "role": "COMMON",
       "enabled": true,
       "name": "Exalted Experimentals (TURN OFF IF YOU DON'T USE)",
@@ -2605,7 +2990,7 @@
           13
         ]
       ],
-      "number": 64,
+      "number": 82,
       "role": "SECONDARY",
       "enabled": false,
       "name": "SECONDARY - Optional wanted experimentals (OFF)",
@@ -2618,7 +3003,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 65,
+      "number": 83,
       "role": "COMMON",
       "enabled": false,
       "name": "OFF - Champion targets not selected",
@@ -2631,7 +3016,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 66,
+      "number": 84,
       "role": "COMMON",
       "enabled": true,
       "name": "[T8保留兜底：铁匠] 全量词缀池",
@@ -2644,7 +3029,7 @@
       "category": "C4",
       "owners": [],
       "strict_refs": [],
-      "number": 67,
+      "number": 85,
       "role": "COMMON",
       "enabled": true,
       "name": "[C4 额外单T7阶段：手动关闭]",
@@ -2668,7 +3053,7 @@
           58
         ]
       ],
-      "number": 68,
+      "number": 86,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [过渡T6：85级退出] ONE_HANDED_DAGGER/ONE_HANDED_AXE",
@@ -2688,7 +3073,7 @@
           49
         ]
       ],
-      "number": 69,
+      "number": 87,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [过渡T6：85级退出] RELIC",
@@ -2708,7 +3093,7 @@
           50
         ]
       ],
-      "number": 70,
+      "number": 88,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [过渡T6：85级退出] RING",
@@ -2728,7 +3113,7 @@
           51
         ]
       ],
-      "number": 71,
+      "number": 89,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [过渡T6：85级退出] AMULET",
@@ -2748,7 +3133,7 @@
           52
         ]
       ],
-      "number": 72,
+      "number": 90,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [过渡T6：85级退出] GLOVES",
@@ -2768,7 +3153,7 @@
           53
         ]
       ],
-      "number": 73,
+      "number": 91,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [过渡T6：85级退出] BOOTS",
@@ -2788,7 +3173,7 @@
           54
         ]
       ],
-      "number": 74,
+      "number": 92,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [过渡T6：85级退出] BELT",
@@ -2808,7 +3193,7 @@
           55
         ]
       ],
-      "number": 75,
+      "number": 93,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [过渡T6：85级退出] BODY_ARMOR",
@@ -2828,7 +3213,7 @@
           56
         ]
       ],
-      "number": 76,
+      "number": 94,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - [过渡T6：85级退出] HELMET",
@@ -2848,7 +3233,7 @@
           69
         ]
       ],
-      "number": 77,
+      "number": 95,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [过渡T6：85级退出] TWO_HANDED_AXE",
@@ -2868,7 +3253,7 @@
           61
         ]
       ],
-      "number": 78,
+      "number": 96,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [过渡T6：85级退出] RELIC",
@@ -2888,7 +3273,7 @@
           62
         ]
       ],
-      "number": 79,
+      "number": 97,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [过渡T6：85级退出] RING",
@@ -2908,7 +3293,7 @@
           63
         ]
       ],
-      "number": 80,
+      "number": 98,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [过渡T6：85级退出] AMULET",
@@ -2928,7 +3313,7 @@
           64
         ]
       ],
-      "number": 81,
+      "number": 99,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [过渡T6：85级退出] GLOVES",
@@ -2948,7 +3333,7 @@
           65
         ]
       ],
-      "number": 82,
+      "number": 100,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [过渡T6：85级退出] BOOTS",
@@ -2968,7 +3353,7 @@
           66
         ]
       ],
-      "number": 83,
+      "number": 101,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [过渡T6：85级退出] BELT",
@@ -2988,7 +3373,7 @@
           67
         ]
       ],
-      "number": 84,
+      "number": 102,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [过渡T6：85级退出] BODY_ARMOR",
@@ -3008,7 +3393,7 @@
           68
         ]
       ],
-      "number": 85,
+      "number": 103,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - [过渡T6：85级退出] HELMET",
@@ -3021,7 +3406,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 86,
+      "number": 104,
       "role": "COMMON",
       "enabled": true,
       "name": "All Uniques - Turns off at 80",
@@ -3034,7 +3419,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 87,
+      "number": 105,
       "role": "COMMON",
       "enabled": true,
       "name": "All Exalts - Turns off at 60",
@@ -3047,7 +3432,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 88,
+      "number": 106,
       "role": "COMMON",
       "enabled": true,
       "name": "Selected corrupted equipment (level 0-59)",
@@ -3060,7 +3445,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 89,
+      "number": 107,
       "role": "COMMON",
       "enabled": false,
       "name": "OFF - Ascendance target not selected",
@@ -3089,7 +3474,7 @@
           45
         ]
       ],
-      "number": 90,
+      "number": 108,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - Target base: GLOVES",
@@ -3109,7 +3494,7 @@
           28
         ]
       ],
-      "number": 91,
+      "number": 109,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - Target base: TWO_HANDED_AXE",
@@ -3129,7 +3514,7 @@
           29
         ]
       ],
-      "number": 92,
+      "number": 110,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - Target base: HELMET",
@@ -3149,7 +3534,7 @@
           30
         ]
       ],
-      "number": 93,
+      "number": 111,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - Target base: BOOTS",
@@ -3169,7 +3554,7 @@
           32
         ]
       ],
-      "number": 94,
+      "number": 112,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - Target base: RING",
@@ -3182,7 +3567,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 95,
+      "number": 113,
       "role": "COMMON",
       "enabled": false,
       "name": "OFF - Check shard inventory before enabling",
@@ -3195,7 +3580,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 96,
+      "number": 114,
       "role": "COMMON",
       "enabled": true,
       "name": "Shatter Acolyte Affixes",
@@ -3208,7 +3593,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 97,
+      "number": 115,
       "role": "COMMON",
       "enabled": false,
       "name": "OFF - Mage shards not requested",
@@ -3221,7 +3606,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 98,
+      "number": 116,
       "role": "COMMON",
       "enabled": false,
       "name": "OFF - Primalist shards not requested",
@@ -3234,7 +3619,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 99,
+      "number": 117,
       "role": "COMMON",
       "enabled": false,
       "name": "OFF - Rogue shards not requested",
@@ -3247,7 +3632,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 100,
+      "number": 118,
       "role": "COMMON",
       "enabled": false,
       "name": "OFF - Sentinel shards not requested",
@@ -3260,7 +3645,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 101,
+      "number": 119,
       "role": "COMMON",
       "enabled": true,
       "name": "Shatter Offensive Affixes (SELECT WHAT YOU NEED)",
@@ -3273,7 +3658,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 102,
+      "number": 120,
       "role": "COMMON",
       "enabled": true,
       "name": "Shatter Defensive Affixes (SELECT WHAT YOU NEED)",
@@ -3298,7 +3683,7 @@
         ]
       ],
       "policy": "User-reviewed Flay 1/2 ordinary targets; both Weaver and Lagon",
-      "number": 103,
+      "number": 121,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - Idol pair complete: IDOL_1x1_LAGON",
@@ -3323,7 +3708,7 @@
         ]
       ],
       "policy": "User-reviewed Flay 1/2 ordinary targets; both Weaver and Lagon",
-      "number": 104,
+      "number": 122,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - Idol pair complete: IDOL_1x2",
@@ -3343,7 +3728,7 @@
           24
         ]
       ],
-      "number": 105,
+      "number": 123,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - Idol two ordinary targets: IDOL_1x1_LAGON",
@@ -3363,7 +3748,7 @@
           25
         ]
       ],
-      "number": 106,
+      "number": 124,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - Idol two ordinary targets: IDOL_2x1",
@@ -3383,7 +3768,7 @@
           26
         ]
       ],
-      "number": 107,
+      "number": 125,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - Idol two ordinary targets: IDOL_1x3",
@@ -3403,7 +3788,7 @@
           27
         ]
       ],
-      "number": 108,
+      "number": 126,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - Idol two ordinary targets: IDOL_1x3",
@@ -3428,7 +3813,7 @@
         ]
       ],
       "policy": "User-reviewed Flay 1/2 ordinary targets; both Weaver and Lagon",
-      "number": 109,
+      "number": 127,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - Idol one target: IDOL_1x1_LAGON",
@@ -3453,7 +3838,7 @@
         ]
       ],
       "policy": "User-reviewed Flay 1/2 ordinary targets; both Weaver and Lagon",
-      "number": 110,
+      "number": 128,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - Idol one target: IDOL_1x2",
@@ -3493,7 +3878,7 @@
           72
         ]
       ],
-      "number": 111,
+      "number": 129,
       "role": "MAIN",
       "enabled": true,
       "name": "MAIN - Altar target (any tier)",
@@ -3533,7 +3918,7 @@
           83
         ]
       ],
-      "number": 112,
+      "number": 130,
       "role": "SECONDARY",
       "enabled": true,
       "name": "SECONDARY - Altar target (any tier)",
@@ -3546,7 +3931,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 113,
+      "number": 131,
       "role": "COMMON",
       "enabled": true,
       "name": "General ordinary idol targets (level 0-89)",
@@ -3559,7 +3944,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 114,
+      "number": 132,
       "role": "COMMON",
       "enabled": true,
       "name": "General ordinary idol targets (level 0-74)",
@@ -3572,7 +3957,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 115,
+      "number": 133,
       "role": "COMMON",
       "enabled": true,
       "name": "All Exalts or Better - Turns off at 60",
@@ -3585,7 +3970,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 116,
+      "number": 134,
       "role": "COMMON",
       "enabled": true,
       "name": "Campaign Idols - Turns off at 60",
@@ -3598,7 +3983,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 117,
+      "number": 135,
       "role": "COMMON",
       "enabled": false,
       "name": "OFF - Campaign weapon bases not supplied",
@@ -3611,7 +3996,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 118,
+      "number": 136,
       "role": "COMMON",
       "enabled": false,
       "name": "OFF - Campaign offhand bases not supplied",
@@ -3624,7 +4009,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 119,
+      "number": 137,
       "role": "COMMON",
       "enabled": true,
       "name": "BIS Campaign Amulet Bases - Turns off at 60",
@@ -3637,7 +4022,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 120,
+      "number": 138,
       "role": "COMMON",
       "enabled": true,
       "name": "BIS Campaign Belt Bases - Turns off at 60",
@@ -3650,7 +4035,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 121,
+      "number": 139,
       "role": "COMMON",
       "enabled": true,
       "name": "BIS Campaign Body Armor Bases - Turns off at 60",
@@ -3663,7 +4048,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 122,
+      "number": 140,
       "role": "COMMON",
       "enabled": true,
       "name": "BIS Campaign Boot Bases - Turns off at 60",
@@ -3676,7 +4061,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 123,
+      "number": 141,
       "role": "COMMON",
       "enabled": true,
       "name": "BIS Campaign Helmet Bases - Turns off at 60",
@@ -3689,7 +4074,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 124,
+      "number": 142,
       "role": "COMMON",
       "enabled": true,
       "name": "BIS Campaign Ring Bases - Turns off at 60",
@@ -3702,7 +4087,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 125,
+      "number": 143,
       "role": "COMMON",
       "enabled": true,
       "name": "BIS Campaign Glove Bases - Turns off at 60",
@@ -3715,7 +4100,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 126,
+      "number": 144,
       "role": "COMMON",
       "enabled": true,
       "name": "BIS Campaign Relic Bases - Turns off at 60",
@@ -3728,7 +4113,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 127,
+      "number": 145,
       "role": "COMMON",
       "enabled": true,
       "name": "Shatter T3+ Phys Res / All Health - Turns off at 50",
@@ -3741,7 +4126,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 128,
+      "number": 146,
       "role": "COMMON",
       "enabled": true,
       "name": "Shatter T3+ Movespeed & CDR - Turns off at 50",
@@ -3754,7 +4139,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 129,
+      "number": 147,
       "role": "COMMON",
       "enabled": true,
       "name": "Shatter T3+ Resistances - Turns off at 50",
@@ -3767,7 +4152,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 130,
+      "number": 148,
       "role": "COMMON",
       "enabled": true,
       "name": "T2+ Phys Res / All Health - Turns off at 30",
@@ -3780,7 +4165,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 131,
+      "number": 149,
       "role": "COMMON",
       "enabled": true,
       "name": "T2+ Movespeed & CDR - Turns off at 30",
@@ -3793,7 +4178,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 132,
+      "number": 150,
       "role": "COMMON",
       "enabled": true,
       "name": "T2+ Resistances - Turns off at 30",
@@ -3806,7 +4191,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 133,
+      "number": 151,
       "role": "COMMON",
       "enabled": true,
       "name": "Early Bows - Turns off at 30",
@@ -3819,7 +4204,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 134,
+      "number": 152,
       "role": "COMMON",
       "enabled": true,
       "name": "Early Melee Wpns - Turns off at 30",
@@ -3832,7 +4217,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 135,
+      "number": 153,
       "role": "COMMON",
       "enabled": true,
       "name": "Early Caster Wpns - Turns off at 30",
@@ -3845,7 +4230,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 136,
+      "number": 154,
       "role": "COMMON",
       "enabled": true,
       "name": "All Rares - Turns off at 30",
@@ -3858,7 +4243,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 137,
+      "number": 155,
       "role": "COMMON",
       "enabled": true,
       "name": "Early Relics - Turns off at 12",
@@ -3871,7 +4256,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 138,
+      "number": 156,
       "role": "COMMON",
       "enabled": true,
       "name": "Early Catalyst - Turns off at 12",
@@ -3884,7 +4269,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 139,
+      "number": 157,
       "role": "COMMON",
       "enabled": true,
       "name": "Early Quivers - Turns off at 12",
@@ -3897,7 +4282,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 140,
+      "number": 158,
       "role": "COMMON",
       "enabled": true,
       "name": "Early Shields - Turns off at 12",
@@ -3910,7 +4295,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 141,
+      "number": 159,
       "role": "COMMON",
       "enabled": true,
       "name": "Silver Ring - Turns off at 12",
@@ -3923,7 +4308,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 142,
+      "number": 160,
       "role": "COMMON",
       "enabled": true,
       "name": "Ruby Amulet - Turns off at 12",
@@ -3936,7 +4321,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 143,
+      "number": 161,
       "role": "COMMON",
       "enabled": true,
       "name": "All Items - Turns off at 10",
@@ -3949,7 +4334,7 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 144,
+      "number": 162,
       "role": "COMMON",
       "enabled": true,
       "name": "",
@@ -4819,7 +5204,7 @@
       "disposition": "retained_or_filled"
     }
   ],
-  "stage_rule": 67,
+  "stage_rule": 85,
   "feedback_reference": {
     "local_path": "sources/filter-style-reference.json",
     "sha256": "37a26db4058ded7f88963d1559a9e369a7c1d74f7894778b63165e05f54b7d39"
@@ -4831,8 +5216,8 @@
         "1",
         "1",
         "NONE",
-        "1",
-        "0"
+        null,
+        null
       ],
       "1": [
         "铁匠",
@@ -4874,13 +5259,14 @@
       20
     ],
     "t7_priority": [
-      "C2 (4+)",
-      "C2 (3)",
+      "C2 (3+)",
+      "C2_target (2 with BD T7)",
       "C2 (2)",
       "C1",
       "C3",
       "C4"
     ],
+    "silent_colors_preserved": true,
     "t7_exact_tier": 7,
     "t8_fallback_tier": 1,
     "t8_after_targets_and_experimentals": true,
