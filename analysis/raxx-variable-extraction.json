@@ -180373,6 +180373,7 @@
   ],
   "unmodified_files_sha256": {
     "filters/Flay-Mana-Lich+Skeleton-Necromancer-v2.xml": "b98ac8760726009ece4bef27bde7f6ad9cc2d2806e8996630ecbb96d41e1e71c",
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml": "bde61d262aab582d023c6ef65612c9a532426a325ac808bd105addac67c1692e",
     "filters/Flay-Mana-Lich+Skeleton-Necromancer.xml": "a6026b9a065042ead7e4e9bd1461b20f0687a148d5a087669b6763c7f461cc78",
     "sources/builds/maxroll-flay-mana-lich-strict.xml": "4e70c8b9111a28ae257aea7b561d931ac99629a6054646ce18a3ce5e3458995c",
     "sources/builds/maxroll-skeleton-necromancer-strict.xml": "5033341708ab5594cfcb70448bf3c6084333f03efa4388e5d4c6f4b1409dbade",

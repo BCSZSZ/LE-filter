@@ -1,0 +1,196 @@
+{
+  "provider": "Dammitt / Last Epoch Tools; format mapping, not game-engine verification",
+  "version": "1.5.0",
+  "source_urls": {
+    "filters": {
+      "url": "https://www.lastepochtools.com/loot-filters/js/filters.js?1790728790",
+      "sha256": "7839773314cd982e53c74c2fcc6f98eb4536ef5df6f1190c29ccd33bf0805e2f"
+    },
+    "data": {
+      "url": "https://www.lastepochtools.com/data/version150/loot-filters/js/80105d59a039c5c4a5825d1f7f2f6ec3.js",
+      "sha256": "b391303a44975a22629871384e7cfa6dc6ad1cebd8d5e7f791ee679e0e091b74"
+    },
+    "zh": {
+      "url": "https://www.lastepochtools.com/data/version150/i18n/full/zh.json?17",
+      "sha256": "06511d02f0871e7705ce759bd6c7e01e30d796d8214a1de3bbf36419fdb65e14"
+    }
+  },
+  "official_loot_filter_features": "https://forum.lastepoch.com/t/last-epoch-shattered-omens-patch-notes/80571/",
+  "sounds": {
+    "2": {
+      "en": "Shing",
+      "zh": "噌噌"
+    },
+    "3": {
+      "en": "Shaker",
+      "zh": "摇动"
+    },
+    "4": {
+      "en": "Zap",
+      "zh": "震击"
+    },
+    "5": {
+      "en": "Drum",
+      "zh": "鼓点"
+    },
+    "6": {
+      "en": "Begin",
+      "zh": "开始"
+    },
+    "7": {
+      "en": "Fight",
+      "zh": "战斗"
+    },
+    "8": {
+      "en": "Discovery",
+      "zh": "发现"
+    },
+    "9": {
+      "en": "Inspiration",
+      "zh": "灵感"
+    },
+    "10": {
+      "en": "Anvil",
+      "zh": "铁砧"
+    },
+    "11": {
+      "en": "Wild",
+      "zh": "野性"
+    },
+    "12": {
+      "en": "Comet",
+      "zh": "彗星"
+    },
+    "13": {
+      "en": "Smash",
+      "zh": "粉碎"
+    },
+    "14": {
+      "en": "Smith",
+      "zh": "铁匠"
+    },
+    "15": {
+      "en": "Precious",
+      "zh": "珍贵"
+    },
+    "16": {
+      "en": "Metal",
+      "zh": "金属"
+    },
+    "17": {
+      "en": "Unlock",
+      "zh": "解锁"
+    },
+    "0": {
+      "en": "Default",
+      "zh": "默认"
+    },
+    "1": {
+      "en": "None",
+      "zh": "静音"
+    }
+  },
+  "map_icons": {
+    "2": {
+      "en": "Rare",
+      "zh": "稀有"
+    },
+    "3": {
+      "en": "Unique",
+      "zh": "暗金"
+    },
+    "4": {
+      "en": "Set",
+      "zh": "套装"
+    },
+    "5": {
+      "en": "Legendary",
+      "zh": "传奇"
+    },
+    "6": {
+      "en": "Key",
+      "zh": "钥匙"
+    },
+    "7": {
+      "en": "Exalted",
+      "zh": "崇高"
+    },
+    "8": {
+      "en": "Golden",
+      "zh": "金色"
+    },
+    "9": {
+      "en": "Obsidian",
+      "zh": "黑曜石"
+    },
+    "10": {
+      "en": "TutorialItem",
+      "zh": "教程"
+    },
+    "0": {
+      "en": "Default",
+      "zh": "默认"
+    },
+    "1": {
+      "en": "None",
+      "zh": "无"
+    }
+  },
+  "colors": {
+    "lootFilterRuleColors": {
+      "0": "rgba(255,255,255,1.0)",
+      "1": "rgba(179,179,179,1.0)",
+      "2": "rgba(190,230,0,1.0)",
+      "3": "rgba(255,234,0,1.0)",
+      "4": "rgba(255,170,0,1.0)",
+      "5": "rgba(255,128,0,1.0)",
+      "6": "rgba(255,61,0,1.0)",
+      "7": "rgba(255,0,47,1.0)",
+      "8": "rgba(255,140,239,1.0)",
+      "9": "rgba(245,0,255,1.0)",
+      "10": "rgba(188,71,255,1.0)",
+      "11": "rgba(177,138,255,1.0)",
+      "12": "rgba(0,110,255,1.0)",
+      "13": "rgba(77,155,255,1.0)",
+      "14": "rgba(51,253,255,1.0)",
+      "15": "rgba(0,230,157,1.0)",
+      "16": "rgba(44,255,0,1.0)",
+      "17": "rgba(29,166,0,1.0)"
+    },
+    "lootFilterBeamColors": {
+      "0": "rgba(255,255,255,1.0)",
+      "1": "rgba(179,179,179,1.0)",
+      "2": "rgba(0,0,0,1.0)",
+      "3": "rgba(190,230,0,1.0)",
+      "4": "rgba(255,234,0,1.0)",
+      "5": "rgba(255,227,0,1.0)",
+      "6": "rgba(255,170,0,1.0)",
+      "7": "rgba(255,128,0,1.0)",
+      "8": "rgba(255,61,0,1.0)",
+      "9": "rgba(103,80,52,1.0)",
+      "10": "rgba(255,0,47,1.0)",
+      "11": "rgba(255,140,239,1.0)",
+      "12": "rgba(245,0,255,1.0)",
+      "13": "rgba(188,71,255,1.0)",
+      "14": "rgba(177,138,255,1.0)",
+      "15": "rgba(0,110,255,1.0)",
+      "16": "rgba(77,155,255,1.0)",
+      "17": "rgba(128,213,255,1.0)",
+      "18": "rgba(51,253,255,1.0)",
+      "19": "rgba(0,230,157,1.0)",
+      "20": "rgba(44,255,0,1.0)",
+      "21": "rgba(29,166,0,1.0)"
+    }
+  },
+  "beam_sizes": [
+    "NONE",
+    "SMALLEST",
+    "VERYSMALL",
+    "SMALL",
+    "MEDIUM",
+    "LARGE",
+    "VERYLARGE",
+    "LARGEST"
+  ],
+  "per_rule_volume_field": false
+}

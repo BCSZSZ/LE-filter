@@ -1,6 +1,6 @@
 {
-  "output": "filters/Flay-Mana-Lich+Skeleton-Necromancer-v2.xml",
-  "output_sha256": "b98ac8760726009ece4bef27bde7f6ad9cc2d2806e8996630ecbb96d41e1e71c",
+  "output": "filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml",
+  "output_sha256": "bde61d262aab582d023c6ef65612c9a532426a325ac808bd105addac67c1692e",
   "base_template": {
     "name": "LE Base Template v1",
     "file": "templates/LE-base-v1.xml",
@@ -1441,66 +1441,117 @@
     ],
     "target_defaults_are_raxx_examples": true
   },
-  "extraction_sha256": "188ea0a280bb70b0af7788c57b3a9b867886905e7d38ae302b2e0edb8092c08c",
+  "extraction_sha256": "559239c1e24ec2ed0d4dd412811e0bbd45a187bd9f2dd94eafc6f6e4cbbfd2d5",
   "display": {
     "main": "flay-mana-lich",
     "secondary": "skeleton-necromancer",
     "shared_uses_main": true
   },
-  "rules": 138,
-  "enabled": 127,
+  "rules": 144,
+  "enabled": 133,
   "output_rules": [
     {
-      "source_raxx_rule": 8,
-      "base_rule": 8,
+      "source_raxx_rule": 37,
+      "base_rule": 37,
       "category": "base",
       "owners": [],
       "strict_refs": [],
       "number": 1,
       "role": "COMMON",
       "enabled": true,
-      "name": ""
+      "name": "任意T8及以上：全量词缀池",
+      "alert_tier": 4,
+      "sound_name": "彗星"
     },
     {
-      "source_raxx_rule": 12,
-      "base_rule": 12,
-      "category": "base",
+      "source_raxx_rule": 48,
+      "base_rule": 48,
+      "category": "C2",
       "owners": [],
       "strict_refs": [],
       "number": 2,
       "role": "COMMON",
       "enabled": true,
-      "name": "all Uniques with 3LP or 20 WW"
+      "name": "[C2 任意4条以上T7]",
+      "minimum_t7": 4,
+      "alert_tier": 4,
+      "sound_name": "彗星"
     },
     {
-      "source_raxx_rule": 13,
-      "base_rule": 13,
+      "source_raxx_rule": 8,
+      "base_rule": 8,
       "category": "base",
       "owners": [],
       "strict_refs": [],
       "number": 3,
       "role": "COMMON",
       "enabled": true,
-      "name": "all Uniques with 2LP / 17 WW (UNCHECK UNWANTED)"
+      "name": "",
+      "alert_tier": 3,
+      "sound_name": "灵感"
     },
     {
-      "source_raxx_rule": 14,
-      "base_rule": 14,
-      "category": "base",
+      "source_raxx_rule": 12,
+      "base_rule": 12,
+      "category": "lp_unique",
       "owners": [],
       "strict_refs": [],
       "number": 4,
       "role": "COMMON",
       "enabled": true,
-      "name": "all Uniques with 1LP / 14 WW (UNCHECK UNWANTED)"
+      "name": "任意暗金：LP≥3",
+      "lp_min": 3,
+      "alert_tier": 4,
+      "sound_name": "彗星"
+    },
+    {
+      "source_raxx_rule": 12,
+      "base_rule": 12,
+      "category": "ww_unique",
+      "owners": [],
+      "strict_refs": [],
+      "number": 5,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "WW暗金：20+",
+      "ww_min": 20,
+      "alert_tier": 4,
+      "sound_name": "彗星"
+    },
+    {
+      "source_raxx_rule": 13,
+      "base_rule": 13,
+      "category": "lp_unique",
+      "owners": [],
+      "strict_refs": [],
+      "number": 6,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "任意暗金：LP=2",
+      "lp_min": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 13,
+      "base_rule": 13,
+      "category": "ww_unique",
+      "owners": [],
+      "strict_refs": [],
+      "number": 7,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "WW暗金：17–19",
+      "ww_min": 17,
+      "alert_tier": 3,
+      "sound_name": "灵感"
     },
     {
       "source_raxx_rule": 15,
       "base_rule": 15,
-      "category": "bd_unique",
+      "category": "bd_unique_lp1",
       "owners": [
-        "flay-mana-lich",
-        "skeleton-necromancer"
+        "flay-mana-lich"
       ],
       "strict_refs": [
         [
@@ -1512,10 +1563,67 @@
           132
         ]
       ],
-      "number": 5,
+      "shared_unique_ids": [
+        253,
+        416
+      ],
+      "number": 8,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - Build uniques (0 LP kept)"
+      "name": "MAIN - BD目标暗金：LP=1",
+      "lp_min": 1,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 15,
+      "base_rule": 15,
+      "category": "bd_unique_lp1",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          132
+        ]
+      ],
+      "shared_unique_ids": [],
+      "number": 9,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - BD目标暗金：LP=1",
+      "lp_min": 1,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 14,
+      "base_rule": 14,
+      "category": "lp_unique",
+      "owners": [],
+      "strict_refs": [],
+      "number": 10,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "任意暗金：LP=1",
+      "lp_min": 1,
+      "alert_tier": 2,
+      "sound_name": "开始"
+    },
+    {
+      "source_raxx_rule": 14,
+      "base_rule": 14,
+      "category": "ww_unique",
+      "owners": [],
+      "strict_refs": [],
+      "number": 11,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "WW暗金：14–16",
+      "ww_min": 14,
+      "alert_tier": 2,
+      "sound_name": "开始"
     },
     {
       "source_raxx_rule": 15,
@@ -1528,12 +1636,22 @@
         [
           "flay-mana-lich",
           121
+        ],
+        [
+          "skeleton-necromancer",
+          132
         ]
       ],
-      "number": 6,
+      "shared_unique_ids": [
+        253,
+        416
+      ],
+      "number": 12,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - Build uniques (0 LP kept)"
+      "name": "MAIN - BD目标暗金（0LP也留）",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 15,
@@ -1548,10 +1666,26 @@
           132
         ]
       ],
-      "number": 7,
+      "shared_unique_ids": [],
+      "number": 13,
       "role": "SECONDARY",
       "enabled": true,
-      "name": "SECONDARY - Build uniques (0 LP kept)"
+      "name": "SECONDARY - BD目标暗金（0LP也留）",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
+    },
+    {
+      "source_raxx_rule": 15,
+      "base_rule": 15,
+      "category": "low_ww_saved",
+      "owners": [],
+      "strict_refs": [],
+      "number": 14,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "珍贵名单WW1–13：静音保留",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 15,
@@ -1559,10 +1693,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 8,
+      "number": 15,
       "role": "COMMON",
       "enabled": true,
-      "name": "Raxx rare uniques + build whitelist (0 LP kept)"
+      "name": "Raxx rare uniques + build whitelist (0 LP kept)",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 16,
@@ -1570,10 +1706,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 9,
+      "number": 16,
       "role": "COMMON",
       "enabled": true,
-      "name": "Rarest Set Items (ADD ONES YOU WANT)"
+      "name": "Rarest Set Items (ADD ONES YOU WANT)",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 19,
@@ -1581,10 +1719,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 10,
+      "number": 17,
       "role": "COMMON",
       "enabled": true,
-      "name": "Glyphs"
+      "name": "Glyphs",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 20,
@@ -1592,10 +1732,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 11,
+      "number": 18,
       "role": "COMMON",
       "enabled": true,
-      "name": "Keys & Resources"
+      "name": "Keys & Resources",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 21,
@@ -1603,10 +1745,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 12,
+      "number": 19,
       "role": "COMMON",
       "enabled": true,
-      "name": "Resonances"
+      "name": "Resonances",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 22,
@@ -1614,10 +1758,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 13,
+      "number": 20,
       "role": "COMMON",
       "enabled": true,
-      "name": "Runes"
+      "name": "Runes",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 23,
@@ -1625,10 +1771,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 14,
+      "number": 21,
       "role": "COMMON",
       "enabled": true,
-      "name": "Shards"
+      "name": "Shards",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 24,
@@ -1636,10 +1784,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 15,
+      "number": 22,
       "role": "COMMON",
       "enabled": true,
-      "name": "Woven Echoes"
+      "name": "Woven Echoes",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 29,
@@ -1647,21 +1797,40 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 16,
+      "number": 23,
       "role": "COMMON",
       "enabled": false,
-      "name": "OFF - Class hide not selected"
+      "name": "OFF - Class hide not selected",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
-      "source_raxx_rule": 37,
-      "base_rule": 37,
-      "category": "base",
+      "source_raxx_rule": 48,
+      "base_rule": 48,
+      "category": "C2",
       "owners": [],
       "strict_refs": [],
-      "number": 17,
+      "number": 24,
       "role": "COMMON",
       "enabled": true,
-      "name": "All Tier 8 Items"
+      "name": "[C2 任意3条以上T7]",
+      "minimum_t7": 3,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 48,
+      "base_rule": 48,
+      "category": "C2",
+      "owners": [],
+      "strict_refs": [],
+      "number": 25,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "[C2 任意2条以上T7]",
+      "minimum_t7": 2,
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 38,
@@ -1676,28 +1845,12 @@
           71
         ]
       ],
-      "number": 18,
+      "number": 26,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [1 TARGET T7] ONE_HANDED_AXE"
-    },
-    {
-      "source_raxx_rule": 38,
-      "base_rule": 38,
-      "category": "C1",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          81
-        ]
-      ],
-      "number": 19,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - [1 TARGET T7] TWO_HANDED_AXE"
+      "name": "MAIN - [C1 BD目标T7] ONE_HANDED_AXE",
+      "alert_tier": 2,
+      "sound_name": "开始"
     },
     {
       "source_raxx_rule": 39,
@@ -1712,10 +1865,12 @@
           70
         ]
       ],
-      "number": 20,
+      "number": 27,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [1 TARGET T7] ONE_HANDED_DAGGER"
+      "name": "MAIN - [C1 BD目标T7] ONE_HANDED_DAGGER",
+      "alert_tier": 2,
+      "sound_name": "开始"
     },
     {
       "source_raxx_rule": 40,
@@ -1730,28 +1885,12 @@
           69
         ]
       ],
-      "number": 21,
+      "number": 28,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [1 TARGET T7] HELMET"
-    },
-    {
-      "source_raxx_rule": 40,
-      "base_rule": 40,
-      "category": "C1",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          80
-        ]
-      ],
-      "number": 22,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - [1 TARGET T7] HELMET"
+      "name": "MAIN - [C1 BD目标T7] HELMET",
+      "alert_tier": 2,
+      "sound_name": "开始"
     },
     {
       "source_raxx_rule": 41,
@@ -1766,28 +1905,12 @@
           68
         ]
       ],
-      "number": 23,
+      "number": 29,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [1 TARGET T7] BODY_ARMOR"
-    },
-    {
-      "source_raxx_rule": 41,
-      "base_rule": 41,
-      "category": "C1",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          79
-        ]
-      ],
-      "number": 24,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - [1 TARGET T7] BODY_ARMOR"
+      "name": "MAIN - [C1 BD目标T7] BODY_ARMOR",
+      "alert_tier": 2,
+      "sound_name": "开始"
     },
     {
       "source_raxx_rule": 42,
@@ -1802,28 +1925,12 @@
           67
         ]
       ],
-      "number": 25,
+      "number": 30,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [1 TARGET T7] BELT"
-    },
-    {
-      "source_raxx_rule": 42,
-      "base_rule": 42,
-      "category": "C1",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          78
-        ]
-      ],
-      "number": 26,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - [1 TARGET T7] BELT"
+      "name": "MAIN - [C1 BD目标T7] BELT",
+      "alert_tier": 2,
+      "sound_name": "开始"
     },
     {
       "source_raxx_rule": 43,
@@ -1838,28 +1945,12 @@
           66
         ]
       ],
-      "number": 27,
+      "number": 31,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [1 TARGET T7] BOOTS"
-    },
-    {
-      "source_raxx_rule": 43,
-      "base_rule": 43,
-      "category": "C1",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          77
-        ]
-      ],
-      "number": 28,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - [1 TARGET T7] BOOTS"
+      "name": "MAIN - [C1 BD目标T7] BOOTS",
+      "alert_tier": 2,
+      "sound_name": "开始"
     },
     {
       "source_raxx_rule": 44,
@@ -1874,28 +1965,12 @@
           65
         ]
       ],
-      "number": 29,
+      "number": 32,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [1 TARGET T7] GLOVES"
-    },
-    {
-      "source_raxx_rule": 44,
-      "base_rule": 44,
-      "category": "C1",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          76
-        ]
-      ],
-      "number": 30,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - [1 TARGET T7] GLOVES"
+      "name": "MAIN - [C1 BD目标T7] GLOVES",
+      "alert_tier": 2,
+      "sound_name": "开始"
     },
     {
       "source_raxx_rule": 45,
@@ -1910,28 +1985,12 @@
           64
         ]
       ],
-      "number": 31,
+      "number": 33,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [1 TARGET T7] AMULET"
-    },
-    {
-      "source_raxx_rule": 45,
-      "base_rule": 45,
-      "category": "C1",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          75
-        ]
-      ],
-      "number": 32,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - [1 TARGET T7] AMULET"
+      "name": "MAIN - [C1 BD目标T7] AMULET",
+      "alert_tier": 2,
+      "sound_name": "开始"
     },
     {
       "source_raxx_rule": 46,
@@ -1946,28 +2005,12 @@
           63
         ]
       ],
-      "number": 33,
+      "number": 34,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [1 TARGET T7] RING"
-    },
-    {
-      "source_raxx_rule": 46,
-      "base_rule": 46,
-      "category": "C1",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          74
-        ]
-      ],
-      "number": 34,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - [1 TARGET T7] RING"
+      "name": "MAIN - [C1 BD目标T7] RING",
+      "alert_tier": 2,
+      "sound_name": "开始"
     },
     {
       "source_raxx_rule": 47,
@@ -1985,7 +2028,169 @@
       "number": 35,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [1 TARGET T7] RELIC"
+      "name": "MAIN - [C1 BD目标T7] RELIC",
+      "alert_tier": 2,
+      "sound_name": "开始"
+    },
+    {
+      "source_raxx_rule": 38,
+      "base_rule": 38,
+      "category": "C1",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          81
+        ]
+      ],
+      "number": 36,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C1 BD目标T7] TWO_HANDED_AXE",
+      "alert_tier": 2,
+      "sound_name": "开始"
+    },
+    {
+      "source_raxx_rule": 40,
+      "base_rule": 40,
+      "category": "C1",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          80
+        ]
+      ],
+      "number": 37,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C1 BD目标T7] HELMET",
+      "alert_tier": 2,
+      "sound_name": "开始"
+    },
+    {
+      "source_raxx_rule": 41,
+      "base_rule": 41,
+      "category": "C1",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          79
+        ]
+      ],
+      "number": 38,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C1 BD目标T7] BODY_ARMOR",
+      "alert_tier": 2,
+      "sound_name": "开始"
+    },
+    {
+      "source_raxx_rule": 42,
+      "base_rule": 42,
+      "category": "C1",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          78
+        ]
+      ],
+      "number": 39,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C1 BD目标T7] BELT",
+      "alert_tier": 2,
+      "sound_name": "开始"
+    },
+    {
+      "source_raxx_rule": 43,
+      "base_rule": 43,
+      "category": "C1",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          77
+        ]
+      ],
+      "number": 40,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C1 BD目标T7] BOOTS",
+      "alert_tier": 2,
+      "sound_name": "开始"
+    },
+    {
+      "source_raxx_rule": 44,
+      "base_rule": 44,
+      "category": "C1",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          76
+        ]
+      ],
+      "number": 41,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C1 BD目标T7] GLOVES",
+      "alert_tier": 2,
+      "sound_name": "开始"
+    },
+    {
+      "source_raxx_rule": 45,
+      "base_rule": 45,
+      "category": "C1",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          75
+        ]
+      ],
+      "number": 42,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C1 BD目标T7] AMULET",
+      "alert_tier": 2,
+      "sound_name": "开始"
+    },
+    {
+      "source_raxx_rule": 46,
+      "base_rule": 46,
+      "category": "C1",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          74
+        ]
+      ],
+      "number": 43,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C1 BD目标T7] RING",
+      "alert_tier": 2,
+      "sound_name": "开始"
     },
     {
       "source_raxx_rule": 47,
@@ -2000,21 +2205,12 @@
           73
         ]
       ],
-      "number": 36,
+      "number": 44,
       "role": "SECONDARY",
       "enabled": true,
-      "name": "SECONDARY - [1 TARGET T7] RELIC"
-    },
-    {
-      "source_raxx_rule": 48,
-      "base_rule": 48,
-      "category": "C2",
-      "owners": [],
-      "strict_refs": [],
-      "number": 37,
-      "role": "COMMON",
-      "enabled": true,
-      "name": "[2 MULTI T7] ALL AFFIXES / ALL EQUIPMENT"
+      "name": "SECONDARY - [C1 BD目标T7] RELIC",
+      "alert_tier": 2,
+      "sound_name": "开始"
     },
     {
       "source_raxx_rule": 62,
@@ -2029,10 +2225,12 @@
           62
         ]
       ],
-      "number": 38,
+      "number": 45,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [3 TARGET + T7] RELIC"
+      "name": "MAIN - [C3 非目标单T7＋BD目标词缀] RELIC",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 62,
@@ -2047,10 +2245,12 @@
           63
         ]
       ],
-      "number": 39,
+      "number": 46,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [3 TARGET + T7] RING"
+      "name": "MAIN - [C3 非目标单T7＋BD目标词缀] RING",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 62,
@@ -2065,10 +2265,12 @@
           64
         ]
       ],
-      "number": 40,
+      "number": 47,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [3 TARGET + T7] AMULET"
+      "name": "MAIN - [C3 非目标单T7＋BD目标词缀] AMULET",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 62,
@@ -2083,10 +2285,12 @@
           65
         ]
       ],
-      "number": 41,
+      "number": 48,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [3 TARGET + T7] GLOVES"
+      "name": "MAIN - [C3 非目标单T7＋BD目标词缀] GLOVES",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 62,
@@ -2101,10 +2305,12 @@
           66
         ]
       ],
-      "number": 42,
+      "number": 49,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [3 TARGET + T7] BOOTS"
+      "name": "MAIN - [C3 非目标单T7＋BD目标词缀] BOOTS",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 62,
@@ -2119,10 +2325,12 @@
           67
         ]
       ],
-      "number": 43,
+      "number": 50,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [3 TARGET + T7] BELT"
+      "name": "MAIN - [C3 非目标单T7＋BD目标词缀] BELT",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 62,
@@ -2137,10 +2345,12 @@
           68
         ]
       ],
-      "number": 44,
+      "number": 51,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [3 TARGET + T7] BODY_ARMOR"
+      "name": "MAIN - [C3 非目标单T7＋BD目标词缀] BODY_ARMOR",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 62,
@@ -2155,10 +2365,12 @@
           69
         ]
       ],
-      "number": 45,
+      "number": 52,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [3 TARGET + T7] HELMET"
+      "name": "MAIN - [C3 非目标单T7＋BD目标词缀] HELMET",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 62,
@@ -2173,10 +2385,12 @@
           70
         ]
       ],
-      "number": 46,
+      "number": 53,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [3 TARGET + T7] ONE_HANDED_DAGGER"
+      "name": "MAIN - [C3 非目标单T7＋BD目标词缀] ONE_HANDED_DAGGER",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 62,
@@ -2191,10 +2405,12 @@
           71
         ]
       ],
-      "number": 47,
+      "number": 54,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - [3 TARGET + T7] ONE_HANDED_AXE"
+      "name": "MAIN - [C3 非目标单T7＋BD目标词缀] ONE_HANDED_AXE",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 62,
@@ -2209,10 +2425,12 @@
           73
         ]
       ],
-      "number": 48,
+      "number": 55,
       "role": "SECONDARY",
       "enabled": true,
-      "name": "SECONDARY - [3 TARGET + T7] RELIC"
+      "name": "SECONDARY - [C3 非目标单T7＋BD目标词缀] RELIC",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 62,
@@ -2227,10 +2445,12 @@
           74
         ]
       ],
-      "number": 49,
+      "number": 56,
       "role": "SECONDARY",
       "enabled": true,
-      "name": "SECONDARY - [3 TARGET + T7] RING"
+      "name": "SECONDARY - [C3 非目标单T7＋BD目标词缀] RING",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 62,
@@ -2245,10 +2465,12 @@
           75
         ]
       ],
-      "number": 50,
+      "number": 57,
       "role": "SECONDARY",
       "enabled": true,
-      "name": "SECONDARY - [3 TARGET + T7] AMULET"
+      "name": "SECONDARY - [C3 非目标单T7＋BD目标词缀] AMULET",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 62,
@@ -2263,10 +2485,12 @@
           76
         ]
       ],
-      "number": 51,
+      "number": 58,
       "role": "SECONDARY",
       "enabled": true,
-      "name": "SECONDARY - [3 TARGET + T7] GLOVES"
+      "name": "SECONDARY - [C3 非目标单T7＋BD目标词缀] GLOVES",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 62,
@@ -2281,10 +2505,12 @@
           77
         ]
       ],
-      "number": 52,
+      "number": 59,
       "role": "SECONDARY",
       "enabled": true,
-      "name": "SECONDARY - [3 TARGET + T7] BOOTS"
+      "name": "SECONDARY - [C3 非目标单T7＋BD目标词缀] BOOTS",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 62,
@@ -2299,10 +2525,12 @@
           78
         ]
       ],
-      "number": 53,
+      "number": 60,
       "role": "SECONDARY",
       "enabled": true,
-      "name": "SECONDARY - [3 TARGET + T7] BELT"
+      "name": "SECONDARY - [C3 非目标单T7＋BD目标词缀] BELT",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 62,
@@ -2317,10 +2545,12 @@
           79
         ]
       ],
-      "number": 54,
+      "number": 61,
       "role": "SECONDARY",
       "enabled": true,
-      "name": "SECONDARY - [3 TARGET + T7] BODY_ARMOR"
+      "name": "SECONDARY - [C3 非目标单T7＋BD目标词缀] BODY_ARMOR",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 62,
@@ -2335,10 +2565,12 @@
           80
         ]
       ],
-      "number": 55,
+      "number": 62,
       "role": "SECONDARY",
       "enabled": true,
-      "name": "SECONDARY - [3 TARGET + T7] HELMET"
+      "name": "SECONDARY - [C3 非目标单T7＋BD目标词缀] HELMET",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 62,
@@ -2353,363 +2585,12 @@
           81
         ]
       ],
-      "number": 56,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - [3 TARGET + T7] TWO_HANDED_AXE"
-    },
-    {
-      "source_raxx_rule": 60,
-      "base_rule": 61,
-      "category": "C4",
-      "owners": [],
-      "strict_refs": [],
-      "number": 57,
-      "role": "COMMON",
-      "enabled": true,
-      "name": "[4 ALL T7 PHASE] DISABLE MANUALLY AFTER THIS STAGE"
-    },
-    {
-      "source_raxx_rule": 63,
-      "base_rule": 62,
-      "category": "target_t6",
-      "owners": [
-        "flay-mana-lich"
-      ],
-      "strict_refs": [
-        [
-          "flay-mana-lich",
-          57
-        ]
-      ],
-      "number": 58,
-      "role": "MAIN",
-      "enabled": true,
-      "name": "MAIN - Target T6+ (level 0-84): ONE_HANDED_DAGGER"
-    },
-    {
-      "source_raxx_rule": 63,
-      "base_rule": 62,
-      "category": "target_t6",
-      "owners": [
-        "flay-mana-lich"
-      ],
-      "strict_refs": [
-        [
-          "flay-mana-lich",
-          58
-        ]
-      ],
-      "number": 59,
-      "role": "MAIN",
-      "enabled": true,
-      "name": "MAIN - Target T6+ (level 0-84): ONE_HANDED_AXE"
-    },
-    {
-      "source_raxx_rule": 63,
-      "base_rule": 62,
-      "category": "target_t6",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          69
-        ]
-      ],
-      "number": 60,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - Target T6+ (level 0-84): TWO_HANDED_AXE"
-    },
-    {
-      "source_raxx_rule": 64,
-      "base_rule": 63,
-      "category": "target_t6",
-      "owners": [
-        "flay-mana-lich"
-      ],
-      "strict_refs": [
-        [
-          "flay-mana-lich",
-          49
-        ]
-      ],
-      "number": 61,
-      "role": "MAIN",
-      "enabled": true,
-      "name": "MAIN - Target T6+ (level 0-84): RELIC"
-    },
-    {
-      "source_raxx_rule": 64,
-      "base_rule": 63,
-      "category": "target_t6",
-      "owners": [
-        "flay-mana-lich"
-      ],
-      "strict_refs": [
-        [
-          "flay-mana-lich",
-          50
-        ]
-      ],
-      "number": 62,
-      "role": "MAIN",
-      "enabled": true,
-      "name": "MAIN - Target T6+ (level 0-84): RING"
-    },
-    {
-      "source_raxx_rule": 64,
-      "base_rule": 63,
-      "category": "target_t6",
-      "owners": [
-        "flay-mana-lich"
-      ],
-      "strict_refs": [
-        [
-          "flay-mana-lich",
-          51
-        ]
-      ],
       "number": 63,
-      "role": "MAIN",
-      "enabled": true,
-      "name": "MAIN - Target T6+ (level 0-84): AMULET"
-    },
-    {
-      "source_raxx_rule": 64,
-      "base_rule": 63,
-      "category": "target_t6",
-      "owners": [
-        "flay-mana-lich"
-      ],
-      "strict_refs": [
-        [
-          "flay-mana-lich",
-          52
-        ]
-      ],
-      "number": 64,
-      "role": "MAIN",
-      "enabled": true,
-      "name": "MAIN - Target T6+ (level 0-84): GLOVES"
-    },
-    {
-      "source_raxx_rule": 64,
-      "base_rule": 63,
-      "category": "target_t6",
-      "owners": [
-        "flay-mana-lich"
-      ],
-      "strict_refs": [
-        [
-          "flay-mana-lich",
-          53
-        ]
-      ],
-      "number": 65,
-      "role": "MAIN",
-      "enabled": true,
-      "name": "MAIN - Target T6+ (level 0-84): BOOTS"
-    },
-    {
-      "source_raxx_rule": 64,
-      "base_rule": 63,
-      "category": "target_t6",
-      "owners": [
-        "flay-mana-lich"
-      ],
-      "strict_refs": [
-        [
-          "flay-mana-lich",
-          54
-        ]
-      ],
-      "number": 66,
-      "role": "MAIN",
-      "enabled": true,
-      "name": "MAIN - Target T6+ (level 0-84): BELT"
-    },
-    {
-      "source_raxx_rule": 64,
-      "base_rule": 63,
-      "category": "target_t6",
-      "owners": [
-        "flay-mana-lich"
-      ],
-      "strict_refs": [
-        [
-          "flay-mana-lich",
-          55
-        ]
-      ],
-      "number": 67,
-      "role": "MAIN",
-      "enabled": true,
-      "name": "MAIN - Target T6+ (level 0-84): BODY_ARMOR"
-    },
-    {
-      "source_raxx_rule": 64,
-      "base_rule": 63,
-      "category": "target_t6",
-      "owners": [
-        "flay-mana-lich"
-      ],
-      "strict_refs": [
-        [
-          "flay-mana-lich",
-          56
-        ]
-      ],
-      "number": 68,
-      "role": "MAIN",
-      "enabled": true,
-      "name": "MAIN - Target T6+ (level 0-84): HELMET"
-    },
-    {
-      "source_raxx_rule": 64,
-      "base_rule": 63,
-      "category": "target_t6",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          61
-        ]
-      ],
-      "number": 69,
       "role": "SECONDARY",
       "enabled": true,
-      "name": "SECONDARY - Target T6+ (level 0-84): RELIC"
-    },
-    {
-      "source_raxx_rule": 64,
-      "base_rule": 63,
-      "category": "target_t6",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          62
-        ]
-      ],
-      "number": 70,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - Target T6+ (level 0-84): RING"
-    },
-    {
-      "source_raxx_rule": 64,
-      "base_rule": 63,
-      "category": "target_t6",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          63
-        ]
-      ],
-      "number": 71,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - Target T6+ (level 0-84): AMULET"
-    },
-    {
-      "source_raxx_rule": 64,
-      "base_rule": 63,
-      "category": "target_t6",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          64
-        ]
-      ],
-      "number": 72,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - Target T6+ (level 0-84): GLOVES"
-    },
-    {
-      "source_raxx_rule": 64,
-      "base_rule": 63,
-      "category": "target_t6",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          65
-        ]
-      ],
-      "number": 73,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - Target T6+ (level 0-84): BOOTS"
-    },
-    {
-      "source_raxx_rule": 64,
-      "base_rule": 63,
-      "category": "target_t6",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          66
-        ]
-      ],
-      "number": 74,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - Target T6+ (level 0-84): BELT"
-    },
-    {
-      "source_raxx_rule": 64,
-      "base_rule": 63,
-      "category": "target_t6",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          67
-        ]
-      ],
-      "number": 75,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - Target T6+ (level 0-84): BODY_ARMOR"
-    },
-    {
-      "source_raxx_rule": 64,
-      "base_rule": 63,
-      "category": "target_t6",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          68
-        ]
-      ],
-      "number": 76,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - Target T6+ (level 0-84): HELMET"
+      "name": "SECONDARY - [C3 非目标单T7＋BD目标词缀] TWO_HANDED_AXE",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 68,
@@ -2717,10 +2598,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 77,
+      "number": 64,
       "role": "COMMON",
       "enabled": true,
-      "name": "Exalted Experimentals (TURN OFF IF YOU DON'T USE)"
+      "name": "Exalted Experimentals (TURN OFF IF YOU DON'T USE)",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 69,
@@ -2735,10 +2618,12 @@
           13
         ]
       ],
-      "number": 78,
+      "number": 65,
       "role": "SECONDARY",
       "enabled": false,
-      "name": "SECONDARY - Optional wanted experimentals (OFF)"
+      "name": "SECONDARY - Optional wanted experimentals (OFF)",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
     },
     {
       "source_raxx_rule": 70,
@@ -2746,10 +2631,389 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 79,
+      "number": 66,
       "role": "COMMON",
       "enabled": false,
-      "name": "OFF - Champion targets not selected"
+      "name": "OFF - Champion targets not selected",
+      "alert_tier": 1,
+      "sound_name": "铁匠"
+    },
+    {
+      "source_raxx_rule": 60,
+      "base_rule": 61,
+      "category": "C4",
+      "owners": [],
+      "strict_refs": [],
+      "number": 67,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "[C4 额外单T7阶段：手动关闭]",
+      "alert_tier": 0,
+      "sound_name": "静音"
+    },
+    {
+      "source_raxx_rule": 63,
+      "base_rule": 62,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          57
+        ],
+        [
+          "flay-mana-lich",
+          58
+        ]
+      ],
+      "number": 68,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [过渡T6：85级退出] ONE_HANDED_DAGGER/ONE_HANDED_AXE",
+      "alert_tier": 0,
+      "sound_name": "静音"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          49
+        ]
+      ],
+      "number": 69,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [过渡T6：85级退出] RELIC",
+      "alert_tier": 0,
+      "sound_name": "静音"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          50
+        ]
+      ],
+      "number": 70,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [过渡T6：85级退出] RING",
+      "alert_tier": 0,
+      "sound_name": "静音"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          51
+        ]
+      ],
+      "number": 71,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [过渡T6：85级退出] AMULET",
+      "alert_tier": 0,
+      "sound_name": "静音"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          52
+        ]
+      ],
+      "number": 72,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [过渡T6：85级退出] GLOVES",
+      "alert_tier": 0,
+      "sound_name": "静音"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          53
+        ]
+      ],
+      "number": 73,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [过渡T6：85级退出] BOOTS",
+      "alert_tier": 0,
+      "sound_name": "静音"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          54
+        ]
+      ],
+      "number": 74,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [过渡T6：85级退出] BELT",
+      "alert_tier": 0,
+      "sound_name": "静音"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          55
+        ]
+      ],
+      "number": 75,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [过渡T6：85级退出] BODY_ARMOR",
+      "alert_tier": 0,
+      "sound_name": "静音"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          56
+        ]
+      ],
+      "number": 76,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [过渡T6：85级退出] HELMET",
+      "alert_tier": 0,
+      "sound_name": "静音"
+    },
+    {
+      "source_raxx_rule": 63,
+      "base_rule": 62,
+      "category": "target_t6",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          69
+        ]
+      ],
+      "number": 77,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [过渡T6：85级退出] TWO_HANDED_AXE",
+      "alert_tier": 0,
+      "sound_name": "静音"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          61
+        ]
+      ],
+      "number": 78,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [过渡T6：85级退出] RELIC",
+      "alert_tier": 0,
+      "sound_name": "静音"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          62
+        ]
+      ],
+      "number": 79,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [过渡T6：85级退出] RING",
+      "alert_tier": 0,
+      "sound_name": "静音"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          63
+        ]
+      ],
+      "number": 80,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [过渡T6：85级退出] AMULET",
+      "alert_tier": 0,
+      "sound_name": "静音"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          64
+        ]
+      ],
+      "number": 81,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [过渡T6：85级退出] GLOVES",
+      "alert_tier": 0,
+      "sound_name": "静音"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          65
+        ]
+      ],
+      "number": 82,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [过渡T6：85级退出] BOOTS",
+      "alert_tier": 0,
+      "sound_name": "静音"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          66
+        ]
+      ],
+      "number": 83,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [过渡T6：85级退出] BELT",
+      "alert_tier": 0,
+      "sound_name": "静音"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          67
+        ]
+      ],
+      "number": 84,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [过渡T6：85级退出] BODY_ARMOR",
+      "alert_tier": 0,
+      "sound_name": "静音"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          68
+        ]
+      ],
+      "number": 85,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [过渡T6：85级退出] HELMET",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 73,
@@ -2757,10 +3021,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 80,
+      "number": 86,
       "role": "COMMON",
       "enabled": true,
-      "name": "All Uniques - Turns off at 80"
+      "name": "All Uniques - Turns off at 80",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 74,
@@ -2768,10 +3034,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 81,
+      "number": 87,
       "role": "COMMON",
       "enabled": true,
-      "name": "All Exalts - Turns off at 60"
+      "name": "All Exalts - Turns off at 60",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 75,
@@ -2779,10 +3047,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 82,
+      "number": 88,
       "role": "COMMON",
       "enabled": true,
-      "name": "Selected corrupted equipment (level 0-59)"
+      "name": "Selected corrupted equipment (level 0-59)",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 81,
@@ -2790,10 +3060,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 83,
+      "number": 89,
       "role": "COMMON",
       "enabled": false,
-      "name": "OFF - Ascendance target not selected"
+      "name": "OFF - Ascendance target not selected",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 82,
@@ -2817,10 +3089,12 @@
           45
         ]
       ],
-      "number": 84,
+      "number": 90,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - Target base: GLOVES"
+      "name": "MAIN - Target base: GLOVES",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 82,
@@ -2835,10 +3109,12 @@
           28
         ]
       ],
-      "number": 85,
+      "number": 91,
       "role": "SECONDARY",
       "enabled": true,
-      "name": "SECONDARY - Target base: TWO_HANDED_AXE"
+      "name": "SECONDARY - Target base: TWO_HANDED_AXE",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 82,
@@ -2853,10 +3129,12 @@
           29
         ]
       ],
-      "number": 86,
+      "number": 92,
       "role": "SECONDARY",
       "enabled": true,
-      "name": "SECONDARY - Target base: HELMET"
+      "name": "SECONDARY - Target base: HELMET",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 82,
@@ -2871,10 +3149,12 @@
           30
         ]
       ],
-      "number": 87,
+      "number": 93,
       "role": "SECONDARY",
       "enabled": true,
-      "name": "SECONDARY - Target base: BOOTS"
+      "name": "SECONDARY - Target base: BOOTS",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 82,
@@ -2889,10 +3169,12 @@
           32
         ]
       ],
-      "number": 88,
+      "number": 94,
       "role": "SECONDARY",
       "enabled": true,
-      "name": "SECONDARY - Target base: RING"
+      "name": "SECONDARY - Target base: RING",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 83,
@@ -2900,10 +3182,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 89,
+      "number": 95,
       "role": "COMMON",
       "enabled": false,
-      "name": "OFF - Check shard inventory before enabling"
+      "name": "OFF - Check shard inventory before enabling",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 84,
@@ -2911,10 +3195,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 90,
+      "number": 96,
       "role": "COMMON",
       "enabled": true,
-      "name": "Shatter Acolyte Affixes"
+      "name": "Shatter Acolyte Affixes",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 85,
@@ -2922,10 +3208,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 91,
+      "number": 97,
       "role": "COMMON",
       "enabled": false,
-      "name": "OFF - Mage shards not requested"
+      "name": "OFF - Mage shards not requested",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 86,
@@ -2933,10 +3221,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 92,
+      "number": 98,
       "role": "COMMON",
       "enabled": false,
-      "name": "OFF - Primalist shards not requested"
+      "name": "OFF - Primalist shards not requested",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 87,
@@ -2944,10 +3234,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 93,
+      "number": 99,
       "role": "COMMON",
       "enabled": false,
-      "name": "OFF - Rogue shards not requested"
+      "name": "OFF - Rogue shards not requested",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 88,
@@ -2955,10 +3247,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 94,
+      "number": 100,
       "role": "COMMON",
       "enabled": false,
-      "name": "OFF - Sentinel shards not requested"
+      "name": "OFF - Sentinel shards not requested",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 89,
@@ -2966,10 +3260,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 95,
+      "number": 101,
       "role": "COMMON",
       "enabled": true,
-      "name": "Shatter Offensive Affixes (SELECT WHAT YOU NEED)"
+      "name": "Shatter Offensive Affixes (SELECT WHAT YOU NEED)",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 90,
@@ -2977,133 +3273,17 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 96,
+      "number": 102,
       "role": "COMMON",
       "enabled": true,
-      "name": "Shatter Defensive Affixes (SELECT WHAT YOU NEED)"
+      "name": "Shatter Defensive Affixes (SELECT WHAT YOU NEED)",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 99,
       "base_rule": 98,
       "category": "idol_bis",
-      "owners": [
-        "flay-mana-lich"
-      ],
-      "strict_refs": [
-        [
-          "flay-mana-lich",
-          17
-        ],
-        [
-          "flay-mana-lich",
-          21
-        ]
-      ],
-      "policy": "User-reviewed Flay 1/2 ordinary targets; both Weaver and Lagon",
-      "number": 97,
-      "role": "MAIN",
-      "enabled": true,
-      "name": "MAIN - Idol pair complete: IDOL_1x1_LAGON"
-    },
-    {
-      "source_raxx_rule": 99,
-      "base_rule": 98,
-      "category": "idol_bis",
-      "owners": [
-        "flay-mana-lich"
-      ],
-      "strict_refs": [
-        [
-          "flay-mana-lich",
-          18
-        ],
-        [
-          "flay-mana-lich",
-          22
-        ]
-      ],
-      "policy": "User-reviewed Flay 1/2 ordinary targets; both Weaver and Lagon",
-      "number": 98,
-      "role": "MAIN",
-      "enabled": true,
-      "name": "MAIN - Idol pair complete: IDOL_1x2"
-    },
-    {
-      "source_raxx_rule": 99,
-      "base_rule": 98,
-      "category": "idol_bis",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          24
-        ]
-      ],
-      "number": 99,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - Idol two ordinary targets: IDOL_1x1_LAGON"
-    },
-    {
-      "source_raxx_rule": 99,
-      "base_rule": 98,
-      "category": "idol_bis",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          25
-        ]
-      ],
-      "number": 100,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - Idol two ordinary targets: IDOL_2x1"
-    },
-    {
-      "source_raxx_rule": 99,
-      "base_rule": 98,
-      "category": "idol_bis",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          26
-        ]
-      ],
-      "number": 101,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - Idol two ordinary targets: IDOL_1x3"
-    },
-    {
-      "source_raxx_rule": 99,
-      "base_rule": 98,
-      "category": "idol_bis",
-      "owners": [
-        "skeleton-necromancer"
-      ],
-      "strict_refs": [
-        [
-          "skeleton-necromancer",
-          27
-        ]
-      ],
-      "number": 102,
-      "role": "SECONDARY",
-      "enabled": true,
-      "name": "SECONDARY - Idol two ordinary targets: IDOL_1x3"
-    },
-    {
-      "source_raxx_rule": 99,
-      "base_rule": 98,
-      "category": "idol_candidate",
       "owners": [
         "flay-mana-lich"
       ],
@@ -3121,7 +3301,139 @@
       "number": 103,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - Idol one target: IDOL_1x1_LAGON"
+      "name": "MAIN - Idol pair complete: IDOL_1x1_LAGON",
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "category": "idol_bis",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          18
+        ],
+        [
+          "flay-mana-lich",
+          22
+        ]
+      ],
+      "policy": "User-reviewed Flay 1/2 ordinary targets; both Weaver and Lagon",
+      "number": 104,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Idol pair complete: IDOL_1x2",
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "category": "idol_bis",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          24
+        ]
+      ],
+      "number": 105,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Idol two ordinary targets: IDOL_1x1_LAGON",
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "category": "idol_bis",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          25
+        ]
+      ],
+      "number": 106,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Idol two ordinary targets: IDOL_2x1",
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "category": "idol_bis",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          26
+        ]
+      ],
+      "number": 107,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Idol two ordinary targets: IDOL_1x3",
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "category": "idol_bis",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          27
+        ]
+      ],
+      "number": 108,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Idol two ordinary targets: IDOL_1x3",
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "category": "idol_candidate",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          17
+        ],
+        [
+          "flay-mana-lich",
+          21
+        ]
+      ],
+      "policy": "User-reviewed Flay 1/2 ordinary targets; both Weaver and Lagon",
+      "number": 109,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Idol one target: IDOL_1x1_LAGON",
+      "alert_tier": 2,
+      "sound_name": "开始"
     },
     {
       "source_raxx_rule": 99,
@@ -3141,10 +3453,12 @@
         ]
       ],
       "policy": "User-reviewed Flay 1/2 ordinary targets; both Weaver and Lagon",
-      "number": 104,
+      "number": 110,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - Idol one target: IDOL_1x2"
+      "name": "MAIN - Idol one target: IDOL_1x2",
+      "alert_tier": 2,
+      "sound_name": "开始"
     },
     {
       "source_raxx_rule": 127,
@@ -3179,10 +3493,12 @@
           72
         ]
       ],
-      "number": 105,
+      "number": 111,
       "role": "MAIN",
       "enabled": true,
-      "name": "MAIN - Altar target (any tier)"
+      "name": "MAIN - Altar target (any tier)",
+      "alert_tier": 2,
+      "sound_name": "开始"
     },
     {
       "source_raxx_rule": 127,
@@ -3217,10 +3533,12 @@
           83
         ]
       ],
-      "number": 106,
+      "number": 112,
       "role": "SECONDARY",
       "enabled": true,
-      "name": "SECONDARY - Altar target (any tier)"
+      "name": "SECONDARY - Altar target (any tier)",
+      "alert_tier": 2,
+      "sound_name": "开始"
     },
     {
       "source_raxx_rule": 128,
@@ -3228,10 +3546,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 107,
+      "number": 113,
       "role": "COMMON",
       "enabled": true,
-      "name": "General ordinary idol targets (level 0-89)"
+      "name": "General ordinary idol targets (level 0-89)",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 129,
@@ -3239,10 +3559,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 108,
+      "number": 114,
       "role": "COMMON",
       "enabled": true,
-      "name": "General ordinary idol targets (level 0-74)"
+      "name": "General ordinary idol targets (level 0-74)",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 134,
@@ -3250,10 +3572,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 109,
+      "number": 115,
       "role": "COMMON",
       "enabled": true,
-      "name": "All Exalts or Better - Turns off at 60"
+      "name": "All Exalts or Better - Turns off at 60",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 135,
@@ -3261,10 +3585,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 110,
+      "number": 116,
       "role": "COMMON",
       "enabled": true,
-      "name": "Campaign Idols - Turns off at 60"
+      "name": "Campaign Idols - Turns off at 60",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 136,
@@ -3272,10 +3598,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 111,
+      "number": 117,
       "role": "COMMON",
       "enabled": false,
-      "name": "OFF - Campaign weapon bases not supplied"
+      "name": "OFF - Campaign weapon bases not supplied",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 137,
@@ -3283,10 +3611,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 112,
+      "number": 118,
       "role": "COMMON",
       "enabled": false,
-      "name": "OFF - Campaign offhand bases not supplied"
+      "name": "OFF - Campaign offhand bases not supplied",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 138,
@@ -3294,10 +3624,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 113,
+      "number": 119,
       "role": "COMMON",
       "enabled": true,
-      "name": "BIS Campaign Amulet Bases - Turns off at 60"
+      "name": "BIS Campaign Amulet Bases - Turns off at 60",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 139,
@@ -3305,10 +3637,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 114,
+      "number": 120,
       "role": "COMMON",
       "enabled": true,
-      "name": "BIS Campaign Belt Bases - Turns off at 60"
+      "name": "BIS Campaign Belt Bases - Turns off at 60",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 140,
@@ -3316,10 +3650,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 115,
+      "number": 121,
       "role": "COMMON",
       "enabled": true,
-      "name": "BIS Campaign Body Armor Bases - Turns off at 60"
+      "name": "BIS Campaign Body Armor Bases - Turns off at 60",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 141,
@@ -3327,10 +3663,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 116,
+      "number": 122,
       "role": "COMMON",
       "enabled": true,
-      "name": "BIS Campaign Boot Bases - Turns off at 60"
+      "name": "BIS Campaign Boot Bases - Turns off at 60",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 142,
@@ -3338,10 +3676,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 117,
+      "number": 123,
       "role": "COMMON",
       "enabled": true,
-      "name": "BIS Campaign Helmet Bases - Turns off at 60"
+      "name": "BIS Campaign Helmet Bases - Turns off at 60",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 143,
@@ -3349,10 +3689,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 118,
+      "number": 124,
       "role": "COMMON",
       "enabled": true,
-      "name": "BIS Campaign Ring Bases - Turns off at 60"
+      "name": "BIS Campaign Ring Bases - Turns off at 60",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 144,
@@ -3360,10 +3702,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 119,
+      "number": 125,
       "role": "COMMON",
       "enabled": true,
-      "name": "BIS Campaign Glove Bases - Turns off at 60"
+      "name": "BIS Campaign Glove Bases - Turns off at 60",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 145,
@@ -3371,10 +3715,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 120,
+      "number": 126,
       "role": "COMMON",
       "enabled": true,
-      "name": "BIS Campaign Relic Bases - Turns off at 60"
+      "name": "BIS Campaign Relic Bases - Turns off at 60",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 146,
@@ -3382,10 +3728,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 121,
+      "number": 127,
       "role": "COMMON",
       "enabled": true,
-      "name": "Shatter T3+ Phys Res / All Health - Turns off at 50"
+      "name": "Shatter T3+ Phys Res / All Health - Turns off at 50",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 147,
@@ -3393,10 +3741,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 122,
+      "number": 128,
       "role": "COMMON",
       "enabled": true,
-      "name": "Shatter T3+ Movespeed & CDR - Turns off at 50"
+      "name": "Shatter T3+ Movespeed & CDR - Turns off at 50",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 148,
@@ -3404,10 +3754,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 123,
+      "number": 129,
       "role": "COMMON",
       "enabled": true,
-      "name": "Shatter T3+ Resistances - Turns off at 50"
+      "name": "Shatter T3+ Resistances - Turns off at 50",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 149,
@@ -3415,10 +3767,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 124,
+      "number": 130,
       "role": "COMMON",
       "enabled": true,
-      "name": "T2+ Phys Res / All Health - Turns off at 30"
+      "name": "T2+ Phys Res / All Health - Turns off at 30",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 150,
@@ -3426,10 +3780,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 125,
+      "number": 131,
       "role": "COMMON",
       "enabled": true,
-      "name": "T2+ Movespeed & CDR - Turns off at 30"
+      "name": "T2+ Movespeed & CDR - Turns off at 30",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 151,
@@ -3437,10 +3793,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 126,
+      "number": 132,
       "role": "COMMON",
       "enabled": true,
-      "name": "T2+ Resistances - Turns off at 30"
+      "name": "T2+ Resistances - Turns off at 30",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 152,
@@ -3448,10 +3806,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 127,
+      "number": 133,
       "role": "COMMON",
       "enabled": true,
-      "name": "Early Bows - Turns off at 30"
+      "name": "Early Bows - Turns off at 30",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 153,
@@ -3459,10 +3819,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 128,
+      "number": 134,
       "role": "COMMON",
       "enabled": true,
-      "name": "Early Melee Wpns - Turns off at 30"
+      "name": "Early Melee Wpns - Turns off at 30",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 154,
@@ -3470,10 +3832,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 129,
+      "number": 135,
       "role": "COMMON",
       "enabled": true,
-      "name": "Early Caster Wpns - Turns off at 30"
+      "name": "Early Caster Wpns - Turns off at 30",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 155,
@@ -3481,10 +3845,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 130,
+      "number": 136,
       "role": "COMMON",
       "enabled": true,
-      "name": "All Rares - Turns off at 30"
+      "name": "All Rares - Turns off at 30",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 156,
@@ -3492,10 +3858,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 131,
+      "number": 137,
       "role": "COMMON",
       "enabled": true,
-      "name": "Early Relics - Turns off at 12"
+      "name": "Early Relics - Turns off at 12",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 157,
@@ -3503,10 +3871,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 132,
+      "number": 138,
       "role": "COMMON",
       "enabled": true,
-      "name": "Early Catalyst - Turns off at 12"
+      "name": "Early Catalyst - Turns off at 12",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 158,
@@ -3514,10 +3884,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 133,
+      "number": 139,
       "role": "COMMON",
       "enabled": true,
-      "name": "Early Quivers - Turns off at 12"
+      "name": "Early Quivers - Turns off at 12",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 159,
@@ -3525,10 +3897,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 134,
+      "number": 140,
       "role": "COMMON",
       "enabled": true,
-      "name": "Early Shields - Turns off at 12"
+      "name": "Early Shields - Turns off at 12",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 160,
@@ -3536,10 +3910,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 135,
+      "number": 141,
       "role": "COMMON",
       "enabled": true,
-      "name": "Silver Ring - Turns off at 12"
+      "name": "Silver Ring - Turns off at 12",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 161,
@@ -3547,10 +3923,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 136,
+      "number": 142,
       "role": "COMMON",
       "enabled": true,
-      "name": "Ruby Amulet - Turns off at 12"
+      "name": "Ruby Amulet - Turns off at 12",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 162,
@@ -3558,10 +3936,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 137,
+      "number": 143,
       "role": "COMMON",
       "enabled": true,
-      "name": "All Items - Turns off at 10"
+      "name": "All Items - Turns off at 10",
+      "alert_tier": 0,
+      "sound_name": "静音"
     },
     {
       "source_raxx_rule": 163,
@@ -3569,10 +3949,12 @@
       "category": "base",
       "owners": [],
       "strict_refs": [],
-      "number": 138,
+      "number": 144,
       "role": "COMMON",
       "enabled": true,
-      "name": ""
+      "name": "",
+      "alert_tier": 0,
+      "sound_name": "静音"
     }
   ],
   "target_ids": {
@@ -4437,7 +4819,73 @@
       "disposition": "retained_or_filled"
     }
   ],
-  "stage_rule": 57,
+  "stage_rule": 67,
+  "feedback_reference": {
+    "local_path": "sources/filter-style-reference.json",
+    "sha256": "37a26db4058ded7f88963d1559a9e369a7c1d74f7894778b63165e05f54b7d39"
+  },
+  "feedback": {
+    "tiers": {
+      "0": [
+        "静音",
+        "1",
+        "1",
+        "NONE",
+        "1",
+        "0"
+      ],
+      "1": [
+        "铁匠",
+        "14",
+        "2",
+        "SMALL",
+        "3",
+        "4"
+      ],
+      "2": [
+        "开始",
+        "6",
+        "7",
+        "MEDIUM",
+        "4",
+        "6"
+      ],
+      "3": [
+        "灵感",
+        "9",
+        "8",
+        "LARGE",
+        "5",
+        "7"
+      ],
+      "4": [
+        "彗星",
+        "12",
+        "5",
+        "LARGEST",
+        "7",
+        "10"
+      ]
+    },
+    "silent_map_icon_is_none": true,
+    "ww_thresholds": [
+      14,
+      17,
+      20
+    ],
+    "t7_priority": [
+      "C2 (4+)",
+      "C2 (3)",
+      "C2 (2)",
+      "C1",
+      "C3",
+      "C4"
+    ],
+    "experimental_and_champion_before_phase": true,
+    "t6_rules": 18,
+    "t6_collection_unchanged": true,
+    "per_rule_volume": false
+  },
   "defaults": {
     "urgent_shards": false,
     "ascendance": false,

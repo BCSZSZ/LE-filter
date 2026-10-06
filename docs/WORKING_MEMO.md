@@ -1,8 +1,21 @@
 # 后续工作 memo
 
-更新时间：2026-10-06，日本时间。当前阅读顺序：README → CURRENT_FILTER_GUIDE → CURRENT_RULES_REVIEW → BASE_TEMPLATE → 本memo；填空来源查STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+更新时间：2026-10-06，日本时间。当前阅读顺序：README → SOUND_STYLE_REVIEW → CURRENT_FILTER_GUIDE → CURRENT_RULES_REVIEW → BASE_TEMPLATE → 本memo；填空来源查STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
-## 最新成品：Flay＋Skeleton v2
+## 最新成品：v3四档提示
+
+- 用户本轮要求清晰名称、全部情况四档归类、无声无地图图标、主副分组、合并同条件与审查T6压缩。成品v3共144条（133启用／11关闭）；原138条v2保持不动，其复现脚本在82e557d。当前current三脚本改为生成／验证／渲染v3，报告路径沿用current-filter-report与current-filter-validation。
+- 声音ID：静音1、铁匠14、开始6、灵感9、彗星12。图标：None=1，Default=0；静音不能用0。所有规则明确BeamOverride=true，静音NONE；四档SMALL／MEDIUM／LARGE／LARGEST，图标2／7／8／5。普通静音灰色；BD文字粉8／蓝12，光柱对应粉11／蓝15，不是同一ID表。格式参考sources/filter-style-reference.json是从已校验哈希的Tools代码和中文词库提取，不依赖.cache，不冒充游戏引擎。
+- 用户已确认WW按14／17／20分开始／灵感／彗星，低于14的BD目标铁匠，非BD名单WW1–13静音。LP和WW拆为独立规则，避免假定同一PotentialCondition的组合语义。LP=1／2按用户“任意暗金”扩大到无名字限制；BD LP=1有主／副灵感层。WW17–19、14–16沿用原412项名单并补缺少3种BD目标，WW≥20不限名字。
+- 0LP BD主名单把原共享2项与主专属9项合成11，副专属9项；shared_unique_ids保留来源，不把整条11项声称为全部共享。珍贵名单152及原364项roll边界保持，低WW静音子层另引用同一份（成品728次边界引用）。
+- 装备T8池946→1156，彗星；任意4+T7彗星、3T7灵感、2T7铁匠，均完整1156池与23装备类型。T8和4+T7置顶，防止传奇入口抢先；一般传奇灵感，不反推合成前LP。双／三T7先于C1目标单T7开始；C3非目标单T7＋BD目标不限阶铁匠；实验／可选冠军入口先于静音C4及T6。通用强规则先匹配时用通用档色，不判主副。
+- C1主G26–35、副G36–44；C3主G45–54、副G55–63。C4当前G67，一条默认开启、手动关闭、无等级退出，名称[C4 额外单T7阶段：手动关闭]。C3名称[C3 非目标单T7＋BD目标词缀]里的C3是分类，目标仅至少1条，阶数不限。
+- T6只合并同主BD且同条件／同目标池的匕首与单手斧（2／718／943），19→18，展开类型后的条件集合与v2完全相等。当前主G68–76、副G77–85；0–84级、85自动不匹配，静音无图标，其他部位目标池不混。实验属性优先铁匠；C3、实验、碎片和底材仍可保留T6。
+- 神像两项灵感、一项开始，普通池不含腐化；骷髅仍保留四条BIS入口，没有新增常驻一项收集。通用过渡神像广池静音；BD祭坛至少1目标开始，不增造两项毕业判断。精确前后缀、891备用和祭坛腐化重要性仍可单独审阅。
+- SOUND_STYLE_REVIEW覆盖全部旧G1–138且列能力缺口；CURRENT_ALERT_INDEX逐条来自真实144条XML。验证包括94个有限全过滤器案例、T6展开等价、44条其他规则条件／开关保持、20目标0／1LP及LP／WW边界、无声无图标与颜色对应。未模拟唯一属性roll、封印／特殊词缀计数或游戏听音；没有逐条音量字段，不承诺四种声音客观响度递增。
+
+## 上一版快照：Flay＋Skeleton v2
+
 
 - 用户已明确要求按新基底生成最新版。成品filters/Flay-Mana-Lich+Skeleton-Necromancer-v2.xml，138条（127启用／11关闭），原187条XML、原Raxx、Strict、通用Base v1保持字节不变。Flay主粉8、Skeleton副蓝12；同层主先匹配，共享按主，收集条件是两者并集。
 - 19份目标分别绑定C1／C3／T6，C3目标不限阶数且全池T7，不加FP／未腐化门槛。C2／C4全1156ID、23类装备不缩窄。C4在当前G57，原R60、基底B61；默认开启、手动关闭。T6仍0–84级，无常驻双T6保护。其他实验／碎片／底材路径仍可能保留非目标单T7。

@@ -1,12 +1,12 @@
 # LE-filter：Raxx 基底与双 BD 收集过滤器
 
-最新版成品：**[Flay＋Skeleton Necromancer v2](filters/Flay-Mana-Lich+Skeleton-Necromancer-v2.xml)**，138条（127启用／11关闭），已填入两BD目标并删去56条蓝字说明。[当前使用说明与玩家待办](docs/CURRENT_FILTER_GUIDE.md)和[逐条审阅规则](docs/CURRENT_RULES_REVIEW.md)从实际XML生成。
+最新版成品：**[Flay＋Skeleton Necromancer v3](filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml)**，144条（133启用／11关闭），采用铁匠／开始／灵感／彗星四档，静音项无图标和光柱。旧v2保留不动。[四档分类与能力审阅](docs/SOUND_STYLE_REVIEW.md)、[全部提示索引](docs/CURRENT_ALERT_INDEX.md)、[使用说明](docs/CURRENT_FILTER_GUIDE.md)和[逐条条件](docs/CURRENT_RULES_REVIEW.md)对应当前成品。
 
 当前基底仍为[LE Base Template v1](templates/LE-base-v1.xml)，落实用户确认的T7四类，供后续定制。Strict提供目标情报，成品采用基底门槛；原Raxx与旧187条试制保留不动。
 
 先读[当前使用说明](docs/CURRENT_FILTER_GUIDE.md)，再查[新基底说明](docs/BASE_TEMPLATE.md)、[BD情报来源](docs/STRICT_VARIABLE_REVIEW.md)及[工作memo](docs/WORKING_MEMO.md)。Flay主套路粉色、Skeleton副套路蓝色，共享按主；两者同等收集。旧187条XML及其说明包含Strict策略移植，仅作历史；动态勾选界面尚未实施。
 
-[V05–V10的用途与过渡范围](docs/STRICT_VARIABLE_REVIEW.md#equipment-purpose)已更新：对应部位BD目标T7 → 任意双／多T7 → BD目标不限阶数＋T7 → 额外单T7阶段兜底。最后一类只有一条、默认开启，玩家阶段结束后手动关闭；关闭它保留前三类。原双T6常驻改为双／多T7，原V10的T6补收仍在85级退出。
+[V05–V10的用途与过渡范围](docs/STRICT_VARIABLE_REVIEW.md#equipment-purpose)保留基底四类情报。v3为声音把多T7放到目标单T7之前，4条以上／3条／2条分档，C1与C3各自主一组、副一组。C4仍只有一条，当前G67，默认开启、手动关闭；T6等价压成18条，85级退出。详见[提示审阅](docs/SOUND_STYLE_REVIEW.md)。
 
 [原版宽池完整名单](docs/RAXX_DEFAULT_EQUIPMENT_POOLS.md)保留623／42／343项作为历史对照。新基底的全量池使用冻结词库全部1156个ID，装备范围保留原23类普通装备；双／多T7和额外单T7阶段池不再按BD裁剪。C1／C3的目标仍按BD与部位填写。
 
@@ -25,12 +25,16 @@
 | 文件 | 用途 |
 |---|---|
 | [PLAN.md](PLAN.md) | 本阶段计划、验收条件与范围 |
-| [Flay＋Skeleton v2](filters/Flay-Mana-Lich+Skeleton-Necromancer-v2.xml) | 当前可导入成品，含一条默认开启的额外单T7阶段规则 |
+| [Flay＋Skeleton v3](filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml) | 当前可导入成品，四档声音与一条手动退出C4 |
+| [SOUND_STYLE_REVIEW.md](docs/SOUND_STYLE_REVIEW.md) | 全部旧v2情况的档位、区分能力、修改与未完成语义 |
+| [CURRENT_ALERT_INDEX.md](docs/CURRENT_ALERT_INDEX.md) | 实际144条声音、图标、光柱及启用状态 |
 | [CURRENT_FILTER_GUIDE.md](docs/CURRENT_FILTER_GUIDE.md) | 当前策略、默认开关和玩家仍需完成的事项 |
-| [CURRENT_RULES_REVIEW.md](docs/CURRENT_RULES_REVIEW.md) | 实际138条XML规则的类型、目标、门槛、颜色与声音 |
-| [CURRENT_RULE_POOLS.md](docs/CURRENT_RULE_POOLS.md) | 当前大名单和保留的364项唯一属性roll编码边界 |
+| [CURRENT_RULES_REVIEW.md](docs/CURRENT_RULES_REVIEW.md) | 实际144条XML规则的类型、目标、门槛、颜色与声音 |
+| [CURRENT_RULE_POOLS.md](docs/CURRENT_RULE_POOLS.md) | 当前大名单与原364项roll边界，低WW层另引用一份 |
 | [current-filter-report.json](analysis/current-filter-report.json) | 成品哈希、G／B／R／X映射、来源与默认配置 |
-| [current-filter-validation.json](analysis/current-filter-validation.json) | 结构、门槛、类型绑定、神像计数与35个有限案例 |
+| [current-filter-validation.json](analysis/current-filter-validation.json) | 条件、声音／图标约束、T6等价合并与有限案例 |
+| [filter-style-reference.json](sources/filter-style-reference.json) | 冻结音效／图标／光柱／颜色ID及代码来源哈希 |
+| [Flay＋Skeleton v2](filters/Flay-Mana-Lich+Skeleton-Necromancer-v2.xml) | 上一版138条快照；复现脚本见Git提交82e557d |
 | [BASE_TEMPLATE.md](docs/BASE_TEMPLATE.md) | 当前四类收集规则、范围、退出方式和玩家待办 |
 | [LE-base-v1.xml](templates/LE-base-v1.xml) | 后续填写BD使用的162条可复现基底模板 |
 | [base-manifest.json](templates/base-manifest.json) | 模板哈希、原R／当前B映射、四类规则和全池范围 |
@@ -89,7 +93,7 @@ python -X utf8 scripts/verify_current_filter.py
 python -X utf8 scripts/render_current_filter.py
 ```
 
-只使用标准库与已提交资料，不需要网络、.cache或Downloads。模板验证162条结构与15个有限案例；提取核对源哈希、56蓝字覆盖、全部271条Strict与19份C1／C3目标一致。成品另验证138条结构、1156全池、20种暗金0LP路径、类型绑定、神像剥离腐化及35个有限案例；保留48条未改变的功能规则和364项原roll边界。客户端导入、封印计数及实际提示尚未实测。
+只使用标准库与已提交资料，不需要网络、.cache或Downloads。模板验证162条结构与15个有限案例；提取核对源哈希、56蓝字覆盖、全部271条Strict与19份目标一致。成品验证144条结构、1156全池、20种暗金0／1LP路径、提示字段、排序、T6压缩等价及94个有限案例；44条其他规则的条件和开关保持，原364项roll边界保留。客户端导入、封印计数与实际听音尚未实测。完整分类与本轮收集范围变化见SOUND_STYLE_REVIEW。
 
 以下命令用于**历史试制**，本轮不要执行：
 
