@@ -1,8 +1,8 @@
 # LE-filter：Raxx 基底与双 BD 收集过滤器
 
-已生成 **Flay Mana Lich + Skeleton Necromancer** 合并收集版：187条规则，两BD同等保留，25种目标及替代暗金有无潜能门槛兜底。已将Maxroll Strict的BD条件填入Raxx框架，并实现离线生成与检查。原始基底、两份Strict和Planner JSON未修改；动态勾选界面留待下一阶段。
+已生成 **Flay Mana Lich + Skeleton Necromancer** 合并收集版：187条规则，两BD同等保留，25种目标及替代暗金有无潜能门槛兜底。本次默认Flay为主套路（粉色）、Skeleton为副套路（蓝色），共享需求按主套路提示。已将Maxroll Strict的BD条件填入Raxx框架，并实现离线生成与检查。原始基底、两份Strict和Planner JSON未修改；动态勾选界面留待下一阶段。
 
-直接使用：[成品XML](filters/Flay-Mana-Lich+Skeleton-Necromancer.xml) → [使用说明与玩家待办](docs/COMBINED_FILTER_GUIDE.md)。研究与维护：[Strict转移规则](docs/TRANSFER_RULES.md) → [187条成品索引](docs/GENERATED_RULE_INDEX.md) → [工作memo](docs/WORKING_MEMO.md)。
+先审阅：[逐条中文规则](docs/RULES_REVIEW.md) → [完整名单附录](docs/RULES_REVIEW_POOLS.md)。直接使用：[成品XML](filters/Flay-Mana-Lich+Skeleton-Necromancer.xml) → [使用说明与玩家待办](docs/COMBINED_FILTER_GUIDE.md)。研究与维护：[Strict转移规则](docs/TRANSFER_RULES.md) → [187条成品索引](docs/GENERATED_RULE_INDEX.md) → [工作memo](docs/WORKING_MEMO.md)。
 
 第一阶段的基底研究也已完成：固定原始过滤器、阅读完整视频英文自动字幕、解析全部163条规则，中文说明和原模板待办保留如下。
 
@@ -18,6 +18,8 @@
 | [FILTER_GUIDE.md](docs/FILTER_GUIDE.md) | 用人能读懂的语言解释整套过滤器 |
 | [PLAYER_TODO.md](docs/PLAYER_TODO.md) | 蓝字和大写文字要求玩家完成的配置、可选功能与进度调整 |
 | [COMBINED_FILTER_GUIDE.md](docs/COMBINED_FILTER_GUIDE.md) | 本次成品的颜色、用途、已完成配置与玩家剩余待办 |
+| [RULES_REVIEW.md](docs/RULES_REVIEW.md) | 按匹配顺序展开187条规则的中文条件、门槛、启用状态和提示，供审阅 |
+| [RULES_REVIEW_POOLS.md](docs/RULES_REVIEW_POOLS.md) | 审阅稿引用的完整大名单及原XML唯一属性roll编码边界 |
 | [TRANSFER_RULES.md](docs/TRANSFER_RULES.md) | Strict输入族如何填入基底、共享池拆分、补充与明确差异 |
 | [GENERATED_RULE_INDEX.md](docs/GENERATED_RULE_INDEX.md) | 187条成品编号G与基底槽位R、Strict来源X的定位 |
 | [analysis/transfer-report.json](analysis/transfer-report.json) | 原163条与Strict全部271条的处置，以及每条成品的来源 |
@@ -51,6 +53,7 @@
 ```powershell
 python -X utf8 scripts/generate_filter.py
 python -X utf8 scripts/verify_generated_filter.py
+python -X utf8 scripts/render_rules_review.py
 ```
 
 只使用标准库，无需网络或.cache。当前固定两份导出；38条源T6/T7条件被集合等价地拆成46条，另55条Strict谓词保持原样，25种目标暗金及20个有限离线案例已通过检查。未建模的封印计数会返回未确认；客户端导入和实际掉落待验证。

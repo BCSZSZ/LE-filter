@@ -14,6 +14,17 @@
     "bytes": 1275032,
     "url": "https://github.com/raxxanterax/GAMING/blob/57498b0901a7c099efdf931923c65271fdfdb993/Raxx%27s%20S5%20Ultimate%20Filter%20v1.0.txt"
   },
+  "display": {
+    "main_build": "flay-mana-lich",
+    "secondary_builds": [
+      "skeleton-necromancer"
+    ],
+    "shared_uses_main": true,
+    "colors": {
+      "MAIN": 8,
+      "SECONDARY": 12
+    }
+  },
   "sources": {
     "flay-mana-lich": {
       "strict": {
@@ -2911,7 +2922,7 @@
   },
   "rules": 187,
   "enabled": 171,
-  "output_sha256": "516770f738e654dd64e8eff4a31a3afe4f6f16bf440c685fb504cdff27bcbf3e",
+  "output_sha256": "a6026b9a065042ead7e4e9bd1461b20f0687a148d5a087669b6763c7f461cc78",
   "output_rules": [
     {
       "template": 8,
@@ -2931,7 +2942,8 @@
         ]
       ],
       "label": "Build uniques: Uniques From Planner 3 LP",
-      "name": "SHARED - Build uniques: Uniques From Planner 3 LP",
+      "display_role": "MAIN",
+      "name": "MAIN - Build uniques: Uniques From Planner 3 LP",
       "number": 1,
       "enabled": true
     },
@@ -2953,7 +2965,8 @@
         ]
       ],
       "label": "Build uniques: Uniques From Planner 2 LP",
-      "name": "SHARED - Build uniques: Uniques From Planner 2 LP",
+      "display_role": "MAIN",
+      "name": "MAIN - Build uniques: Uniques From Planner 2 LP",
       "number": 2,
       "enabled": true
     },
@@ -2975,7 +2988,8 @@
         ]
       ],
       "label": "Build uniques: Uniques From Planner 1 LP - Turtle Rule",
-      "name": "SHARED - Build uniques: Uniques From Planner 1 LP - Turtle Rule",
+      "display_role": "MAIN",
+      "name": "MAIN - Build uniques: Uniques From Planner 1 LP - Turtle Rule",
       "number": 3,
       "enabled": true
     },
@@ -2997,7 +3011,8 @@
         ]
       ],
       "label": "Build uniques: Uniques & Sets From Planner",
-      "name": "SHARED - Build uniques: Uniques & Sets From Planner",
+      "display_role": "MAIN",
+      "name": "MAIN - Build uniques: Uniques & Sets From Planner",
       "number": 4,
       "enabled": true
     },
@@ -3014,7 +3029,8 @@
         ]
       ],
       "label": "Build uniques: Uniques From Planner 3 LP",
-      "name": "FLAY - Build uniques: Uniques From Planner 3 LP",
+      "display_role": "MAIN",
+      "name": "MAIN - Build uniques: Uniques From Planner 3 LP",
       "number": 5,
       "enabled": true
     },
@@ -3031,7 +3047,8 @@
         ]
       ],
       "label": "Build uniques: Uniques From Planner 2 LP",
-      "name": "FLAY - Build uniques: Uniques From Planner 2 LP",
+      "display_role": "MAIN",
+      "name": "MAIN - Build uniques: Uniques From Planner 2 LP",
       "number": 6,
       "enabled": true
     },
@@ -3048,7 +3065,8 @@
         ]
       ],
       "label": "Build uniques: Uniques From Planner 1 LP - Turtle Rule",
-      "name": "FLAY - Build uniques: Uniques From Planner 1 LP - Turtle Rule",
+      "display_role": "MAIN",
+      "name": "MAIN - Build uniques: Uniques From Planner 1 LP - Turtle Rule",
       "number": 7,
       "enabled": true
     },
@@ -3065,7 +3083,8 @@
         ]
       ],
       "label": "Build uniques: Uniques & Sets From Planner",
-      "name": "FLAY - Build uniques: Uniques & Sets From Planner",
+      "display_role": "MAIN",
+      "name": "MAIN - Build uniques: Uniques & Sets From Planner",
       "number": 8,
       "enabled": true
     },
@@ -3082,7 +3101,8 @@
         ]
       ],
       "label": "Build uniques: Uniques From Planner 3 LP",
-      "name": "NECRO - Build uniques: Uniques From Planner 3 LP",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Build uniques: Uniques From Planner 3 LP",
       "number": 9,
       "enabled": true
     },
@@ -3099,7 +3119,8 @@
         ]
       ],
       "label": "Build uniques: Uniques From Planner 2 LP",
-      "name": "NECRO - Build uniques: Uniques From Planner 2 LP",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Build uniques: Uniques From Planner 2 LP",
       "number": 10,
       "enabled": true
     },
@@ -3116,7 +3137,8 @@
         ]
       ],
       "label": "Build uniques: Uniques From Planner 1 LP - Turtle Rule",
-      "name": "NECRO - Build uniques: Uniques From Planner 1 LP - Turtle Rule",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Build uniques: Uniques From Planner 1 LP - Turtle Rule",
       "number": 11,
       "enabled": true
     },
@@ -3133,7 +3155,8 @@
         ]
       ],
       "label": "Build uniques: Uniques & Sets From Planner",
-      "name": "NECRO - Build uniques: Uniques & Sets From Planner",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Build uniques: Uniques & Sets From Planner",
       "number": 12,
       "enabled": true
     },
@@ -3144,7 +3167,8 @@
       "owners": [],
       "source_rules": [],
       "number": 13,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 12,
@@ -3153,7 +3177,8 @@
       "owners": [],
       "source_rules": [],
       "number": 14,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 13,
@@ -3162,7 +3187,8 @@
       "owners": [],
       "source_rules": [],
       "number": 15,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 14,
@@ -3171,7 +3197,8 @@
       "owners": [],
       "source_rules": [],
       "number": 16,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 15,
@@ -3180,7 +3207,8 @@
       "owners": [],
       "source_rules": [],
       "number": 17,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 16,
@@ -3200,7 +3228,8 @@
         ]
       ],
       "label": "Unique Idols",
-      "name": "SHARED - Unique Idols",
+      "display_role": "MAIN",
+      "name": "MAIN - Unique Idols",
       "number": 18,
       "enabled": true
     },
@@ -3211,7 +3240,8 @@
       "owners": [],
       "source_rules": [],
       "number": 19,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 19,
@@ -3220,7 +3250,8 @@
       "owners": [],
       "source_rules": [],
       "number": 20,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 20,
@@ -3229,7 +3260,8 @@
       "owners": [],
       "source_rules": [],
       "number": 21,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 21,
@@ -3238,7 +3270,8 @@
       "owners": [],
       "source_rules": [],
       "number": 22,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 22,
@@ -3247,7 +3280,8 @@
       "owners": [],
       "source_rules": [],
       "number": 23,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 23,
@@ -3256,7 +3290,8 @@
       "owners": [],
       "source_rules": [],
       "number": 24,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 24,
@@ -3265,7 +3300,8 @@
       "owners": [],
       "source_rules": [],
       "number": 25,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 29,
@@ -3274,7 +3310,8 @@
       "owners": [],
       "source_rules": [],
       "number": 26,
-      "enabled": false
+      "enabled": false,
+      "display_role": "COMMON"
     },
     {
       "template": 37,
@@ -3283,7 +3320,8 @@
       "owners": [],
       "source_rules": [],
       "number": 27,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 38,
@@ -3298,7 +3336,8 @@
         ]
       ],
       "label": "Tier 7 - One-Handed Axe",
-      "name": "FLAY - Tier 7 - One-Handed Axe",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 7 - One-Handed Axe",
       "number": 28,
       "enabled": true
     },
@@ -3315,7 +3354,8 @@
         ]
       ],
       "label": "Tier 7 - Two-Handed Axe",
-      "name": "NECRO - Tier 7 - Two-Handed Axe",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 7 - Two-Handed Axe",
       "number": 29,
       "enabled": true
     },
@@ -3332,7 +3372,8 @@
         ]
       ],
       "label": "Tier 7 - Dagger",
-      "name": "FLAY - Tier 7 - Dagger",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 7 - Dagger",
       "number": 30,
       "enabled": true
     },
@@ -3349,7 +3390,8 @@
         ]
       ],
       "label": "Tier 7 - Helmet",
-      "name": "FLAY - Tier 7 - Helmet",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 7 - Helmet",
       "number": 31,
       "enabled": true
     },
@@ -3366,7 +3408,8 @@
         ]
       ],
       "label": "Tier 7 - Helmet",
-      "name": "NECRO - Tier 7 - Helmet",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 7 - Helmet",
       "number": 32,
       "enabled": true
     },
@@ -3383,7 +3426,8 @@
         ]
       ],
       "label": "Tier 7 - Body Armor",
-      "name": "FLAY - Tier 7 - Body Armor",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 7 - Body Armor",
       "number": 33,
       "enabled": true
     },
@@ -3400,7 +3444,8 @@
         ]
       ],
       "label": "Tier 7 - Body Armor",
-      "name": "NECRO - Tier 7 - Body Armor",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 7 - Body Armor",
       "number": 34,
       "enabled": true
     },
@@ -3422,7 +3467,8 @@
         ]
       ],
       "label": "Tier 7 - Belt",
-      "name": "SHARED - Tier 7 - Belt",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 7 - Belt",
       "number": 35,
       "enabled": true
     },
@@ -3439,7 +3485,8 @@
         ]
       ],
       "label": "Tier 7 - Belt",
-      "name": "FLAY - Tier 7 - Belt",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 7 - Belt",
       "number": 36,
       "enabled": true
     },
@@ -3456,7 +3503,8 @@
         ]
       ],
       "label": "Tier 7 - Belt",
-      "name": "NECRO - Tier 7 - Belt",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 7 - Belt",
       "number": 37,
       "enabled": true
     },
@@ -3478,7 +3526,8 @@
         ]
       ],
       "label": "Tier 7 - Boots",
-      "name": "SHARED - Tier 7 - Boots",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 7 - Boots",
       "number": 38,
       "enabled": true
     },
@@ -3495,7 +3544,8 @@
         ]
       ],
       "label": "Tier 7 - Boots",
-      "name": "FLAY - Tier 7 - Boots",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 7 - Boots",
       "number": 39,
       "enabled": true
     },
@@ -3512,7 +3562,8 @@
         ]
       ],
       "label": "Tier 7 - Boots",
-      "name": "NECRO - Tier 7 - Boots",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 7 - Boots",
       "number": 40,
       "enabled": true
     },
@@ -3529,7 +3580,8 @@
         ]
       ],
       "label": "Tier 7 - Gloves",
-      "name": "FLAY - Tier 7 - Gloves",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 7 - Gloves",
       "number": 41,
       "enabled": true
     },
@@ -3546,7 +3598,8 @@
         ]
       ],
       "label": "Tier 7 - Gloves",
-      "name": "NECRO - Tier 7 - Gloves",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 7 - Gloves",
       "number": 42,
       "enabled": true
     },
@@ -3563,7 +3616,8 @@
         ]
       ],
       "label": "Tier 7 - Amulet",
-      "name": "FLAY - Tier 7 - Amulet",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 7 - Amulet",
       "number": 43,
       "enabled": true
     },
@@ -3580,7 +3634,8 @@
         ]
       ],
       "label": "Tier 7 - Amulet",
-      "name": "NECRO - Tier 7 - Amulet",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 7 - Amulet",
       "number": 44,
       "enabled": true
     },
@@ -3602,7 +3657,8 @@
         ]
       ],
       "label": "Tier 7 - Ring",
-      "name": "SHARED - Tier 7 - Ring",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 7 - Ring",
       "number": 45,
       "enabled": true
     },
@@ -3619,7 +3675,8 @@
         ]
       ],
       "label": "Tier 7 - Ring",
-      "name": "FLAY - Tier 7 - Ring",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 7 - Ring",
       "number": 46,
       "enabled": true
     },
@@ -3636,7 +3693,8 @@
         ]
       ],
       "label": "Tier 7 - Ring",
-      "name": "NECRO - Tier 7 - Ring",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 7 - Ring",
       "number": 47,
       "enabled": true
     },
@@ -3658,7 +3716,8 @@
         ]
       ],
       "label": "Tier 7 - Relic",
-      "name": "SHARED - Tier 7 - Relic",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 7 - Relic",
       "number": 48,
       "enabled": true
     },
@@ -3675,7 +3734,8 @@
         ]
       ],
       "label": "Tier 7 - Relic",
-      "name": "FLAY - Tier 7 - Relic",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 7 - Relic",
       "number": 49,
       "enabled": true
     },
@@ -3692,7 +3752,8 @@
         ]
       ],
       "label": "Tier 7 - Relic",
-      "name": "NECRO - Tier 7 - Relic",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 7 - Relic",
       "number": 50,
       "enabled": true
     },
@@ -3703,7 +3764,8 @@
       "owners": [],
       "source_rules": [],
       "number": 51,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 60,
@@ -3712,7 +3774,8 @@
       "owners": [],
       "source_rules": [],
       "number": 52,
-      "enabled": false
+      "enabled": false,
+      "display_role": "COMMON"
     },
     {
       "template": 61,
@@ -3727,7 +3790,8 @@
         ]
       ],
       "label": "Tier 7 - Class Specific Affixes",
-      "name": "NECRO - Tier 7 - Class Specific Affixes",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 7 - Class Specific Affixes",
       "number": 53,
       "enabled": true
     },
@@ -3744,7 +3808,8 @@
         ]
       ],
       "label": "Wanted Affix & Tier 7 (Rune of Havoc)",
-      "name": "FLAY - Wanted Affix & Tier 7 (Rune of Havoc)",
+      "display_role": "MAIN",
+      "name": "MAIN - Wanted Affix & Tier 7 (Rune of Havoc)",
       "number": 54,
       "enabled": true
     },
@@ -3761,7 +3826,8 @@
         ]
       ],
       "label": "Tier 7 Highly Craftable Items (52+ FP)",
-      "name": "FLAY - Tier 7 Highly Craftable Items (52+ FP)",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 7 Highly Craftable Items (52+ FP)",
       "number": 55,
       "enabled": true
     },
@@ -3783,7 +3849,8 @@
         ]
       ],
       "label": "Tier 7 Eternal Gauntlets",
-      "name": "SHARED - Tier 7 Eternal Gauntlets",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 7 Eternal Gauntlets",
       "number": 56,
       "enabled": true
     },
@@ -3800,7 +3867,8 @@
         ]
       ],
       "label": "Wanted Affix & Tier 7 (Rune of Havoc)",
-      "name": "NECRO - Wanted Affix & Tier 7 (Rune of Havoc)",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Wanted Affix & Tier 7 (Rune of Havoc)",
       "number": 57,
       "enabled": true
     },
@@ -3817,7 +3885,8 @@
         ]
       ],
       "label": "Wanted Experimental & Tier 7 (Rune of Havoc)",
-      "name": "NECRO - Wanted Experimental & Tier 7 (Rune of Havoc)",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Wanted Experimental & Tier 7 (Rune of Havoc)",
       "number": 58,
       "enabled": true
     },
@@ -3834,7 +3903,8 @@
         ]
       ],
       "label": "Tier 7 Highly Craftable Items (52+ FP)",
-      "name": "NECRO - Tier 7 Highly Craftable Items (52+ FP)",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 7 Highly Craftable Items (52+ FP)",
       "number": 59,
       "enabled": true
     },
@@ -3851,7 +3921,8 @@
         ]
       ],
       "label": "Tier 6 - Dagger",
-      "name": "FLAY - Tier 6 - Dagger",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 6 - Dagger",
       "number": 60,
       "enabled": true
     },
@@ -3868,7 +3939,8 @@
         ]
       ],
       "label": "Tier 6 - One-Handed Axe",
-      "name": "FLAY - Tier 6 - One-Handed Axe",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 6 - One-Handed Axe",
       "number": 61,
       "enabled": true
     },
@@ -3885,7 +3957,8 @@
         ]
       ],
       "label": "Tier 6 - Two-Handed Axe",
-      "name": "NECRO - Tier 6 - Two-Handed Axe",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 6 - Two-Handed Axe",
       "number": 62,
       "enabled": true
     },
@@ -3907,7 +3980,8 @@
         ]
       ],
       "label": "Tier 6 - Relic",
-      "name": "SHARED - Tier 6 - Relic",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 6 - Relic",
       "number": 63,
       "enabled": true
     },
@@ -3924,7 +3998,8 @@
         ]
       ],
       "label": "Tier 6 - Relic",
-      "name": "FLAY - Tier 6 - Relic",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 6 - Relic",
       "number": 64,
       "enabled": true
     },
@@ -3941,7 +4016,8 @@
         ]
       ],
       "label": "Tier 6 - Relic",
-      "name": "NECRO - Tier 6 - Relic",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 6 - Relic",
       "number": 65,
       "enabled": true
     },
@@ -3963,7 +4039,8 @@
         ]
       ],
       "label": "Tier 6 - Ring",
-      "name": "SHARED - Tier 6 - Ring",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 6 - Ring",
       "number": 66,
       "enabled": true
     },
@@ -3980,7 +4057,8 @@
         ]
       ],
       "label": "Tier 6 - Ring",
-      "name": "FLAY - Tier 6 - Ring",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 6 - Ring",
       "number": 67,
       "enabled": true
     },
@@ -3997,7 +4075,8 @@
         ]
       ],
       "label": "Tier 6 - Ring",
-      "name": "NECRO - Tier 6 - Ring",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 6 - Ring",
       "number": 68,
       "enabled": true
     },
@@ -4014,7 +4093,8 @@
         ]
       ],
       "label": "Tier 6 - Amulet",
-      "name": "FLAY - Tier 6 - Amulet",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 6 - Amulet",
       "number": 69,
       "enabled": true
     },
@@ -4031,7 +4111,8 @@
         ]
       ],
       "label": "Tier 6 - Amulet",
-      "name": "NECRO - Tier 6 - Amulet",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 6 - Amulet",
       "number": 70,
       "enabled": true
     },
@@ -4048,7 +4129,8 @@
         ]
       ],
       "label": "Tier 6 - Gloves",
-      "name": "FLAY - Tier 6 - Gloves",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 6 - Gloves",
       "number": 71,
       "enabled": true
     },
@@ -4065,7 +4147,8 @@
         ]
       ],
       "label": "Tier 6 - Gloves",
-      "name": "NECRO - Tier 6 - Gloves",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 6 - Gloves",
       "number": 72,
       "enabled": true
     },
@@ -4087,7 +4170,8 @@
         ]
       ],
       "label": "Tier 6 - Boots",
-      "name": "SHARED - Tier 6 - Boots",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 6 - Boots",
       "number": 73,
       "enabled": true
     },
@@ -4104,7 +4188,8 @@
         ]
       ],
       "label": "Tier 6 - Boots",
-      "name": "FLAY - Tier 6 - Boots",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 6 - Boots",
       "number": 74,
       "enabled": true
     },
@@ -4121,7 +4206,8 @@
         ]
       ],
       "label": "Tier 6 - Boots",
-      "name": "NECRO - Tier 6 - Boots",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 6 - Boots",
       "number": 75,
       "enabled": true
     },
@@ -4143,7 +4229,8 @@
         ]
       ],
       "label": "Tier 6 - Belt",
-      "name": "SHARED - Tier 6 - Belt",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 6 - Belt",
       "number": 76,
       "enabled": true
     },
@@ -4160,7 +4247,8 @@
         ]
       ],
       "label": "Tier 6 - Belt",
-      "name": "FLAY - Tier 6 - Belt",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 6 - Belt",
       "number": 77,
       "enabled": true
     },
@@ -4177,7 +4265,8 @@
         ]
       ],
       "label": "Tier 6 - Belt",
-      "name": "NECRO - Tier 6 - Belt",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 6 - Belt",
       "number": 78,
       "enabled": true
     },
@@ -4194,7 +4283,8 @@
         ]
       ],
       "label": "Tier 6 - Body Armor",
-      "name": "FLAY - Tier 6 - Body Armor",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 6 - Body Armor",
       "number": 79,
       "enabled": true
     },
@@ -4211,7 +4301,8 @@
         ]
       ],
       "label": "Tier 6 - Body Armor",
-      "name": "NECRO - Tier 6 - Body Armor",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 6 - Body Armor",
       "number": 80,
       "enabled": true
     },
@@ -4228,7 +4319,8 @@
         ]
       ],
       "label": "Tier 6 - Helmet",
-      "name": "FLAY - Tier 6 - Helmet",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 6 - Helmet",
       "number": 81,
       "enabled": true
     },
@@ -4245,20 +4337,22 @@
         ]
       ],
       "label": "Tier 6 - Helmet",
-      "name": "NECRO - Tier 6 - Helmet",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 6 - Helmet",
       "number": 82,
       "enabled": true
     },
     {
       "template": 68,
       "category": "experimental_exalted",
-      "name": "NECRO - Exalted items with wanted experimentals",
+      "name": "SECONDARY - Exalted items with wanted experimentals",
       "owners": [
         "NECRO"
       ],
       "source_rules": [],
       "number": 83,
-      "enabled": true
+      "enabled": true,
+      "display_role": "SECONDARY"
     },
     {
       "template": 69,
@@ -4273,7 +4367,8 @@
         ]
       ],
       "label": "Wanted Experimental Affixes",
-      "name": "NECRO - Wanted Experimental Affixes",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Wanted Experimental Affixes",
       "number": 84,
       "enabled": true
     },
@@ -4284,7 +4379,8 @@
       "owners": [],
       "source_rules": [],
       "number": 85,
-      "enabled": false
+      "enabled": false,
+      "display_role": "COMMON"
     },
     {
       "template": 73,
@@ -4293,7 +4389,8 @@
       "owners": [],
       "source_rules": [],
       "number": 86,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 74,
@@ -4302,7 +4399,8 @@
       "owners": [],
       "source_rules": [],
       "number": 87,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 75,
@@ -4317,7 +4415,8 @@
         ]
       ],
       "label": "Wanted corrupted affix (any tier)",
-      "name": "FLAY - Wanted corrupted affix (any tier)",
+      "display_role": "MAIN",
+      "name": "MAIN - Wanted corrupted affix (any tier)",
       "number": 88,
       "enabled": true
     },
@@ -4334,7 +4433,8 @@
         ]
       ],
       "label": "Wanted corrupted affix (any tier)",
-      "name": "FLAY - Wanted corrupted affix (any tier)",
+      "display_role": "MAIN",
+      "name": "MAIN - Wanted corrupted affix (any tier)",
       "number": 89,
       "enabled": true
     },
@@ -4351,7 +4451,8 @@
         ]
       ],
       "label": "Wanted corrupted affix (any tier)",
-      "name": "FLAY - Wanted corrupted affix (any tier)",
+      "display_role": "MAIN",
+      "name": "MAIN - Wanted corrupted affix (any tier)",
       "number": 90,
       "enabled": true
     },
@@ -4368,7 +4469,8 @@
         ]
       ],
       "label": "Wanted corrupted affix (any tier)",
-      "name": "FLAY - Wanted corrupted affix (any tier)",
+      "display_role": "MAIN",
+      "name": "MAIN - Wanted corrupted affix (any tier)",
       "number": 91,
       "enabled": true
     },
@@ -4385,7 +4487,8 @@
         ]
       ],
       "label": "Wanted corrupted affix (any tier)",
-      "name": "FLAY - Wanted corrupted affix (any tier)",
+      "display_role": "MAIN",
+      "name": "MAIN - Wanted corrupted affix (any tier)",
       "number": 92,
       "enabled": true
     },
@@ -4402,7 +4505,8 @@
         ]
       ],
       "label": "Wanted corrupted affix (any tier)",
-      "name": "FLAY - Wanted corrupted affix (any tier)",
+      "display_role": "MAIN",
+      "name": "MAIN - Wanted corrupted affix (any tier)",
       "number": 93,
       "enabled": true
     },
@@ -4419,7 +4523,8 @@
         ]
       ],
       "label": "Wanted corrupted affix (any tier)",
-      "name": "FLAY - Wanted corrupted affix (any tier)",
+      "display_role": "MAIN",
+      "name": "MAIN - Wanted corrupted affix (any tier)",
       "number": 94,
       "enabled": true
     },
@@ -4436,7 +4541,8 @@
         ]
       ],
       "label": "Wanted corrupted affix (any tier)",
-      "name": "FLAY - Wanted corrupted affix (any tier)",
+      "display_role": "MAIN",
+      "name": "MAIN - Wanted corrupted affix (any tier)",
       "number": 95,
       "enabled": true
     },
@@ -4453,7 +4559,8 @@
         ]
       ],
       "label": "Wanted corrupted affix (any tier)",
-      "name": "NECRO - Wanted corrupted affix (any tier)",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Wanted corrupted affix (any tier)",
       "number": 96,
       "enabled": true
     },
@@ -4470,7 +4577,8 @@
         ]
       ],
       "label": "Wanted corrupted affix (any tier)",
-      "name": "NECRO - Wanted corrupted affix (any tier)",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Wanted corrupted affix (any tier)",
       "number": 97,
       "enabled": true
     },
@@ -4487,7 +4595,8 @@
         ]
       ],
       "label": "Wanted corrupted affix (any tier)",
-      "name": "NECRO - Wanted corrupted affix (any tier)",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Wanted corrupted affix (any tier)",
       "number": 98,
       "enabled": true
     },
@@ -4504,7 +4613,8 @@
         ]
       ],
       "label": "Wanted corrupted affix (any tier)",
-      "name": "NECRO - Wanted corrupted affix (any tier)",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Wanted corrupted affix (any tier)",
       "number": 99,
       "enabled": true
     },
@@ -4521,7 +4631,8 @@
         ]
       ],
       "label": "Wanted corrupted affix (any tier)",
-      "name": "NECRO - Wanted corrupted affix (any tier)",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Wanted corrupted affix (any tier)",
       "number": 100,
       "enabled": true
     },
@@ -4538,7 +4649,8 @@
         ]
       ],
       "label": "Wanted corrupted affix (any tier)",
-      "name": "NECRO - Wanted corrupted affix (any tier)",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Wanted corrupted affix (any tier)",
       "number": 101,
       "enabled": true
     },
@@ -4555,7 +4667,8 @@
         ]
       ],
       "label": "Wanted corrupted affix (any tier)",
-      "name": "NECRO - Wanted corrupted affix (any tier)",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Wanted corrupted affix (any tier)",
       "number": 102,
       "enabled": true
     },
@@ -4566,7 +4679,8 @@
       "owners": [],
       "source_rules": [],
       "number": 103,
-      "enabled": false
+      "enabled": false,
+      "display_role": "COMMON"
     },
     {
       "template": 82,
@@ -4581,7 +4695,8 @@
         ]
       ],
       "label": "Rare Strict Two-Handed Axe",
-      "name": "NECRO - Rare Strict Two-Handed Axe",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Rare Strict Two-Handed Axe",
       "number": 104,
       "enabled": true
     },
@@ -4598,7 +4713,8 @@
         ]
       ],
       "label": "Rare Strict Helmet",
-      "name": "NECRO - Rare Strict Helmet",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Rare Strict Helmet",
       "number": 105,
       "enabled": true
     },
@@ -4615,7 +4731,8 @@
         ]
       ],
       "label": "Rare Strict Boots",
-      "name": "NECRO - Rare Strict Boots",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Rare Strict Boots",
       "number": 106,
       "enabled": true
     },
@@ -4632,7 +4749,8 @@
         ]
       ],
       "label": "Rare Strict Gloves",
-      "name": "NECRO - Rare Strict Gloves",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Rare Strict Gloves",
       "number": 107,
       "enabled": true
     },
@@ -4649,7 +4767,8 @@
         ]
       ],
       "label": "Rare Strict Ring",
-      "name": "NECRO - Rare Strict Ring",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Rare Strict Ring",
       "number": 108,
       "enabled": true
     },
@@ -4666,7 +4785,8 @@
         ]
       ],
       "label": "Shatter / Removal (Edit Affixes)",
-      "name": "FLAY - Shatter / Removal (Edit Affixes)",
+      "display_role": "MAIN",
+      "name": "MAIN - Shatter / Removal (Edit Affixes)",
       "number": 109,
       "enabled": true
     },
@@ -4683,7 +4803,8 @@
         ]
       ],
       "label": "Shatter / Removal (Edit Affixes)",
-      "name": "NECRO - Shatter / Removal (Edit Affixes)",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Shatter / Removal (Edit Affixes)",
       "number": 110,
       "enabled": true
     },
@@ -4700,7 +4821,8 @@
         ]
       ],
       "label": "Shatter / Removal (Class Specific Affixes)",
-      "name": "NECRO - Shatter / Removal (Class Specific Affixes)",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Shatter / Removal (Class Specific Affixes)",
       "number": 111,
       "enabled": true
     },
@@ -4711,7 +4833,8 @@
       "owners": [],
       "source_rules": [],
       "number": 112,
-      "enabled": false
+      "enabled": false,
+      "display_role": "COMMON"
     },
     {
       "template": 86,
@@ -4720,7 +4843,8 @@
       "owners": [],
       "source_rules": [],
       "number": 113,
-      "enabled": false
+      "enabled": false,
+      "display_role": "COMMON"
     },
     {
       "template": 87,
@@ -4729,7 +4853,8 @@
       "owners": [],
       "source_rules": [],
       "number": 114,
-      "enabled": false
+      "enabled": false,
+      "display_role": "COMMON"
     },
     {
       "template": 88,
@@ -4738,7 +4863,8 @@
       "owners": [],
       "source_rules": [],
       "number": 115,
-      "enabled": false
+      "enabled": false,
+      "display_role": "COMMON"
     },
     {
       "template": 89,
@@ -4747,7 +4873,8 @@
       "owners": [],
       "source_rules": [],
       "number": 116,
-      "enabled": false
+      "enabled": false,
+      "display_role": "COMMON"
     },
     {
       "template": 90,
@@ -4767,7 +4894,8 @@
         ]
       ],
       "label": "Shatter / Removal - Increased Health (60)",
-      "name": "SHARED - Shatter / Removal - Increased Health (60)",
+      "display_role": "MAIN",
+      "name": "MAIN - Shatter / Removal - Increased Health (60)",
       "number": 117,
       "enabled": true
     },
@@ -4789,7 +4917,8 @@
         ]
       ],
       "label": "Shatter / Removal - Increased Health T3+ (80)",
-      "name": "SHARED - Shatter / Removal - Increased Health T3+ (80)",
+      "display_role": "MAIN",
+      "name": "MAIN - Shatter / Removal - Increased Health T3+ (80)",
       "number": 118,
       "enabled": true
     },
@@ -4809,7 +4938,8 @@
           854
         ]
       ],
-      "name": "FLAY - Planner idol combination",
+      "display_role": "MAIN",
+      "name": "MAIN - Planner idol combination",
       "number": 119,
       "enabled": true
     },
@@ -4829,7 +4959,8 @@
           886
         ]
       ],
-      "name": "FLAY - Planner idol combination",
+      "display_role": "MAIN",
+      "name": "MAIN - Planner idol combination",
       "number": 120,
       "enabled": true
     },
@@ -4850,7 +4981,8 @@
           941
         ]
       ],
-      "name": "NECRO - Planner idol combination",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Planner idol combination",
       "number": 121,
       "enabled": true
     },
@@ -4870,7 +5002,8 @@
           862
         ]
       ],
-      "name": "NECRO - Planner idol combination",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Planner idol combination",
       "number": 122,
       "enabled": true
     },
@@ -4890,7 +5023,8 @@
           851
         ]
       ],
-      "name": "NECRO - Planner idol combination",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Planner idol combination",
       "number": 123,
       "enabled": true
     },
@@ -4910,7 +5044,8 @@
           852
         ]
       ],
-      "name": "NECRO - Planner idol combination",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Planner idol combination",
       "number": 124,
       "enabled": true
     },
@@ -4930,7 +5065,8 @@
           870
         ]
       ],
-      "name": "NECRO - Planner idol combination",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Planner idol combination",
       "number": 125,
       "enabled": true
     },
@@ -4950,7 +5086,8 @@
           855
         ]
       ],
-      "name": "NECRO - Planner idol combination",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Planner idol combination",
       "number": 126,
       "enabled": true
     },
@@ -4962,7 +5099,8 @@
       ],
       "source_rules": [],
       "label": "Ignite + Frailty fallback",
-      "name": "FLAY - Ignite + Frailty fallback",
+      "display_role": "MAIN",
+      "name": "MAIN - Ignite + Frailty fallback",
       "number": 127,
       "enabled": true
     },
@@ -4979,7 +5117,8 @@
         ]
       ],
       "label": "Strict - Minor Idols",
-      "name": "FLAY - Strict - Minor Idols",
+      "display_role": "MAIN",
+      "name": "MAIN - Strict - Minor Idols",
       "number": 128,
       "enabled": true
     },
@@ -4996,7 +5135,8 @@
         ]
       ],
       "label": "Strict - Stout Idols",
-      "name": "FLAY - Strict - Stout Idols",
+      "display_role": "MAIN",
+      "name": "MAIN - Strict - Stout Idols",
       "number": 129,
       "enabled": true
     },
@@ -5013,7 +5153,8 @@
         ]
       ],
       "label": "Strict - Minor Idols",
-      "name": "NECRO - Strict - Minor Idols",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Strict - Minor Idols",
       "number": 130,
       "enabled": true
     },
@@ -5030,7 +5171,8 @@
         ]
       ],
       "label": "Strict - Humble Idols",
-      "name": "NECRO - Strict - Humble Idols",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Strict - Humble Idols",
       "number": 131,
       "enabled": true
     },
@@ -5047,7 +5189,8 @@
         ]
       ],
       "label": "Strict - Large Idols",
-      "name": "NECRO - Strict - Large Idols",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Strict - Large Idols",
       "number": 132,
       "enabled": true
     },
@@ -5064,7 +5207,8 @@
         ]
       ],
       "label": "Strict - Large Omen Idols",
-      "name": "NECRO - Strict - Large Omen Idols",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Strict - Large Omen Idols",
       "number": 133,
       "enabled": true
     },
@@ -5081,7 +5225,8 @@
         ]
       ],
       "label": "Suffix Effect Idol Altar (Tier 7 Equivalent)",
-      "name": "FLAY - Suffix Effect Idol Altar (Tier 7 Equivalent)",
+      "display_role": "MAIN",
+      "name": "MAIN - Suffix Effect Idol Altar (Tier 7 Equivalent)",
       "number": 134,
       "enabled": true
     },
@@ -5098,7 +5243,8 @@
         ]
       ],
       "label": "Prefix Effect Idol Altar (Tier 7 Equivalent)",
-      "name": "FLAY - Prefix Effect Idol Altar (Tier 7 Equivalent)",
+      "display_role": "MAIN",
+      "name": "MAIN - Prefix Effect Idol Altar (Tier 7 Equivalent)",
       "number": 135,
       "enabled": true
     },
@@ -5120,7 +5266,8 @@
         ]
       ],
       "label": "Generic Good Altars (Double Exalted)",
-      "name": "SHARED - Generic Good Altars (Double Exalted)",
+      "display_role": "MAIN",
+      "name": "MAIN - Generic Good Altars (Double Exalted)",
       "number": 136,
       "enabled": true
     },
@@ -5137,7 +5284,8 @@
         ]
       ],
       "label": "Tier 7 Strict Idol Altar",
-      "name": "FLAY - Tier 7 Strict Idol Altar",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 7 Strict Idol Altar",
       "number": 137,
       "enabled": true
     },
@@ -5154,7 +5302,8 @@
         ]
       ],
       "label": "Suffix Effect Idol Altar (Tier 7 Equivalent)",
-      "name": "NECRO - Suffix Effect Idol Altar (Tier 7 Equivalent)",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Suffix Effect Idol Altar (Tier 7 Equivalent)",
       "number": 138,
       "enabled": true
     },
@@ -5171,7 +5320,8 @@
         ]
       ],
       "label": "Prefix Effect Idol Altar (Tier 7 Equivalent)",
-      "name": "NECRO - Prefix Effect Idol Altar (Tier 7 Equivalent)",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Prefix Effect Idol Altar (Tier 7 Equivalent)",
       "number": 139,
       "enabled": true
     },
@@ -5188,7 +5338,8 @@
         ]
       ],
       "label": "Tier 7 Strict Idol Altar",
-      "name": "NECRO - Tier 7 Strict Idol Altar",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 7 Strict Idol Altar",
       "number": 140,
       "enabled": true
     },
@@ -5210,7 +5361,8 @@
         ]
       ],
       "label": "Generic Good Altars (Min. Tier 6)",
-      "name": "SHARED - Generic Good Altars (Min. Tier 6)",
+      "display_role": "MAIN",
+      "name": "MAIN - Generic Good Altars (Min. Tier 6)",
       "number": 141,
       "enabled": true
     },
@@ -5227,7 +5379,8 @@
         ]
       ],
       "label": "Suffix Effect Idol Altar (Tier 6 Equivalent)",
-      "name": "FLAY - Suffix Effect Idol Altar (Tier 6 Equivalent)",
+      "display_role": "MAIN",
+      "name": "MAIN - Suffix Effect Idol Altar (Tier 6 Equivalent)",
       "number": 142,
       "enabled": true
     },
@@ -5244,7 +5397,8 @@
         ]
       ],
       "label": "Prefix Effect Idol Altar (Tier 6 Equivalent)",
-      "name": "FLAY - Prefix Effect Idol Altar (Tier 6 Equivalent)",
+      "display_role": "MAIN",
+      "name": "MAIN - Prefix Effect Idol Altar (Tier 6 Equivalent)",
       "number": 143,
       "enabled": true
     },
@@ -5261,7 +5415,8 @@
         ]
       ],
       "label": "Tier 6 Strict Idol Altar",
-      "name": "FLAY - Tier 6 Strict Idol Altar",
+      "display_role": "MAIN",
+      "name": "MAIN - Tier 6 Strict Idol Altar",
       "number": 144,
       "enabled": true
     },
@@ -5278,7 +5433,8 @@
         ]
       ],
       "label": "Suffix Effect Idol Altar (Tier 6 Equivalent)",
-      "name": "NECRO - Suffix Effect Idol Altar (Tier 6 Equivalent)",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Suffix Effect Idol Altar (Tier 6 Equivalent)",
       "number": 145,
       "enabled": true
     },
@@ -5295,7 +5451,8 @@
         ]
       ],
       "label": "Prefix Effect Idol Altar (Tier 6 Equivalent)",
-      "name": "NECRO - Prefix Effect Idol Altar (Tier 6 Equivalent)",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Prefix Effect Idol Altar (Tier 6 Equivalent)",
       "number": 146,
       "enabled": true
     },
@@ -5312,7 +5469,8 @@
         ]
       ],
       "label": "Tier 6 Strict Idol Altar",
-      "name": "NECRO - Tier 6 Strict Idol Altar",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - Tier 6 Strict Idol Altar",
       "number": 147,
       "enabled": true
     },
@@ -5324,7 +5482,8 @@
       ],
       "source_rules": [],
       "label": "Guide armor altar base (inspect manually)",
-      "name": "FLAY - Guide armor altar base (inspect manually)",
+      "display_role": "MAIN",
+      "name": "MAIN - Guide armor altar base (inspect manually)",
       "number": 148,
       "enabled": true
     },
@@ -5341,7 +5500,8 @@
         ]
       ],
       "label": "1 Affix - Minor Idols",
-      "name": "FLAY - 1 Affix - Minor Idols",
+      "display_role": "MAIN",
+      "name": "MAIN - 1 Affix - Minor Idols",
       "number": 149,
       "enabled": true
     },
@@ -5358,7 +5518,8 @@
         ]
       ],
       "label": "1 Affix - Stout Idols",
-      "name": "FLAY - 1 Affix - Stout Idols",
+      "display_role": "MAIN",
+      "name": "MAIN - 1 Affix - Stout Idols",
       "number": 150,
       "enabled": true
     },
@@ -5375,7 +5536,8 @@
         ]
       ],
       "label": "1 Affix - Minor Idols",
-      "name": "NECRO - 1 Affix - Minor Idols",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - 1 Affix - Minor Idols",
       "number": 151,
       "enabled": true
     },
@@ -5392,7 +5554,8 @@
         ]
       ],
       "label": "1 Affix - Humble Idols",
-      "name": "NECRO - 1 Affix - Humble Idols",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - 1 Affix - Humble Idols",
       "number": 152,
       "enabled": true
     },
@@ -5409,7 +5572,8 @@
         ]
       ],
       "label": "1 Affix - Large Idols",
-      "name": "NECRO - 1 Affix - Large Idols",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - 1 Affix - Large Idols",
       "number": 153,
       "enabled": true
     },
@@ -5426,7 +5590,8 @@
         ]
       ],
       "label": "1 Affix - Large Omen Idols",
-      "name": "NECRO - 1 Affix - Large Omen Idols",
+      "display_role": "SECONDARY",
+      "name": "SECONDARY - 1 Affix - Large Omen Idols",
       "number": 154,
       "enabled": true
     },
@@ -5438,7 +5603,8 @@
       ],
       "source_rules": [],
       "label": "Optional critical avoidance corruption",
-      "name": "FLAY - Optional critical avoidance corruption",
+      "display_role": "MAIN",
+      "name": "MAIN - Optional critical avoidance corruption",
       "number": 155,
       "enabled": true
     },
@@ -5460,7 +5626,8 @@
         ]
       ],
       "label": "Strict - Weaver Idols",
-      "name": "SHARED - Strict - Weaver Idols",
+      "display_role": "MAIN",
+      "name": "MAIN - Strict - Weaver Idols",
       "number": 156,
       "enabled": true
     },
@@ -5482,7 +5649,8 @@
         ]
       ],
       "label": "Reflect Idols (Alt Leveling)",
-      "name": "SHARED - Reflect Idols (Alt Leveling)",
+      "display_role": "MAIN",
+      "name": "MAIN - Reflect Idols (Alt Leveling)",
       "number": 157,
       "enabled": true
     },
@@ -5493,7 +5661,8 @@
       "owners": [],
       "source_rules": [],
       "number": 158,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 135,
@@ -5502,7 +5671,8 @@
       "owners": [],
       "source_rules": [],
       "number": 159,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 136,
@@ -5511,7 +5681,8 @@
       "owners": [],
       "source_rules": [],
       "number": 160,
-      "enabled": false
+      "enabled": false,
+      "display_role": "COMMON"
     },
     {
       "template": 137,
@@ -5520,7 +5691,8 @@
       "owners": [],
       "source_rules": [],
       "number": 161,
-      "enabled": false
+      "enabled": false,
+      "display_role": "COMMON"
     },
     {
       "template": 138,
@@ -5529,7 +5701,8 @@
       "owners": [],
       "source_rules": [],
       "number": 162,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 139,
@@ -5538,7 +5711,8 @@
       "owners": [],
       "source_rules": [],
       "number": 163,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 140,
@@ -5547,7 +5721,8 @@
       "owners": [],
       "source_rules": [],
       "number": 164,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 141,
@@ -5556,7 +5731,8 @@
       "owners": [],
       "source_rules": [],
       "number": 165,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 142,
@@ -5565,7 +5741,8 @@
       "owners": [],
       "source_rules": [],
       "number": 166,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 143,
@@ -5574,7 +5751,8 @@
       "owners": [],
       "source_rules": [],
       "number": 167,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 144,
@@ -5583,7 +5761,8 @@
       "owners": [],
       "source_rules": [],
       "number": 168,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 145,
@@ -5592,7 +5771,8 @@
       "owners": [],
       "source_rules": [],
       "number": 169,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 146,
@@ -5601,7 +5781,8 @@
       "owners": [],
       "source_rules": [],
       "number": 170,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 147,
@@ -5610,7 +5791,8 @@
       "owners": [],
       "source_rules": [],
       "number": 171,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 148,
@@ -5619,7 +5801,8 @@
       "owners": [],
       "source_rules": [],
       "number": 172,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 149,
@@ -5628,7 +5811,8 @@
       "owners": [],
       "source_rules": [],
       "number": 173,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 150,
@@ -5637,7 +5821,8 @@
       "owners": [],
       "source_rules": [],
       "number": 174,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 151,
@@ -5646,7 +5831,8 @@
       "owners": [],
       "source_rules": [],
       "number": 175,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 152,
@@ -5655,7 +5841,8 @@
       "owners": [],
       "source_rules": [],
       "number": 176,
-      "enabled": false
+      "enabled": false,
+      "display_role": "COMMON"
     },
     {
       "template": 153,
@@ -5664,7 +5851,8 @@
       "owners": [],
       "source_rules": [],
       "number": 177,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 154,
@@ -5673,7 +5861,8 @@
       "owners": [],
       "source_rules": [],
       "number": 178,
-      "enabled": false
+      "enabled": false,
+      "display_role": "COMMON"
     },
     {
       "template": 155,
@@ -5682,7 +5871,8 @@
       "owners": [],
       "source_rules": [],
       "number": 179,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 156,
@@ -5691,7 +5881,8 @@
       "owners": [],
       "source_rules": [],
       "number": 180,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 157,
@@ -5700,7 +5891,8 @@
       "owners": [],
       "source_rules": [],
       "number": 181,
-      "enabled": false
+      "enabled": false,
+      "display_role": "COMMON"
     },
     {
       "template": 158,
@@ -5709,7 +5901,8 @@
       "owners": [],
       "source_rules": [],
       "number": 182,
-      "enabled": false
+      "enabled": false,
+      "display_role": "COMMON"
     },
     {
       "template": 159,
@@ -5718,7 +5911,8 @@
       "owners": [],
       "source_rules": [],
       "number": 183,
-      "enabled": false
+      "enabled": false,
+      "display_role": "COMMON"
     },
     {
       "template": 160,
@@ -5727,7 +5921,8 @@
       "owners": [],
       "source_rules": [],
       "number": 184,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 161,
@@ -5736,7 +5931,8 @@
       "owners": [],
       "source_rules": [],
       "number": 185,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 162,
@@ -5745,7 +5941,8 @@
       "owners": [],
       "source_rules": [],
       "number": 186,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     },
     {
       "template": 163,
@@ -5754,7 +5951,8 @@
       "owners": [],
       "source_rules": [],
       "number": 187,
-      "enabled": true
+      "enabled": true,
+      "display_role": "COMMON"
     }
   ]
 }

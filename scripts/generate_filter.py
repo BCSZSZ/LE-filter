@@ -11,7 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 XSI = "{http://www.w3.org/2001/XMLSchema-instance}"
 ET.register_namespace("i", XSI[1:-1])
 BUILD_NAMES = {"flay-mana-lich": "FLAY", "skeleton-necromancer": "NECRO"}
-COLORS = {"FLAY": 8, "NECRO": 12, "SHARED": 15}
+PRIMARY_BUILD = "flay-mana-lich"
+COLORS = {"MAIN": 8, "SECONDARY": 12}
 T7_SLOTS = {"ONE_HANDED_AXE": 38, "TWO_HANDED_AXE": 38,
             "ONE_HANDED_DAGGER": 39, "HELMET": 40, "BODY_ARMOR": 41,
             "BELT": 42, "BOOTS": 43, "GLOVES": 44, "AMULET": 45,
@@ -55,6 +56,10 @@ def signature(rule):
     return repr(tree(rule.find("conditions")))
 
 
+def display_role(owners):
+    return "MAIN" if len(owners) > 1 or BUILD_NAMES[PRIMARY_BUILD] in owners else "SECONDARY"
+
+
 def generate():
     manifest = read_json("sources/manifest.json")
     strict_manifest = read_json("sources/builds/maxroll-strict-manifest.json")
@@ -68,6 +73,7 @@ def generate():
     additions = defaultdict(list)
     report = {"game_execution_tested": False, "output": OUTPUT,
               "rule_limit": 200, "baseline_source": manifest["baseline"],
+              "display": {"main_build": PRIMARY_BUILD, "secondary_builds": [s for s in BUILD_NAMES if s != PRIMARY_BUILD], "shared_uses_main": True, "colors": COLORS},
               "sources": {}, "baseline": [], "strict": source_report,
               "supplements": {path: hashlib.sha256((ROOT / path).read_bytes()).hexdigest() for path in ["sources/builds/flay-mana-lich-guide.json", "sources/builds/transfer-reference.json"]}}
 
@@ -256,9 +262,10 @@ def generate():
             ET.SubElement(t.find("type"), "EquipmentType").text = name
     experiment = next(r for r in source_rules["skeleton-necromancer"] if r.findtext("nameOverride") == "Wanted Experimental Affixes")
     replace_ints(condition(base[68], "AffixCondition"), "affixes", ints(condition(experiment, "AffixCondition"), "affixes/int"))
-    base[68].find("nameOverride").text = "NECRO - Exalted items with wanted experimentals"
+    experimental_role = display_role(["NECRO"])
+    base[68].find("nameOverride").text = experimental_role + " - Exalted items with wanted experimentals"
     base[68].find("recolor").text = "true"
-    base[68].find("color").text = "12"
+    base[68].find("color").text = str(COLORS[experimental_role])
     for n in [15, 16, 48]:
         base[n].find("nameOverride").text = {15: "Raxx rare unique protection", 16: "Raxx selected sets", 48: "Double exalts on either build's equipment types"}[n]
     for n, reason in disabled.items():
@@ -289,9 +296,10 @@ def generate():
             else:
                 dedup[key] = (r, row, loud)
         for r, row, loud in dedup.values():
-            owner = row["owners"][0] if len(row["owners"]) == 1 else "SHARED"
-            row["name"] = owner + " - " + row["label"]
-            for field, value in {"type": "SHOW", "isEnabled": "true", "nameOverride": row["name"], "recolor": "true", "color": str(COLORS[owner]), "emphasized": str(loud).lower(), "SoundId": "6" if loud else "1"}.items():
+            role = display_role(row["owners"])
+            row["display_role"] = role
+            row["name"] = role + " - " + row["label"]
+            for field, value in {"type": "SHOW", "isEnabled": "true", "nameOverride": row["name"], "recolor": "true", "color": str(COLORS[role]), "emphasized": str(loud).lower(), "SoundId": "6" if loud else "1"}.items():
                 r.find(field).text = value
             if not loud:
                 r.find("BeamOverride").text = "false"
@@ -308,6 +316,7 @@ def generate():
     for i, (r, row) in enumerate(zip(output, output_rows)):
         r.find("Order").text = str(i)
         row.update(number=i + 1, enabled=r.findtext("isEnabled") == "true")
+        row["display_role"] = display_role(row["owners"]) if row["owners"] else "COMMON"
     for row in source_report:
         row["output_numbers"] = [r["number"] for r in output_rows if (row["build"], row["xml_position"]) in r["source_rules"]]
         if row["disposition"] == "planner_whitelist_rebuilt":
@@ -316,7 +325,8 @@ def generate():
     root.find("rules").clear()
     root.find("rules").extend(reversed(output))
     root.find("name").text = "LE S5 - Flay + Skeleton - Raxx x Strict"
-    root.find("description").text = "CoF endgame collection. Equal build priority. Pink=Flay, Blue=Skeleton, Mint=shared. See COMBINED_FILTER_GUIDE."
+    secondary = ", ".join(label for slug, label in BUILD_NAMES.items() if slug != PRIMARY_BUILD)
+    root.find("description").text = f"CoF endgame collection. Main={BUILD_NAMES[PRIMARY_BUILD]} (pink), secondary={secondary} (blue). Shared uses main. See RULES_REVIEW."
     ET.indent(root, space="  ")
     data = ET.tostring(root, encoding="utf-8", xml_declaration=True) + b"\n"
     (ROOT / "filters").mkdir(exist_ok=True)

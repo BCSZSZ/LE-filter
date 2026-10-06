@@ -84,6 +84,16 @@ def verify():
     assert rules[-1].findtext("type") == "HIDE" and not list(rules[-1].find("conditions"))
     assert [r["template"] for r in report["output_rules"]] == sorted(r["template"] for r in report["output_rules"])
     assert sum(r["disposition"] == "player_instruction_removed" for r in report["baseline"]) == 56
+    primary_owner = {"flay-mana-lich": "FLAY", "skeleton-necromancer": "NECRO"}[report["display"]["main_build"]]
+    for r, row in zip(rules, report["output_rules"]):
+        if not row["owners"]:
+            continue
+        shared = len(row["owners"]) > 1
+        expected = "MAIN" if shared or primary_owner in row["owners"] else "SECONDARY"
+        assert row["display_role"] == expected
+        assert r.findtext("color") == ("8" if expected == "MAIN" else "12")
+        assert r.findtext("recolor") == "true"
+        assert r.findtext("nameOverride").startswith(expected + " - ")
     for r in rules:
         if r.findtext("isEnabled") != "true":
             continue

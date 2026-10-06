@@ -1,12 +1,14 @@
 # 后续工作 memo
 
-更新时间：2026-10-06，日本时间。阅读顺序：README → FILTER_GUIDE → 本memo；具体原文查analysis/rules.json和sources/manifest.json。
+更新时间：2026-10-06，日本时间。当前成品阅读顺序：README → RULES_REVIEW → COMBINED_FILTER_GUIDE → 本memo；原始基底查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
 ## 当前交付：Strict填充基底已程序化
 
 - 用户最新明确：Strict由Maxroll攻略导出，重点是建立Strict→Raxx规则。本次先完成双BD成品与转移方法；不是继续停在资料充分性评估。
-- filters/Flay-Mana-Lich+Skeleton-Necromancer.xml：187条、171启用、16明确关闭；25种目标暗金，颜色FLAY粉8／NECRO蓝12／SHARED薄荷15。唯一启用HIDE为G187；不启用职业隐藏，收集是显示条件并集。
-- 运行python -X utf8 scripts/generate_filter.py，再运行scripts/verify_generated_filter.py。依赖标准库与已提交资料，不需要.cache、网络或用户Downloads。成品XML、transfer-report与GENERATED_RULE_INDEX自动生成，禁止只手改输出。
+- filters/Flay-Mana-Lich+Skeleton-Necromancer.xml：187条、171启用、16明确关闭；25种目标暗金。最新约定MAIN主套路粉8／SECONDARY副套路蓝12，共享显示MAIN粉8；本次默认Flay主、Skeleton副（按给出顺序的假定，非用户明确指定）。唯一启用HIDE为G187；不启用职业隐藏，收集是显示条件并集。
+- 运行python -X utf8 scripts/generate_filter.py，再运行scripts/verify_generated_filter.py和scripts/render_rules_review.py。依赖标准库与已提交资料，不需要.cache、网络或用户Downloads。成品XML、transfer-report、GENERATED_RULE_INDEX、RULES_REVIEW及RULES_REVIEW_POOLS自动生成，禁止只手改输出。
+- PRIMARY_BUILD是当前固定两输入生成器的主套路身份；颜色跟随身份，来源owners仍用FLAY/NECRO，display_role单独记录MAIN/SECONDARY/COMMON。没有新增勾选UI。显式共享交集／相同谓词按主套路显示；物品用不同词缀分别命中两个套路时仍保留原层级先匹配样式。
+- 审阅稿覆盖全部187条和成品实际使用的16种条件（含封印／腐化条件），明确计数、advanced、EQUAL与等级上限。超22项大名单放附录，共15份名单；364项唯一属性roll边界保留原编码。sources/builds/review-reference.json只补原冻结本地化中7个所用底材名，不覆盖原基底参考。
 - 先读TRANSFER_RULES与COMBINED_FILTER_GUIDE。transfer-report记录原163条、Strict全部271条的处置，以及成品→基底槽位／Strict物理X编号。93条源BD条件已转移：38条T6/T7按同类型交集＋各自差集拆成46条，55条其他谓词保持；12条Planner规则重建潜能分层／无门槛兜底。46关闭项不启用，120通用项采用Raxx策略。
 - 主输入是启用的Strict部位、Rare Strict、实验、制作、神像、祭坛、拆解与暗金名单。复制整组conditions，不丢第二AffixCondition、nil、重复Uniques、advanced=false或AffixCountCondition。原JSON只补精确神像组合，正文补5种替代暗金、876/891备用、1067可选神像和41:4祭坛底材；不从roll=1或目标T7创造最低门槛。
 - 原38/39已填真实武器，47取消旧遗物底材限制。原99–126的28个空神像模板由配置好的规则组替代，后27个重复槽位移出；56蓝字另行删除。29保留关闭、69按死灵需求启用、70保留关闭。81和未提供的开荒专属空模板明确关闭。保留功能按槽位保持相对次序。
@@ -21,6 +23,7 @@
 
 - 最初的基底研究、中文说明、memo和远程仓库已完成。用户于2026-10-06启动的两个BD已生成合并试版，转移规则已程序化；动态勾选工具仍未启动，也没有选择工具框架。
 - 用户会提供多个BD：正在玩的与一起刷装备的其他BD具有同等收集优先级，可以用颜色、声音区分。
+- 用户最新要求主套路粉色、副套路蓝色，共享按主套路处理；不继续使用第三种薄荷绿BD身份。原FILTER_GUIDE／RULE_INDEX描述的Raxx颜色事实保留，不改为成品约定。
 - 用户已提供Flay Mana Lich与Skeleton Necromancer两篇Maxroll攻略，链接及试制计划见PLAN.md第二阶段。不要把视频中主播的个人计划或原文预填属性当成这两个BD的真实需求。
 - 用户已明确：蓝字是给玩家看的说明，基底预设有玩家待办；后续已配置、可复制filter可以删去蓝字。待办见PLAYER_TODO.md，覆盖全部56条蓝字及功能名大写指令。空模板要先填写或明确关闭，不把未配置状态直接判为作者错误。
 - 保留原始基底字节；未来生成的版本另存，修改都必须对应明确需求。

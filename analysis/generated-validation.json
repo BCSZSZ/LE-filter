@@ -9,17 +9,17 @@
     {
       "case": "100级巫妖T6魔力头盔",
       "number": 81,
-      "name": "FLAY - Tier 6 - Helmet"
+      "name": "MAIN - Tier 6 - Helmet"
     },
     {
       "case": "100级死灵T6流血头盔",
       "number": 82,
-      "name": "NECRO - Tier 6 - Helmet"
+      "name": "SECONDARY - Tier 6 - Helmet"
     },
     {
       "case": "死灵T7随从持续伤害双手斧",
       "number": 29,
-      "name": "NECRO - Tier 7 - Two-Handed Axe"
+      "name": "SECONDARY - Tier 7 - Two-Handed Axe"
     },
     {
       "case": "随从持续伤害单手斧不串入死灵装备池",
@@ -29,32 +29,32 @@
     {
       "case": "两BD共享T7移速鞋",
       "number": 38,
-      "name": "SHARED - Tier 7 - Boots"
+      "name": "MAIN - Tier 7 - Boots"
     },
     {
       "case": "两BD共享T6智力遗物",
       "number": 63,
-      "name": "SHARED - Tier 6 - Relic"
+      "name": "MAIN - Tier 6 - Relic"
     },
     {
       "case": "普通阶实验传送鞋",
       "number": 84,
-      "name": "NECRO - Wanted Experimental Affixes"
+      "name": "SECONDARY - Wanted Experimental Affixes"
     },
     {
       "case": "目标词缀T5加另一个T7可做Havoc",
       "number": 57,
-      "name": "NECRO - Wanted Affix & Tier 7 (Rune of Havoc)"
+      "name": "SECONDARY - Wanted Affix & Tier 7 (Rune of Havoc)"
     },
     {
       "case": "零FP不能误称Havoc但保留实验素材",
       "number": 83,
-      "name": "NECRO - Exalted items with wanted experimentals"
+      "name": "SECONDARY - Exalted items with wanted experimentals"
     },
     {
       "case": "死灵底材双词缀合计T4",
       "number": 108,
-      "name": "NECRO - Rare Strict Ring"
+      "name": "SECONDARY - Rare Strict Ring"
     },
     {
       "case": "同底材单词缀T4不满足数量2",
@@ -64,42 +64,42 @@
     {
       "case": "巫妖魔力神像精确双词缀",
       "number": 119,
-      "name": "FLAY - Planner idol combination"
+      "name": "MAIN - Planner idol combination"
     },
     {
       "case": "错形状不标成目标配对但保留Strict通用Weaver",
       "number": 156,
-      "name": "SHARED - Strict - Weaver Idols"
+      "name": "MAIN - Strict - Weaver Idols"
     },
     {
       "case": "点燃与虚弱备用神像",
       "number": 127,
-      "name": "FLAY - Ignite + Frailty fallback"
+      "name": "MAIN - Ignite + Frailty fallback"
     },
     {
       "case": "100级仍保留Strict单词缀神像",
       "number": 149,
-      "name": "FLAY - 1 Affix - Minor Idols"
+      "name": "MAIN - 1 Affix - Minor Idols"
     },
     {
       "case": "死灵三词缀神像未压成两条",
       "number": 121,
-      "name": "NECRO - Planner idol combination"
+      "name": "SECONDARY - Planner idol combination"
     },
     {
       "case": "死灵T7祭坛",
       "number": 140,
-      "name": "NECRO - Tier 7 Strict Idol Altar"
+      "name": "SECONDARY - Tier 7 Strict Idol Altar"
     },
     {
       "case": "巫妖腐化魔力祭坛",
       "number": 137,
-      "name": "FLAY - Tier 7 Strict Idol Altar"
+      "name": "MAIN - Tier 7 Strict Idol Altar"
     },
     {
       "case": "目标腐化属性有独立收集分支",
       "number": 95,
-      "name": "FLAY - Wanted corrupted affix (any tier)"
+      "name": "MAIN - Wanted corrupted affix (any tier)"
     },
     {
       "case": "未请求的普通武器词缀隐藏",

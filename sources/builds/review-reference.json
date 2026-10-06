@@ -1,0 +1,41 @@
+{
+  "provider": "Last Epoch Tools frozen version150 localization already used by this project",
+  "source_metadata": "sources/manifest.json reference_data",
+  "subtypes": {
+    "BOOTS:11": {
+      "translation_key": "Item_Names.Item_SubType_Name_3_11",
+      "en": "Citadel Boots",
+      "zh": "城堡靴子"
+    },
+    "GLOVES:12": {
+      "translation_key": "Item_Names.Item_SubType_Name_4_12",
+      "en": "Eternal Gauntlets",
+      "zh": "永恒臂铠"
+    },
+    "HELMET:15": {
+      "translation_key": "Item_Names.Item_SubType_Name_0_15",
+      "en": "Revenant Mask",
+      "zh": "亡魂面具"
+    },
+    "IDOL_1x1_LAGON:0": {
+      "translation_key": "Item_Names.Item_SubType_Name_26_0",
+      "en": "Minor Lagonian Idol",
+      "zh": "中型拉贡神像"
+    },
+    "IDOL_1x1_LAGON:1": {
+      "translation_key": "Item_Names.Item_SubType_Name_26_1",
+      "en": "Minor Weaver Idol",
+      "zh": "中型编织者神像"
+    },
+    "RING:9": {
+      "translation_key": "Item_Names.Item_SubType_Name_21_9",
+      "en": "Coral Ring",
+      "zh": "珊瑚戒指"
+    },
+    "TWO_HANDED_AXE:8": {
+      "translation_key": "Item_Names.Item_SubType_Name_12_8",
+      "en": "Obsidian Axe",
+      "zh": "黑曜石斧"
+    }
+  }
+}

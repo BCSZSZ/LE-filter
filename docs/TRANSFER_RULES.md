@@ -48,7 +48,7 @@ Flay = {52,18,1021}，Necro = {52,36,996}
 → 共享 {52}；Flay专属 {18,1021}；Necro专属 {36,996}
 ```
 
-这是腰带的实际例子。每条至少命中1项，`combinedComparsion=ANY`，所以拆分后的逻辑并集等于输入池。38条源 T6/T7 条件转成46条，检查程序逐条验证池没有漏项，其他条件完全一致。共享、巫妖、死灵分别用薄荷绿、粉色、蓝色。
+这是腰带的实际例子。每条至少命中1项，`combinedComparsion=ANY`，所以拆分后的逻辑并集等于输入池。38条源 T6/T7 条件转成46条，检查程序逐条验证池没有漏项，其他条件完全一致。最新显示约定是主套路MAIN粉色8、副套路SECONDARY蓝色12，共享按主套路处理；本次默认Flay为主、Skeleton为副，不另设薄荷绿共享身份。来源owners仍记录FLAY/NECRO，方便追溯，不用显示颜色反推来源。
 
 只在这个已经验证的谓词形状上做池拆分。至少2条或合计阶数限制的规则不能照搬这个方法；它们逐条保留。其余条件完全相同的规则按规范化树去重，重复对象仍保留。池有部分重叠的其他规则维持确定的显示次序，例如混合生命36的拆解物可能先显示巫妖颜色，不影响死灵收集。
 
@@ -73,9 +73,10 @@ Flay = {52,18,1021}，Necro = {52,36,996}
 ```powershell
 python -X utf8 scripts/generate_filter.py
 python -X utf8 scripts/verify_generated_filter.py
+python -X utf8 scripts/render_rules_review.py
 ```
 
-生成器输出 XML、转移报告和成品索引；验证器输出 [generated-validation.json](../analysis/generated-validation.json)。目前通过：来源哈希、Order连续且XML反序、187条、56说明删除、启用空模板排查、25种暗金无潜能门槛兜底、38条源阶数条件的集合等价、55条其他Strict谓词保持、20个有限离线案例。规则上限按[官方1.4补丁](https://forum.lastepoch.com/t/last-epoch-shattered-omens-patch-notes/80571)的200执行，超过就终止，不截断需求。
+生成器输出 XML、转移报告和成品索引；验证器输出 [generated-validation.json](../analysis/generated-validation.json)；审阅脚本从实际XML生成[逐条中文规则](RULES_REVIEW.md)和[名单附录](RULES_REVIEW_POOLS.md)。目前通过：来源哈希、Order连续且XML反序、187条、56说明删除、启用空模板排查、25种暗金无潜能门槛兜底、38条源阶数条件的集合等价、55条其他Strict谓词保持、20个有限离线案例。规则上限按[官方1.4补丁](https://forum.lastepoch.com/t/last-epoch-shattered-omens-patch-notes/80571)的200执行，超过就终止，不截断需求。
 
 离线案例用显式物品字段检查布尔选择、数量和优先级；不是游戏引擎。AffixCountCondition的封印计数、LP/WW组合以及神像特殊／腐化属性的实际计数仍需客户端验证。遇到未建模条件，案例预测返回未确认，不能拿后面的命中伪装成验证成功。FP52/NotSealed的原XML条件已保留，并有专门检查确保程序不会假装知道其实际行为。
 
