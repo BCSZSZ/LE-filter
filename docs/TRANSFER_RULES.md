@@ -1,5 +1,7 @@
 # Maxroll Strict → Raxx 基底的转移规则
 
+本页记录上一轮直接移植Strict条件的方法，保留作历史。用户最新要求以Raxx设计主导、只从Strict提取填空情报；当前流程见[变量总表](RAXX_VARIABLES.md)与[审阅结论](STRICT_VARIABLE_REVIEW.md)，本轮不生成最终filter。
+
 本次把 Strict 当作攻略已经整理出的 **BD 拾取条件**，把 Raxx 当作规则分层、通用收集与提示样式的基底。程序完成两份固定输入的转移，输出 [双 BD XML](../filters/Flay-Mana-Lich+Skeleton-Necromancer.xml)。它有187条规则，171条启用、16条明确关闭；[生成器](../scripts/generate_filter.py)只使用 Python 标准库，离线运行。
 
 R 表示原 Raxx 的 Order+1；X 表示某份 Strict 的 XML 物理位置；G 表示成品 Order+1。三者不要混用。[成品索引](GENERATED_RULE_INDEX.md)将 G 关联到 R 槽位与来源 X；[转移报告](../analysis/transfer-report.json)记录原163条、两份 Strict 的271条及每条成品的处置。

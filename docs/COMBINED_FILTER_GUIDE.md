@@ -1,5 +1,7 @@
 # Flay Mana Lich + Skeleton Necromancer 收集版
 
+本页记录上一轮187条历史试制，包含Strict策略移植。用户最新要求改为Raxx原版设计主导，当前请审阅[变量情报结论](STRICT_VARIABLE_REVIEW.md)；本页及旧XML不作为本轮已认可的最终方案。
+
 [成品XML](../filters/Flay-Mana-Lich+Skeleton-Necromancer.xml)已按两个BD一起收集：187条规则，171条启用，16条关闭；原始 Raxx 与两份 Strict 均保持字节不变。这个版本默认沿用 CoF、用于开始强化时间线后的装备收集，同时保留部分 Raxx 低等级兜底。
 
 本次默认Flay为主套路、Skeleton为副套路。先阅读[187条中文审阅稿](RULES_REVIEW.md)，每条列出实际条件与提示；大名单见其附录。颜色按主副身份分配，以后交换身份时颜色跟随身份。

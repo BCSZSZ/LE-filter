@@ -1,10 +1,22 @@
 # 后续工作 memo
 
-更新时间：2026-10-06，日本时间。当前成品阅读顺序：README → RULES_REVIEW → COMBINED_FILTER_GUIDE → 本memo；原始基底查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+更新时间：2026-10-06，日本时间。当前阅读顺序：README → STRICT_VARIABLE_REVIEW → RAXX_VARIABLES → 本memo；原始基底查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
-## 当前交付：Strict填充基底已程序化
+## 当前交付：Raxx变量与Strict情报，等待Review
 
-- 用户最新明确：Strict由Maxroll攻略导出，重点是建立Strict→Raxx规则。本次先完成双BD成品与转移方法；不是继续停在资料充分性评估。
+- 用户已纠正方向：按照Raxx的设计；Strict是从BD导出的情报来源，用于填Raxx要求定制的变量，不把Strict的策略直接移植。明确要求本轮不要生成最终filter。
+- scripts/extract_raxx_variables.py提取24组变量；蓝字56条全部归入填空说明或固定说明。输出RAXX_VARIABLES、STRICT_VARIABLE_REVIEW、raxx-variables.json、raxx-variable-extraction.json与variable-extraction-validation.json。只用冻结原版、两份Strict和名字／类型参考；不读Planner JSON或攻略正文，不依赖.cache。
+- 已提取两BD各11种暗金，共20种、无套装目标；R15原143项已有11种，追加缺少的9种可形成152项候选。原珍贵名单保持，所有BD目标0LP也留，不增加BD独立LP分层。旧25种目标包含额外5种正文替代，不能冒充Strict本身导出。
+- 38份部位T6／T7池两层逐部位相同，只提供窄目标情报；Raxx宽T7素材池不能被它们机械替换。保留R63／64在85级退出、R128／129在90／75级退出。原R127实际数量1、advanced=false，阶数不限，不能误写为T6门槛。R68原广池默认不缩到两个BD实验目标，R69是否采用另审。
+- Source family明确区分BD目标、generic_idol／generic_altar及maxroll_only_crafting；通用Weaver／反伤、通用祭坛与FP52不当作BD填空目标。Havoc只把第一份Wanted池当好词缀，1156项另一池是通用T7池。
+- 底材／词缀／尺寸／BD绑定保留。Large Omen来源包含五职业底材，单职业入口映射标为待判别，不能因此声称五职业都要收集。开荒路线、排除职业、升华用途、真实紧缺库存不能从终局Strict自动确定。
+- sources/builds/strict-variable-reference.json固定20个目标的isSetItem和1156项specialAffixType，来自此前已验证哈希的version150缓存；运行期不读取缓存。名字来源沿用game-reference、maxroll-reference-supplement与7底材review-reference。
+- 程序检查来源哈希、完整271条Strict、56说明覆盖、变量目的地、通用池隔离；提取前后原版、Strict、旧filter字节不变，也不创建新的XML。验证不是游戏客户端实测。
+- 本阶段只运行python -X utf8 scripts/extract_raxx_variables.py。不执行generate_filter／verify_generated_filter／render_rules_review来重建旧试制，用户后续要求生成最终版本时先按本轮变量审阅结果重新设计。
+
+## 上一轮历史试制：曾直接移植Strict条件
+
+- 上一轮采用Strict部分拾取门槛的双BD试制已完成；下列条目记录当时方法，已被本memo开头的Raxx变量流程取代，不代表当前最终设计。
 - filters/Flay-Mana-Lich+Skeleton-Necromancer.xml：187条、171启用、16明确关闭；25种目标暗金。最新约定MAIN主套路粉8／SECONDARY副套路蓝12，共享显示MAIN粉8；本次默认Flay主、Skeleton副（按给出顺序的假定，非用户明确指定）。唯一启用HIDE为G187；不启用职业隐藏，收集是显示条件并集。
 - 运行python -X utf8 scripts/generate_filter.py，再运行scripts/verify_generated_filter.py和scripts/render_rules_review.py。依赖标准库与已提交资料，不需要.cache、网络或用户Downloads。成品XML、transfer-report、GENERATED_RULE_INDEX、RULES_REVIEW及RULES_REVIEW_POOLS自动生成，禁止只手改输出。
 - PRIMARY_BUILD是当前固定两输入生成器的主套路身份；颜色跟随身份，来源owners仍用FLAY/NECRO，display_role单独记录MAIN/SECONDARY/COMMON。没有新增勾选UI。显式共享交集／相同谓词按主套路显示；物品用不同词缀分别命中两个套路时仍保留原层级先匹配样式。

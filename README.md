@@ -1,8 +1,8 @@
 # LE-filter：Raxx 基底与双 BD 收集过滤器
 
-已生成 **Flay Mana Lich + Skeleton Necromancer** 合并收集版：187条规则，两BD同等保留，25种目标及替代暗金有无潜能门槛兜底。本次默认Flay为主套路（粉色）、Skeleton为副套路（蓝色），共享需求按主套路提示。已将Maxroll Strict的BD条件填入Raxx框架，并实现离线生成与检查。原始基底、两份Strict和Planner JSON未修改；动态勾选界面留待下一阶段。
+当前阶段：**以Raxx原版收集设计为准，Strict只用于提取需要填写的BD情报**。已抽出24组变量，完成提取程序并运行，交付[变量总表](docs/RAXX_VARIABLES.md)与[文字审阅结论](docs/STRICT_VARIABLE_REVIEW.md)。本轮没有生成或修改最终filter，等待审阅变量、候选与未决项。
 
-先审阅：[逐条中文规则](docs/RULES_REVIEW.md) → [完整名单附录](docs/RULES_REVIEW_POOLS.md)。直接使用：[成品XML](filters/Flay-Mana-Lich+Skeleton-Necromancer.xml) → [使用说明与玩家待办](docs/COMBINED_FILTER_GUIDE.md)。研究与维护：[Strict转移规则](docs/TRANSFER_RULES.md) → [187条成品索引](docs/GENERATED_RULE_INDEX.md) → [工作memo](docs/WORKING_MEMO.md)。
+先读[本轮审阅结论](docs/STRICT_VARIABLE_REVIEW.md)，再查[原版变量及保留门槛](docs/RAXX_VARIABLES.md)与[工作memo](docs/WORKING_MEMO.md)。当前默认Flay为主、Skeleton为副，共享按主，两者同等收集。旧187条XML及其说明保留作历史试制，包含Strict策略移植，**不作为本轮已认可的最终方案**；动态勾选界面尚未实施。
 
 第一阶段的基底研究也已完成：固定原始过滤器、阅读完整视频英文自动字幕、解析全部163条规则，中文说明和原模板待办保留如下。
 
@@ -17,9 +17,13 @@
 | [PLAN.md](PLAN.md) | 本阶段计划、验收条件与范围 |
 | [FILTER_GUIDE.md](docs/FILTER_GUIDE.md) | 用人能读懂的语言解释整套过滤器 |
 | [PLAYER_TODO.md](docs/PLAYER_TODO.md) | 蓝字和大写文字要求玩家完成的配置、可选功能与进度调整 |
-| [COMBINED_FILTER_GUIDE.md](docs/COMBINED_FILTER_GUIDE.md) | 本次成品的颜色、用途、已完成配置与玩家剩余待办 |
-| [RULES_REVIEW.md](docs/RULES_REVIEW.md) | 按匹配顺序展开187条规则的中文条件、门槛、启用状态和提示，供审阅 |
-| [RULES_REVIEW_POOLS.md](docs/RULES_REVIEW_POOLS.md) | 审阅稿引用的完整大名单及原XML唯一属性roll编码边界 |
+| [RAXX_VARIABLES.md](docs/RAXX_VARIABLES.md) | 当前24组填空／可选变量、原始默认值和保留门槛 |
+| [STRICT_VARIABLE_REVIEW.md](docs/STRICT_VARIABLE_REVIEW.md) | 当前Strict情报与变量匹配的文字结论，供Review |
+| [analysis/raxx-variable-extraction.json](analysis/raxx-variable-extraction.json) | 变量候选、R入口、全部271条Strict条件与未决映射 |
+| [scripts/extract_raxx_variables.py](scripts/extract_raxx_variables.py) | 本轮离线提取程序，只输出数据和文档 |
+| [COMBINED_FILTER_GUIDE.md](docs/COMBINED_FILTER_GUIDE.md) | 历史试制的颜色、用途与待办 |
+| [RULES_REVIEW.md](docs/RULES_REVIEW.md) | 历史试制187条规则的中文条件、门槛、启用状态和提示 |
+| [RULES_REVIEW_POOLS.md](docs/RULES_REVIEW_POOLS.md) | 历史审阅稿的完整大名单及原XML唯一属性roll编码边界 |
 | [TRANSFER_RULES.md](docs/TRANSFER_RULES.md) | Strict输入族如何填入基底、共享池拆分、补充与明确差异 |
 | [GENERATED_RULE_INDEX.md](docs/GENERATED_RULE_INDEX.md) | 187条成品编号G与基底槽位R、Strict来源X的定位 |
 | [analysis/transfer-report.json](analysis/transfer-report.json) | 原163条与Strict全部271条的处置，以及每条成品的来源 |
@@ -48,7 +52,15 @@
 
 ## 复现
 
-安装 Python 3 后，在仓库根目录生成本次成品并检查：
+安装 Python 3 后，在仓库根目录重建本轮变量和审阅结论：
+
+```powershell
+python -X utf8 scripts/extract_raxx_variables.py
+```
+
+只使用标准库与已提交资料，不需要网络、.cache或Downloads。检查原版／Strict哈希、56条蓝字覆盖、38份部位池、20种目标及已有XML字节不变；记录全部271条Strict。它不生成filter，不从Strict移植门槛、进度或开关。
+
+以下命令用于**历史试制**，本轮不要执行：
 
 ```powershell
 python -X utf8 scripts/generate_filter.py
