@@ -33,4 +33,6 @@
 3. 生成可复制XML，删蓝字并重排Order → 验收：两BD需求均可保留，颜色可区分；通用珍贵物品与资源保护保留。
 4. 检查来源映射、规则结构和关键匹配案例并上传 → 验收：来源及成品可复现、基底字节不变、远程提交一致；游戏内实测状态单独说明。
 
-当前第1步已收到两份Planner JSON，固定于sources/builds，并完成ID映射与信息量评估。用户又提供本地保存的Flay Mana Lich网页，已静态读取并核对600+魔力门槛、6种替代／升级暗金与神像依赖，详见docs/SAVED_GUIDE_ASSESSMENT.md；该攻略明确没有Starter Planner。保存文件的嵌入链接与正文存在矛盾，配装仍以用户JSON为准。死灵正文及两BD具体拾取严格度尚未补齐，本轮未生成个人filter。远程Maxroll受站点安全策略限制，不绕过；用户提供的本地文档可直接分析。
+第1步资料已固定于sources/builds：两份Planner JSON、本地保存的巫妖网页整理事实，以及用户生成的两份Maxroll Strict XML。已完成271条Strict规则的解析、ID映射与Planner暗金全覆盖检查；巫妖正文补充600+魔力、6种替代／升级暗金与神像依赖。详见docs/BUILD_INPUT_ASSESSMENT.md、docs/SAVED_GUIDE_ASSESSMENT.md和docs/MAXROLL_STRICT_ASSESSMENT.md。远程Maxroll受站点安全策略限制，不绕过；用户提供的本地文档可直接分析。
+
+现有资料足够进入双BD收集试版的生成。下一步将替代品、材料、腐化用途和严格度融合到Raxx框架，不能直接拼接两份Strict。巫妖网页嵌入链接与正文有矛盾，配装仍以用户JSON为准；死灵正文可继续补机制，已不作为终局收集初版的必要前提。当前只完成参考评估，未生成合并成品。

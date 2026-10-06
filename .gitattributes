@@ -2,3 +2,4 @@
 sources/*.txt -text
 sources/video-era/*.txt -text
 sources/builds/*.json -text
+sources/builds/*.xml -text whitespace=cr-at-eol

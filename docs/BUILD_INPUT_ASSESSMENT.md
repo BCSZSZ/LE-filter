@@ -4,6 +4,8 @@
 
 后续补充：用户已提供保存的Flay Mana Lich网页，其中600+魔力、核心装备、6种替代／升级暗金及神像依赖已核对，见 [保存网页评估](SAVED_GUIDE_ASSESSMENT.md)。巫妖这部分缺口已有答案；下文保留的是两份JSON本身的能力边界，死灵正文仍待补齐。
 
+用户又提供两份Maxroll Strict XML，补齐分部位T6／T7、神像、过渡候选与潜能提示规则，见 [Strict参考评估](MAXROLL_STRICT_ASSESSMENT.md)。它们与现有资料已足够支持双BD终局收集试版；死灵正文仍有助于优化机制与成长路线，但不再作为该初版的必要前提。
+
 来源是用户提供的 [巫妖附件](../sources/builds/flay-mana-lich.json) 与 [死灵内联JSON](../sources/builds/skeleton-necromancer.json)。[来源记录](../sources/builds/manifest.json)保存用户给出的Planner地址、哈希和技能名映射。通过技能树与配装内容识别BD对应关系；导出本身没有BD名称或装备阶段标签。没有绕过Maxroll的访问限制读取网页。
 
 ## 实际包含多少信息

@@ -1,0 +1,45 @@
+{
+  "received_date": "2026-10-06",
+  "provider": "Two Maxroll-generated Strict XML filters supplied by user; no remote Maxroll fetch",
+  "inputs": {
+    "skeleton-necromancer": {
+      "file": "sources/builds/maxroll-skeleton-necromancer-strict.xml",
+      "source_attachment": "C:\\Users\\liaoweiran\\.codex\\attachments\\abd147e0-8660-4b3e-aaf0-c35ecf242f0c\\Pasted text.txt",
+      "sha256": "5033341708ab5594cfcb70448bf3c6084333f03efa4388e5d4c6f4b1409dbade",
+      "bytes": 1162656,
+      "name": "Skeleton Necromancer",
+      "strictness": "Strict as reported by user and stated in XML description",
+      "planner_url_supplied_earlier": "https://maxroll.gg/last-epoch/planner/2ai4s0qh#1",
+      "exported_planner_set_not_identified": true
+    },
+    "flay-mana-lich": {
+      "file": "sources/builds/maxroll-flay-mana-lich-strict.xml",
+      "source_attachment": "C:\\Users\\liaoweiran\\.codex\\attachments\\79071841-b2de-42ec-b755-c04089501b9d\\Pasted text.txt",
+      "sha256": "4e70c8b9111a28ae257aea7b561d931ac99629a6054646ce18a3ce5e3458995c",
+      "bytes": 1115268,
+      "name": "Flay Mana Lich",
+      "strictness": "Strict as reported by user and stated in XML description",
+      "planner_url_supplied_earlier": "https://maxroll.gg/last-epoch/planner/y21h9h0x#2",
+      "exported_planner_set_not_identified": true
+    }
+  },
+  "reference_supplement": "sources/builds/maxroll-reference-supplement.json",
+  "supporting_sources": {
+    "community_xml_importer": {
+      "url": "https://www.lastepochtools.com/loot-filters/js/filters.js?1790728790",
+      "sha256": "7839773314cd982e53c74c2fcc6f98eb4536ef5df6f1190c29ccd33bf0805e2f"
+    },
+    "local_maxroll_generator_bundle": {
+      "path": "C:/Users/liaoweiran/Downloads/Flay Mana Lich Guide for Last Epoch Season 5 - Rage of the Frostborn _ Maxroll.gg_files/embed.js.download",
+      "sha256": "4dbb540abb05aaf6a122d9a68dece011199acf765baef6df5c9f3fa96be294ce",
+      "observation": "Schema default lastModifiedInVersion is 1.0.0.4; this does not establish the game version of an export."
+    },
+    "official_rule_order_overrides": "https://forum.lastepoch.com/t/loot-filters-in-last-epoch/24302"
+  },
+  "limits": [
+    "XML files have no explicit Order fields; research indexes use physical XML positions. Community import reverses these positions; actual game-client import order remains untested.",
+    "No export timestamp, generator version or originating planner set is encoded.",
+    "Strict is a pickup policy, not evidence that every requested item or guide alternative is covered.",
+    "No personalized combined filter or game-client test is produced by this assessment."
+  ]
+}

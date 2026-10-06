@@ -1,0 +1,791 @@
+{
+  "provider": "Frozen Last Epoch Tools data and game localization; names do not establish current drop availability",
+  "game_version": "Version 1.5.0",
+  "source_urls": {
+    "db": {
+      "url": "https://www.lastepochtools.com/data/version150/db/js/010a2617c7ebb271af8028db2d94bc15.js",
+      "sha256": "af78878c4cdb6c05f2a1fd2095e760f253635ea50f5f7bf43313bc14fdde5a71"
+    },
+    "en": {
+      "url": "https://www.lastepochtools.com/data/version150/i18n/full/en.json?17",
+      "sha256": "04c368fb36db08f336291cfa94698bdbd5099b50c0e522580003f8c4507888ae"
+    },
+    "zh": {
+      "url": "https://www.lastepochtools.com/data/version150/i18n/full/zh.json?17",
+      "sha256": "06511d02f0871e7705ce759bd6c7e01e30d796d8214a1de3bbf36419fdb65e14"
+    }
+  },
+  "affixes": {
+    "1111": {
+      "translation_key": "Item_Affixes.Item_Affix_1111_DisplayName",
+      "en": "You have Berserking Rage",
+      "zh": "你拥有狂暴之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1113": {
+      "translation_key": "Item_Affixes.Item_Affix_1113_DisplayName",
+      "en": "You have Predator Rage",
+      "zh": "你拥有掠食者之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1114": {
+      "translation_key": "Item_Affixes.Item_Affix_1114_DisplayName",
+      "en": "You have Eternal Rage",
+      "zh": "你拥有永恒之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1115": {
+      "translation_key": "Item_Affixes.Item_Affix_1115_DisplayName",
+      "en": "You have Commanding Rage",
+      "zh": "你拥有统御之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1116": {
+      "translation_key": "Item_Affixes.Item_Affix_1116_DisplayName",
+      "en": "You have Explosive Rage",
+      "zh": "你拥有爆破之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1117": {
+      "translation_key": "Item_Affixes.Item_Affix_1117_DisplayName",
+      "en": "You have Incisive Rage",
+      "zh": "你拥有锐利之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1118": {
+      "translation_key": "Item_Affixes.Item_Affix_1118_DisplayName",
+      "en": "You have Sanguine Rage",
+      "zh": "你拥有血腥之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1119": {
+      "translation_key": "Item_Affixes.Item_Affix_1119_DisplayName",
+      "en": "You have Empowered Rage",
+      "zh": "你拥有赋能之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1120": {
+      "translation_key": "Item_Affixes.Item_Affix_1120_DisplayName",
+      "en": "You have Feasting Rage",
+      "zh": "你拥有饕餮之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1121": {
+      "translation_key": "Item_Affixes.Item_Affix_1121_DisplayName",
+      "en": "You have Murderous Rage",
+      "zh": "你拥有嗜杀之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1122": {
+      "translation_key": "Item_Affixes.Item_Affix_1122_DisplayName",
+      "en": "You have Frigid Rage",
+      "zh": "你拥有凛冽之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1123": {
+      "translation_key": "Item_Affixes.Item_Affix_1123_DisplayName",
+      "en": "You have Rippling Rage",
+      "zh": "你拥有涟漪之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1124": {
+      "translation_key": "Item_Affixes.Item_Affix_1124_DisplayName",
+      "en": "You have Crescendoing Rage",
+      "zh": "你拥有渐强之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1125": {
+      "translation_key": "Item_Affixes.Item_Affix_1125_DisplayName",
+      "en": "You have Blighted Rage",
+      "zh": "你拥有枯萎之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1126": {
+      "translation_key": "Item_Affixes.Item_Affix_1126_DisplayName",
+      "en": "You have Bursting Rage",
+      "zh": "你拥有血迸之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1127": {
+      "translation_key": "Item_Affixes.Item_Affix_1127_DisplayName",
+      "en": "You have Fevered Rage",
+      "zh": "你拥有狂热之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1128": {
+      "translation_key": "Item_Affixes.Item_Affix_1128_DisplayName",
+      "en": "You have Icy Rage",
+      "zh": "你拥有冰霜之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1129": {
+      "translation_key": "Item_Affixes.Item_Affix_1129_DisplayName",
+      "en": "You have Freezing Rage",
+      "zh": "你拥有冻结之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1130": {
+      "translation_key": "Item_Affixes.Item_Affix_1130_DisplayName",
+      "en": "You have Runic Rage",
+      "zh": "你拥有符文之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1131": {
+      "translation_key": "Item_Affixes.Item_Affix_1131_DisplayName",
+      "en": "You have Boiling Rage",
+      "zh": "你拥有沸腾之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1132": {
+      "translation_key": "Item_Affixes.Item_Affix_1132_DisplayName",
+      "en": "You have Portentous Rage",
+      "zh": "你拥有预示之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1133": {
+      "translation_key": "Item_Affixes.Item_Affix_1133_DisplayName",
+      "en": "You have Evasive Rage",
+      "zh": "你拥有回避之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1134": {
+      "translation_key": "Item_Affixes.Item_Affix_1134_DisplayName",
+      "en": "You have Coalescing Rage",
+      "zh": "你拥有凝聚之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1135": {
+      "translation_key": "Item_Affixes.Item_Affix_1135_DisplayName",
+      "en": "You have Revitalizing Rage",
+      "zh": "你拥有复苏之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1136": {
+      "translation_key": "Item_Affixes.Item_Affix_1136_DisplayName",
+      "en": "You have Shattering Rage",
+      "zh": "你拥有粉碎之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1137": {
+      "translation_key": "Item_Affixes.Item_Affix_1137_DisplayName",
+      "en": "You have Monstrous Rage",
+      "zh": "你拥有怪物之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1138": {
+      "translation_key": "Item_Affixes.Item_Affix_1138_DisplayName",
+      "en": "You have Pack Rage",
+      "zh": "你拥有群聚之怒",
+      "can_roll_on": [
+        21
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1140": {
+      "translation_key": "Item_Affixes.Item_Affix_1140_DisplayName",
+      "en": "Reduced Bonus Damage Taken from Critical Strikes per 4% Overcapped Physical Resistance (up to 200% Overcapped Physical Resistance)",
+      "zh": "每4%溢出上限物理抗性降低承受暴击额外伤害（至多200%溢出上限物理抗性）",
+      "can_roll_on": [
+        4
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1141": {
+      "translation_key": "Item_Affixes.Item_Affix_1141_DisplayName",
+      "en": "Increased Attack Speed per 5% Overcapped Physical Resistance (up to 200% Overcapped Physical Resistance)",
+      "zh": "每5%溢出上限物理抗性提高攻击速度（至多200%溢出上限物理抗性）",
+      "can_roll_on": [
+        4
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1142": {
+      "translation_key": "Item_Affixes.Item_Affix_1142_DisplayName",
+      "en": "Parry Chance per 10% Overcapped Physical Resistance (up to 200% Overcapped Physical Resistance)",
+      "zh": "每10%溢出上限物理抗性使招架几率（至多200%溢出上限物理抗性）",
+      "can_roll_on": [
+        4
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1143": {
+      "translation_key": "Item_Affixes.Item_Affix_1143_DisplayName",
+      "en": "Armor per 1% Overcapped Physical Resistance (up to 200% Overcapped Physical Resistance)",
+      "zh": "每1%溢出上限物理抗性使护甲（至多200%溢出上限物理抗性）",
+      "can_roll_on": [
+        4
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1144": {
+      "translation_key": "Item_Affixes.Item_Affix_1144_DisplayName",
+      "en": "Increased Cast Speed per 5% Overcapped Cold Resistance (up to 200% Overcapped Cold Resistance)",
+      "zh": "每5%溢出上限冰霜抗性提高施法速度（至多200%溢出上限冰霜抗性）",
+      "can_roll_on": [
+        4
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1145": {
+      "translation_key": "Item_Affixes.Item_Affix_1145_DisplayName",
+      "en": "Damage Over Time Taken per 8% Overcapped Cold Resistance (up to 200% Overcapped Cold Resistance)",
+      "zh": "每8%溢出上限冰霜抗性使承受持续伤害（至多200%溢出上限冰霜抗性）",
+      "can_roll_on": [
+        4
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1146": {
+      "translation_key": "Item_Affixes.Item_Affix_1146_DisplayName",
+      "en": "Minion Spell Damage per 5% Overcapped Cold Resistance (up to 200% Overcapped Cold Resistance)",
+      "zh": "每5%溢出上限冰霜抗性使召唤物法术伤害（至多200%溢出上限冰霜抗性）",
+      "can_roll_on": [
+        4
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1147": {
+      "translation_key": "Item_Affixes.Item_Affix_1147_DisplayName",
+      "en": "Increased Cooldown Recovery Speed per 8% Overcapped Cold Resistance (up to 200% Overcapped Cold Resistance)",
+      "zh": "每8%溢出上限冰霜抗性提高冷却恢复速度（至多200%溢出上限冰霜抗性）",
+      "can_roll_on": [
+        4
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1148": {
+      "translation_key": "Item_Affixes.Item_Affix_1148_DisplayName",
+      "en": "Caretaker''s Regrowth Reforged",
+      "zh": "看守者的再度生长-已重铸",
+      "can_roll_on": [
+        1
+      ],
+      "class_specificity": 2,
+      "special_affix_type": 3
+    },
+    "1149": {
+      "translation_key": "Item_Affixes.Item_Affix_1149_DisplayName",
+      "en": "Caretaker''s Wrath Reforged",
+      "zh": "看守者的愤怒-已重铸",
+      "can_roll_on": [
+        12
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 3
+    },
+    "1150": {
+      "translation_key": "Item_Affixes.Item_Affix_1150_DisplayName",
+      "en": "Strength per Equipped Heretical Idol",
+      "zh": "装备的每个异端神像使力量",
+      "can_roll_on": [
+        33
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1151": {
+      "translation_key": "Item_Affixes.Item_Affix_1151_DisplayName",
+      "en": "Dexterity per Equipped Heretical Idol",
+      "zh": "装备的每个异端神像使敏捷",
+      "can_roll_on": [
+        33
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1152": {
+      "translation_key": "Item_Affixes.Item_Affix_1152_DisplayName",
+      "en": "Vitality per Equipped Heretical Idol",
+      "zh": "装备的每个异端神像使活力",
+      "can_roll_on": [
+        33
+      ],
+      "class_specificity": 0,
+      "special_affix_type": 7
+    },
+    "1153": {
+      "translation_key": "Item_Affixes.Item_Affix_1153_DisplayName",
+      "en": "Level of Summon Tide Elemental",
+      "zh": "召唤潮汐元素等级",
+      "can_roll_on": [
+        22
+      ],
+      "class_specificity": 2,
+      "special_affix_type": 0
+    },
+    "1154": {
+      "translation_key": "Item_Affixes.Item_Affix_1154_DisplayName",
+      "en": "Level of Dreamslash",
+      "zh": "梦境挥砍等级",
+      "can_roll_on": [
+        0
+      ],
+      "class_specificity": 32,
+      "special_affix_type": 0
+    },
+    "1155": {
+      "translation_key": "Item_Affixes.Item_Affix_1155_DisplayName",
+      "en": "Level of Radiant Lance",
+      "zh": "光耀长枪等级",
+      "can_roll_on": [
+        1
+      ],
+      "class_specificity": 8,
+      "special_affix_type": 0
+    },
+    "1156": {
+      "translation_key": "Item_Affixes.Item_Affix_1156_FilterOverride",
+      "en": "Increased Mana and Mana Regen",
+      "zh": "魔力与提高魔力再生",
+      "can_roll_on": [
+        0,
+        1
+      ],
+      "class_specificity": 8,
+      "special_affix_type": 0
+    }
+  },
+  "uniques": {
+    "5": {
+      "translation_key": "Item_Names.Unique_Name_5",
+      "en": "Isadora''s Revenge",
+      "zh": "伊莎多拉的复仇",
+      "base_type_id": 0,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "16": {
+      "translation_key": "Item_Names.Unique_Name_16",
+      "en": "Isadora''s Tomb Binding",
+      "zh": "伊莎多拉的墓碑锁链",
+      "base_type_id": 2,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "26": {
+      "translation_key": "Item_Names.Unique_Name_26",
+      "en": "Isadora''s Gravechill",
+      "zh": "伊莎多拉的死亡寒意",
+      "base_type_id": 4,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "57": {
+      "translation_key": "Item_Names.Unique_Name_57",
+      "en": "The Invoker''s Frozen Heart",
+      "zh": "咒祈师的冰冻之心",
+      "base_type_id": 20,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "63": {
+      "translation_key": "Item_Names.Unique_Name_63",
+      "en": "The Invoker''s Scorching Grasp",
+      "zh": "咒祈师的灼热之握",
+      "base_type_id": 21,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "64": {
+      "translation_key": "Item_Names.Unique_Name_64",
+      "en": "The Invoker''s Static Touch",
+      "zh": "咒祈师的静电之触",
+      "base_type_id": 21,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "85": {
+      "translation_key": "Item_Names.Unique_Name_85",
+      "en": "Sunforged Hammer",
+      "zh": "耀阳之锤",
+      "base_type_id": 13,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "86": {
+      "translation_key": "Item_Names.Unique_Name_86",
+      "en": "Sunforged Cuirass",
+      "zh": "耀阳胸铠",
+      "base_type_id": 1,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "87": {
+      "translation_key": "Item_Names.Unique_Name_87",
+      "en": "Sunforged Greathelm",
+      "zh": "耀阳重盔",
+      "base_type_id": 0,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "89": {
+      "translation_key": "Item_Names.Unique_Name_89",
+      "en": "Defiance of the Forgotten Knight",
+      "zh": "遗忘骑士的抗争",
+      "base_type_id": 18,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "94": {
+      "translation_key": "Item_Names.Unique_Name_94",
+      "en": "The Last Bear''s Fury",
+      "zh": "终末野熊的暴怒",
+      "base_type_id": 4,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "95": {
+      "translation_key": "Item_Names.Unique_Name_95",
+      "en": "The Last Bear''s Scorn",
+      "zh": "终末野熊的蔑视",
+      "base_type_id": 1,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "96": {
+      "translation_key": "Item_Names.Unique_Name_96",
+      "en": "The Last Bear''s Lament",
+      "zh": "终末野熊的挽歌",
+      "base_type_id": 0,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "97": {
+      "translation_key": "Item_Names.Unique_Name_97",
+      "en": "Halvar''s Pledge",
+      "zh": "哈瓦尔的誓约",
+      "base_type_id": 15,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "98": {
+      "translation_key": "Item_Names.Unique_Name_98",
+      "en": "Halvar''s Stand",
+      "zh": "哈瓦尔的立足",
+      "base_type_id": 3,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "99": {
+      "translation_key": "Item_Names.Unique_Name_99",
+      "en": "Last Gift of the Mountain",
+      "zh": "大山的最后赠礼",
+      "base_type_id": 22,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "100": {
+      "translation_key": "Item_Names.Unique_Name_100",
+      "en": "Pebbles'' Femur",
+      "zh": "佩布斯的股骨",
+      "base_type_id": 10,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "101": {
+      "translation_key": "Item_Names.Unique_Name_101",
+      "en": "Pebbles'' Collar",
+      "zh": "佩布斯的项圈",
+      "base_type_id": 22,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "102": {
+      "translation_key": "Item_Names.Unique_Name_102",
+      "en": "Pebbles'' Bitemarked Sash",
+      "zh": "佩布斯的咬痕饰带",
+      "base_type_id": 2,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "109": {
+      "translation_key": "Item_Names.Unique_Name_109",
+      "en": "Shard of the Shattered Lance",
+      "zh": "破碎长矛的碎片",
+      "base_type_id": 9,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "110": {
+      "translation_key": "Item_Names.Unique_Name_110",
+      "en": "Fragments of the Shattered Lance",
+      "zh": "破碎长矛的裂片",
+      "base_type_id": 22,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "138": {
+      "translation_key": "Item_Names.Unique_Name_138",
+      "en": "Zerrick''s Guile",
+      "zh": "泽里克的诡计",
+      "base_type_id": 2,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "139": {
+      "translation_key": "Item_Names.Unique_Name_139",
+      "en": "Zerrick''s Greed",
+      "zh": "泽里克的贪婪",
+      "base_type_id": 4,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "140": {
+      "translation_key": "Item_Names.Unique_Name_140",
+      "en": "Zerrick''s Ambition",
+      "zh": "泽里克的野心",
+      "base_type_id": 3,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "156": {
+      "translation_key": "Item_Names.Unique_Name_156",
+      "en": "Gaspar''s Will",
+      "zh": "加斯帕的意志",
+      "base_type_id": 8,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "157": {
+      "translation_key": "Item_Names.Unique_Name_157",
+      "en": "Gaspar''s Acuity",
+      "zh": "加斯帕的敏锐",
+      "base_type_id": 1,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "158": {
+      "translation_key": "Item_Names.Unique_Name_158",
+      "en": "Gaspar''s Insight",
+      "zh": "加斯帕的洞察",
+      "base_type_id": 0,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "170": {
+      "translation_key": "Item_Names.Unique_Name_170",
+      "en": "Sinathia''s Dying Breath",
+      "zh": "西纳提亚的濒死之息",
+      "base_type_id": 7,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "171": {
+      "translation_key": "Item_Names.Unique_Name_171",
+      "en": "Sinathia''s Resurrection",
+      "zh": "西纳提亚的亡者复苏",
+      "base_type_id": 18,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "173": {
+      "translation_key": "Item_Names.Unique_Name_173",
+      "en": "Ruby Fang Cleaver",
+      "zh": "红宝石毒牙砍刀",
+      "base_type_id": 5,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "174": {
+      "translation_key": "Item_Names.Unique_Name_174",
+      "en": "Ruby Fang Aegis",
+      "zh": "红宝石毒牙塔盾",
+      "base_type_id": 18,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "186": {
+      "translation_key": "Item_Names.Unique_Name_186",
+      "en": "Vilatria''s Downfall",
+      "zh": "维拉提亚的陨落",
+      "base_type_id": 15,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "193": {
+      "translation_key": "Item_Names.Unique_Name_193",
+      "en": "Corsair''s Boarding Shield",
+      "zh": "海盗的跳帮盾",
+      "base_type_id": 18,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "194": {
+      "translation_key": "Item_Names.Unique_Name_194",
+      "en": "Corsair''s Blood Cowl",
+      "zh": "海盗的鲜血风帽",
+      "base_type_id": 0,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "227": {
+      "translation_key": "Item_Names.Unique_Name_227",
+      "en": "Ferebor''s Chisel",
+      "zh": "费洛波尔的雕刻刀",
+      "base_type_id": 6,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "228": {
+      "translation_key": "Item_Names.Unique_Name_228",
+      "en": "Ferebor''s Persistence",
+      "zh": "费洛波尔的毅力",
+      "base_type_id": 21,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "260": {
+      "translation_key": "Item_Names.Unique_Name_260",
+      "en": "Lich''s Envy",
+      "zh": "巫妖的妒忌",
+      "base_type_id": 4,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "261": {
+      "translation_key": "Item_Names.Unique_Name_261",
+      "en": "Lich''s Scorn",
+      "zh": "巫妖的蔑视",
+      "base_type_id": 19,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "477": {
+      "translation_key": "Item_Names.Unique_Name_477",
+      "en": "Unsated Rage",
+      "zh": "不息狂怒",
+      "base_type_id": 21,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "481": {
+      "translation_key": "Item_Names.Unique_Name_481",
+      "en": "Caretaker''s Wrath",
+      "zh": "看守者的愤怒",
+      "base_type_id": 12,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    },
+    "482": {
+      "translation_key": "Item_Names.Unique_Name_482",
+      "en": "Caretaker''s Regrowth",
+      "zh": "看守者的再度生长",
+      "base_type_id": 1,
+      "hide_from_players": 0,
+      "database_entry_present": true
+    }
+  }
+}

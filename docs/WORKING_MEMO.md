@@ -32,6 +32,19 @@
 - 必须保留两处源矛盾：页面标题/正文/所示技能为Flay，但嵌入data-le-profile和Planner链接为死灵2ai4s0qh#1；FAQ多写two Traitor's Tongue，开头与配装是斧主手＋一把匕首副手。不要据嵌入链接替换已有巫妖JSON，也不创造双匕首需求。Loot Filter按钮没有可用XML内容，不能当作已取得Maxroll过滤器。
 - 先前“缺门槛/替代/876用途”对巫妖已解决；仍缺死灵正文、每部位拾取最低阶数、LP/WW及玩家进度/库存偏好。本轮只完成保存网页的充分性核对，不跳到动态工具实现。
 
+## Maxroll Strict参考（2026-10-06）
+
+- 用户提供两份Strict XML，字节固定于sources/builds/maxroll-skeleton-necromancer-strict.xml和maxroll-flay-mana-lich-strict.xml。来源、附件、哈希和边界在maxroll-strict-manifest.json。死灵141条（118启用/23关闭），巫妖130条（107/23）；没有生成合并成品。
+- 阅读MAXROLL_STRICT_ASSESSMENT.md和MAXROLL_RULE_INDEX.md；完整条件、重复Uniques、nil和提示在analysis/maxroll-strict.json。复现python -X utf8 scripts/analyze_maxroll_filters.py。这里X编号是XML物理位置，两文件没有Order，不能拿Raxx编号套用；社区导入反向只作辅助证据，实机次序待核对。
+- 两份Planner名单均11种，完整覆盖原JSON暗金。巫妖额外415；死灵额外300（遗物Ambitions of an Erased Acolyte）及477（戒指Unsated Rage），后两者没有机制说明，标为生成器候选。核心名单兜底本身没有LP/WW限制；1/2/3LP与WW1/15/19是其他分层规则，不是所有核心的统一门槛。
+- 分部位T6/T7均数量1、advanced=true、单条阶数>=6/7、合计ANY、OnlyUncorrupted，通常底材不限。素材类型与暗金底材分开。巫妖10个类型，死灵9个；神像和祭坛另有规则。死灵5条Rare Strict有底材、数量2、合计T>=4，但没有RarityCondition，不能当作只适用稀有度RARE。
+- 巫妖正文的5种替代暗金未进入专属名单，通用路径不一：353/125/366有无LP路径，348普通潜能路径从LP2起，294只有LP3/4；低LP过渡戒指应明确保护。876+891的备用神像没有独立用途提示，但891在通用Weaver池，不能说一定被隐藏。41:4祭坛正文选项也要补到BD分支。
+- 神像Strict规则是混合池数量2，并非严格前后缀配对；一条目标词缀与宽泛66词缀Weaver规则都启用。普通/腐化计数待客户端验证。分部位OnlyUncorrupted规则混入1084/951/1009/1022等腐化属性，不证明腐化成品可通过；不要当成普通可制作词缀。
+- Wanted Affix & Tier 7同时有两份AffixCondition：一份目标池advanced=false，一份全池T>=7；FP>=1、未腐化。同一条词缀可参与两者；目标不必T7。高制作潜能规则有FP>=52及AffixCountCondition NotSealed，此条件类型未出现在Raxx原文，不能忽略。
+- Strict关闭项全部按功能规则研究，不按Raxx56蓝字删除策略处理。巫妖Shatter/Edit池仅36；魔力34、暴击避免97碎片需结合库存另配。普通生命碎片0–60、T3+生命0–80；等级含上限。CoF升华规则关闭且类型未选，开启前先配置。
+- 全文件各涉及1156词缀、482暗金ID；Raxx未涉及的44词缀/41暗金从原有完整1.5.0缓存补齐在maxroll-reference-supplement.json，不改冻结基底参考。名字与旧数据库标志不能证明当前掉落状态。Maxroll保存脚本将lastModifiedInVersion默认设1.0.0.4，不据此判定旧赛季。
+- 现有JSON+巫妖正文+Strict足够支持双BD终局收集初版；死灵正文可补机制，已不作为初版必要前提。Strict是用户提供的参考等级，不等于自动采纳全部阈值。按Raxx框架填两BD需求与替代品、配置空模板，重排优先级，删除Raxx说明，校验两BD同等保留；两个Strict直接271条，加基底107条为378条，不能直接拼接。
+
 ## 已确认的固定事实
 
 1. 当前上游文件固定于57498b0901a7c099efdf931923c65271fdfdb993，文件名仍为v1.0，提交标题写v1.1。SHA-256：146465750ab794175676f73b7251ddba610c42c4508bb16b614b6d4982036288。
