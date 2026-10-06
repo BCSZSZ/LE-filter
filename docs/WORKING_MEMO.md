@@ -4,6 +4,9 @@
 
 ## 当前交付：Raxx变量与Strict情报，等待Review
 
+- V05–V10已展开原设计、原门槛、终局／过渡关系与例子，见STRICT_VARIABLE_REVIEW的equipment-purpose入口。它们是重叠的收集用途，不是6个成长阶段：V05最佳T7候选，V06双崇高保护，V07／V08宽T7制作储备，V09 Havoc制作候选，V10过渡T6补收。
+- 只有V10的R63／64限定角色0–84级。V05–V09无角色等级退出；V06至少2条T≥6，T6＋T6在85级后仍保留，合计ANY不启用保存值14。T6阶数不能自动等同过渡，也不能把V05单条最佳T7等同整件毕业。85级是作者的收集策略，不是装备作废或更换要求。
+- V09好词缀不限阶数，宽池T7可以在另一条不想要的属性上，两份条件也可能由同一条T7满足。Havoc实际要求4条未封印词缀；原R62无未封印计数或FP门槛，显示只作材料候选。本轮补充机制说明，不新增门槛、不移动R38–47／R48／R60–64顺序、不修改最终XML。
 - 用户确认备用关系可作为后续补充，至少普通／腐化区分要自动化。Strict给ID但不给逐词缀腐化标签；split_affixes统一按冻结specialAffixType=6分类，供V13／V19／V21使用，不按名称或固定腐化ID名单猜测。未知ID查表报错，不默认普通。新增自动输出strict-idol-affix-classification.json与STRICT_IDOL_CLASSIFICATION.md，覆盖12条两BD神像源规则，保留源ID、底材、启用状态与出处，不依赖Guide／Planner。
 - 神像本轮修正：以前把普通与腐化ID混在同一个计数池，会让843＋1070误充双目标毕业。V19／V21按specialAffixType=6剥离腐化参考；affix_ids只含普通目标，corrupted_affix_ids独立，原affix_pools仍保留全部源ID。V13的早期腐化参考不删除。
 - 用户明确Flay：中型843＋854、厚实876＋886，各记录1项候选／2项组合毕业两层；都保留Weaver与Lagon，腐化状态不限、阶数不限，两项优先，声音不同。user_reviewed_flay_idol_layers记录4层，标明来源是用户审阅而非Strict等价复制。“毕业”只是普通组合齐全，不指满roll；其他BD配对仍待审阅。

@@ -4,6 +4,8 @@
 
 先读[本轮审阅结论](docs/STRICT_VARIABLE_REVIEW.md)，再查[原版变量及保留门槛](docs/RAXX_VARIABLES.md)与[工作memo](docs/WORKING_MEMO.md)。当前默认Flay为主、Skeleton为副，共享按主，两者同等收集。旧187条XML及其说明保留作历史试制，包含Strict策略移植，**不作为本轮已认可的最终方案**；动态勾选界面尚未实施。
 
+[V05–V10的用途与过渡范围](docs/STRICT_VARIABLE_REVIEW.md#equipment-purpose)已展开：最佳T7、双崇高、宽T7制作储备与Havoc各有收集目的；只有V10的T6补收在85级退出，双T6仍可能由V06保留。
+
 最新神像修正见[Flay神像审阅](docs/FLAY_IDOL_REVIEW.md)：腐化不凑普通目标数量，Flay按用户指定记录1项候选／2项组合毕业四层。普通目标与腐化参考分别输出，原Strict保留供追溯。
 
 [Strict神像自动分类结果](docs/STRICT_IDOL_CLASSIFICATION.md)单独展示12条BD源规则：词缀ID来自Strict，腐化类别由冻结数据库自动查询，不依赖攻略。备用关系另作后续补充。
