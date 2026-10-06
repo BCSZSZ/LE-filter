@@ -1,6 +1,10 @@
-# LE-filter：Raxx S5 基底研究
+# LE-filter：Raxx 基底与双 BD 收集过滤器
 
-已完成第一阶段准备：固定原始过滤器、阅读完整视频英文自动字幕、解析全部163条规则、编写中文说明，并保存后续工作 memo。原始基底未修改。本阶段没有生成 BD 专属 filter，也没有实现勾选工具。
+已生成 **Flay Mana Lich + Skeleton Necromancer** 合并收集版：187条规则，两BD同等保留，25种目标及替代暗金有无潜能门槛兜底。已将Maxroll Strict的BD条件填入Raxx框架，并实现离线生成与检查。原始基底、两份Strict和Planner JSON未修改；动态勾选界面留待下一阶段。
+
+直接使用：[成品XML](filters/Flay-Mana-Lich+Skeleton-Necromancer.xml) → [使用说明与玩家待办](docs/COMBINED_FILTER_GUIDE.md)。研究与维护：[Strict转移规则](docs/TRANSFER_RULES.md) → [187条成品索引](docs/GENERATED_RULE_INDEX.md) → [工作memo](docs/WORKING_MEMO.md)。
+
+第一阶段的基底研究也已完成：固定原始过滤器、阅读完整视频英文自动字幕、解析全部163条规则，中文说明和原模板待办保留如下。
 
 建议先读 [中文说明](docs/FILTER_GUIDE.md)和 [玩家待办清单](docs/PLAYER_TODO.md)，再按需要查 [163条完整规则索引](docs/RULE_INDEX.md)。视频讲解与当前文件的差异见 [视频与版本核对](docs/VIDEO_AND_VERSIONS.md)。
 
@@ -13,6 +17,11 @@
 | [PLAN.md](PLAN.md) | 本阶段计划、验收条件与范围 |
 | [FILTER_GUIDE.md](docs/FILTER_GUIDE.md) | 用人能读懂的语言解释整套过滤器 |
 | [PLAYER_TODO.md](docs/PLAYER_TODO.md) | 蓝字和大写文字要求玩家完成的配置、可选功能与进度调整 |
+| [COMBINED_FILTER_GUIDE.md](docs/COMBINED_FILTER_GUIDE.md) | 本次成品的颜色、用途、已完成配置与玩家剩余待办 |
+| [TRANSFER_RULES.md](docs/TRANSFER_RULES.md) | Strict输入族如何填入基底、共享池拆分、补充与明确差异 |
+| [GENERATED_RULE_INDEX.md](docs/GENERATED_RULE_INDEX.md) | 187条成品编号G与基底槽位R、Strict来源X的定位 |
+| [analysis/transfer-report.json](analysis/transfer-report.json) | 原163条与Strict全部271条的处置，以及每条成品的来源 |
+| [analysis/generated-validation.json](analysis/generated-validation.json) | 条件转移、无潜能门槛暗金保护与20个有限离线案例 |
 | [BUILD_INPUT_ASSESSMENT.md](docs/BUILD_INPUT_ASSESSMENT.md) | 两份BD导出的实际信息量、可生成范围与缺少的过渡／机制资料 |
 | [SAVED_GUIDE_ASSESSMENT.md](docs/SAVED_GUIDE_ASSESSMENT.md) | 本地保存巫妖网页补充的门槛、6种替代／升级暗金、神像依赖与来源矛盾 |
 | [MAXROLL_STRICT_ASSESSMENT.md](docs/MAXROLL_STRICT_ASSESSMENT.md) | 两份Strict XML的参考价值、具体拾取门槛、覆盖缺口和合并前配置 |
@@ -37,7 +46,16 @@
 
 ## 复现
 
-安装 Python 3 后，在仓库根目录执行：
+安装 Python 3 后，在仓库根目录生成本次成品并检查：
+
+```powershell
+python -X utf8 scripts/generate_filter.py
+python -X utf8 scripts/verify_generated_filter.py
+```
+
+只使用标准库，无需网络或.cache。当前固定两份导出；38条源T6/T7条件被集合等价地拆成46条，另55条Strict谓词保持原样，25种目标暗金及20个有限离线案例已通过检查。未建模的封印计数会返回未确认；客户端导入和实际掉落待验证。
+
+重建原始基底研究索引：
 
 ```powershell
 python -X utf8 scripts/analyze_filter.py
@@ -45,6 +63,6 @@ python -X utf8 scripts/analyze_filter.py
 
 脚本只使用 Python 标准库，离线读取固定资料，生成三个查询文档和三个分析 JSON，并检查来源哈希、规则数量、排序、启用状态、全部条件类型与 ID 引用。重复执行应得到相同文件；不会修改原始 filter。
 
-已完成结构与资料检查；尚未在 Last Epoch 客户端导入或用实际掉落验证。社区数据库用于解释 ID 与格式，不能作为游戏引擎模拟器。三项旧暗金 ID 只能在本地化中找到名字，清单已有标注。
+社区数据库用于解释 ID 与格式，不能作为游戏引擎模拟器。三项旧暗金 ID 只能在本地化中找到名字，清单已有标注。
 
 Raxxanterax 是原始过滤器的作者；参考数据来自 Dammitt 的 Last Epoch Tools。仓库保留出处，未替第三方原文声明新的许可证。完整视频字幕仅作为本地研究缓存，不上传。

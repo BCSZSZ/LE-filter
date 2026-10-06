@@ -7,3 +7,5 @@
 - 保持简单、只实现已请求的阶段；原文未配置的空选择和实际默认状态必须显式审查。
 - 原filter是待玩家配置的模板。玩家待办见docs/PLAYER_TODO.md；未来可复制成品完成配置后删除56条蓝色说明，说明留在文档。保持功能规则相对次序并重排Order，不把关闭的功能规则一律当作说明删除。
 - 自动生成索引用python -X utf8 scripts/analyze_filter.py重建。修改脚本后检查结构验证、输出确定性和文档链接。
+- 当前双BD成品见docs/COMBINED_FILTER_GUIDE.md；Strict到基底的规则以docs/TRANSFER_RULES.md为准。用户已确认Strict由攻略导出，BD条件以Strict为主，JSON和正文做有来源的补充。
+- 成品XML、transfer-report和GENERATED_RULE_INDEX由scripts/generate_filter.py重建，不仅手改输出。修改生成器后运行scripts/verify_generated_filter.py；超200条或转移不等价不能静默降级。封印等未知语义返回未确认，不充当游戏实测。

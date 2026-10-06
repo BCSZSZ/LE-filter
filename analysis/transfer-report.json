@@ -1,0 +1,5760 @@
+{
+  "game_execution_tested": false,
+  "output": "filters/Flay-Mana-Lich+Skeleton-Necromancer.xml",
+  "rule_limit": 200,
+  "baseline_source": {
+    "local_path": "sources/Raxx's S5 Ultimate Filter v1.0.txt",
+    "upstream_repository": "raxxanterax/GAMING",
+    "upstream_path": "Raxx's S5 Ultimate Filter v1.0.txt",
+    "commit": "57498b0901a7c099efdf931923c65271fdfdb993",
+    "commit_time_utc": "2026-10-01T23:22:12Z",
+    "commit_subject": "Update Raxx's S5 Ultimate Filter v1.1.txt",
+    "git_blob_sha": "b451524609464960d26020332d5577e97f6e863b",
+    "sha256": "146465750ab794175676f73b7251ddba610c42c4508bb16b614b6d4982036288",
+    "bytes": 1275032,
+    "url": "https://github.com/raxxanterax/GAMING/blob/57498b0901a7c099efdf931923c65271fdfdb993/Raxx%27s%20S5%20Ultimate%20Filter%20v1.0.txt"
+  },
+  "sources": {
+    "flay-mana-lich": {
+      "strict": {
+        "file": "sources/builds/maxroll-flay-mana-lich-strict.xml",
+        "source_attachment": "C:\\Users\\liaoweiran\\.codex\\attachments\\79071841-b2de-42ec-b755-c04089501b9d\\Pasted text.txt",
+        "sha256": "4e70c8b9111a28ae257aea7b561d931ac99629a6054646ce18a3ce5e3458995c",
+        "bytes": 1115268,
+        "name": "Flay Mana Lich",
+        "strictness": "Strict as reported by user and stated in XML description",
+        "planner_url_supplied_earlier": "https://maxroll.gg/last-epoch/planner/y21h9h0x#2",
+        "exported_planner_set_not_identified": true
+      },
+      "planner": {
+        "file": "sources/builds/flay-mana-lich.json",
+        "sha256": "fe5932f3f5990bcffa88cef0e882789855d89cbba89c2d66ed1768f6ea531ba7",
+        "source": "User attachment Pasted text.txt, preserved byte-for-byte",
+        "planner_url_supplied_by_user": "https://maxroll.gg/last-epoch/planner/y21h9h0x#2",
+        "skill_names": {
+          "fl44": "Flay",
+          "rf1azz": "Reaper Form",
+          "ch4bo": "Chaos Bolts",
+          "bp2nk": "Marrow Shards",
+          "ha84": "Harvest"
+        }
+      }
+    },
+    "skeleton-necromancer": {
+      "strict": {
+        "file": "sources/builds/maxroll-skeleton-necromancer-strict.xml",
+        "source_attachment": "C:\\Users\\liaoweiran\\.codex\\attachments\\abd147e0-8660-4b3e-aaf0-c35ecf242f0c\\Pasted text.txt",
+        "sha256": "5033341708ab5594cfcb70448bf3c6084333f03efa4388e5d4c6f4b1409dbade",
+        "bytes": 1162656,
+        "name": "Skeleton Necromancer",
+        "strictness": "Strict as reported by user and stated in XML description",
+        "planner_url_supplied_earlier": "https://maxroll.gg/last-epoch/planner/2ai4s0qh#1",
+        "exported_planner_set_not_identified": true
+      },
+      "planner": {
+        "file": "sources/builds/skeleton-necromancer.json",
+        "sha256": "456c46bb25c88dc6077ce4189dcd89e268eb12aa8893f44cbe19e35202cc988d",
+        "source": "JSON pasted in the user message, saved without changing fields",
+        "planner_url_supplied_by_user": "https://maxroll.gg/last-epoch/planner/2ai4s0qh#1",
+        "skill_names": {
+          "rb31pl": "Rip Blood",
+          "ds4d3": "Dread Shade",
+          "ss37kl": "Summon Skeleton",
+          "ad0ry": "Aura of Decay",
+          "bc53": "Bone Curse"
+        }
+      }
+    }
+  },
+  "baseline": [
+    {
+      "number": 1,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 2,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 3,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 4,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 5,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 6,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 7,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 8,
+      "disposition": "augmented"
+    },
+    {
+      "number": 9,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 10,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 11,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 12,
+      "disposition": "retained"
+    },
+    {
+      "number": 13,
+      "disposition": "retained"
+    },
+    {
+      "number": 14,
+      "disposition": "retained"
+    },
+    {
+      "number": 15,
+      "disposition": "configured"
+    },
+    {
+      "number": 16,
+      "disposition": "augmented"
+    },
+    {
+      "number": 17,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 18,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 19,
+      "disposition": "retained"
+    },
+    {
+      "number": 20,
+      "disposition": "retained"
+    },
+    {
+      "number": 21,
+      "disposition": "retained"
+    },
+    {
+      "number": 22,
+      "disposition": "retained"
+    },
+    {
+      "number": 23,
+      "disposition": "retained"
+    },
+    {
+      "number": 24,
+      "disposition": "retained"
+    },
+    {
+      "number": 25,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 26,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 27,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 28,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 29,
+      "disposition": "disabled_explicitly"
+    },
+    {
+      "number": 30,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 31,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 32,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 33,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 34,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 35,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 36,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 37,
+      "disposition": "configured"
+    },
+    {
+      "number": 38,
+      "disposition": "replaced"
+    },
+    {
+      "number": 39,
+      "disposition": "replaced"
+    },
+    {
+      "number": 40,
+      "disposition": "replaced"
+    },
+    {
+      "number": 41,
+      "disposition": "replaced"
+    },
+    {
+      "number": 42,
+      "disposition": "replaced"
+    },
+    {
+      "number": 43,
+      "disposition": "replaced"
+    },
+    {
+      "number": 44,
+      "disposition": "replaced"
+    },
+    {
+      "number": 45,
+      "disposition": "replaced"
+    },
+    {
+      "number": 46,
+      "disposition": "replaced"
+    },
+    {
+      "number": 47,
+      "disposition": "replaced"
+    },
+    {
+      "number": 48,
+      "disposition": "configured"
+    },
+    {
+      "number": 49,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 50,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 51,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 52,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 53,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 54,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 55,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 56,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 57,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 58,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 59,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 60,
+      "disposition": "disabled_explicitly"
+    },
+    {
+      "number": 61,
+      "disposition": "replaced"
+    },
+    {
+      "number": 62,
+      "disposition": "replaced"
+    },
+    {
+      "number": 63,
+      "disposition": "replaced"
+    },
+    {
+      "number": 64,
+      "disposition": "replaced"
+    },
+    {
+      "number": 65,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 66,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 67,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 68,
+      "disposition": "configured"
+    },
+    {
+      "number": 69,
+      "disposition": "replaced"
+    },
+    {
+      "number": 70,
+      "disposition": "disabled_explicitly"
+    },
+    {
+      "number": 71,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 72,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 73,
+      "disposition": "retained"
+    },
+    {
+      "number": 74,
+      "disposition": "retained"
+    },
+    {
+      "number": 75,
+      "disposition": "replaced"
+    },
+    {
+      "number": 76,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 77,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 78,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 79,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 80,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 81,
+      "disposition": "disabled_explicitly"
+    },
+    {
+      "number": 82,
+      "disposition": "replaced"
+    },
+    {
+      "number": 83,
+      "disposition": "replaced"
+    },
+    {
+      "number": 84,
+      "disposition": "replaced"
+    },
+    {
+      "number": 85,
+      "disposition": "disabled_explicitly"
+    },
+    {
+      "number": 86,
+      "disposition": "disabled_explicitly"
+    },
+    {
+      "number": 87,
+      "disposition": "disabled_explicitly"
+    },
+    {
+      "number": 88,
+      "disposition": "disabled_explicitly"
+    },
+    {
+      "number": 89,
+      "disposition": "disabled_explicitly"
+    },
+    {
+      "number": 90,
+      "disposition": "replaced"
+    },
+    {
+      "number": 91,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 92,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 93,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 94,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 95,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 96,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 97,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 98,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 99,
+      "disposition": "replaced"
+    },
+    {
+      "number": 100,
+      "disposition": "replaced"
+    },
+    {
+      "number": 101,
+      "disposition": "replaced"
+    },
+    {
+      "number": 102,
+      "disposition": "replaced"
+    },
+    {
+      "number": 103,
+      "disposition": "replaced"
+    },
+    {
+      "number": 104,
+      "disposition": "replaced"
+    },
+    {
+      "number": 105,
+      "disposition": "replaced"
+    },
+    {
+      "number": 106,
+      "disposition": "replaced"
+    },
+    {
+      "number": 107,
+      "disposition": "replaced"
+    },
+    {
+      "number": 108,
+      "disposition": "replaced"
+    },
+    {
+      "number": 109,
+      "disposition": "replaced"
+    },
+    {
+      "number": 110,
+      "disposition": "replaced"
+    },
+    {
+      "number": 111,
+      "disposition": "replaced"
+    },
+    {
+      "number": 112,
+      "disposition": "replaced"
+    },
+    {
+      "number": 113,
+      "disposition": "replaced"
+    },
+    {
+      "number": 114,
+      "disposition": "replaced"
+    },
+    {
+      "number": 115,
+      "disposition": "replaced"
+    },
+    {
+      "number": 116,
+      "disposition": "replaced"
+    },
+    {
+      "number": 117,
+      "disposition": "replaced"
+    },
+    {
+      "number": 118,
+      "disposition": "replaced"
+    },
+    {
+      "number": 119,
+      "disposition": "replaced"
+    },
+    {
+      "number": 120,
+      "disposition": "replaced"
+    },
+    {
+      "number": 121,
+      "disposition": "replaced"
+    },
+    {
+      "number": 122,
+      "disposition": "replaced"
+    },
+    {
+      "number": 123,
+      "disposition": "replaced"
+    },
+    {
+      "number": 124,
+      "disposition": "replaced"
+    },
+    {
+      "number": 125,
+      "disposition": "replaced"
+    },
+    {
+      "number": 126,
+      "disposition": "replaced"
+    },
+    {
+      "number": 127,
+      "disposition": "replaced"
+    },
+    {
+      "number": 128,
+      "disposition": "replaced"
+    },
+    {
+      "number": 129,
+      "disposition": "replaced"
+    },
+    {
+      "number": 130,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 131,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 132,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 133,
+      "disposition": "player_instruction_removed"
+    },
+    {
+      "number": 134,
+      "disposition": "retained"
+    },
+    {
+      "number": 135,
+      "disposition": "retained"
+    },
+    {
+      "number": 136,
+      "disposition": "disabled_explicitly"
+    },
+    {
+      "number": 137,
+      "disposition": "disabled_explicitly"
+    },
+    {
+      "number": 138,
+      "disposition": "retained"
+    },
+    {
+      "number": 139,
+      "disposition": "retained"
+    },
+    {
+      "number": 140,
+      "disposition": "retained"
+    },
+    {
+      "number": 141,
+      "disposition": "retained"
+    },
+    {
+      "number": 142,
+      "disposition": "retained"
+    },
+    {
+      "number": 143,
+      "disposition": "retained"
+    },
+    {
+      "number": 144,
+      "disposition": "retained"
+    },
+    {
+      "number": 145,
+      "disposition": "retained"
+    },
+    {
+      "number": 146,
+      "disposition": "retained"
+    },
+    {
+      "number": 147,
+      "disposition": "retained"
+    },
+    {
+      "number": 148,
+      "disposition": "retained"
+    },
+    {
+      "number": 149,
+      "disposition": "retained"
+    },
+    {
+      "number": 150,
+      "disposition": "retained"
+    },
+    {
+      "number": 151,
+      "disposition": "retained"
+    },
+    {
+      "number": 152,
+      "disposition": "disabled_explicitly"
+    },
+    {
+      "number": 153,
+      "disposition": "configured"
+    },
+    {
+      "number": 154,
+      "disposition": "disabled_explicitly"
+    },
+    {
+      "number": 155,
+      "disposition": "retained"
+    },
+    {
+      "number": 156,
+      "disposition": "retained"
+    },
+    {
+      "number": 157,
+      "disposition": "disabled_explicitly"
+    },
+    {
+      "number": 158,
+      "disposition": "disabled_explicitly"
+    },
+    {
+      "number": 159,
+      "disposition": "disabled_explicitly"
+    },
+    {
+      "number": 160,
+      "disposition": "retained"
+    },
+    {
+      "number": 161,
+      "disposition": "retained"
+    },
+    {
+      "number": 162,
+      "disposition": "retained"
+    },
+    {
+      "number": 163,
+      "disposition": "retained"
+    }
+  ],
+  "strict": [
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 1,
+      "name": "All Items",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 2,
+      "name": "Runes",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 3,
+      "name": "Important Runes",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 4,
+      "name": "Important Glyphs",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 5,
+      "name": "Woven Echoes",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 6,
+      "name": "Keys & Currency",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 7,
+      "name": "Crystallized Heart",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 8,
+      "name": "Temporal Keystone",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 9,
+      "name": "Movement Speed Rings (10)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 10,
+      "name": "Champion Affixes (40)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 11,
+      "name": "Personal Affixes (40)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 12,
+      "name": "Experimental Affixes (40)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 13,
+      "name": "All Idols (35)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 14,
+      "name": "Generic Resistances & Health Idols (75)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 15,
+      "name": "All Altars",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 16,
+      "name": "Corrupted Items",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 17,
+      "name": "1 Affix - Minor Idols",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        149
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 18,
+      "name": "1 Affix - Stout Idols",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        150
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 19,
+      "name": "Strict - Weaver Idols",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        156
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 20,
+      "name": "Reflect Idols (Alt Leveling)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        157
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 21,
+      "name": "Strict - Minor Idols",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        128
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 22,
+      "name": "Strict - Stout Idols",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        129
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 23,
+      "name": "CoF Rune of Ascendance (Select Item Type)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 24,
+      "name": "Shatter / Removal - Increased Health (60)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        117
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 25,
+      "name": "Shatter / Removal - Increased Health T3+ (80)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        118
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 26,
+      "name": "Shatter / Removal (Edit Affixes)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        109
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 27,
+      "name": "Any Tier 7 Suffixes (Rune of Redemption)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 28,
+      "name": "Any Tier 7 Prefixes (Rune of Redemption)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 29,
+      "name": "Open Prefix & Tier 7 (Rune of Havoc)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 30,
+      "name": "Open Suffix & Tier 7 (Rune of Havoc)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 31,
+      "name": "Wanted Affix & Tier 7 (Rune of Havoc)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        54
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 32,
+      "name": "Tier 7 Highly Craftable Items (52+ FP)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        55
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 33,
+      "name": "Tier 7 Eternal Gauntlets",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        56
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 34,
+      "name": "Tier 7 Rings & Amulets",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 35,
+      "name": "",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 36,
+      "name": "Rare Set Items",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 37,
+      "name": "Unique Items",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 38,
+      "name": "Cocooned Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 39,
+      "name": "Primordial Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 40,
+      "name": "",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 41,
+      "name": "Unique Idols",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        18
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 42,
+      "name": "Generic Good Altars (Min. Tier 6)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        141
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 43,
+      "name": "Suffix Effect Idol Altar (Tier 6 Equivalent)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        142
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 44,
+      "name": "Prefix Effect Idol Altar (Tier 6 Equivalent)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        143
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 45,
+      "name": "Suffix Effect Idol Altar (Tier 7 Equivalent)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        134
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 46,
+      "name": "Prefix Effect Idol Altar (Tier 7 Equivalent)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        135
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 47,
+      "name": "Generic Good Altars (Double Exalted)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        136
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 48,
+      "name": "Tier 6 Wanted Affixes (Can Edit Affixes & Item Type)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 49,
+      "name": "Tier 6 - Relic",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        63,
+        64,
+        88
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 50,
+      "name": "Tier 6 - Ring",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        66,
+        67,
+        89
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 51,
+      "name": "Tier 6 - Amulet",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        69,
+        90
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 52,
+      "name": "Tier 6 - Gloves",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        71,
+        91
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 53,
+      "name": "Tier 6 - Boots",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        73,
+        74,
+        92
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 54,
+      "name": "Tier 6 - Belt",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        76,
+        77,
+        93
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 55,
+      "name": "Tier 6 - Body Armor",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        79,
+        94
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 56,
+      "name": "Tier 6 - Helmet",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        81,
+        95
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 57,
+      "name": "Tier 6 - Dagger",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        60
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 58,
+      "name": "Tier 6 - One-Handed Axe",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        61
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 59,
+      "name": "Tier 6 Strict Idol Altar",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        144
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 60,
+      "name": "Exalted Bases for Alt Leveling Setup (T7)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 61,
+      "name": "Wanted Tier 7 (Can Edit Affixes & Item Type)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 62,
+      "name": "Tier 7 - Relic",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        48,
+        49
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 63,
+      "name": "Tier 7 - Ring",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        45,
+        46
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 64,
+      "name": "Tier 7 - Amulet",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        43
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 65,
+      "name": "Tier 7 - Gloves",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        41
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 66,
+      "name": "Tier 7 - Boots",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        38,
+        39
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 67,
+      "name": "Tier 7 - Belt",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        35,
+        36
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 68,
+      "name": "Tier 7 - Body Armor",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        33
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 69,
+      "name": "Tier 7 - Helmet",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        31
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 70,
+      "name": "Tier 7 - Dagger",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        30
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 71,
+      "name": "Tier 7 - One-Handed Axe",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        28
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 72,
+      "name": "Tier 7 Strict Idol Altar",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        137
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 73,
+      "name": "Multi Exalted (Min. Tier 7 & Tier 6)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 74,
+      "name": "Multi Exalted (Min. 2 Tier 7)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 75,
+      "name": "Triple+ Exalted (Min. 1 Tier 7)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 76,
+      "name": "Corrupted Multi Exalted (Min. Tier 7 & Tier 6)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 77,
+      "name": "Uniques with 1 LP (All)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 78,
+      "name": "Dungeons / Arena Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 79,
+      "name": "Rare Dungeon Drops",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 80,
+      "name": "Rare Monolith Timeline Boss Drops",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 81,
+      "name": "Harbinger Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 82,
+      "name": "Very Rare Uniques (80% Reroll Chance)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 83,
+      "name": "Very Rare Uniques (85% Reroll Chance)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 84,
+      "name": "Very Rare Uniques (90% Reroll Chance)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 85,
+      "name": "Woven Echoes Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 86,
+      "name": "Exiled Mage Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 87,
+      "name": "Shade of Orobyss Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 88,
+      "name": "Aberroth Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 89,
+      "name": "Vision of the Observer Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 90,
+      "name": "Morditas Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 91,
+      "name": "Final Rift Beast - Evolution's End",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 92,
+      "name": "Dungeons / Arena Uniques - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 93,
+      "name": "Rare Dungeon Drops - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 94,
+      "name": "Rare Monolith Timeline Boss Drops - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 95,
+      "name": "Harbinger Uniques - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 96,
+      "name": "Very Rare Uniques With 1 LP (80% Reroll Chance)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 97,
+      "name": "Very Rare Uniques With 1 LP(85% Reroll Chance)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 98,
+      "name": "Very Rare Uniques With 1 LP (90% Reroll Chance)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 99,
+      "name": "Woven Echoes Uniques - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 100,
+      "name": "Exiled Mage Uniques - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 101,
+      "name": "Shade of Orobyss Uniques - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 102,
+      "name": "Aberroth Uniques - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 103,
+      "name": "Morditas Uniques - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 104,
+      "name": "Final Rift Beast - Evolution's End - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 105,
+      "name": "Any Class Alt Leveling Uniques - Campaign",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 106,
+      "name": "Any Class Alt Leveling Uniques - Reflect  lvl 35",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 107,
+      "name": "Weaver's Will Items",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 108,
+      "name": "Uniques With 21+ Weaver's Will (≤1% - 30+ LPL)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 109,
+      "name": "Uniques With 20+ Weaver's Will (≤1% - 40+ LPL)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 110,
+      "name": "Uniques With 19+ Weaver's Will (≤1% - 50+ LPL)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 111,
+      "name": "Uniques With 18+ Weaver's Will (≤1% - 68+ LPL)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 112,
+      "name": "Uniques With 2 LP (All)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 113,
+      "name": "Uniques With 2 LP (≤4% - 48+ LPL)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 114,
+      "name": "Uniques With 2 LP (≤1% - 70+ LPL)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 115,
+      "name": "Uniques With 2 LP (80% Reroll Chance)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 116,
+      "name": "Uniques With 2 LP (85% Reroll Chance)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 117,
+      "name": "Uniques With 2 LP (90% Reroll Chance)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 118,
+      "name": "Uniques With 3 LP (All)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 119,
+      "name": "Uniques With 3 LP (≤1% - 27+ LPL)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 120,
+      "name": "Legendary Uniques From Planner (Fail Safe Rule)",
+      "disposition": "planner_whitelist_rebuilt",
+      "output_numbers": [
+        4,
+        8
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 121,
+      "name": "Uniques & Sets From Planner (Optional: Add More)",
+      "disposition": "planner_whitelist_rebuilt",
+      "output_numbers": [
+        4,
+        8
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 122,
+      "name": "Corrupted Uniques & Sets From Planner (Optional: Add More)",
+      "disposition": "planner_whitelist_rebuilt",
+      "output_numbers": [
+        4,
+        8
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 123,
+      "name": "Uniques From Planner 1 LP - Turtle Rule (Optional: Add More)",
+      "disposition": "planner_whitelist_rebuilt",
+      "output_numbers": [
+        3,
+        7
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 124,
+      "name": "Uniques From Planner 2 LP (Optional: Add More)",
+      "disposition": "planner_whitelist_rebuilt",
+      "output_numbers": [
+        2,
+        6
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 125,
+      "name": "Uniques From Planner 3 LP (Optional: Add More)",
+      "disposition": "planner_whitelist_rebuilt",
+      "output_numbers": [
+        1,
+        5
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 126,
+      "name": "Uniques With 2 LP (≤0.1% - 100+ LPL)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 127,
+      "name": "Uniques With 3 LP (≤0.1% - 58+ LPL)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 128,
+      "name": "Uniques With 22+ Weaver's Will (≤0.6% - All)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 129,
+      "name": "Uniques With 4 LP (All)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "flay-mana-lich",
+      "xml_position": 130,
+      "name": "S Tier & Extremely Rare Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 1,
+      "name": "All Items",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 2,
+      "name": "Runes",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 3,
+      "name": "Important Runes",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 4,
+      "name": "Important Glyphs",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 5,
+      "name": "Woven Echoes",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 6,
+      "name": "Keys & Currency",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 7,
+      "name": "Crystallized Heart",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 8,
+      "name": "Temporal Keystone",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 9,
+      "name": "Movement Speed Rings (10)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 10,
+      "name": "Champion Affixes (40)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 11,
+      "name": "Personal Affixes (40)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 12,
+      "name": "Experimental Affixes (40)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 13,
+      "name": "Wanted Experimental Affixes",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        84
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 14,
+      "name": "All Idols (35)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 15,
+      "name": "Generic Resistances & Health Idols (75)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 16,
+      "name": "All Altars",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 17,
+      "name": "Corrupted Items",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 18,
+      "name": "1 Affix - Minor Idols",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        151
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 19,
+      "name": "1 Affix - Humble Idols",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        152
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 20,
+      "name": "1 Affix - Large Idols",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        153
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 21,
+      "name": "1 Affix - Large Omen Idols",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        154
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 22,
+      "name": "Strict - Weaver Idols",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        156
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 23,
+      "name": "Reflect Idols (Alt Leveling)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        157
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 24,
+      "name": "Strict - Minor Idols",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        130
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 25,
+      "name": "Strict - Humble Idols",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        131
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 26,
+      "name": "Strict - Large Idols",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        132
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 27,
+      "name": "Strict - Large Omen Idols",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        133
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 28,
+      "name": "Rare Strict Two-Handed Axe",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        104
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 29,
+      "name": "Rare Strict Helmet",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        105
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 30,
+      "name": "Rare Strict Boots",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        106
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 31,
+      "name": "Rare Strict Gloves",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        107
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 32,
+      "name": "Rare Strict Ring",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        108
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 33,
+      "name": "CoF Rune of Ascendance (Select Item Type)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 34,
+      "name": "Shatter / Removal - Increased Health (60)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        117
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 35,
+      "name": "Shatter / Removal - Increased Health T3+ (80)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        118
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 36,
+      "name": "Shatter / Removal (Edit Affixes)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        110
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 37,
+      "name": "Shatter / Removal (Class Specific Affixes)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        111
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 38,
+      "name": "Any Tier 7 Suffixes (Rune of Redemption)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 39,
+      "name": "Any Tier 7 Prefixes (Rune of Redemption)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 40,
+      "name": "Open Prefix & Tier 7 (Rune of Havoc)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 41,
+      "name": "Open Suffix & Tier 7 (Rune of Havoc)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 42,
+      "name": "Wanted Affix & Tier 7 (Rune of Havoc)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        57
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 43,
+      "name": "Wanted Experimental & Tier 7 (Rune of Havoc)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        58
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 44,
+      "name": "Tier 7 Highly Craftable Items (52+ FP)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        59
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 45,
+      "name": "Tier 7 Eternal Gauntlets",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        56
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 46,
+      "name": "Tier 7 Rings & Amulets",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 47,
+      "name": "",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 48,
+      "name": "Rare Set Items",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 49,
+      "name": "Unique Items",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 50,
+      "name": "Cocooned Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 51,
+      "name": "Primordial Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 52,
+      "name": "",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 53,
+      "name": "Unique Idols",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        18
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 54,
+      "name": "Generic Good Altars (Min. Tier 6)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        141
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 55,
+      "name": "Suffix Effect Idol Altar (Tier 6 Equivalent)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        145
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 56,
+      "name": "Prefix Effect Idol Altar (Tier 6 Equivalent)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        146
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 57,
+      "name": "Suffix Effect Idol Altar (Tier 7 Equivalent)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        138
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 58,
+      "name": "Prefix Effect Idol Altar (Tier 7 Equivalent)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        139
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 59,
+      "name": "Generic Good Altars (Double Exalted)",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        136
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 60,
+      "name": "Tier 6 Wanted Affixes (Can Edit Affixes & Item Type)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 61,
+      "name": "Tier 6 - Relic",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        63,
+        65,
+        96
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 62,
+      "name": "Tier 6 - Ring",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        66,
+        68,
+        97
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 63,
+      "name": "Tier 6 - Amulet",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        70,
+        98
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 64,
+      "name": "Tier 6 - Gloves",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        72,
+        99
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 65,
+      "name": "Tier 6 - Boots",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        73,
+        75
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 66,
+      "name": "Tier 6 - Belt",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        76,
+        78,
+        100
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 67,
+      "name": "Tier 6 - Body Armor",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        80,
+        101
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 68,
+      "name": "Tier 6 - Helmet",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        82,
+        102
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 69,
+      "name": "Tier 6 - Two-Handed Axe",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        62
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 70,
+      "name": "Tier 6 Strict Idol Altar",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        147
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 71,
+      "name": "Exalted Bases for Alt Leveling Setup (T7)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 72,
+      "name": "Wanted Tier 7 (Can Edit Affixes & Item Type)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 73,
+      "name": "Tier 7 - Relic",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        48,
+        50
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 74,
+      "name": "Tier 7 - Ring",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        45,
+        47
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 75,
+      "name": "Tier 7 - Amulet",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        44
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 76,
+      "name": "Tier 7 - Gloves",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        42
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 77,
+      "name": "Tier 7 - Boots",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        38,
+        40
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 78,
+      "name": "Tier 7 - Belt",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        35,
+        37
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 79,
+      "name": "Tier 7 - Body Armor",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        34
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 80,
+      "name": "Tier 7 - Helmet",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        32
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 81,
+      "name": "Tier 7 - Two-Handed Axe",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        29
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 82,
+      "name": "Tier 7 - Class Specific Affixes",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        53
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 83,
+      "name": "Tier 7 Strict Idol Altar",
+      "disposition": "mapped_conditions",
+      "output_numbers": [
+        140
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 84,
+      "name": "Multi Exalted (Min. Tier 7 & Tier 6)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 85,
+      "name": "Multi Exalted (Min. 2 Tier 7)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 86,
+      "name": "Triple+ Exalted (Min. 1 Tier 7)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 87,
+      "name": "Corrupted Multi Exalted (Min. Tier 7 & Tier 6)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 88,
+      "name": "Uniques with 1 LP (All)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 89,
+      "name": "Dungeons / Arena Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 90,
+      "name": "Rare Dungeon Drops",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 91,
+      "name": "Rare Monolith Timeline Boss Drops",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 92,
+      "name": "Harbinger Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 93,
+      "name": "Very Rare Uniques (80% Reroll Chance)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 94,
+      "name": "Very Rare Uniques (85% Reroll Chance)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 95,
+      "name": "Very Rare Uniques (90% Reroll Chance)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 96,
+      "name": "Woven Echoes Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 97,
+      "name": "Exiled Mage Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 98,
+      "name": "Shade of Orobyss Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 99,
+      "name": "Aberroth Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 100,
+      "name": "Vision of the Observer Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 101,
+      "name": "Morditas Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 102,
+      "name": "Final Rift Beast - Evolution's End",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 103,
+      "name": "Dungeons / Arena Uniques - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 104,
+      "name": "Rare Dungeon Drops - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 105,
+      "name": "Rare Monolith Timeline Boss Drops - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 106,
+      "name": "Harbinger Uniques - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 107,
+      "name": "Very Rare Uniques With 1 LP (80% Reroll Chance)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 108,
+      "name": "Very Rare Uniques With 1 LP(85% Reroll Chance)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 109,
+      "name": "Very Rare Uniques With 1 LP (90% Reroll Chance)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 110,
+      "name": "Woven Echoes Uniques - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 111,
+      "name": "Exiled Mage Uniques - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 112,
+      "name": "Shade of Orobyss Uniques - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 113,
+      "name": "Aberroth Uniques - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 114,
+      "name": "Morditas Uniques - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 115,
+      "name": "Final Rift Beast - Evolution's End - 1 LP+",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 116,
+      "name": "Any Class Alt Leveling Uniques - Campaign",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 117,
+      "name": "Any Class Alt Leveling Uniques - Reflect  lvl 35",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 118,
+      "name": "Weaver's Will Items",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 119,
+      "name": "Uniques With 21+ Weaver's Will (≤1% - 30+ LPL)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 120,
+      "name": "Uniques With 20+ Weaver's Will (≤1% - 40+ LPL)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 121,
+      "name": "Uniques With 19+ Weaver's Will (≤1% - 50+ LPL)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 122,
+      "name": "Uniques With 18+ Weaver's Will (≤1% - 68+ LPL)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 123,
+      "name": "Uniques With 2 LP (All)",
+      "disposition": "disabled_in_source",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 124,
+      "name": "Uniques With 2 LP (≤4% - 48+ LPL)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 125,
+      "name": "Uniques With 2 LP (≤1% - 70+ LPL)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 126,
+      "name": "Uniques With 2 LP (80% Reroll Chance)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 127,
+      "name": "Uniques With 2 LP (85% Reroll Chance)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 128,
+      "name": "Uniques With 2 LP (90% Reroll Chance)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 129,
+      "name": "Uniques With 3 LP (All)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 130,
+      "name": "Uniques With 3 LP (≤1% - 27+ LPL)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 131,
+      "name": "Legendary Uniques From Planner (Fail Safe Rule)",
+      "disposition": "planner_whitelist_rebuilt",
+      "output_numbers": [
+        4,
+        12
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 132,
+      "name": "Uniques & Sets From Planner (Optional: Add More)",
+      "disposition": "planner_whitelist_rebuilt",
+      "output_numbers": [
+        4,
+        12
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 133,
+      "name": "Corrupted Uniques & Sets From Planner (Optional: Add More)",
+      "disposition": "planner_whitelist_rebuilt",
+      "output_numbers": [
+        4,
+        12
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 134,
+      "name": "Uniques From Planner 1 LP - Turtle Rule (Optional: Add More)",
+      "disposition": "planner_whitelist_rebuilt",
+      "output_numbers": [
+        3,
+        11
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 135,
+      "name": "Uniques From Planner 2 LP (Optional: Add More)",
+      "disposition": "planner_whitelist_rebuilt",
+      "output_numbers": [
+        2,
+        10
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 136,
+      "name": "Uniques From Planner 3 LP (Optional: Add More)",
+      "disposition": "planner_whitelist_rebuilt",
+      "output_numbers": [
+        1,
+        9
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 137,
+      "name": "Uniques With 2 LP (≤0.1% - 100+ LPL)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 138,
+      "name": "Uniques With 3 LP (≤0.1% - 58+ LPL)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 139,
+      "name": "Uniques With 22+ Weaver's Will (≤0.6% - All)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 140,
+      "name": "Uniques With 4 LP (All)",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    },
+    {
+      "build": "skeleton-necromancer",
+      "xml_position": 141,
+      "name": "S Tier & Extremely Rare Uniques",
+      "disposition": "replaced_by_raxx_general_policy",
+      "output_numbers": []
+    }
+  ],
+  "supplements": {
+    "sources/builds/flay-mana-lich-guide.json": "1b7f6180f1fd32818c223e5d8daa1c4e9a2a8c405094d8a9a126c5c6ccef0fd8",
+    "sources/builds/transfer-reference.json": "f571190f25cd97b2bbc292d9ec5463cbb46ef20a6937e16a6a5023f056b0f9e2"
+  },
+  "target_unique_ids": {
+    "FLAY": [
+      125,
+      253,
+      277,
+      294,
+      342,
+      348,
+      353,
+      357,
+      366,
+      372,
+      415,
+      416,
+      420,
+      433,
+      469,
+      475
+    ],
+    "NECRO": [
+      8,
+      66,
+      208,
+      241,
+      253,
+      269,
+      300,
+      374,
+      416,
+      471,
+      477
+    ]
+  },
+  "rules": 187,
+  "enabled": 171,
+  "output_sha256": "516770f738e654dd64e8eff4a31a3afe4f6f16bf440c685fb504cdff27bcbf3e",
+  "output_rules": [
+    {
+      "template": 8,
+      "category": "build_unique",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          125
+        ],
+        [
+          "skeleton-necromancer",
+          136
+        ]
+      ],
+      "label": "Build uniques: Uniques From Planner 3 LP",
+      "name": "SHARED - Build uniques: Uniques From Planner 3 LP",
+      "number": 1,
+      "enabled": true
+    },
+    {
+      "template": 8,
+      "category": "build_unique",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          124
+        ],
+        [
+          "skeleton-necromancer",
+          135
+        ]
+      ],
+      "label": "Build uniques: Uniques From Planner 2 LP",
+      "name": "SHARED - Build uniques: Uniques From Planner 2 LP",
+      "number": 2,
+      "enabled": true
+    },
+    {
+      "template": 8,
+      "category": "build_unique",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          123
+        ],
+        [
+          "skeleton-necromancer",
+          134
+        ]
+      ],
+      "label": "Build uniques: Uniques From Planner 1 LP - Turtle Rule",
+      "name": "SHARED - Build uniques: Uniques From Planner 1 LP - Turtle Rule",
+      "number": 3,
+      "enabled": true
+    },
+    {
+      "template": 8,
+      "category": "build_unique",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          121
+        ],
+        [
+          "skeleton-necromancer",
+          132
+        ]
+      ],
+      "label": "Build uniques: Uniques & Sets From Planner",
+      "name": "SHARED - Build uniques: Uniques & Sets From Planner",
+      "number": 4,
+      "enabled": true
+    },
+    {
+      "template": 8,
+      "category": "build_unique",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          125
+        ]
+      ],
+      "label": "Build uniques: Uniques From Planner 3 LP",
+      "name": "FLAY - Build uniques: Uniques From Planner 3 LP",
+      "number": 5,
+      "enabled": true
+    },
+    {
+      "template": 8,
+      "category": "build_unique",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          124
+        ]
+      ],
+      "label": "Build uniques: Uniques From Planner 2 LP",
+      "name": "FLAY - Build uniques: Uniques From Planner 2 LP",
+      "number": 6,
+      "enabled": true
+    },
+    {
+      "template": 8,
+      "category": "build_unique",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          123
+        ]
+      ],
+      "label": "Build uniques: Uniques From Planner 1 LP - Turtle Rule",
+      "name": "FLAY - Build uniques: Uniques From Planner 1 LP - Turtle Rule",
+      "number": 7,
+      "enabled": true
+    },
+    {
+      "template": 8,
+      "category": "build_unique",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          121
+        ]
+      ],
+      "label": "Build uniques: Uniques & Sets From Planner",
+      "name": "FLAY - Build uniques: Uniques & Sets From Planner",
+      "number": 8,
+      "enabled": true
+    },
+    {
+      "template": 8,
+      "category": "build_unique",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          136
+        ]
+      ],
+      "label": "Build uniques: Uniques From Planner 3 LP",
+      "name": "NECRO - Build uniques: Uniques From Planner 3 LP",
+      "number": 9,
+      "enabled": true
+    },
+    {
+      "template": 8,
+      "category": "build_unique",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          135
+        ]
+      ],
+      "label": "Build uniques: Uniques From Planner 2 LP",
+      "name": "NECRO - Build uniques: Uniques From Planner 2 LP",
+      "number": 10,
+      "enabled": true
+    },
+    {
+      "template": 8,
+      "category": "build_unique",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          134
+        ]
+      ],
+      "label": "Build uniques: Uniques From Planner 1 LP - Turtle Rule",
+      "name": "NECRO - Build uniques: Uniques From Planner 1 LP - Turtle Rule",
+      "number": 11,
+      "enabled": true
+    },
+    {
+      "template": 8,
+      "category": "build_unique",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          132
+        ]
+      ],
+      "label": "Build uniques: Uniques & Sets From Planner",
+      "name": "NECRO - Build uniques: Uniques & Sets From Planner",
+      "number": 12,
+      "enabled": true
+    },
+    {
+      "template": 8,
+      "category": "raxx",
+      "name": "",
+      "owners": [],
+      "source_rules": [],
+      "number": 13,
+      "enabled": true
+    },
+    {
+      "template": 12,
+      "category": "raxx",
+      "name": "all Uniques with 3LP or 20 WW",
+      "owners": [],
+      "source_rules": [],
+      "number": 14,
+      "enabled": true
+    },
+    {
+      "template": 13,
+      "category": "raxx",
+      "name": "all Uniques with 2LP / 17 WW (UNCHECK UNWANTED)",
+      "owners": [],
+      "source_rules": [],
+      "number": 15,
+      "enabled": true
+    },
+    {
+      "template": 14,
+      "category": "raxx",
+      "name": "all Uniques with 1LP / 14 WW (UNCHECK UNWANTED)",
+      "owners": [],
+      "source_rules": [],
+      "number": 16,
+      "enabled": true
+    },
+    {
+      "template": 15,
+      "category": "raxx",
+      "name": "Raxx rare unique protection",
+      "owners": [],
+      "source_rules": [],
+      "number": 17,
+      "enabled": true
+    },
+    {
+      "template": 16,
+      "category": "unique_idols",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          41
+        ],
+        [
+          "skeleton-necromancer",
+          53
+        ]
+      ],
+      "label": "Unique Idols",
+      "name": "SHARED - Unique Idols",
+      "number": 18,
+      "enabled": true
+    },
+    {
+      "template": 16,
+      "category": "raxx",
+      "name": "Raxx selected sets",
+      "owners": [],
+      "source_rules": [],
+      "number": 19,
+      "enabled": true
+    },
+    {
+      "template": 19,
+      "category": "raxx",
+      "name": "Glyphs",
+      "owners": [],
+      "source_rules": [],
+      "number": 20,
+      "enabled": true
+    },
+    {
+      "template": 20,
+      "category": "raxx",
+      "name": "Keys & Resources",
+      "owners": [],
+      "source_rules": [],
+      "number": 21,
+      "enabled": true
+    },
+    {
+      "template": 21,
+      "category": "raxx",
+      "name": "Resonances",
+      "owners": [],
+      "source_rules": [],
+      "number": 22,
+      "enabled": true
+    },
+    {
+      "template": 22,
+      "category": "raxx",
+      "name": "Runes",
+      "owners": [],
+      "source_rules": [],
+      "number": 23,
+      "enabled": true
+    },
+    {
+      "template": 23,
+      "category": "raxx",
+      "name": "Shards",
+      "owners": [],
+      "source_rules": [],
+      "number": 24,
+      "enabled": true
+    },
+    {
+      "template": 24,
+      "category": "raxx",
+      "name": "Woven Echoes",
+      "owners": [],
+      "source_rules": [],
+      "number": 25,
+      "enabled": true
+    },
+    {
+      "template": 29,
+      "category": "raxx",
+      "name": "OFF - Class hide not requested",
+      "owners": [],
+      "source_rules": [],
+      "number": 26,
+      "enabled": false
+    },
+    {
+      "template": 37,
+      "category": "raxx",
+      "name": "All Tier 8 Items",
+      "owners": [],
+      "source_rules": [],
+      "number": 27,
+      "enabled": true
+    },
+    {
+      "template": 38,
+      "category": "tier7",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          71
+        ]
+      ],
+      "label": "Tier 7 - One-Handed Axe",
+      "name": "FLAY - Tier 7 - One-Handed Axe",
+      "number": 28,
+      "enabled": true
+    },
+    {
+      "template": 38,
+      "category": "tier7",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          81
+        ]
+      ],
+      "label": "Tier 7 - Two-Handed Axe",
+      "name": "NECRO - Tier 7 - Two-Handed Axe",
+      "number": 29,
+      "enabled": true
+    },
+    {
+      "template": 39,
+      "category": "tier7",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          70
+        ]
+      ],
+      "label": "Tier 7 - Dagger",
+      "name": "FLAY - Tier 7 - Dagger",
+      "number": 30,
+      "enabled": true
+    },
+    {
+      "template": 40,
+      "category": "tier7",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          69
+        ]
+      ],
+      "label": "Tier 7 - Helmet",
+      "name": "FLAY - Tier 7 - Helmet",
+      "number": 31,
+      "enabled": true
+    },
+    {
+      "template": 40,
+      "category": "tier7",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          80
+        ]
+      ],
+      "label": "Tier 7 - Helmet",
+      "name": "NECRO - Tier 7 - Helmet",
+      "number": 32,
+      "enabled": true
+    },
+    {
+      "template": 41,
+      "category": "tier7",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          68
+        ]
+      ],
+      "label": "Tier 7 - Body Armor",
+      "name": "FLAY - Tier 7 - Body Armor",
+      "number": 33,
+      "enabled": true
+    },
+    {
+      "template": 41,
+      "category": "tier7",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          79
+        ]
+      ],
+      "label": "Tier 7 - Body Armor",
+      "name": "NECRO - Tier 7 - Body Armor",
+      "number": 34,
+      "enabled": true
+    },
+    {
+      "template": 42,
+      "category": "tier7",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          67
+        ],
+        [
+          "skeleton-necromancer",
+          78
+        ]
+      ],
+      "label": "Tier 7 - Belt",
+      "name": "SHARED - Tier 7 - Belt",
+      "number": 35,
+      "enabled": true
+    },
+    {
+      "template": 42,
+      "category": "tier7",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          67
+        ]
+      ],
+      "label": "Tier 7 - Belt",
+      "name": "FLAY - Tier 7 - Belt",
+      "number": 36,
+      "enabled": true
+    },
+    {
+      "template": 42,
+      "category": "tier7",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          78
+        ]
+      ],
+      "label": "Tier 7 - Belt",
+      "name": "NECRO - Tier 7 - Belt",
+      "number": 37,
+      "enabled": true
+    },
+    {
+      "template": 43,
+      "category": "tier7",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          66
+        ],
+        [
+          "skeleton-necromancer",
+          77
+        ]
+      ],
+      "label": "Tier 7 - Boots",
+      "name": "SHARED - Tier 7 - Boots",
+      "number": 38,
+      "enabled": true
+    },
+    {
+      "template": 43,
+      "category": "tier7",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          66
+        ]
+      ],
+      "label": "Tier 7 - Boots",
+      "name": "FLAY - Tier 7 - Boots",
+      "number": 39,
+      "enabled": true
+    },
+    {
+      "template": 43,
+      "category": "tier7",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          77
+        ]
+      ],
+      "label": "Tier 7 - Boots",
+      "name": "NECRO - Tier 7 - Boots",
+      "number": 40,
+      "enabled": true
+    },
+    {
+      "template": 44,
+      "category": "tier7",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          65
+        ]
+      ],
+      "label": "Tier 7 - Gloves",
+      "name": "FLAY - Tier 7 - Gloves",
+      "number": 41,
+      "enabled": true
+    },
+    {
+      "template": 44,
+      "category": "tier7",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          76
+        ]
+      ],
+      "label": "Tier 7 - Gloves",
+      "name": "NECRO - Tier 7 - Gloves",
+      "number": 42,
+      "enabled": true
+    },
+    {
+      "template": 45,
+      "category": "tier7",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          64
+        ]
+      ],
+      "label": "Tier 7 - Amulet",
+      "name": "FLAY - Tier 7 - Amulet",
+      "number": 43,
+      "enabled": true
+    },
+    {
+      "template": 45,
+      "category": "tier7",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          75
+        ]
+      ],
+      "label": "Tier 7 - Amulet",
+      "name": "NECRO - Tier 7 - Amulet",
+      "number": 44,
+      "enabled": true
+    },
+    {
+      "template": 46,
+      "category": "tier7",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          63
+        ],
+        [
+          "skeleton-necromancer",
+          74
+        ]
+      ],
+      "label": "Tier 7 - Ring",
+      "name": "SHARED - Tier 7 - Ring",
+      "number": 45,
+      "enabled": true
+    },
+    {
+      "template": 46,
+      "category": "tier7",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          63
+        ]
+      ],
+      "label": "Tier 7 - Ring",
+      "name": "FLAY - Tier 7 - Ring",
+      "number": 46,
+      "enabled": true
+    },
+    {
+      "template": 46,
+      "category": "tier7",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          74
+        ]
+      ],
+      "label": "Tier 7 - Ring",
+      "name": "NECRO - Tier 7 - Ring",
+      "number": 47,
+      "enabled": true
+    },
+    {
+      "template": 47,
+      "category": "tier7",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          62
+        ],
+        [
+          "skeleton-necromancer",
+          73
+        ]
+      ],
+      "label": "Tier 7 - Relic",
+      "name": "SHARED - Tier 7 - Relic",
+      "number": 48,
+      "enabled": true
+    },
+    {
+      "template": 47,
+      "category": "tier7",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          62
+        ]
+      ],
+      "label": "Tier 7 - Relic",
+      "name": "FLAY - Tier 7 - Relic",
+      "number": 49,
+      "enabled": true
+    },
+    {
+      "template": 47,
+      "category": "tier7",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          73
+        ]
+      ],
+      "label": "Tier 7 - Relic",
+      "name": "NECRO - Tier 7 - Relic",
+      "number": 50,
+      "enabled": true
+    },
+    {
+      "template": 48,
+      "category": "raxx",
+      "name": "Double exalts on either build's equipment types",
+      "owners": [],
+      "source_rules": [],
+      "number": 51,
+      "enabled": true
+    },
+    {
+      "template": 60,
+      "category": "raxx",
+      "name": "OFF - T7 weapon pools mapped above",
+      "owners": [],
+      "source_rules": [],
+      "number": 52,
+      "enabled": false
+    },
+    {
+      "template": 61,
+      "category": "class_t7",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          82
+        ]
+      ],
+      "label": "Tier 7 - Class Specific Affixes",
+      "name": "NECRO - Tier 7 - Class Specific Affixes",
+      "number": 53,
+      "enabled": true
+    },
+    {
+      "template": 62,
+      "category": "crafting",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          31
+        ]
+      ],
+      "label": "Wanted Affix & Tier 7 (Rune of Havoc)",
+      "name": "FLAY - Wanted Affix & Tier 7 (Rune of Havoc)",
+      "number": 54,
+      "enabled": true
+    },
+    {
+      "template": 62,
+      "category": "crafting",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          32
+        ]
+      ],
+      "label": "Tier 7 Highly Craftable Items (52+ FP)",
+      "name": "FLAY - Tier 7 Highly Craftable Items (52+ FP)",
+      "number": 55,
+      "enabled": true
+    },
+    {
+      "template": 62,
+      "category": "crafting",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          33
+        ],
+        [
+          "skeleton-necromancer",
+          45
+        ]
+      ],
+      "label": "Tier 7 Eternal Gauntlets",
+      "name": "SHARED - Tier 7 Eternal Gauntlets",
+      "number": 56,
+      "enabled": true
+    },
+    {
+      "template": 62,
+      "category": "crafting",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          42
+        ]
+      ],
+      "label": "Wanted Affix & Tier 7 (Rune of Havoc)",
+      "name": "NECRO - Wanted Affix & Tier 7 (Rune of Havoc)",
+      "number": 57,
+      "enabled": true
+    },
+    {
+      "template": 62,
+      "category": "crafting",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          43
+        ]
+      ],
+      "label": "Wanted Experimental & Tier 7 (Rune of Havoc)",
+      "name": "NECRO - Wanted Experimental & Tier 7 (Rune of Havoc)",
+      "number": 58,
+      "enabled": true
+    },
+    {
+      "template": 62,
+      "category": "crafting",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          44
+        ]
+      ],
+      "label": "Tier 7 Highly Craftable Items (52+ FP)",
+      "name": "NECRO - Tier 7 Highly Craftable Items (52+ FP)",
+      "number": 59,
+      "enabled": true
+    },
+    {
+      "template": 63,
+      "category": "tier6",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          57
+        ]
+      ],
+      "label": "Tier 6 - Dagger",
+      "name": "FLAY - Tier 6 - Dagger",
+      "number": 60,
+      "enabled": true
+    },
+    {
+      "template": 63,
+      "category": "tier6",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          58
+        ]
+      ],
+      "label": "Tier 6 - One-Handed Axe",
+      "name": "FLAY - Tier 6 - One-Handed Axe",
+      "number": 61,
+      "enabled": true
+    },
+    {
+      "template": 63,
+      "category": "tier6",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          69
+        ]
+      ],
+      "label": "Tier 6 - Two-Handed Axe",
+      "name": "NECRO - Tier 6 - Two-Handed Axe",
+      "number": 62,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          49
+        ],
+        [
+          "skeleton-necromancer",
+          61
+        ]
+      ],
+      "label": "Tier 6 - Relic",
+      "name": "SHARED - Tier 6 - Relic",
+      "number": 63,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          49
+        ]
+      ],
+      "label": "Tier 6 - Relic",
+      "name": "FLAY - Tier 6 - Relic",
+      "number": 64,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          61
+        ]
+      ],
+      "label": "Tier 6 - Relic",
+      "name": "NECRO - Tier 6 - Relic",
+      "number": 65,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          50
+        ],
+        [
+          "skeleton-necromancer",
+          62
+        ]
+      ],
+      "label": "Tier 6 - Ring",
+      "name": "SHARED - Tier 6 - Ring",
+      "number": 66,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          50
+        ]
+      ],
+      "label": "Tier 6 - Ring",
+      "name": "FLAY - Tier 6 - Ring",
+      "number": 67,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          62
+        ]
+      ],
+      "label": "Tier 6 - Ring",
+      "name": "NECRO - Tier 6 - Ring",
+      "number": 68,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          51
+        ]
+      ],
+      "label": "Tier 6 - Amulet",
+      "name": "FLAY - Tier 6 - Amulet",
+      "number": 69,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          63
+        ]
+      ],
+      "label": "Tier 6 - Amulet",
+      "name": "NECRO - Tier 6 - Amulet",
+      "number": 70,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          52
+        ]
+      ],
+      "label": "Tier 6 - Gloves",
+      "name": "FLAY - Tier 6 - Gloves",
+      "number": 71,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          64
+        ]
+      ],
+      "label": "Tier 6 - Gloves",
+      "name": "NECRO - Tier 6 - Gloves",
+      "number": 72,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          53
+        ],
+        [
+          "skeleton-necromancer",
+          65
+        ]
+      ],
+      "label": "Tier 6 - Boots",
+      "name": "SHARED - Tier 6 - Boots",
+      "number": 73,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          53
+        ]
+      ],
+      "label": "Tier 6 - Boots",
+      "name": "FLAY - Tier 6 - Boots",
+      "number": 74,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          65
+        ]
+      ],
+      "label": "Tier 6 - Boots",
+      "name": "NECRO - Tier 6 - Boots",
+      "number": 75,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          54
+        ],
+        [
+          "skeleton-necromancer",
+          66
+        ]
+      ],
+      "label": "Tier 6 - Belt",
+      "name": "SHARED - Tier 6 - Belt",
+      "number": 76,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          54
+        ]
+      ],
+      "label": "Tier 6 - Belt",
+      "name": "FLAY - Tier 6 - Belt",
+      "number": 77,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          66
+        ]
+      ],
+      "label": "Tier 6 - Belt",
+      "name": "NECRO - Tier 6 - Belt",
+      "number": 78,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          55
+        ]
+      ],
+      "label": "Tier 6 - Body Armor",
+      "name": "FLAY - Tier 6 - Body Armor",
+      "number": 79,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          67
+        ]
+      ],
+      "label": "Tier 6 - Body Armor",
+      "name": "NECRO - Tier 6 - Body Armor",
+      "number": 80,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          56
+        ]
+      ],
+      "label": "Tier 6 - Helmet",
+      "name": "FLAY - Tier 6 - Helmet",
+      "number": 81,
+      "enabled": true
+    },
+    {
+      "template": 64,
+      "category": "tier6",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          68
+        ]
+      ],
+      "label": "Tier 6 - Helmet",
+      "name": "NECRO - Tier 6 - Helmet",
+      "number": 82,
+      "enabled": true
+    },
+    {
+      "template": 68,
+      "category": "experimental_exalted",
+      "name": "NECRO - Exalted items with wanted experimentals",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [],
+      "number": 83,
+      "enabled": true
+    },
+    {
+      "template": 69,
+      "category": "experimental",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          13
+        ]
+      ],
+      "label": "Wanted Experimental Affixes",
+      "name": "NECRO - Wanted Experimental Affixes",
+      "number": 84,
+      "enabled": true
+    },
+    {
+      "template": 70,
+      "category": "raxx",
+      "name": "OFF - Champion affixes not requested",
+      "owners": [],
+      "source_rules": [],
+      "number": 85,
+      "enabled": false
+    },
+    {
+      "template": 73,
+      "category": "raxx",
+      "name": "All Uniques - Turns off at 80",
+      "owners": [],
+      "source_rules": [],
+      "number": 86,
+      "enabled": true
+    },
+    {
+      "template": 74,
+      "category": "raxx",
+      "name": "All Exalts - Turns off at 60",
+      "owners": [],
+      "source_rules": [],
+      "number": 87,
+      "enabled": true
+    },
+    {
+      "template": 75,
+      "category": "corrupted_supplement",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          49
+        ]
+      ],
+      "label": "Wanted corrupted affix (any tier)",
+      "name": "FLAY - Wanted corrupted affix (any tier)",
+      "number": 88,
+      "enabled": true
+    },
+    {
+      "template": 75,
+      "category": "corrupted_supplement",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          50
+        ]
+      ],
+      "label": "Wanted corrupted affix (any tier)",
+      "name": "FLAY - Wanted corrupted affix (any tier)",
+      "number": 89,
+      "enabled": true
+    },
+    {
+      "template": 75,
+      "category": "corrupted_supplement",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          51
+        ]
+      ],
+      "label": "Wanted corrupted affix (any tier)",
+      "name": "FLAY - Wanted corrupted affix (any tier)",
+      "number": 90,
+      "enabled": true
+    },
+    {
+      "template": 75,
+      "category": "corrupted_supplement",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          52
+        ]
+      ],
+      "label": "Wanted corrupted affix (any tier)",
+      "name": "FLAY - Wanted corrupted affix (any tier)",
+      "number": 91,
+      "enabled": true
+    },
+    {
+      "template": 75,
+      "category": "corrupted_supplement",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          53
+        ]
+      ],
+      "label": "Wanted corrupted affix (any tier)",
+      "name": "FLAY - Wanted corrupted affix (any tier)",
+      "number": 92,
+      "enabled": true
+    },
+    {
+      "template": 75,
+      "category": "corrupted_supplement",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          54
+        ]
+      ],
+      "label": "Wanted corrupted affix (any tier)",
+      "name": "FLAY - Wanted corrupted affix (any tier)",
+      "number": 93,
+      "enabled": true
+    },
+    {
+      "template": 75,
+      "category": "corrupted_supplement",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          55
+        ]
+      ],
+      "label": "Wanted corrupted affix (any tier)",
+      "name": "FLAY - Wanted corrupted affix (any tier)",
+      "number": 94,
+      "enabled": true
+    },
+    {
+      "template": 75,
+      "category": "corrupted_supplement",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          56
+        ]
+      ],
+      "label": "Wanted corrupted affix (any tier)",
+      "name": "FLAY - Wanted corrupted affix (any tier)",
+      "number": 95,
+      "enabled": true
+    },
+    {
+      "template": 75,
+      "category": "corrupted_supplement",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          61
+        ]
+      ],
+      "label": "Wanted corrupted affix (any tier)",
+      "name": "NECRO - Wanted corrupted affix (any tier)",
+      "number": 96,
+      "enabled": true
+    },
+    {
+      "template": 75,
+      "category": "corrupted_supplement",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          62
+        ]
+      ],
+      "label": "Wanted corrupted affix (any tier)",
+      "name": "NECRO - Wanted corrupted affix (any tier)",
+      "number": 97,
+      "enabled": true
+    },
+    {
+      "template": 75,
+      "category": "corrupted_supplement",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          63
+        ]
+      ],
+      "label": "Wanted corrupted affix (any tier)",
+      "name": "NECRO - Wanted corrupted affix (any tier)",
+      "number": 98,
+      "enabled": true
+    },
+    {
+      "template": 75,
+      "category": "corrupted_supplement",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          64
+        ]
+      ],
+      "label": "Wanted corrupted affix (any tier)",
+      "name": "NECRO - Wanted corrupted affix (any tier)",
+      "number": 99,
+      "enabled": true
+    },
+    {
+      "template": 75,
+      "category": "corrupted_supplement",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          66
+        ]
+      ],
+      "label": "Wanted corrupted affix (any tier)",
+      "name": "NECRO - Wanted corrupted affix (any tier)",
+      "number": 100,
+      "enabled": true
+    },
+    {
+      "template": 75,
+      "category": "corrupted_supplement",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          67
+        ]
+      ],
+      "label": "Wanted corrupted affix (any tier)",
+      "name": "NECRO - Wanted corrupted affix (any tier)",
+      "number": 101,
+      "enabled": true
+    },
+    {
+      "template": 75,
+      "category": "corrupted_supplement",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          68
+        ]
+      ],
+      "label": "Wanted corrupted affix (any tier)",
+      "name": "NECRO - Wanted corrupted affix (any tier)",
+      "number": 102,
+      "enabled": true
+    },
+    {
+      "template": 81,
+      "category": "raxx",
+      "name": "OFF - Ascend target not requested",
+      "owners": [],
+      "source_rules": [],
+      "number": 103,
+      "enabled": false
+    },
+    {
+      "template": 82,
+      "category": "rare_base",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          28
+        ]
+      ],
+      "label": "Rare Strict Two-Handed Axe",
+      "name": "NECRO - Rare Strict Two-Handed Axe",
+      "number": 104,
+      "enabled": true
+    },
+    {
+      "template": 82,
+      "category": "rare_base",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          29
+        ]
+      ],
+      "label": "Rare Strict Helmet",
+      "name": "NECRO - Rare Strict Helmet",
+      "number": 105,
+      "enabled": true
+    },
+    {
+      "template": 82,
+      "category": "rare_base",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          30
+        ]
+      ],
+      "label": "Rare Strict Boots",
+      "name": "NECRO - Rare Strict Boots",
+      "number": 106,
+      "enabled": true
+    },
+    {
+      "template": 82,
+      "category": "rare_base",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          31
+        ]
+      ],
+      "label": "Rare Strict Gloves",
+      "name": "NECRO - Rare Strict Gloves",
+      "number": 107,
+      "enabled": true
+    },
+    {
+      "template": 82,
+      "category": "rare_base",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          32
+        ]
+      ],
+      "label": "Rare Strict Ring",
+      "name": "NECRO - Rare Strict Ring",
+      "number": 108,
+      "enabled": true
+    },
+    {
+      "template": 83,
+      "category": "shatter",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          26
+        ]
+      ],
+      "label": "Shatter / Removal (Edit Affixes)",
+      "name": "FLAY - Shatter / Removal (Edit Affixes)",
+      "number": 109,
+      "enabled": true
+    },
+    {
+      "template": 83,
+      "category": "shatter",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          36
+        ]
+      ],
+      "label": "Shatter / Removal (Edit Affixes)",
+      "name": "NECRO - Shatter / Removal (Edit Affixes)",
+      "number": 110,
+      "enabled": true
+    },
+    {
+      "template": 84,
+      "category": "class_shatter",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          37
+        ]
+      ],
+      "label": "Shatter / Removal (Class Specific Affixes)",
+      "name": "NECRO - Shatter / Removal (Class Specific Affixes)",
+      "number": 111,
+      "enabled": true
+    },
+    {
+      "template": 85,
+      "category": "raxx",
+      "name": "OFF - Mage shards not requested",
+      "owners": [],
+      "source_rules": [],
+      "number": 112,
+      "enabled": false
+    },
+    {
+      "template": 86,
+      "category": "raxx",
+      "name": "OFF - Primalist shards not requested",
+      "owners": [],
+      "source_rules": [],
+      "number": 113,
+      "enabled": false
+    },
+    {
+      "template": 87,
+      "category": "raxx",
+      "name": "OFF - Rogue shards not requested",
+      "owners": [],
+      "source_rules": [],
+      "number": 114,
+      "enabled": false
+    },
+    {
+      "template": 88,
+      "category": "raxx",
+      "name": "OFF - Sentinel shards not requested",
+      "owners": [],
+      "source_rules": [],
+      "number": 115,
+      "enabled": false
+    },
+    {
+      "template": 89,
+      "category": "raxx",
+      "name": "OFF - Extra offensive shard inventory not supplied",
+      "owners": [],
+      "source_rules": [],
+      "number": 116,
+      "enabled": false
+    },
+    {
+      "template": 90,
+      "category": "health_shatter",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          24
+        ],
+        [
+          "skeleton-necromancer",
+          34
+        ]
+      ],
+      "label": "Shatter / Removal - Increased Health (60)",
+      "name": "SHARED - Shatter / Removal - Increased Health (60)",
+      "number": 117,
+      "enabled": true
+    },
+    {
+      "template": 90,
+      "category": "health_shatter",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          25
+        ],
+        [
+          "skeleton-necromancer",
+          35
+        ]
+      ],
+      "label": "Shatter / Removal - Increased Health T3+ (80)",
+      "name": "SHARED - Shatter / Removal - Increased Health T3+ (80)",
+      "number": 118,
+      "enabled": true
+    },
+    {
+      "template": 99,
+      "category": "idol_pair",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [],
+      "label": "Planner idol combination",
+      "idol_key": [
+        26,
+        1,
+        [
+          843,
+          854
+        ]
+      ],
+      "name": "FLAY - Planner idol combination",
+      "number": 119,
+      "enabled": true
+    },
+    {
+      "template": 99,
+      "category": "idol_pair",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [],
+      "label": "Planner idol combination",
+      "idol_key": [
+        28,
+        1,
+        [
+          876,
+          886
+        ]
+      ],
+      "name": "FLAY - Planner idol combination",
+      "number": 120,
+      "enabled": true
+    },
+    {
+      "template": 99,
+      "category": "idol_pair",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [],
+      "label": "Planner idol combination",
+      "idol_key": [
+        30,
+        8,
+        [
+          287,
+          897,
+          941
+        ]
+      ],
+      "name": "NECRO - Planner idol combination",
+      "number": 121,
+      "enabled": true
+    },
+    {
+      "template": 99,
+      "category": "idol_pair",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [],
+      "label": "Planner idol combination",
+      "idol_key": [
+        27,
+        1,
+        [
+          319,
+          862
+        ]
+      ],
+      "name": "NECRO - Planner idol combination",
+      "number": 122,
+      "enabled": true
+    },
+    {
+      "template": 99,
+      "category": "idol_pair",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [],
+      "label": "Planner idol combination",
+      "idol_key": [
+        26,
+        1,
+        [
+          846,
+          851
+        ]
+      ],
+      "name": "NECRO - Planner idol combination",
+      "number": 123,
+      "enabled": true
+    },
+    {
+      "template": 99,
+      "category": "idol_pair",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [],
+      "label": "Planner idol combination",
+      "idol_key": [
+        26,
+        1,
+        [
+          846,
+          852
+        ]
+      ],
+      "name": "NECRO - Planner idol combination",
+      "number": 124,
+      "enabled": true
+    },
+    {
+      "template": 99,
+      "category": "idol_pair",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [],
+      "label": "Planner idol combination",
+      "idol_key": [
+        27,
+        1,
+        [
+          862,
+          870
+        ]
+      ],
+      "name": "NECRO - Planner idol combination",
+      "number": 125,
+      "enabled": true
+    },
+    {
+      "template": 99,
+      "category": "idol_pair",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [],
+      "label": "Planner idol combination",
+      "idol_key": [
+        26,
+        1,
+        [
+          846,
+          855
+        ]
+      ],
+      "name": "NECRO - Planner idol combination",
+      "number": 126,
+      "enabled": true
+    },
+    {
+      "template": 99,
+      "category": "guide_idol",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [],
+      "label": "Ignite + Frailty fallback",
+      "name": "FLAY - Ignite + Frailty fallback",
+      "number": 127,
+      "enabled": true
+    },
+    {
+      "template": 99,
+      "category": "idol_strict",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          21
+        ]
+      ],
+      "label": "Strict - Minor Idols",
+      "name": "FLAY - Strict - Minor Idols",
+      "number": 128,
+      "enabled": true
+    },
+    {
+      "template": 99,
+      "category": "idol_strict",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          22
+        ]
+      ],
+      "label": "Strict - Stout Idols",
+      "name": "FLAY - Strict - Stout Idols",
+      "number": 129,
+      "enabled": true
+    },
+    {
+      "template": 99,
+      "category": "idol_strict",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          24
+        ]
+      ],
+      "label": "Strict - Minor Idols",
+      "name": "NECRO - Strict - Minor Idols",
+      "number": 130,
+      "enabled": true
+    },
+    {
+      "template": 99,
+      "category": "idol_strict",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          25
+        ]
+      ],
+      "label": "Strict - Humble Idols",
+      "name": "NECRO - Strict - Humble Idols",
+      "number": 131,
+      "enabled": true
+    },
+    {
+      "template": 99,
+      "category": "idol_strict",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          26
+        ]
+      ],
+      "label": "Strict - Large Idols",
+      "name": "NECRO - Strict - Large Idols",
+      "number": 132,
+      "enabled": true
+    },
+    {
+      "template": 99,
+      "category": "idol_strict",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          27
+        ]
+      ],
+      "label": "Strict - Large Omen Idols",
+      "name": "NECRO - Strict - Large Omen Idols",
+      "number": 133,
+      "enabled": true
+    },
+    {
+      "template": 127,
+      "category": "altar",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          45
+        ]
+      ],
+      "label": "Suffix Effect Idol Altar (Tier 7 Equivalent)",
+      "name": "FLAY - Suffix Effect Idol Altar (Tier 7 Equivalent)",
+      "number": 134,
+      "enabled": true
+    },
+    {
+      "template": 127,
+      "category": "altar",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          46
+        ]
+      ],
+      "label": "Prefix Effect Idol Altar (Tier 7 Equivalent)",
+      "name": "FLAY - Prefix Effect Idol Altar (Tier 7 Equivalent)",
+      "number": 135,
+      "enabled": true
+    },
+    {
+      "template": 127,
+      "category": "altar",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          47
+        ],
+        [
+          "skeleton-necromancer",
+          59
+        ]
+      ],
+      "label": "Generic Good Altars (Double Exalted)",
+      "name": "SHARED - Generic Good Altars (Double Exalted)",
+      "number": 136,
+      "enabled": true
+    },
+    {
+      "template": 127,
+      "category": "altar",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          72
+        ]
+      ],
+      "label": "Tier 7 Strict Idol Altar",
+      "name": "FLAY - Tier 7 Strict Idol Altar",
+      "number": 137,
+      "enabled": true
+    },
+    {
+      "template": 127,
+      "category": "altar",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          57
+        ]
+      ],
+      "label": "Suffix Effect Idol Altar (Tier 7 Equivalent)",
+      "name": "NECRO - Suffix Effect Idol Altar (Tier 7 Equivalent)",
+      "number": 138,
+      "enabled": true
+    },
+    {
+      "template": 127,
+      "category": "altar",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          58
+        ]
+      ],
+      "label": "Prefix Effect Idol Altar (Tier 7 Equivalent)",
+      "name": "NECRO - Prefix Effect Idol Altar (Tier 7 Equivalent)",
+      "number": 139,
+      "enabled": true
+    },
+    {
+      "template": 127,
+      "category": "altar",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          83
+        ]
+      ],
+      "label": "Tier 7 Strict Idol Altar",
+      "name": "NECRO - Tier 7 Strict Idol Altar",
+      "number": 140,
+      "enabled": true
+    },
+    {
+      "template": 127,
+      "category": "altar",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          42
+        ],
+        [
+          "skeleton-necromancer",
+          54
+        ]
+      ],
+      "label": "Generic Good Altars (Min. Tier 6)",
+      "name": "SHARED - Generic Good Altars (Min. Tier 6)",
+      "number": 141,
+      "enabled": true
+    },
+    {
+      "template": 127,
+      "category": "altar",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          43
+        ]
+      ],
+      "label": "Suffix Effect Idol Altar (Tier 6 Equivalent)",
+      "name": "FLAY - Suffix Effect Idol Altar (Tier 6 Equivalent)",
+      "number": 142,
+      "enabled": true
+    },
+    {
+      "template": 127,
+      "category": "altar",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          44
+        ]
+      ],
+      "label": "Prefix Effect Idol Altar (Tier 6 Equivalent)",
+      "name": "FLAY - Prefix Effect Idol Altar (Tier 6 Equivalent)",
+      "number": 143,
+      "enabled": true
+    },
+    {
+      "template": 127,
+      "category": "altar",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          59
+        ]
+      ],
+      "label": "Tier 6 Strict Idol Altar",
+      "name": "FLAY - Tier 6 Strict Idol Altar",
+      "number": 144,
+      "enabled": true
+    },
+    {
+      "template": 127,
+      "category": "altar",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          55
+        ]
+      ],
+      "label": "Suffix Effect Idol Altar (Tier 6 Equivalent)",
+      "name": "NECRO - Suffix Effect Idol Altar (Tier 6 Equivalent)",
+      "number": 145,
+      "enabled": true
+    },
+    {
+      "template": 127,
+      "category": "altar",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          56
+        ]
+      ],
+      "label": "Prefix Effect Idol Altar (Tier 6 Equivalent)",
+      "name": "NECRO - Prefix Effect Idol Altar (Tier 6 Equivalent)",
+      "number": 146,
+      "enabled": true
+    },
+    {
+      "template": 127,
+      "category": "altar",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          70
+        ]
+      ],
+      "label": "Tier 6 Strict Idol Altar",
+      "name": "NECRO - Tier 6 Strict Idol Altar",
+      "number": 147,
+      "enabled": true
+    },
+    {
+      "template": 127,
+      "category": "guide_altar",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [],
+      "label": "Guide armor altar base (inspect manually)",
+      "name": "FLAY - Guide armor altar base (inspect manually)",
+      "number": 148,
+      "enabled": true
+    },
+    {
+      "template": 128,
+      "category": "idol_one_affix",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          17
+        ]
+      ],
+      "label": "1 Affix - Minor Idols",
+      "name": "FLAY - 1 Affix - Minor Idols",
+      "number": 149,
+      "enabled": true
+    },
+    {
+      "template": 128,
+      "category": "idol_one_affix",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          18
+        ]
+      ],
+      "label": "1 Affix - Stout Idols",
+      "name": "FLAY - 1 Affix - Stout Idols",
+      "number": 150,
+      "enabled": true
+    },
+    {
+      "template": 128,
+      "category": "idol_one_affix",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          18
+        ]
+      ],
+      "label": "1 Affix - Minor Idols",
+      "name": "NECRO - 1 Affix - Minor Idols",
+      "number": 151,
+      "enabled": true
+    },
+    {
+      "template": 128,
+      "category": "idol_one_affix",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          19
+        ]
+      ],
+      "label": "1 Affix - Humble Idols",
+      "name": "NECRO - 1 Affix - Humble Idols",
+      "number": 152,
+      "enabled": true
+    },
+    {
+      "template": 128,
+      "category": "idol_one_affix",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          20
+        ]
+      ],
+      "label": "1 Affix - Large Idols",
+      "name": "NECRO - 1 Affix - Large Idols",
+      "number": 153,
+      "enabled": true
+    },
+    {
+      "template": 128,
+      "category": "idol_one_affix",
+      "owners": [
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "skeleton-necromancer",
+          21
+        ]
+      ],
+      "label": "1 Affix - Large Omen Idols",
+      "name": "NECRO - 1 Affix - Large Omen Idols",
+      "number": 154,
+      "enabled": true
+    },
+    {
+      "template": 128,
+      "category": "guide_idol",
+      "owners": [
+        "FLAY"
+      ],
+      "source_rules": [],
+      "label": "Optional critical avoidance corruption",
+      "name": "FLAY - Optional critical avoidance corruption",
+      "number": 155,
+      "enabled": true
+    },
+    {
+      "template": 129,
+      "category": "idol_generic",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          19
+        ],
+        [
+          "skeleton-necromancer",
+          22
+        ]
+      ],
+      "label": "Strict - Weaver Idols",
+      "name": "SHARED - Strict - Weaver Idols",
+      "number": 156,
+      "enabled": true
+    },
+    {
+      "template": 129,
+      "category": "idol_generic",
+      "owners": [
+        "FLAY",
+        "NECRO"
+      ],
+      "source_rules": [
+        [
+          "flay-mana-lich",
+          20
+        ],
+        [
+          "skeleton-necromancer",
+          23
+        ]
+      ],
+      "label": "Reflect Idols (Alt Leveling)",
+      "name": "SHARED - Reflect Idols (Alt Leveling)",
+      "number": 157,
+      "enabled": true
+    },
+    {
+      "template": 134,
+      "category": "raxx",
+      "name": "All Exalts or Better - Turns off at 60",
+      "owners": [],
+      "source_rules": [],
+      "number": 158,
+      "enabled": true
+    },
+    {
+      "template": 135,
+      "category": "raxx",
+      "name": "Campaign Idols - Turns off at 60",
+      "owners": [],
+      "source_rules": [],
+      "number": 159,
+      "enabled": true
+    },
+    {
+      "template": 136,
+      "category": "raxx",
+      "name": "OFF - Campaign weapon bases not supplied",
+      "owners": [],
+      "source_rules": [],
+      "number": 160,
+      "enabled": false
+    },
+    {
+      "template": 137,
+      "category": "raxx",
+      "name": "OFF - Campaign offhand bases not supplied",
+      "owners": [],
+      "source_rules": [],
+      "number": 161,
+      "enabled": false
+    },
+    {
+      "template": 138,
+      "category": "raxx",
+      "name": "BIS Campaign Amulet Bases - Turns off at 60",
+      "owners": [],
+      "source_rules": [],
+      "number": 162,
+      "enabled": true
+    },
+    {
+      "template": 139,
+      "category": "raxx",
+      "name": "BIS Campaign Belt Bases - Turns off at 60",
+      "owners": [],
+      "source_rules": [],
+      "number": 163,
+      "enabled": true
+    },
+    {
+      "template": 140,
+      "category": "raxx",
+      "name": "BIS Campaign Body Armor Bases - Turns off at 60",
+      "owners": [],
+      "source_rules": [],
+      "number": 164,
+      "enabled": true
+    },
+    {
+      "template": 141,
+      "category": "raxx",
+      "name": "BIS Campaign Boot Bases - Turns off at 60",
+      "owners": [],
+      "source_rules": [],
+      "number": 165,
+      "enabled": true
+    },
+    {
+      "template": 142,
+      "category": "raxx",
+      "name": "BIS Campaign Helmet Bases - Turns off at 60",
+      "owners": [],
+      "source_rules": [],
+      "number": 166,
+      "enabled": true
+    },
+    {
+      "template": 143,
+      "category": "raxx",
+      "name": "BIS Campaign Ring Bases - Turns off at 60",
+      "owners": [],
+      "source_rules": [],
+      "number": 167,
+      "enabled": true
+    },
+    {
+      "template": 144,
+      "category": "raxx",
+      "name": "BIS Campaign Glove Bases - Turns off at 60",
+      "owners": [],
+      "source_rules": [],
+      "number": 168,
+      "enabled": true
+    },
+    {
+      "template": 145,
+      "category": "raxx",
+      "name": "BIS Campaign Relic Bases - Turns off at 60",
+      "owners": [],
+      "source_rules": [],
+      "number": 169,
+      "enabled": true
+    },
+    {
+      "template": 146,
+      "category": "raxx",
+      "name": "Shatter T3+ Phys Res / All Health - Turns off at 50",
+      "owners": [],
+      "source_rules": [],
+      "number": 170,
+      "enabled": true
+    },
+    {
+      "template": 147,
+      "category": "raxx",
+      "name": "Shatter T3+ Movespeed & CDR - Turns off at 50",
+      "owners": [],
+      "source_rules": [],
+      "number": 171,
+      "enabled": true
+    },
+    {
+      "template": 148,
+      "category": "raxx",
+      "name": "Shatter T3+ Resistances - Turns off at 50",
+      "owners": [],
+      "source_rules": [],
+      "number": 172,
+      "enabled": true
+    },
+    {
+      "template": 149,
+      "category": "raxx",
+      "name": "T2+ Phys Res / All Health - Turns off at 30",
+      "owners": [],
+      "source_rules": [],
+      "number": 173,
+      "enabled": true
+    },
+    {
+      "template": 150,
+      "category": "raxx",
+      "name": "T2+ Movespeed & CDR - Turns off at 30",
+      "owners": [],
+      "source_rules": [],
+      "number": 174,
+      "enabled": true
+    },
+    {
+      "template": 151,
+      "category": "raxx",
+      "name": "T2+ Resistances - Turns off at 30",
+      "owners": [],
+      "source_rules": [],
+      "number": 175,
+      "enabled": true
+    },
+    {
+      "template": 152,
+      "category": "raxx",
+      "name": "OFF - Bow not used",
+      "owners": [],
+      "source_rules": [],
+      "number": 176,
+      "enabled": false
+    },
+    {
+      "template": 153,
+      "category": "raxx",
+      "name": "Early Melee Wpns - Turns off at 30",
+      "owners": [],
+      "source_rules": [],
+      "number": 177,
+      "enabled": true
+    },
+    {
+      "template": 154,
+      "category": "raxx",
+      "name": "OFF - Wand/staff not used",
+      "owners": [],
+      "source_rules": [],
+      "number": 178,
+      "enabled": false
+    },
+    {
+      "template": 155,
+      "category": "raxx",
+      "name": "All Rares - Turns off at 30",
+      "owners": [],
+      "source_rules": [],
+      "number": 179,
+      "enabled": true
+    },
+    {
+      "template": 156,
+      "category": "raxx",
+      "name": "Early Relics - Turns off at 12",
+      "owners": [],
+      "source_rules": [],
+      "number": 180,
+      "enabled": true
+    },
+    {
+      "template": 157,
+      "category": "raxx",
+      "name": "OFF - Catalyst not used",
+      "owners": [],
+      "source_rules": [],
+      "number": 181,
+      "enabled": false
+    },
+    {
+      "template": 158,
+      "category": "raxx",
+      "name": "OFF - Quiver not used",
+      "owners": [],
+      "source_rules": [],
+      "number": 182,
+      "enabled": false
+    },
+    {
+      "template": 159,
+      "category": "raxx",
+      "name": "OFF - Shield not used",
+      "owners": [],
+      "source_rules": [],
+      "number": 183,
+      "enabled": false
+    },
+    {
+      "template": 160,
+      "category": "raxx",
+      "name": "Silver Ring - Turns off at 12",
+      "owners": [],
+      "source_rules": [],
+      "number": 184,
+      "enabled": true
+    },
+    {
+      "template": 161,
+      "category": "raxx",
+      "name": "Ruby Amulet - Turns off at 12",
+      "owners": [],
+      "source_rules": [],
+      "number": 185,
+      "enabled": true
+    },
+    {
+      "template": 162,
+      "category": "raxx",
+      "name": "All Items - Turns off at 10",
+      "owners": [],
+      "source_rules": [],
+      "number": 186,
+      "enabled": true
+    },
+    {
+      "template": 163,
+      "category": "raxx",
+      "name": "",
+      "owners": [],
+      "source_rules": [],
+      "number": 187,
+      "enabled": true
+    }
+  ]
+}
