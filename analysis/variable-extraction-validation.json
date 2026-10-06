@@ -38,6 +38,8 @@
     374,
     477
   ],
+  "idol_corrupted_affixes_excluded_from_ordinary_counts": true,
+  "user_reviewed_flay_idol_layers": 4,
   "filters_and_source_bytes_unchanged": true,
   "filter_generated": false,
   "game_execution_tested": false

@@ -42472,7 +42472,7 @@
         96,
         97
       ],
-      "editable_fields": "按BD、尺寸、底材分开的词缀池；腐化词缀；数量默认2，可选1",
+      "editable_fields": "按BD、尺寸、底材分组；普通计数与腐化参考分开；Flay分1／2项",
       "instruction_texts": {
         "91": "Idol rules below.",
         "92": "1x1, 2x1 & 1x2 Idols work for all classes - so they have 1 rule each",
@@ -43702,8 +43702,7 @@
             851,
             852,
             853,
-            855,
-            1068
+            855
           ],
           "affix_pools": [
             [
@@ -43716,7 +43715,11 @@
               855
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1068
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "skeleton-necromancer",
@@ -43738,9 +43741,7 @@
             319,
             862,
             866,
-            870,
-            1058,
-            1071
+            870
           ],
           "affix_pools": [
             [
@@ -43753,7 +43754,12 @@
               1071
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1058,
+            1071
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "skeleton-necromancer",
@@ -43775,10 +43781,7 @@
             285,
             287,
             897,
-            941,
-            1035,
-            1036,
-            1071
+            941
           ],
           "affix_pools": [
             [
@@ -43791,7 +43794,13 @@
               1036
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1035,
+            1036,
+            1071
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "skeleton-necromancer",
@@ -43819,10 +43828,7 @@
             285,
             287,
             897,
-            941,
-            1035,
-            1036,
-            1071
+            941
           ],
           "affix_pools": [
             [
@@ -43835,7 +43841,13 @@
               1036
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1035,
+            1036,
+            1071
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "skeleton-necromancer",
@@ -43857,8 +43869,7 @@
             851,
             852,
             853,
-            855,
-            1068
+            855
           ],
           "affix_pools": [
             [
@@ -43871,7 +43882,11 @@
               855
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1068
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "skeleton-necromancer",
@@ -43892,9 +43907,7 @@
             319,
             862,
             866,
-            870,
-            1058,
-            1071
+            870
           ],
           "affix_pools": [
             [
@@ -43907,7 +43920,12 @@
               1071
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1058,
+            1071
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "skeleton-necromancer",
@@ -43929,10 +43947,7 @@
             285,
             287,
             897,
-            941,
-            1035,
-            1036,
-            1071
+            941
           ],
           "affix_pools": [
             [
@@ -43945,7 +43960,13 @@
               1036
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1035,
+            1036,
+            1071
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "skeleton-necromancer",
@@ -43973,10 +43994,7 @@
             285,
             287,
             897,
-            941,
-            1035,
-            1036,
-            1071
+            941
           ],
           "affix_pools": [
             [
@@ -43989,7 +44007,13 @@
               1036
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1035,
+            1036,
+            1071
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "flay-mana-lich",
@@ -44008,9 +44032,7 @@
           ],
           "affix_ids": [
             843,
-            854,
-            1069,
-            1070
+            854
           ],
           "affix_pools": [
             [
@@ -44020,7 +44042,12 @@
               1069
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1069,
+            1070
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "flay-mana-lich",
@@ -44039,8 +44066,7 @@
           ],
           "affix_ids": [
             876,
-            886,
-            1070
+            886
           ],
           "affix_pools": [
             [
@@ -44049,7 +44075,11 @@
               1070
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1070
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "flay-mana-lich",
@@ -44067,9 +44097,7 @@
           ],
           "affix_ids": [
             843,
-            854,
-            1069,
-            1070
+            854
           ],
           "affix_pools": [
             [
@@ -44079,7 +44107,12 @@
               1069
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1069,
+            1070
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "flay-mana-lich",
@@ -44097,8 +44130,7 @@
           ],
           "affix_ids": [
             876,
-            886,
-            1070
+            886
           ],
           "affix_pools": [
             [
@@ -44107,11 +44139,15 @@
               1070
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1070
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         }
       ],
-      "status": "有启用来源候选，待审阅",
-      "interpretation": "来源是混合池，不是精确前后缀配对。保留每BD、尺寸、subtype关系；不会混两个BD后任选两条。单词缀层仅提供额外情报，不另加常驻规则。Large Omen来源选了跨职业底材；多个可参考R入口标为待判别，不意味着需要五个职业。"
+      "status": "Flay四层已按用户要求记录；其他神像配对仍待审阅",
+      "interpretation": "按冻结类型资料将普通词缀与腐化词缀（specialAffixType=6）分开，腐化词缀不参与普通目标计数，原始混合池完整保留。Flay按用户本轮审阅记录1项候选／2项组合毕业两层，均保留Weaver与Lagon底材；这是用户定制，不冒充Strict原规则。其他BD配对仍待审阅。Large Omen跨职业底材入口仍标为待判别。"
     },
     {
       "id": "V20",
@@ -45303,8 +45339,7 @@
             851,
             852,
             853,
-            855,
-            1068
+            855
           ],
           "affix_pools": [
             [
@@ -45317,7 +45352,11 @@
               855
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1068
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "skeleton-necromancer",
@@ -45340,9 +45379,7 @@
             319,
             862,
             866,
-            870,
-            1058,
-            1071
+            870
           ],
           "affix_pools": [
             [
@@ -45355,7 +45392,12 @@
               1071
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1058,
+            1071
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "skeleton-necromancer",
@@ -45378,10 +45420,7 @@
             285,
             287,
             897,
-            941,
-            1035,
-            1036,
-            1071
+            941
           ],
           "affix_pools": [
             [
@@ -45394,7 +45433,13 @@
               1036
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1035,
+            1036,
+            1071
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "skeleton-necromancer",
@@ -45419,10 +45464,7 @@
             285,
             287,
             897,
-            941,
-            1035,
-            1036,
-            1071
+            941
           ],
           "affix_pools": [
             [
@@ -45435,7 +45477,13 @@
               1036
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1035,
+            1036,
+            1071
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "skeleton-necromancer",
@@ -45458,8 +45506,7 @@
             851,
             852,
             853,
-            855,
-            1068
+            855
           ],
           "affix_pools": [
             [
@@ -45472,7 +45519,11 @@
               855
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1068
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "skeleton-necromancer",
@@ -45494,9 +45545,7 @@
             319,
             862,
             866,
-            870,
-            1058,
-            1071
+            870
           ],
           "affix_pools": [
             [
@@ -45509,7 +45558,12 @@
               1071
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1058,
+            1071
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "skeleton-necromancer",
@@ -45532,10 +45586,7 @@
             285,
             287,
             897,
-            941,
-            1035,
-            1036,
-            1071
+            941
           ],
           "affix_pools": [
             [
@@ -45548,7 +45599,13 @@
               1036
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1035,
+            1036,
+            1071
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "skeleton-necromancer",
@@ -45573,10 +45630,7 @@
             285,
             287,
             897,
-            941,
-            1035,
-            1036,
-            1071
+            941
           ],
           "affix_pools": [
             [
@@ -45589,7 +45643,13 @@
               1036
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1035,
+            1036,
+            1071
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "flay-mana-lich",
@@ -45609,9 +45669,7 @@
           ],
           "affix_ids": [
             843,
-            854,
-            1069,
-            1070
+            854
           ],
           "affix_pools": [
             [
@@ -45621,7 +45679,12 @@
               1069
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1069,
+            1070
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "flay-mana-lich",
@@ -45641,8 +45704,7 @@
           ],
           "affix_ids": [
             876,
-            886,
-            1070
+            886
           ],
           "affix_pools": [
             [
@@ -45651,7 +45713,11 @@
               1070
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1070
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "flay-mana-lich",
@@ -45670,9 +45736,7 @@
           ],
           "affix_ids": [
             843,
-            854,
-            1069,
-            1070
+            854
           ],
           "affix_pools": [
             [
@@ -45682,7 +45746,12 @@
               1069
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1069,
+            1070
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         },
         {
           "build": "flay-mana-lich",
@@ -45701,8 +45770,7 @@
           ],
           "affix_ids": [
             876,
-            886,
-            1070
+            886
           ],
           "affix_pools": [
             [
@@ -45711,11 +45779,15 @@
               1070
             ]
           ],
-          "unique_ids": []
+          "unique_ids": [],
+          "corrupted_affix_ids": [
+            1070
+          ],
+          "count_scope": "ordinary_target_affixes_only; corruption_status_unrestricted"
         }
       ],
       "status": "有启用来源候选，待审阅",
-      "interpretation": "抽取职业词缀供R128／129补充；保留原广泛过渡池与等级退出，不另加全等级单词缀／Weaver／反伤层。"
+      "interpretation": "普通词缀与腐化参考分开，仅普通词缀供R128／129补充与计数；保留原广泛过渡池与等级退出。Flay用户指定的1／2项层另记在V19，其他BD不自动新增常驻层。"
     },
     {
       "id": "V22",
@@ -174176,6 +174248,116 @@
     477
   ],
   "tier6_tier7_target_pools_equal": true,
+  "user_reviewed_flay_idol_layers": [
+    {
+      "build": "flay-mana-lich",
+      "types": [
+        "IDOL_1x1_LAGON"
+      ],
+      "subtypes": [
+        1,
+        0
+      ],
+      "affix_ids": [
+        843,
+        854
+      ],
+      "min_matching_ordinary_affixes": 2,
+      "advanced": false,
+      "character_level_limit": null,
+      "required_affix_ids": [],
+      "corruption_status": "unrestricted",
+      "corrupted_affixes_counted": false,
+      "tier": "组合毕业",
+      "sound_role": "graduation",
+      "source_x": [
+        17,
+        21
+      ],
+      "policy_source": "User review on 2026-10-06; not an unchanged Strict predicate"
+    },
+    {
+      "build": "flay-mana-lich",
+      "types": [
+        "IDOL_1x1_LAGON"
+      ],
+      "subtypes": [
+        1,
+        0
+      ],
+      "affix_ids": [
+        843,
+        854
+      ],
+      "min_matching_ordinary_affixes": 1,
+      "advanced": false,
+      "character_level_limit": null,
+      "required_affix_ids": [],
+      "corruption_status": "unrestricted",
+      "corrupted_affixes_counted": false,
+      "tier": "收集候选",
+      "sound_role": "ordinary",
+      "source_x": [
+        17,
+        21
+      ],
+      "policy_source": "User review on 2026-10-06; not an unchanged Strict predicate"
+    },
+    {
+      "build": "flay-mana-lich",
+      "types": [
+        "IDOL_1x2"
+      ],
+      "subtypes": [
+        1,
+        0
+      ],
+      "affix_ids": [
+        876,
+        886
+      ],
+      "min_matching_ordinary_affixes": 2,
+      "advanced": false,
+      "character_level_limit": null,
+      "required_affix_ids": [],
+      "corruption_status": "unrestricted",
+      "corrupted_affixes_counted": false,
+      "tier": "组合毕业",
+      "sound_role": "graduation",
+      "source_x": [
+        18,
+        22
+      ],
+      "policy_source": "User review on 2026-10-06; not an unchanged Strict predicate"
+    },
+    {
+      "build": "flay-mana-lich",
+      "types": [
+        "IDOL_1x2"
+      ],
+      "subtypes": [
+        1,
+        0
+      ],
+      "affix_ids": [
+        876,
+        886
+      ],
+      "min_matching_ordinary_affixes": 1,
+      "advanced": false,
+      "character_level_limit": null,
+      "required_affix_ids": [],
+      "corruption_status": "unrestricted",
+      "corrupted_affixes_counted": false,
+      "tier": "收集候选",
+      "sound_role": "ordinary",
+      "source_x": [
+        18,
+        22
+      ],
+      "policy_source": "User review on 2026-10-06; not an unchanged Strict predicate"
+    }
+  ],
   "fixed_instruction_slots": [
     1,
     2,

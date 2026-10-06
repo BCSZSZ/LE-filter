@@ -4,6 +4,9 @@
 
 ## 当前交付：Raxx变量与Strict情报，等待Review
 
+- 神像本轮修正：以前把普通与腐化ID混在同一个计数池，会让843＋1070误充双目标毕业。V19／V21按specialAffixType=6剥离腐化参考；affix_ids只含普通目标，corrupted_affix_ids独立，原affix_pools仍保留全部源ID。V13的早期腐化参考不删除。
+- 用户明确Flay：中型843＋854、厚实876＋886，各记录1项候选／2项组合毕业两层；都保留Weaver与Lagon，腐化状态不限、阶数不限，两项优先，声音不同。user_reviewed_flay_idol_layers记录4层，标明来源是用户审阅而非Strict等价复制。“毕业”只是普通组合齐全，不指满roll；其他BD配对仍待审阅。
+- 必须／选择条件可用多份AffixCondition共同满足，官方1.1已支持、原R62也有两份。照用户目前候选池，厚实只有886仍被保留；若要求876必有要明确采用必选条件，不静默收紧。891备用与最终祭坛1105需要腐化神像来自正文，不假称为Strict导出，也不自动加进这4层。机制及来源见FLAY_IDOL_REVIEW.md。
 - 用户已纠正方向：按照Raxx的设计；Strict是从BD导出的情报来源，用于填Raxx要求定制的变量，不把Strict的策略直接移植。明确要求本轮不要生成最终filter。
 - scripts/extract_raxx_variables.py提取24组变量；蓝字56条全部归入填空说明或固定说明。输出RAXX_VARIABLES、STRICT_VARIABLE_REVIEW、raxx-variables.json、raxx-variable-extraction.json与variable-extraction-validation.json。只用冻结原版、两份Strict和名字／类型参考；不读Planner JSON或攻略正文，不依赖.cache。
 - 已提取两BD各11种暗金，共20种、无套装目标；R15原143项已有11种，追加缺少的9种可形成152项候选。原珍贵名单保持，所有BD目标0LP也留，不增加BD独立LP分层。旧25种目标包含额外5种正文替代，不能冒充Strict本身导出。

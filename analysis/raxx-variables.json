@@ -35103,7 +35103,7 @@
         "96": "Change This To 1 Affix Present To Make It Less Strict.",
         "97": "Check The Corrupted Mods You Want."
       },
-      "editable_fields": "按BD、尺寸、底材分开的词缀池；腐化词缀；数量默认2，可选1",
+      "editable_fields": "按BD、尺寸、底材分组；普通计数与腐化参考分开；Flay分1／2项",
       "baseline_defaults": {
         "99": {
           "enabled": true,
@@ -36298,7 +36298,7 @@
           ]
         }
       },
-      "interpretation": "来源是混合池，不是精确前后缀配对。保留每BD、尺寸、subtype关系；不会混两个BD后任选两条。单词缀层仅提供额外情报，不另加常驻规则。Large Omen来源选了跨职业底材；多个可参考R入口标为待判别，不意味着需要五个职业。"
+      "interpretation": "按冻结类型资料将普通词缀与腐化词缀（specialAffixType=6）分开，腐化词缀不参与普通目标计数，原始混合池完整保留。Flay按用户本轮审阅记录1项候选／2项组合毕业两层，均保留Weaver与Lagon底材；这是用户定制，不冒充Strict原规则。其他BD配对仍待审阅。Large Omen跨职业底材入口仍标为待判别。"
     },
     {
       "id": "V20",
@@ -37135,7 +37135,7 @@
           ]
         }
       },
-      "interpretation": "抽取职业词缀供R128／129补充；保留原广泛过渡池与等级退出，不另加全等级单词缀／Weaver／反伤层。"
+      "interpretation": "普通词缀与腐化参考分开，仅普通词缀供R128／129补充与计数；保留原广泛过渡池与等级退出。Flay用户指定的1／2项层另记在V19，其他BD不自动新增常驻层。"
     },
     {
       "id": "V22",
