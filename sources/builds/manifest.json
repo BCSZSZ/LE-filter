@@ -1,0 +1,51 @@
+{
+  "received_date": "2026-10-06",
+  "provider": "User-supplied Maxroll Planner exports; Maxroll pages were not read",
+  "inputs": {
+    "flay-mana-lich": {
+      "file": "sources/builds/flay-mana-lich.json",
+      "sha256": "fe5932f3f5990bcffa88cef0e882789855d89cbba89c2d66ed1768f6ea531ba7",
+      "source": "User attachment Pasted text.txt, preserved byte-for-byte",
+      "planner_url_supplied_by_user": "https://maxroll.gg/last-epoch/planner/y21h9h0x#2",
+      "skill_names": {
+        "fl44": "Flay",
+        "rf1azz": "Reaper Form",
+        "ch4bo": "Chaos Bolts",
+        "bp2nk": "Marrow Shards",
+        "ha84": "Harvest"
+      }
+    },
+    "skeleton-necromancer": {
+      "file": "sources/builds/skeleton-necromancer.json",
+      "sha256": "456c46bb25c88dc6077ce4189dcd89e268eb12aa8893f44cbe19e35202cc988d",
+      "source": "JSON pasted in the user message, saved without changing fields",
+      "planner_url_supplied_by_user": "https://maxroll.gg/last-epoch/planner/2ai4s0qh#1",
+      "skill_names": {
+        "rb31pl": "Rip Blood",
+        "ds4d3": "Dread Shade",
+        "ss37kl": "Summon Skeleton",
+        "ad0ry": "Aura of Decay",
+        "bc53": "Bone Curse"
+      }
+    }
+  },
+  "interpretation_sources": {
+    "item_and_affix_names": "sources/game-reference.json",
+    "skill_name_keys": "Skills.Skill_<skillTreeId>_0_Name",
+    "skill_name_source": "https://www.lastepochtools.com/data/version150/i18n/full/en.json?17",
+    "skill_name_source_sha256": "04c368fb36db08f336291cfa94698bdbd5099b50c0e522580003f8c4507888ae",
+    "unique_469_metadata_source": "https://www.lastepochtools.com/data/version150/db/js/010a2617c7ebb271af8028db2d94bc15.js",
+    "unique_469_metadata_source_sha256": "af78878c4cdb6c05f2a1fd2095e760f253635ea50f5f7bf43313bc14fdde5a71",
+    "unique_469_metadata_excerpt": {
+      "canDropAsLegendary": 1,
+      "dropsSpecificLegendaryAffixes": 1,
+      "isPreCorrupted": 1
+    }
+  },
+  "limits": [
+    "The exports do not contain guide text, guide version, gear-stage labels, game version, character level or minimum required stats.",
+    "Planner URL fragments are recorded from the user; the exports themselves do not identify those fragments.",
+    "All recorded rolls are 1. Their meaning is not treated as a minimum pickup threshold.",
+    "Community reference data describes IDs and metadata; no game-client test has been performed."
+  ]
+}

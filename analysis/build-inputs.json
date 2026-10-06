@@ -1,0 +1,1160 @@
+{
+  "reference_game_version": "Version 1.5.0",
+  "game_execution_tested": false,
+  "combined_unique_ids": [
+    8,
+    66,
+    208,
+    241,
+    253,
+    269,
+    277,
+    342,
+    357,
+    372,
+    374,
+    416,
+    420,
+    433,
+    469,
+    471,
+    475
+  ],
+  "combined_affix_ids": [
+    28,
+    34,
+    36,
+    52,
+    70,
+    80,
+    86,
+    90,
+    97,
+    98,
+    192,
+    287,
+    319,
+    406,
+    502,
+    679,
+    825,
+    843,
+    846,
+    851,
+    852,
+    854,
+    855,
+    862,
+    870,
+    876,
+    886,
+    897,
+    941,
+    943,
+    945,
+    951,
+    1009,
+    1022,
+    1058,
+    1068,
+    1069,
+    1070,
+    1071,
+    1084,
+    1087,
+    1089,
+    1093,
+    1100,
+    1101,
+    1102,
+    1105,
+    1106
+  ],
+  "builds": {
+    "flay-mana-lich": {
+      "source": "sources/builds/flay-mana-lich.json",
+      "sha256": "fe5932f3f5990bcffa88cef0e882789855d89cbba89c2d66ed1768f6ea531ba7",
+      "class_id": 3,
+      "mastery_id": 2,
+      "counts": {
+        "equipment": 11,
+        "altars": 1,
+        "unique_instances": 11,
+        "distinct_unique_ids": 10,
+        "idol_objects": 18,
+        "distinct_idol_configurations": 3,
+        "regular_array_affix_ids": 16,
+        "corrupted_affix_ids": 8,
+        "all_affix_ids": 24,
+        "selected_blessings": 5,
+        "passive_history_entries": 113,
+        "skill_trees": 5
+      },
+      "unique_ids": [
+        253,
+        277,
+        342,
+        357,
+        372,
+        416,
+        420,
+        433,
+        469,
+        475
+      ],
+      "regular_array_affix_ids": [
+        28,
+        34,
+        36,
+        52,
+        86,
+        97,
+        502,
+        843,
+        854,
+        876,
+        886,
+        943,
+        1089,
+        1093,
+        1100,
+        1101
+      ],
+      "corrupted_affix_ids": [
+        951,
+        1009,
+        1022,
+        1069,
+        1070,
+        1084,
+        1087,
+        1105
+      ],
+      "recorded_roll_values": [
+        1
+      ],
+      "items": [
+        {
+          "slot": "head",
+          "item_type_id": 0,
+          "item_type": "HELMET",
+          "subtype_id": 6,
+          "unique_id": 357,
+          "corrupted": true,
+          "unique_name": "Seed of Ekkidrasil",
+          "affixes": [
+            {
+              "id": 34,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Mana",
+              "name_zh": "魔力"
+            }
+          ],
+          "corruptedAffixes": [
+            {
+              "id": 1022,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Damage Dealt to Mana before Health and Added Mana",
+              "name_zh": "伤害由魔力优先承受而非生命与增加魔力"
+            }
+          ]
+        },
+        {
+          "slot": "waist",
+          "item_type_id": 2,
+          "item_type": "BELT",
+          "subtype_id": 12,
+          "unique_id": 416,
+          "corrupted": false,
+          "unique_name": "Brewmaster's Buckle",
+          "affixes": [
+            {
+              "id": 52,
+              "tier": 7,
+              "roll": 1,
+              "priority": 1,
+              "name_en": "Increased Health",
+              "name_zh": "提高生命"
+            },
+            {
+              "id": 97,
+              "tier": 5,
+              "roll": 1,
+              "priority": 0,
+              "name_en": "Critical Strike Avoidance and Added Dodge Rating",
+              "name_zh": "暴击避免与增加躲避值"
+            }
+          ],
+          "corruptedAffixes": []
+        },
+        {
+          "slot": "feet",
+          "item_type_id": 3,
+          "item_type": "BOOTS",
+          "subtype_id": 2,
+          "unique_id": 253,
+          "corrupted": false,
+          "unique_name": "Foot of the Mountain",
+          "affixes": [
+            {
+              "id": 28,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Movement Speed",
+              "name_zh": "移动速度"
+            },
+            {
+              "id": 36,
+              "tier": 5,
+              "roll": 1,
+              "name_en": "Hybrid Health",
+              "name_zh": "复合生命"
+            }
+          ],
+          "corruptedAffixes": []
+        },
+        {
+          "slot": "hands",
+          "item_type_id": 4,
+          "item_type": "GLOVES",
+          "subtype_id": 11,
+          "unique_id": 372,
+          "corrupted": false,
+          "unique_name": "Grasp of the Blood Mage",
+          "affixes": [
+            {
+              "id": 34,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Mana",
+              "name_zh": "魔力"
+            }
+          ],
+          "corruptedAffixes": []
+        },
+        {
+          "slot": "weapon",
+          "item_type_id": 5,
+          "item_type": "ONE_HANDED_AXE",
+          "subtype_id": 9,
+          "unique_id": 420,
+          "corrupted": false,
+          "unique_name": "Executioner's Tithe",
+          "affixes": [
+            {
+              "id": 943,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Added Melee And Spell Necrotic Damage",
+              "name_zh": "增加近战与法术腐化伤害"
+            }
+          ],
+          "corruptedAffixes": []
+        },
+        {
+          "slot": "offhand",
+          "item_type_id": 6,
+          "item_type": "ONE_HANDED_DAGGER",
+          "subtype_id": 3,
+          "unique_id": 342,
+          "corrupted": false,
+          "unique_name": "Traitor's Tongue",
+          "affixes": [
+            {
+              "id": 943,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Added Melee And Spell Necrotic Damage",
+              "name_zh": "增加近战与法术腐化伤害"
+            },
+            {
+              "id": 86,
+              "tier": 5,
+              "roll": 1,
+              "name_en": "Chance to Shred Armor on Hit",
+              "name_zh": "几率粉碎护甲于击中时"
+            }
+          ],
+          "corruptedAffixes": []
+        },
+        {
+          "slot": "relic",
+          "item_type_id": 22,
+          "item_type": "RELIC",
+          "subtype_id": 63,
+          "unique_id": 433,
+          "corrupted": true,
+          "unique_name": "Reliquary Nest",
+          "affixes": [
+            {
+              "id": 34,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Mana",
+              "name_zh": "魔力"
+            }
+          ],
+          "corruptedAffixes": [
+            {
+              "id": 951,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Frenzy and Reduced Frenzy Effect",
+              "name_zh": "狂怒与降低狂怒效果"
+            }
+          ]
+        },
+        {
+          "slot": "finger1",
+          "item_type_id": 21,
+          "item_type": "RING",
+          "subtype_id": 3,
+          "unique_id": 277,
+          "corrupted": false,
+          "unique_name": "Red Ring of Atlaria",
+          "affixes": [
+            {
+              "id": 502,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Intelligence",
+              "name_zh": "智力"
+            }
+          ],
+          "corruptedAffixes": []
+        },
+        {
+          "slot": "finger2",
+          "item_type_id": 21,
+          "item_type": "RING",
+          "subtype_id": 3,
+          "unique_id": 277,
+          "corrupted": false,
+          "unique_name": "Red Ring of Atlaria",
+          "affixes": [
+            {
+              "id": 502,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Intelligence",
+              "name_zh": "智力"
+            }
+          ],
+          "corruptedAffixes": []
+        },
+        {
+          "slot": "neck",
+          "item_type_id": 20,
+          "item_type": "AMULET",
+          "subtype_id": 8,
+          "unique_id": 469,
+          "corrupted": true,
+          "unique_name": "Exulis",
+          "affixes": [
+            {
+              "id": 34,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Mana",
+              "name_zh": "魔力"
+            }
+          ],
+          "corruptedAffixes": [
+            {
+              "id": 1087,
+              "tier": 1,
+              "roll": 1,
+              "name_en": "Vitality converted to Rampancy",
+              "name_zh": "活力转化为猖獗"
+            },
+            {
+              "id": 1084,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Intelligence converted to Madness",
+              "name_zh": "智力转化为疯狂"
+            }
+          ]
+        },
+        {
+          "slot": "body",
+          "item_type_id": 1,
+          "item_type": "BODY_ARMOR",
+          "subtype_id": 63,
+          "unique_id": 475,
+          "corrupted": true,
+          "unique_name": "Devoured Knowledge",
+          "affixes": [
+            {
+              "id": 34,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Mana",
+              "name_zh": "魔力"
+            }
+          ],
+          "corruptedAffixes": [
+            {
+              "id": 1009,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Increased Mana and Current Mana Gained as Ward Per Second",
+              "name_zh": "提高魔力与每秒当前魔力转化为能量护盾"
+            }
+          ]
+        },
+        {
+          "slot": "altar",
+          "item_type_id": 41,
+          "item_type": "IDOL_ALTAR",
+          "subtype_id": 3,
+          "unique_id": null,
+          "corrupted": true,
+          "affixes": [
+            {
+              "id": 1093,
+              "tier": 5,
+              "roll": 1,
+              "name_en": "Effect of Prefixes for Idols in Refracted Slots",
+              "name_zh": "折射栏位神像前缀效果"
+            },
+            {
+              "id": 1089,
+              "tier": 5,
+              "roll": 1,
+              "name_en": "Effect of Prefixes and Suffixes for Idols in Refracted Slots",
+              "name_zh": "折射栏位神像前缀与后缀效果"
+            },
+            {
+              "id": 1101,
+              "tier": 5,
+              "roll": 1,
+              "name_en": "Mana per Idol in a Refracted Slot",
+              "name_zh": "魔力自每个折射栏位的神像"
+            },
+            {
+              "id": 1100,
+              "tier": 5,
+              "roll": 1,
+              "name_en": "Health per Idol in a Refracted Slot",
+              "name_zh": "生命自每个折射栏位的神像"
+            }
+          ],
+          "corruptedAffixes": [
+            {
+              "id": 1105,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Mana per Equipped Corrupted Idol",
+              "name_zh": "魔力自装备的每个腐化神像"
+            }
+          ]
+        }
+      ],
+      "idol_configurations": [
+        {
+          "count": 1,
+          "item": {
+            "affixes": [
+              {
+                "id": 843,
+                "roll": 1,
+                "tier": 1
+              },
+              {
+                "id": 854,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "corrupted": true,
+            "corruptedAffixes": [
+              {
+                "id": 1069,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "itemType": 26,
+            "subType": 1
+          }
+        },
+        {
+          "count": 16,
+          "item": {
+            "affixes": [
+              {
+                "id": 843,
+                "roll": 1,
+                "tier": 1
+              },
+              {
+                "id": 854,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "corrupted": true,
+            "corruptedAffixes": [
+              {
+                "id": 1070,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "itemType": 26,
+            "subType": 1
+          }
+        },
+        {
+          "count": 1,
+          "item": {
+            "affixes": [
+              {
+                "id": 876,
+                "roll": 1,
+                "tier": 1
+              },
+              {
+                "id": 886,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "corrupted": true,
+            "corruptedAffixes": [
+              {
+                "id": 1070,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "itemType": 28,
+            "subType": 1
+          }
+        }
+      ],
+      "skills": {
+        "fl44": {
+          "history_entries": 26,
+          "position": 26
+        },
+        "rf1azz": {
+          "history_entries": 22,
+          "position": 22
+        },
+        "ch4bo": {
+          "history_entries": 24,
+          "position": 24
+        },
+        "bp2nk": {
+          "history_entries": 24,
+          "position": 24
+        },
+        "ha84": {
+          "history_entries": 26,
+          "position": 26
+        }
+      },
+      "passive_history_position": 113,
+      "priority_fields": [
+        {
+          "slot": "waist",
+          "affix_id": 52,
+          "priority": 1
+        },
+        {
+          "slot": "waist",
+          "affix_id": 97,
+          "priority": 0
+        }
+      ]
+    },
+    "skeleton-necromancer": {
+      "source": "sources/builds/skeleton-necromancer.json",
+      "sha256": "456c46bb25c88dc6077ce4189dcd89e268eb12aa8893f44cbe19e35202cc988d",
+      "class_id": 3,
+      "mastery_id": 1,
+      "counts": {
+        "equipment": 10,
+        "altars": 1,
+        "unique_instances": 10,
+        "distinct_unique_ids": 9,
+        "idol_objects": 11,
+        "distinct_idol_configurations": 7,
+        "regular_array_affix_ids": 27,
+        "corrupted_affix_ids": 4,
+        "all_affix_ids": 31,
+        "selected_blessings": 5,
+        "passive_history_entries": 113,
+        "skill_trees": 5
+      },
+      "unique_ids": [
+        8,
+        66,
+        208,
+        241,
+        253,
+        269,
+        374,
+        416,
+        471
+      ],
+      "regular_array_affix_ids": [
+        28,
+        36,
+        52,
+        70,
+        80,
+        90,
+        98,
+        192,
+        287,
+        319,
+        406,
+        502,
+        679,
+        825,
+        846,
+        851,
+        852,
+        855,
+        862,
+        870,
+        897,
+        941,
+        945,
+        1089,
+        1093,
+        1100,
+        1102
+      ],
+      "corrupted_affix_ids": [
+        1058,
+        1068,
+        1071,
+        1106
+      ],
+      "recorded_roll_values": [
+        1
+      ],
+      "items": [
+        {
+          "slot": "head",
+          "item_type_id": 0,
+          "item_type": "HELMET",
+          "subtype_id": 15,
+          "unique_id": 471,
+          "corrupted": false,
+          "unique_name": "Unbroken Legion",
+          "affixes": [
+            {
+              "id": 406,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Shared Bleed Chance On Hit",
+              "name_zh": "共享·击中时施加流血几率"
+            }
+          ],
+          "corruptedAffixes": []
+        },
+        {
+          "slot": "body",
+          "item_type_id": 1,
+          "item_type": "BODY_ARMOR",
+          "subtype_id": 1,
+          "unique_id": 8,
+          "corrupted": false,
+          "unique_name": "Doublet of Onos Tull",
+          "affixes": [
+            {
+              "id": 406,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Shared Bleed Chance On Hit",
+              "name_zh": "共享·击中时施加流血几率"
+            },
+            {
+              "id": 192,
+              "tier": 5,
+              "roll": 1,
+              "name_en": "+1 Skeleton and Increased Skeleton Damage",
+              "name_zh": "+1骷髅上限与提高骷髅伤害"
+            }
+          ],
+          "corruptedAffixes": []
+        },
+        {
+          "slot": "weapon",
+          "item_type_id": 12,
+          "item_type": "TWO_HANDED_AXE",
+          "subtype_id": 9,
+          "unique_id": 269,
+          "corrupted": false,
+          "unique_name": "Scales of Lemniscate",
+          "affixes": [
+            {
+              "id": 98,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Damage Over Time for Minions",
+              "name_zh": "召唤物持续伤害"
+            }
+          ],
+          "corruptedAffixes": []
+        },
+        {
+          "slot": "hands",
+          "item_type_id": 4,
+          "item_type": "GLOVES",
+          "subtype_id": 8,
+          "unique_id": 208,
+          "corrupted": false,
+          "unique_name": "Ravenous Void",
+          "affixes": [
+            {
+              "id": 945,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Minion Area and Damage",
+              "name_zh": "召唤物范围与伤害"
+            }
+          ],
+          "corruptedAffixes": []
+        },
+        {
+          "slot": "waist",
+          "item_type_id": 2,
+          "item_type": "BELT",
+          "subtype_id": 12,
+          "unique_id": 416,
+          "corrupted": false,
+          "unique_name": "Brewmaster's Buckle",
+          "affixes": [
+            {
+              "id": 36,
+              "tier": 5,
+              "roll": 1,
+              "name_en": "Hybrid Health",
+              "name_zh": "复合生命"
+            },
+            {
+              "id": 52,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Increased Health",
+              "name_zh": "提高生命"
+            }
+          ],
+          "corruptedAffixes": []
+        },
+        {
+          "slot": "feet",
+          "item_type_id": 3,
+          "item_type": "BOOTS",
+          "subtype_id": 2,
+          "unique_id": 253,
+          "corrupted": false,
+          "unique_name": "Foot of the Mountain",
+          "affixes": [
+            {
+              "id": 28,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Movement Speed",
+              "name_zh": "移动速度"
+            },
+            {
+              "id": 679,
+              "tier": 5,
+              "roll": 1,
+              "name_en": "Experimental Minions Transported with Traversal Skills",
+              "name_zh": "使用穿越技能传送的实验性随从"
+            }
+          ],
+          "corruptedAffixes": []
+        },
+        {
+          "slot": "finger1",
+          "item_type_id": 21,
+          "item_type": "RING",
+          "subtype_id": 7,
+          "unique_id": 66,
+          "corrupted": false,
+          "unique_name": "Hollow Finger",
+          "affixes": [
+            {
+              "id": 70,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Minion Health",
+              "name_zh": "召唤物生命"
+            },
+            {
+              "id": 825,
+              "tier": 5,
+              "roll": 1,
+              "name_en": "Added Health and Added Health Regeneration",
+              "name_zh": "增加生命与生命再生"
+            },
+            {
+              "id": 80,
+              "tier": 5,
+              "roll": 1,
+              "name_en": "Elemental Resistance",
+              "name_zh": "元素抗性"
+            }
+          ],
+          "corruptedAffixes": []
+        },
+        {
+          "slot": "finger2",
+          "item_type_id": 21,
+          "item_type": "RING",
+          "subtype_id": 7,
+          "unique_id": 66,
+          "corrupted": false,
+          "unique_name": "Hollow Finger",
+          "affixes": [
+            {
+              "id": 502,
+              "tier": 5,
+              "roll": 1,
+              "name_en": "Intelligence",
+              "name_zh": "智力"
+            },
+            {
+              "id": 70,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Minion Health",
+              "name_zh": "召唤物生命"
+            },
+            {
+              "id": 825,
+              "tier": 5,
+              "roll": 1,
+              "name_en": "Added Health and Added Health Regeneration",
+              "name_zh": "增加生命与生命再生"
+            }
+          ],
+          "corruptedAffixes": []
+        },
+        {
+          "slot": "neck",
+          "item_type_id": 20,
+          "item_type": "AMULET",
+          "subtype_id": 7,
+          "unique_id": 374,
+          "corrupted": false,
+          "unique_name": "Pearls of the Swine",
+          "affixes": [
+            {
+              "id": 945,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Minion Area and Damage",
+              "name_zh": "召唤物范围与伤害"
+            },
+            {
+              "id": 90,
+              "tier": 5,
+              "roll": 1,
+              "name_en": "Health Regen per Second",
+              "name_zh": "每秒生命再生"
+            }
+          ],
+          "corruptedAffixes": []
+        },
+        {
+          "slot": "relic",
+          "item_type_id": 22,
+          "item_type": "RELIC",
+          "subtype_id": 4,
+          "unique_id": 241,
+          "corrupted": false,
+          "unique_name": "Vessel of Strife",
+          "affixes": [
+            {
+              "id": 502,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Intelligence",
+              "name_zh": "智力"
+            }
+          ],
+          "corruptedAffixes": []
+        },
+        {
+          "slot": "altar",
+          "item_type_id": 41,
+          "item_type": "IDOL_ALTAR",
+          "subtype_id": 7,
+          "unique_id": null,
+          "corrupted": true,
+          "affixes": [
+            {
+              "id": 1093,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Effect of Prefixes for Idols in Refracted Slots",
+              "name_zh": "折射栏位神像前缀效果"
+            },
+            {
+              "id": 1089,
+              "tier": 5,
+              "roll": 1,
+              "name_en": "Effect of Prefixes and Suffixes for Idols in Refracted Slots",
+              "name_zh": "折射栏位神像前缀与后缀效果"
+            },
+            {
+              "id": 1102,
+              "tier": 5,
+              "roll": 1,
+              "name_en": "Armor per Idol in a Refracted Slot",
+              "name_zh": "护甲自每个折射栏位的神像"
+            },
+            {
+              "id": 1100,
+              "tier": 5,
+              "roll": 1,
+              "name_en": "Health per Idol in a Refracted Slot",
+              "name_zh": "生命自每个折射栏位的神像"
+            }
+          ],
+          "corruptedAffixes": [
+            {
+              "id": 1106,
+              "tier": 7,
+              "roll": 1,
+              "name_en": "Armor per Equipped Corrupted Idol",
+              "name_zh": "护甲自装备的每个腐化神像"
+            }
+          ]
+        }
+      ],
+      "idol_configurations": [
+        {
+          "count": 1,
+          "item": {
+            "affixes": [
+              {
+                "id": 846,
+                "roll": 1,
+                "tier": 1
+              },
+              {
+                "id": 851,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "corrupted": true,
+            "corruptedAffixes": [
+              {
+                "id": 1068,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "itemType": 26,
+            "subType": 1
+          }
+        },
+        {
+          "count": 1,
+          "item": {
+            "affixes": [
+              {
+                "id": 846,
+                "roll": 1,
+                "tier": 1
+              },
+              {
+                "id": 852,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "corrupted": true,
+            "corruptedAffixes": [
+              {
+                "id": 1068,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "itemType": 26,
+            "subType": 1
+          }
+        },
+        {
+          "count": 1,
+          "item": {
+            "affixes": [
+              {
+                "id": 846,
+                "roll": 1,
+                "tier": 1
+              },
+              {
+                "id": 855,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "corrupted": true,
+            "corruptedAffixes": [
+              {
+                "id": 1068,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "itemType": 26,
+            "subType": 1
+          }
+        },
+        {
+          "count": 3,
+          "item": {
+            "affixes": [
+              {
+                "id": 862,
+                "roll": 1,
+                "tier": 1
+              },
+              {
+                "id": 319,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "corrupted": true,
+            "corruptedAffixes": [
+              {
+                "id": 1058,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "itemType": 27,
+            "subType": 1
+          }
+        },
+        {
+          "count": 2,
+          "item": {
+            "affixes": [
+              {
+                "id": 862,
+                "roll": 1,
+                "tier": 1
+              },
+              {
+                "id": 319,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "corrupted": true,
+            "corruptedAffixes": [
+              {
+                "id": 1071,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "itemType": 27,
+            "subType": 1
+          }
+        },
+        {
+          "count": 2,
+          "item": {
+            "affixes": [
+              {
+                "id": 862,
+                "roll": 1,
+                "tier": 1
+              },
+              {
+                "id": 870,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "corrupted": true,
+            "corruptedAffixes": [
+              {
+                "id": 1058,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "itemType": 27,
+            "subType": 1
+          }
+        },
+        {
+          "count": 1,
+          "item": {
+            "affixes": [
+              {
+                "id": 941,
+                "roll": 1,
+                "tier": 1
+              },
+              {
+                "id": 287,
+                "roll": 1,
+                "tier": 1
+              },
+              {
+                "id": 897,
+                "roll": 1,
+                "tier": 7
+              }
+            ],
+            "corrupted": true,
+            "corruptedAffixes": [
+              {
+                "id": 1071,
+                "roll": 1,
+                "tier": 1
+              }
+            ],
+            "itemType": 30,
+            "subType": 8
+          }
+        }
+      ],
+      "skills": {
+        "rb31pl": {
+          "history_entries": 23,
+          "position": 23
+        },
+        "ds4d3": {
+          "history_entries": 23,
+          "position": 23
+        },
+        "ss37kl": {
+          "history_entries": 24,
+          "position": 24
+        },
+        "ad0ry": {
+          "history_entries": 23,
+          "position": 23
+        },
+        "bc53": {
+          "history_entries": 23,
+          "position": 23
+        }
+      },
+      "passive_history_position": 113,
+      "priority_fields": []
+    }
+  }
+}
