@@ -1,0 +1,100 @@
+{
+  "received_date": "2026-10-06",
+  "provider": "User-supplied saved HTML, read statically without executing scripts or fetching remote assets",
+  "input": {
+    "original_path": "C:/Users/liaoweiran/Downloads/Flay Mana Lich Guide for Last Epoch Season 5 - Rage of the Frostborn _ Maxroll.gg.html",
+    "local_cache": ".cache/saved-flay-guide.html",
+    "sha256": "dd7d6c8d372422681b30c21940cfe83bd12d0a59dffbb4fcda163c98e7c2e8dc",
+    "bytes": 456595,
+    "asset_directory_file_count": 162,
+    "asset_directory_total_bytes": 22445742,
+    "raw_html_and_assets_committed": false
+  },
+  "article": {
+    "title": "Flay Mana Lich Guide for Last Epoch Season 5 - Rage of the Frostborn",
+    "canonical_url": "https://maxroll.gg/last-epoch/build-guides/flay-mana-lich-guide",
+    "author": "Volca",
+    "structured_data_date_modified": "2026-09-26T16:37:39+00:00",
+    "changelog_latest_date": "2026-09-27",
+    "changelog_latest_note": "Updated for Season 5",
+    "assumed_character_level": 80,
+    "variant_buttons": [
+      {"label": "Endgame", "active": true},
+      {"label": "Aspirational", "active": false}
+    ],
+    "starter_planner_absence_explicit": true
+  },
+  "guide_facts": {
+    "minimum_character_mana": 600,
+    "minimum_mana_display_text": "600+ Mana",
+    "required_unique_ids": [420, 372, 342],
+    "required_uniques": ["Executioner's Tithe", "Grasp of the Blood Mage", "Traitor's Tongue"],
+    "weapon_roles": {"mainhand": 420, "offhand": 342},
+    "mana_scaling_nodes": ["Deadly Plot", "Chaos Rip"],
+    "spell_damage_sources": ["Chaos Bolts", "Marrow Shards"],
+    "manual_harvest_purpose": "Recover Mana with Executioner's Tithe against bosses and rares",
+    "upgrades": [{"from_unique_id": 372, "to_unique_id": 415, "condition": "Later upgrade; recheck critical strike chance"}],
+    "alternatives": [
+      {"target_unique_id": 469, "alternative_unique_ids": [353]},
+      {"target_unique_id": 277, "alternative_unique_ids": [348, 294, 125, 366]}
+    ],
+    "additional_collection_unique_ids": [125, 294, 348, 353, 366, 415],
+    "idols": {
+      "mana_pair_affix_ids_in_supplied_json": [843, 854],
+      "ignite_idol": {"item_type": 28, "affix_id": 876, "purpose": "Provide Ignite for Exult in Misery"},
+      "frailty_corruption": {"item_type": 26, "affix_id": 1069},
+      "fallback_without_frailty_corruption": {"item_type": 28, "affix_id": 891},
+      "optional_critical_strike_avoidance_corruption": {"item_type": 26, "affix_id": 1067},
+      "reliquary_nest_unique_id": 433
+    },
+    "altar": {
+      "mana_option": {"item_type": 41, "subtype": 3, "name": "Spire Altar"},
+      "armor_option": {"item_type": 41, "subtype": 4, "name": "Carcinised Altar"},
+      "desired_corrupted_affix_id": 1105,
+      "instruction": "Corrupt every equipped Idol to scale Mana per Equipped Corrupted Idol"
+    },
+    "critical_strike_avoidance": {"equipment_affix_id": 97, "blessing_type": 34, "blessing_subtype": 150},
+    "exulis": {
+      "unique_id": 469,
+      "desired_conversion_affix_id": 1084,
+      "avoid_conversion_affix_id": 1083,
+      "secondary_conversion_affix_id": 1087,
+      "secondary_condition": "Have a source of Frenzy",
+      "guide_description": "Drops Corrupted with two Attribute conversion Affixes and one random Legendary Affix; useful even without a good Legendary Affix"
+    },
+    "critical_strike_chance": {
+      "endgame_flat_percent": 26,
+      "increased_percent": 330,
+      "endgame_calculated_percent": 111.8,
+      "immortal_vise_flat_percent": 22,
+      "immortal_vise_calculated_percent": 94.6,
+      "suggested_compensation_corrupted_affix_id": 1075
+    },
+    "discussed_but_not_default_collection": [
+      {"unique_id": 443, "name": "Army of Skin", "guide_position": "Not recommended for this build; Foot of the Mountain is preferred"},
+      {"unique_id": 258, "name": "Immolator's Oblation", "guide_position": "Requires converting Flay to Necrotic if used; not the default supplied setup"}
+    ]
+  },
+  "source_conflicts": [
+    {
+      "location": "Equipment, Skills, Passives and Loot Filter data-le-profile/data-le-id attributes",
+      "observed_profile": "2ai4s0qh",
+      "observed_set_id": "1",
+      "observed_planner_link": "https://maxroll.gg/last-epoch/planner/2ai4s0qh#1",
+      "note": "This equals the user's Skeleton planner URL, although article identity and rendered skill text are Flay. Do not assign this page's embed/filter to Flay by its link alone."
+    },
+    {
+      "location": "FAQ Gear Requirements",
+      "observed_text": "Grasp of the Blood Mage and two Traitor's Tongue for scaling Crit Chance",
+      "note": "Introduction omits 'two'; equipment text and supplied JSON show Executioner's Tithe mainhand plus one Traitor's Tongue offhand. Do not invent a requirement for two daggers."
+    }
+  ],
+  "limits": [
+    "The document contains Endgame/Aspirational labels but no reusable raw planner JSON for either variant was identified. Stat Priority is an inactive tab in the saved DOM.",
+    "Loot Filter buttons are present; the saved HTML does not contain an ItemFilter XML payload.",
+    "The page does not supply per-slot minimum pickup tiers, minimum LP/WW, or a complete leveling gear route.",
+    "600+ Mana is a character requirement, not a per-item filter threshold.",
+    "Only the Flay guide was supplied as a saved page; Skeleton guide text remains unavailable.",
+    "Guide statements and community ID mapping have not been verified in the game client."
+  ]
+}

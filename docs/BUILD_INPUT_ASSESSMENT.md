@@ -2,6 +2,8 @@
 
 结论：这两份数据足够定义**所示目标配装的收集规则**，但不足以独立还原攻略的**过渡装备、替代方案、成型门槛和收集优先级**。可以据此做终局目标试版；不能把它当作已经完整理解两篇BD攻略。
 
+后续补充：用户已提供保存的Flay Mana Lich网页，其中600+魔力、核心装备、6种替代／升级暗金及神像依赖已核对，见 [保存网页评估](SAVED_GUIDE_ASSESSMENT.md)。巫妖这部分缺口已有答案；下文保留的是两份JSON本身的能力边界，死灵正文仍待补齐。
+
 来源是用户提供的 [巫妖附件](../sources/builds/flay-mana-lich.json) 与 [死灵内联JSON](../sources/builds/skeleton-necromancer.json)。[来源记录](../sources/builds/manifest.json)保存用户给出的Planner地址、哈希和技能名映射。通过技能树与配装内容识别BD对应关系；导出本身没有BD名称或装备阶段标签。没有绕过Maxroll的访问限制读取网页。
 
 ## 实际包含多少信息

@@ -14,6 +14,7 @@
 | [FILTER_GUIDE.md](docs/FILTER_GUIDE.md) | 用人能读懂的语言解释整套过滤器 |
 | [PLAYER_TODO.md](docs/PLAYER_TODO.md) | 蓝字和大写文字要求玩家完成的配置、可选功能与进度调整 |
 | [BUILD_INPUT_ASSESSMENT.md](docs/BUILD_INPUT_ASSESSMENT.md) | 两份BD导出的实际信息量、可生成范围与缺少的过渡／机制资料 |
+| [SAVED_GUIDE_ASSESSMENT.md](docs/SAVED_GUIDE_ASSESSMENT.md) | 本地保存巫妖网页补充的门槛、6种替代／升级暗金、神像依赖与来源矛盾 |
 | [RULE_INDEX.md](docs/RULE_INDEX.md) | 按游戏优先级列出全部163条，含条件与提示设置 |
 | [VIDEO_AND_VERSIONS.md](docs/VIDEO_AND_VERSIONS.md) | 视频定位、发布时版本与当前基底的七条差异 |
 | [BEHAVIOR_CASES.md](docs/BEHAVIOR_CASES.md) | 容易混淆的条件示例及游戏内验证清单 |
