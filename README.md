@@ -2,9 +2,9 @@
 
 已完成第一阶段准备：固定原始过滤器、阅读完整视频英文自动字幕、解析全部163条规则、编写中文说明，并保存后续工作 memo。原始基底未修改。本阶段没有生成 BD 专属 filter，也没有实现勾选工具。
 
-建议先读 [中文说明](docs/FILTER_GUIDE.md)，再按需要查 [163条完整规则索引](docs/RULE_INDEX.md)。视频讲解与当前文件的差异见 [视频与版本核对](docs/VIDEO_AND_VERSIONS.md)。
+建议先读 [中文说明](docs/FILTER_GUIDE.md)和 [玩家待办清单](docs/PLAYER_TODO.md)，再按需要查 [163条完整规则索引](docs/RULE_INDEX.md)。视频讲解与当前文件的差异见 [视频与版本核对](docs/VIDEO_AND_VERSIONS.md)。
 
-这个基底需要填写自己的装备需求。当前文件的第29条默认关闭；第81/82/83条存在空选择，第99–126条也有空词缀列表。空选择可能扩大匹配范围，不能当成“还没有作用”。详见中文说明中的配置检查。
+这个基底预设由玩家完成待办：蓝字及功能规则名的大写文字说明要选哪些需求。当前文件的第29条默认关闭；第81/82/83条存在空选择，第99–126条也有空词缀列表。它们是待配置入口；填写或明确关闭之前，空选择可能扩大匹配范围。后续生成已配置、可复制的filter时可删除56条蓝色说明，将说明留在文档里。
 
 ## 阅读与资料入口
 
@@ -12,6 +12,7 @@
 |---|---|
 | [PLAN.md](PLAN.md) | 本阶段计划、验收条件与范围 |
 | [FILTER_GUIDE.md](docs/FILTER_GUIDE.md) | 用人能读懂的语言解释整套过滤器 |
+| [PLAYER_TODO.md](docs/PLAYER_TODO.md) | 蓝字和大写文字要求玩家完成的配置、可选功能与进度调整 |
 | [RULE_INDEX.md](docs/RULE_INDEX.md) | 按游戏优先级列出全部163条，含条件与提示设置 |
 | [VIDEO_AND_VERSIONS.md](docs/VIDEO_AND_VERSIONS.md) | 视频定位、发布时版本与当前基底的七条差异 |
 | [BEHAVIOR_CASES.md](docs/BEHAVIOR_CASES.md) | 容易混淆的条件示例及游戏内验证清单 |
