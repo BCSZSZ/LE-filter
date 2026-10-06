@@ -1,0 +1,393 @@
+{
+  "stage": "Strict idol affix classification only; no output filter",
+  "strict_inputs": {
+    "skeleton-necromancer": {
+      "file": "sources/builds/maxroll-skeleton-necromancer-strict.xml",
+      "source_attachment": "C:\\Users\\liaoweiran\\.codex\\attachments\\abd147e0-8660-4b3e-aaf0-c35ecf242f0c\\Pasted text.txt",
+      "sha256": "5033341708ab5594cfcb70448bf3c6084333f03efa4388e5d4c6f4b1409dbade",
+      "bytes": 1162656,
+      "name": "Skeleton Necromancer",
+      "strictness": "Strict as reported by user and stated in XML description",
+      "planner_url_supplied_earlier": "https://maxroll.gg/last-epoch/planner/2ai4s0qh#1",
+      "exported_planner_set_not_identified": true
+    },
+    "flay-mana-lich": {
+      "file": "sources/builds/maxroll-flay-mana-lich-strict.xml",
+      "source_attachment": "C:\\Users\\liaoweiran\\.codex\\attachments\\79071841-b2de-42ec-b755-c04089501b9d\\Pasted text.txt",
+      "sha256": "4e70c8b9111a28ae257aea7b561d931ac99629a6054646ce18a3ce5e3458995c",
+      "bytes": 1115268,
+      "name": "Flay Mana Lich",
+      "strictness": "Strict as reported by user and stated in XML description",
+      "planner_url_supplied_earlier": "https://maxroll.gg/last-epoch/planner/y21h9h0x#2",
+      "exported_planner_set_not_identified": true
+    }
+  },
+  "metadata_file": "sources/builds/strict-variable-reference.json",
+  "metadata_source": {
+    "url": "https://www.lastepochtools.com/data/version150/db/js/010a2617c7ebb271af8028db2d94bc15.js",
+    "sha256": "af78878c4cdb6c05f2a1fd2095e760f253635ea50f5f7bf43313bc14fdde5a71"
+  },
+  "method": "Affix IDs from Strict; corrupted iff database specialAffixType=6; guide not used",
+  "rules": [
+    {
+      "build": "skeleton-necromancer",
+      "x": 18,
+      "enabled_in_source": true,
+      "types": [
+        "IDOL_1x1_LAGON"
+      ],
+      "subtypes": [
+        1,
+        0
+      ],
+      "source_affix_ids": [
+        44,
+        846,
+        851,
+        852,
+        853,
+        855,
+        1068
+      ],
+      "non_corrupted_affix_ids": [
+        44,
+        846,
+        851,
+        852,
+        853,
+        855
+      ],
+      "corrupted_affix_ids": [
+        1068
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "x": 19,
+      "enabled_in_source": true,
+      "types": [
+        "IDOL_2x1"
+      ],
+      "subtypes": [
+        1,
+        0
+      ],
+      "source_affix_ids": [
+        32,
+        319,
+        862,
+        866,
+        870,
+        1058,
+        1071
+      ],
+      "non_corrupted_affix_ids": [
+        32,
+        319,
+        862,
+        866,
+        870
+      ],
+      "corrupted_affix_ids": [
+        1058,
+        1071
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "x": 20,
+      "enabled_in_source": true,
+      "types": [
+        "IDOL_1x3"
+      ],
+      "subtypes": [
+        8,
+        3,
+        13
+      ],
+      "source_affix_ids": [
+        285,
+        287,
+        897,
+        941,
+        1035,
+        1036,
+        1071
+      ],
+      "non_corrupted_affix_ids": [
+        285,
+        287,
+        897,
+        941
+      ],
+      "corrupted_affix_ids": [
+        1035,
+        1036,
+        1071
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "x": 21,
+      "enabled_in_source": true,
+      "types": [
+        "IDOL_1x3"
+      ],
+      "subtypes": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "source_affix_ids": [
+        285,
+        287,
+        897,
+        941,
+        1035,
+        1036,
+        1071
+      ],
+      "non_corrupted_affix_ids": [
+        285,
+        287,
+        897,
+        941
+      ],
+      "corrupted_affix_ids": [
+        1035,
+        1036,
+        1071
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "x": 24,
+      "enabled_in_source": true,
+      "types": [
+        "IDOL_1x1_LAGON"
+      ],
+      "subtypes": [
+        1
+      ],
+      "source_affix_ids": [
+        44,
+        846,
+        851,
+        852,
+        853,
+        855,
+        1068
+      ],
+      "non_corrupted_affix_ids": [
+        44,
+        846,
+        851,
+        852,
+        853,
+        855
+      ],
+      "corrupted_affix_ids": [
+        1068
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "x": 25,
+      "enabled_in_source": true,
+      "types": [
+        "IDOL_2x1"
+      ],
+      "subtypes": [
+        1
+      ],
+      "source_affix_ids": [
+        32,
+        319,
+        862,
+        866,
+        870,
+        1058,
+        1071
+      ],
+      "non_corrupted_affix_ids": [
+        32,
+        319,
+        862,
+        866,
+        870
+      ],
+      "corrupted_affix_ids": [
+        1058,
+        1071
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "x": 26,
+      "enabled_in_source": true,
+      "types": [
+        "IDOL_1x3"
+      ],
+      "subtypes": [
+        8,
+        3,
+        13
+      ],
+      "source_affix_ids": [
+        285,
+        287,
+        897,
+        941,
+        1035,
+        1036,
+        1071
+      ],
+      "non_corrupted_affix_ids": [
+        285,
+        287,
+        897,
+        941
+      ],
+      "corrupted_affix_ids": [
+        1035,
+        1036,
+        1071
+      ]
+    },
+    {
+      "build": "skeleton-necromancer",
+      "x": 27,
+      "enabled_in_source": true,
+      "types": [
+        "IDOL_1x3"
+      ],
+      "subtypes": [
+        14,
+        13,
+        12,
+        11,
+        10
+      ],
+      "source_affix_ids": [
+        285,
+        287,
+        897,
+        941,
+        1035,
+        1036,
+        1071
+      ],
+      "non_corrupted_affix_ids": [
+        285,
+        287,
+        897,
+        941
+      ],
+      "corrupted_affix_ids": [
+        1035,
+        1036,
+        1071
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "x": 17,
+      "enabled_in_source": true,
+      "types": [
+        "IDOL_1x1_LAGON"
+      ],
+      "subtypes": [
+        1,
+        0
+      ],
+      "source_affix_ids": [
+        843,
+        854,
+        1069,
+        1070
+      ],
+      "non_corrupted_affix_ids": [
+        843,
+        854
+      ],
+      "corrupted_affix_ids": [
+        1069,
+        1070
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "x": 18,
+      "enabled_in_source": true,
+      "types": [
+        "IDOL_1x2"
+      ],
+      "subtypes": [
+        1,
+        0
+      ],
+      "source_affix_ids": [
+        876,
+        886,
+        1070
+      ],
+      "non_corrupted_affix_ids": [
+        876,
+        886
+      ],
+      "corrupted_affix_ids": [
+        1070
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "x": 21,
+      "enabled_in_source": true,
+      "types": [
+        "IDOL_1x1_LAGON"
+      ],
+      "subtypes": [
+        1
+      ],
+      "source_affix_ids": [
+        843,
+        854,
+        1069,
+        1070
+      ],
+      "non_corrupted_affix_ids": [
+        843,
+        854
+      ],
+      "corrupted_affix_ids": [
+        1069,
+        1070
+      ]
+    },
+    {
+      "build": "flay-mana-lich",
+      "x": 22,
+      "enabled_in_source": true,
+      "types": [
+        "IDOL_1x2"
+      ],
+      "subtypes": [
+        1
+      ],
+      "source_affix_ids": [
+        876,
+        886,
+        1070
+      ],
+      "non_corrupted_affix_ids": [
+        876,
+        886
+      ],
+      "corrupted_affix_ids": [
+        1070
+      ]
+    }
+  ]
+}

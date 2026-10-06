@@ -67,6 +67,13 @@ def read_json(path):
     return json.loads((ROOT / path).read_text(encoding="utf-8-sig"))
 
 
+def split_affixes(ids, special_types):
+    """Classify by database type, never by names or a hard-coded affix list."""
+    ids = sorted(set(ids))
+    return {"non_corrupted_affix_ids": [i for i in ids if special_types[str(i)] != 6],
+            "corrupted_affix_ids": [i for i in ids if special_types[str(i)] == 6]}
+
+
 def value(node):
     if node.get(XSI + "nil") == "true":
         return None
@@ -218,7 +225,7 @@ def main():
             elif vid in {"V06", "V15", "V22", "V23"}:
                 ids = []
             if vid == "V13":
-                ids = [i for i in ids if flags["special_affix_type"][str(i)] == 6]
+                ids = split_affixes(ids, flags["special_affix_type"])["corrupted_affix_ids"]
                 if not ids:
                     continue
             selected = row["unique_ids"]
@@ -227,8 +234,9 @@ def main():
             target_slots = destinations(vid, slots, row)
             candidates.append({"build": row["build"], "x": row["x"], "enabled_in_source": row["enabled"], "candidate_raxx_slots": target_slots, "mapping_requires_review": vid in {"V05", "V19"} and len(target_slots) > 1, "types": row["types"], "subtypes": row["subtypes"], "affix_ids": ids, "affix_pools": row["affix_pools"] if vid not in {"V06", "V15", "V22", "V23"} else [], "unique_ids": selected})
             if vid in {"V19", "V21"}:
-                candidates[-1]["corrupted_affix_ids"] = [i for i in ids if flags["special_affix_type"][str(i)] == 6]
-                candidates[-1]["affix_ids"] = [i for i in ids if flags["special_affix_type"][str(i)] != 6]
+                classified = split_affixes(ids, flags["special_affix_type"])
+                candidates[-1]["corrupted_affix_ids"] = classified["corrupted_affix_ids"]
+                candidates[-1]["affix_ids"] = classified["non_corrupted_affix_ids"]
                 candidates[-1]["count_scope"] = "ordinary_target_affixes_only; corruption_status_unrestricted"
         variables.append({"id": vid, "title": title, "raxx_slots": slots, "instruction_slots": instructions, "editable_fields": fields,
                           "instruction_texts": {str(n): base[n]["name"] for n in instructions},
@@ -247,6 +255,14 @@ def main():
     for row in evidence:
         row["variable_ids"] = [v["id"] for v in variables if any(c["build"] == row["build"] and c["x"] == row["x"] for c in v["evidence"])]
     idol_candidates = next(v["evidence"] for v in variables if v["id"] == "V19")
+    idol_classification = {"stage": "Strict idol affix classification only; no output filter", "strict_inputs": strict["inputs"],
+                           "metadata_file": "sources/builds/strict-variable-reference.json", "metadata_source": flags["source_db"],
+                           "method": "Affix IDs from Strict; corrupted iff database specialAffixType=6; guide not used",
+                           "rules": [{"build": c["build"], "x": c["x"], "enabled_in_source": c["enabled_in_source"],
+                                      "types": c["types"], "subtypes": c["subtypes"],
+                                      "source_affix_ids": sorted({i for pool in c["affix_pools"] for i in pool}),
+                                      "non_corrupted_affix_ids": c["affix_ids"], "corrupted_affix_ids": c["corrupted_affix_ids"]} for c in idol_candidates]}
+    assert all(set(c["source_affix_ids"]) == set(c["non_corrupted_affix_ids"]) | set(c["corrupted_affix_ids"]) for c in idol_classification["rules"])
     idol_layers = []
     for c in idol_candidates:
         source = next(r for r in evidence if r["build"] == c["build"] and r["x"] == c["x"])
@@ -348,7 +364,7 @@ def main():
             review += ["### Flay：用户审阅指定的候选层", "", "两项层优先于同底材的一项层，均advanced=false、不限阶数。毕业表示两个普通目标齐全，不表示数值满roll。声音只记录两种不同用途，尚未选择具体游戏音效。", "", "| 类型／底材 | 普通目标池 | 至少命中 | 提示层 |", "|---|---|---|---|"]
             for c in idol_layers:
                 review.append(f"| {scope(c)} | {names('affixes', c['affix_ids'])} | {c['min_matching_ordinary_affixes']}项 | {c['tier']}；{'独立毕业声' if c['sound_role'] == 'graduation' else '普通提示'} |")
-            review += ["", "这些层与Strict原规则有两点明确差别：腐化ID不凑普通目标数量；两项层也保留用户指定的Lagon底材。厚实一项层会保留只有886的神像，这是候选而非必有点燃。若要求876必有，可用独立词缀条件表达，尚未静默改成这个更严版本。", "", "机制、攻略意图与必须／可选条件说明见[Flay神像审阅](FLAY_IDOL_REVIEW.md)。下面保留源规则对照，最后一列门槛针对源混合池，不能直接套到剥离后的普通池。", ""]
+            review += ["", "这些层与Strict原规则有两点明确差别：腐化ID不凑普通目标数量；两项层也保留用户指定的Lagon底材。厚实一项层会保留只有886的神像，这是候选而非必有点燃。若要求876必有，可用独立词缀条件表达，尚未静默改成这个更严版本。", "", "普通／腐化分离已自动化，ID来自Strict、类别由词库查得，无需攻略；见[独立自动分类结果](STRICT_IDOL_CLASSIFICATION.md)。机制、攻略意图与必须／可选条件见[Flay神像审阅](FLAY_IDOL_REVIEW.md)。下面保留源规则对照，最后一列门槛针对源混合池，不能直接套到剥离后的普通池。", ""]
         if v["evidence"]:
             review += ["| BD／来源 | 可参考R入口 | 类型／底材 | 普通目标（计数） | 腐化参考（不计数） | 原Strict门槛（混合池） |", "|---|---|---|---|---|---|"] if vid == "V19" else ["| BD／来源 | 可参考R入口 | 类型／底材 | 提取情报 | 来源门槛（仅参考） |", "|---|---|---|---|---|"]
             groups = {}
@@ -375,14 +391,25 @@ def main():
         if not v["evidence"]:
             review += ["未导出可直接填写的候选；保留未决状态，不用空值冒充已配置。", ""]
     review += ["## 仍需Review的决定", "", "- R15目标是否只采用这20种，或随后再加入有正文／Planner依据的替代品。", "- 宽T7素材池的保留范围；BIS窄池不能代替它。", "- Flay普通两项池与1／2项层已按用户要求记录；其他BD的普通词缀配对仍需确认，腐化不凑数。", "- Flay厚实一项层按用户列表可只有886；若要求点燃876必有，需明确采用必须条件。891备用来自攻略，未加入这4层。", "- 是否采用普通实验词缀、升华、定向底材、各类碎片；碎片必须结合库存。", "- 开荒是否在本次用途内；若需要，补开荒阶段的武器／副手及底材。", "- 原版R29／R69／R70默认关闭，R81／R82／R83等仍有待配置入口；本轮并未决定最终开关。", "", "## 程序与证据", "", "运行：`python -X utf8 scripts/extract_raxx_variables.py`。完整候选、原值与来源条件见[机器结果](../analysis/raxx-variable-extraction.json)，检查见[验证结果](../analysis/variable-extraction-validation.json)。冻结原版与两份Strict哈希校验通过；已有filter原文件保持不变。旧187条试制稿保留作历史，本轮Review以这份变量结论为准。", ""]
-    for path, data in [("analysis/raxx-variables.json", {"baseline": manifest["baseline"], "variables": [{k: v[k] for k in ["id", "title", "raxx_slots", "instruction_slots", "instruction_texts", "editable_fields", "baseline_defaults", "interpretation"]} for v in variables]}), ("analysis/raxx-variable-extraction.json", result)]:
+    classification_doc = ["# Strict神像词缀：自动分类结果", "", "本页由extract_raxx_variables.py生成；无需攻略文字、Planner JSON或人工指定某个ID是否腐化。它只提取和分类情报，不生成filter。", "",
+                          "Strict直接提供目标词缀ID，但没有逐词缀的腐化类别标签。程序读取已冻结的词缀数据库：specialAffixType=6归腐化，其余归非腐化；神像普通目标计数只使用非腐化池。这里不按中文名称猜测，腐化伤害（18）也不会因此被错判为腐化专属词缀。", "",
+                          "CorruptionCondition描述物品是否腐化，与每个词缀的类别是两个不同字段。Strict选择了某项腐化属性，可以自动提取这个选择；其重要性、必须／可选以及备用关系仍由用户或攻略补充决定。", "",
+                          "数据库覆盖的ID均自动分类；如果出现词库未收录的ID，查表会报错，不默认归入普通。类型资料来自Last Epoch Tools的version150冻结快照，运行时无需联网。", "",
+                          "| BD／Strict来源 | 神像类型 | 非腐化目标 | 腐化目标（普通计数排除） |", "|---|---|---|---|"]
+    for c in idol_classification["rules"]:
+        role = "Flay" if c["build"] == "flay-mana-lich" else "Skeleton"
+        kinds = "、".join(ref["equipment_names"][t]["zh"] for t in c["types"])
+        classification_doc.append(f"| {role} X{c['x']} | {kinds} | {names('affixes', c['non_corrupted_affix_ids'])} | {names('affixes', c['corrupted_affix_ids'])} |")
+    classification_doc += ["", "Flay中型X17／X21的源池含843、854、1069、1070，自动分为普通843／854与腐化1069／1070；厚实X18／X22含876、886、1070，自动分为普通876／886与腐化1070。源ID和具体底材完整保存在[机器结果](../analysis/strict-idol-affix-classification.json)，词缀类别来自[冻结类型资料](../sources/builds/strict-variable-reference.json)。", "",
+                           "这些源规则中的ID全部来自Strict。843／854等组合是否毕业、1069或1070是否追求，以及891备用关系属于另一层决策；见[Flay神像审阅](FLAY_IDOL_REVIEW.md)。", ""]
+    for path, data in [("analysis/raxx-variables.json", {"baseline": manifest["baseline"], "variables": [{k: v[k] for k in ["id", "title", "raxx_slots", "instruction_slots", "instruction_texts", "editable_fields", "baseline_defaults", "interpretation"]} for v in variables]}), ("analysis/raxx-variable-extraction.json", result), ("analysis/strict-idol-affix-classification.json", idol_classification)]:
         (ROOT / path).write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
-    for path, content in [("docs/RAXX_VARIABLES.md", catalog), ("docs/STRICT_VARIABLE_REVIEW.md", review)]:
+    for path, content in [("docs/RAXX_VARIABLES.md", catalog), ("docs/STRICT_VARIABLE_REVIEW.md", review), ("docs/STRICT_IDOL_CLASSIFICATION.md", classification_doc)]:
         (ROOT / path).write_text("\n".join(content).rstrip() + "\n", encoding="utf-8", newline="\n")
     hashes_after = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in protected}
     assert hashes_before == hashes_after, "Extraction must never modify source or output filters"
     assert sorted(ROOT.glob("filters/*.xml")) == [p for p in protected if p.parent == ROOT / "filters"], "No new filter may be created"
-    validation = {"passed": True, "variable_groups": len(variables), "blue_instructions_covered": len(blue), "strict_rules_recorded": len(evidence), "families": dict(sorted(Counter(r["family"] for r in evidence).items())), "enabled_tier_pools": 38, "target_unique_ids": len(union), "sets_in_planner_targets": sum(flags["is_set_item"][str(i)] for i in union), "r15_missing_targets": missing, "idol_corrupted_affixes_excluded_from_ordinary_counts": True, "user_reviewed_flay_idol_layers": len(idol_layers), "filters_and_source_bytes_unchanged": True, "filter_generated": False, "game_execution_tested": False}
+    validation = {"passed": True, "variable_groups": len(variables), "blue_instructions_covered": len(blue), "strict_rules_recorded": len(evidence), "families": dict(sorted(Counter(r["family"] for r in evidence).items())), "enabled_tier_pools": 38, "target_unique_ids": len(union), "sets_in_planner_targets": sum(flags["is_set_item"][str(i)] for i in union), "r15_missing_targets": missing, "idol_corrupted_affixes_excluded_from_ordinary_counts": True, "strict_idol_rules_automatically_classified": len(idol_candidates), "guide_used_for_affix_classification": False, "user_reviewed_flay_idol_layers": len(idol_layers), "filters_and_source_bytes_unchanged": True, "filter_generated": False, "game_execution_tested": False}
     (ROOT / "analysis/variable-extraction-validation.json").write_text(json.dumps(validation, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps(validation, ensure_ascii=False))
 

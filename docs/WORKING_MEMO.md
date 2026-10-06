@@ -4,6 +4,7 @@
 
 ## 当前交付：Raxx变量与Strict情报，等待Review
 
+- 用户确认备用关系可作为后续补充，至少普通／腐化区分要自动化。Strict给ID但不给逐词缀腐化标签；split_affixes统一按冻结specialAffixType=6分类，供V13／V19／V21使用，不按名称或固定腐化ID名单猜测。未知ID查表报错，不默认普通。新增自动输出strict-idol-affix-classification.json与STRICT_IDOL_CLASSIFICATION.md，覆盖12条两BD神像源规则，保留源ID、底材、启用状态与出处，不依赖Guide／Planner。
 - 神像本轮修正：以前把普通与腐化ID混在同一个计数池，会让843＋1070误充双目标毕业。V19／V21按specialAffixType=6剥离腐化参考；affix_ids只含普通目标，corrupted_affix_ids独立，原affix_pools仍保留全部源ID。V13的早期腐化参考不删除。
 - 用户明确Flay：中型843＋854、厚实876＋886，各记录1项候选／2项组合毕业两层；都保留Weaver与Lagon，腐化状态不限、阶数不限，两项优先，声音不同。user_reviewed_flay_idol_layers记录4层，标明来源是用户审阅而非Strict等价复制。“毕业”只是普通组合齐全，不指满roll；其他BD配对仍待审阅。
 - 必须／选择条件可用多份AffixCondition共同满足，官方1.1已支持、原R62也有两份。照用户目前候选池，厚实只有886仍被保留；若要求876必有要明确采用必选条件，不静默收紧。891备用与最终祭坛1105需要腐化神像来自正文，不假称为Strict导出，也不自动加进这4层。机制及来源见FLAY_IDOL_REVIEW.md。

@@ -6,6 +6,8 @@
 
 最新神像修正见[Flay神像审阅](docs/FLAY_IDOL_REVIEW.md)：腐化不凑普通目标数量，Flay按用户指定记录1项候选／2项组合毕业四层。普通目标与腐化参考分别输出，原Strict保留供追溯。
 
+[Strict神像自动分类结果](docs/STRICT_IDOL_CLASSIFICATION.md)单独展示12条BD源规则：词缀ID来自Strict，腐化类别由冻结数据库自动查询，不依赖攻略。备用关系另作后续补充。
+
 第一阶段的基底研究也已完成：固定原始过滤器、阅读完整视频英文自动字幕、解析全部163条规则，中文说明和原模板待办保留如下。
 
 建议先读 [中文说明](docs/FILTER_GUIDE.md)和 [玩家待办清单](docs/PLAYER_TODO.md)，再按需要查 [163条完整规则索引](docs/RULE_INDEX.md)。视频讲解与当前文件的差异见 [视频与版本核对](docs/VIDEO_AND_VERSIONS.md)。
@@ -22,6 +24,7 @@
 | [RAXX_VARIABLES.md](docs/RAXX_VARIABLES.md) | 当前24组填空／可选变量、原始默认值和保留门槛 |
 | [STRICT_VARIABLE_REVIEW.md](docs/STRICT_VARIABLE_REVIEW.md) | 当前Strict情报与变量匹配的文字结论，供Review |
 | [FLAY_IDOL_REVIEW.md](docs/FLAY_IDOL_REVIEW.md) | 神像腐化机制、普通目标分层及必须／可选词缀表达 |
+| [STRICT_IDOL_CLASSIFICATION.md](docs/STRICT_IDOL_CLASSIFICATION.md) | 自动提取Strict神像ID并区分非腐化／腐化，附来源 |
 | [analysis/raxx-variable-extraction.json](analysis/raxx-variable-extraction.json) | 变量候选、R入口、全部271条Strict条件与未决映射 |
 | [scripts/extract_raxx_variables.py](scripts/extract_raxx_variables.py) | 本轮离线提取程序，只输出数据和文档 |
 | [COMBINED_FILTER_GUIDE.md](docs/COMBINED_FILTER_GUIDE.md) | 历史试制的颜色、用途与待办 |

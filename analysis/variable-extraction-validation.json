@@ -39,6 +39,8 @@
     477
   ],
   "idol_corrupted_affixes_excluded_from_ordinary_counts": true,
+  "strict_idol_rules_automatically_classified": 12,
+  "guide_used_for_affix_classification": false,
   "user_reviewed_flay_idol_layers": 4,
   "filters_and_source_bytes_unchanged": true,
   "filter_generated": false,

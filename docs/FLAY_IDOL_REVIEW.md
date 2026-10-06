@@ -8,6 +8,8 @@
 
 全抗1070是腐化属性的一种可能结果，不是每次腐化必定赠送。虚弱1069也是腐化属性。冻结资料中的specialAffixType=6标识腐化属性；843／854／876／886的类型为5，是这里要计数的普通Weaver词缀。普通组合与腐化结果分别记录，原始Strict混合池不删改。
 
+腐化目标ID已包含在Strict中，程序按词缀数据库自动识别其类别，无需攻略或人工逐项标注；见[独立自动分类结果](STRICT_IDOL_CLASSIFICATION.md)。XML本身只列ID，没有逐词缀的腐化类别标签，类别资料是程序依赖的词库。
+
 ## 攻略文字的意思
 
 按用户提供的文字及已下载、哈希核验过的[Flay攻略](https://maxroll.gg/last-epoch/build-guides/flay-mana-lich-guide)：用一个Stout Weaver Idol的876提供点燃，触发Exult in Misery；其余主要用Minor Weaver Idol的843＋854堆魔力。
