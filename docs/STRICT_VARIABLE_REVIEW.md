@@ -1,6 +1,6 @@
 # 新基底：Strict变量审阅结论
 
-当前基底是[LE Base Template v1](BASE_TEMPLATE.md)，已落实用户确认的T7四类。此处提取BD填空情报，尚未生成两个BD的最终filter。
+当前基底是[LE Base Template v1](BASE_TEMPLATE.md)，已落实用户确认的T7四类。此处提取通用模板的BD填空情报；具体两BD填入结果见[当前成品](CURRENT_FILTER_GUIDE.md)。
 
 本次默认Flay为主、Skeleton为副；共享按主处理，两者同等收集。角色身份作为情报归属，模板尚未填写两BD目标及显示身份。
 
@@ -46,7 +46,7 @@ Strict只提供目标名字。补入R15后采用Raxx的无潜能门槛保护，�
 | 吞噬知识（475） | 主Flay | 已在名单 |
 | 不息狂怒（477） | 副Skeleton | 需要追加 |
 
-本轮候选填法：保留原143项，追加9项后名单共152项。来源为Flay X121与Skeleton X132；这是情报结论，没有写入XML。
+候选填法：保留原143项，追加9项后名单共152项。来源为Flay X121与Skeleton X132；提取程序仅提供情报，实际填入见[当前成品](CURRENT_FILTER_GUIDE.md)。
 
 <a id="v02"></a>
 
@@ -480,4 +480,4 @@ Strict不包含个人进度偏好。原暗金／崇高／腐化兜底等级分�
 
 ## 程序与证据
 
-运行：`python -X utf8 scripts/extract_raxx_variables.py`；模板重建与验证见[新基底说明](BASE_TEMPLATE.md)。完整候选、原值与来源条件见[机器结果](../analysis/raxx-variable-extraction.json)，检查见[验证结果](../analysis/variable-extraction-validation.json)。冻结原版、两份Strict及当前模板均校验哈希；提取过程不改XML。旧187条试制稿保留作历史，两个BD的最终filter尚未生成。
+运行：`python -X utf8 scripts/extract_raxx_variables.py`；模板重建与验证见[新基底说明](BASE_TEMPLATE.md)。完整候选、原值与来源条件见[机器结果](../analysis/raxx-variable-extraction.json)，检查见[验证结果](../analysis/variable-extraction-validation.json)。冻结原版、两份Strict及当前模板均校验哈希；提取过程不改XML。旧187条试制稿保留作历史，基于新模板的两BD成品见[当前使用说明](CURRENT_FILTER_GUIDE.md)。

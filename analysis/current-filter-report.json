@@ -1,0 +1,4449 @@
+{
+  "output": "filters/Flay-Mana-Lich+Skeleton-Necromancer-v2.xml",
+  "output_sha256": "b98ac8760726009ece4bef27bde7f6ad9cc2d2806e8996630ecbb96d41e1e71c",
+  "base_template": {
+    "name": "LE Base Template v1",
+    "file": "templates/LE-base-v1.xml",
+    "sha256": "725e8ce0dc642f0e0bd60ae50f3b9c168b775ecee96fcf1064f1a39c3caae4d4",
+    "source": {
+      "local_path": "sources/Raxx's S5 Ultimate Filter v1.0.txt",
+      "upstream_repository": "raxxanterax/GAMING",
+      "upstream_path": "Raxx's S5 Ultimate Filter v1.0.txt",
+      "commit": "57498b0901a7c099efdf931923c65271fdfdb993",
+      "commit_time_utc": "2026-10-01T23:22:12Z",
+      "commit_subject": "Update Raxx's S5 Ultimate Filter v1.1.txt",
+      "git_blob_sha": "b451524609464960d26020332d5577e97f6e863b",
+      "sha256": "146465750ab794175676f73b7251ddba610c42c4508bb16b614b6d4982036288",
+      "bytes": 1275032,
+      "url": "https://github.com/raxxanterax/GAMING/blob/57498b0901a7c099efdf931923c65271fdfdb993/Raxx%27s%20S5%20Ultimate%20Filter%20v1.0.txt"
+    },
+    "configured_for_builds": [],
+    "final_bd_filter": false,
+    "full_affix_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188,
+      189,
+      190,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296,
+      297,
+      298,
+      299,
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      327,
+      328,
+      329,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      348,
+      349,
+      350,
+      351,
+      352,
+      353,
+      354,
+      355,
+      356,
+      357,
+      358,
+      359,
+      360,
+      361,
+      362,
+      363,
+      364,
+      365,
+      366,
+      367,
+      368,
+      369,
+      370,
+      371,
+      372,
+      373,
+      374,
+      375,
+      376,
+      377,
+      378,
+      379,
+      380,
+      381,
+      382,
+      383,
+      384,
+      385,
+      386,
+      387,
+      388,
+      389,
+      390,
+      391,
+      392,
+      393,
+      394,
+      395,
+      396,
+      397,
+      398,
+      399,
+      400,
+      401,
+      402,
+      403,
+      404,
+      405,
+      406,
+      407,
+      408,
+      409,
+      410,
+      411,
+      412,
+      413,
+      414,
+      415,
+      416,
+      417,
+      418,
+      419,
+      420,
+      421,
+      422,
+      423,
+      424,
+      425,
+      426,
+      427,
+      428,
+      429,
+      430,
+      431,
+      432,
+      433,
+      434,
+      435,
+      436,
+      437,
+      438,
+      439,
+      440,
+      441,
+      442,
+      443,
+      444,
+      445,
+      446,
+      447,
+      448,
+      449,
+      450,
+      451,
+      452,
+      453,
+      454,
+      455,
+      456,
+      457,
+      458,
+      459,
+      460,
+      461,
+      462,
+      463,
+      464,
+      465,
+      466,
+      467,
+      468,
+      469,
+      470,
+      471,
+      472,
+      473,
+      474,
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      481,
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489,
+      490,
+      491,
+      492,
+      493,
+      494,
+      495,
+      496,
+      497,
+      498,
+      499,
+      500,
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511,
+      512,
+      513,
+      514,
+      515,
+      516,
+      517,
+      518,
+      519,
+      520,
+      521,
+      522,
+      523,
+      524,
+      525,
+      526,
+      527,
+      528,
+      529,
+      530,
+      531,
+      532,
+      533,
+      534,
+      535,
+      536,
+      537,
+      538,
+      539,
+      540,
+      541,
+      542,
+      543,
+      544,
+      545,
+      546,
+      547,
+      548,
+      549,
+      550,
+      551,
+      552,
+      553,
+      554,
+      555,
+      556,
+      557,
+      558,
+      559,
+      560,
+      561,
+      562,
+      563,
+      564,
+      565,
+      566,
+      567,
+      568,
+      569,
+      570,
+      571,
+      572,
+      573,
+      574,
+      575,
+      576,
+      577,
+      578,
+      579,
+      580,
+      581,
+      582,
+      583,
+      584,
+      585,
+      586,
+      587,
+      588,
+      589,
+      590,
+      591,
+      592,
+      593,
+      594,
+      595,
+      596,
+      597,
+      598,
+      599,
+      600,
+      601,
+      602,
+      603,
+      604,
+      605,
+      606,
+      607,
+      608,
+      609,
+      610,
+      611,
+      612,
+      613,
+      614,
+      615,
+      616,
+      617,
+      618,
+      619,
+      620,
+      621,
+      622,
+      623,
+      624,
+      625,
+      626,
+      627,
+      628,
+      629,
+      630,
+      631,
+      632,
+      633,
+      634,
+      635,
+      636,
+      637,
+      638,
+      639,
+      640,
+      641,
+      642,
+      643,
+      644,
+      645,
+      646,
+      647,
+      648,
+      649,
+      650,
+      651,
+      652,
+      653,
+      654,
+      655,
+      656,
+      657,
+      658,
+      659,
+      660,
+      661,
+      662,
+      663,
+      664,
+      665,
+      666,
+      667,
+      668,
+      669,
+      670,
+      671,
+      672,
+      673,
+      674,
+      675,
+      676,
+      677,
+      678,
+      679,
+      680,
+      681,
+      682,
+      683,
+      684,
+      685,
+      686,
+      687,
+      688,
+      689,
+      690,
+      691,
+      692,
+      693,
+      694,
+      695,
+      696,
+      697,
+      698,
+      699,
+      700,
+      701,
+      702,
+      703,
+      704,
+      705,
+      706,
+      707,
+      708,
+      709,
+      710,
+      711,
+      712,
+      713,
+      714,
+      715,
+      716,
+      717,
+      718,
+      719,
+      720,
+      721,
+      722,
+      723,
+      724,
+      725,
+      726,
+      727,
+      728,
+      729,
+      730,
+      731,
+      732,
+      733,
+      734,
+      735,
+      736,
+      737,
+      738,
+      739,
+      740,
+      741,
+      742,
+      743,
+      744,
+      745,
+      746,
+      747,
+      748,
+      749,
+      750,
+      751,
+      752,
+      753,
+      754,
+      755,
+      756,
+      757,
+      758,
+      759,
+      760,
+      761,
+      762,
+      763,
+      764,
+      765,
+      766,
+      767,
+      768,
+      769,
+      770,
+      771,
+      772,
+      773,
+      774,
+      775,
+      776,
+      777,
+      778,
+      779,
+      780,
+      781,
+      782,
+      783,
+      784,
+      785,
+      786,
+      787,
+      788,
+      789,
+      790,
+      791,
+      792,
+      793,
+      794,
+      795,
+      796,
+      797,
+      798,
+      799,
+      800,
+      801,
+      802,
+      803,
+      804,
+      805,
+      806,
+      807,
+      808,
+      809,
+      810,
+      811,
+      812,
+      813,
+      814,
+      815,
+      816,
+      817,
+      818,
+      819,
+      820,
+      821,
+      822,
+      823,
+      824,
+      825,
+      826,
+      827,
+      828,
+      829,
+      830,
+      831,
+      832,
+      833,
+      834,
+      835,
+      836,
+      837,
+      838,
+      839,
+      840,
+      841,
+      842,
+      843,
+      844,
+      845,
+      846,
+      847,
+      848,
+      849,
+      850,
+      851,
+      852,
+      853,
+      854,
+      855,
+      856,
+      857,
+      858,
+      859,
+      860,
+      861,
+      862,
+      863,
+      864,
+      865,
+      866,
+      867,
+      868,
+      869,
+      870,
+      871,
+      872,
+      873,
+      874,
+      875,
+      876,
+      877,
+      878,
+      879,
+      880,
+      881,
+      882,
+      883,
+      884,
+      885,
+      886,
+      887,
+      888,
+      889,
+      890,
+      891,
+      892,
+      893,
+      894,
+      895,
+      896,
+      897,
+      898,
+      899,
+      900,
+      901,
+      902,
+      903,
+      904,
+      905,
+      906,
+      907,
+      908,
+      909,
+      910,
+      911,
+      912,
+      913,
+      914,
+      915,
+      916,
+      917,
+      918,
+      919,
+      920,
+      921,
+      922,
+      923,
+      924,
+      925,
+      926,
+      927,
+      928,
+      929,
+      930,
+      931,
+      932,
+      933,
+      934,
+      935,
+      936,
+      937,
+      938,
+      939,
+      940,
+      941,
+      942,
+      943,
+      944,
+      945,
+      946,
+      947,
+      948,
+      949,
+      950,
+      951,
+      952,
+      953,
+      954,
+      955,
+      956,
+      957,
+      958,
+      959,
+      960,
+      961,
+      962,
+      963,
+      964,
+      965,
+      966,
+      967,
+      968,
+      969,
+      970,
+      971,
+      972,
+      973,
+      974,
+      975,
+      976,
+      977,
+      978,
+      979,
+      980,
+      981,
+      982,
+      983,
+      984,
+      985,
+      986,
+      987,
+      988,
+      989,
+      990,
+      991,
+      992,
+      993,
+      994,
+      995,
+      996,
+      997,
+      998,
+      999,
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011,
+      1012,
+      1013,
+      1014,
+      1015,
+      1016,
+      1017,
+      1018,
+      1019,
+      1020,
+      1021,
+      1022,
+      1023,
+      1024,
+      1025,
+      1026,
+      1027,
+      1028,
+      1029,
+      1030,
+      1031,
+      1032,
+      1033,
+      1034,
+      1035,
+      1036,
+      1037,
+      1038,
+      1039,
+      1040,
+      1041,
+      1042,
+      1043,
+      1044,
+      1045,
+      1046,
+      1047,
+      1048,
+      1049,
+      1050,
+      1051,
+      1052,
+      1053,
+      1054,
+      1055,
+      1056,
+      1057,
+      1058,
+      1059,
+      1060,
+      1061,
+      1062,
+      1063,
+      1064,
+      1065,
+      1066,
+      1067,
+      1068,
+      1069,
+      1070,
+      1071,
+      1072,
+      1073,
+      1074,
+      1075,
+      1076,
+      1077,
+      1078,
+      1079,
+      1080,
+      1081,
+      1082,
+      1083,
+      1084,
+      1085,
+      1086,
+      1087,
+      1088,
+      1089,
+      1090,
+      1091,
+      1092,
+      1093,
+      1094,
+      1095,
+      1096,
+      1097,
+      1098,
+      1099,
+      1100,
+      1101,
+      1102,
+      1103,
+      1104,
+      1105,
+      1106,
+      1107,
+      1108,
+      1109,
+      1110,
+      1111,
+      1112,
+      1113,
+      1114,
+      1115,
+      1116,
+      1117,
+      1118,
+      1119,
+      1120,
+      1121,
+      1122,
+      1123,
+      1124,
+      1125,
+      1126,
+      1127,
+      1128,
+      1129,
+      1130,
+      1131,
+      1132,
+      1133,
+      1134,
+      1135,
+      1136,
+      1137,
+      1138,
+      1140,
+      1141,
+      1142,
+      1143,
+      1144,
+      1145,
+      1146,
+      1147,
+      1148,
+      1149,
+      1150,
+      1151,
+      1152,
+      1153,
+      1154,
+      1155,
+      1156
+    ],
+    "full_affix_metadata": "sources/builds/strict-variable-reference.json",
+    "full_affix_metadata_sha256": "0e42a2ff8ca467519900bb85edb4ac3fe851cf75e9f86774dcee18453e07bd9a",
+    "scope_types": [
+      "HELMET",
+      "BODY_ARMOR",
+      "BELT",
+      "BOOTS",
+      "GLOVES",
+      "AMULET",
+      "RING",
+      "RELIC",
+      "CATALYST",
+      "SHIELD",
+      "QUIVER",
+      "TWO_HANDED_AXE",
+      "TWO_HANDED_MACE",
+      "TWO_HANDED_SPEAR",
+      "TWO_HANDED_STAFF",
+      "TWO_HANDED_SWORD",
+      "BOW",
+      "ONE_HANDED_AXE",
+      "ONE_HANDED_MACES",
+      "ONE_HANDED_SCEPTRE",
+      "ONE_HANDED_SWORD",
+      "WAND",
+      "ONE_HANDED_DAGGER"
+    ],
+    "source_rule_order": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      62,
+      60,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163
+    ],
+    "rule_count": 162,
+    "removed_source_rules": [
+      61
+    ],
+    "layers": [
+      {
+        "id": "C1",
+        "name": "对应部位BD目标T7",
+        "source_rules": [
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "requires_bd_type_targets": true,
+        "base_rules": [
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ]
+      },
+      {
+        "id": "C2",
+        "name": "任意双／多T7全量保护",
+        "source_rules": [
+          48
+        ],
+        "requires_bd_type_targets": false,
+        "base_rules": [
+          48
+        ]
+      },
+      {
+        "id": "C3",
+        "name": "BD目标不限阶数＋T7",
+        "source_rules": [
+          62
+        ],
+        "requires_bd_type_targets": true,
+        "base_rules": [
+          60
+        ]
+      },
+      {
+        "id": "C4",
+        "name": "单T7阶段全量收集",
+        "source_rules": [
+          60
+        ],
+        "requires_bd_type_targets": false,
+        "default_enabled": true,
+        "auto_level_exit": false,
+        "player_disables_manually": true,
+        "base_rules": [
+          61
+        ]
+      }
+    ],
+    "target_defaults_are_raxx_examples": true
+  },
+  "extraction_sha256": "188ea0a280bb70b0af7788c57b3a9b867886905e7d38ae302b2e0edb8092c08c",
+  "display": {
+    "main": "flay-mana-lich",
+    "secondary": "skeleton-necromancer",
+    "shared_uses_main": true
+  },
+  "rules": 138,
+  "enabled": 127,
+  "output_rules": [
+    {
+      "source_raxx_rule": 8,
+      "base_rule": 8,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 1,
+      "role": "COMMON",
+      "enabled": true,
+      "name": ""
+    },
+    {
+      "source_raxx_rule": 12,
+      "base_rule": 12,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 2,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "all Uniques with 3LP or 20 WW"
+    },
+    {
+      "source_raxx_rule": 13,
+      "base_rule": 13,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 3,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "all Uniques with 2LP / 17 WW (UNCHECK UNWANTED)"
+    },
+    {
+      "source_raxx_rule": 14,
+      "base_rule": 14,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 4,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "all Uniques with 1LP / 14 WW (UNCHECK UNWANTED)"
+    },
+    {
+      "source_raxx_rule": 15,
+      "base_rule": 15,
+      "category": "bd_unique",
+      "owners": [
+        "flay-mana-lich",
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          121
+        ],
+        [
+          "skeleton-necromancer",
+          132
+        ]
+      ],
+      "number": 5,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Build uniques (0 LP kept)"
+    },
+    {
+      "source_raxx_rule": 15,
+      "base_rule": 15,
+      "category": "bd_unique",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          121
+        ]
+      ],
+      "number": 6,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Build uniques (0 LP kept)"
+    },
+    {
+      "source_raxx_rule": 15,
+      "base_rule": 15,
+      "category": "bd_unique",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          132
+        ]
+      ],
+      "number": 7,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Build uniques (0 LP kept)"
+    },
+    {
+      "source_raxx_rule": 15,
+      "base_rule": 15,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 8,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Raxx rare uniques + build whitelist (0 LP kept)"
+    },
+    {
+      "source_raxx_rule": 16,
+      "base_rule": 16,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 9,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Rarest Set Items (ADD ONES YOU WANT)"
+    },
+    {
+      "source_raxx_rule": 19,
+      "base_rule": 19,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 10,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Glyphs"
+    },
+    {
+      "source_raxx_rule": 20,
+      "base_rule": 20,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 11,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Keys & Resources"
+    },
+    {
+      "source_raxx_rule": 21,
+      "base_rule": 21,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 12,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Resonances"
+    },
+    {
+      "source_raxx_rule": 22,
+      "base_rule": 22,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 13,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Runes"
+    },
+    {
+      "source_raxx_rule": 23,
+      "base_rule": 23,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 14,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Shards"
+    },
+    {
+      "source_raxx_rule": 24,
+      "base_rule": 24,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 15,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Woven Echoes"
+    },
+    {
+      "source_raxx_rule": 29,
+      "base_rule": 29,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 16,
+      "role": "COMMON",
+      "enabled": false,
+      "name": "OFF - Class hide not selected"
+    },
+    {
+      "source_raxx_rule": 37,
+      "base_rule": 37,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 17,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "All Tier 8 Items"
+    },
+    {
+      "source_raxx_rule": 38,
+      "base_rule": 38,
+      "category": "C1",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          71
+        ]
+      ],
+      "number": 18,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [1 TARGET T7] ONE_HANDED_AXE"
+    },
+    {
+      "source_raxx_rule": 38,
+      "base_rule": 38,
+      "category": "C1",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          81
+        ]
+      ],
+      "number": 19,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [1 TARGET T7] TWO_HANDED_AXE"
+    },
+    {
+      "source_raxx_rule": 39,
+      "base_rule": 39,
+      "category": "C1",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          70
+        ]
+      ],
+      "number": 20,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [1 TARGET T7] ONE_HANDED_DAGGER"
+    },
+    {
+      "source_raxx_rule": 40,
+      "base_rule": 40,
+      "category": "C1",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          69
+        ]
+      ],
+      "number": 21,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [1 TARGET T7] HELMET"
+    },
+    {
+      "source_raxx_rule": 40,
+      "base_rule": 40,
+      "category": "C1",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          80
+        ]
+      ],
+      "number": 22,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [1 TARGET T7] HELMET"
+    },
+    {
+      "source_raxx_rule": 41,
+      "base_rule": 41,
+      "category": "C1",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          68
+        ]
+      ],
+      "number": 23,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [1 TARGET T7] BODY_ARMOR"
+    },
+    {
+      "source_raxx_rule": 41,
+      "base_rule": 41,
+      "category": "C1",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          79
+        ]
+      ],
+      "number": 24,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [1 TARGET T7] BODY_ARMOR"
+    },
+    {
+      "source_raxx_rule": 42,
+      "base_rule": 42,
+      "category": "C1",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          67
+        ]
+      ],
+      "number": 25,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [1 TARGET T7] BELT"
+    },
+    {
+      "source_raxx_rule": 42,
+      "base_rule": 42,
+      "category": "C1",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          78
+        ]
+      ],
+      "number": 26,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [1 TARGET T7] BELT"
+    },
+    {
+      "source_raxx_rule": 43,
+      "base_rule": 43,
+      "category": "C1",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          66
+        ]
+      ],
+      "number": 27,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [1 TARGET T7] BOOTS"
+    },
+    {
+      "source_raxx_rule": 43,
+      "base_rule": 43,
+      "category": "C1",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          77
+        ]
+      ],
+      "number": 28,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [1 TARGET T7] BOOTS"
+    },
+    {
+      "source_raxx_rule": 44,
+      "base_rule": 44,
+      "category": "C1",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          65
+        ]
+      ],
+      "number": 29,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [1 TARGET T7] GLOVES"
+    },
+    {
+      "source_raxx_rule": 44,
+      "base_rule": 44,
+      "category": "C1",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          76
+        ]
+      ],
+      "number": 30,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [1 TARGET T7] GLOVES"
+    },
+    {
+      "source_raxx_rule": 45,
+      "base_rule": 45,
+      "category": "C1",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          64
+        ]
+      ],
+      "number": 31,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [1 TARGET T7] AMULET"
+    },
+    {
+      "source_raxx_rule": 45,
+      "base_rule": 45,
+      "category": "C1",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          75
+        ]
+      ],
+      "number": 32,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [1 TARGET T7] AMULET"
+    },
+    {
+      "source_raxx_rule": 46,
+      "base_rule": 46,
+      "category": "C1",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          63
+        ]
+      ],
+      "number": 33,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [1 TARGET T7] RING"
+    },
+    {
+      "source_raxx_rule": 46,
+      "base_rule": 46,
+      "category": "C1",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          74
+        ]
+      ],
+      "number": 34,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [1 TARGET T7] RING"
+    },
+    {
+      "source_raxx_rule": 47,
+      "base_rule": 47,
+      "category": "C1",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          62
+        ]
+      ],
+      "number": 35,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [1 TARGET T7] RELIC"
+    },
+    {
+      "source_raxx_rule": 47,
+      "base_rule": 47,
+      "category": "C1",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          73
+        ]
+      ],
+      "number": 36,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [1 TARGET T7] RELIC"
+    },
+    {
+      "source_raxx_rule": 48,
+      "base_rule": 48,
+      "category": "C2",
+      "owners": [],
+      "strict_refs": [],
+      "number": 37,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "[2 MULTI T7] ALL AFFIXES / ALL EQUIPMENT"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          62
+        ]
+      ],
+      "number": 38,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [3 TARGET + T7] RELIC"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          63
+        ]
+      ],
+      "number": 39,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [3 TARGET + T7] RING"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          64
+        ]
+      ],
+      "number": 40,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [3 TARGET + T7] AMULET"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          65
+        ]
+      ],
+      "number": 41,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [3 TARGET + T7] GLOVES"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          66
+        ]
+      ],
+      "number": 42,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [3 TARGET + T7] BOOTS"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          67
+        ]
+      ],
+      "number": 43,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [3 TARGET + T7] BELT"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          68
+        ]
+      ],
+      "number": 44,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [3 TARGET + T7] BODY_ARMOR"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          69
+        ]
+      ],
+      "number": 45,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [3 TARGET + T7] HELMET"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          70
+        ]
+      ],
+      "number": 46,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [3 TARGET + T7] ONE_HANDED_DAGGER"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          71
+        ]
+      ],
+      "number": 47,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - [3 TARGET + T7] ONE_HANDED_AXE"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          73
+        ]
+      ],
+      "number": 48,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [3 TARGET + T7] RELIC"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          74
+        ]
+      ],
+      "number": 49,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [3 TARGET + T7] RING"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          75
+        ]
+      ],
+      "number": 50,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [3 TARGET + T7] AMULET"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          76
+        ]
+      ],
+      "number": 51,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [3 TARGET + T7] GLOVES"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          77
+        ]
+      ],
+      "number": 52,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [3 TARGET + T7] BOOTS"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          78
+        ]
+      ],
+      "number": 53,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [3 TARGET + T7] BELT"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          79
+        ]
+      ],
+      "number": 54,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [3 TARGET + T7] BODY_ARMOR"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          80
+        ]
+      ],
+      "number": 55,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [3 TARGET + T7] HELMET"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "category": "C3",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          81
+        ]
+      ],
+      "number": 56,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [3 TARGET + T7] TWO_HANDED_AXE"
+    },
+    {
+      "source_raxx_rule": 60,
+      "base_rule": 61,
+      "category": "C4",
+      "owners": [],
+      "strict_refs": [],
+      "number": 57,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "[4 ALL T7 PHASE] DISABLE MANUALLY AFTER THIS STAGE"
+    },
+    {
+      "source_raxx_rule": 63,
+      "base_rule": 62,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          57
+        ]
+      ],
+      "number": 58,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Target T6+ (level 0-84): ONE_HANDED_DAGGER"
+    },
+    {
+      "source_raxx_rule": 63,
+      "base_rule": 62,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          58
+        ]
+      ],
+      "number": 59,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Target T6+ (level 0-84): ONE_HANDED_AXE"
+    },
+    {
+      "source_raxx_rule": 63,
+      "base_rule": 62,
+      "category": "target_t6",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          69
+        ]
+      ],
+      "number": 60,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Target T6+ (level 0-84): TWO_HANDED_AXE"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          49
+        ]
+      ],
+      "number": 61,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Target T6+ (level 0-84): RELIC"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          50
+        ]
+      ],
+      "number": 62,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Target T6+ (level 0-84): RING"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          51
+        ]
+      ],
+      "number": 63,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Target T6+ (level 0-84): AMULET"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          52
+        ]
+      ],
+      "number": 64,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Target T6+ (level 0-84): GLOVES"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          53
+        ]
+      ],
+      "number": 65,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Target T6+ (level 0-84): BOOTS"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          54
+        ]
+      ],
+      "number": 66,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Target T6+ (level 0-84): BELT"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          55
+        ]
+      ],
+      "number": 67,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Target T6+ (level 0-84): BODY_ARMOR"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          56
+        ]
+      ],
+      "number": 68,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Target T6+ (level 0-84): HELMET"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          61
+        ]
+      ],
+      "number": 69,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Target T6+ (level 0-84): RELIC"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          62
+        ]
+      ],
+      "number": 70,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Target T6+ (level 0-84): RING"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          63
+        ]
+      ],
+      "number": 71,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Target T6+ (level 0-84): AMULET"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          64
+        ]
+      ],
+      "number": 72,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Target T6+ (level 0-84): GLOVES"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          65
+        ]
+      ],
+      "number": 73,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Target T6+ (level 0-84): BOOTS"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          66
+        ]
+      ],
+      "number": 74,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Target T6+ (level 0-84): BELT"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          67
+        ]
+      ],
+      "number": 75,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Target T6+ (level 0-84): BODY_ARMOR"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "category": "target_t6",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          68
+        ]
+      ],
+      "number": 76,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Target T6+ (level 0-84): HELMET"
+    },
+    {
+      "source_raxx_rule": 68,
+      "base_rule": 67,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 77,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Exalted Experimentals (TURN OFF IF YOU DON'T USE)"
+    },
+    {
+      "source_raxx_rule": 69,
+      "base_rule": 68,
+      "category": "experimental_optional",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          13
+        ]
+      ],
+      "number": 78,
+      "role": "SECONDARY",
+      "enabled": false,
+      "name": "SECONDARY - Optional wanted experimentals (OFF)"
+    },
+    {
+      "source_raxx_rule": 70,
+      "base_rule": 69,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 79,
+      "role": "COMMON",
+      "enabled": false,
+      "name": "OFF - Champion targets not selected"
+    },
+    {
+      "source_raxx_rule": 73,
+      "base_rule": 72,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 80,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "All Uniques - Turns off at 80"
+    },
+    {
+      "source_raxx_rule": 74,
+      "base_rule": 73,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 81,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "All Exalts - Turns off at 60"
+    },
+    {
+      "source_raxx_rule": 75,
+      "base_rule": 74,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 82,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Selected corrupted equipment (level 0-59)"
+    },
+    {
+      "source_raxx_rule": 81,
+      "base_rule": 80,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 83,
+      "role": "COMMON",
+      "enabled": false,
+      "name": "OFF - Ascendance target not selected"
+    },
+    {
+      "source_raxx_rule": 82,
+      "base_rule": 81,
+      "category": "target_base",
+      "owners": [
+        "flay-mana-lich",
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          33
+        ],
+        [
+          "skeleton-necromancer",
+          31
+        ],
+        [
+          "skeleton-necromancer",
+          45
+        ]
+      ],
+      "number": 84,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Target base: GLOVES"
+    },
+    {
+      "source_raxx_rule": 82,
+      "base_rule": 81,
+      "category": "target_base",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          28
+        ]
+      ],
+      "number": 85,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Target base: TWO_HANDED_AXE"
+    },
+    {
+      "source_raxx_rule": 82,
+      "base_rule": 81,
+      "category": "target_base",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          29
+        ]
+      ],
+      "number": 86,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Target base: HELMET"
+    },
+    {
+      "source_raxx_rule": 82,
+      "base_rule": 81,
+      "category": "target_base",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          30
+        ]
+      ],
+      "number": 87,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Target base: BOOTS"
+    },
+    {
+      "source_raxx_rule": 82,
+      "base_rule": 81,
+      "category": "target_base",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          32
+        ]
+      ],
+      "number": 88,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Target base: RING"
+    },
+    {
+      "source_raxx_rule": 83,
+      "base_rule": 82,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 89,
+      "role": "COMMON",
+      "enabled": false,
+      "name": "OFF - Check shard inventory before enabling"
+    },
+    {
+      "source_raxx_rule": 84,
+      "base_rule": 83,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 90,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Shatter Acolyte Affixes"
+    },
+    {
+      "source_raxx_rule": 85,
+      "base_rule": 84,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 91,
+      "role": "COMMON",
+      "enabled": false,
+      "name": "OFF - Mage shards not requested"
+    },
+    {
+      "source_raxx_rule": 86,
+      "base_rule": 85,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 92,
+      "role": "COMMON",
+      "enabled": false,
+      "name": "OFF - Primalist shards not requested"
+    },
+    {
+      "source_raxx_rule": 87,
+      "base_rule": 86,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 93,
+      "role": "COMMON",
+      "enabled": false,
+      "name": "OFF - Rogue shards not requested"
+    },
+    {
+      "source_raxx_rule": 88,
+      "base_rule": 87,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 94,
+      "role": "COMMON",
+      "enabled": false,
+      "name": "OFF - Sentinel shards not requested"
+    },
+    {
+      "source_raxx_rule": 89,
+      "base_rule": 88,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 95,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Shatter Offensive Affixes (SELECT WHAT YOU NEED)"
+    },
+    {
+      "source_raxx_rule": 90,
+      "base_rule": 89,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 96,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Shatter Defensive Affixes (SELECT WHAT YOU NEED)"
+    },
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "category": "idol_bis",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          17
+        ],
+        [
+          "flay-mana-lich",
+          21
+        ]
+      ],
+      "policy": "User-reviewed Flay 1/2 ordinary targets; both Weaver and Lagon",
+      "number": 97,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Idol pair complete: IDOL_1x1_LAGON"
+    },
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "category": "idol_bis",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          18
+        ],
+        [
+          "flay-mana-lich",
+          22
+        ]
+      ],
+      "policy": "User-reviewed Flay 1/2 ordinary targets; both Weaver and Lagon",
+      "number": 98,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Idol pair complete: IDOL_1x2"
+    },
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "category": "idol_bis",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          24
+        ]
+      ],
+      "number": 99,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Idol two ordinary targets: IDOL_1x1_LAGON"
+    },
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "category": "idol_bis",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          25
+        ]
+      ],
+      "number": 100,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Idol two ordinary targets: IDOL_2x1"
+    },
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "category": "idol_bis",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          26
+        ]
+      ],
+      "number": 101,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Idol two ordinary targets: IDOL_1x3"
+    },
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "category": "idol_bis",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          27
+        ]
+      ],
+      "number": 102,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Idol two ordinary targets: IDOL_1x3"
+    },
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "category": "idol_candidate",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          17
+        ],
+        [
+          "flay-mana-lich",
+          21
+        ]
+      ],
+      "policy": "User-reviewed Flay 1/2 ordinary targets; both Weaver and Lagon",
+      "number": 103,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Idol one target: IDOL_1x1_LAGON"
+    },
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "category": "idol_candidate",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          18
+        ],
+        [
+          "flay-mana-lich",
+          22
+        ]
+      ],
+      "policy": "User-reviewed Flay 1/2 ordinary targets; both Weaver and Lagon",
+      "number": 104,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Idol one target: IDOL_1x2"
+    },
+    {
+      "source_raxx_rule": 127,
+      "base_rule": 126,
+      "category": "altar",
+      "owners": [
+        "flay-mana-lich"
+      ],
+      "strict_refs": [
+        [
+          "flay-mana-lich",
+          43
+        ],
+        [
+          "flay-mana-lich",
+          44
+        ],
+        [
+          "flay-mana-lich",
+          45
+        ],
+        [
+          "flay-mana-lich",
+          46
+        ],
+        [
+          "flay-mana-lich",
+          59
+        ],
+        [
+          "flay-mana-lich",
+          72
+        ]
+      ],
+      "number": 105,
+      "role": "MAIN",
+      "enabled": true,
+      "name": "MAIN - Altar target (any tier)"
+    },
+    {
+      "source_raxx_rule": 127,
+      "base_rule": 126,
+      "category": "altar",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          55
+        ],
+        [
+          "skeleton-necromancer",
+          56
+        ],
+        [
+          "skeleton-necromancer",
+          57
+        ],
+        [
+          "skeleton-necromancer",
+          58
+        ],
+        [
+          "skeleton-necromancer",
+          70
+        ],
+        [
+          "skeleton-necromancer",
+          83
+        ]
+      ],
+      "number": 106,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Altar target (any tier)"
+    },
+    {
+      "source_raxx_rule": 128,
+      "base_rule": 127,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 107,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "General ordinary idol targets (level 0-89)"
+    },
+    {
+      "source_raxx_rule": 129,
+      "base_rule": 128,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 108,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "General ordinary idol targets (level 0-74)"
+    },
+    {
+      "source_raxx_rule": 134,
+      "base_rule": 133,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 109,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "All Exalts or Better - Turns off at 60"
+    },
+    {
+      "source_raxx_rule": 135,
+      "base_rule": 134,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 110,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Campaign Idols - Turns off at 60"
+    },
+    {
+      "source_raxx_rule": 136,
+      "base_rule": 135,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 111,
+      "role": "COMMON",
+      "enabled": false,
+      "name": "OFF - Campaign weapon bases not supplied"
+    },
+    {
+      "source_raxx_rule": 137,
+      "base_rule": 136,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 112,
+      "role": "COMMON",
+      "enabled": false,
+      "name": "OFF - Campaign offhand bases not supplied"
+    },
+    {
+      "source_raxx_rule": 138,
+      "base_rule": 137,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 113,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "BIS Campaign Amulet Bases - Turns off at 60"
+    },
+    {
+      "source_raxx_rule": 139,
+      "base_rule": 138,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 114,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "BIS Campaign Belt Bases - Turns off at 60"
+    },
+    {
+      "source_raxx_rule": 140,
+      "base_rule": 139,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 115,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "BIS Campaign Body Armor Bases - Turns off at 60"
+    },
+    {
+      "source_raxx_rule": 141,
+      "base_rule": 140,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 116,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "BIS Campaign Boot Bases - Turns off at 60"
+    },
+    {
+      "source_raxx_rule": 142,
+      "base_rule": 141,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 117,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "BIS Campaign Helmet Bases - Turns off at 60"
+    },
+    {
+      "source_raxx_rule": 143,
+      "base_rule": 142,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 118,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "BIS Campaign Ring Bases - Turns off at 60"
+    },
+    {
+      "source_raxx_rule": 144,
+      "base_rule": 143,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 119,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "BIS Campaign Glove Bases - Turns off at 60"
+    },
+    {
+      "source_raxx_rule": 145,
+      "base_rule": 144,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 120,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "BIS Campaign Relic Bases - Turns off at 60"
+    },
+    {
+      "source_raxx_rule": 146,
+      "base_rule": 145,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 121,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Shatter T3+ Phys Res / All Health - Turns off at 50"
+    },
+    {
+      "source_raxx_rule": 147,
+      "base_rule": 146,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 122,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Shatter T3+ Movespeed & CDR - Turns off at 50"
+    },
+    {
+      "source_raxx_rule": 148,
+      "base_rule": 147,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 123,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Shatter T3+ Resistances - Turns off at 50"
+    },
+    {
+      "source_raxx_rule": 149,
+      "base_rule": 148,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 124,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "T2+ Phys Res / All Health - Turns off at 30"
+    },
+    {
+      "source_raxx_rule": 150,
+      "base_rule": 149,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 125,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "T2+ Movespeed & CDR - Turns off at 30"
+    },
+    {
+      "source_raxx_rule": 151,
+      "base_rule": 150,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 126,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "T2+ Resistances - Turns off at 30"
+    },
+    {
+      "source_raxx_rule": 152,
+      "base_rule": 151,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 127,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Early Bows - Turns off at 30"
+    },
+    {
+      "source_raxx_rule": 153,
+      "base_rule": 152,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 128,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Early Melee Wpns - Turns off at 30"
+    },
+    {
+      "source_raxx_rule": 154,
+      "base_rule": 153,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 129,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Early Caster Wpns - Turns off at 30"
+    },
+    {
+      "source_raxx_rule": 155,
+      "base_rule": 154,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 130,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "All Rares - Turns off at 30"
+    },
+    {
+      "source_raxx_rule": 156,
+      "base_rule": 155,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 131,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Early Relics - Turns off at 12"
+    },
+    {
+      "source_raxx_rule": 157,
+      "base_rule": 156,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 132,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Early Catalyst - Turns off at 12"
+    },
+    {
+      "source_raxx_rule": 158,
+      "base_rule": 157,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 133,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Early Quivers - Turns off at 12"
+    },
+    {
+      "source_raxx_rule": 159,
+      "base_rule": 158,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 134,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Early Shields - Turns off at 12"
+    },
+    {
+      "source_raxx_rule": 160,
+      "base_rule": 159,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 135,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Silver Ring - Turns off at 12"
+    },
+    {
+      "source_raxx_rule": 161,
+      "base_rule": 160,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 136,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "Ruby Amulet - Turns off at 12"
+    },
+    {
+      "source_raxx_rule": 162,
+      "base_rule": 161,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 137,
+      "role": "COMMON",
+      "enabled": true,
+      "name": "All Items - Turns off at 10"
+    },
+    {
+      "source_raxx_rule": 163,
+      "base_rule": 162,
+      "category": "base",
+      "owners": [],
+      "strict_refs": [],
+      "number": 138,
+      "role": "COMMON",
+      "enabled": true,
+      "name": ""
+    }
+  ],
+  "target_ids": {
+    "skeleton-necromancer": [
+      8,
+      66,
+      208,
+      241,
+      253,
+      269,
+      300,
+      374,
+      416,
+      471,
+      477
+    ],
+    "flay-mana-lich": [
+      253,
+      277,
+      342,
+      357,
+      372,
+      415,
+      416,
+      420,
+      433,
+      469,
+      475
+    ]
+  },
+  "target_union": [
+    8,
+    66,
+    208,
+    241,
+    253,
+    269,
+    277,
+    300,
+    342,
+    357,
+    372,
+    374,
+    415,
+    416,
+    420,
+    433,
+    469,
+    471,
+    475,
+    477
+  ],
+  "baseline_dispositions": [
+    {
+      "source_raxx_rule": 1,
+      "base_rule": 1,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 2,
+      "base_rule": 2,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 3,
+      "base_rule": 3,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 4,
+      "base_rule": 4,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 5,
+      "base_rule": 5,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 6,
+      "base_rule": 6,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 7,
+      "base_rule": 7,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 8,
+      "base_rule": 8,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 9,
+      "base_rule": 9,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 10,
+      "base_rule": 10,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 11,
+      "base_rule": 11,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 12,
+      "base_rule": 12,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 13,
+      "base_rule": 13,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 14,
+      "base_rule": 14,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 15,
+      "base_rule": 15,
+      "disposition": "replaced"
+    },
+    {
+      "source_raxx_rule": 16,
+      "base_rule": 16,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 17,
+      "base_rule": 17,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 18,
+      "base_rule": 18,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 19,
+      "base_rule": 19,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 20,
+      "base_rule": 20,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 21,
+      "base_rule": 21,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 22,
+      "base_rule": 22,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 23,
+      "base_rule": 23,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 24,
+      "base_rule": 24,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 25,
+      "base_rule": 25,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 26,
+      "base_rule": 26,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 27,
+      "base_rule": 27,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 28,
+      "base_rule": 28,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 29,
+      "base_rule": 29,
+      "disposition": "disabled"
+    },
+    {
+      "source_raxx_rule": 30,
+      "base_rule": 30,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 31,
+      "base_rule": 31,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 32,
+      "base_rule": 32,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 33,
+      "base_rule": 33,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 34,
+      "base_rule": 34,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 35,
+      "base_rule": 35,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 36,
+      "base_rule": 36,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 37,
+      "base_rule": 37,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 38,
+      "base_rule": 38,
+      "disposition": "replaced"
+    },
+    {
+      "source_raxx_rule": 39,
+      "base_rule": 39,
+      "disposition": "replaced"
+    },
+    {
+      "source_raxx_rule": 40,
+      "base_rule": 40,
+      "disposition": "replaced"
+    },
+    {
+      "source_raxx_rule": 41,
+      "base_rule": 41,
+      "disposition": "replaced"
+    },
+    {
+      "source_raxx_rule": 42,
+      "base_rule": 42,
+      "disposition": "replaced"
+    },
+    {
+      "source_raxx_rule": 43,
+      "base_rule": 43,
+      "disposition": "replaced"
+    },
+    {
+      "source_raxx_rule": 44,
+      "base_rule": 44,
+      "disposition": "replaced"
+    },
+    {
+      "source_raxx_rule": 45,
+      "base_rule": 45,
+      "disposition": "replaced"
+    },
+    {
+      "source_raxx_rule": 46,
+      "base_rule": 46,
+      "disposition": "replaced"
+    },
+    {
+      "source_raxx_rule": 47,
+      "base_rule": 47,
+      "disposition": "replaced"
+    },
+    {
+      "source_raxx_rule": 48,
+      "base_rule": 48,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 49,
+      "base_rule": 49,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 50,
+      "base_rule": 50,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 51,
+      "base_rule": 51,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 52,
+      "base_rule": 52,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 53,
+      "base_rule": 53,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 54,
+      "base_rule": 54,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 55,
+      "base_rule": 55,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 56,
+      "base_rule": 56,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 57,
+      "base_rule": 57,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 58,
+      "base_rule": 58,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 59,
+      "base_rule": 59,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 62,
+      "base_rule": 60,
+      "disposition": "replaced"
+    },
+    {
+      "source_raxx_rule": 60,
+      "base_rule": 61,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 63,
+      "base_rule": 62,
+      "disposition": "replaced"
+    },
+    {
+      "source_raxx_rule": 64,
+      "base_rule": 63,
+      "disposition": "replaced"
+    },
+    {
+      "source_raxx_rule": 65,
+      "base_rule": 64,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 66,
+      "base_rule": 65,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 67,
+      "base_rule": 66,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 68,
+      "base_rule": 67,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 69,
+      "base_rule": 68,
+      "disposition": "replaced"
+    },
+    {
+      "source_raxx_rule": 70,
+      "base_rule": 69,
+      "disposition": "disabled"
+    },
+    {
+      "source_raxx_rule": 71,
+      "base_rule": 70,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 72,
+      "base_rule": 71,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 73,
+      "base_rule": 72,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 74,
+      "base_rule": 73,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 75,
+      "base_rule": 74,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 76,
+      "base_rule": 75,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 77,
+      "base_rule": 76,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 78,
+      "base_rule": 77,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 79,
+      "base_rule": 78,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 80,
+      "base_rule": 79,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 81,
+      "base_rule": 80,
+      "disposition": "disabled"
+    },
+    {
+      "source_raxx_rule": 82,
+      "base_rule": 81,
+      "disposition": "replaced"
+    },
+    {
+      "source_raxx_rule": 83,
+      "base_rule": 82,
+      "disposition": "disabled"
+    },
+    {
+      "source_raxx_rule": 84,
+      "base_rule": 83,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 85,
+      "base_rule": 84,
+      "disposition": "disabled"
+    },
+    {
+      "source_raxx_rule": 86,
+      "base_rule": 85,
+      "disposition": "disabled"
+    },
+    {
+      "source_raxx_rule": 87,
+      "base_rule": 86,
+      "disposition": "disabled"
+    },
+    {
+      "source_raxx_rule": 88,
+      "base_rule": 87,
+      "disposition": "disabled"
+    },
+    {
+      "source_raxx_rule": 89,
+      "base_rule": 88,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 90,
+      "base_rule": 89,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 91,
+      "base_rule": 90,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 92,
+      "base_rule": 91,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 93,
+      "base_rule": 92,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 94,
+      "base_rule": 93,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 95,
+      "base_rule": 94,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 96,
+      "base_rule": 95,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 97,
+      "base_rule": 96,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 98,
+      "base_rule": 97,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "disposition": "replaced"
+    },
+    {
+      "source_raxx_rule": 100,
+      "base_rule": 99,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 101,
+      "base_rule": 100,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 102,
+      "base_rule": 101,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 103,
+      "base_rule": 102,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 104,
+      "base_rule": 103,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 105,
+      "base_rule": 104,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 106,
+      "base_rule": 105,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 107,
+      "base_rule": 106,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 108,
+      "base_rule": 107,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 109,
+      "base_rule": 108,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 110,
+      "base_rule": 109,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 111,
+      "base_rule": 110,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 112,
+      "base_rule": 111,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 113,
+      "base_rule": 112,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 114,
+      "base_rule": 113,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 115,
+      "base_rule": 114,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 116,
+      "base_rule": 115,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 117,
+      "base_rule": 116,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 118,
+      "base_rule": 117,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 119,
+      "base_rule": 118,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 120,
+      "base_rule": 119,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 121,
+      "base_rule": 120,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 122,
+      "base_rule": 121,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 123,
+      "base_rule": 122,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 124,
+      "base_rule": 123,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 125,
+      "base_rule": 124,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 126,
+      "base_rule": 125,
+      "disposition": "idol_template_replaced"
+    },
+    {
+      "source_raxx_rule": 127,
+      "base_rule": 126,
+      "disposition": "replaced"
+    },
+    {
+      "source_raxx_rule": 128,
+      "base_rule": 127,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 129,
+      "base_rule": 128,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 130,
+      "base_rule": 129,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 131,
+      "base_rule": 130,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 132,
+      "base_rule": 131,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 133,
+      "base_rule": 132,
+      "disposition": "instruction_removed"
+    },
+    {
+      "source_raxx_rule": 134,
+      "base_rule": 133,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 135,
+      "base_rule": 134,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 136,
+      "base_rule": 135,
+      "disposition": "disabled"
+    },
+    {
+      "source_raxx_rule": 137,
+      "base_rule": 136,
+      "disposition": "disabled"
+    },
+    {
+      "source_raxx_rule": 138,
+      "base_rule": 137,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 139,
+      "base_rule": 138,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 140,
+      "base_rule": 139,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 141,
+      "base_rule": 140,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 142,
+      "base_rule": 141,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 143,
+      "base_rule": 142,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 144,
+      "base_rule": 143,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 145,
+      "base_rule": 144,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 146,
+      "base_rule": 145,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 147,
+      "base_rule": 146,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 148,
+      "base_rule": 147,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 149,
+      "base_rule": 148,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 150,
+      "base_rule": 149,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 151,
+      "base_rule": 150,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 152,
+      "base_rule": 151,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 153,
+      "base_rule": 152,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 154,
+      "base_rule": 153,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 155,
+      "base_rule": 154,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 156,
+      "base_rule": 155,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 157,
+      "base_rule": 156,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 158,
+      "base_rule": 157,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 159,
+      "base_rule": 158,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 160,
+      "base_rule": 159,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 161,
+      "base_rule": 160,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 162,
+      "base_rule": 161,
+      "disposition": "retained_or_filled"
+    },
+    {
+      "source_raxx_rule": 163,
+      "base_rule": 162,
+      "disposition": "retained_or_filled"
+    }
+  ],
+  "stage_rule": 57,
+  "defaults": {
+    "urgent_shards": false,
+    "ascendance": false,
+    "ordinary_experimentals": false,
+    "target_bases": true,
+    "skeleton_idols": "two ordinary targets; original Strict BIS subtypes"
+  },
+  "game_execution_tested": false
+}

@@ -1,6 +1,17 @@
 # 后续工作 memo
 
-更新时间：2026-10-06，日本时间。当前阅读顺序：README → BASE_TEMPLATE → STRICT_VARIABLE_REVIEW → RAXX_VARIABLES → 本memo；原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+更新时间：2026-10-06，日本时间。当前阅读顺序：README → CURRENT_FILTER_GUIDE → CURRENT_RULES_REVIEW → BASE_TEMPLATE → 本memo；填空来源查STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+
+## 最新成品：Flay＋Skeleton v2
+
+- 用户已明确要求按新基底生成最新版。成品filters/Flay-Mana-Lich+Skeleton-Necromancer-v2.xml，138条（127启用／11关闭），原187条XML、原Raxx、Strict、通用Base v1保持字节不变。Flay主粉8、Skeleton副蓝12；同层主先匹配，共享按主，收集条件是两者并集。
+- 19份目标分别绑定C1／C3／T6，C3目标不限阶数且全池T7，不加FP／未腐化门槛。C2／C4全1156ID、23类装备不缩窄。C4在当前G57，原R60、基底B61；默认开启、手动关闭。T6仍0–84级，无常驻双T6保护。其他实验／碎片／底材路径仍可能保留非目标单T7。
+- 暗金仅20种Strict目标，三条身份提示加原R15合并152项；全部目标有无潜能门槛路径，不另建BD的1／2／3LP规则，不加旧正文5种替代品。原143项对象及364条唯一属性roll边界完整保留，高LP通用层原样保持，可能先于BD颜色提示。
+- Flay四条神像层已实际填入，两项普通目标优先Begin=6声音，一项静音=1；Weaver／Lagon都收。骷髅4条源BIS入口剥离腐化、至少2项普通目标、阶数不限，保留源底材，包括多职业Large Omen；未知更窄配对不按名字推断。普通目标池可能含特殊附加属性，不将任意两项称为精确前后缀毕业。通用过渡普通池补入两BD目标，保留90／75级退出。
+- 祭坛按BD类型／底材和目标池绑定，至少1项、阶数不限，保留其腐化目标；不移植Strict合计T8／T10及双崇高门槛。神像腐化不参与普通池计数，与祭坛目标不是同一决策。
+- 原R81升华、R83紧缺碎片和R136／137开荒优选底材因没有确定用途／库存／开荒路线而关闭；R83已填36／825／945候选，不能称为玩家库存紧缺。原R69普通实验目标676／679已填，仍关闭；R68广泛崇高实验保持。原R82按Strict五类底材填入并启用，保留原稀有度、不带Strict词缀／FP条件，永恒臂铠共享。原侍祭碎片R84和通用进攻／防御碎片R89／90保留，其他四职业碎片关闭。原早期通用分支保留，未用终局武器倒推开荒路线。
+- 当前只运行generate_current_filter、verify_current_filter、render_current_filter；只复用旧脚本的纯帮助函数，旧主程序及历史输出不重建。来源、G／B／R／X映射和哈希在current-filter-report.json；结构、原规则保持、类型绑定、阶段关闭和35个有限案例在current-filter-validation.json。不是客户端／封印计数实测。
+- 模板情报提取仍只读XML，随后生成具体成品；CURRENT_FILTER_GUIDE列当前默认和玩家待办，CURRENT_RULES_REVIEW逐条从XML翻译，CURRENT_RULE_POOLS保存全部大名单与roll边界。后续更新成品须运行生成、验证与文档渲染，并检查确定性和提交后哈希。
 
 ## 当前交付：用户确认的新基底与BD填空情报
 
@@ -16,7 +27,7 @@
 - 神像本轮修正：以前把普通与腐化ID混在同一个计数池，会让843＋1070误充双目标毕业。V19／V21按specialAffixType=6剥离腐化参考；affix_ids只含普通目标，corrupted_affix_ids独立，原affix_pools仍保留全部源ID。V13的早期腐化参考不删除。
 - 用户明确Flay：中型843＋854、厚实876＋886，各记录1项候选／2项组合毕业两层；都保留Weaver与Lagon，腐化状态不限、阶数不限，两项优先，声音不同。user_reviewed_flay_idol_layers记录4层，标明来源是用户审阅而非Strict等价复制。“毕业”只是普通组合齐全，不指满roll；其他BD配对仍待审阅。
 - 必须／选择条件可用多份AffixCondition共同满足，官方1.1已支持、原R62也有两份。照用户目前候选池，厚实只有886仍被保留；若要求876必有要明确采用必选条件，不静默收紧。891备用与最终祭坛1105需要腐化神像来自正文，不假称为Strict导出，也不自动加进这4层。机制及来源见FLAY_IDOL_REVIEW.md。
-- 用户已纠正方向：按Raxx设计，Strict仅填定制变量；本轮进一步明确四类T7政策要落实为新基底。允许生成通用模板，仍不生成两个BD最终filter，不直接移植Strict策略。
+- 用户已纠正方向：按Raxx设计，Strict仅填定制变量；先确认四类T7政策并建立通用模板，再明确要求生成两BD最新版。当前成品按本文开头的v2流程生成，不直接移植Strict策略。
 - scripts/extract_raxx_variables.py读取实际新模板及冻结原版，提取24组变量；蓝字56条全部归入填空说明或固定说明。机器结果template_slots映射原R到当前B，template_default_overrides仅存有变化的B默认值，无变化入口继承baseline_defaults，避免重复巨大的原暗金roll字段；文档直接读实际模板展开全部当前门槛。数据与文档为RAXX_VARIABLES、STRICT_VARIABLE_REVIEW、raxx-variables.json、raxx-variable-extraction.json和variable-extraction-validation.json；不读Planner JSON或攻略正文，不依赖.cache。
 - 已提取两BD各11种暗金，共20种、无套装目标；R15原143项已有11种，追加缺少的9种可形成152项候选。原珍贵名单保持，所有BD目标0LP也留，不增加BD独立LP分层。旧25种目标包含额外5种正文替代，不能冒充Strict本身导出。
 - 38份部位T6／T7池两层逐部位相同，C1／C3使用其中19份目标、V10复用对应T6名单；新C2／C4不能被它们缩窄。保留原R63／64在85级退出、R128／129在90／75级退出。原R127实际数量1、advanced=false，阶数不限，不能误写为T6门槛。R68原广池默认不缩到两个BD实验目标，R69是否采用另审。
@@ -24,7 +35,7 @@
 - 底材／词缀／尺寸／BD绑定保留。Large Omen来源包含五职业底材，单职业入口映射标为待判别，不能因此声称五职业都要收集。开荒路线、排除职业、升华用途、真实紧缺库存不能从终局Strict自动确定。
 - sources/builds/strict-variable-reference.json固定20个目标的isSetItem和1156项specialAffixType，来自此前已验证哈希的version150缓存；运行期不读取缓存。名字来源沿用game-reference、maxroll-reference-supplement与7底材review-reference。
 - 新模板验证检查162条排序、1156全池、141条无关源规则字段保持、15个有限T7模块案例（含关闭阶段后前三类仍留）；不声称整个未配置模板或客户端掉落实测通过。提取另检查来源／模板哈希、271条Strict、56说明覆盖、C1／C3目标一致；提取前后原版、Strict、模板、旧filter字节不变。
-- 当前复现依次python -X utf8 scripts/build_base_template.py、scripts/verify_base_template.py、scripts/extract_raxx_variables.py。不执行generate_filter／verify_generated_filter／render_rules_review来重建旧试制；新验证只复用verify_generated_filter中的纯predicate函数，未执行旧主程序。后续要求生成最终版本时，使用新基底并填写本轮已审阅变量。
+- 基底与情报复现依次python -X utf8 scripts/build_base_template.py、scripts/verify_base_template.py、scripts/extract_raxx_variables.py，随后使用本文开头的current流程填入具体BD。旧generate_filter／verify_generated_filter／render_rules_review主程序不执行，帮助函数可只读复用。
 
 ## 上一轮历史试制：曾直接移植Strict条件
 
@@ -41,11 +52,11 @@
 - sources/builds/transfer-reference.json固定35个部位目标ID的specialAffixType，1156全池直接从Strict汇总；特殊类型6仅用于15条腐化补充分支，保持原Strict OnlyUncorrupted规则另加同装备类型、目标腐化词缀任意阶候选。R37/R48扩大全池，R48类型缩到11种实际装备类。该宽松补充不是普通传奇素材的自动判定。
 - 玩家剩余任务主要是进度／库存收紧、代表物品导入核对、选择可选方案；细表按G编号在COMBINED_FILTER_GUIDE。不得说每个原始空模板还待用户填写才可用。魔力34／暴击避免97碎片不在Strict默认拆解，库存需要时再加明确条件。
 - 验证输出generated-validation.json：结构、25暗金保护、38源池等价、55源谓词、20离线案例通过。LP/WW组合、封印计数及神像特殊／腐化计数仍未经游戏实测；FP52/NotSealed预测必须返回unknown。生成超200条就失败，不静默截断；动态工具扩展时重新验收。
-- 以下输入评估小节保留收集资料时的历史判断。需要以本节的已生成状态和最新Strict主输入策略为准；那些“未生成”记录描述当时阶段。
+- 以下输入评估小节保留收集资料时的历史判断；其中“未生成”和直接移植Strict门槛的记录描述当时阶段。当前以本文开头的v2与Base v1流程为准。
 
 ## 用户已确定的范围与偏好
 
-- 最初的基底研究、中文说明、memo和远程仓库已完成。用户于2026-10-06启动的两个BD已生成合并试版，转移规则已程序化；动态勾选工具仍未启动，也没有选择工具框架。
+- 最初的基底研究、中文说明、memo和远程仓库已完成。两个BD先有历史合并试版，再按用户确认建立Base v1并生成当前v2；填空和生成已程序化。动态勾选工具仍未启动，没有选择工具框架。
 - 用户会提供多个BD：正在玩的与一起刷装备的其他BD具有同等收集优先级，可以用颜色、声音区分。
 - 用户最新要求主套路粉色、副套路蓝色，共享按主套路处理；不继续使用第三种薄荷绿BD身份。原FILTER_GUIDE／RULE_INDEX描述的Raxx颜色事实保留，不改为成品约定。
 - 用户已提供Flay Mana Lich与Skeleton Necromancer两篇Maxroll攻略，链接及试制计划见PLAN.md第二阶段。不要把视频中主播的个人计划或原文预填属性当成这两个BD的真实需求。

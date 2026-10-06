@@ -1,0 +1,223 @@
+{
+  "passed": true,
+  "rules": 138,
+  "enabled": 127,
+  "stage_rule": 57,
+  "full_affix_ids": 1156,
+  "target_uniques": 20,
+  "unchanged_functional_rules": 48,
+  "bounded_cases": [
+    {
+      "case": "Flay axe T7",
+      "matched_rule": 18,
+      "category": "C1",
+      "role": "MAIN"
+    },
+    {
+      "case": "Flay dagger T7",
+      "matched_rule": 20,
+      "category": "C1",
+      "role": "MAIN"
+    },
+    {
+      "case": "Necro axe T7",
+      "matched_rule": 19,
+      "category": "C1",
+      "role": "SECONDARY"
+    },
+    {
+      "case": "Flay affix on Necro weapon",
+      "matched_rule": 57,
+      "category": "C4",
+      "role": "COMMON"
+    },
+    {
+      "case": "Weapon affix on helmet",
+      "matched_rule": 57,
+      "category": "C4",
+      "role": "COMMON"
+    },
+    {
+      "case": "Necro helmet target",
+      "matched_rule": 22,
+      "category": "C1",
+      "role": "SECONDARY"
+    },
+    {
+      "case": "Shared belt target",
+      "matched_rule": 25,
+      "category": "C1",
+      "role": "MAIN"
+    },
+    {
+      "case": "Any double T7",
+      "matched_rule": 37,
+      "category": "C2",
+      "role": "COMMON"
+    },
+    {
+      "case": "Any triple T7",
+      "matched_rule": 37,
+      "category": "C2",
+      "role": "COMMON"
+    },
+    {
+      "case": "Flay low target plus T7",
+      "matched_rule": 45,
+      "category": "C3",
+      "role": "MAIN"
+    },
+    {
+      "case": "Necro low target plus T7",
+      "matched_rule": 55,
+      "category": "C3",
+      "role": "SECONDARY"
+    },
+    {
+      "case": "Stage single T7",
+      "matched_rule": 57,
+      "category": "C4",
+      "role": "COMMON"
+    },
+    {
+      "case": "Phase OFF single T7",
+      "matched_rule": 138,
+      "category": "base",
+      "role": "COMMON"
+    },
+    {
+      "case": "Phase OFF target T7",
+      "matched_rule": 21,
+      "category": "C1",
+      "role": "MAIN"
+    },
+    {
+      "case": "Phase OFF double T7",
+      "matched_rule": 37,
+      "category": "C2",
+      "role": "COMMON"
+    },
+    {
+      "case": "Phase OFF Flay low target",
+      "matched_rule": 45,
+      "category": "C3",
+      "role": "MAIN"
+    },
+    {
+      "case": "Phase OFF Necro low target",
+      "matched_rule": 55,
+      "category": "C3",
+      "role": "SECONDARY"
+    },
+    {
+      "case": "Corrupted zero FP candidate",
+      "matched_rule": 45,
+      "category": "C3",
+      "role": "MAIN"
+    },
+    {
+      "case": "Target T6 at 84",
+      "matched_rule": 68,
+      "category": "target_t6",
+      "role": "MAIN"
+    },
+    {
+      "case": "Target T6 at 85",
+      "matched_rule": 138,
+      "category": "base",
+      "role": "COMMON"
+    },
+    {
+      "case": "Flay minor pair Lagon",
+      "matched_rule": 97,
+      "category": "idol_bis",
+      "role": "MAIN"
+    },
+    {
+      "case": "Flay minor pair Weaver",
+      "matched_rule": 97,
+      "category": "idol_bis",
+      "role": "MAIN"
+    },
+    {
+      "case": "Flay minor one target",
+      "matched_rule": 103,
+      "category": "idol_candidate",
+      "role": "MAIN"
+    },
+    {
+      "case": "Flay corruption is not second target",
+      "matched_rule": 103,
+      "category": "idol_candidate",
+      "role": "MAIN"
+    },
+    {
+      "case": "Flay corruption-only idol",
+      "matched_rule": 138,
+      "category": "base",
+      "role": "COMMON"
+    },
+    {
+      "case": "Flay stout pair",
+      "matched_rule": 98,
+      "category": "idol_bis",
+      "role": "MAIN"
+    },
+    {
+      "case": "Flay stout single ignite",
+      "matched_rule": 104,
+      "category": "idol_candidate",
+      "role": "MAIN"
+    },
+    {
+      "case": "Flay stout optional resist",
+      "matched_rule": 104,
+      "category": "idol_candidate",
+      "role": "MAIN"
+    },
+    {
+      "case": "Necro ordinary idol pair",
+      "matched_rule": 99,
+      "category": "idol_bis",
+      "role": "SECONDARY"
+    },
+    {
+      "case": "Necro corruption is not second target",
+      "matched_rule": 138,
+      "category": "base",
+      "role": "COMMON"
+    },
+    {
+      "case": "Necro large ordinary pair",
+      "matched_rule": 101,
+      "category": "idol_bis",
+      "role": "SECONDARY"
+    },
+    {
+      "case": "Target T7 wins over double",
+      "matched_rule": 21,
+      "category": "C1",
+      "role": "MAIN"
+    },
+    {
+      "case": "Shared Eternal Gauntlets",
+      "matched_rule": 84,
+      "category": "target_base",
+      "role": "MAIN"
+    },
+    {
+      "case": "Flay altar any tier",
+      "matched_rule": 105,
+      "category": "altar",
+      "role": "MAIN"
+    },
+    {
+      "case": "Necro altar any tier",
+      "matched_rule": 106,
+      "category": "altar",
+      "role": "SECONDARY"
+    }
+  ],
+  "game_execution_tested": false,
+  "sealed_affix_counting_tested": false
+}

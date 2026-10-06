@@ -1,6 +1,6 @@
 # 新基底：需要填写或审阅的变量
 
-当前基底为[LE Base Template v1](BASE_TEMPLATE.md)。R编号追溯冻结原版，B编号=新模板Order+1。V编号保留以便追溯；T7四类以C1→C2→C3→C4顺序匹配。本表读取真实新模板，未生成两个BD最终filter。
+当前基底为[LE Base Template v1](BASE_TEMPLATE.md)。R编号追溯冻结原版，B编号=新模板Order+1。V编号保留以便追溯；T7四类以C1→C2→C3→C4顺序匹配。本表读取通用模板默认值；具体两BD填入结果见[当前成品](CURRENT_FILTER_GUIDE.md)。提取程序本身不生成filter。
 
 ## 当前基底收集策略
 

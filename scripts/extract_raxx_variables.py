@@ -307,7 +307,7 @@ def main():
     assert all(c["candidate_raxx_slots"] for v in variables for c in v["evidence"]), "Every candidate needs a Raxx input destination"
     assert len(idol_layers) == 4 and [c["affix_ids"] for c in idol_layers] == [[843, 854], [843, 854], [876, 886], [876, 886]]
     assert all(flags["special_affix_type"][str(i)] != 6 for v in variables if v["id"] in {"V19", "V21"} for c in v["evidence"] for i in c["affix_ids"])
-    result = {"stage": "Active reusable base template and Strict evidence; no final BD filter", "baseline": manifest["baseline"], "active_template": active, "strict_inputs": strict["inputs"],
+    result = {"stage": "Active reusable base template and Strict evidence; extraction only", "baseline": manifest["baseline"], "active_template": active, "strict_inputs": strict["inputs"],
               "reference_files_sha256": {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in ["sources/game-reference.json", strict["reference_supplement"], "sources/builds/review-reference.json", "sources/builds/strict-variable-reference.json"]},
               "roles": {"main": "flay-mana-lich", "secondary": "skeleton-necromancer", "shared": "main", "role_assignment_is_default": True},
               "variables": variables, "strict_rules": evidence, "target_ids": unique, "target_union": union, "r15_missing_targets": missing, "tier6_tier7_target_pools_equal": tier_pools_equal, "c1_c3_targets_equal_by_build_and_type": True,
@@ -315,7 +315,7 @@ def main():
               "fixed_instruction_slots": sorted(fixed_instructions), "unmodified_files_sha256": hashes_before}
     catalog = [
         "# 新基底：需要填写或审阅的变量", "",
-        "当前基底为[LE Base Template v1](BASE_TEMPLATE.md)。R编号追溯冻结原版，B编号=新模板Order+1。V编号保留以便追溯；T7四类以C1→C2→C3→C4顺序匹配。本表读取真实新模板，未生成两个BD最终filter。", "",
+        "当前基底为[LE Base Template v1](BASE_TEMPLATE.md)。R编号追溯冻结原版，B编号=新模板Order+1。V编号保留以便追溯；T7四类以C1→C2→C3→C4顺序匹配。本表读取通用模板默认值；具体两BD填入结果见[当前成品](CURRENT_FILTER_GUIDE.md)。提取程序本身不生成filter。", "",
         "## 当前基底收集策略", "",
         "1. 稀有共通暗金：R15原名单143项保留，0LP也留。",
         "2. BD关联暗金：把目标名字补入同一个R15名单，0LP也留；不新增BD独立LP分层。",
@@ -329,7 +329,7 @@ def main():
         *[f"| {v['id']} {v['title']} | {v['editable_fields']} | {', '.join('R'+str(n) for n in v['raxx_slots'])} | {', '.join('B'+str(n) for n in v['template_slots'].values()) or '已并入V07'} | {', '.join(v['strict_families']) or '用户决定／玩家信息'} |" for v in variables], "",
         "## 当前基底入口与门槛", "",
     ]
-    review = ["# 新基底：Strict变量审阅结论", "", "当前基底是[LE Base Template v1](BASE_TEMPLATE.md)，已落实用户确认的T7四类。此处提取BD填空情报，尚未生成两个BD的最终filter。", "", "本次默认Flay为主、Skeleton为副；共享按主处理，两者同等收集。角色身份作为情报归属，模板尚未填写两BD目标及显示身份。", "", "## 先审阅的结论", "", "1. 稀有共通暗金：保留原R15的143项。", f"2. BD关联暗金：两份Strict各11种，共20种（共享253／416）；原R15缺{len(missing)}种：{names('uniques', missing)}。其余目标已在R15，无需重复加入。", "3. 本轮没有增加正文中的5种替代暗金，也没有导入Planner JSON中的精确神像组合；这些不是Strict直接导出的情报。", "4. 19份部位目标池同时供C1目标T7与C3目标不限阶数＋T7使用，按BD／类型绑定；C2、C4全量池已由用户确认，不用Strict窄池填写。", "5. 神像普通与腐化已自动分开；Flay的4条1／2项候选层保持用户审阅结果，尚未填写到通用模板。", "6. Strict的LP分层、FP52、全等级T6、祭坛分层等不直接移植；C4手动退出来自本次用户确认，T6继续原0–84级过渡。", "", "以下与[变量总表](RAXX_VARIABLES.md)对应。R追溯原版，B为新模板位置，X为Strict物理位置；源门槛仅为证据。", ""]
+    review = ["# 新基底：Strict变量审阅结论", "", "当前基底是[LE Base Template v1](BASE_TEMPLATE.md)，已落实用户确认的T7四类。此处提取通用模板的BD填空情报；具体两BD填入结果见[当前成品](CURRENT_FILTER_GUIDE.md)。", "", "本次默认Flay为主、Skeleton为副；共享按主处理，两者同等收集。角色身份作为情报归属，模板尚未填写两BD目标及显示身份。", "", "## 先审阅的结论", "", "1. 稀有共通暗金：保留原R15的143项。", f"2. BD关联暗金：两份Strict各11种，共20种（共享253／416）；原R15缺{len(missing)}种：{names('uniques', missing)}。其余目标已在R15，无需重复加入。", "3. 本轮没有增加正文中的5种替代暗金，也没有导入Planner JSON中的精确神像组合；这些不是Strict直接导出的情报。", "4. 19份部位目标池同时供C1目标T7与C3目标不限阶数＋T7使用，按BD／类型绑定；C2、C4全量池已由用户确认，不用Strict窄池填写。", "5. 神像普通与腐化已自动分开；Flay的4条1／2项候选层保持用户审阅结果，尚未填写到通用模板。", "6. Strict的LP分层、FP52、全等级T6、祭坛分层等不直接移植；C4手动退出来自本次用户确认，T6继续原0–84级过渡。", "", "以下与[变量总表](RAXX_VARIABLES.md)对应。R追溯原版，B为新模板位置，X为Strict物理位置；源门槛仅为证据。", ""]
     lookup = {(r["build"], r["x"]): r for r in evidence}
     for v in variables:
         catalog += [f"### {v['id']}｜{v['title']}", "", "可填字段：" + v["editable_fields"] + "。", "", "处理原则：" + v["interpretation"], ""]
@@ -368,7 +368,7 @@ def main():
                 owners = [s for s in unique if i in unique[s]]
                 role = "共享，按主处理" if len(owners) == 2 else "主Flay" if owners[0] == "flay-mana-lich" else "副Skeleton"
                 review.append(f"| {names('uniques', [i])} | {role} | {'已在名单' if i in base[15]['unique_ids'] else '需要追加'} |")
-            review += ["", f"本轮候选填法：保留原143项，追加{len(missing)}项后名单共{len(set(base[15]['unique_ids']) | set(union))}项。来源为Flay X121与Skeleton X132；这是情报结论，没有写入XML。", ""]
+            review += ["", f"候选填法：保留原143项，追加{len(missing)}项后名单共{len(set(base[15]['unique_ids']) | set(union))}项。来源为Flay X121与Skeleton X132；提取程序仅提供情报，实际填入见[当前成品](CURRENT_FILTER_GUIDE.md)。", ""]
             continue
         if vid in {"V02", "V03"}:
             review += ["两份主名单中的20项全部被冻结类型资料标为暗金，未发现BD套装目标，R16原21项继续保留。" if vid == "V02" else "本轮无依据裁剪原412项。20种BD目标已由V01的无潜能门槛名单保护，不必再增加潜能分层。", ""]
@@ -427,7 +427,7 @@ def main():
             review.append("")
         if not v["evidence"]:
             review += ["未导出可直接填写的候选；保留未决状态，不用空值冒充已配置。", ""]
-    review += ["## 仍需Review的决定", "", "- R15目标是否只采用这20种，或随后再加入有正文／Planner依据的替代品。", "- C1／C3各目标与装备类型的绑定，尤其主手／副手及遗物；四类收集策略与C2／C4全量范围已确认。", "- Flay普通两项池与1／2项层已按用户要求记录；其他BD的普通词缀配对仍需确认，腐化不凑数。", "- Flay厚实一项层按用户列表可只有886；若要求点燃876必有，需明确采用必须条件。891备用来自攻略，未加入这4层。", "- 是否采用普通实验词缀、升华、定向底材、各类碎片；碎片必须结合库存。", "- 开荒是否在本次用途内；若需要，补开荒阶段的武器／副手及底材。", "- 原版R29／R69／R70默认关闭，R81／R82／R83等仍有待配置入口；这些开关尚未定制，C4默认开启、由玩家阶段结束后手动关闭已确定。", "", "## 程序与证据", "", "运行：`python -X utf8 scripts/extract_raxx_variables.py`；模板重建与验证见[新基底说明](BASE_TEMPLATE.md)。完整候选、原值与来源条件见[机器结果](../analysis/raxx-variable-extraction.json)，检查见[验证结果](../analysis/variable-extraction-validation.json)。冻结原版、两份Strict及当前模板均校验哈希；提取过程不改XML。旧187条试制稿保留作历史，两个BD的最终filter尚未生成。", ""]
+    review += ["## 仍需Review的决定", "", "- R15目标是否只采用这20种，或随后再加入有正文／Planner依据的替代品。", "- C1／C3各目标与装备类型的绑定，尤其主手／副手及遗物；四类收集策略与C2／C4全量范围已确认。", "- Flay普通两项池与1／2项层已按用户要求记录；其他BD的普通词缀配对仍需确认，腐化不凑数。", "- Flay厚实一项层按用户列表可只有886；若要求点燃876必有，需明确采用必须条件。891备用来自攻略，未加入这4层。", "- 是否采用普通实验词缀、升华、定向底材、各类碎片；碎片必须结合库存。", "- 开荒是否在本次用途内；若需要，补开荒阶段的武器／副手及底材。", "- 原版R29／R69／R70默认关闭，R81／R82／R83等仍有待配置入口；这些开关尚未定制，C4默认开启、由玩家阶段结束后手动关闭已确定。", "", "## 程序与证据", "", "运行：`python -X utf8 scripts/extract_raxx_variables.py`；模板重建与验证见[新基底说明](BASE_TEMPLATE.md)。完整候选、原值与来源条件见[机器结果](../analysis/raxx-variable-extraction.json)，检查见[验证结果](../analysis/variable-extraction-validation.json)。冻结原版、两份Strict及当前模板均校验哈希；提取过程不改XML。旧187条试制稿保留作历史，基于新模板的两BD成品见[当前使用说明](CURRENT_FILTER_GUIDE.md)。", ""]
     classification_doc = ["# Strict神像词缀：自动分类结果", "", "本页由extract_raxx_variables.py生成；无需攻略文字、Planner JSON或人工指定某个ID是否腐化。它只提取和分类情报，不生成filter。", "",
                           "Strict直接提供目标词缀ID，但没有逐词缀的腐化类别标签。程序读取已冻结的词缀数据库：specialAffixType=6归腐化，其余归非腐化；神像普通目标计数只使用非腐化池。这里不按中文名称猜测，腐化伤害（18）也不会因此被错判为腐化专属词缀。", "",
                           "CorruptionCondition描述物品是否腐化，与每个词缀的类别是两个不同字段。Strict选择了某项腐化属性，可以自动提取这个选择；其重要性、必须／可选以及备用关系仍由用户或攻略补充决定。", "",

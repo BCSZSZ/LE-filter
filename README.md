@@ -1,8 +1,10 @@
 # LE-filter：Raxx 基底与双 BD 收集过滤器
 
-当前基底：**[LE Base Template v1](templates/LE-base-v1.xml)**，以Raxx原版为源，落实用户确认的T7四类收集策略。规则与玩家待办见[新基底说明](docs/BASE_TEMPLATE.md)。Strict仍只用于提取需要填写的BD情报；两个BD的最终filter尚未生成。
+最新版成品：**[Flay＋Skeleton Necromancer v2](filters/Flay-Mana-Lich+Skeleton-Necromancer-v2.xml)**，138条（127启用／11关闭），已填入两BD目标并删去56条蓝字说明。[当前使用说明与玩家待办](docs/CURRENT_FILTER_GUIDE.md)和[逐条审阅规则](docs/CURRENT_RULES_REVIEW.md)从实际XML生成。
 
-先读[新基底说明](docs/BASE_TEMPLATE.md)，再查[BD情报审阅结论](docs/STRICT_VARIABLE_REVIEW.md)、[24组变量与当前门槛](docs/RAXX_VARIABLES.md)及[工作memo](docs/WORKING_MEMO.md)。当前默认Flay为主、Skeleton为副，共享按主，两者同等收集；通用模板尚未填写这些目标。旧187条XML及其说明保留作历史试制，包含Strict策略移植，**不作为本轮已认可的最终方案**；动态勾选界面尚未实施。
+当前基底仍为[LE Base Template v1](templates/LE-base-v1.xml)，落实用户确认的T7四类，供后续定制。Strict提供目标情报，成品采用基底门槛；原Raxx与旧187条试制保留不动。
+
+先读[当前使用说明](docs/CURRENT_FILTER_GUIDE.md)，再查[新基底说明](docs/BASE_TEMPLATE.md)、[BD情报来源](docs/STRICT_VARIABLE_REVIEW.md)及[工作memo](docs/WORKING_MEMO.md)。Flay主套路粉色、Skeleton副套路蓝色，共享按主；两者同等收集。旧187条XML及其说明包含Strict策略移植，仅作历史；动态勾选界面尚未实施。
 
 [V05–V10的用途与过渡范围](docs/STRICT_VARIABLE_REVIEW.md#equipment-purpose)已更新：对应部位BD目标T7 → 任意双／多T7 → BD目标不限阶数＋T7 → 额外单T7阶段兜底。最后一类只有一条、默认开启，玩家阶段结束后手动关闭；关闭它保留前三类。原双T6常驻改为双／多T7，原V10的T6补收仍在85级退出。
 
@@ -23,6 +25,12 @@
 | 文件 | 用途 |
 |---|---|
 | [PLAN.md](PLAN.md) | 本阶段计划、验收条件与范围 |
+| [Flay＋Skeleton v2](filters/Flay-Mana-Lich+Skeleton-Necromancer-v2.xml) | 当前可导入成品，含一条默认开启的额外单T7阶段规则 |
+| [CURRENT_FILTER_GUIDE.md](docs/CURRENT_FILTER_GUIDE.md) | 当前策略、默认开关和玩家仍需完成的事项 |
+| [CURRENT_RULES_REVIEW.md](docs/CURRENT_RULES_REVIEW.md) | 实际138条XML规则的类型、目标、门槛、颜色与声音 |
+| [CURRENT_RULE_POOLS.md](docs/CURRENT_RULE_POOLS.md) | 当前大名单和保留的364项唯一属性roll编码边界 |
+| [current-filter-report.json](analysis/current-filter-report.json) | 成品哈希、G／B／R／X映射、来源与默认配置 |
+| [current-filter-validation.json](analysis/current-filter-validation.json) | 结构、门槛、类型绑定、神像计数与35个有限案例 |
 | [BASE_TEMPLATE.md](docs/BASE_TEMPLATE.md) | 当前四类收集规则、范围、退出方式和玩家待办 |
 | [LE-base-v1.xml](templates/LE-base-v1.xml) | 后续填写BD使用的162条可复现基底模板 |
 | [base-manifest.json](templates/base-manifest.json) | 模板哈希、原R／当前B映射、四类规则和全池范围 |
@@ -70,15 +78,18 @@
 
 ## 复现
 
-安装 Python 3 后，在仓库根目录重建当前基底、检查并更新变量审阅结论：
+安装 Python 3 后，在仓库根目录重建基底、提取情报并生成当前成品：
 
 ```powershell
 python -X utf8 scripts/build_base_template.py
 python -X utf8 scripts/verify_base_template.py
 python -X utf8 scripts/extract_raxx_variables.py
+python -X utf8 scripts/generate_current_filter.py
+python -X utf8 scripts/verify_current_filter.py
+python -X utf8 scripts/render_current_filter.py
 ```
 
-只使用标准库与已提交资料，不需要网络、.cache或Downloads。模板构建只落实用户确认的四类；验证162条结构、1156全池、原版其他规则保持及15个有限案例。提取检查原版／Strict／模板哈希、56条蓝字覆盖、38份部位池、C1／C3的19份部位目标一致、20种暗金目标及XML字节不变，记录全部271条Strict。尚未生成两个BD成品或做客户端实测。
+只使用标准库与已提交资料，不需要网络、.cache或Downloads。模板验证162条结构与15个有限案例；提取核对源哈希、56蓝字覆盖、全部271条Strict与19份C1／C3目标一致。成品另验证138条结构、1156全池、20种暗金0LP路径、类型绑定、神像剥离腐化及35个有限案例；保留48条未改变的功能规则和364项原roll边界。客户端导入、封印计数及实际提示尚未实测。
 
 以下命令用于**历史试制**，本轮不要执行：
 
