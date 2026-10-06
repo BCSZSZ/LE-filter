@@ -23,3 +23,14 @@
 ## 完成状态
 
 研究与验证的实际结果、限制和复现方式见 README.md、docs/WORKING_MEMO.md 与 analysis/validation.json。
+
+## 第二阶段：两个 BD 试制（2026-10-06 启动）
+
+目标：[Flay Mana Lich](https://maxroll.gg/last-epoch/build-guides/flay-mana-lich-guide) 与 [Skeleton Necromancer](https://maxroll.gg/last-epoch/build-guides/skeleton-necromancer-guide)，同等收集优先级。先按基底CoF场景准备；动态勾选工具仍不实现。
+
+1. 获取具体配置 → 验收：有可追溯的装备、词缀、神像和暗金／套装需求，并标明攻略版本及装备阶段。
+2. 完成PLAYER_TODO中的目标配置 → 验收：武器／底材与词缀、神像前后缀保留各BD的配对关系；采用的规则不留空模板。
+3. 生成可复制XML，删蓝字并重排Order → 验收：两BD需求均可保留，颜色可区分；通用珍贵物品与资源保护保留。
+4. 检查来源映射、规则结构和关键匹配案例并上传 → 验收：来源及成品可复现、基底字节不变、远程提交一致；游戏内实测状态单独说明。
+
+当前停在第1步：Maxroll被浏览器站点安全策略阻止读取，不能通过其他抓取通道绕过。已请求用户提供这两篇攻略的Last Epoch Tools Planner链接或配置文字；在获取具体需求前，不按BD名称猜测装备配置，不输出冒充已完成的filter。
