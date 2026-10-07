@@ -2,6 +2,12 @@
 
 更新时间：2026-10-07，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
+## 最新确认：两份Flay保持不同方案
+
+- 旧Maxroll Strict Flay使用`flay-mana-lich`；Allie攻略Flay使用`flay-lich-allie-guide`。两者独立保存、选择、编辑和导出需求，不能将目标取并集，也不能将攻略作为补丁反写旧filter方案。
+- 已核对网页保存的配置：旧Strict目标与内置来源完全相同；Allie两个阶段分别与其需求JSON完全相同，仍未勾选。现有导入按id更新对应阶段，已满足独立方案要求，无需修改程序。
+- 上轮181条组合验证是Allie攻略Flay＋中文流血骷髅835，不是Allie攻略Flay＋旧Strict Flay。
+
 ## 最新来源核对：Allie Flay与中文835
 
 用户要求核对输入→需求是否随练级简化变化，并从新Flay攻略与中文835重建后读取识别。变化在练级的两份列表与旧格式适配；终局五类目标及参考分类不改变，声音／T7／退出点仍属于需求→规则。此次新增来源构建脚本及验证，不修改生成器策略。
@@ -13,7 +19,7 @@
 - 同名暗金不能替换ID：Flay链接猪猡的珍珠376，835链接374；按各自解码ID记录。活力、护盾、血量等优先级只是来源审阅，不增加JSON策略字段。
 - HTTP直接获取被站点防护拒绝；通过浏览器读取实际显示的`section=item-stats/...`／`idol-stats/...`单元和正文链接，用已有lz-string1.5.0解码，冻结事实到`sources/builds/letools-allie-flay-extracted.json`。835实际在线表及练级清单与旧快照ID逐项相同，核对留在`analysis/guide835-source-recheck.json`；原快照未改。
 - 重建：`python -X utf8 scripts/build_flay_allie_requirements.py`及`python -X utf8 scripts/build_guide_835_requirements.py`。四份输出以共通适配器读写完全相等；真实网页逐份导入后保存配置读回也相等，Flay两个阶段各自保存需求JSON相等。旧Strict两BD、原勾选状态／主身份保持，新id未自动启用。网页备份为Downloads的`LE-filter-targets (4).json`，导入后最终读回为`(6).json`。
-- 全24项测试通过；新Flay独立107条／101启用，835独立116／110，Flay主＋835副181／175，转换无引擎警告且未超过200。XML仅在内存校验；原Raxx、冻结模板与历史成品未动，没有游戏客户端实测。未来来源更新应先核对正文与日志冲突，再改来源事实；不要把此次来源警告误说成规则转换失败。
+- 全24项测试通过；新Flay独立107条／101启用，835独立116／110，Allie攻略Flay主＋835副181／175，转换无引擎警告且未超过200。XML仅在内存校验；原Raxx、冻结模板与历史成品未动，没有游戏客户端实测。未来来源更新应先核对正文与日志冲突，再改来源事实；不要把此次来源警告误说成规则转换失败。
 - 审阅入口：`docs/GUIDE_REQUIREMENTS_REVIEW.md`；机器验证：`analysis/guide-requirements-validation.json`；网页截图：`docs/images/guide-requirements-import-preview.png`。
 
 ## 最新实现：练级简化与终局05收紧
