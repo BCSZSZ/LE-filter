@@ -5,8 +5,8 @@
 - 共通BD需求格式见`docs/REQUIREMENTS_FORMAT.md`，适配器`tool/requirements.py`；一个BD／一个阶段保存目标和可选来源，终局五类、练级affixes与bases两类，不存基底提示、主副、R分段。同id导入只替换该阶段，保留另一阶段与主副。网页入口区分“BD需求JSON”和整套“配置”。
 - 用户明确要求两份Flay保持不同方案：旧Maxroll Strict来源`flay-mana-lich`与Allie攻略来源`flay-lich-allie-guide`分别保存、选择、编辑和导出需求，不能合并目标或互相补齐／覆盖。新攻略不得自动启用；此前181条组合验证指Allie攻略Flay＋中文骷髅835，不是两份Flay。
 - 新攻略样本`requirements/bleed-skeleton-roamer-guide-835.endgame.json`使用公共推荐表，含替代品，未绑定单一变体；重建脚本`scripts/build_guide_835_requirements.py`只读冻结已解码来源与词库。原链接压缩key、数字ID、练级目标和七个变体索引在`sources/builds/letools-guide-zh-835-extracted.json`。正文新增胸甲192不反写旧Strict。1085／1086腐化仅参考，Omen266不能按普通尺寸可出范围删去。装备类型校验采用基底全部23类，不沿用旧双BD脚本11类T7_SLOTS。
-- 最新交付是`tool/`目标工作台，接口见`docs/TOOL_GUIDE.md`。新结果由`tool/engine.py`产生，不执行旧生成器覆盖历史XML。内置两BD133条（127启用），练级留空；已落实双目标T7、骷髅一项神像、剥离4／6计数及收紧05。以下162条v3描述是历史快照状态。
-- 通用0LP保护包含原R15珍贵暗金＋R16套装＋1.3／1.4／1.5新增55种暗金，共170种；25先古与4暗金神像均保留。冻结名单见`sources/seasonal-unique-protection.json`；赛季条目只按ID匹配、解除原Rolls条件，其他旧条目条件保留。原R12／13／14混合潜能兜底不再生成，低WW静音独立层仍保留。Allie攻略＋835当前177／171，28项测试。预览可展开／搜索暗金ID；运行ZIP须包含赛季名单。不修改冻结Base v1和历史XML。
+- 最新交付是`tool/`目标工作台，接口见`docs/TOOL_GUIDE.md`。新结果由`tool/engine.py`产生，不执行旧生成器覆盖历史XML。内置两BD132条（126启用），练级留空；已落实双目标T7、骷髅一项神像、剥离4／6计数及收紧05。以下162条v3描述是历史快照状态。
+- 通用0LP保护包含原R15珍贵暗金＋R16套装＋1.3／1.4／1.5新增55种暗金，共170种；25先古与4暗金神像均保留。冻结名单见`sources/seasonal-unique-protection.json`；赛季条目只按ID匹配、解除原Rolls条件，其他旧条目条件保留。原R12／13／14混合潜能兜底不再生成；低WW静音覆盖层已删除，WW1–13与0LP统一铁匠声光。练级品质按50–79→30–49→0–29，同段主前副后，单可用目标例外紧跟同BD品质规则；底材／拆解仍在品质后。Allie攻略＋835当前176／170，29项测试。预览可展开／搜索暗金ID；运行ZIP须包含赛季名单。不修改冻结Base v1和历史XML。
 - 工具运行期使用冻结`sources/tool-catalog.json`，不依赖`.cache`或网络；`scripts/build_tool_catalog.py`仅在开发时从已验证哈希的缓存重建词库。未知ID不能猜普通。导入只移目标情报，来源门槛不能覆盖基底门槛。
 - 每BD两阶段独立；练级只填平铺affixes与带类型bases。不从终局猜目标。0–29至少1项，30–49总阶数≥5，50–79≥8；单可出现目标的部位50–79用T≥5；80退出。逐BD计分，不能跨BD凑数。练级底材0–29可裸，30–59需同BD目标，60退出；普通目标T3拆解50退出，原常驻R84–90改60退出。删除10级后的所有稀有兜底、未填Raxx示例和专门T6层。终局05同BD指定底材＋对应部位目标恰好T7常驻。Raxx通用神像／腐化独立保留，不掺BD池；细则见TOOL_GUIDE。始终导出两阶段合并XML。旧练级数据迁移时原配置保存在legacy_leveling，不能无声丢弃。
 - 工具变更后运行`python -X utf8 -m unittest discover -s tool -v`，必要时验证浏览器导入／保存／XML下载，保留原源文件、模板与历史v3字节。超过200规则报错，不截断。有限匹配测试不冒充客户端实测。

@@ -2,6 +2,12 @@
 
 更新时间：2026-10-07，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
+## 最新修正：低WW统一铁匠、练级高等级优先
+
+- 用户指出原预览13低WW静音与14通用暗金价值相同，不应不同提示。删除低WW覆盖层，原14通用保护成为新13；170种范围与原Rolls边界不变，WW1–13直接走铁匠声音、地图图标与小光柱。WW14／17／20门槛及BD主副颜色仍在前。此前“低WW静音保留”的说明为历史设计，不再适用于当前工作台。
+- 用户指出攻略组合116起的练级三段顺序倒置。品质层现在按50–79→30–49→0–29，同段主前副后；50–79单可用目标例外跟在同BD品质规则后。排序只改优先级，等级、分数、目标池、类型与底材条件不变；不跨BD混池，底材／拆解仍位于品质层之后。
+- 回归测试先复现低WW提前静音与低等级排在前的两个问题，再修正。29项测试通过，实际Pyodide七组与原生完整输出一致，记录见`analysis/cue-order-validation.json`；默认132／126、Allie102／96、835111／105、两攻略176／170。攻略组合品质顺序为新115–117的50–79、118–119的30–49、120–121的0–29。冻结来源、模板、历史XML及BD需求JSON不改；以下133／177等是上一轮快照。
+
 ## 最新实现：赛季暗金0LP保护与潜能规则去重
 
 - 按1.3／1.4／1.5版本新增暗金范围收集，共55种，包含25种先古和4种暗金神像；不局限于赛季机制限定掉落。冻结JSON为`sources/seasonal-unique-protection.json`，中文审阅与维护见`docs/SEASONAL_UNIQUE_PROTECTION.md`。版本新增页实际物品key经lz-string解码后，数字ID／名字／类型逐项核对version150词库；先古标记直接从哈希已验证数据库脚本读取，25种均覆盖，不用ID区间猜测。

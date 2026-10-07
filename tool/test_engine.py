@@ -106,6 +106,11 @@ class ToolTests(unittest.TestCase):
             self.assertEqual(first(self.output,"BOOTS",{},uid=uid,lp=lp,rarity="UNIQUE")["tier"],tier)
         for ww, tier in [(1,1),(13,1),(14,2),(16,2),(17,3),(19,3),(20,4)]:
             self.assertEqual(first(self.output,"BOOTS",{},uid=253,ww=ww,rarity="UNIQUE")["tier"],tier)
+        for ww, tier in [(0,1),(1,1),(13,1),(14,2),(16,2),(17,3),(19,3),(20,4)]:
+            row = first(self.output, e.CATALOG["uniques"]["344"]["type"], uid=344, ww=ww, rarity="UNIQUE")
+            self.assertEqual(row["tier"], tier, (ww, row))
+            if ww < 14:
+                self.assertEqual(row["category"], "通用暗金／套装0LP保护")
 
     def test_seasonal_uniques_protected_without_build_targets(self):
         out = e.generate(self.leveling_config(()))
@@ -141,7 +146,7 @@ class ToolTests(unittest.TestCase):
             if uid not in e.SEASONAL_UNIQUES:
                 self.assertEqual(tree(actual[uid]), tree(u))
         self.assertFalse(any(r["category"] == "Raxx通用" and r["source_raxx_rule"] in range(12, 17) for r in self.output["rules"]))
-        self.assertEqual(len([r for r in self.output["rules"] if r["category"] == "珍贵名单低WW静音"]), 1)
+        self.assertFalse(any(r["category"] == "珍贵名单低WW静音" for r in self.output["rules"]))
 
     def test_selection_main_and_phase(self):
         config=deepcopy(self.config)
@@ -187,6 +192,20 @@ class ToolTests(unittest.TestCase):
             self.assertEqual(first(out, "HELMET", {502: tier}, level=60, rarity="RARE", categories=scoring)["action"] != "HIDE", shown)
         # Boots can roll both targets: one T5 must not use the single-target exception.
         self.assertEqual(first(out, "BOOTS", {28: 5}, level=60, rarity="RARE", categories=scoring)["action"], "HIDE")
+
+    def test_leveling_quality_order_highest_band_first(self):
+        config = self.leveling_config((502, 28))
+        other = deepcopy(config["builds"][0]); other["id"] = "b"; other["name"] = "B"
+        other["profiles"]["leveling"]["affixes"] = [45, 27]
+        config["builds"].append(other)
+        out = e.generate(config)
+        bands = []
+        for node, row in zip(parsed(out), out["rules"]):
+            if row["source_raxx_rule"] == 63:
+                c = e.condition(node, "CharacterLevelCondition")
+                bands.append((int(c.findtext("minimumLvl")), int(c.findtext("maximumLvl")), row["role"]))
+        self.assertEqual(bands, [(50, 79, "主"), (50, 79, "主"), (50, 79, "副"), (50, 79, "副"),
+                                 (30, 49, "主"), (30, 49, "副"), (0, 29, "主"), (0, 29, "副")])
 
     def test_leveling_bases_and_early_fallback(self):
         config = self.leveling_config()

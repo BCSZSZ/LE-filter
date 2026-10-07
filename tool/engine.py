@@ -321,9 +321,6 @@ def generate(config, mode="endgame"):
             c.extend(deepcopy(condition(tmp, "UniqueModifiersCondition")[:]))
     # Put BD LP1 after higher potentials, ahead of generic LP1.
     replacements[14].sort(key=lambda e: e[1]["category"] != "BD暗金1LP")
-    r = add(15, "珍贵名单低WW静音", 0)
-    r.find("conditions").append(deepcopy(condition(BASE[14], "PotentialCondition")))
-    potential(r, "WeaversWill", 1, 13)
     r = add(15, "通用暗金／套装0LP保护", 1, name="[通用暗金／套装0LP保护]")
     c = condition(r, "UniqueModifiersCondition")
     c.extend(deepcopy(condition(BASE[16], "UniqueModifiersCondition")[:]))
@@ -406,6 +403,8 @@ def generate(config, mode="endgame"):
                 r.find("conditions").append(deepcopy(condition(BASE[63], "AffixCondition")))
                 set_affix(r, compatible)
                 r.find("conditions").append(deepcopy(condition(BASE[82], "RarityCondition")))
+    # Higher quality bands first; preserve main/secondary order within a band.
+    replacements[63].sort(key=lambda entry: -int(condition(entry[0], "CharacterLevelCondition").findtext("minimumLvl")))
     # Specific leveling goals keep their own colors before broad salvage catches.
     for n in [136, 146]:
         replacements[63].extend(replacements.pop(n, []))
