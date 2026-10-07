@@ -4488,53 +4488,355 @@
       ]
     }
   ],
-  "screenshot_equipment_coverage": [
+  "equipment_plan_source": {
+    "file": "analysis/raxx-variable-extraction.json",
+    "sha256": "a6a00092b7244100a5b6cbddb8e77459d933e78aa778352812e39797cefc054a"
+  },
+  "equipment_target_policy": "Use each build/part filter target pool only, with corruption/enchantment references separated; no Guide/Planner additions or priority-based selection. Keep single-target T7; when n >= 2 add one condition selecting the whole pool with minimum 2 targets exactly tier 7. Never enumerate pairs into separate rules.",
+  "equipment_t7_collection_plan": [
     {
-      "type": "HELMET",
-      "ordered_affix_ids": [
-        406
+      "build": "skeleton-necromancer",
+      "strict_x": 73,
+      "types": [
+        "RELIC"
       ],
-      "absent_from_part_t7_pool": []
+      "target_affix_ids": [
+        502,
+        623,
+        825
+      ],
+      "target_count": 3,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": 2,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
     },
     {
-      "type": "BODY_ARMOR",
-      "ordered_affix_ids": [
-        406,
-        192
+      "build": "skeleton-necromancer",
+      "strict_x": 74,
+      "types": [
+        "RING"
       ],
-      "absent_from_part_t7_pool": [
-        192
-      ]
+      "target_affix_ids": [
+        70,
+        825
+      ],
+      "target_count": 2,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": 2,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
     },
     {
-      "type": "TWO_HANDED_AXE",
-      "ordered_affix_ids": [
-        98
+      "build": "skeleton-necromancer",
+      "strict_x": 75,
+      "types": [
+        "AMULET"
       ],
-      "absent_from_part_t7_pool": []
-    },
-    {
-      "type": "GLOVES",
-      "ordered_affix_ids": [
+      "target_affix_ids": [
+        90,
         945
       ],
-      "absent_from_part_t7_pool": []
+      "target_count": 2,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": 2,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
     },
     {
-      "type": "BELT",
-      "ordered_affix_ids": [
+      "build": "skeleton-necromancer",
+      "strict_x": 76,
+      "types": [
+        "GLOVES"
+      ],
+      "target_affix_ids": [
+        90,
+        945
+      ],
+      "target_count": 2,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": 2,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
+    },
+    {
+      "build": "skeleton-necromancer",
+      "strict_x": 77,
+      "types": [
+        "BOOTS"
+      ],
+      "target_affix_ids": [
+        28,
+        676,
+        679
+      ],
+      "target_count": 3,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": 2,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
+    },
+    {
+      "build": "skeleton-necromancer",
+      "strict_x": 78,
+      "types": [
+        "BELT"
+      ],
+      "target_affix_ids": [
         36,
         52
       ],
-      "absent_from_part_t7_pool": []
+      "target_count": 2,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": 2,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
     },
     {
-      "type": "BOOTS",
-      "ordered_affix_ids": [
-        28,
-        679
+      "build": "skeleton-necromancer",
+      "strict_x": 79,
+      "types": [
+        "BODY_ARMOR"
       ],
-      "absent_from_part_t7_pool": []
+      "target_affix_ids": [
+        406
+      ],
+      "target_count": 1,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": null,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
+    },
+    {
+      "build": "skeleton-necromancer",
+      "strict_x": 80,
+      "types": [
+        "HELMET"
+      ],
+      "target_affix_ids": [
+        406,
+        407
+      ],
+      "target_count": 2,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": 2,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
+    },
+    {
+      "build": "skeleton-necromancer",
+      "strict_x": 81,
+      "types": [
+        "TWO_HANDED_AXE"
+      ],
+      "target_affix_ids": [
+        50,
+        98,
+        719
+      ],
+      "target_count": 3,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": 2,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
+    },
+    {
+      "build": "flay-mana-lich",
+      "strict_x": 62,
+      "types": [
+        "RELIC"
+      ],
+      "target_affix_ids": [
+        34,
+        502
+      ],
+      "target_count": 2,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": 2,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
+    },
+    {
+      "build": "flay-mana-lich",
+      "strict_x": 63,
+      "types": [
+        "RING"
+      ],
+      "target_affix_ids": [
+        502
+      ],
+      "target_count": 1,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": null,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
+    },
+    {
+      "build": "flay-mana-lich",
+      "strict_x": 64,
+      "types": [
+        "AMULET"
+      ],
+      "target_affix_ids": [
+        34
+      ],
+      "target_count": 1,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": null,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
+    },
+    {
+      "build": "flay-mana-lich",
+      "strict_x": 65,
+      "types": [
+        "GLOVES"
+      ],
+      "target_affix_ids": [
+        2,
+        34
+      ],
+      "target_count": 2,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": 2,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
+    },
+    {
+      "build": "flay-mana-lich",
+      "strict_x": 66,
+      "types": [
+        "BOOTS"
+      ],
+      "target_affix_ids": [
+        28,
+        36
+      ],
+      "target_count": 2,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": 2,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
+    },
+    {
+      "build": "flay-mana-lich",
+      "strict_x": 67,
+      "types": [
+        "BELT"
+      ],
+      "target_affix_ids": [
+        18,
+        52
+      ],
+      "target_count": 2,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": 2,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
+    },
+    {
+      "build": "flay-mana-lich",
+      "strict_x": 68,
+      "types": [
+        "BODY_ARMOR"
+      ],
+      "target_affix_ids": [
+        34,
+        52
+      ],
+      "target_count": 2,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": 2,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
+    },
+    {
+      "build": "flay-mana-lich",
+      "strict_x": 69,
+      "types": [
+        "HELMET"
+      ],
+      "target_affix_ids": [
+        34,
+        52
+      ],
+      "target_count": 2,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": 2,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
+    },
+    {
+      "build": "flay-mana-lich",
+      "strict_x": 70,
+      "types": [
+        "ONE_HANDED_DAGGER"
+      ],
+      "target_affix_ids": [
+        2,
+        718,
+        943
+      ],
+      "target_count": 3,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": 2,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
+    },
+    {
+      "build": "flay-mana-lich",
+      "strict_x": 71,
+      "types": [
+        "ONE_HANDED_AXE"
+      ],
+      "target_affix_ids": [
+        2,
+        718,
+        943
+      ],
+      "target_count": 3,
+      "single_target_t7_minimum": 1,
+      "double_target_t7_minimum": 2,
+      "single_affix_tier": {
+        "comparison": "EQUAL",
+        "value": 7
+      }
     }
   ],
   "very_strict_rule_inventory": [
@@ -5839,7 +6141,8 @@
     "sources/builds/maxroll-flay-mana-lich-strict.xml": "4e70c8b9111a28ae257aea7b561d931ac99629a6054646ce18a3ce5e3458995c",
     "sources/builds/maxroll-skeleton-necromancer-strict.xml": "5033341708ab5594cfcb70448bf3c6084333f03efa4388e5d4c6f4b1409dbade",
     "sources/builds/maxroll-skeleton-necromancer-very-strict.xml": "7e9bb43a06383fad155298c642991e41cf9d125911702e46c8e508634cf55cb1",
-    "scripts/generate_current_filter.py": "b38e23b62de97b7f46b685e0f589867389f30de8b472074862dbe031fd8eca26"
+    "scripts/generate_current_filter.py": "b38e23b62de97b7f46b685e0f589867389f30de8b472074862dbe031fd8eca26",
+    "analysis/raxx-variable-extraction.json": "a6a00092b7244100a5b6cbddb8e77459d933e78aa778352812e39797cefc054a"
   },
   "filters_and_generator_unchanged": true,
   "game_execution_tested": false

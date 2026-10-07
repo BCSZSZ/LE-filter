@@ -30,7 +30,8 @@ def main():
     protected = [*ROOT.glob("filters/*.xml"), *ROOT.glob("templates/*"),
                  ROOT / "sources/Raxx's S5 Ultimate Filter v1.0.txt",
                  *ROOT.glob("sources/builds/maxroll-*-strict.xml"),
-                 ROOT / "scripts/generate_current_filter.py"]
+                 ROOT / "scripts/generate_current_filter.py",
+                 ROOT / "analysis/raxx-variable-extraction.json"]
     before = {p.relative_to(ROOT).as_posix(): digest(p) for p in protected if p.is_file()}
     flags = read_json("sources/builds/strict-variable-reference.json")["special_affix_type"]
     ref = read_json("sources/game-reference.json")
@@ -62,10 +63,18 @@ def main():
                         "enchanted_ids": [i for i in ids if flags[str(i)] == 4],
                         "core_idol_ids": [i for i in ids if flags[str(i)] in {0, 5}] if a["family"].startswith("idol") else [],
                         "equipment_material_ids": [i for i in ids if flags[str(i)] in {0, 1}] if a["family"] == "tier7" else []})
-    priority_gaps = []
-    for row in manifest["equipment_priorities"]:
-        target = next(r for r in targets if r["strict"]["family"] == "tier7" and r["strict"]["types"] == [row["type"]])
-        priority_gaps.append({**row, "absent_from_part_t7_pool": sorted(set(row["ordered_affix_ids"]) - set(target["strict"]["affix_pools"][0]))})
+    extraction_path = "analysis/raxx-variable-extraction.json"
+    v05 = next(v for v in read_json(extraction_path)["variables"] if v["id"] == "V05")
+    equipment_plan = []
+    for c in v05["evidence"]:
+        if not c["enabled_in_source"]:
+            continue
+        ids = sorted({i for i in c["affix_ids"] if flags[str(i)] not in {4, 6}})
+        equipment_plan.append({"build": c["build"], "strict_x": c["x"], "types": c["types"],
+                               "target_affix_ids": ids, "target_count": len(ids),
+                               "single_target_t7_minimum": 1,
+                               "double_target_t7_minimum": 2 if len(ids) >= 2 else None,
+                               "single_affix_tier": {"comparison": "EQUAL", "value": 7}})
     for row in manifest["idol_priorities"]:
         pool = {i for t in targets if t["strict"]["family"] == "idol_bis" and t["strict"]["types"] == [row["type"]] for i in t["strict"]["affix_pools"][0]}
         assert set(row["ordered_affix_ids"]) <= pool
@@ -77,7 +86,10 @@ def main():
               "comparison": {"matched_rules": len(old.keys() & new.keys()), "changed": changes,
                              "removed": [{"x": r["x"], "name": r["name"], "family": r["family"]} for k, r in old.items() if k not in new],
                              "added": [{"x": r["x"], "name": r["name"], "family": r["family"]} for k, r in new.items() if k not in old]},
-              "identical_targets": targets, "screenshot_equipment_coverage": priority_gaps,
+              "identical_targets": targets,
+              "equipment_plan_source": {"file": extraction_path, "sha256": digest(ROOT / extraction_path)},
+              "equipment_target_policy": "Use each build/part filter target pool only, with corruption/enchantment references separated; no Guide/Planner additions or priority-based selection. Keep single-target T7; when n >= 2 add one condition selecting the whole pool with minimum 2 targets exactly tier 7. Never enumerate pairs into separate rules.",
+              "equipment_t7_collection_plan": equipment_plan,
               "very_strict_rule_inventory": [{k: r[k] for k in ("x", "name", "occurrence", "family", "enabled", "action")} for r in new_rows],
               "current_filter_sha256": current["output_sha256"],
               "current_skeleton_idols": [r for r in skeleton if r["category"].startswith("idol")],
@@ -88,7 +100,7 @@ def main():
     print(json.dumps({"strict_rules": len(old_rows), "very_strict_rules": len(new_rows),
                       "identical_target_rules": len(targets), "changed": len(changes),
                       "removed": len(old.keys() - new.keys()), "added": len(new.keys() - old.keys()),
-                      "screenshot_equipment_coverage": priority_gaps,
+                      "equipment_plans": len(equipment_plan),
                       "skeleton_current_idol_layers": len(result["current_skeleton_idols"]),
                       "filters_and_generator_unchanged": True}, ensure_ascii=False))
 
