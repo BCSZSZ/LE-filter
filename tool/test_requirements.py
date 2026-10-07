@@ -5,14 +5,14 @@ from copy import deepcopy
 
 import engine as e
 from requirements import read_document, write_document
-from build_guide_835_requirements import build_document
+from build_guide_835_requirements import build_document, build_leveling_document
 from test_engine import first
 
 
 def as_build(document):
     data = read_document(document)
     return {"id": data["id"], "name": data["name"], "enabled": True,
-            "profiles": {"endgame": data["profile"], "leveling": e.empty_profile()},
+            "profiles": {"endgame": data["profile"], "leveling": e.empty_leveling()},
             "requirement_sources": {"endgame": data["source"]}}
 
 
@@ -77,6 +77,54 @@ class RequirementTests(unittest.TestCase):
             edit(doc)
             with self.assertRaises(ValueError):
                 read_document(doc)
+
+    def test_compact_leveling_roundtrip_and_validation(self):
+        doc = {"format": "le-filter-requirements", "version": 1, "id": "level", "name": "练级BD",
+               "stage": "leveling", "targets": {"affixes": [26, 945, 98, 643, 502, 45, 28, 27],
+               "bases": [{"type": "RING", "bases": [7]}, {"type": "RELIC", "bases": [15, 18]}]}}
+        data = read_document(doc)
+        build = {"id": data["id"], "name": data["name"], "profiles": {"endgame": e.empty_profile(), "leveling": data["profile"]}}
+        self.assertEqual(write_document(build, "leveling"), doc)
+        for aid in [897, 1085, 287, 999999]:
+            invalid = deepcopy(doc);invalid["targets"]["affixes"].append(aid)
+            with self.assertRaises(ValueError):
+                read_document(invalid)
+        invalid = deepcopy(doc);invalid["targets"]["bases"][0]["bases"] = [999999]
+        with self.assertRaises(ValueError):
+            read_document(invalid)
+
+    def test_guide_leveling_is_explicit_and_independent(self):
+        doc = build_leveling_document()
+        self.assertEqual(doc["targets"]["affixes"], [26, 945, 98, 643, 502, 45, 28, 27])
+        self.assertEqual(sum(len(g["bases"]) for g in doc["targets"]["bases"]), 5)
+        self.assertEqual(doc["id"], build_document()["id"])
+        frozen = json.loads((e.ROOT / "requirements/bleed-skeleton-roamer-guide-835.leveling.json").read_text(encoding="utf-8"))
+        self.assertEqual(doc, frozen)
+
+    def test_legacy_config_migration_retains_other_stage_and_original(self):
+        config = e.bootstrap()["config"]
+        legacy = e.empty_profile()
+        legacy["equipment"] = [{"type": "TWO_HANDED_AXE", "bases": [], "affixes": [98]}]
+        legacy["idols"] = deepcopy(config["builds"][0]["profiles"]["endgame"]["idols"])
+        legacy["leveling_slots"] = {"154": {"enabled": True, "types": ["WAND"], "bases": [], "affixes": [38]},
+                                     "160": {"enabled": True, "types": ["RING"], "bases": [7], "affixes": []}}
+        config["builds"][0]["profiles"]["leveling"] = legacy
+        migrated = e.normalize_config(config)
+        self.assertEqual(migrated["builds"][0]["profiles"]["leveling"], {"affixes": [38, 98], "bases": [{"type": "RING", "bases": [7]}]})
+        self.assertEqual(migrated["builds"][0]["legacy_leveling"], legacy)
+        self.assertEqual(migrated["builds"][0]["profiles"]["endgame"], config["builds"][0]["profiles"]["endgame"])
+        self.assertEqual(migrated["main_id"], config["main_id"])
+        self.assertEqual(migrated, e.normalize_config(migrated))
+        self.assertIn("leveling_slots", config["builds"][0]["profiles"]["leveling"])
+
+    def test_legacy_leveling_document_keeps_non_equipment_as_source(self):
+        doc = build_document();doc["stage"] = "leveling"
+        data = read_document(doc)
+        self.assertEqual(set(data["profile"]), {"affixes", "bases"})
+        self.assertEqual(data["source"]["legacy_targets"], doc["targets"])
+        build = {"id": data["id"], "name": data["name"], "profiles": {"leveling": data["profile"]},
+                 "requirement_sources": {"leveling": data["source"]}}
+        self.assertEqual(read_document(write_document(build, "leveling"))["source"], data["source"])
 
 
 if __name__ == "__main__":

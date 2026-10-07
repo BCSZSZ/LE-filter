@@ -65,6 +65,18 @@ def build_document():
     return document
 
 
+def build_leveling_document():
+    facts = json.loads((ROOT / "sources/builds/letools-guide-zh-835-extracted.json").read_text(encoding="utf-8"))
+    document = build_document()
+    document["stage"] = "leveling"
+    document["targets"] = {"affixes": [a["id"] for a in facts["leveling"]["targets"]],
+                           "bases": [{"type": b["type"], "bases": [b["id"]]} for b in facts["leveling"]["bases"]]}
+    document["source"]["scope"] = "练级正文：所需词缀与底材"
+    document["source"]["warnings"] = []
+    read_document(document)
+    return document
+
+
 def render_review(document):
     targets = document["targets"]
     def names(category, ids, typ=None):
@@ -94,7 +106,7 @@ def render_review(document):
         lines.append(f"| {CATALOG['types'][group['type']]['zh']} | {names('bases', group['bases'], group['type'])} |")
     lines += ["", "## 审阅边界与使用", "",
               "JSON只描述目标池及其类型／底材范围，腐化与附魔只记录参考。T7／T6、LP／WW、声音、主副颜色、等级和规则顺序由现有基底转换程序处理，不由攻略覆盖。神像沿用普通池一项／两项层，祭坛保持一项层；此文不宣称任意两项都是整套BD的最终毕业配置。", "",
-              "在工作台点击“导入BD需求JSON”，选择requirements/bleed-skeleton-roamer-guide-835.endgame.json。编辑后点“保存本BD需求JSON”；重新导入同id只替换该阶段的五类目标，保留另一个阶段、原练级分段覆盖及主副身份。可继续勾选与其他BD合并。", "",
+              "在工作台点击“导入BD需求JSON”，选择requirements/bleed-skeleton-roamer-guide-835.endgame.json。练级正文另存同id的leveling.json，只含词缀与底材两份列表。编辑后点“保存本BD需求JSON”；重新导入同id只替换该阶段目标，保留另一个阶段及主副身份。可继续勾选与其他BD合并。", "",
               "重建：python -X utf8 scripts/build_guide_835_requirements.py。脚本读取已解码的来源快照和冻结词库，不依赖网页、网络或.cache；快照附原链接、解码结果及七个变体索引。网页读取和修改保存、JSON转换及有限匹配测试与游戏客户端实测分别验证；本次不生成最终XML文件。", ""]
     return "\n".join(lines)
 
@@ -104,6 +116,8 @@ if __name__ == "__main__":
     output.parent.mkdir(exist_ok=True)
     document = build_document()
     output.write_text(json.dumps(document, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (output.parent / "bleed-skeleton-roamer-guide-835.leveling.json").write_text(
+        json.dumps(build_leveling_document(), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (ROOT / "docs/BLEED_SKELETON_GUIDE_REVIEW.md").write_text(render_review(document), encoding="utf-8")
     print(output.relative_to(ROOT))
     print({key: len(value) for key, value in document["targets"].items()})

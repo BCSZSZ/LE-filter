@@ -9,7 +9,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
-from engine import bootstrap, extract, generate, validate_profile
+from engine import bootstrap, extract, generate, normalize_config
 from requirements import read_document, write_document
 
 WEB = Path(__file__).parent / "web"
@@ -53,7 +53,7 @@ class Handler(BaseHTTPRequestHandler):
             payload = json.loads(self.rfile.read(size))
             if self.path == "/api/download":
                 name = payload["name"]
-                if name not in {"LE-filter-endgame.xml", "LE-filter-leveling.xml", "LE-filter-targets.json", "LE-filter-requirements.json"}:
+                if name not in {"LE-filter.xml", "LE-filter-endgame.xml", "LE-filter-leveling.xml", "LE-filter-targets.json", "LE-filter-requirements.json"}:
                     raise ValueError("下载文件名不正确。")
                 token = uuid.uuid4().hex
                 mime = "application/xml" if name.endswith(".xml") else "application/json"
@@ -70,13 +70,7 @@ class Handler(BaseHTTPRequestHandler):
             if self.path == "/api/generate":
                 return self.reply(generate(payload["config"], payload.get("mode", "endgame")))
             if self.path == "/api/validate":
-                config = payload["config"]
-                if config["version"] != 1 or not isinstance(config["builds"], list):
-                    raise ValueError("配置格式不正确。")
-                for build in config["builds"]:
-                    for mode in ["endgame", "leveling"]:
-                        validate_profile(build["profiles"][mode])
-                return self.reply({"valid": True})
+                return self.reply({"valid": True, "config": normalize_config(payload["config"])})
             return self.reply({"error": "Not found"}, 404)
         except (ValueError, KeyError, TypeError, ET.ParseError) as e:
             return self.reply({"error": str(e)}, 400)

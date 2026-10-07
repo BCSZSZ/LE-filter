@@ -73,6 +73,6 @@
 
 JSON只描述目标池及其类型／底材范围，腐化与附魔只记录参考。T7／T6、LP／WW、声音、主副颜色、等级和规则顺序由现有基底转换程序处理，不由攻略覆盖。神像沿用普通池一项／两项层，祭坛保持一项层；此文不宣称任意两项都是整套BD的最终毕业配置。
 
-在工作台点击“导入BD需求JSON”，选择requirements/bleed-skeleton-roamer-guide-835.endgame.json。编辑后点“保存本BD需求JSON”；重新导入同id只替换该阶段的五类目标，保留另一个阶段、原练级分段覆盖及主副身份。可继续勾选与其他BD合并。
+在工作台点击“导入BD需求JSON”，选择requirements/bleed-skeleton-roamer-guide-835.endgame.json。练级正文另存同id的leveling.json，只含词缀与底材两份列表。编辑后点“保存本BD需求JSON”；重新导入同id只替换该阶段目标，保留另一个阶段及主副身份。可继续勾选与其他BD合并。
 
 重建：python -X utf8 scripts/build_guide_835_requirements.py。脚本读取已解码的来源快照和冻结词库，不依赖网页、网络或.cache；快照附原链接、解码结果及七个变体索引。网页读取和修改保存、JSON转换及有限匹配测试与游戏客户端实测分别验证；本次不生成最终XML文件。

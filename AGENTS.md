@@ -1,10 +1,10 @@
 # LE-filter 工作约束
 
-- 共通BD需求格式见`docs/REQUIREMENTS_FORMAT.md`，适配器`tool/requirements.py`；一个BD／一个阶段只保存五类目标和可选来源，不存基底提示、主副、R分段。JSON回读同id替换该阶段目标，保留另一阶段和已填写练级分段。网页入口区分“BD需求JSON”和整套“配置”。
+- 共通BD需求格式见`docs/REQUIREMENTS_FORMAT.md`，适配器`tool/requirements.py`；一个BD／一个阶段保存目标和可选来源，终局五类、练级affixes与bases两类，不存基底提示、主副、R分段。同id导入只替换该阶段，保留另一阶段与主副。网页入口区分“BD需求JSON”和整套“配置”。
 - 新攻略样本`requirements/bleed-skeleton-roamer-guide-835.endgame.json`使用公共推荐表，含替代品，未绑定单一变体；重建脚本`scripts/build_guide_835_requirements.py`只读冻结已解码来源与词库。原链接压缩key、数字ID、练级目标和七个变体索引在`sources/builds/letools-guide-zh-835-extracted.json`。正文新增胸甲192不反写旧Strict。1085／1086腐化仅参考，Omen266不能按普通尺寸可出范围删去。装备类型校验采用基底全部23类，不沿用旧双BD脚本11类T7_SLOTS。
-- 最新交付是`tool/`本地目标工作台，启动与六类目标接口见`docs/TOOL_GUIDE.md`。新生成结果由`tool/engine.py`产生，不执行旧生成器主程序覆盖历史XML。内置两BD示例180条（173启用）；已落实整池双目标T7、骷髅一项神像与剥离4／6计数。以下162条v3描述是历史快照状态。
+- 最新交付是`tool/`本地目标工作台，接口见`docs/TOOL_GUIDE.md`。新结果由`tool/engine.py`产生，不执行旧生成器覆盖历史XML。内置两BD137条（131启用），练级留空；已落实双目标T7、骷髅一项神像、剥离4／6计数及收紧05。以下162条v3描述是历史快照状态。
 - 工具运行期使用冻结`sources/tool-catalog.json`，不依赖`.cache`或网络；`scripts/build_tool_catalog.py`仅在开发时从已验证哈希的缓存重建词库。未知ID不能猜普通。导入只移目标情报，来源门槛不能覆盖基底门槛。
-- 每BD的`profiles.endgame`与`profiles.leveling`独立；练级`leveling_slots`按原R编号覆盖目标，保持Raxx原等级、阶数、数量等门槛，未填沿用原示例。不从终局猜练级目标。终局XML中也应用明确填写的练级段；空的原R136／137入口默认关闭。
+- 每BD两阶段独立；练级只填平铺affixes与带类型bases。不从终局猜目标。0–29至少1项，30–49总阶数≥5，50–79≥8；单可出现目标的部位50–79用T≥5；80退出。逐BD计分，不能跨BD凑数。练级底材0–29可裸，30–59需同BD目标，60退出；普通目标T3拆解50退出，原常驻R84–90改60退出。删除10级后的所有稀有兜底、未填Raxx示例和专门T6层。终局05同BD指定底材＋对应部位目标恰好T7常驻。Raxx通用神像／腐化独立保留，不掺BD池；细则见TOOL_GUIDE。始终导出两阶段合并XML。旧练级数据迁移时原配置保存在legacy_leveling，不能无声丢弃。
 - 工具变更后运行`python -X utf8 -m unittest discover -s tool -v`，必要时验证浏览器导入／保存／XML下载，保留原源文件、模板与历史v3字节。超过200规则报错，不截断。有限匹配测试不冒充客户端实测。
 - 先读 README.md 和 docs/WORKING_MEMO.md；当前原始基底及视频发布前版本在sources中，保持字节不变。
 - 研究结论分清XML事实、官方机制、社区格式解释和客户端实测。未经实测不要写成实测通过。

@@ -1,7 +1,7 @@
 """Common target-only document, shared by guide and filter imports."""
 from copy import deepcopy
 
-from engine import CATALOG, empty_profile, validate_profile
+from engine import CATALOG, empty_profile, to_leveling, validate_leveling, validate_profile
 
 FORMAT = "le-filter-requirements"
 CATEGORIES = ("uniques", "equipment", "altars", "idols", "bases")
@@ -17,10 +17,15 @@ def read_document(document):
     if document.get("stage") not in {"endgame", "leveling"}:
         raise ValueError("stage必须为endgame或leveling。")
     targets = document["targets"]
-    if not isinstance(targets, dict) or set(targets) != set(CATEGORIES):
-        raise ValueError("targets必须包含uniques、equipment、altars、idols、bases五类需求。")
+    leveling = document["stage"] == "leveling"
+    compact = leveling and isinstance(targets, dict) and set(targets) == {"affixes", "bases"}
+    if not compact and (not isinstance(targets, dict) or set(targets) != set(CATEGORIES)):
+        raise ValueError("终局targets填写五类需求；练级targets只填写affixes和bases。")
     profile = empty_profile()
-    for category in CATEGORIES:
+    if compact:
+        profile = deepcopy(targets)
+        validate_leveling(profile)
+    for category in (() if compact else CATEGORIES):
         if not isinstance(targets[category], list):
             raise ValueError(f"{category}必须为列表。")
         profile[category] = deepcopy(targets[category])
@@ -45,21 +50,33 @@ def read_document(document):
                 special = 6 if key == "corrupted" else 4
                 if any(CATALOG["affixes"].get(str(aid), {}).get("special") != special for aid in group[key]):
                     raise ValueError(f"{category}.{key}中存在未知或分类不符的词缀。")
-    validate_profile(profile)
+    if not compact:
+        validate_profile(profile)
+        if leveling:
+            profile = to_leveling(profile)
+            validate_leveling(profile)
     source = document.get("source", {})
     if not isinstance(source, dict):
         raise ValueError("source必须为对象。")
     if not isinstance(source.get("warnings", []), list) or any(not isinstance(w, str) for w in source.get("warnings", [])):
         raise ValueError("source.warnings必须为文字列表。")
+    source = deepcopy(source)
+    if leveling and not compact and any(targets.values()):
+        source["legacy_targets"] = deepcopy(targets)
+        source.setdefault("warnings", []).append("旧练级需求已转换为词缀与底材两份列表，原五类目标保存在来源记录中。")
     return {"id": document["id"], "name": document["name"], "stage": document["stage"],
-            "profile": profile, "source": deepcopy(source)}
+            "profile": profile, "source": source}
 
 
 def write_document(build, stage):
     profile = build["profiles"][stage]
-    validate_profile(profile)
-    targets = {"uniques": deepcopy(profile["uniques"])}
-    for category in CATEGORIES[1:]:
+    if stage == "leveling":
+        targets = to_leveling(profile)
+        validate_leveling(targets)
+    else:
+        validate_profile(profile)
+        targets = {"uniques": deepcopy(profile["uniques"])}
+    for category in (() if stage == "leveling" else CATEGORIES[1:]):
         targets[category] = []
         for group in profile[category]:
             fields = {"type", "bases"} if category == "bases" else GROUP_FIELDS

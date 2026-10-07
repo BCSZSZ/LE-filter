@@ -1,8 +1,8 @@
 # LE-filter：Raxx 基底与双 BD 收集过滤器
 
-**目标工作台已可使用**：双击[start-tool.cmd](start-tool.cmd)，打开本地 <http://127.0.0.1:8765>。支持导入filter提取目标、中文／英文／ID搜索多选、多个BD勾选合并、主副套路、独立练级接口、JSON配置保存及XML预览导出。见[工具使用说明](docs/TOOL_GUIDE.md)。内置两BD示例的新生成结果180条（173启用），已落实装备双目标T7和骷髅常驻单目标神像；897附魔及腐化不计普通目标。
+**目标工作台已可使用**：双击[start-tool.cmd](start-tool.cmd)，打开本地 <http://127.0.0.1:8765>。支持导入filter提取目标、中文／英文／ID搜索多选、多个BD勾选合并、主副套路、JSON保存和XML预览导出。终局五类目标、练级只填词缀与底材两份列表，共同导出一份filter。见[工具使用说明](docs/TOOL_GUIDE.md)。内置两BD示例137条（131启用，练级目标留空）。05要求指定底材＋同BD对应部位目标T7常驻；删除专门T6层，练级品质80退出、底材60退出、普通拆解50退出、原常驻拆解60退出。897附魔及腐化不计普通神像目标。
 
-新增[共通BD需求JSON格式](docs/REQUIREMENTS_FORMAT.md)：filter与攻略都先提供一个BD／一个阶段的五类目标，网页可导入、修改并保存回该格式，基底再负责生成filter。本次从Last Epoch Tools攻略835公共推荐表生成[流血骷髅游荡者需求](requirements/bleed-skeleton-roamer-guide-835.endgame.json)，25暗金／套装、13装备组、3神像组、1祭坛、3独立底材；见[中文审阅表](docs/BLEED_SKELETON_GUIDE_REVIEW.md)。不改旧Strict或历史XML。
+新增[共通BD需求JSON格式](docs/REQUIREMENTS_FORMAT.md)：filter与攻略先提供一个BD／一个阶段的目标，网页可导入、修改并保存回该格式，再由基底生成filter。攻略835的[流血骷髅终局需求](requirements/bleed-skeleton-roamer-guide-835.endgame.json)含25暗金／套装、13装备组、3神像组、1祭坛、3独立底材；另有[练级需求](requirements/bleed-skeleton-roamer-guide-835.leveling.json)，8词缀、5底材。练级按1项目标→总阶数5→8收紧，单可用目标T5兜底，跨BD不能合计。见[中文审阅表](docs/BLEED_SKELETON_GUIDE_REVIEW.md)。旧Strict与历史XML保留。
 
 已归档固定成品：**[Flay＋Skeleton Necromancer v3](filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml)**，162条（151启用／11关闭），采用铁匠／开始／灵感／彗星四档，静音项无图标和光柱，沿用原颜色。旧v2保留不动。[四档分类与能力审阅](docs/SOUND_STYLE_REVIEW.md)、[全部提示索引](docs/CURRENT_ALERT_INDEX.md)、[使用说明](docs/CURRENT_FILTER_GUIDE.md)和[逐条条件](docs/CURRENT_RULES_REVIEW.md)对应这个历史快照。
 
@@ -33,7 +33,7 @@
 | 文件 | 用途 |
 |---|---|
 | [start-tool.cmd](start-tool.cmd) | Windows双击启动目标工作台 |
-| [TOOL_GUIDE.md](docs/TOOL_GUIDE.md) | 六类目标填写、导入、独立练级接口、配置保存和XML导出 |
+| [TOOL_GUIDE.md](docs/TOOL_GUIDE.md) | 五类终局／两类练级目标、最新门槛、导入保存和XML导出 |
 | [tool/engine.py](tool/engine.py) | 从filter提取目标并填入Raxx基底，运行期离线 |
 | [tool/test_engine.py](tool/test_engine.py) | 提取与已审阅收集策略的有限自动测试 |
 | [PLAN.md](PLAN.md) | 本阶段计划、验收条件与范围 |

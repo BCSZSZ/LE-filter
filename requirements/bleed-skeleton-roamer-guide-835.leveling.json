@@ -1,0 +1,59 @@
+{
+  "format": "le-filter-requirements",
+  "version": 1,
+  "id": "bleed-skeleton-roamer-guide-835",
+  "name": "流血骷髅游荡者 · 攻略835",
+  "stage": "leveling",
+  "targets": {
+    "affixes": [
+      26,
+      945,
+      98,
+      643,
+      502,
+      45,
+      28,
+      27
+    ],
+    "bases": [
+      {
+        "type": "RING",
+        "bases": [
+          7
+        ]
+      },
+      {
+        "type": "RELIC",
+        "bases": [
+          15
+        ]
+      },
+      {
+        "type": "RELIC",
+        "bases": [
+          18
+        ]
+      },
+      {
+        "type": "TWO_HANDED_AXE",
+        "bases": [
+          3
+        ]
+      },
+      {
+        "type": "ONE_HANDED_AXE",
+        "bases": [
+          4
+        ]
+      }
+    ]
+  },
+  "source": {
+    "name": "死灵法师 流血骷髅游荡者 构建指南",
+    "url": "https://www.lastepochtools.com/build-guides/guide-zh-835",
+    "updated": "2026-10-06",
+    "scope": "练级正文：所需词缀与底材",
+    "sha256": "aa964dc554078bf8fb20b856515f683db13a1d359734af5b6965195ac701ce9f",
+    "warnings": []
+  }
+}

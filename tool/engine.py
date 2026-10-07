@@ -19,13 +19,55 @@ EVIDENCE = read_json("analysis/raxx-variable-extraction.json")
 BLUE = set(EVIDENCE["fixed_instruction_slots"]) | {n for v in EVIDENCE["variables"] for n in v["instruction_slots"]}
 BASE_ROOT = frozen(MANIFEST)
 BASE = dict(zip(MANIFEST["source_rule_order"], sorted(BASE_ROOT.find("rules"), key=lambda r: int(r.findtext("Order")))))
-LEVEL_SLOTS = [n for n in [63, 64, 75, 128, 129, *range(135, 162)] if any(c.get(XSI + "type") in {"AffixCondition", "SubTypeCondition"} for c in BASE[n].find("conditions"))]
 FAMILIES = {"planner": "uniques", "tier7": "equipment", "idol_single": "idols", "idol_bis": "idols",
             "altar": "altars", "rare_base": "bases", "crafting_base": "bases"}
 
 
 def empty_profile():
-    return {"uniques": [], "equipment": [], "altars": [], "idols": [], "bases": [], "leveling_slots": {}}
+    return {"uniques": [], "equipment": [], "altars": [], "idols": [], "bases": []}
+
+
+def empty_leveling():
+    return {"affixes": [], "bases": []}
+
+
+def to_leveling(profile):
+    if "affixes" in profile:
+        return deepcopy(profile)
+    result = empty_leveling()
+    groups = defaultdict(set)
+    for g in profile.get("equipment", []) + profile.get("bases", []):
+        result["affixes"].extend(g.get("affixes", []))
+        groups[g["type"]].update(g.get("bases", []))
+    for slot in profile.get("leveling_slots", {}).values():
+        types = set(slot["types"]) & set(MANIFEST["scope_types"])
+        if not slot["enabled"] or not types:
+            continue
+        result["affixes"].extend(i for i in slot["affixes"] if str(i) not in CATALOG["affixes"] or
+                                CATALOG["affixes"][str(i)]["special"] not in {4, 6} and
+                                types & set(CATALOG["affixes"][str(i)]["types"]))
+        for typ in types:
+            groups[typ].update(slot["bases"])
+    result["affixes"] = sorted(set(result["affixes"]))
+    result["bases"] = [{"type": typ, "bases": sorted(ids)} for typ, ids in groups.items() if ids]
+    if profile.get("unresolved_affixes"):
+        result["unresolved_affixes"] = deepcopy(profile["unresolved_affixes"])
+    return result
+
+
+def normalize_config(config):
+    config = deepcopy(config)
+    if config["version"] != 1 or not isinstance(config["builds"], list):
+        raise ValueError("配置格式不正确。")
+    for b in config["builds"]:
+        p = b["profiles"]["leveling"]
+        if "affixes" not in p and any(p.values()):
+            b.setdefault("legacy_leveling", deepcopy(p))
+        b["profiles"]["leveling"] = to_leveling(p)
+        b["profiles"]["endgame"].pop("leveling_slots", None)
+        validate_profile(b["profiles"]["endgame"])
+        validate_leveling(b["profiles"]["leveling"])
+    return config
 
 
 def extract(xml, assignments=None):
@@ -35,7 +77,7 @@ def extract(xml, assignments=None):
     if root.tag != "ItemFilter" or root.find("rules") is None:
         raise ValueError("这不是Last Epoch的ItemFilter XML。")
     profile, rows, warnings = empty_profile(), [], []
-    groups = defaultdict(dict)
+    groups, leveling_affixes = defaultdict(dict), set()
     for x, node in enumerate(root.find("rules"), 1):
         row = inspect_rule(node)
         auto = FAMILIES.get(family(row["name"]), "") if row["enabled"] and row["action"] in {"SHOW", "RECOLOR"} else ""
@@ -58,14 +100,16 @@ def extract(xml, assignments=None):
             warnings.append(f"X{x}有词库未收录ID {unknown}，请更新词库或取消该规则的提取。")
             if category != "bases":
                 profile["unresolved_affixes"] = sorted(set(profile.get("unresolved_affixes", [])) | set(unknown))
+        special = lambda i: CATALOG["affixes"].get(str(i), {}).get("special", -1)
+        if category == "equipment":
+            leveling_affixes.update(i for i in ids if special(i) not in {4, 6})
         if not row["types"]:
-            warnings.append(f"X{x}没有物品类型，不能自动绑定{category}，请在编辑器中指定部位。")
+            warnings.append(f"X{x}没有物品类型，终局不能自动绑定{category}；装备普通词缀仍可作为平铺练级目标。")
             continue
         for typ in row["types"]:
             if typ not in CATALOG["types"]:
                 warnings.append(f"X{x}未知物品类型{typ}。")
                 continue
-            special = lambda i: CATALOG["affixes"].get(str(i), {}).get("special", -1)
             core = [i for i in ids if special(i) in ({0, 5} if category == "idols" else {0, 1, 2, 3, 5, 7, -1})]
             if category == "altars":
                 core = ids
@@ -91,7 +135,9 @@ def extract(xml, assignments=None):
     for i in profile["uniques"]:
         if str(i) not in CATALOG["uniques"]:
             warnings.append(f"暗金ID {i}未在冻结词库中，请更新词库或移除。")
-    return {"name": root.findtext("name") or "导入BD", "profile": profile, "rules": rows,
+    leveling = to_leveling(profile)
+    leveling["affixes"] = sorted(set(leveling["affixes"]) | leveling_affixes)
+    return {"name": root.findtext("name") or "导入BD", "profile": profile, "leveling_profile": leveling, "rules": rows,
             "warnings": warnings, "source_sha256": hashlib.sha256(xml.encode()).hexdigest()}
 
 
@@ -110,6 +156,15 @@ def set_affix(rule, ids, count=1, tier=None, index=0, op="EQUAL"):
                         "comparsion": op if tier is not None else "ANY", "comparsionValue": tier or 0,
                         "combinedComparsion": "ANY"}.items():
         c.find(name).text = str(value)
+
+
+def set_level(rule, low, high):
+    c = next((c for c in rule.find("conditions") if c.get(XSI + "type") == "CharacterLevelCondition"), None)
+    if c is None:
+        c = deepcopy(condition(BASE[63], "CharacterLevelCondition"))
+        rule.find("conditions").append(c)
+    c.find("minimumLvl").text = str(low)
+    c.find("maximumLvl").text = str(high)
 
 
 def select_uniques(rule, ids):
@@ -153,7 +208,7 @@ def validate_profile(profile):
             for bid in set(g["bases"] + g.get("pair_bases", [])):
                 if f"{typ}:{bid}" not in CATALOG["bases"]:
                     raise ValueError(f"未知底材{typ}:{bid}。")
-            for aid in g["affixes"]:
+            for aid in g.get("affixes", []):
                 a = CATALOG["affixes"].get(str(aid))
                 if a is None:
                     raise ValueError(f"词缀{aid}未在词库中，请检查来源或选择。")
@@ -161,42 +216,48 @@ def validate_profile(profile):
                     raise ValueError(f"神像词缀{aid}是特殊附加词缀，不能加入普通计数。")
                 if category == "equipment" and a["special"] in {4, 6}:
                     raise ValueError(f"装备词缀{aid}需另存附加参考，不属于普通T7目标池。")
-    for key, override in profile["leveling_slots"].items():
-        if int(key) not in LEVEL_SLOTS:
-            raise ValueError(f"不存在练级入口R{key}。")
-        if any(t not in CATALOG["types"] for t in override["types"]):
-            raise ValueError("练级入口含未知物品类型。")
-        if int(key) in {136, 137} and override["enabled"] and not override["types"]:
-            raise ValueError("启用练级武器／副手入口前，请先选具体类型。")
-        for aid in override["affixes"]:
-            if str(aid) not in CATALOG["affixes"]:
-                raise ValueError(f"练级词缀{aid}未在词库中。")
-        for typ in override["types"]:
-            for bid in override["bases"]:
-                if f"{typ}:{bid}" not in CATALOG["bases"]:
-                    raise ValueError(f"练级底材{typ}:{bid}未在词库中。")
+
+
+def validate_leveling(profile):
+    if profile.get("unresolved_affixes"):
+        raise ValueError(f"词库未识别这些来源词缀：{profile['unresolved_affixes']}。")
+    if set(profile) - {"affixes", "bases", "unresolved_affixes"}:
+        raise ValueError("练级目标只填写affixes和bases两份列表。")
+    if not isinstance(profile["affixes"], list) or any(type(i) is not int for i in profile["affixes"]):
+        raise ValueError("练级affixes必须为整数ID列表。")
+    for aid in profile["affixes"]:
+        a = CATALOG["affixes"].get(str(aid))
+        if a is None or a["special"] in {4, 6} or not set(a["types"]) & set(MANIFEST["scope_types"]):
+            raise ValueError(f"练级词缀{aid}不是词库中的普通装备目标。")
+    if not isinstance(profile["bases"], list):
+        raise ValueError("练级bases必须为底材分组列表。")
+    for g in profile["bases"]:
+        if set(g) != {"type", "bases"} or g["type"] not in MANIFEST["scope_types"]:
+            raise ValueError("练级底材分组只填写普通装备type和bases。")
+        if not isinstance(g["bases"], list) or any(type(i) is not int for i in g["bases"]):
+            raise ValueError("练级底材ID必须为整数列表。")
+        for bid in g["bases"]:
+            if f"{g['type']}:{bid}" not in CATALOG["bases"]:
+                raise ValueError(f"未知练级底材{g['type']}:{bid}。")
 
 
 def generate(config, mode="endgame"):
     if mode not in {"endgame", "leveling"}:
         raise ValueError("请选择终局或练级配置。")
+    config = normalize_config(config)
     builds = [b for b in config["builds"] if b["enabled"]]
     if not builds or config["main_id"] not in {b["id"] for b in builds}:
         raise ValueError("请勾选至少一个BD，并把勾选的BD之一设为主套路。")
     builds.sort(key=lambda b: b["id"] != config["main_id"])
-    for b in builds:
-        validate_profile(b["profiles"][mode])
-        if mode != "leveling":
-            validate_profile(b["profiles"]["leveling"])
-    replacements, result = defaultdict(list), []
-    skip = BLUE | set(range(38, 49)) | {62, 63, 64, 69, 81, 82, 83, *range(99, 128)}
+    replacements, result, warnings = defaultdict(list), [], []
+    skip = BLUE | set(range(38, 49)) | set(range(136, 162)) | {62, 63, 64, 69, 81, 82, 83, *range(99, 128)}
     full = MANIFEST["full_affix_ids"]
 
     def add(n, category, tier, build=None, group=None, count=1, affix_tier=None, index=0, name=None):
         r = deepcopy(BASE[n])
         if group is not None:
             set_scope(r, [group["type"]], group["bases"])
-            if category != "bases":
+            if n != 82:
                 set_affix(r, group["affixes"], count, affix_tier, index)
         role = "主" if build and build["id"] == config["main_id"] else "副" if build else "通用"
         r.find("nameOverride").text = name or f"[{role} {category}] " + (build["name"] + " " if build else "") + (CATALOG["types"][group["type"]]["zh"] if group else "")
@@ -213,7 +274,7 @@ def generate(config, mode="endgame"):
     set_affix(r, full, 3, 7)
     for category, count, alert, template in [("BD双目标T7", 2, 3, 38), ("双T7含BD目标", 1, 3, 38), ("BD目标单T7", 1, 2, 38), ("非目标T7＋BD目标", 1, 1, 62)]:
         for b in builds:
-            for g in b["profiles"][mode]["equipment"]:
+            for g in b["profiles"]["endgame"]["equipment"]:
                 if not g["affixes"] or category == "BD双目标T7" and len(set(g["affixes"])) < 2:
                     continue
                 r = add(template, category, alert, b, g, count, None if template == 62 else 7, 1 if template == 62 else 0)
@@ -231,10 +292,10 @@ def generate(config, mode="endgame"):
     peak = replacements[38].pop(0)
     result.append(peak)
 
-    all_targets = {i for b in builds for i in b["profiles"][mode]["uniques"]}
+    all_targets = {i for b in builds for i in b["profiles"]["endgame"]["uniques"]}
     claimed = set()
     for b in builds:
-        ids = set(b["profiles"][mode]["uniques"]) - claimed
+        ids = set(b["profiles"]["endgame"]["uniques"]) - claimed
         claimed |= ids
         if not ids:
             continue
@@ -263,56 +324,93 @@ def generate(config, mode="endgame"):
     r.find("conditions").append(deepcopy(condition(BASE[14], "PotentialCondition")))
     potential(r, "WeaversWill", 1, 13)
 
-    idol_targets = set()
     equipment_targets = set()
     for b in builds:
-        p = b["profiles"][mode]
+        p = b["profiles"]["endgame"]
         for g in p["equipment"]:
             equipment_targets.update(g["affixes"])
-            if g["affixes"]:
-                r = add(63, "BD过渡T6：85级退出", 0, b, g, affix_tier=6)
-                set_affix(r, g["affixes"], 1, 6, op="MORE_OR_EQUAL")
         for g in p["bases"]:
             if g["bases"]:
-                add(82, "bases", 0, b, g)
+                targets = sorted({i for e in p["equipment"] if e["type"] == g["type"] for i in e["affixes"]})
+                if not targets:
+                    warnings.append(f"{b['name']}的{CATALOG['types'][g['type']]['zh']}底材未填写对应部位目标，未生成05保留规则。")
+                    continue
+                r = add(82, "终局05底材＋BD目标T7", 0, b, g)
+                r.find("conditions").append(deepcopy(condition(BASE[63], "AffixCondition")))
+                set_affix(r, targets, 1, 7)
         for g in p["altars"]:
             if g["affixes"]:
                 add(127, "祭坛一项目标", 2, b, g)
         for g in p["idols"]:
-            idol_targets.update(g["affixes"])
             if len(set(g["affixes"])) >= 2:
                 add(99, "神像两普通目标", 3, b, {**g, "bases": g.get("pair_bases", g["bases"])}, 2)
             if g["affixes"]:
                 add(99, "神像一普通目标", 2, b, g)
     replacements[99].sort(key=lambda e: -e[1]["tier"])
 
-    # Raxx's early stages remain intact; separate explicit overrides only change targets.
-    leveling_profiles = [b["profiles"]["leveling"] for b in builds]
-    for n in LEVEL_SLOTS:
-        overrides = [(b, p["leveling_slots"][str(n)]) for b, p in zip(builds, leveling_profiles) if str(n) in p["leveling_slots"]]
-        if not overrides:
-            continue
-        replacements[n] = []
-        skip.add(n)
-        for b, override in overrides:
-            r = add(n, "练级独立目标", 0, b, name=f"[{b['name']} 练级R{n}] 保留原等级与阶数")
-            if override.get("types"):
-                set_scope(r, override["types"], override.get("bases", []))
-            a = next((c for c in r.find("conditions") if c.get(XSI + "type") == "AffixCondition"), None)
-            if a is not None:
-                replace_ints(a, "affixes", override["affixes"])
-            r.find("isEnabled").text = str(override["enabled"] and (a is None or bool(override["affixes"]))).lower()
-            if n in {128, 129, 135} and a is not None:
-                replace_ints(a, "affixes", [i for i in override["affixes"] if CATALOG["affixes"][str(i)]["special"] in {0, 5}])
-                if not len(a.find("affixes")):
-                    r.find("isEnabled").text = "false"
+    # Count and score each build's flat pool separately; never sum across builds.
+    for b in builds:
+        p = b["profiles"]["leveling"]
+        targets = sorted(set(p["affixes"]))
+        equipment_targets.update(targets)
+        if targets:
+            for low, high, score in [(0, 29, None), (30, 49, 5), (50, 79, 8)]:
+                title = "至少一项目标" if score is None else f"目标总阶数≥{score}"
+                r = add(63, f"练级{low}–{high}级：{title}", 0, b)
+                set_scope(r, MANIFEST["scope_types"])
+                set_affix(r, targets)
+                if score is not None:
+                    c = condition(r, "AffixCondition")
+                    c.find("advanced").text = "true"
+                    c.find("combinedComparsion").text = "MORE_OR_EQUAL"
+                    c.find("combinedComparsionValue").text = str(score)
+                set_level(r, low, high)
+                r.find("conditions").append(deepcopy(condition(BASE[82], "RarityCondition")))
+            single = [typ for typ in MANIFEST["scope_types"] if sum(typ in CATALOG["affixes"][str(i)]["types"] for i in targets) == 1]
+            if single:
+                r = add(63, "练级50–79级：单可用目标T≥5", 0, b)
+                set_scope(r, single)
+                set_affix(r, targets, tier=5, op="MORE_OR_EQUAL")
+                set_level(r, 50, 79)
+                r.find("conditions").append(deepcopy(condition(BASE[82], "RarityCondition")))
+            r = add(146, "练级拆解：目标T≥3，50级退出", 0, b)
+            set_scope(r, MANIFEST["scope_types"])
+            set_affix(r, targets, tier=3, op="MORE_OR_EQUAL")
+            r.find("conditions").append(deepcopy(condition(BASE[82], "RarityCondition")))
+        base_groups = defaultdict(set)
+        for g in p["bases"]:
+            base_groups[g["type"]].update(g["bases"])
+        for typ, ids in base_groups.items():
+            if not ids:
+                continue
+            g = {"type": typ, "bases": sorted(ids)}
+            r = add(136, "练级底材：0–29级", 0, b)
+            set_scope(r, [g["type"]], g["bases"])
+            set_level(r, 0, 29)
+            r.find("conditions").append(deepcopy(condition(BASE[82], "RarityCondition")))
+            compatible = [i for i in targets if g["type"] in CATALOG["affixes"][str(i)]["types"]]
+            if compatible:
+                r = add(136, "练级底材＋目标：30–59级", 0, b)
+                set_scope(r, [g["type"]], g["bases"])
+                set_level(r, 30, 59)
+                r.find("conditions").append(deepcopy(condition(BASE[63], "AffixCondition")))
+                set_affix(r, compatible)
+                r.find("conditions").append(deepcopy(condition(BASE[82], "RarityCondition")))
+    # Specific leveling goals keep their own colors before broad salvage catches.
+    for n in [136, 146]:
+        replacements[63].extend(replacements.pop(n, []))
 
     base = deepcopy(BASE)
-    for n in [136, 137]:
-        base[n].find("isEnabled").text = "false"
+    common_idols = {i for n in [128, 129] for pool in inspect_rule(BASE[n])["affix_pools"] for i in pool
+                    if CATALOG["affixes"][str(i)]["special"] in {0, 5}}
     for n in [128, 129, 135]:
         ids = {i for pool in inspect_rule(base[n])["affix_pools"] for i in pool if CATALOG["affixes"][str(i)]["special"] in {0, 5}}
-        replace_ints(condition(base[n], "AffixCondition"), "affixes", ids | idol_targets)
+        if n == 135:
+            ids = {i for i in ids if i in common_idols or CATALOG["affixes"][str(i)]["class"] in {0, 1}}
+        replace_ints(condition(base[n], "AffixCondition"), "affixes", ids)
+    for n in range(84, 91):
+        set_level(base[n], 0, 59)
+        base[n].find("nameOverride").text = (base[n].findtext("nameOverride") or "拆解") + " · 60级退出"
     set_affix(base[37], full, 1, 8, op="MORE_OR_EQUAL")
     set_affix(base[60], full, 1, 7)
     base[60].find("isEnabled").text = str(config.get("extra_t7", True)).lower()
@@ -359,19 +457,17 @@ def generate(config, mode="endgame"):
         rules.append(r)
     root = deepcopy(BASE_ROOT)
     root.find("rules")[:] = list(reversed(rules))
-    label = "终局" if mode == "endgame" else "练级"
-    root.find("name").text = f"LE Filter - {label} - " + " + ".join(b["name"] for b in builds)
+    root.find("name").text = "LE Filter - " + " + ".join(b["name"] for b in builds)
     root.find("description").text = "Raxx base; main pink, secondary blue, shared main. Only exact T7 counts. Idols exclude enchantments and corruption."
     ET.indent(root, space="  ")
     xml = ET.tostring(root, encoding="unicode", xml_declaration=True) + "\n"
     return {"xml": xml, "rules": rows, "count": len(rows), "enabled": sum(r["enabled"] for r in rows),
-            "mode": mode, "sha256": hashlib.sha256(xml.encode()).hexdigest()}
+            "mode": "combined", "warnings": warnings, "sha256": hashlib.sha256(xml.encode()).hexdigest()}
 
 
 def bootstrap():
     catalog = deepcopy(CATALOG)
     catalog["equipment_types"] = MANIFEST["scope_types"]
-    catalog["leveling_slots"] = [{"id": n, **inspect_rule(BASE[n]), "enabled": False if n in {136, 137} else BASE[n].findtext("isEnabled") == "true", "gate": gate_text(inspect_rule(BASE[n]))} for n in LEVEL_SLOTS]
     examples = []
     for slug, spec in EVIDENCE["strict_inputs"].items():
         imported = extract((ROOT / spec["file"]).read_text(encoding="utf-8-sig"))
@@ -379,6 +475,6 @@ def bootstrap():
             for g in imported["profile"]["idols"]:
                 g["pair_bases"] = list(g["bases"])
         examples.append({"id": slug, "name": imported["name"], "enabled": True,
-                         "profiles": {"endgame": imported["profile"], "leveling": empty_profile()},
+                         "profiles": {"endgame": imported["profile"], "leveling": empty_leveling()},
                          "source": {"name": Path(spec["file"]).name, "warnings": imported["warnings"], "rules": imported["rules"]}})
     return {"catalog": catalog, "config": {"version": 1, "main_id": "flay-mana-lich", "extra_t7": True, "builds": examples}}
