@@ -2,6 +2,20 @@
 
 更新时间：2026-10-07，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
+## 最新来源核对：Allie Flay与中文835
+
+用户要求核对输入→需求是否随练级简化变化，并从新Flay攻略与中文835重建后读取识别。变化在练级的两份列表与旧格式适配；终局五类目标及参考分类不改变，声音／T7／退出点仍属于需求→规则。此次新增来源构建脚本及验证，不修改生成器策略。
+
+- 新来源为`allies-mana-stacking-flay-lich`，稳定id=`flay-lich-allie-guide`，与旧Maxroll `flay-mana-lich`独立。终局11暗金、10装备组、3神像组、8底材组／28种，祭坛表为空所以留空；练级19平铺词缀／3底材。普通候选包含表中替代品及明确正文升级目标，不绑定Planner变体。
+- Flay神像为厚实拉贡139、中型拉贡109／105、中型编织者843／854／842三个独立目标池。旧Maxroll Flay的843／854和876／886用户定制保留原来源，不能自动覆盖到新攻略。新攻略普通池不从附魔／腐化反推。
+- 来源有可验证的部位错配：武器段虚弱429、腰带智力502不适用于该类型，未加入对应池；解码原链接留在新来源快照的`unmapped_targets`。靴子正文715与表97均为明确候选。裂缝灵体频率748按词库只适用于胸甲，未猜头盔另一ID。神像前言误用装备魔力34，使用表中神像109；724是普通腐化伤害穿透，不能因中文名称包含“腐化”归成special=6。
+- 日志说山之麓改成Transient Rest，但正文仍推荐253；本轮保留正文候选并标明冲突，没有根据历史日志猜替代品。泛指所缺抗性／任意神像等没有扩成全池。中文835仍取公共表25暗金／13装备组／1祭坛／3神像／3底材，以及明确开工清单8词缀／5底材；早期手打法术伤害／流血不扩入该召唤练级池。
+- 同名暗金不能替换ID：Flay链接猪猡的珍珠376，835链接374；按各自解码ID记录。活力、护盾、血量等优先级只是来源审阅，不增加JSON策略字段。
+- HTTP直接获取被站点防护拒绝；通过浏览器读取实际显示的`section=item-stats/...`／`idol-stats/...`单元和正文链接，用已有lz-string1.5.0解码，冻结事实到`sources/builds/letools-allie-flay-extracted.json`。835实际在线表及练级清单与旧快照ID逐项相同，核对留在`analysis/guide835-source-recheck.json`；原快照未改。
+- 重建：`python -X utf8 scripts/build_flay_allie_requirements.py`及`python -X utf8 scripts/build_guide_835_requirements.py`。四份输出以共通适配器读写完全相等；真实网页逐份导入后保存配置读回也相等，Flay两个阶段各自保存需求JSON相等。旧Strict两BD、原勾选状态／主身份保持，新id未自动启用。网页备份为Downloads的`LE-filter-targets (4).json`，导入后最终读回为`(6).json`。
+- 全24项测试通过；新Flay独立107条／101启用，835独立116／110，Flay主＋835副181／175，转换无引擎警告且未超过200。XML仅在内存校验；原Raxx、冻结模板与历史成品未动，没有游戏客户端实测。未来来源更新应先核对正文与日志冲突，再改来源事实；不要把此次来源警告误说成规则转换失败。
+- 审阅入口：`docs/GUIDE_REQUIREMENTS_REVIEW.md`；机器验证：`analysis/guide-requirements-validation.json`；网页截图：`docs/images/guide-requirements-import-preview.png`。
+
 ## 最新实现：练级简化与终局05收紧
 
 本节决定已落实到`tool/engine.py`、JSON适配器、本地HTTP接口和网页。用户追加确认“除指出部分以外采用建议”，因此1项／合计5／8门槛、单候选例外和早期兜底收紧也已实施。下方旧工作台／v3记录只作历史，不能覆盖本节。

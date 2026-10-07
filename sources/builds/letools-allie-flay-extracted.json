@@ -1,0 +1,1269 @@
+{
+  "title": "Allie's Mana Stacking Flay Lich Build Guide",
+  "url": "https://www.lastepochtools.com/build-guides/allies-mana-stacking-flay-lich",
+  "source_updated": "2026-10-06",
+  "extracted_on": "2026-10-07",
+  "equipment": [
+    {
+      "slot": "helmet",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBjIdnEg",
+          "name": "Raven Crown",
+          "key": "IIwBjIdnEg",
+          "decoded": "1000070000",
+          "kind": "base",
+          "id": 70,
+          "type": "HELMET",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBjIVlMg",
+          "name": "Necropolis Helm",
+          "key": "IIwBjIVlMg",
+          "decoded": "1000051000",
+          "kind": "base",
+          "id": 51,
+          "type": "HELMET",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBjOBWcg",
+          "name": "Revenant Mask",
+          "key": "IIwBjOBWcg",
+          "decoded": "1000015000",
+          "kind": "base",
+          "id": 15,
+          "type": "HELMET",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBjINgZnI",
+          "name": "Coven Hat",
+          "key": "IIwBjINgZnI",
+          "decoded": "1000063000",
+          "kind": "base",
+          "id": 63,
+          "type": "HELMET",
+          "category": "base"
+        }
+      ],
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AAwZgLEA",
+          "name": "Mana",
+          "key": "AAwZgLEA",
+          "decoded": "034",
+          "kind": "prefix",
+          "id": 34
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AKwBgTEA",
+          "name": "Intelligence",
+          "key": "AKwBgTEA",
+          "decoded": "502",
+          "kind": "prefix",
+          "id": 502
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/AOwRgrEA",
+          "name": "Armor and Reduced Bonus Damage from Crits",
+          "key": "AOwRgrEA",
+          "decoded": "715",
+          "kind": "suffix",
+          "id": 715
+        }
+      ]
+    },
+    {
+      "slot": "body",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBhoNgFjEg",
+          "name": "Immortal Regalia",
+          "key": "IIwBhoNgFjEg",
+          "decoded": "1001064000",
+          "kind": "base",
+          "id": 64,
+          "type": "BODY_ARMOR",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBhodjMg",
+          "name": "Sanguine Regalia",
+          "key": "IIwBhodjMg",
+          "decoded": "1001070000",
+          "kind": "base",
+          "id": 70,
+          "type": "BODY_ARMOR",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBhoVgJjEg",
+          "name": "Necropolis Plate",
+          "key": "IIwBhoVgJjEg",
+          "decoded": "1001052000",
+          "kind": "base",
+          "id": 52,
+          "type": "BODY_ARMOR",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBhuBWMSA",
+          "name": "Revenant Plate",
+          "key": "IIwBhuBWMSA",
+          "decoded": "1001015000",
+          "kind": "base",
+          "id": 15,
+          "type": "BODY_ARMOR",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBhuBmMSA",
+          "name": "Burial Plate",
+          "key": "IIwBhuBmMSA",
+          "decoded": "1001013000",
+          "kind": "base",
+          "id": 13,
+          "type": "BODY_ARMOR",
+          "category": "base"
+        }
+      ],
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AAwZgLEA",
+          "name": "Mana",
+          "key": "AAwZgLEA",
+          "decoded": "034",
+          "kind": "prefix",
+          "id": 34
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AKwBgTEA",
+          "name": "Intelligence",
+          "key": "AKwBgTEA",
+          "decoded": "502",
+          "kind": "prefix",
+          "id": 502
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/AAwVgTEA",
+          "name": "Health",
+          "key": "AAwVgTEA",
+          "decoded": "052",
+          "kind": "suffix",
+          "id": 52
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/AAwJgrEA",
+          "name": "Health",
+          "key": "AAwJgrEA",
+          "decoded": "025",
+          "kind": "suffix",
+          "id": 25
+        }
+      ]
+    },
+    {
+      "slot": "gloves",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/items/UAwRhGYHYCYg",
+          "name": "Grasp of the Blood Mage",
+          "key": "UAwRhGYHYCYg",
+          "decoded": "011372",
+          "kind": "unique",
+          "id": 372,
+          "type": "GLOVES",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBhBYWAmMSA",
+          "name": "Eternal Gauntlets",
+          "key": "IIwBhBYWAmMSA",
+          "decoded": "1004012000",
+          "kind": "base",
+          "id": 12,
+          "type": "GLOVES",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBhBYwdjEg",
+          "name": "Crusader Gauntlets",
+          "key": "IIwBhBYwdjEg",
+          "decoded": "1004007000",
+          "kind": "base",
+          "id": 7,
+          "type": "GLOVES",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBhBYwNjEg",
+          "name": "Solarum Bracers",
+          "key": "IIwBhBYwNjEg",
+          "decoded": "1004006000",
+          "kind": "base",
+          "id": 6,
+          "type": "GLOVES",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBhBYVMSA",
+          "name": "Arcane Bracers",
+          "key": "IIwBhBYVMSA",
+          "decoded": "1004010000",
+          "kind": "base",
+          "id": 10,
+          "type": "GLOVES",
+          "category": "base"
+        }
+      ],
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/AAwDgbEA",
+          "name": "Chance to Shred Armor on Hit",
+          "key": "AAwDgbEA",
+          "decoded": "086",
+          "kind": "suffix",
+          "id": 86
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AAwZgLEA",
+          "name": "Mana",
+          "key": "AAwZgLEA",
+          "decoded": "034",
+          "kind": "prefix",
+          "id": 34
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AAzBMQ",
+          "name": "Melee Attack Speed",
+          "key": "AAzBMQ",
+          "decoded": "002",
+          "kind": "prefix",
+          "id": 2
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/AOwRgrEA",
+          "name": "Armor and Reduced Bonus Damage from Crits",
+          "key": "AOwRgrEA",
+          "decoded": "715",
+          "kind": "suffix",
+          "id": 715
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AKwBgTEA",
+          "name": "Intelligence",
+          "key": "AKwBgTEA",
+          "decoded": "502",
+          "kind": "prefix",
+          "id": 502
+        }
+      ]
+    },
+    {
+      "slot": "belt",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/items/UAwRgTALCBsQ",
+          "name": "Brewmaster's Buckle",
+          "key": "UAwRgTALCBsQ",
+          "decoded": "012416",
+          "kind": "unique",
+          "id": 416,
+          "type": "BELT",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBhCYwDjEg",
+          "name": "Praetorian Belt",
+          "key": "IIwBhCYwDjEg",
+          "decoded": "1002008000",
+          "kind": "base",
+          "id": 8,
+          "type": "BELT",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBhCYVMSA",
+          "name": "Divine Girdle",
+          "key": "IIwBhCYVMSA",
+          "decoded": "1002010000",
+          "kind": "base",
+          "id": 10,
+          "type": "BELT",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBhCYwdjEg",
+          "name": "Spidersilk Sash",
+          "key": "IIwBhCYwdjEg",
+          "decoded": "1002007000",
+          "kind": "base",
+          "id": 7,
+          "type": "BELT",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBhCYwFjEg",
+          "name": "Chain Belt",
+          "key": "IIwBhCYwFjEg",
+          "decoded": "1002004000",
+          "kind": "base",
+          "id": 4,
+          "type": "BELT",
+          "category": "base"
+        }
+      ],
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/AAwVgTEA",
+          "name": "Health",
+          "key": "AAwVgTEA",
+          "decoded": "052",
+          "kind": "suffix",
+          "id": 52
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/AAwZgbEA",
+          "name": "Hybrid Health",
+          "key": "AAwZgbEA",
+          "decoded": "036",
+          "kind": "suffix",
+          "id": 36
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AAwRgHEA",
+          "name": "Necrotic Damage",
+          "key": "AAwRgHEA",
+          "decoded": "018",
+          "kind": "prefix",
+          "id": 18
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AMzAMQ",
+          "name": "Mana Regeneration",
+          "key": "AMzAMQ",
+          "decoded": "330",
+          "kind": "prefix",
+          "id": 330
+        }
+      ]
+    },
+    {
+      "slot": "boots",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBhGYWUyA",
+          "name": "Citadel Boots",
+          "key": "IIwBhGYWUyA",
+          "decoded": "1003011000",
+          "kind": "base",
+          "id": 11,
+          "type": "BOOTS",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBhGYVMSA",
+          "name": "Vanguard Boots",
+          "key": "IIwBhGYVMSA",
+          "decoded": "1003010000",
+          "kind": "base",
+          "id": 10,
+          "type": "BOOTS",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBhGYwNjEg",
+          "name": "Solarum Greaves",
+          "key": "IIwBhGYwNjEg",
+          "decoded": "1003006000",
+          "kind": "base",
+          "id": 6,
+          "type": "BOOTS",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBhGYwTjEg",
+          "name": "Arcane Boots",
+          "key": "IIwBhGYwTjEg",
+          "decoded": "1003009000",
+          "kind": "base",
+          "id": 9,
+          "type": "BOOTS",
+          "category": "base"
+        }
+      ],
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AKwBgTEA",
+          "name": "Intelligence",
+          "key": "AKwBgTEA",
+          "decoded": "502",
+          "kind": "prefix",
+          "id": 502
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/AAwTg7EA",
+          "name": "Critical Strike Avoidance and Added Dodge Rating",
+          "key": "AAwTg7EA",
+          "decoded": "097",
+          "kind": "suffix",
+          "id": 97
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AKwBmQ",
+          "name": "Vitality",
+          "key": "AKwBmQ",
+          "decoded": "505",
+          "kind": "prefix",
+          "id": 505
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/AAwZgbEA",
+          "name": "Hybrid Health",
+          "key": "AAwZgbEA",
+          "decoded": "036",
+          "kind": "suffix",
+          "id": 36
+        }
+      ]
+    },
+    {
+      "slot": "relic",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBgTGIgLFJA",
+          "name": "Silver Grail",
+          "key": "IIwBgTGIgLFJA",
+          "decoded": "1022004000",
+          "kind": "base",
+          "id": 4,
+          "type": "RELIC",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBgTGLAnCdA",
+          "name": "Putrid Souls",
+          "key": "IIwBgTGLAnCdA",
+          "decoded": "1022019000",
+          "kind": "base",
+          "id": 19,
+          "type": "RELIC",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBgTGLAbCdA",
+          "name": "Decaying Homunculus",
+          "key": "IIwBgTGLAbCdA",
+          "decoded": "1022016000",
+          "kind": "base",
+          "id": 16,
+          "type": "RELIC",
+          "category": "base"
+        }
+      ],
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AAwZgLEA",
+          "name": "Mana",
+          "key": "AAwZgLEA",
+          "decoded": "034",
+          "kind": "prefix",
+          "id": 34
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/ACwJgnEA",
+          "name": "Chance to apply Frailty on Hit",
+          "key": "ACwJgnEA",
+          "decoded": "429",
+          "kind": "suffix",
+          "id": 429
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AKwBgTEA",
+          "name": "Intelligence",
+          "key": "AKwBgTEA",
+          "decoded": "502",
+          "kind": "prefix",
+          "id": 502
+        }
+      ]
+    },
+    {
+      "slot": "weapon1",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/items/UAzCcBYCZiA",
+          "name": "Executioner's Tithe",
+          "key": "UAzCcBYCZiA",
+          "decoded": "009420",
+          "kind": "unique",
+          "id": 420,
+          "type": "ONE_HANDED_AXE",
+          "category": "unique"
+        }
+      ],
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AJwFgzEA",
+          "name": "Added Melee And Spell Necrotic Damage",
+          "key": "AJwFgzEA",
+          "decoded": "943",
+          "kind": "prefix",
+          "id": 943
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AAzBMQ",
+          "name": "Melee Attack Speed",
+          "key": "AAzBMQ",
+          "decoded": "002",
+          "kind": "prefix",
+          "id": 2
+        }
+      ]
+    },
+    {
+      "slot": "weapon2",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/items/UAzDMoFgJiA",
+          "name": "Traitor's Tongue",
+          "key": "UAzDMoFgJiA",
+          "decoded": "003342",
+          "kind": "unique",
+          "id": 342,
+          "type": "ONE_HANDED_DAGGER",
+          "category": "unique"
+        }
+      ],
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AJwFgzEA",
+          "name": "Added Melee And Spell Necrotic Damage",
+          "key": "AJwFgzEA",
+          "decoded": "943",
+          "kind": "prefix",
+          "id": 943
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AAzBMQ",
+          "name": "Melee Attack Speed",
+          "key": "AAzBMQ",
+          "decoded": "002",
+          "kind": "prefix",
+          "id": 2
+        }
+      ]
+    },
+    {
+      "slot": "ring1",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBgTKIJwrQ",
+          "name": "Coral Ring",
+          "key": "IIwBgTKIJwrQ",
+          "decoded": "1021009000",
+          "kind": "base",
+          "id": 9,
+          "type": "RING",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBgTKotQ",
+          "name": "Opal Ring",
+          "key": "IIwBgTKotQ",
+          "decoded": "1021010000",
+          "kind": "base",
+          "id": 10,
+          "type": "RING",
+          "category": "base"
+        }
+      ],
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AKwBgTEA",
+          "name": "Intelligence",
+          "key": "AKwBgTEA",
+          "decoded": "502",
+          "kind": "prefix",
+          "id": 502
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AAwZgHEA",
+          "name": "Spell Damage",
+          "key": "AAwZgHEA",
+          "decoded": "038",
+          "kind": "prefix",
+          "id": 38
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/AAwJgrEA",
+          "name": "Health",
+          "key": "AAwJgrEA",
+          "decoded": "025",
+          "kind": "suffix",
+          "id": 25
+        }
+      ]
+    },
+    {
+      "slot": "ring2",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBgTKIJwrQ",
+          "name": "Coral Ring",
+          "key": "IIwBgTKIJwrQ",
+          "decoded": "1021009000",
+          "kind": "base",
+          "id": 9,
+          "type": "RING",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBgTKotQ",
+          "name": "Opal Ring",
+          "key": "IIwBgTKotQ",
+          "decoded": "1021010000",
+          "kind": "base",
+          "id": 10,
+          "type": "RING",
+          "category": "base"
+        }
+      ],
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AKwBgTEA",
+          "name": "Intelligence",
+          "key": "AKwBgTEA",
+          "decoded": "502",
+          "kind": "prefix",
+          "id": 502
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AAwZgHEA",
+          "name": "Spell Damage",
+          "key": "AAwZgHEA",
+          "decoded": "038",
+          "kind": "prefix",
+          "id": 38
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/AAwJgrEA",
+          "name": "Health",
+          "key": "AAwJgrEA",
+          "decoded": "025",
+          "kind": "suffix",
+          "id": 25
+        }
+      ]
+    },
+    {
+      "slot": "amulet",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/items/UAzDsGZQNiA",
+          "name": "Pearls of the Swine",
+          "key": "UAzDsGZQNiA",
+          "decoded": "007376",
+          "kind": "unique",
+          "id": 376,
+          "type": "AMULET",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBgTCkOySQ",
+          "name": "Bone Amulet",
+          "key": "IIwBgTCkOySQ",
+          "decoded": "1020007000",
+          "kind": "base",
+          "id": 7,
+          "type": "AMULET",
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBgTCkBySQ",
+          "name": "Oracle Amulet",
+          "key": "IIwBgTCkBySQ",
+          "decoded": "1020008000",
+          "kind": "base",
+          "id": 8,
+          "type": "AMULET",
+          "category": "base"
+        }
+      ],
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AAwZgLEA",
+          "name": "Mana",
+          "key": "AAwZgLEA",
+          "decoded": "034",
+          "kind": "prefix",
+          "id": 34
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/AAwDgbEA",
+          "name": "Chance to Shred Armor on Hit",
+          "key": "AAwDgbEA",
+          "decoded": "086",
+          "kind": "suffix",
+          "id": 86
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AAwTgzEA",
+          "name": "Necrotic Penetration",
+          "key": "AAwTgzEA",
+          "decoded": "093",
+          "kind": "prefix",
+          "id": 93
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AAzBsQ",
+          "name": "Critical Strike Multiplier",
+          "key": "AAzBsQ",
+          "decoded": "006",
+          "kind": "prefix",
+          "id": 6
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/AAwJgrEA",
+          "name": "Health",
+          "key": "AAwJgrEA",
+          "decoded": "025",
+          "kind": "suffix",
+          "id": 25
+        }
+      ]
+    }
+  ],
+  "equipment_supplements": [
+    {
+      "type": "ONE_HANDED_AXE",
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AJwFgzEA",
+          "name": "Added Melee And Spell Necrotic Damage",
+          "key": "AJwFgzEA",
+          "decoded": "943",
+          "kind": "prefix",
+          "id": 943
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AAzBMQ",
+          "name": "Melee Attack Speed",
+          "key": "AAzBMQ",
+          "decoded": "002",
+          "kind": "prefix",
+          "id": 2
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AOwRgHEA",
+          "name": "Mana and Mana Regen",
+          "key": "AOwRgHEA",
+          "decoded": "718",
+          "kind": "prefix",
+          "id": 718
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/AOwJgLEA",
+          "name": "Necrotic Penetration and Minion Necrotic Penetration",
+          "key": "AOwJgLEA",
+          "decoded": "724",
+          "kind": "suffix",
+          "id": 724
+        }
+      ],
+      "origin": "weaver-tree: donor weapon paragraph"
+    },
+    {
+      "type": "ONE_HANDED_DAGGER",
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AJwFgzEA",
+          "name": "Added Melee And Spell Necrotic Damage",
+          "key": "AJwFgzEA",
+          "decoded": "943",
+          "kind": "prefix",
+          "id": 943
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AAzBMQ",
+          "name": "Melee Attack Speed",
+          "key": "AAzBMQ",
+          "decoded": "002",
+          "kind": "prefix",
+          "id": 2
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AOwRgHEA",
+          "name": "Mana and Mana Regen",
+          "key": "AOwRgHEA",
+          "decoded": "718",
+          "kind": "prefix",
+          "id": 718
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/AOwJgLEA",
+          "name": "Necrotic Penetration and Minion Necrotic Penetration",
+          "key": "AOwJgLEA",
+          "decoded": "724",
+          "kind": "suffix",
+          "id": 724
+        }
+      ],
+      "origin": "weaver-tree: donor weapon paragraph"
+    },
+    {
+      "type": "BOOTS",
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/AOwRgrEA",
+          "name": "Armor and Reduced Bonus Damage from Crits",
+          "key": "AOwRgrEA",
+          "decoded": "715",
+          "kind": "suffix",
+          "id": 715
+        }
+      ],
+      "origin": "item-stats-preface: critical damage reduction paragraph"
+    }
+  ],
+  "idols": [
+    {
+      "slot": "idol1",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBgTAHC00A",
+          "name": "Stout Lagonian Idol",
+          "key": "IIwBgTAHC00A",
+          "decoded": "1028000000",
+          "kind": "base",
+          "id": 0,
+          "type": "IDOL_1x2",
+          "category": "base"
+        }
+      ],
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AIwZgnEA",
+          "name": "Chance to Ignite on Hit",
+          "key": "AIwZgnEA",
+          "decoded": "139",
+          "kind": "prefix",
+          "id": 139
+        }
+      ]
+    },
+    {
+      "slot": "idol3",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBgTAbC00A",
+          "name": "Minor Lagonian Idol",
+          "key": "IIwBgTAbC00A",
+          "decoded": "1026000000",
+          "kind": "base",
+          "id": 0,
+          "type": "IDOL_1x1_LAGON",
+          "category": "base"
+        }
+      ],
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AIwBgnEA",
+          "name": "Mana",
+          "key": "AIwBgnEA",
+          "decoded": "109",
+          "kind": "prefix",
+          "id": 109
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/AIwBgrEA",
+          "name": "Health",
+          "key": "AIwBgrEA",
+          "decoded": "105",
+          "kind": "suffix",
+          "id": 105
+        }
+      ]
+    },
+    {
+      "slot": "weaver-minor-prose",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBgTAbCKtQ",
+          "name": "Minor Weaver Idol",
+          "key": "IIwBgTAbCKtQ",
+          "decoded": "1026001000",
+          "kind": "base",
+          "id": 1,
+          "type": "IDOL_1x1_LAGON",
+          "category": "base"
+        }
+      ],
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/ABwFgzEA",
+          "name": "Mana and Increased Mana Regen",
+          "key": "ABwFgzEA",
+          "decoded": "843",
+          "kind": "prefix",
+          "id": 843
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/ABwVgLEA",
+          "name": "Health and Mana",
+          "key": "ABwVgLEA",
+          "decoded": "854",
+          "kind": "suffix",
+          "id": 854
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/ABwFgTEA",
+          "name": "Armor and Increased Armor",
+          "key": "ABwFgTEA",
+          "decoded": "842",
+          "kind": "prefix",
+          "id": 842
+        }
+      ]
+    }
+  ],
+  "unique_supplements": [
+    {
+      "href": "https://www.lastepochtools.com/db/items/UAzCcBYCZiA",
+      "name": "Executioner's Tithe",
+      "key": "UAzCcBYCZiA",
+      "decoded": "009420",
+      "kind": "unique",
+      "id": 420,
+      "type": "ONE_HANDED_AXE",
+      "category": "unique"
+    },
+    {
+      "href": "https://www.lastepochtools.com/db/items/UAzDMoFgJiA",
+      "name": "Traitor's Tongue",
+      "key": "UAzDMoFgJiA",
+      "decoded": "003342",
+      "kind": "unique",
+      "id": 342,
+      "type": "ONE_HANDED_DAGGER",
+      "category": "unique"
+    },
+    {
+      "href": "https://www.lastepochtools.com/db/items/UAwRgTALCBsQ",
+      "name": "Brewmaster's Buckle",
+      "key": "UAwRgTALCBsQ",
+      "decoded": "012416",
+      "kind": "unique",
+      "id": 416,
+      "type": "BELT",
+      "category": "unique"
+    },
+    {
+      "href": "https://www.lastepochtools.com/db/items/UAwRhGYHYCYg",
+      "name": "Grasp of the Blood Mage",
+      "key": "UAwRhGYHYCYg",
+      "decoded": "011372",
+      "kind": "unique",
+      "id": 372,
+      "type": "GLOVES",
+      "category": "unique"
+    },
+    {
+      "href": "https://www.lastepochtools.com/db/items/UAzDsGZQNiA",
+      "name": "Pearls of the Swine",
+      "key": "UAzDsGZQNiA",
+      "decoded": "007376",
+      "kind": "unique",
+      "id": 376,
+      "type": "AMULET",
+      "category": "unique"
+    },
+    {
+      "href": "https://www.lastepochtools.com/db/items/UAzBMoVgZiA",
+      "name": "Foot of the Mountain",
+      "key": "UAzBMoVgZiA",
+      "decoded": "002253",
+      "kind": "unique",
+      "id": 253,
+      "type": "BOOTS",
+      "category": "unique"
+    },
+    {
+      "href": "https://www.lastepochtools.com/db/items/UAwNgzALGZA",
+      "name": "Reliquary Nest",
+      "key": "UAwNgzALGZA",
+      "decoded": "063433",
+      "kind": "unique",
+      "id": 433,
+      "type": "RELIC",
+      "category": "unique"
+    },
+    {
+      "href": "https://www.lastepochtools.com/db/items/UAzBsGYFYHYg",
+      "name": "Seed of Ekkidrasil",
+      "key": "UAzBsGYFYHYg",
+      "decoded": "006357",
+      "kind": "unique",
+      "id": 357,
+      "type": "HELMET",
+      "category": "unique"
+    },
+    {
+      "href": "https://www.lastepochtools.com/db/items/UAwNgzALA7ArEA",
+      "name": "Devoured Knowledge",
+      "key": "UAwNgzALA7ArEA",
+      "decoded": "063475",
+      "kind": "unique",
+      "id": 475,
+      "type": "BODY_ARMOR",
+      "category": "unique"
+    },
+    {
+      "href": "https://www.lastepochtools.com/db/items/UAzBsNI",
+      "name": "Boneclamor Barbute",
+      "key": "UAzBsNI",
+      "decoded": "006006",
+      "kind": "unique",
+      "id": 6,
+      "type": "HELMET",
+      "category": "unique"
+    },
+    {
+      "href": "https://www.lastepochtools.com/db/items/UAwRgTALCCsQ",
+      "name": "Immortal Vise",
+      "key": "UAwRgTALCCsQ",
+      "decoded": "012415",
+      "kind": "unique",
+      "category": "unique",
+      "id": 415,
+      "type": "GLOVES"
+    }
+  ],
+  "leveling": {
+    "targets": [
+      {
+        "href": "https://www.lastepochtools.com/db/suffixes/AAwVhQ",
+        "name": "Chance to Ignite on Hit",
+        "key": "AAwVhQ",
+        "decoded": "055",
+        "kind": "suffix",
+        "id": 55
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/suffixes/AAwNgHEA",
+        "name": "Chance to Inflict Bleed On Hit",
+        "key": "AAwNgHEA",
+        "decoded": "068",
+        "kind": "suffix",
+        "id": 68
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/suffixes/AAwVgLEA",
+        "name": "Chance to Poison on Hit",
+        "key": "AAwVgLEA",
+        "decoded": "054",
+        "kind": "suffix",
+        "id": 54
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/prefixes/AAwdgTEA",
+        "name": "Damage Over Time",
+        "key": "AAwdgTEA",
+        "decoded": "072",
+        "kind": "prefix",
+        "id": 72
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/prefixes/AKwBgTEA",
+        "name": "Intelligence",
+        "key": "AKwBgTEA",
+        "decoded": "502",
+        "kind": "prefix",
+        "id": 502
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/prefixes/AAwZgHEA",
+        "name": "Spell Damage",
+        "key": "AAwZgHEA",
+        "decoded": "038",
+        "kind": "prefix",
+        "id": 38
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/prefixes/AKwBmQ",
+        "name": "Vitality",
+        "key": "AKwBmQ",
+        "decoded": "505",
+        "kind": "prefix",
+        "id": 505
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/suffixes/AAwJgrEA",
+        "name": "Health",
+        "key": "AAwJgrEA",
+        "decoded": "025",
+        "kind": "suffix",
+        "id": 25
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/suffixes/AAwFgrEA",
+        "name": "Physical Resistance",
+        "key": "AAwFgrEA",
+        "decoded": "045",
+        "kind": "suffix",
+        "id": 45
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/suffixes/AAzDsQ",
+        "name": "Void Resistance",
+        "key": "AAzDsQ",
+        "decoded": "007",
+        "kind": "suffix",
+        "id": 7
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/suffixes/AAwRgnEA",
+        "name": "Poison Resistance",
+        "key": "AAwRgnEA",
+        "decoded": "019",
+        "kind": "suffix",
+        "id": 19
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/prefixes/AAzCcQ",
+        "name": "Elemental Damage",
+        "key": "AAzCcQ",
+        "decoded": "009",
+        "kind": "prefix",
+        "id": 9
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/prefixes/AIwBhQ",
+        "name": "Elemental Damage Over Time",
+        "key": "AIwBhQ",
+        "decoded": "100",
+        "kind": "prefix",
+        "id": 100
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/suffixes/AAwRmQ",
+        "name": "Necrotic Resistance",
+        "key": "AAwRmQ",
+        "decoded": "010",
+        "kind": "suffix",
+        "id": 10
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/suffixes/AAwJgLEA",
+        "name": "Lightning Resistance",
+        "key": "AAwJgLEA",
+        "decoded": "024",
+        "kind": "suffix",
+        "id": 24
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/suffixes/AAwRg7EA",
+        "name": "Cold Resistance",
+        "key": "AAwRg7EA",
+        "decoded": "017",
+        "kind": "suffix",
+        "id": 17
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/prefixes/AOwFgHEA",
+        "name": "Increased Spirit Frequency with Chthonic Fissure",
+        "key": "AOwFgHEA",
+        "decoded": "748",
+        "kind": "prefix",
+        "id": 748
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/prefixes/AMzAMQ",
+        "name": "Mana Regeneration",
+        "key": "AMzAMQ",
+        "decoded": "330",
+        "kind": "prefix",
+        "id": 330
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/prefixes/AAwZgLEA",
+        "name": "Mana",
+        "key": "AAwZgLEA",
+        "decoded": "034",
+        "kind": "prefix",
+        "id": 34
+      }
+    ],
+    "bases": [
+      {
+        "href": "https://www.lastepochtools.com/db/items/IIwBgTKIMwrQ",
+        "name": "Silver Ring",
+        "key": "IIwBgTKIMwrQ",
+        "decoded": "1021003000",
+        "kind": "base",
+        "id": 3,
+        "type": "RING",
+        "category": "base"
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/items/IIwBhFYwJjEg",
+        "name": "Rusted Cleaver",
+        "key": "IIwBhFYwJjEg",
+        "decoded": "1005002000",
+        "kind": "base",
+        "id": 2,
+        "type": "ONE_HANDED_AXE",
+        "category": "base"
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/items/IIwBmFYRSqA",
+        "name": "Spine Rod",
+        "key": "IIwBmFYRSqA",
+        "decoded": "1015005000",
+        "kind": "base",
+        "id": 5,
+        "type": "TWO_HANDED_STAFF",
+        "category": "base"
+      }
+    ]
+  },
+  "decoder": {
+    "package": "lz-string",
+    "version": "1.5.0",
+    "method": "decompressFromEncodedURIComponent(key.slice(1))"
+  },
+  "unmapped_targets": [
+    {
+      "type": "BELT",
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AKwBgTEA",
+          "name": "Intelligence",
+          "key": "AKwBgTEA",
+          "decoded": "502",
+          "kind": "prefix",
+          "id": 502
+        }
+      ],
+      "origin": "item-stats-preface: non-unique belt/boot intelligence paragraph",
+      "reason": "Intelligence 502 cannot roll on BELT in the frozen version150 catalog."
+    },
+    {
+      "type": "ONE_HANDED_AXE/ONE_HANDED_DAGGER",
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/ACwJgnEA",
+          "name": "Chance to apply Frailty on Hit",
+          "key": "ACwJgnEA",
+          "decoded": "429",
+          "kind": "affix",
+          "id": 429
+        }
+      ],
+      "origin": "weaver-tree: donor weapon paragraph",
+      "reason": "Frailty 429 cannot roll on these weapon families in the frozen version150 catalog."
+    }
+  ]
+}

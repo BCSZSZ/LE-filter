@@ -4,6 +4,8 @@
 
 新增[共通BD需求JSON格式](docs/REQUIREMENTS_FORMAT.md)：filter与攻略先提供一个BD／一个阶段的目标，网页可导入、修改并保存回该格式，再由基底生成filter。攻略835的[流血骷髅终局需求](requirements/bleed-skeleton-roamer-guide-835.endgame.json)含25暗金／套装、13装备组、3神像组、1祭坛、3独立底材；另有[练级需求](requirements/bleed-skeleton-roamer-guide-835.leveling.json)，8词缀、5底材。练级按1项目标→总阶数5→8收紧，单可用目标T5兜底，跨BD不能合计。见[中文审阅表](docs/BLEED_SKELETON_GUIDE_REVIEW.md)。旧Strict与历史XML保留。
 
+Allie攻略来源的Flay已独立生成[终局需求](requirements/flay-lich-allie-guide.endgame.json)与[练级需求](requirements/flay-lich-allie-guide.leveling.json)：11暗金、10装备组、3神像组、28种终局底材；练级19词缀与3种底材，祭坛未提供目标。835在线清单重新核对一致。四份JSON均已在网页导入并保存读回，新Flay＋835转换181条（175启用），24项测试通过。完整目标、部位链接冲突与验证边界见[双攻略需求审阅](docs/GUIDE_REQUIREMENTS_REVIEW.md)。
+
 已归档固定成品：**[Flay＋Skeleton Necromancer v3](filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml)**，162条（151启用／11关闭），采用铁匠／开始／灵感／彗星四档，静音项无图标和光柱，沿用原颜色。旧v2保留不动。[四档分类与能力审阅](docs/SOUND_STYLE_REVIEW.md)、[全部提示索引](docs/CURRENT_ALERT_INDEX.md)、[使用说明](docs/CURRENT_FILTER_GUIDE.md)和[逐条条件](docs/CURRENT_RULES_REVIEW.md)对应这个历史快照。
 
 2026-10-07修正：至少3条T7彗星；双T7含对应部位BD目标T7灵感；其余任意双T7开始。静音不额外改色。T8为铁匠兜底（G84）；T7只计恰好7阶，T8不凑双／多T7，也不冒充BD目标单T7。

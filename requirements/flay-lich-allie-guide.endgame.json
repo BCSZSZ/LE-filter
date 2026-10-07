@@ -1,0 +1,243 @@
+{
+  "format": "le-filter-requirements",
+  "version": 1,
+  "id": "flay-lich-allie-guide",
+  "name": "Flay魔力巫妖 · Allie攻略",
+  "stage": "endgame",
+  "targets": {
+    "uniques": [
+      6,
+      253,
+      342,
+      357,
+      372,
+      376,
+      415,
+      416,
+      420,
+      433,
+      475
+    ],
+    "equipment": [
+      {
+        "type": "HELMET",
+        "bases": [],
+        "affixes": [
+          34,
+          502,
+          715
+        ]
+      },
+      {
+        "type": "BODY_ARMOR",
+        "bases": [],
+        "affixes": [
+          34,
+          502,
+          52,
+          25
+        ]
+      },
+      {
+        "type": "GLOVES",
+        "bases": [],
+        "affixes": [
+          86,
+          34,
+          2,
+          715,
+          502
+        ]
+      },
+      {
+        "type": "BELT",
+        "bases": [],
+        "affixes": [
+          52,
+          36,
+          18,
+          330
+        ]
+      },
+      {
+        "type": "BOOTS",
+        "bases": [],
+        "affixes": [
+          502,
+          97,
+          505,
+          36,
+          715
+        ]
+      },
+      {
+        "type": "RELIC",
+        "bases": [],
+        "affixes": [
+          34,
+          429,
+          502
+        ]
+      },
+      {
+        "type": "ONE_HANDED_AXE",
+        "bases": [],
+        "affixes": [
+          943,
+          2,
+          718,
+          724
+        ]
+      },
+      {
+        "type": "ONE_HANDED_DAGGER",
+        "bases": [],
+        "affixes": [
+          943,
+          2,
+          718,
+          724
+        ]
+      },
+      {
+        "type": "RING",
+        "bases": [],
+        "affixes": [
+          502,
+          38,
+          25
+        ]
+      },
+      {
+        "type": "AMULET",
+        "bases": [],
+        "affixes": [
+          34,
+          86,
+          93,
+          6,
+          25
+        ]
+      }
+    ],
+    "altars": [],
+    "idols": [
+      {
+        "type": "IDOL_1x2",
+        "bases": [
+          0
+        ],
+        "affixes": [
+          139
+        ]
+      },
+      {
+        "type": "IDOL_1x1_LAGON",
+        "bases": [
+          0
+        ],
+        "affixes": [
+          109,
+          105
+        ]
+      },
+      {
+        "type": "IDOL_1x1_LAGON",
+        "bases": [
+          1
+        ],
+        "affixes": [
+          843,
+          854,
+          842
+        ]
+      }
+    ],
+    "bases": [
+      {
+        "type": "HELMET",
+        "bases": [
+          70,
+          51,
+          15,
+          63
+        ]
+      },
+      {
+        "type": "BODY_ARMOR",
+        "bases": [
+          64,
+          70,
+          52,
+          15,
+          13
+        ]
+      },
+      {
+        "type": "GLOVES",
+        "bases": [
+          12,
+          7,
+          6,
+          10
+        ]
+      },
+      {
+        "type": "BELT",
+        "bases": [
+          8,
+          10,
+          7,
+          4
+        ]
+      },
+      {
+        "type": "BOOTS",
+        "bases": [
+          11,
+          10,
+          6,
+          9
+        ]
+      },
+      {
+        "type": "RELIC",
+        "bases": [
+          4,
+          19,
+          16
+        ]
+      },
+      {
+        "type": "RING",
+        "bases": [
+          9,
+          10
+        ]
+      },
+      {
+        "type": "AMULET",
+        "bases": [
+          7,
+          8
+        ]
+      }
+    ]
+  },
+  "source": {
+    "name": "Allie's Mana Stacking Flay Lich Build Guide",
+    "url": "https://www.lastepochtools.com/build-guides/allies-mana-stacking-flay-lich",
+    "updated": "2026-10-06",
+    "extracted_on": "2026-10-07",
+    "sha256": "79a8c94cd542fd5a6921aa8c23061ba384e25e32fa6d3bc5144a29e568f7e6f0",
+    "scope": "Flay装备／神像推荐表与正文明确补充，包含替代品和后期升级；不绑定单一Planner变体",
+    "warnings": [
+      "候选池包含替代品，不要求同一件装备或整套装备同时采用所有候选。",
+      "泛指所缺抗性、生命或任意神像而未给出明确目标的条目留待手动补充，没有扩成全量词缀。",
+      "靴子表链接为暴击避免97，正文明确推荐护甲与暴击减伤715；两者均记录为候选。",
+      "更新日志说山之麓已被Transient Rest替代，正文仍推荐山之麓；本次按正文保留253，未从旧日志猜替代品ID。",
+      "武器合成段的虚弱链接429仅适用于护身符／遗物／手套，未加入武器目标，也未猜其他ID。",
+      "正文把智力502推荐给普通腰带，但词库不支持该部位；没有加入腰带目标，原链接另留核对记录。"
+    ]
+  }
+}

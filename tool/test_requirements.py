@@ -6,6 +6,7 @@ from copy import deepcopy
 import engine as e
 from requirements import read_document, write_document
 from build_guide_835_requirements import build_document, build_leveling_document
+from build_flay_allie_requirements import build_documents as build_allie_documents
 from test_engine import first
 
 
@@ -17,6 +18,38 @@ def as_build(document):
 
 
 class RequirementTests(unittest.TestCase):
+    def test_allie_guide_targets_and_roundtrip(self):
+        endgame, leveling = build_allie_documents()
+        self.assertEqual({k: len(v) for k, v in endgame["targets"].items()},
+                         {"uniques": 11, "equipment": 10, "altars": 0, "idols": 3, "bases": 8})
+        self.assertEqual(sum(len(g["bases"]) for g in endgame["targets"]["bases"]), 28)
+        groups = {g["type"]: g for g in endgame["targets"]["equipment"]}
+        self.assertEqual(groups["ONE_HANDED_AXE"]["affixes"], [943, 2, 718, 724])
+        self.assertEqual(groups["ONE_HANDED_DAGGER"]["affixes"], [943, 2, 718, 724])
+        self.assertNotIn(502, groups["BELT"]["affixes"])
+        self.assertEqual(groups["BOOTS"]["affixes"], [502, 97, 505, 36, 715])
+        self.assertEqual(endgame["targets"]["idols"][2]["affixes"], [843, 854, 842])
+        self.assertIn(376, endgame["targets"]["uniques"])
+        self.assertNotIn(374, endgame["targets"]["uniques"])
+        self.assertEqual(len(leveling["targets"]["affixes"]), 19)
+        self.assertNotIn(119, leveling["targets"]["affixes"])
+        build = as_build(endgame)
+        build["profiles"]["leveling"] = read_document(leveling)["profile"]
+        build["requirement_sources"]["leveling"] = leveling["source"]
+        for doc in (endgame, leveling):
+            frozen = json.loads((e.ROOT / f"requirements/{doc['id']}.{doc['stage']}.json").read_text(encoding="utf-8"))
+            self.assertEqual(doc, frozen)
+            self.assertEqual(doc, write_document(build, doc["stage"]))
+
+    def test_allie_guide_uses_current_base_rules(self):
+        endgame, leveling = build_allie_documents()
+        build = as_build(endgame)
+        build["profiles"]["leveling"] = read_document(leveling)["profile"]
+        result = e.generate({"version": 1, "main_id": build["id"], "extra_t7": True, "builds": [build]})
+        self.assertEqual(first(result, "ONE_HANDED_AXE", {943: 7, 724: 7})["category"], "BD双目标T7")
+        self.assertEqual(first(result, "IDOL_1x2", {139: 1}, base=0, rarity="RARE")["tier"], 2)
+        self.assertEqual(first(result, "IDOL_1x1_LAGON", {843: 1, 854: 1}, base=1, rarity="RARE")["tier"], 3)
+
     def test_filter_roundtrip_without_strategy(self):
         for build in e.bootstrap()["config"]["builds"]:
             doc = write_document(build, "endgame")

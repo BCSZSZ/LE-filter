@@ -60,7 +60,7 @@ def build_document():
                                         "表中生命链接实际为提高生命52；按链接ID保存，未改成增加生命51。",
                                         "护身符1085、1086只存腐化参考，不计普通目标。",
                                         "大型幽冥预兆神像保留266、287；预兆允许更大神像的词缀。",
-                                        "练级目标未填；原文练级段与七个变体已留作独立来源，未混入终局。"]}}
+                                        "练级的8词缀与5底材另存同id的leveling需求；七个变体仍独立记录。"]}}
     read_document(document)
     return document
 
@@ -83,7 +83,7 @@ def render_review(document):
         return "、".join(f"{CATALOG[category][f'{typ}:{i}' if category == 'bases' else str(i)]['zh']}（{i}）" for i in ids) or "—"
     lines = ["# 流血骷髅游荡者：攻略835需求审阅", "",
              f"来源：[原攻略]({document['source']['url']})，页面更新于2026-10-06，本次提取于2026-10-07。", "",
-             "范围是公共装备与神像推荐表，包含替代候选；未选择七个变体中的某一个。它与旧Maxroll骷髅Strict是独立BD，不修改旧来源。练级正文及各变体Planner链接留在来源快照中，本次只生成终局需求。", "",
+             "范围是公共装备与神像推荐表，包含替代候选；未选择七个变体中的某一个。它与旧Maxroll骷髅Strict是独立BD，不修改旧来源。本次已重新核对在线推荐表及练级清单，目标ID与原快照一致；终局五类与练级两份列表分别生成。", "",
              "共25种暗金／套装、13组装备部位目标、3组神像、1组祭坛、3种独立制作底材。下表由实际JSON和冻结词库生成；来源顺序只方便审阅，不作为词缀筛选优先级。", "",
              "## 暗金／套装候选", "", "这里记录需要收集的候选，不表示必须同时穿戴，也不要求先有LP。蜂农梳、蜂农烟熏器和西纳提亚的亡者复苏是套装，仍使用共通uniques ID列表。", "",
              "| 部位／类型 | 目标 |", "|---|---|"]
@@ -115,9 +115,9 @@ if __name__ == "__main__":
     output = ROOT / "requirements/bleed-skeleton-roamer-guide-835.endgame.json"
     output.parent.mkdir(exist_ok=True)
     document = build_document()
-    output.write_text(json.dumps(document, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    output.write_text(json.dumps(document, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     (output.parent / "bleed-skeleton-roamer-guide-835.leveling.json").write_text(
-        json.dumps(build_leveling_document(), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (ROOT / "docs/BLEED_SKELETON_GUIDE_REVIEW.md").write_text(render_review(document), encoding="utf-8")
+        json.dumps(build_leveling_document(), ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    (ROOT / "docs/BLEED_SKELETON_GUIDE_REVIEW.md").write_text(render_review(document), encoding="utf-8", newline="\n")
     print(output.relative_to(ROOT))
     print({key: len(value) for key, value in document["targets"].items()})

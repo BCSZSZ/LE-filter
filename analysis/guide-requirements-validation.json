@@ -1,0 +1,106 @@
+{
+  "checked_on": "2026-10-07",
+  "documents": [
+    {
+      "path": "requirements/flay-lich-allie-guide.endgame.json",
+      "counts": {
+        "uniques": 11,
+        "equipment": 10,
+        "altars": 0,
+        "idols": 3,
+        "bases": 8
+      },
+      "base_item_count": 28,
+      "roundtrip_equal": true,
+      "browser_config_roundtrip_equal": true,
+      "sha256": "53c229f99cf29ae3260f68f5131e392ef071b80781a835b682c2ea3a81a06aec"
+    },
+    {
+      "path": "requirements/flay-lich-allie-guide.leveling.json",
+      "counts": {
+        "affixes": 19,
+        "bases": 3
+      },
+      "base_item_count": 3,
+      "roundtrip_equal": true,
+      "browser_config_roundtrip_equal": true,
+      "sha256": "782c43077856d62e5146506a9c164a15e6838d4f1083edfbb45abacc2b30a4bf"
+    },
+    {
+      "path": "requirements/bleed-skeleton-roamer-guide-835.endgame.json",
+      "counts": {
+        "uniques": 25,
+        "equipment": 13,
+        "altars": 1,
+        "idols": 3,
+        "bases": 3
+      },
+      "base_item_count": 3,
+      "roundtrip_equal": true,
+      "browser_config_roundtrip_equal": true,
+      "sha256": "7272c54e9a6436fd4a4617c469d9613dc6e54b1378abd4c41c3408f8376c537d"
+    },
+    {
+      "path": "requirements/bleed-skeleton-roamer-guide-835.leveling.json",
+      "counts": {
+        "affixes": 8,
+        "bases": 5
+      },
+      "base_item_count": 5,
+      "roundtrip_equal": true,
+      "browser_config_roundtrip_equal": true,
+      "sha256": "46fb51f53b8383abfbb2a2feb88bfbe975a218039715485b2d8dfaee1d25de99"
+    }
+  ],
+  "unit_tests": {
+    "total": 24,
+    "passed": 24,
+    "source_byte_normalization_recheck": {
+      "total": 2,
+      "passed": 2
+    }
+  },
+  "conversion": [
+    {
+      "builds": [
+        "flay-lich-allie-guide"
+      ],
+      "count": 107,
+      "enabled": 101,
+      "mode": "combined",
+      "warnings": [],
+      "sha256": "9f32da409dbe880ea2a55737be5687ec002e3d4f242b7308b15f1b2fec7c09d3"
+    },
+    {
+      "builds": [
+        "bleed-skeleton-roamer-guide-835"
+      ],
+      "count": 116,
+      "enabled": 110,
+      "mode": "combined",
+      "warnings": [],
+      "sha256": "036c4c32fce2bbeee1932036deba39826629eb758760b58dae3aabe86e1c57f1"
+    },
+    {
+      "builds": [
+        "flay-lich-allie-guide",
+        "bleed-skeleton-roamer-guide-835"
+      ],
+      "count": 181,
+      "enabled": 175,
+      "mode": "combined",
+      "warnings": [],
+      "sha256": "1189c4165405ea111ad03241e63c7649952c0e0836c89b15238ebe5610e0da40"
+    }
+  ],
+  "browser": {
+    "all_four_documents_imported": true,
+    "original_selection_and_main_preserved": true,
+    "old_strict_builds_unchanged": true,
+    "flay_each_stage_saved_json_equal": true,
+    "config_backup": "LE-filter-targets (4).json",
+    "config_readback": "LE-filter-targets (6).json",
+    "proof": "docs/images/guide-requirements-import-preview.png"
+  },
+  "json_encoding": "UTF-8, LF line endings"
+}

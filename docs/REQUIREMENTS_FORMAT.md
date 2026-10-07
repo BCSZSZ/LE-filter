@@ -70,3 +70,5 @@ document = write_document(build, "endgame")  # 编辑后的目标保存回同一
 本地HTTP接口为`POST /api/requirements/import`（`{"document": ...}`）及`POST /api/requirements/export`（`{"build": ..., "stage": "endgame"}`）。XML导入仍由`extract(xml)`提取profile；加入BD后使用相同的`write_document`保存，随后JSON与攻略结果走同一转换路径。
 
 真实样本见流血骷髅的[终局需求](../requirements/bleed-skeleton-roamer-guide-835.endgame.json)、[练级需求](../requirements/bleed-skeleton-roamer-guide-835.leveling.json)与[中文审阅表](BLEED_SKELETON_GUIDE_REVIEW.md)。
+
+Allie攻略来源的Flay也使用同一格式：[终局需求](../requirements/flay-lich-allie-guide.endgame.json)、[练级需求](../requirements/flay-lich-allie-guide.leveling.json)。与旧Maxroll Flay使用不同id；同一攻略的两个阶段使用同id。[两篇攻略的完整审阅与网页读回结果](GUIDE_REQUIREMENTS_REVIEW.md)记录了目标、来源冲突和未提供的祭坛目标。
