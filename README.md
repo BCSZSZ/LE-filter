@@ -1,5 +1,7 @@
 # LE-filter：Raxx 基底与双 BD 收集过滤器
 
+[在线工作台](https://bcszsz.github.io/LE-filter/)由GitHub Pages托管。支持导入Maxroll filter XML／TXT、导入需求JSON、列表搜索编辑、多个BD选择及JSON／XML导出；不支持从网址提取攻略。首次打开需要加载运行环境，导入内容与生成过程在浏览器内处理。在线示例包含旧Maxroll Flay／Skeleton，以及独立的Allie Flay攻略／中文骷髅835攻略；两个攻略方案默认未勾选，两份Flay不合并。使用Chrome或Edge进行文件下载；Codex内置浏览器目前不能正常接收浏览器生成的下载文件。
+
 **目标工作台已可使用**：双击[start-tool.cmd](start-tool.cmd)，打开本地 <http://127.0.0.1:8765>。支持导入filter提取目标、中文／英文／ID搜索多选、多个BD勾选合并、主副套路、JSON保存和XML预览导出。终局五类目标、练级只填词缀与底材两份列表，共同导出一份filter。见[工具使用说明](docs/TOOL_GUIDE.md)。内置两BD示例137条（131启用，练级目标留空）。05要求指定底材＋同BD对应部位目标T7常驻；删除专门T6层，练级品质80退出、底材60退出、普通拆解50退出、原常驻拆解60退出。897附魔及腐化不计普通神像目标。
 
 新增[共通BD需求JSON格式](docs/REQUIREMENTS_FORMAT.md)：filter与攻略先提供一个BD／一个阶段的目标，网页可导入、修改并保存回该格式，再由基底生成filter。攻略835的[流血骷髅终局需求](requirements/bleed-skeleton-roamer-guide-835.endgame.json)含25暗金／套装、13装备组、3神像组、1祭坛、3独立底材；另有[练级需求](requirements/bleed-skeleton-roamer-guide-835.leveling.json)，8词缀、5底材。练级按1项目标→总阶数5→8收紧，单可用目标T5兜底，跨BD不能合计。见[中文审阅表](docs/BLEED_SKELETON_GUIDE_REVIEW.md)。旧Strict与历史XML保留。

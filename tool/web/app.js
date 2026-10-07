@@ -25,6 +25,7 @@ function toast(message,error=false){
   toastTimer=setTimeout(()=>$('toast').hidden=true,error?10000:3500);
 }
 async function api(path,payload){
+  if(globalThis.LEFilterAPI)return globalThis.LEFilterAPI(path,payload);
   const response=await fetch(path,payload?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}:{});
   const data=await response.json();if(!response.ok)throw Error(data.error || '请求失败');return data;
 }
@@ -34,6 +35,11 @@ function save(){
   catch{$('save-state').textContent='请用“保存配置”备份';}
 }
 async function download(text,name){
+  if(globalThis.LEFilterAPI){
+    const url=URL.createObjectURL(new Blob([text],{type:name.endsWith('.xml')?'application/xml':'application/json'}));
+    const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),30000);return;
+  }
   const result=await api('/api/download',{text,name});
   const a=document.createElement('a');a.href=result.url;a.download=name;document.body.append(a);a.click();a.remove();
 }
@@ -202,14 +208,16 @@ $('load-config').onclick=()=>$('config-file').click();
 $('config-file').onchange=async e=>{
   try{const file=e.target.files[0];if(!file)return;const loaded=JSON.parse(await file.text());config=(await api('/api/validate',{config:loaded})).config;activeId=config.main_id;view='editor';save();render();toast('已载入配置。');}catch(e){toast(e.message,true);}finally{e.target.value='';}
 };
-$('load-examples').onclick=()=>{config=copy(examples);activeId=config.main_id;category='uniques';mode='endgame';view='editor';save();render();toast('已载入两个BD示例。');};
+$('load-examples').onclick=()=>{config=copy(examples);activeId=config.main_id;category='uniques';mode='endgame';view='editor';save();render();toast('已载入示例方案。');};
 async function init(){
   try{
+    if(globalThis.LEFilterAPI){document.querySelector('.layout').inert=true;document.querySelector('.top-actions').inert=true;$('save-state').textContent='首次加载，请稍候…';}
     const boot=await api('/api/bootstrap');catalog=boot.catalog;examples=boot.config;
     try{config=JSON.parse(localStorage.getItem(STORAGE));}catch{}
     if(!config||config.version!==1||!Array.isArray(config.builds))config=copy(examples);
     config=(await api('/api/validate',{config})).config;save();
     activeId=config.main_id;$('catalog-version').textContent=catalog.version;render();
+    document.querySelector('.layout').inert=false;document.querySelector('.top-actions').inert=false;
   }catch(e){toast(`无法启动：${e.message}`,true);}
 }
 init();

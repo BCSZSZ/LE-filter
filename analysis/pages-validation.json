@@ -1,0 +1,71 @@
+{
+  "tested_on": "2026-10-07",
+  "unit_tests": {
+    "passed": 26
+  },
+  "pyodide_version": "314.0.7",
+  "wasm_native_comparisons": [
+    {
+      "name": "bootstrap",
+      "identical": true
+    },
+    {
+      "name": "import-skeleton-necromancer",
+      "identical": true
+    },
+    {
+      "name": "import-flay-mana-lich",
+      "identical": true
+    },
+    {
+      "name": "flay-mana-lich+skeleton-necromancer",
+      "identical": true,
+      "count": 137,
+      "sha256": "71d51614106aa870055f140889fb013dc5c40fed4a75efac7b96d3e5c461445e"
+    },
+    {
+      "name": "flay-lich-allie-guide",
+      "identical": true,
+      "count": 107,
+      "sha256": "9f32da409dbe880ea2a55737be5687ec002e3d4f242b7308b15f1b2fec7c09d3"
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835",
+      "identical": true,
+      "count": 116,
+      "sha256": "036c4c32fce2bbeee1932036deba39826629eb758760b58dae3aabe86e1c57f1"
+    },
+    {
+      "name": "flay-lich-allie-guide+bleed-skeleton-roamer-guide-835",
+      "identical": true,
+      "count": 181,
+      "sha256": "1189c4165405ea111ad03241e63c7649952c0e0836c89b15238ebe5610e0da40"
+    }
+  ],
+  "static_bytes": 14158675,
+  "browser_checks": {
+    "four_independent_examples": true,
+    "maxroll_flay_file_import": {
+      "uniques": 11,
+      "equipment": 10,
+      "altars": 1,
+      "idols": 2,
+      "bases": 1
+    },
+    "leveling_search_edit_restore": [
+      19,
+      18,
+      19
+    ],
+    "allie_and_835_rules": 181,
+    "allie_and_835_enabled": 175,
+    "url_import_supported": false
+  },
+  "downloads": {
+    "implementation": "browser Blob",
+    "codex_in_app_download_confirmed": false,
+    "limitation": "In-app browser did not deliver generated file downloads; use Chrome or Edge. XML content validated with actual WASM engine against native results."
+  },
+  "game_client_tested": false,
+  "site_url": "https://bcszsz.github.io/LE-filter/"
+}

@@ -2,6 +2,16 @@
 
 更新时间：2026-10-07，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
+## 最新实现：GitHub Pages浏览器运行版
+
+- 用户明确授权整个`BCSZSZ/LE-filter`仓库改为公开并发布GitHub Pages；这替代此前private约定。网址为`https://bcszsz.github.io/LE-filter/`。仅支持filter文件／XML文本及需求JSON导入，不增加网址提取功能。
+- 静态构建`scripts/build_pages.py`将原Python引擎、适配器、依赖脚本、冻结基底／词库／Strict、四份攻略需求打包为runtime.zip；原文件保持字节不变。Pyodide固定314.0.7，五个必要运行文件一起托管，不在用户导入时联网取攻略。
+- 浏览器Worker通过`tool/browser_runtime.py`调用相同引擎；原本地服务入口继续使用本地HTTP API。网页资产路径改为相对路径，支持`/LE-filter/`子路径；JSON／XML以浏览器Blob下载，配置仍存当前浏览器。没有第二套规则实现。
+- 在线启动四个独立示例：旧Strict Flay／Skeleton保持原勾选与主副，两篇攻略Allie Flay／中文835默认未勾选，各含独立终局和练级需求。新攻略不补旧filter，两份Flay不合并。左侧按钮改为“载入示例方案”；本地版原两示例继续有效。
+- 26项单元测试通过；隔离ZIP能独立运行、两次ZIP构建相同。实际Pyodide/WASM七组对照全部与本地结果一致，包括两份Strict提取、默认137条、Allie107条、835116条、两攻略组合181条；完整XML及规则元数据均一致。
+- 真实静态浏览器验证启动、Strict Flay文件导入（11暗金／10装备组／1祭坛／2神像／1底材）、练级列表搜索502并19→18、导入原需求JSON恢复19，以及两攻略组合181／175。Codex内置浏览器不能接收Blob下载；不将导出成功提示冒充文件下载实测。下载使用Chrome／Edge；本轮WASM与本地逐字节对照验证生成内容，没有游戏客户端实测。
+- 机器验证见`analysis/pages-validation.json`；`.site/`与下载缓存均忽略。发布流程在`.github/workflows/pages.yml`，只上传`.site/`静态产物。用户已授权公开仓库，不需要再次确认。
+
 ## 最新确认：两份Flay保持不同方案
 
 - 旧Maxroll Strict Flay使用`flay-mana-lich`；Allie攻略Flay使用`flay-lich-allie-guide`。两者独立保存、选择、编辑和导出需求，不能将目标取并集，也不能将攻略作为补丁反写旧filter方案。

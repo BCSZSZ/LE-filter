@@ -1,6 +1,16 @@
 # 目标工作台使用说明
 
-这个本地工具把导入filter中的BD目标填入我们审阅过的Raxx基底。可以保存多个BD，勾选本次需要收集的BD，指定主套路，预览后导出XML。
+这个工具把导入filter中的BD目标填入我们审阅过的Raxx基底。可以保存多个BD，勾选本次需要收集的BD，指定主套路，预览后导出XML。
+
+## 在线使用
+
+打开[GitHub Pages工作台](https://bcszsz.github.io/LE-filter/)，首次等待运行环境加载。网页支持Maxroll filter文件／XML文本和共通需求JSON导入，没有网址提取入口；导入内容与生成计算在浏览器内完成。配置保存在当前浏览器，跨设备用“保存配置”与“载入配置”转移。
+
+在线“载入示例方案”恢复四个独立BD：旧Maxroll Strict的Flay／Skeleton，以及Allie Flay攻略／中文流血骷髅835攻略。两篇攻略已包含各自终局和练级目标，默认未勾选；旧Strict Flay与Allie攻略Flay分别选择、编辑，不互补目标。载入示例会替换当前配置，已有编辑先保存配置。
+
+下载JSON／XML时使用Chrome或Edge。Codex内置浏览器能编辑和预览，但测试中不能正常接收浏览器内生成的下载文件。网页版本不需要安装Python或启动本机服务。
+
+开发者运行`python -X utf8 scripts/build_pages.py`生成`.site/`，只用静态HTTP服务即可预览。GitHub Actions执行测试、打包和部署；固定Pyodide 314.0.7的必要运行文件一起发布。浏览器与本地复用`tool/engine.py`和`tool/requirements.py`，不另写一套过滤策略。
 
 ## 启动与保存
 

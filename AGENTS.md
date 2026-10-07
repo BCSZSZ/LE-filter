@@ -1,5 +1,6 @@
 # LE-filter 工作约束
 
+- 用户已授权仓库公开与GitHub Pages发布（替代原private约定）。静态构建`scripts/build_pages.py`使用固定Pyodide 314.0.7、原Python引擎与适配器；不得重写过滤策略或增加网址提取。在线四示例保持两个攻略默认未勾选及两份Flay独立。部署流程`.github/workflows/pages.yml`只发布`.site/`；验证机器结果见`analysis/pages-validation.json`。浏览器生成内容的WASM对照不冒充Codex内置浏览器下载或游戏客户端实测。
 - 共通BD需求格式见`docs/REQUIREMENTS_FORMAT.md`，适配器`tool/requirements.py`；一个BD／一个阶段保存目标和可选来源，终局五类、练级affixes与bases两类，不存基底提示、主副、R分段。同id导入只替换该阶段，保留另一阶段与主副。网页入口区分“BD需求JSON”和整套“配置”。
 - 用户明确要求两份Flay保持不同方案：旧Maxroll Strict来源`flay-mana-lich`与Allie攻略来源`flay-lich-allie-guide`分别保存、选择、编辑和导出需求，不能合并目标或互相补齐／覆盖。新攻略不得自动启用；此前181条组合验证指Allie攻略Flay＋中文骷髅835，不是两份Flay。
 - 新攻略样本`requirements/bleed-skeleton-roamer-guide-835.endgame.json`使用公共推荐表，含替代品，未绑定单一变体；重建脚本`scripts/build_guide_835_requirements.py`只读冻结已解码来源与词库。原链接压缩key、数字ID、练级目标和七个变体索引在`sources/builds/letools-guide-zh-835-extracted.json`。正文新增胸甲192不反写旧Strict。1085／1086腐化仅参考，Omen266不能按普通尺寸可出范围删去。装备类型校验采用基底全部23类，不沿用旧双BD脚本11类T7_SLOTS。
