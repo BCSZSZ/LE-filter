@@ -4839,6 +4839,18 @@
       }
     }
   ],
+  "idol_count_policy": {
+    "target_pool": "core_idol_ids",
+    "one_target_minimum": 1,
+    "two_targets_minimum": 2,
+    "affix_tier": "ANY",
+    "ignored_special_affix_types": [
+      4,
+      6
+    ],
+    "restrict_item_enchantment_or_corruption_state": false,
+    "target_source": "Strict normal target pool; no Guide/Planner pair narrowing"
+  },
   "very_strict_rule_inventory": [
     {
       "x": 1,
