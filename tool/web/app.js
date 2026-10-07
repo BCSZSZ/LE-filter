@@ -6,7 +6,7 @@ const categories = [
   ['uniques','所需暗金','用名字选择目标；0LP保留，高潜能仍按四档提示。','选择暗金'],
   ['equipment','装备词条','每个部位独立填写。至少两个目标时，一条整池条件识别双目标T7。','添加部位'],
   ['altars','祭坛词条','按祭坛底材绑定目标；至少一项，阶数不限。','添加祭坛'],
-  ['idols','神像词条','只计普通目标：一项开始、两项灵感。附魔／腐化另外记录。','添加神像'],
+  ['idols','神像词条','','添加神像'],
   ['bases','所需底材','独立收集制作底材，不给装备T7素材强加同底材要求。','添加底材'],
   ['leveling_slots','练级分段','保留Raxx的等级、阶数与数量门槛；目标独立填写，空白表示沿用原示例。','']
 ];
@@ -48,6 +48,7 @@ function render(){
   $('categories').innerHTML=categories.map(([key,title],i)=>`<button data-category="${key}" class="${category===key?'active':''}"><span class="step-num">0${i+1}</span>${title}</button>`).join('');
   const item=categories.find(c=>c[0]===category);
   $('category-title').textContent=item[1];$('category-description').textContent=item[2];$('add-target').textContent=item[3];$('add-target').hidden=!item[3];
+  $('category-description').hidden=!item[2];
   $('extra-t7').checked=config.extra_t7;$('export-xml').textContent=`导出${mode==='endgame'?'终局':'练级'}filter`;
   renderTargets();renderSource();
 }
@@ -61,11 +62,9 @@ function renderTargets(){
   $('targets').innerHTML=data.map((g,i)=>{
     const commands=`${category!=='bases'?`<button data-pick="affixes" data-index="${i}">词缀</button>`:''}<button data-pick="bases" data-index="${i}">底材</button>${category==='idols'?`<button data-pick="pair_bases" data-index="${i}">两项层底材</button>`:''}<button data-delete="${i}" aria-label="移除此分组">×</button>`;
     const bases=g.bases.length?chips(g.bases,'bases',g.type):'<small>底材不限</small>';
-    let note=category==='equipment'?`${g.affixes.length}个目标；单目标T7${g.affixes.length>=2?'＋整池至少两目标T7':''}。`:category==='idols'?'一项开始；两项灵感；普通目标阶数不限。':'';
-    const pairBases=g.pair_bases??g.bases;
-    if(category==='idols')note+=' 两项底材：'+(pairBases.length?pairBases.map(id=>label('bases',`${g.type}:${id}`)).join('、'):'不限');
+    const note=category==='equipment'?`${g.affixes.length}个目标；单目标T7${g.affixes.length>=2?'＋整池至少两目标T7':''}。`:'';
     const extra=[...(g.enchanted||[]),...(g.corrupted||[])];
-    return `<div class="target-row"><div class="row-heading"><strong>${esc(typeName(g.type))}</strong><div class="row-actions">${commands}</div></div><div class="chips">${bases}</div>${category!=='bases'?`<div class="chips" style="margin-top:12px">${g.affixes.length?chips(g.affixes,'affixes'):'<small>尚未填写词缀；此组不会生成目标规则</small>'}</div>`:''}<p class="reference">${esc(note)}</p>${extra.length?`<p class="reference">附魔／腐化参考，不计入普通目标：${esc(extra.map(id=>`${label('affixes',id)} (${id})`).join('、'))}</p>`:''}</div>`;
+    return `<div class="target-row"><div class="row-heading"><strong>${esc(typeName(g.type))}</strong><div class="row-actions">${commands}</div></div><div class="chips">${bases}</div>${category!=='bases'?`<div class="chips" style="margin-top:12px">${g.affixes.length?chips(g.affixes,'affixes'):'<small>尚未填写词缀；此组不会生成目标规则</small>'}</div>`:''}${note?`<p class="reference">${esc(note)}</p>`:''}${extra.length?`<p class="reference">附魔／腐化参考，不计入普通目标：${esc(extra.map(id=>`${label('affixes',id)} (${id})`).join('、'))}</p>`:''}</div>`;
   }).join('');
 }
 function renderSource(){
