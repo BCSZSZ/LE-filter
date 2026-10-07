@@ -2,6 +2,18 @@
 
 更新时间：2026-10-07，日本时间。当前阅读顺序：README → SOUND_STYLE_REVIEW → CURRENT_FILTER_GUIDE → CURRENT_RULES_REVIEW → BASE_TEMPLATE → 本memo；填空来源查STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
+## 最新交付：本地目标工作台
+
+- 启动`start-tool.cmd`或`python -X utf8 tool/server.py --open`，地址127.0.0.1:8765。纯Python标准库＋静态HTML/CSS/JS，无需安装依赖；只绑定本机。使用说明见TOOL_GUIDE。界面有暗金、装备词条、祭坛、神像、定向底材、练级分段六入口，列表中文／英文／ID搜索，多BD勾选，主粉副蓝共享主，规则预览和XML导出。浏览器保存与JSON备份／回读。
+- `tool/engine.py`导入XML并分类，标准Maxroll按原family识别；任意其他filter可在导入界面手动指定来源规则类别。不沿用Strict收集门槛。源码X编号按XML物理次序记录，不混称实际优先级。未知词缀／暗金ID提示并阻止未经确认的生成。
+- `sources/tool-catalog.json`冻结1156词缀、489暗金／套装、918底材，来自原已验证version150快照；保留源URL／哈希。`scripts/build_tool_catalog.py`开发时从`.cache`重建，运行期不需要缓存或网络。查询时按类型可用范围筛选，但源目标全部保留，包括源文件中潜在可出现部位差异，不静默删池。旧／隐藏条目默认隐藏，已选者仍显示。
+- 工具内置两BD示例：终局180条／173启用；独立练级未填时67条／59启用。工具的新输出已落实本节下方原“尚未改成品”的策略建议：部位池n≥2只一条至少2目标恰好T7，骷髅常驻普通一项／两项神像均有，897附魔4和腐化6只作参考。三T7彗星、双T7含对应部位目标灵感、其余双T7开始，T8铁匠兜底。原162条v3的SHA256仍ddfb6889366162de32eaf4a9dbd050f23496a1d902189cff340b5ec444da6ec9，其旧报告不冒充工具新生成结果。
+- Strict与Very Strict的9装备组、1祭坛、3合并神像目标组相同；Very Strict没有5个旧Strict定向底材组，工具忠实留空，不补猜。神像按相同类型／普通池归组，合并源底材并保留候选／两项底材差异；Flay内置示例两层Weaver／Lagon为用户明确审阅，重新导入原Strict仍先保留源范围。
+- 每BD`profiles.endgame`与`profiles.leveling`独立。第6项写在`profiles.leveling.leveling_slots`，key为原R编号；只替换目标与明确指定的类型／底材，原等级、阶数、数量、其他条件不变。未填沿用原例，R136／137空类型默认关闭，先配置再启用。终局输出也应用已填写练级段，练级输出用独立目标。不要从终局推断练级路线。原多类型底材入口可通过JSON明确类型，界面支持单类型底材和原多类型词缀池。
+- 生成内存XML，删除56条蓝字说明，保留其他固定规则及关闭功能；通用高价值层不按BD裁剪，T7全1156池。主副同条件合并，保持主归属；超过200条明确报错，不截断。XML物理反序、Order连续升序。静音Sound1／MapIcon1／NONE保留原颜色，其他四档沿用冻结ALERTS ID。
+- 服务接口`GET /api/bootstrap`，`POST /api/import`、`/api/generate`、`/api/validate`；标准HTTP附件下载短期存在内存中，不写用户源文件，兼容Codex内置浏览器。只接受同源写请求，文件20MB上限。浏览器端渲染转义用户名称与源规则文字。
+- 测试`python -X utf8 -m unittest discover -s tool -v`目前8项通过，含源情报、整池计数、T8、神像普通计数、LP／WW、阶段开关、主副共享、原练级门槛、200条报错与确定性。浏览器实际验证Very Strict上传、英文／中文搜索、独立练级修改、JSON下载／回读、BD勾选／主副切换和终局／练级XML下载。没有游戏客户端实测。不要执行旧`generate_current_filter.py`主程序去覆盖162条快照；新工具只读复用其中ALERTS和其他旧脚本纯帮助函数。
+
 ## 最新调查：骷髅双目标T7与常驻单目标神像，尚未改成品
 
 - 用户要求先调查新Very Strict与截图，不沿用其策略。证据、结论及建议见SKELETON_STRICT_INVESTIGATION；离线运行`python -X utf8 scripts/investigate_skeleton_strict.py`，只写analysis/skeleton-strict-investigation.json。原图、新XML与人工转录的截图顺序在sources/builds/skeleton-investigation-manifest.json，可复现，不能将截图转录说成XML自动推导。

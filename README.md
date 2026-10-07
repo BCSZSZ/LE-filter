@@ -1,12 +1,14 @@
 # LE-filter：Raxx 基底与双 BD 收集过滤器
 
-最新版成品：**[Flay＋Skeleton Necromancer v3](filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml)**，162条（151启用／11关闭），采用铁匠／开始／灵感／彗星四档，静音项无图标和光柱，沿用原颜色。旧v2保留不动。[四档分类与能力审阅](docs/SOUND_STYLE_REVIEW.md)、[全部提示索引](docs/CURRENT_ALERT_INDEX.md)、[使用说明](docs/CURRENT_FILTER_GUIDE.md)和[逐条条件](docs/CURRENT_RULES_REVIEW.md)对应当前成品。
+**目标工作台已可使用**：双击[start-tool.cmd](start-tool.cmd)，打开本地 <http://127.0.0.1:8765>。支持导入filter提取目标、中文／英文／ID搜索多选、多个BD勾选合并、主副套路、独立练级接口、JSON配置保存及XML预览导出。见[工具使用说明](docs/TOOL_GUIDE.md)。内置两BD示例的新生成结果180条（173启用），已落实装备双目标T7和骷髅常驻单目标神像；897附魔及腐化不计普通目标。
+
+已归档固定成品：**[Flay＋Skeleton Necromancer v3](filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml)**，162条（151启用／11关闭），采用铁匠／开始／灵感／彗星四档，静音项无图标和光柱，沿用原颜色。旧v2保留不动。[四档分类与能力审阅](docs/SOUND_STYLE_REVIEW.md)、[全部提示索引](docs/CURRENT_ALERT_INDEX.md)、[使用说明](docs/CURRENT_FILTER_GUIDE.md)和[逐条条件](docs/CURRENT_RULES_REVIEW.md)对应这个历史快照。
 
 2026-10-07修正：至少3条T7彗星；双T7含对应部位BD目标T7灵感；其余任意双T7开始。静音不额外改色。T8为铁匠兜底（G84）；T7只计恰好7阶，T8不凑双／多T7，也不冒充BD目标单T7。
 
 当前基底仍为[LE Base Template v1](templates/LE-base-v1.xml)，落实用户确认的T7四类，供后续定制。Strict提供目标情报，成品采用基底门槛；原Raxx与旧187条试制保留不动。
 
-先读[当前使用说明](docs/CURRENT_FILTER_GUIDE.md)，再查[新基底说明](docs/BASE_TEMPLATE.md)、[BD情报来源](docs/STRICT_VARIABLE_REVIEW.md)及[工作memo](docs/WORKING_MEMO.md)。Flay主套路粉色、Skeleton副套路蓝色，共享按主；两者同等收集。旧187条XML及其说明包含Strict策略移植，仅作历史；动态勾选界面尚未实施。
+先读[工具使用说明](docs/TOOL_GUIDE.md)，历史v3快照查[当前使用说明](docs/CURRENT_FILTER_GUIDE.md)，基底与来源查[新基底说明](docs/BASE_TEMPLATE.md)、[BD情报来源](docs/STRICT_VARIABLE_REVIEW.md)及[工作memo](docs/WORKING_MEMO.md)。Flay主套路粉色、Skeleton副套路蓝色，共享按主；两者同等收集。旧187条XML及其说明包含Strict策略移植，仅作历史。
 
 [V05–V10的用途与过渡范围](docs/STRICT_VARIABLE_REVIEW.md#equipment-purpose)保留基底四类情报。v3按三T7→目标双T7→任意双T7→目标单T7分档；目标双T7、C1与C3各自主一组、副一组。C4仍只有一条，当前G85，默认开启、手动关闭；T6等价压成18条，85级退出。详见[提示审阅](docs/SOUND_STYLE_REVIEW.md)。
 
@@ -28,6 +30,10 @@
 
 | 文件 | 用途 |
 |---|---|
+| [start-tool.cmd](start-tool.cmd) | Windows双击启动目标工作台 |
+| [TOOL_GUIDE.md](docs/TOOL_GUIDE.md) | 六类目标填写、导入、独立练级接口、配置保存和XML导出 |
+| [tool/engine.py](tool/engine.py) | 从filter提取目标并填入Raxx基底，运行期离线 |
+| [tool/test_engine.py](tool/test_engine.py) | 提取与已审阅收集策略的有限自动测试 |
 | [PLAN.md](PLAN.md) | 本阶段计划、验收条件与范围 |
 | [Flay＋Skeleton v3](filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml) | 当前可导入成品，四档声音与一条手动退出C4 |
 | [SOUND_STYLE_REVIEW.md](docs/SOUND_STYLE_REVIEW.md) | 全部旧v2情况的档位、区分能力、修改与未完成语义 |

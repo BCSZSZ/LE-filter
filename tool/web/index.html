@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LE Filter · 目标工作台</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="brandmark">LE</span><div><strong>FILTER WORKBENCH</strong><small>目标工作台 · Raxx基底</small></div></div>
+  <div class="top-actions"><span id="save-state" class="muted">本地保存</span><button id="load-config">载入配置</button><button id="save-config">保存配置</button></div>
+</header>
+<div class="layout">
+  <aside>
+    <div class="aside-heading"><span>收集的BD</span><button id="add-build" aria-label="新增BD">＋</button></div>
+    <div id="builds"></div>
+    <button id="import-filter" class="wide dashed">＋ 导入filter</button>
+    <button id="load-examples" class="wide subtle">载入Flay＋骷髅示例</button>
+    <div class="side-note"><span class="dot pink"></span>主套路粉色<br><span class="dot blue"></span>副套路蓝色<br>共享按主套路处理<br>勾选的BD同等收集</div>
+    <div class="sidebar-bottom"><span class="online-dot"></span>离线词库 <span id="catalog-version"></span></div>
+  </aside>
+  <main>
+    <div class="main-heading"><div><p class="eyebrow">BUILD TARGETS</p><h1 id="build-title">目标配置</h1><p class="muted">导入情报，核对目标，再生成自己的filter。</p></div><button id="rename-build">重命名</button></div>
+    <div class="workspace-bar"><div class="segmented"><button data-mode="endgame" class="active">终局目标</button><button data-mode="leveling">练级目标</button></div><div class="view-tabs"><button data-view="editor" class="active">填写目标</button><button data-view="preview">规则预览</button></div></div>
+    <div id="editor">
+      <div id="profile-note" class="notice"></div>
+      <nav id="categories" class="category-tabs"></nav>
+      <section class="panel">
+        <div class="panel-heading"><div><h2 id="category-title"></h2><p id="category-description" class="muted"></p></div><button id="add-target" class="primary"></button></div>
+        <div id="targets"></div>
+      </section>
+      <details id="source-details" class="source-panel"><summary>导入来源与附加参考</summary><div id="source-info"></div></details>
+    </div>
+    <section id="preview" hidden>
+      <div class="panel-heading"><div><h2>将要生成的规则</h2><p class="muted">按实际优先级排列。这里展示基底门槛与四档提示。</p></div><input id="preview-search" type="search" placeholder="过滤部位、名称或档位" aria-label="过滤预览规则"></div>
+      <div id="preview-summary" class="notice"></div><div id="preview-rules"></div>
+    </section>
+    <footer class="export-bar"><label><input id="extra-t7" type="checkbox">保留额外单T7阶段储备 <small>阶段结束后手动关闭</small></label><div><button id="preview-button">预览规则</button><button id="export-xml" class="primary">导出终局filter</button></div></footer>
+  </main>
+</div>
+<dialog id="picker">
+  <div class="dialog-heading"><div><p class="eyebrow">SEARCH & SELECT</p><h2 id="picker-title"></h2></div><button data-close="picker" aria-label="关闭选择器">×</button></div>
+  <div class="picker-controls"><input id="picker-search" type="search" placeholder="搜索中文 / English / ID" aria-label="搜索词库"><label><input id="only-selected" type="checkbox">只看已选</label><label><input id="show-legacy" type="checkbox">显示旧／隐藏条目</label></div>
+  <div id="picker-summary" class="muted"></div><div id="picker-list"></div>
+  <div class="dialog-footer"><span id="selection-count"></span><button id="apply-selection" class="primary">应用选择</button></div>
+</dialog>
+<dialog id="group-dialog">
+  <div class="dialog-heading"><h2 id="group-title"></h2><button data-close="group-dialog" aria-label="关闭分组">×</button></div>
+  <label class="field-label">物品类型<select id="group-type"></select></label>
+  <p class="muted">先选类型，再从可搜索列表选择底材和词缀。</p>
+  <div class="dialog-footer"><button id="create-group" class="primary">添加分组</button></div>
+</dialog>
+<dialog id="import-dialog" class="large-dialog">
+  <div class="dialog-heading"><div><p class="eyebrow">IMPORT INTELLIGENCE</p><h2>从filter提取目标</h2></div><button data-close="import-dialog" aria-label="关闭导入">×</button></div>
+  <div class="notice">提取名字、词缀、类型和底材；生成时采用我们的Raxx规则。附魔／腐化参考单独保存。</div>
+  <label class="file-drop">选择XML或TXT文件<input id="xml-file" type="file" accept=".xml,.txt"></label>
+  <textarea id="xml-text" placeholder="也可以在这里粘贴filter XML" aria-label="Filter XML"></textarea>
+  <div class="import-options"><label>填入<select id="import-mode"><option value="endgame">终局目标</option><option value="leveling">独立练级目标</option></select></label><button id="analyze-import">分析XML</button></div>
+  <div id="import-result"></div>
+  <div class="dialog-footer"><span class="muted">未识别规则可手动指定情报分类。</span><button id="apply-import" class="primary" disabled>导入为新BD</button></div>
+</dialog>
+<input id="config-file" type="file" accept=".json" hidden>
+<div id="toast" role="status" hidden></div>
+<script src="/app.js"></script>
+</body></html>
