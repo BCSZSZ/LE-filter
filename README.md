@@ -2,6 +2,8 @@
 
 **目标工作台已可使用**：双击[start-tool.cmd](start-tool.cmd)，打开本地 <http://127.0.0.1:8765>。支持导入filter提取目标、中文／英文／ID搜索多选、多个BD勾选合并、主副套路、独立练级接口、JSON配置保存及XML预览导出。见[工具使用说明](docs/TOOL_GUIDE.md)。内置两BD示例的新生成结果180条（173启用），已落实装备双目标T7和骷髅常驻单目标神像；897附魔及腐化不计普通目标。
 
+新增[共通BD需求JSON格式](docs/REQUIREMENTS_FORMAT.md)：filter与攻略都先提供一个BD／一个阶段的五类目标，网页可导入、修改并保存回该格式，基底再负责生成filter。本次从Last Epoch Tools攻略835公共推荐表生成[流血骷髅游荡者需求](requirements/bleed-skeleton-roamer-guide-835.endgame.json)，25暗金／套装、13装备组、3神像组、1祭坛、3独立底材；见[中文审阅表](docs/BLEED_SKELETON_GUIDE_REVIEW.md)。不改旧Strict或历史XML。
+
 已归档固定成品：**[Flay＋Skeleton Necromancer v3](filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml)**，162条（151启用／11关闭），采用铁匠／开始／灵感／彗星四档，静音项无图标和光柱，沿用原颜色。旧v2保留不动。[四档分类与能力审阅](docs/SOUND_STYLE_REVIEW.md)、[全部提示索引](docs/CURRENT_ALERT_INDEX.md)、[使用说明](docs/CURRENT_FILTER_GUIDE.md)和[逐条条件](docs/CURRENT_RULES_REVIEW.md)对应这个历史快照。
 
 2026-10-07修正：至少3条T7彗星；双T7含对应部位BD目标T7灵感；其余任意双T7开始。静音不额外改色。T8为铁匠兜底（G84）；T7只计恰好7阶，T8不凑双／多T7，也不冒充BD目标单T7。

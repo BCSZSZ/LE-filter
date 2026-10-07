@@ -62,15 +62,16 @@ function renderTargets(){
     const commands=`${category!=='bases'?`<button data-pick="affixes" data-index="${i}">词缀</button>`:''}<button data-pick="bases" data-index="${i}">底材</button>${category==='idols'?`<button data-pick="pair_bases" data-index="${i}">两项层底材</button>`:''}<button data-delete="${i}" aria-label="移除此分组">×</button>`;
     const bases=g.bases.length?chips(g.bases,'bases',g.type):'<small>底材不限</small>';
     let note=category==='equipment'?`${g.affixes.length}个目标；单目标T7${g.affixes.length>=2?'＋整池至少两目标T7':''}。`:category==='idols'?'一项开始；两项灵感；普通目标阶数不限。':'';
-    if(category==='idols')note+=' 两项底材：'+(g.pair_bases?.length?g.pair_bases.map(id=>label('bases',`${g.type}:${id}`)).join('、'):'不限');
+    const pairBases=g.pair_bases??g.bases;
+    if(category==='idols')note+=' 两项底材：'+(pairBases.length?pairBases.map(id=>label('bases',`${g.type}:${id}`)).join('、'):'不限');
     const extra=[...(g.enchanted||[]),...(g.corrupted||[])];
     return `<div class="target-row"><div class="row-heading"><strong>${esc(typeName(g.type))}</strong><div class="row-actions">${commands}</div></div><div class="chips">${bases}</div>${category!=='bases'?`<div class="chips" style="margin-top:12px">${g.affixes.length?chips(g.affixes,'affixes'):'<small>尚未填写词缀；此组不会生成目标规则</small>'}</div>`:''}<p class="reference">${esc(note)}</p>${extra.length?`<p class="reference">附魔／腐化参考，不计入普通目标：${esc(extra.map(id=>`${label('affixes',id)} (${id})`).join('、'))}</p>`:''}</div>`;
   }).join('');
 }
 function renderSource(){
-  const source=build().source;
+  const source=build().requirement_sources?.[mode]||build().source;
   $('source-details').hidden=!source;
-  if(source)$('source-info').innerHTML=`<p>${esc(source.name)}</p>${(source.warnings||[]).map(w=>`<p class="warning">${esc(w)}</p>`).join('')}<p>原规则用于提取目标，原Strict潜能、FP及腐化限制不直接移入成品。</p>`;
+  if(source)$('source-info').innerHTML=`<p>${esc(source.name)}${source.scope?` · ${esc(source.scope)}`:''}</p>${(source.warnings||[]).map(w=>`<p class="warning">${esc(w)}</p>`).join('')}<p>来源提供收集目标；潜能、阶数、声音和规则顺序由我们的基底处理。</p>`;
 }
 function levelOverride(){
   const p=build().profiles.leveling;
@@ -115,7 +116,7 @@ function renderPicker(){
 function pickGroup(field,index){
   const g=profile()[category][index];
   const kind=field==='affixes'?'affixes':'bases';
-  openPicker(kind,category,g[field]||[],[g.type],values=>{
+  openPicker(kind,category,field==='pair_bases'?(g.pair_bases??g.bases):(g[field]||[]),[g.type],values=>{
     const sameBases=JSON.stringify(g.pair_bases)===JSON.stringify(g.bases);
     g[field]=values;
     if(field==='bases'&&category==='idols'&&sameBases)g.pair_bases=copy(values);
@@ -209,6 +210,22 @@ $('export-xml').onclick=async()=>{
   try{const out=await api('/api/generate',{config,mode});await download(out.xml,`LE-filter-${mode}.xml`);toast(`已导出${out.count}条规则。`);}catch(e){toast(e.message,true);}
 };
 $('save-config').onclick=async()=>{try{await download(JSON.stringify(config,null,2),'LE-filter-targets.json');}catch(e){toast(e.message,true);}};
+$('save-requirements').onclick=async()=>{
+  try{const document=await api('/api/requirements/export',{build:build(),stage:mode});await download(JSON.stringify(document,null,2),'LE-filter-requirements.json');toast(`已保存本BD的${mode==='endgame'?'终局':'练级'}需求。`);}catch(e){toast(e.message,true);}
+};
+$('import-requirements').onclick=()=>$('requirements-file').click();
+$('requirements-file').onchange=async e=>{
+  try{
+    const file=e.target.files[0];if(!file)return;
+    const data=await api('/api/requirements/import',{document:JSON.parse(await file.text())});
+    let b=config.builds.find(b=>b.id===data.id);
+    if(!b){b={id:data.id,name:data.name,enabled:false,profiles:{endgame:emptyProfile(),leveling:emptyProfile()}};config.builds.push(b);}
+    b.name=data.name;
+    data.profile.leveling_slots=copy(b.profiles[data.stage].leveling_slots);
+    b.profiles[data.stage]=data.profile;b.requirement_sources||={};b.requirement_sources[data.stage]=data.source;
+    activeId=b.id;mode=data.stage;category='uniques';view='editor';save();render();toast('已载入BD需求，修改后可保存为同一格式的JSON。');
+  }catch(e){toast(e.message,true);}finally{e.target.value='';}
+};
 $('load-config').onclick=()=>$('config-file').click();
 $('config-file').onchange=async e=>{
   try{const file=e.target.files[0];if(!file)return;const loaded=JSON.parse(await file.text());await api('/api/validate',{config:loaded});config=loaded;activeId=config.main_id;view='editor';save();render();toast('已载入配置。');}catch(e){toast(e.message,true);}finally{e.target.value='';}

@@ -1,0 +1,1028 @@
+{
+  "equipment": [
+    {
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/ACwBgbEA",
+          "key": "ACwBgbEA",
+          "kind": "prefix",
+          "name": "共享·击中时施加流血几率",
+          "decoded": "406",
+          "id": 406
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/ACwBgHEA",
+          "key": "ACwBgHEA",
+          "kind": "prefix",
+          "name": "共享·流血物理抗性穿透",
+          "decoded": "408",
+          "id": 408
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/ACwBg7EA",
+          "key": "ACwBg7EA",
+          "kind": "prefix",
+          "name": "共享·提高流血持续时间",
+          "decoded": "407",
+          "id": 407
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AKwBmQ",
+          "key": "AKwBmQ",
+          "kind": "prefix",
+          "name": "活力",
+          "decoded": "505",
+          "id": 505
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/AAwRgzEA",
+          "key": "AAwRgzEA",
+          "kind": "suffix",
+          "name": "火焰抗性",
+          "decoded": "013",
+          "id": 13
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/AAwVgTEA",
+          "key": "AAwVgTEA",
+          "kind": "suffix",
+          "name": "生命",
+          "decoded": "052",
+          "id": 52
+        }
+      ],
+      "item_text": "不屈军团亵渎头冠腐烂之颅",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAwRgrALA7CQ",
+          "key": "UAwRgrALA7CQ",
+          "kind": "item",
+          "name": "不屈军团",
+          "decoded": "015471",
+          "id": 471,
+          "type": "HELMET",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/IIwBjOAWcg",
+          "key": "IIwBjOAWcg",
+          "kind": "item",
+          "name": "亵渎头冠",
+          "decoded": "1000014000",
+          "type": "HELMET",
+          "id": 14,
+          "category": "base"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAzBsIFiA",
+          "key": "UAzBsIFiA",
+          "kind": "item",
+          "name": "腐烂之颅",
+          "decoded": "006004",
+          "id": 4,
+          "type": "HELMET",
+          "category": "unique"
+        }
+      ],
+      "slot": "helmet",
+      "slot_name": "头盔"
+    },
+    {
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/ACwBgbEA",
+          "key": "ACwBgbEA",
+          "kind": "prefix",
+          "name": "共享·击中时施加流血几率",
+          "decoded": "406",
+          "id": 406
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/ACwBgHEA",
+          "key": "ACwBgHEA",
+          "kind": "prefix",
+          "name": "共享·流血物理抗性穿透",
+          "decoded": "408",
+          "id": 408
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/ACwBg7EA",
+          "key": "ACwBg7EA",
+          "kind": "prefix",
+          "name": "共享·提高流血持续时间",
+          "decoded": "407",
+          "id": 407
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AKwBmQ",
+          "key": "AKwBmQ",
+          "kind": "prefix",
+          "name": "活力",
+          "decoded": "505",
+          "id": 505
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/AAwVgTEA",
+          "key": "AAwVgTEA",
+          "kind": "suffix",
+          "name": "生命",
+          "decoded": "052",
+          "id": 52
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AIwTgTEA",
+          "key": "AIwTgTEA",
+          "kind": "prefix",
+          "name": "+1骷髅上限与提高骷髅伤害",
+          "decoded": "192",
+          "id": 192
+        }
+      ],
+      "item_text": "奥诺斯·图尔的紧身衣",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAzCMIDiA",
+          "key": "UAzCMIDiA",
+          "kind": "item",
+          "name": "奥诺斯·图尔的紧身衣",
+          "decoded": "001008",
+          "id": 8,
+          "type": "BODY_ARMOR",
+          "category": "unique"
+        }
+      ],
+      "slot": "body",
+      "slot_name": "胸甲"
+    },
+    {
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AJwFgrEA",
+          "key": "AJwFgrEA",
+          "kind": "prefix",
+          "name": "召唤物范围与伤害",
+          "decoded": "945",
+          "id": 945
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/AAwZgbEA",
+          "key": "AAwZgbEA",
+          "kind": "suffix",
+          "name": "复合生命",
+          "decoded": "036",
+          "id": 36
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AOwRgDEA",
+          "key": "AOwRgDEA",
+          "kind": "prefix",
+          "name": "持续伤害附加的实验性护甲",
+          "decoded": "710",
+          "id": 710
+        }
+      ],
+      "item_text": "鲜血鸟栖永恒臂铠",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAzCcGZwJiA",
+          "key": "UAzCcGZwJiA",
+          "kind": "item",
+          "name": "鲜血鸟栖",
+          "decoded": "009332",
+          "id": 332,
+          "type": "GLOVES",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/IIwBhBYWAmMSA",
+          "key": "IIwBhBYWAmMSA",
+          "kind": "item",
+          "name": "永恒臂铠",
+          "decoded": "1004012000",
+          "type": "GLOVES",
+          "id": 12,
+          "category": "base"
+        }
+      ],
+      "slot": "gloves",
+      "slot_name": "手套"
+    },
+    {
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AAwJgbEA",
+          "key": "AAwJgbEA",
+          "kind": "prefix",
+          "name": "召唤物伤害",
+          "decoded": "026",
+          "id": 26
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/AAwZgbEA",
+          "key": "AAwZgbEA",
+          "kind": "suffix",
+          "name": "复合生命",
+          "decoded": "036",
+          "id": 36
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/AAwJg7EA",
+          "key": "AAwJg7EA",
+          "kind": "suffix",
+          "name": "提高冷却恢复速度",
+          "decoded": "027",
+          "id": 27
+        }
+      ],
+      "item_text": "酿酒大师的皮带扣",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAwRgTALCBsQ",
+          "key": "UAwRgTALCBsQ",
+          "kind": "item",
+          "name": "酿酒大师的皮带扣",
+          "decoded": "012416",
+          "id": 416,
+          "type": "BELT",
+          "category": "unique"
+        }
+      ],
+      "slot": "belt",
+      "slot_name": "腰带"
+    },
+    {
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AKwBmQ",
+          "key": "AKwBmQ",
+          "kind": "prefix",
+          "name": "活力",
+          "decoded": "505",
+          "id": 505
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AGwdgnEA",
+          "key": "AGwdgnEA",
+          "kind": "prefix",
+          "name": "使用穿越技能传送的实验性随从",
+          "decoded": "679",
+          "id": 679
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/AAwZgbEA",
+          "key": "AAwZgbEA",
+          "kind": "suffix",
+          "name": "复合生命",
+          "decoded": "036",
+          "id": 36
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/AAwJg7EA",
+          "key": "AAwJg7EA",
+          "kind": "suffix",
+          "name": "提高冷却恢复速度",
+          "decoded": "027",
+          "id": 27
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AAwJgHEA",
+          "key": "AAwJgHEA",
+          "kind": "prefix",
+          "name": "移动速度",
+          "decoded": "028",
+          "id": 28
+        }
+      ],
+      "item_text": "山之麓 死亡之舞 被抹灭者的降临 火龙靴",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAzBMoVgZiA",
+          "key": "UAzBMoVgZiA",
+          "kind": "item",
+          "name": "山之麓",
+          "decoded": "002253",
+          "id": 253,
+          "type": "BOOTS",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAzCMBYHYDYg",
+          "key": "UAzCMBYHYDYg",
+          "kind": "item",
+          "name": "死亡之舞",
+          "decoded": "001476",
+          "id": 476,
+          "type": "BOOTS",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAzBMoTgNiA",
+          "key": "UAzBMoTgNiA",
+          "kind": "item",
+          "name": "被抹灭者的降临",
+          "decoded": "002296",
+          "id": 296,
+          "type": "BOOTS",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAzBswTgRiA",
+          "key": "UAzBswTgRiA",
+          "kind": "item",
+          "name": "火龙靴",
+          "decoded": "006091",
+          "id": 91,
+          "type": "BOOTS",
+          "category": "unique"
+        }
+      ],
+      "slot": "boots",
+      "slot_name": "靴子"
+    },
+    {
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AAwJgbEA",
+          "key": "AAwJgbEA",
+          "kind": "prefix",
+          "name": "召唤物伤害",
+          "decoded": "026",
+          "id": 26
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AKwBgTEA",
+          "key": "AKwBgTEA",
+          "kind": "prefix",
+          "name": "智力",
+          "decoded": "502",
+          "id": 502
+        }
+      ],
+      "item_text": "破碎世界 被抹灭侍祭的野心 矮人血液",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAwNgTALAjAzEA",
+          "key": "UAwNgTALAjAzEA",
+          "kind": "item",
+          "name": "破碎世界",
+          "decoded": "062413",
+          "id": 413,
+          "type": "RELIC",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAwRgTAzMxA",
+          "key": "UAwRgTAzMxA",
+          "kind": "item",
+          "name": "被抹灭侍祭的野心",
+          "decoded": "012300",
+          "id": 300,
+          "type": "RELIC",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/IIwBgTGLAHCdA",
+          "key": "IIwBgTGLAHCdA",
+          "kind": "item",
+          "name": "矮人血液",
+          "decoded": "1022018000",
+          "type": "RELIC",
+          "id": 18,
+          "category": "base"
+        }
+      ],
+      "slot": "relic",
+      "slot_name": "遗物"
+    },
+    {
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/AAwTgHEA",
+          "key": "AAwTgHEA",
+          "kind": "suffix",
+          "name": "召唤物持续伤害",
+          "decoded": "098",
+          "id": 98
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/AOwRgnEA",
+          "key": "AOwRgnEA",
+          "kind": "suffix",
+          "name": "你与你的召唤物物理抗性穿透",
+          "decoded": "719",
+          "id": 719
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/AAwVmQ",
+          "key": "AAwVmQ",
+          "kind": "suffix",
+          "name": "所有属性",
+          "decoded": "050",
+          "id": 50
+        }
+      ],
+      "item_text": "蜂农梳鲜血滋味双纽线天平",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAzDMwdgTiA",
+          "key": "UAzDMwdgTiA",
+          "kind": "item",
+          "name": "蜂农梳",
+          "decoded": "003079",
+          "id": 79,
+          "type": "ONE_HANDED_MACES",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAzBMYTiA",
+          "key": "UAzBMYTiA",
+          "kind": "item",
+          "name": "鲜血滋味",
+          "decoded": "002029",
+          "id": 29,
+          "type": "ONE_HANDED_AXE",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAzCcCYDZSA",
+          "key": "UAzCcCYDZSA",
+          "kind": "item",
+          "name": "双纽线天平",
+          "decoded": "009269",
+          "id": 269,
+          "type": "TWO_HANDED_AXE",
+          "category": "unique"
+        }
+      ],
+      "slot": "weapon1",
+      "slot_name": "主手"
+    },
+    {
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AAwJgbEA",
+          "key": "AAwJgbEA",
+          "kind": "prefix",
+          "name": "召唤物伤害",
+          "decoded": "026",
+          "id": 26
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/AAwDmQ",
+          "key": "AAwDmQ",
+          "kind": "suffix",
+          "name": "元素抗性",
+          "decoded": "080",
+          "id": 80
+        }
+      ],
+      "item_text": "先祖集群之骨西纳提亚的亡者复苏 蜂农烟熏器 被抹灭者的摇篮",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAwRgzALBDsQ",
+          "key": "UAwRgzALBDsQ",
+          "kind": "item",
+          "name": "先祖集群之骨",
+          "decoded": "013447",
+          "id": 447,
+          "type": "CATALYST",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAwRjHYSA",
+          "key": "UAwRjHYSA",
+          "kind": "item",
+          "name": "西纳提亚的亡者复苏",
+          "decoded": "011171",
+          "id": 171,
+          "type": "SHIELD",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAwJmwdgo",
+          "key": "UAwJmwdgo",
+          "kind": "item",
+          "name": "蜂农烟熏器",
+          "decoded": "020077",
+          "id": 77,
+          "type": "CATALYST",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAzCMCYE4FYg",
+          "key": "UAzCMCYE4FYg",
+          "kind": "item",
+          "name": "被抹灭者的摇篮",
+          "decoded": "001295",
+          "id": 295,
+          "type": "SHIELD",
+          "category": "unique"
+        }
+      ],
+      "slot": "weapon2",
+      "slot_name": "副手"
+    },
+    {
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AKwBgTEA",
+          "key": "AKwBgTEA",
+          "kind": "prefix",
+          "name": "智力",
+          "decoded": "502",
+          "id": 502
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AAwJgbEA",
+          "key": "AAwJgbEA",
+          "kind": "prefix",
+          "name": "召唤物伤害",
+          "decoded": "026",
+          "id": 26
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/ABwJgrEA",
+          "key": "ABwJgrEA",
+          "kind": "suffix",
+          "name": "增加生命与生命再生",
+          "decoded": "825",
+          "id": 825
+        }
+      ],
+      "item_text": "空心手指 不息狂怒",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAzDswNgo",
+          "key": "UAzDswNgo",
+          "kind": "item",
+          "name": "空心手指",
+          "decoded": "007066",
+          "id": 66,
+          "type": "RING",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAwRmBYHZKA",
+          "key": "UAwRmBYHZKA",
+          "kind": "item",
+          "name": "不息狂怒",
+          "decoded": "010477",
+          "id": 477,
+          "type": "RING",
+          "category": "unique"
+        }
+      ],
+      "slot": "ring1",
+      "slot_name": "戒指1"
+    },
+    {
+      "affixes": [],
+      "item_text": "空心手指",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAzDswNgo",
+          "key": "UAzDswNgo",
+          "kind": "item",
+          "name": "空心手指",
+          "decoded": "007066",
+          "id": 66,
+          "type": "RING",
+          "category": "unique"
+        }
+      ],
+      "slot": "ring2",
+      "slot_name": "戒指2"
+    },
+    {
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AIwBgHArEA",
+          "key": "AIwBgHArEA",
+          "kind": "prefix",
+          "name": "敏捷转化为狡诈",
+          "decoded": "1085",
+          "id": 1085
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AIwBgHAbEA",
+          "key": "AIwBgHAbEA",
+          "kind": "prefix",
+          "name": "协调转化为冷漠",
+          "decoded": "1086",
+          "id": 1086
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AJwFgrEA",
+          "key": "AJwFgrEA",
+          "kind": "prefix",
+          "name": "召唤物范围与伤害",
+          "decoded": "945",
+          "id": 945
+        }
+      ],
+      "item_text": "永恒之池 流亡猪猡的珍珠 洛吉的渴望 进化终焉",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAwRmBYHYGYg",
+          "key": "UAwRmBYHYGYg",
+          "kind": "item",
+          "name": "永恒之池",
+          "decoded": "010473",
+          "id": 473,
+          "type": "AMULET",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAzAcBYDYE4g",
+          "key": "UAzAcBYDYE4g",
+          "kind": "item",
+          "name": "流亡",
+          "decoded": "008469",
+          "id": 469,
+          "type": "AMULET",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAzDsGZQFiA",
+          "key": "UAzDsGZQFiA",
+          "kind": "item",
+          "name": "猪猡的珍珠",
+          "decoded": "007374",
+          "id": 374,
+          "type": "AMULET",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAzDsEYDYBYg",
+          "key": "UAzDsEYDYBYg",
+          "kind": "item",
+          "name": "洛吉的渴望",
+          "decoded": "007164",
+          "id": 164,
+          "type": "AMULET",
+          "category": "unique"
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/UAwRgrALFQ",
+          "key": "UAwRgrALFQ",
+          "kind": "item",
+          "name": "进化终焉",
+          "decoded": "015444",
+          "id": 444,
+          "type": "AMULET",
+          "category": "unique"
+        }
+      ],
+      "slot": "amulet",
+      "slot_name": "护身符"
+    },
+    {
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AIwBgnALEA",
+          "key": "AIwBgnALEA",
+          "kind": "prefix",
+          "name": "折射栏位神像后缀效果",
+          "decoded": "1094",
+          "id": 1094
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AIwBgHAnEA",
+          "key": "AIwBgHAnEA",
+          "kind": "prefix",
+          "name": "折射栏位神像前缀与后缀效果",
+          "decoded": "1089",
+          "id": 1089
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/AIzAMCYg",
+          "key": "AIzAMCYg",
+          "kind": "suffix",
+          "name": "护甲自每个折射栏位的神像",
+          "decoded": "1102",
+          "id": 1102
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/AIzAMqA",
+          "key": "AIzAMqA",
+          "kind": "suffix",
+          "name": "生命自每个折射栏位的神像",
+          "decoded": "1100",
+          "id": 1100
+        }
+      ],
+      "item_text": "黄金祭坛",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/IIwBgLKwEwrQ",
+          "key": "IIwBgLKwEwrQ",
+          "kind": "item",
+          "name": "黄金祭坛",
+          "decoded": "1041012000",
+          "type": "IDOL_ALTAR",
+          "id": 12,
+          "category": "base"
+        }
+      ],
+      "slot": "idol_altar",
+      "slot_name": "神像祭坛"
+    }
+  ],
+  "idols": [
+    {
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/ABwNgTEA",
+          "key": "ABwNgTEA",
+          "kind": "prefix",
+          "name": "活力与增加生命再生",
+          "decoded": "862",
+          "id": 862
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/ABwdgDEA",
+          "key": "ABwdgDEA",
+          "kind": "suffix",
+          "name": "物理抗性与召唤物物理抗性",
+          "decoded": "870",
+          "id": 870
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/ABwNmQ",
+          "key": "ABwNmQ",
+          "kind": "suffix",
+          "name": "虚空抗性与召唤物虚空抗性",
+          "decoded": "868",
+          "id": 868
+        }
+      ],
+      "item_text": "谦卑编织者神像 x9",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/IIwBgTA7CKtQ",
+          "key": "IIwBgTA7CKtQ",
+          "kind": "item",
+          "name": "谦卑编织者神像",
+          "decoded": "1027001000",
+          "type": "IDOL_2x1",
+          "id": 1,
+          "category": "base"
+        }
+      ],
+      "slot": "idol1",
+      "slot_name": ""
+    },
+    {
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/ABwFgTEA",
+          "key": "ABwFgTEA",
+          "kind": "prefix",
+          "name": "护甲与提高护甲",
+          "decoded": "842",
+          "id": 842
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/ABwVhQ",
+          "key": "ABwVhQ",
+          "kind": "suffix",
+          "name": "闪电抗性与召唤物闪电抗性",
+          "decoded": "855",
+          "id": 855
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/ABwVgjEA",
+          "key": "ABwVgjEA",
+          "kind": "suffix",
+          "name": "元素抗性与召唤物元素抗性",
+          "decoded": "851",
+          "id": 851
+        }
+      ],
+      "item_text": "中型编织者神像 x3",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/IIwBgTAbCKtQ",
+          "key": "IIwBgTAbCKtQ",
+          "kind": "item",
+          "name": "中型编织者神像",
+          "decoded": "1026001000",
+          "type": "IDOL_1x1_LAGON",
+          "id": 1,
+          "category": "base"
+        }
+      ],
+      "slot": "idol2",
+      "slot_name": ""
+    },
+    {
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/prefixes/AEwNhQ",
+          "key": "AEwNhQ",
+          "kind": "prefix",
+          "name": "提高腐朽光环范围",
+          "decoded": "266",
+          "id": 266
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/zh/suffixes/AEwDg7EA",
+          "key": "AEwDg7EA",
+          "kind": "suffix",
+          "name": "召唤物击中时施加死亡标记几率",
+          "decoded": "287",
+          "id": 287
+        }
+      ],
+      "item_text": "大型幽冥预兆神像",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/zh/items/IIwBgzCLBlA",
+          "key": "IIwBgzCLBlA",
+          "kind": "item",
+          "name": "大型幽冥预兆神像",
+          "decoded": "1030013000",
+          "type": "IDOL_1x3",
+          "id": 13,
+          "category": "base"
+        }
+      ],
+      "slot": "idol3",
+      "slot_name": ""
+    }
+  ],
+  "leveling": {
+    "bases": [
+      {
+        "href": "https://www.lastepochtools.com/db/zh/items/IIwBgTKIOwrQ",
+        "key": "IIwBgTKIOwrQ",
+        "kind": "item",
+        "name": "绿松石戒指",
+        "decoded": "1021007000",
+        "type": "RING",
+        "id": 7,
+        "category": "base"
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/zh/items/IIwBgTGLArCdA",
+        "key": "IIwBgTGLArCdA",
+        "kind": "item",
+        "name": "符文骸骨",
+        "decoded": "1022015000",
+        "type": "RELIC",
+        "id": 15,
+        "category": "base"
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/zh/items/IIwBgTGLAHCdA",
+        "key": "IIwBgTGLAHCdA",
+        "kind": "item",
+        "name": "矮人血液",
+        "decoded": "1022018000",
+        "type": "RELIC",
+        "id": 18,
+        "category": "base"
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/zh/items/IIwBmCYRBmKSA",
+        "key": "IIwBmCYRBmKSA",
+        "kind": "item",
+        "name": "钩镰斧",
+        "decoded": "1012003000",
+        "type": "TWO_HANDED_AXE",
+        "id": 3,
+        "category": "base"
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/zh/items/IIwBhFYwFjEg",
+        "key": "IIwBhFYwFjEg",
+        "kind": "item",
+        "name": "镰刀",
+        "decoded": "1005004000",
+        "type": "ONE_HANDED_AXE",
+        "id": 4,
+        "category": "base"
+      }
+    ],
+    "targets": [
+      {
+        "href": "https://www.lastepochtools.com/db/zh/prefixes/AAwJgbEA",
+        "key": "AAwJgbEA",
+        "kind": "prefix",
+        "name": "召唤物伤害",
+        "decoded": "026",
+        "id": 26
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/zh/prefixes/AJwFgrEA",
+        "key": "AJwFgrEA",
+        "kind": "prefix",
+        "name": "召唤物范围与伤害",
+        "decoded": "945",
+        "id": 945
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/zh/suffixes/AAwTgHEA",
+        "key": "AAwTgHEA",
+        "kind": "suffix",
+        "name": "召唤物持续伤害",
+        "decoded": "098",
+        "id": 98
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/zh/suffixes/AGwFgzEA",
+        "key": "AGwFgzEA",
+        "kind": "suffix",
+        "name": "召唤物近战与法术伤害",
+        "decoded": "643",
+        "id": 643
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/zh/prefixes/AKwBgTEA",
+        "key": "AKwBgTEA",
+        "kind": "prefix",
+        "name": "智力",
+        "decoded": "502",
+        "id": 502
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/zh/suffixes/AAwFgrEA",
+        "key": "AAwFgrEA",
+        "kind": "suffix",
+        "name": "物理抗性",
+        "decoded": "045",
+        "id": 45
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/zh/prefixes/AAwJgHEA",
+        "key": "AAwJgHEA",
+        "kind": "prefix",
+        "name": "移动速度",
+        "decoded": "028",
+        "id": 28
+      },
+      {
+        "href": "https://www.lastepochtools.com/db/zh/suffixes/AAwJg7EA",
+        "key": "AAwJg7EA",
+        "kind": "suffix",
+        "name": "提高冷却恢复速度",
+        "decoded": "027",
+        "id": 27
+      }
+    ]
+  },
+  "title": "死灵法师 流血骷髅游荡者 构建指南",
+  "url": "https://www.lastepochtools.com/build-guides/guide-zh-835",
+  "variants": [
+    {
+      "name": "无法血通用",
+      "overview": "无法血，开荒版本。",
+      "planner": "https://www.lastepochtools.com/planner/zh/QDxaxj0G",
+      "pos": "2"
+    },
+    {
+      "name": "36级进时间线",
+      "overview": "实际打到这里用时1小时56分",
+      "planner": "https://www.lastepochtools.com/planner/zh/oR63YW7N",
+      "pos": "3"
+    },
+    {
+      "name": "70级进强化",
+      "overview": "实际打到这里用时4小时30分",
+      "planner": "https://www.lastepochtools.com/planner/zh/QWXYGeO2",
+      "pos": "4"
+    },
+    {
+      "name": "87级过普波",
+      "overview": "实际打到这里用时7小时52分",
+      "planner": "https://www.lastepochtools.com/planner/zh/Qqwx84E0",
+      "pos": "5"
+    },
+    {
+      "name": "极低配超波",
+      "overview": "多走位多绕圈，别躲太远打贪一点反而简单",
+      "planner": "https://www.lastepochtools.com/planner/zh/BrXYWLZm",
+      "pos": "6"
+    },
+    {
+      "name": "刷图模式&生存向",
+      "overview": "找点肉，找满爆抗的版本。",
+      "planner": "https://www.lastepochtools.com/planner/zh/ApbRb73w",
+      "pos": "7"
+    },
+    {
+      "name": "UA/纯单体结算",
+      "overview": "使用鲜血滋味 进行结算流血的版本。适合UA。",
+      "planner": "https://www.lastepochtools.com/planner/zh/oR639pZx",
+      "pos": "8"
+    }
+  ],
+  "source_updated": "2026-10-06",
+  "extracted_on": "2026-10-07",
+  "scope": "public recommendation tables; variant planners indexed separately",
+  "decoder": {
+    "package": "lz-string",
+    "version": "1.5.0",
+    "method": "decompressFromEncodedURIComponent(key.slice(1))"
+  }
+}

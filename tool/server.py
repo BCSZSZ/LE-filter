@@ -10,6 +10,7 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 
 from engine import bootstrap, extract, generate, validate_profile
+from requirements import read_document, write_document
 
 WEB = Path(__file__).parent / "web"
 DOWNLOADS = {}
@@ -52,7 +53,7 @@ class Handler(BaseHTTPRequestHandler):
             payload = json.loads(self.rfile.read(size))
             if self.path == "/api/download":
                 name = payload["name"]
-                if name not in {"LE-filter-endgame.xml", "LE-filter-leveling.xml", "LE-filter-targets.json"}:
+                if name not in {"LE-filter-endgame.xml", "LE-filter-leveling.xml", "LE-filter-targets.json", "LE-filter-requirements.json"}:
                     raise ValueError("下载文件名不正确。")
                 token = uuid.uuid4().hex
                 mime = "application/xml" if name.endswith(".xml") else "application/json"
@@ -62,6 +63,10 @@ class Handler(BaseHTTPRequestHandler):
                 return self.reply({"url": "/download/" + token})
             if self.path == "/api/import":
                 return self.reply(extract(payload["xml"], payload.get("assignments")))
+            if self.path == "/api/requirements/import":
+                return self.reply(read_document(payload["document"]))
+            if self.path == "/api/requirements/export":
+                return self.reply(write_document(payload["build"], payload["stage"]))
             if self.path == "/api/generate":
                 return self.reply(generate(payload["config"], payload.get("mode", "endgame")))
             if self.path == "/api/validate":

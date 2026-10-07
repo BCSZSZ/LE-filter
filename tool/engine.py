@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from extract_raxx_variables import family, gate_text, inspect_rule
-from generate_filter import XSI, condition, frozen, read_json, replace_ints, signature, T7_SLOTS
+from generate_filter import XSI, condition, frozen, read_json, replace_ints, signature
 from generate_current_filter import ALERTS
 
 CATALOG = read_json("sources/tool-catalog.json")
@@ -147,7 +147,7 @@ def validate_profile(profile):
     for category in ["equipment", "altars", "idols", "bases"]:
         for g in profile[category]:
             typ = g["type"]
-            allowed = typ in T7_SLOTS if category in {"equipment", "bases"} else typ == "IDOL_ALTAR" if category == "altars" else typ.startswith("IDOL_") and typ != "IDOL_ALTAR"
+            allowed = typ in MANIFEST["scope_types"] if category in {"equipment", "bases"} else typ == "IDOL_ALTAR" if category == "altars" else typ.startswith("IDOL_") and typ != "IDOL_ALTAR"
             if not allowed:
                 raise ValueError(f"{category}的物品类型不正确：{typ}。")
             for bid in set(g["bases"] + g.get("pair_bases", [])):

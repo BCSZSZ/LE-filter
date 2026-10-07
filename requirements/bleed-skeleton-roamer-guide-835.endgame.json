@@ -1,0 +1,240 @@
+{
+  "format": "le-filter-requirements",
+  "version": 1,
+  "id": "bleed-skeleton-roamer-guide-835",
+  "name": "流血骷髅游荡者 · 攻略835",
+  "stage": "endgame",
+  "targets": {
+    "uniques": [
+      4,
+      8,
+      29,
+      66,
+      77,
+      79,
+      91,
+      164,
+      171,
+      253,
+      269,
+      295,
+      296,
+      300,
+      332,
+      374,
+      413,
+      416,
+      444,
+      447,
+      469,
+      471,
+      473,
+      476,
+      477
+    ],
+    "equipment": [
+      {
+        "type": "HELMET",
+        "bases": [],
+        "affixes": [
+          406,
+          408,
+          407,
+          505,
+          13,
+          52
+        ]
+      },
+      {
+        "type": "BODY_ARMOR",
+        "bases": [],
+        "affixes": [
+          406,
+          408,
+          407,
+          505,
+          52,
+          192
+        ]
+      },
+      {
+        "type": "GLOVES",
+        "bases": [],
+        "affixes": [
+          945,
+          36,
+          710
+        ]
+      },
+      {
+        "type": "BELT",
+        "bases": [],
+        "affixes": [
+          26,
+          36,
+          27
+        ]
+      },
+      {
+        "type": "BOOTS",
+        "bases": [],
+        "affixes": [
+          505,
+          679,
+          36,
+          27,
+          28
+        ]
+      },
+      {
+        "type": "RELIC",
+        "bases": [],
+        "affixes": [
+          26,
+          502
+        ]
+      },
+      {
+        "type": "ONE_HANDED_MACES",
+        "bases": [],
+        "affixes": [
+          719
+        ]
+      },
+      {
+        "type": "ONE_HANDED_AXE",
+        "bases": [],
+        "affixes": [
+          98,
+          719
+        ]
+      },
+      {
+        "type": "TWO_HANDED_AXE",
+        "bases": [],
+        "affixes": [
+          98,
+          719,
+          50
+        ]
+      },
+      {
+        "type": "CATALYST",
+        "bases": [],
+        "affixes": [
+          26,
+          80
+        ]
+      },
+      {
+        "type": "SHIELD",
+        "bases": [],
+        "affixes": [
+          80
+        ]
+      },
+      {
+        "type": "RING",
+        "bases": [],
+        "affixes": [
+          502,
+          26,
+          825
+        ]
+      },
+      {
+        "type": "AMULET",
+        "bases": [],
+        "affixes": [
+          945
+        ],
+        "corrupted": [
+          1085,
+          1086
+        ]
+      }
+    ],
+    "altars": [
+      {
+        "type": "IDOL_ALTAR",
+        "bases": [
+          12
+        ],
+        "affixes": [
+          1094,
+          1089,
+          1102,
+          1100
+        ]
+      }
+    ],
+    "idols": [
+      {
+        "type": "IDOL_2x1",
+        "bases": [
+          1
+        ],
+        "affixes": [
+          862,
+          870,
+          868
+        ]
+      },
+      {
+        "type": "IDOL_1x1_LAGON",
+        "bases": [
+          1
+        ],
+        "affixes": [
+          842,
+          855,
+          851
+        ]
+      },
+      {
+        "type": "IDOL_1x3",
+        "bases": [
+          13
+        ],
+        "affixes": [
+          266,
+          287
+        ]
+      }
+    ],
+    "bases": [
+      {
+        "type": "HELMET",
+        "bases": [
+          14
+        ]
+      },
+      {
+        "type": "GLOVES",
+        "bases": [
+          12
+        ]
+      },
+      {
+        "type": "RELIC",
+        "bases": [
+          18
+        ]
+      }
+    ]
+  },
+  "source": {
+    "name": "死灵法师 流血骷髅游荡者 构建指南",
+    "url": "https://www.lastepochtools.com/build-guides/guide-zh-835",
+    "updated": "2026-10-06",
+    "scope": "公共装备与神像推荐表，包含替代候选；不绑定单一变体",
+    "sha256": "aa964dc554078bf8fb20b856515f683db13a1d359734af5b6965195ac701ce9f",
+    "warnings": [
+      "本文件收集公共推荐表中的替代品，并不表示这些装备需要同时穿戴。",
+      "表中生命链接实际为提高生命52；按链接ID保存，未改成增加生命51。",
+      "护身符1085、1086只存腐化参考，不计普通目标。",
+      "大型幽冥预兆神像保留266、287；预兆允许更大神像的词缀。",
+      "练级目标未填；原文练级段与七个变体已留作独立来源，未混入终局。"
+    ]
+  }
+}

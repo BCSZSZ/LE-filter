@@ -1,5 +1,7 @@
 # LE-filter 工作约束
 
+- 共通BD需求格式见`docs/REQUIREMENTS_FORMAT.md`，适配器`tool/requirements.py`；一个BD／一个阶段只保存五类目标和可选来源，不存基底提示、主副、R分段。JSON回读同id替换该阶段目标，保留另一阶段和已填写练级分段。网页入口区分“BD需求JSON”和整套“配置”。
+- 新攻略样本`requirements/bleed-skeleton-roamer-guide-835.endgame.json`使用公共推荐表，含替代品，未绑定单一变体；重建脚本`scripts/build_guide_835_requirements.py`只读冻结已解码来源与词库。原链接压缩key、数字ID、练级目标和七个变体索引在`sources/builds/letools-guide-zh-835-extracted.json`。正文新增胸甲192不反写旧Strict。1085／1086腐化仅参考，Omen266不能按普通尺寸可出范围删去。装备类型校验采用基底全部23类，不沿用旧双BD脚本11类T7_SLOTS。
 - 最新交付是`tool/`本地目标工作台，启动与六类目标接口见`docs/TOOL_GUIDE.md`。新生成结果由`tool/engine.py`产生，不执行旧生成器主程序覆盖历史XML。内置两BD示例180条（173启用）；已落实整池双目标T7、骷髅一项神像与剥离4／6计数。以下162条v3描述是历史快照状态。
 - 工具运行期使用冻结`sources/tool-catalog.json`，不依赖`.cache`或网络；`scripts/build_tool_catalog.py`仅在开发时从已验证哈希的缓存重建词库。未知ID不能猜普通。导入只移目标情报，来源门槛不能覆盖基底门槛。
 - 每BD的`profiles.endgame`与`profiles.leveling`独立；练级`leveling_slots`按原R编号覆盖目标，保持Raxx原等级、阶数、数量等门槛，未填沿用原示例。不从终局猜练级目标。终局XML中也应用明确填写的练级段；空的原R136／137入口默认关闭。

@@ -4,6 +4,11 @@
 
 ## 最新交付：本地目标工作台
 
+- 已建立共通“需求JSON”，见REQUIREMENTS_FORMAT；一个BD／一个阶段，五类targets与可选source，剥离主副身份、声音、LP、T7与等级门槛。`tool/requirements.py`校验及互转；网页“导入BD需求JSON”“保存本BD需求JSON”与右上整套配置备份分开。同id仅替换该阶段五类目标／来源，保留另一个阶段、勾选和R分段覆盖；附魔／腐化及两项层底材范围保留。
+- 攻略835可正常读取，包括公共装备／神像表和动态七变体。原链接key用lz-string 1.5.0的`decompressFromEncodedURIComponent(key.slice(1))`解码：A为词缀ID；U六位结果末三位为uniqueID，含套装；I十位中第2–4位为类型、第5–7位为底材。已解码来源快照保存原href／key／decoded及练级8目标、5底材和七变体索引；运行重建不需要lz-string／网络／.cache。
+- 本次独立BD为公共推荐表“流血骷髅游荡者”，25暗金／套装、13装备组、3神像组、1黄金祭坛、3普通制作底材。需求JSON和中文审阅表由`build_guide_835_requirements.py`重建。它不修改旧Maxroll来源：胸甲192来自本次Guide，52以链接实值“提高生命”保存；1085／1086为护身符腐化参考，945才普通目标。主手／副手按列出装备类型投影普通词缀池。预兆266来自巨型普通池，但官方说明Omen可有更大神像的词缀；保留266＋287及大型幽冥预兆底材13。攻略×9／×3数量不写过滤条件。没有把公共表说成某个变体最终穿戴，也未生成最终XML文件。
+- 为使该JSON可转换，修正`validate_profile`原误用历史双BD11类T7_SLOTS的限制，改用冻结基底scope_types全部23类，允许攻略明确列出的单手锤、法器和盾牌。冻结词库、基底及历史XML不变；新增JSON往返、源数据核对和新装备类型有限匹配测试。
+- 本轮13项自动测试通过；真实浏览器验证攻略需求导入、删除868后下载确实只有该词缀移除、原JSON回读恢复、同id终局导入保留独立练级98与R154覆盖及其他BD／主副状态。测试变更已恢复，新BD保留为未勾选可编辑条目。网页导出JSON与源需求完全相等；HTTP导入／导出相等，独立转换在内存中141条／134启用，没有写最终XML。截图`docs/images/requirements-preview.png`显示实际三组神像及JSON入口。
 - 启动`start-tool.cmd`或`python -X utf8 tool/server.py --open`，地址127.0.0.1:8765。纯Python标准库＋静态HTML/CSS/JS，无需安装依赖；只绑定本机。使用说明见TOOL_GUIDE。界面有暗金、装备词条、祭坛、神像、定向底材、练级分段六入口，列表中文／英文／ID搜索，多BD勾选，主粉副蓝共享主，规则预览和XML导出。浏览器保存与JSON备份／回读。
 - `tool/engine.py`导入XML并分类，标准Maxroll按原family识别；任意其他filter可在导入界面手动指定来源规则类别。不沿用Strict收集门槛。源码X编号按XML物理次序记录，不混称实际优先级。未知词缀／暗金ID提示并阻止未经确认的生成。
 - `sources/tool-catalog.json`冻结1156词缀、489暗金／套装、918底材，来自原已验证version150快照；保留源URL／哈希。`scripts/build_tool_catalog.py`开发时从`.cache`重建，运行期不需要缓存或网络。查询时按类型可用范围筛选，但源目标全部保留，包括源文件中潜在可出现部位差异，不静默删池。旧／隐藏条目默认隐藏，已选者仍显示。
@@ -12,7 +17,7 @@
 - 每BD`profiles.endgame`与`profiles.leveling`独立。第6项写在`profiles.leveling.leveling_slots`，key为原R编号；只替换目标与明确指定的类型／底材，原等级、阶数、数量、其他条件不变。未填沿用原例，R136／137空类型默认关闭，先配置再启用。终局输出也应用已填写练级段，练级输出用独立目标。不要从终局推断练级路线。原多类型底材入口可通过JSON明确类型，界面支持单类型底材和原多类型词缀池。
 - 生成内存XML，删除56条蓝字说明，保留其他固定规则及关闭功能；通用高价值层不按BD裁剪，T7全1156池。主副同条件合并，保持主归属；超过200条明确报错，不截断。XML物理反序、Order连续升序。静音Sound1／MapIcon1／NONE保留原颜色，其他四档沿用冻结ALERTS ID。
 - 服务接口`GET /api/bootstrap`，`POST /api/import`、`/api/generate`、`/api/validate`；标准HTTP附件下载短期存在内存中，不写用户源文件，兼容Codex内置浏览器。只接受同源写请求，文件20MB上限。浏览器端渲染转义用户名称与源规则文字。
-- 测试`python -X utf8 -m unittest discover -s tool -v`目前8项通过，含源情报、整池计数、T8、神像普通计数、LP／WW、阶段开关、主副共享、原练级门槛、200条报错与确定性。浏览器实际验证Very Strict上传、英文／中文搜索、独立练级修改、JSON下载／回读、BD勾选／主副切换和终局／练级XML下载。没有游戏客户端实测。不要执行旧`generate_current_filter.py`主程序去覆盖162条快照；新工具只读复用其中ALERTS和其他旧脚本纯帮助函数。
+- 测试`python -X utf8 -m unittest discover -s tool -v`目前13项通过，含原8项源情报、整池计数、T8、神像普通计数、LP／WW、阶段开关、主副共享、原练级门槛、200条报错与确定性，新增5项共通需求与攻略样本验证。浏览器实际验证Very Strict上传、英文／中文搜索、独立练级修改、JSON下载／回读、BD勾选／主副切换和终局／练级XML下载。没有游戏客户端实测。不要执行旧`generate_current_filter.py`主程序去覆盖162条快照；新工具只读复用其中ALERTS和其他旧脚本纯帮助函数。
 
 ## 最新调查：骷髅双目标T7与常驻单目标神像，尚未改成品
 
