@@ -1,0 +1,128 @@
+{
+  "received_date": "2026-10-07",
+  "scope": "Investigation only; new export is evidence for filling the Raxx-derived base, not a filter policy to transplant.",
+  "inputs": {
+    "very_strict": {
+      "file": "sources/builds/maxroll-skeleton-necromancer-very-strict.xml",
+      "sha256": "7e9bb43a06383fad155298c642991e41cf9d125911702e46c8e508634cf55cb1",
+      "bytes": 1144872,
+      "source_attachment": "C:\\Users\\liaoweiran\\.codex\\attachments\\2c79e900-60ee-457f-96a9-f956a3711750\\Pasted text.txt"
+    },
+    "equipment_screenshot": {
+      "file": "sources/builds/skeleton-equipment-priorities.png",
+      "sha256": "a4a853ebd7eb9be59a1ad6d4e64a2451a2eef9e054396df317049a107ff5b0b4",
+      "bytes": 87767,
+      "source_attachment": "C:\\Users\\LIAOWE~1\\AppData\\Local\\Temp\\codex-clipboard-bf067a02-5557-4cc7-a321-8fc33b5dc005.png"
+    },
+    "idol_screenshot": {
+      "file": "sources/builds/skeleton-idol-priorities.png",
+      "sha256": "234aae7df50c586954bf7ce5e82b89d295594ca7baec05ec0022227f7e8cbaf1",
+      "bytes": 109400,
+      "source_attachment": "C:\\Users\\LIAOWE~1\\AppData\\Local\\Temp\\codex-clipboard-712c6d75-3e68-42df-9883-e8de93640cb3.png"
+    },
+    "strict": {
+      "file": "sources/builds/maxroll-skeleton-necromancer-strict.xml",
+      "sha256": "5033341708ab5594cfcb70448bf3c6084333f03efa4388e5d4c6f4b1409dbade"
+    }
+  },
+  "screenshot_transcription": "Affix IDs matched to frozen names after viewing both user images. Numbers preserve displayed order; no ring priorities are shown.",
+  "equipment_priorities": [
+    {
+      "type": "HELMET",
+      "ordered_affix_ids": [
+        406
+      ]
+    },
+    {
+      "type": "BODY_ARMOR",
+      "ordered_affix_ids": [
+        406,
+        192
+      ]
+    },
+    {
+      "type": "TWO_HANDED_AXE",
+      "ordered_affix_ids": [
+        98
+      ]
+    },
+    {
+      "type": "GLOVES",
+      "ordered_affix_ids": [
+        945
+      ]
+    },
+    {
+      "type": "BELT",
+      "ordered_affix_ids": [
+        36,
+        52
+      ]
+    },
+    {
+      "type": "BOOTS",
+      "ordered_affix_ids": [
+        28,
+        679
+      ]
+    }
+  ],
+  "idol_priorities": [
+    {
+      "base": "Heretical Large Immortal Idol",
+      "type": "IDOL_1x3",
+      "ordered_affix_ids": [
+        941,
+        287,
+        897
+      ],
+      "shown_count": 1
+    },
+    {
+      "base": "Humble Weaver Idol",
+      "type": "IDOL_2x1",
+      "ordered_affix_ids": [
+        862,
+        319
+      ],
+      "shown_count": 3
+    },
+    {
+      "base": "Humble Weaver Idol",
+      "type": "IDOL_2x1",
+      "ordered_affix_ids": [
+        862,
+        870
+      ],
+      "shown_count": 1
+    },
+    {
+      "base": "Minor Weaver Idol",
+      "type": "IDOL_1x1_LAGON",
+      "ordered_affix_ids": [
+        846,
+        851
+      ],
+      "shown_count": 1
+    },
+    {
+      "base": "Minor Weaver Idol",
+      "type": "IDOL_1x1_LAGON",
+      "ordered_affix_ids": [
+        846,
+        852
+      ],
+      "shown_count": 1
+    }
+  ],
+  "mechanism_sources": [
+    {
+      "url": "https://forum.lastepoch.com/t/the-woven-faction-monolith-updates-coming-to-last-epoch-april-17th/75147/1",
+      "supports": "Heretical idols have normal affixes plus separate enchanted affixes; enchanting can be rerolled."
+    },
+    {
+      "url": "https://forum.lastepoch.com/t/last-epoch-tombs-of-the-erased-patch-notes/75247/2",
+      "supports": "Experimental item crafting replaces a prefix; experimental affixes can obtain exalted tiers using Rune of Havoc."
+    }
+  ]
+}

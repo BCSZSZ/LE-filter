@@ -1,0 +1,5846 @@
+{
+  "manifest": {
+    "received_date": "2026-10-07",
+    "scope": "Investigation only; new export is evidence for filling the Raxx-derived base, not a filter policy to transplant.",
+    "inputs": {
+      "very_strict": {
+        "file": "sources/builds/maxroll-skeleton-necromancer-very-strict.xml",
+        "sha256": "7e9bb43a06383fad155298c642991e41cf9d125911702e46c8e508634cf55cb1",
+        "bytes": 1144872,
+        "source_attachment": "C:\\Users\\liaoweiran\\.codex\\attachments\\2c79e900-60ee-457f-96a9-f956a3711750\\Pasted text.txt"
+      },
+      "equipment_screenshot": {
+        "file": "sources/builds/skeleton-equipment-priorities.png",
+        "sha256": "a4a853ebd7eb9be59a1ad6d4e64a2451a2eef9e054396df317049a107ff5b0b4",
+        "bytes": 87767,
+        "source_attachment": "C:\\Users\\LIAOWE~1\\AppData\\Local\\Temp\\codex-clipboard-bf067a02-5557-4cc7-a321-8fc33b5dc005.png"
+      },
+      "idol_screenshot": {
+        "file": "sources/builds/skeleton-idol-priorities.png",
+        "sha256": "234aae7df50c586954bf7ce5e82b89d295594ca7baec05ec0022227f7e8cbaf1",
+        "bytes": 109400,
+        "source_attachment": "C:\\Users\\LIAOWE~1\\AppData\\Local\\Temp\\codex-clipboard-712c6d75-3e68-42df-9883-e8de93640cb3.png"
+      },
+      "strict": {
+        "file": "sources/builds/maxroll-skeleton-necromancer-strict.xml",
+        "sha256": "5033341708ab5594cfcb70448bf3c6084333f03efa4388e5d4c6f4b1409dbade"
+      }
+    },
+    "screenshot_transcription": "Affix IDs matched to frozen names after viewing both user images. Numbers preserve displayed order; no ring priorities are shown.",
+    "equipment_priorities": [
+      {
+        "type": "HELMET",
+        "ordered_affix_ids": [
+          406
+        ]
+      },
+      {
+        "type": "BODY_ARMOR",
+        "ordered_affix_ids": [
+          406,
+          192
+        ]
+      },
+      {
+        "type": "TWO_HANDED_AXE",
+        "ordered_affix_ids": [
+          98
+        ]
+      },
+      {
+        "type": "GLOVES",
+        "ordered_affix_ids": [
+          945
+        ]
+      },
+      {
+        "type": "BELT",
+        "ordered_affix_ids": [
+          36,
+          52
+        ]
+      },
+      {
+        "type": "BOOTS",
+        "ordered_affix_ids": [
+          28,
+          679
+        ]
+      }
+    ],
+    "idol_priorities": [
+      {
+        "base": "Heretical Large Immortal Idol",
+        "type": "IDOL_1x3",
+        "ordered_affix_ids": [
+          941,
+          287,
+          897
+        ],
+        "shown_count": 1
+      },
+      {
+        "base": "Humble Weaver Idol",
+        "type": "IDOL_2x1",
+        "ordered_affix_ids": [
+          862,
+          319
+        ],
+        "shown_count": 3
+      },
+      {
+        "base": "Humble Weaver Idol",
+        "type": "IDOL_2x1",
+        "ordered_affix_ids": [
+          862,
+          870
+        ],
+        "shown_count": 1
+      },
+      {
+        "base": "Minor Weaver Idol",
+        "type": "IDOL_1x1_LAGON",
+        "ordered_affix_ids": [
+          846,
+          851
+        ],
+        "shown_count": 1
+      },
+      {
+        "base": "Minor Weaver Idol",
+        "type": "IDOL_1x1_LAGON",
+        "ordered_affix_ids": [
+          846,
+          852
+        ],
+        "shown_count": 1
+      }
+    ],
+    "mechanism_sources": [
+      {
+        "url": "https://forum.lastepoch.com/t/the-woven-faction-monolith-updates-coming-to-last-epoch-april-17th/75147/1",
+        "supports": "Heretical idols have normal affixes plus separate enchanted affixes; enchanting can be rerolled."
+      },
+      {
+        "url": "https://forum.lastepoch.com/t/last-epoch-tombs-of-the-erased-patch-notes/75247/2",
+        "supports": "Experimental item crafting replaces a prefix; experimental affixes can obtain exalted tiers using Rune of Havoc."
+      }
+    ]
+  },
+  "strict": {
+    "name": "Skeleton Necromancer",
+    "description": "BinaQc's Strict - Recommended for start of Empowered Monolith. Hides most Uniques without significant LP/WW. Hides most Rares. Hides Set Items.",
+    "rule_count": 141,
+    "enabled": 118
+  },
+  "very_strict": {
+    "name": "Skeleton Necromancer",
+    "description": "BinaQc's Very Strict - Recommended to focus on Tier 7 Items. High LP Uniques. Hides most Tier 6 Exalteds. Shows best Exalted Bases. Hides Sets.",
+    "rule_count": 127,
+    "enabled": 82
+  },
+  "comparison": {
+    "matched_rules": 126,
+    "changed": [
+      {
+        "name": "Wanted Experimental Affixes",
+        "occurrence": 1,
+        "strict_x": 13,
+        "very_strict_x": 13,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "至少1项，阶数不限（advanced=false）",
+        "very_strict_gate": "至少1项，阶数不限（advanced=false）"
+      },
+      {
+        "name": "1 Affix - Minor Idols",
+        "occurrence": 1,
+        "strict_x": 18,
+        "very_strict_x": 18,
+        "changed_fields": [],
+        "changed_rule_fields": {
+          "MapIconId": [
+            "0",
+            "4"
+          ]
+        },
+        "strict_gate": "至少1项，阶数不限（advanced=false）",
+        "very_strict_gate": "至少1项，阶数不限（advanced=false）"
+      },
+      {
+        "name": "1 Affix - Humble Idols",
+        "occurrence": 1,
+        "strict_x": 19,
+        "very_strict_x": 19,
+        "changed_fields": [],
+        "changed_rule_fields": {
+          "MapIconId": [
+            "0",
+            "4"
+          ]
+        },
+        "strict_gate": "至少1项，阶数不限（advanced=false）",
+        "very_strict_gate": "至少1项，阶数不限（advanced=false）"
+      },
+      {
+        "name": "1 Affix - Large Idols",
+        "occurrence": 1,
+        "strict_x": 20,
+        "very_strict_x": 20,
+        "changed_fields": [],
+        "changed_rule_fields": {
+          "MapIconId": [
+            "0",
+            "4"
+          ]
+        },
+        "strict_gate": "至少1项，阶数不限（advanced=false）",
+        "very_strict_gate": "至少1项，阶数不限（advanced=false）"
+      },
+      {
+        "name": "Shatter / Removal - Increased Health (60)",
+        "occurrence": 1,
+        "strict_x": 34,
+        "very_strict_x": 29,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "角色0–60级（含上限）；至少1项，阶数不限（advanced=false）",
+        "very_strict_gate": "角色0–60级（含上限）；至少1项，阶数不限（advanced=false）"
+      },
+      {
+        "name": "Shatter / Removal - Increased Health T3+ (80)",
+        "occurrence": 1,
+        "strict_x": 35,
+        "very_strict_x": 30,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "至少1项，单项T≥3，合计T不限；角色0–80级（含上限）",
+        "very_strict_gate": "至少1项，单项T≥3，合计T不限；角色0–80级（含上限）"
+      },
+      {
+        "name": "Shatter / Removal (Edit Affixes)",
+        "occurrence": 1,
+        "strict_x": 36,
+        "very_strict_x": 31,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "至少1项，阶数不限（advanced=false）",
+        "very_strict_gate": "至少1项，阶数不限（advanced=false）"
+      },
+      {
+        "name": "Shatter / Removal (Class Specific Affixes)",
+        "occurrence": 1,
+        "strict_x": 37,
+        "very_strict_x": 32,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "至少1项，阶数不限（advanced=false）",
+        "very_strict_gate": "至少1项，阶数不限（advanced=false）"
+      },
+      {
+        "name": "Wanted Affix & Tier 7 (Rune of Havoc)",
+        "occurrence": 1,
+        "strict_x": 42,
+        "very_strict_x": 37,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "至少1项，阶数不限（advanced=false）；未腐化；至少1项，单项T≥7，合计T不限；潜能配置=MinForgingPotential:1",
+        "very_strict_gate": "至少1项，阶数不限（advanced=false）；未腐化；至少1项，单项T≥7，合计T不限；潜能配置=MinForgingPotential:1"
+      },
+      {
+        "name": "Tier 7 Eternal Gauntlets",
+        "occurrence": 1,
+        "strict_x": 45,
+        "very_strict_x": 40,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "至少1项，单项T≥7，合计T不限；未腐化；潜能配置=MinForgingPotential:1",
+        "very_strict_gate": "至少1项，单项T≥7，合计T不限；未腐化；潜能配置=MinForgingPotential:1"
+      },
+      {
+        "name": "Corrupted Multi Exalted (Min. Tier 7 & Tier 6)",
+        "occurrence": 1,
+        "strict_x": 87,
+        "very_strict_x": 73,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "至少2项，单项T≥6，合计T不限；至少1项，单项T≥7，合计T不限；稀有度=EXALTED；腐化",
+        "very_strict_gate": "至少2项，单项T≥6，合计T不限；至少1项，单项T≥7，合计T不限；稀有度=EXALTED；腐化"
+      },
+      {
+        "name": "Dungeons / Arena Uniques",
+        "occurrence": 1,
+        "strict_x": 89,
+        "very_strict_x": 75,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "没有额外阶数／等级门槛",
+        "very_strict_gate": "没有额外阶数／等级门槛"
+      },
+      {
+        "name": "Rare Dungeon Drops",
+        "occurrence": 1,
+        "strict_x": 90,
+        "very_strict_x": 76,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "没有额外阶数／等级门槛",
+        "very_strict_gate": "没有额外阶数／等级门槛"
+      },
+      {
+        "name": "Rare Monolith Timeline Boss Drops",
+        "occurrence": 1,
+        "strict_x": 91,
+        "very_strict_x": 77,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "没有额外阶数／等级门槛",
+        "very_strict_gate": "没有额外阶数／等级门槛"
+      },
+      {
+        "name": "Harbinger Uniques",
+        "occurrence": 1,
+        "strict_x": 92,
+        "very_strict_x": 78,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "没有额外阶数／等级门槛",
+        "very_strict_gate": "没有额外阶数／等级门槛"
+      },
+      {
+        "name": "Very Rare Uniques (80% Reroll Chance)",
+        "occurrence": 1,
+        "strict_x": 93,
+        "very_strict_x": 79,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "没有额外阶数／等级门槛",
+        "very_strict_gate": "没有额外阶数／等级门槛"
+      },
+      {
+        "name": "Very Rare Uniques (85% Reroll Chance)",
+        "occurrence": 1,
+        "strict_x": 94,
+        "very_strict_x": 80,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "没有额外阶数／等级门槛",
+        "very_strict_gate": "没有额外阶数／等级门槛"
+      },
+      {
+        "name": "Very Rare Uniques (90% Reroll Chance)",
+        "occurrence": 1,
+        "strict_x": 95,
+        "very_strict_x": 81,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "没有额外阶数／等级门槛",
+        "very_strict_gate": "没有额外阶数／等级门槛"
+      },
+      {
+        "name": "Woven Echoes Uniques",
+        "occurrence": 1,
+        "strict_x": 96,
+        "very_strict_x": 82,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "没有额外阶数／等级门槛",
+        "very_strict_gate": "没有额外阶数／等级门槛"
+      },
+      {
+        "name": "Exiled Mage Uniques",
+        "occurrence": 1,
+        "strict_x": 97,
+        "very_strict_x": 83,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "没有额外阶数／等级门槛",
+        "very_strict_gate": "没有额外阶数／等级门槛"
+      },
+      {
+        "name": "Shade of Orobyss Uniques",
+        "occurrence": 1,
+        "strict_x": 98,
+        "very_strict_x": 84,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "没有额外阶数／等级门槛",
+        "very_strict_gate": "没有额外阶数／等级门槛"
+      },
+      {
+        "name": "Aberroth Uniques",
+        "occurrence": 1,
+        "strict_x": 99,
+        "very_strict_x": 85,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "没有额外阶数／等级门槛",
+        "very_strict_gate": "没有额外阶数／等级门槛"
+      },
+      {
+        "name": "Final Rift Beast - Evolution's End",
+        "occurrence": 1,
+        "strict_x": 102,
+        "very_strict_x": 88,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "没有额外阶数／等级门槛",
+        "very_strict_gate": "没有额外阶数／等级门槛"
+      },
+      {
+        "name": "Uniques With 2 LP (≤4% - 48+ LPL)",
+        "occurrence": 1,
+        "strict_x": 124,
+        "very_strict_x": 110,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "稀有度=UNIQUE；潜能配置=MinLegendaryPotential:2",
+        "very_strict_gate": "稀有度=UNIQUE；潜能配置=MinLegendaryPotential:2"
+      },
+      {
+        "name": "Uniques With 3 LP (All)",
+        "occurrence": 1,
+        "strict_x": 129,
+        "very_strict_x": 115,
+        "changed_fields": [
+          "enabled"
+        ],
+        "changed_rule_fields": {
+          "isEnabled": [
+            "true",
+            "false"
+          ]
+        },
+        "strict_gate": "稀有度=UNIQUE；潜能配置=MinLegendaryPotential:3",
+        "very_strict_gate": "稀有度=UNIQUE；潜能配置=MinLegendaryPotential:3"
+      },
+      {
+        "name": "Uniques & Sets From Planner (Optional: Add More)",
+        "occurrence": 1,
+        "strict_x": 132,
+        "very_strict_x": 118,
+        "changed_fields": [
+          "conditions"
+        ],
+        "changed_rule_fields": {},
+        "strict_gate": "稀有度=UNIQUE LEGENDARY SET",
+        "very_strict_gate": "稀有度=UNIQUE LEGENDARY SET；未腐化"
+      }
+    ],
+    "removed": [
+      {
+        "x": 28,
+        "name": "Rare Strict Two-Handed Axe",
+        "family": "rare_base"
+      },
+      {
+        "x": 29,
+        "name": "Rare Strict Helmet",
+        "family": "rare_base"
+      },
+      {
+        "x": 30,
+        "name": "Rare Strict Boots",
+        "family": "rare_base"
+      },
+      {
+        "x": 31,
+        "name": "Rare Strict Gloves",
+        "family": "rare_base"
+      },
+      {
+        "x": 32,
+        "name": "Rare Strict Ring",
+        "family": "rare_base"
+      },
+      {
+        "x": 54,
+        "name": "Generic Good Altars (Min. Tier 6)",
+        "family": "generic_altar"
+      },
+      {
+        "x": 61,
+        "name": "Tier 6 - Relic",
+        "family": "tier6"
+      },
+      {
+        "x": 62,
+        "name": "Tier 6 - Ring",
+        "family": "tier6"
+      },
+      {
+        "x": 63,
+        "name": "Tier 6 - Amulet",
+        "family": "tier6"
+      },
+      {
+        "x": 64,
+        "name": "Tier 6 - Gloves",
+        "family": "tier6"
+      },
+      {
+        "x": 65,
+        "name": "Tier 6 - Boots",
+        "family": "tier6"
+      },
+      {
+        "x": 66,
+        "name": "Tier 6 - Belt",
+        "family": "tier6"
+      },
+      {
+        "x": 67,
+        "name": "Tier 6 - Body Armor",
+        "family": "tier6"
+      },
+      {
+        "x": 68,
+        "name": "Tier 6 - Helmet",
+        "family": "tier6"
+      },
+      {
+        "x": 69,
+        "name": "Tier 6 - Two-Handed Axe",
+        "family": "tier6"
+      }
+    ],
+    "added": [
+      {
+        "x": 51,
+        "name": "Generic Good Altars (Min. Tier 7)",
+        "family": "generic_altar"
+      }
+    ]
+  },
+  "identical_targets": [
+    {
+      "strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "1 Affix - Minor Idols",
+        "types": [
+          "IDOL_1x1_LAGON"
+        ],
+        "subtypes": [
+          1,
+          0
+        ],
+        "affix_pools": [
+          [
+            846,
+            853,
+            44,
+            851,
+            1068,
+            852,
+            855
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "IDOL_1x1_LAGON"
+              ],
+              "subTypes": [
+                "1",
+                "0"
+              ]
+            }
+          },
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "846",
+                "853",
+                "44",
+                "851",
+                "1068",
+                "852",
+                "855"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "false",
+              "comparsion": "ANY",
+              "comparsionValue": "1",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          }
+        ],
+        "x": 18,
+        "occurrence": 1,
+        "family": "idol_single",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "15",
+          "emphasized": "false",
+          "isEnabled": "true",
+          "nameOverride": "1 Affix - Minor Idols",
+          "SoundId": "0",
+          "MapIconId": "0",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "MEDIUM",
+          "BeamColorOverride": "19"
+        }
+      },
+      "very_strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "1 Affix - Minor Idols",
+        "types": [
+          "IDOL_1x1_LAGON"
+        ],
+        "subtypes": [
+          1,
+          0
+        ],
+        "affix_pools": [
+          [
+            846,
+            853,
+            44,
+            851,
+            1068,
+            852,
+            855
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "IDOL_1x1_LAGON"
+              ],
+              "subTypes": [
+                "1",
+                "0"
+              ]
+            }
+          },
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "846",
+                "853",
+                "44",
+                "851",
+                "1068",
+                "852",
+                "855"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "false",
+              "comparsion": "ANY",
+              "comparsionValue": "1",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          }
+        ],
+        "x": 18,
+        "occurrence": 1,
+        "family": "idol_single",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "15",
+          "emphasized": "false",
+          "isEnabled": "true",
+          "nameOverride": "1 Affix - Minor Idols",
+          "SoundId": "0",
+          "MapIconId": "4",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "MEDIUM",
+          "BeamColorOverride": "19"
+        }
+      },
+      "conditions_and_target_selection_identical": true,
+      "affixes": [
+        {
+          "id": 44,
+          "translation_key": "Item_Affixes.Item_Affix_44_DisplayName",
+          "en": "Health On Melee Hit",
+          "zh": "近战击中时恢复生命",
+          "can_roll_on": [
+            5,
+            6,
+            7,
+            9,
+            12,
+            13,
+            14,
+            16
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 846,
+          "translation_key": "Item_Affixes.Item_Affix_846_DisplayName",
+          "en": "Ward Retention and Ward Per Second",
+          "zh": "能量护盾维持与每秒获得能量护盾",
+          "can_roll_on": [
+            26
+          ],
+          "class_specificity": 1,
+          "kind": "multi",
+          "special_affix_type": 5
+        },
+        {
+          "id": 851,
+          "translation_key": "Item_Affixes.Item_Affix_851_DisplayName",
+          "en": "Elemental Resistance and Minion Elemental Resistance",
+          "zh": "元素抗性与召唤物元素抗性",
+          "can_roll_on": [
+            26
+          ],
+          "class_specificity": 1,
+          "kind": "multi",
+          "special_affix_type": 5
+        },
+        {
+          "id": 852,
+          "translation_key": "Item_Affixes.Item_Affix_852_DisplayName",
+          "en": "Fire Resistance and Minion Fire Resistance",
+          "zh": "火焰抗性与召唤物火焰抗性",
+          "can_roll_on": [
+            26
+          ],
+          "class_specificity": 1,
+          "kind": "multi",
+          "special_affix_type": 5
+        },
+        {
+          "id": 853,
+          "translation_key": "Item_Affixes.Item_Affix_853_DisplayName",
+          "en": "Health and Added Health Regeneration",
+          "zh": "生命与增加生命再生",
+          "can_roll_on": [
+            26
+          ],
+          "class_specificity": 1,
+          "kind": "multi",
+          "special_affix_type": 5
+        },
+        {
+          "id": 855,
+          "translation_key": "Item_Affixes.Item_Affix_855_DisplayName",
+          "en": "Lightning Resistance and Minion Lightning Resistance",
+          "zh": "闪电抗性与召唤物闪电抗性",
+          "can_roll_on": [
+            26
+          ],
+          "class_specificity": 1,
+          "kind": "multi",
+          "special_affix_type": 5
+        },
+        {
+          "id": 1068,
+          "translation_key": "Item_Affixes.Item_Affix_1068_DisplayName",
+          "en": "Chance to apply Frailty on Minion Hit",
+          "zh": "几率施加虚弱于召唤物击中时",
+          "can_roll_on": [
+            25,
+            26
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 6
+        }
+      ],
+      "corrupted_ids": [
+        1068
+      ],
+      "enchanted_ids": [],
+      "core_idol_ids": [
+        44,
+        846,
+        851,
+        852,
+        853,
+        855
+      ],
+      "equipment_material_ids": []
+    },
+    {
+      "strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "1 Affix - Humble Idols",
+        "types": [
+          "IDOL_2x1"
+        ],
+        "subtypes": [
+          1,
+          0
+        ],
+        "affix_pools": [
+          [
+            862,
+            319,
+            32,
+            870,
+            866,
+            1058,
+            1071
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "IDOL_2x1"
+              ],
+              "subTypes": [
+                "1",
+                "0"
+              ]
+            }
+          },
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "862",
+                "319",
+                "32",
+                "870",
+                "866",
+                "1058",
+                "1071"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "false",
+              "comparsion": "ANY",
+              "comparsionValue": "1",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          }
+        ],
+        "x": 19,
+        "occurrence": 1,
+        "family": "idol_single",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "15",
+          "emphasized": "false",
+          "isEnabled": "true",
+          "nameOverride": "1 Affix - Humble Idols",
+          "SoundId": "0",
+          "MapIconId": "0",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "MEDIUM",
+          "BeamColorOverride": "19"
+        }
+      },
+      "very_strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "1 Affix - Humble Idols",
+        "types": [
+          "IDOL_2x1"
+        ],
+        "subtypes": [
+          1,
+          0
+        ],
+        "affix_pools": [
+          [
+            862,
+            319,
+            32,
+            870,
+            866,
+            1058,
+            1071
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "IDOL_2x1"
+              ],
+              "subTypes": [
+                "1",
+                "0"
+              ]
+            }
+          },
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "862",
+                "319",
+                "32",
+                "870",
+                "866",
+                "1058",
+                "1071"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "false",
+              "comparsion": "ANY",
+              "comparsionValue": "1",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          }
+        ],
+        "x": 19,
+        "occurrence": 1,
+        "family": "idol_single",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "15",
+          "emphasized": "false",
+          "isEnabled": "true",
+          "nameOverride": "1 Affix - Humble Idols",
+          "SoundId": "0",
+          "MapIconId": "4",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "MEDIUM",
+          "BeamColorOverride": "19"
+        }
+      },
+      "conditions_and_target_selection_identical": true,
+      "affixes": [
+        {
+          "id": 32,
+          "translation_key": "Item_Affixes.Item_Affix_32_DisplayName",
+          "en": "Fire Penetration",
+          "zh": "火焰抗性穿透",
+          "can_roll_on": [
+            20
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 319,
+          "translation_key": "Item_Affixes.Item_Affix_319_DisplayName",
+          "en": "Shared Physical Damage",
+          "zh": "共享·物理伤害",
+          "can_roll_on": [
+            25,
+            27,
+            29,
+            31
+          ],
+          "class_specificity": 59,
+          "kind": "multi",
+          "special_affix_type": 0
+        },
+        {
+          "id": 862,
+          "translation_key": "Item_Affixes.Item_Affix_862_DisplayName",
+          "en": "Vitality and Added Health Regen",
+          "zh": "活力与增加生命再生",
+          "can_roll_on": [
+            27
+          ],
+          "class_specificity": 1,
+          "kind": "multi",
+          "special_affix_type": 5
+        },
+        {
+          "id": 866,
+          "translation_key": "Item_Affixes.Item_Affix_866_DisplayName",
+          "en": "Physical Penetration and Minion Physical Penetration",
+          "zh": "你与你的召唤物物理抗性穿透",
+          "can_roll_on": [
+            27
+          ],
+          "class_specificity": 1,
+          "kind": "multi",
+          "special_affix_type": 5
+        },
+        {
+          "id": 870,
+          "translation_key": "Item_Affixes.Item_Affix_870_DisplayName",
+          "en": "Physical Resistance and Minion Physical Resistance",
+          "zh": "物理抗性与召唤物物理抗性",
+          "can_roll_on": [
+            27
+          ],
+          "class_specificity": 1,
+          "kind": "multi",
+          "special_affix_type": 5
+        },
+        {
+          "id": 1058,
+          "translation_key": "Item_Affixes.Item_Affix_1058_DisplayName",
+          "en": "Health Regen",
+          "zh": "生命再生",
+          "can_roll_on": [
+            28,
+            27
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 6
+        },
+        {
+          "id": 1071,
+          "translation_key": "Item_Affixes.Item_Affix_1071_DisplayName",
+          "en": "Bees Per 10 Seconds",
+          "zh": "每10秒召唤蜜蜂",
+          "can_roll_on": [
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 6
+        }
+      ],
+      "corrupted_ids": [
+        1058,
+        1071
+      ],
+      "enchanted_ids": [],
+      "core_idol_ids": [
+        32,
+        319,
+        862,
+        866,
+        870
+      ],
+      "equipment_material_ids": []
+    },
+    {
+      "strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "1 Affix - Large Idols",
+        "types": [
+          "IDOL_1x3"
+        ],
+        "subtypes": [
+          8,
+          3,
+          13
+        ],
+        "affix_pools": [
+          [
+            941,
+            287,
+            897,
+            1071,
+            285,
+            1035,
+            1036
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "IDOL_1x3"
+              ],
+              "subTypes": [
+                "8",
+                "3",
+                "13"
+              ]
+            }
+          },
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "941",
+                "287",
+                "897",
+                "1071",
+                "285",
+                "1035",
+                "1036"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "false",
+              "comparsion": "ANY",
+              "comparsionValue": "1",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          }
+        ],
+        "x": 20,
+        "occurrence": 1,
+        "family": "idol_single",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "15",
+          "emphasized": "false",
+          "isEnabled": "true",
+          "nameOverride": "1 Affix - Large Idols",
+          "SoundId": "0",
+          "MapIconId": "0",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "MEDIUM",
+          "BeamColorOverride": "19"
+        }
+      },
+      "very_strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "1 Affix - Large Idols",
+        "types": [
+          "IDOL_1x3"
+        ],
+        "subtypes": [
+          8,
+          3,
+          13
+        ],
+        "affix_pools": [
+          [
+            941,
+            287,
+            897,
+            1071,
+            285,
+            1035,
+            1036
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "IDOL_1x3"
+              ],
+              "subTypes": [
+                "8",
+                "3",
+                "13"
+              ]
+            }
+          },
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "941",
+                "287",
+                "897",
+                "1071",
+                "285",
+                "1035",
+                "1036"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "false",
+              "comparsion": "ANY",
+              "comparsionValue": "1",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          }
+        ],
+        "x": 20,
+        "occurrence": 1,
+        "family": "idol_single",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "15",
+          "emphasized": "false",
+          "isEnabled": "true",
+          "nameOverride": "1 Affix - Large Idols",
+          "SoundId": "0",
+          "MapIconId": "4",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "MEDIUM",
+          "BeamColorOverride": "19"
+        }
+      },
+      "conditions_and_target_selection_identical": true,
+      "affixes": [
+        {
+          "id": 285,
+          "translation_key": "Item_Affixes.Item_Affix_285_DisplayName",
+          "en": "Ward Retention",
+          "zh": "能量护盾维持",
+          "can_roll_on": [
+            30,
+            32,
+            33
+          ],
+          "class_specificity": 16,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 287,
+          "translation_key": "Item_Affixes.Item_Affix_287_DisplayName",
+          "en": "Minion Chance To Apply Mark For Death On Hit",
+          "zh": "召唤物击中时施加死亡标记几率",
+          "can_roll_on": [
+            30,
+            32,
+            33
+          ],
+          "class_specificity": 16,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 897,
+          "translation_key": "Item_Affixes.Item_Affix_897_DisplayName",
+          "en": "Ward decay threshold and Ward per second",
+          "zh": "能量护盾衰减阈值与每秒获得能量护盾",
+          "can_roll_on": [
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 4
+        },
+        {
+          "id": 941,
+          "translation_key": "Item_Affixes.Item_Affix_941_DisplayName",
+          "en": "Ward Per Second and Increased Health",
+          "zh": "每秒获得能量护盾与提高生命",
+          "can_roll_on": [
+            30
+          ],
+          "class_specificity": 16,
+          "kind": "multi",
+          "special_affix_type": 0
+        },
+        {
+          "id": 1035,
+          "translation_key": "Item_Affixes.Item_Affix_1035_DisplayName",
+          "en": "Poison Immunity for Minions",
+          "zh": "召唤物免疫中毒",
+          "can_roll_on": [
+            31,
+            32
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 6
+        },
+        {
+          "id": 1036,
+          "translation_key": "Item_Affixes.Item_Affix_1036_DisplayName",
+          "en": "Bleed Immunity for Minions",
+          "zh": "召唤物免疫流血",
+          "can_roll_on": [
+            31,
+            32
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 6
+        },
+        {
+          "id": 1071,
+          "translation_key": "Item_Affixes.Item_Affix_1071_DisplayName",
+          "en": "Bees Per 10 Seconds",
+          "zh": "每10秒召唤蜜蜂",
+          "can_roll_on": [
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 6
+        }
+      ],
+      "corrupted_ids": [
+        1035,
+        1036,
+        1071
+      ],
+      "enchanted_ids": [
+        897
+      ],
+      "core_idol_ids": [
+        285,
+        287,
+        941
+      ],
+      "equipment_material_ids": []
+    },
+    {
+      "strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "1 Affix - Large Omen Idols",
+        "types": [
+          "IDOL_1x3"
+        ],
+        "subtypes": [
+          14,
+          13,
+          12,
+          11,
+          10
+        ],
+        "affix_pools": [
+          [
+            941,
+            287,
+            897,
+            1071,
+            285,
+            1035,
+            1036
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "941",
+                "287",
+                "897",
+                "1071",
+                "285",
+                "1035",
+                "1036"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "false",
+              "comparsion": "ANY",
+              "comparsionValue": "1",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "IDOL_1x3"
+              ],
+              "subTypes": [
+                "14",
+                "13",
+                "12",
+                "11",
+                "10"
+              ]
+            }
+          }
+        ],
+        "x": 21,
+        "occurrence": 1,
+        "family": "idol_single",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "10",
+          "emphasized": "false",
+          "isEnabled": "true",
+          "nameOverride": "1 Affix - Large Omen Idols",
+          "SoundId": "3",
+          "MapIconId": "9",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "MEDIUM",
+          "BeamColorOverride": "13"
+        }
+      },
+      "very_strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "1 Affix - Large Omen Idols",
+        "types": [
+          "IDOL_1x3"
+        ],
+        "subtypes": [
+          14,
+          13,
+          12,
+          11,
+          10
+        ],
+        "affix_pools": [
+          [
+            941,
+            287,
+            897,
+            1071,
+            285,
+            1035,
+            1036
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "941",
+                "287",
+                "897",
+                "1071",
+                "285",
+                "1035",
+                "1036"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "false",
+              "comparsion": "ANY",
+              "comparsionValue": "1",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "IDOL_1x3"
+              ],
+              "subTypes": [
+                "14",
+                "13",
+                "12",
+                "11",
+                "10"
+              ]
+            }
+          }
+        ],
+        "x": 21,
+        "occurrence": 1,
+        "family": "idol_single",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "10",
+          "emphasized": "false",
+          "isEnabled": "true",
+          "nameOverride": "1 Affix - Large Omen Idols",
+          "SoundId": "3",
+          "MapIconId": "9",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "MEDIUM",
+          "BeamColorOverride": "13"
+        }
+      },
+      "conditions_and_target_selection_identical": true,
+      "affixes": [
+        {
+          "id": 285,
+          "translation_key": "Item_Affixes.Item_Affix_285_DisplayName",
+          "en": "Ward Retention",
+          "zh": "能量护盾维持",
+          "can_roll_on": [
+            30,
+            32,
+            33
+          ],
+          "class_specificity": 16,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 287,
+          "translation_key": "Item_Affixes.Item_Affix_287_DisplayName",
+          "en": "Minion Chance To Apply Mark For Death On Hit",
+          "zh": "召唤物击中时施加死亡标记几率",
+          "can_roll_on": [
+            30,
+            32,
+            33
+          ],
+          "class_specificity": 16,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 897,
+          "translation_key": "Item_Affixes.Item_Affix_897_DisplayName",
+          "en": "Ward decay threshold and Ward per second",
+          "zh": "能量护盾衰减阈值与每秒获得能量护盾",
+          "can_roll_on": [
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 4
+        },
+        {
+          "id": 941,
+          "translation_key": "Item_Affixes.Item_Affix_941_DisplayName",
+          "en": "Ward Per Second and Increased Health",
+          "zh": "每秒获得能量护盾与提高生命",
+          "can_roll_on": [
+            30
+          ],
+          "class_specificity": 16,
+          "kind": "multi",
+          "special_affix_type": 0
+        },
+        {
+          "id": 1035,
+          "translation_key": "Item_Affixes.Item_Affix_1035_DisplayName",
+          "en": "Poison Immunity for Minions",
+          "zh": "召唤物免疫中毒",
+          "can_roll_on": [
+            31,
+            32
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 6
+        },
+        {
+          "id": 1036,
+          "translation_key": "Item_Affixes.Item_Affix_1036_DisplayName",
+          "en": "Bleed Immunity for Minions",
+          "zh": "召唤物免疫流血",
+          "can_roll_on": [
+            31,
+            32
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 6
+        },
+        {
+          "id": 1071,
+          "translation_key": "Item_Affixes.Item_Affix_1071_DisplayName",
+          "en": "Bees Per 10 Seconds",
+          "zh": "每10秒召唤蜜蜂",
+          "can_roll_on": [
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 6
+        }
+      ],
+      "corrupted_ids": [
+        1035,
+        1036,
+        1071
+      ],
+      "enchanted_ids": [
+        897
+      ],
+      "core_idol_ids": [
+        285,
+        287,
+        941
+      ],
+      "equipment_material_ids": []
+    },
+    {
+      "strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Strict - Minor Idols",
+        "types": [
+          "IDOL_1x1_LAGON"
+        ],
+        "subtypes": [
+          1
+        ],
+        "affix_pools": [
+          [
+            846,
+            853,
+            44,
+            851,
+            1068,
+            852,
+            855
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "IDOL_1x1_LAGON"
+              ],
+              "subTypes": [
+                "1"
+              ]
+            }
+          },
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "846",
+                "853",
+                "44",
+                "851",
+                "1068",
+                "852",
+                "855"
+              ],
+              "minOnTheSameItem": "2",
+              "advanced": "false",
+              "comparsion": "ANY",
+              "comparsionValue": "1",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          }
+        ],
+        "x": 24,
+        "occurrence": 1,
+        "family": "idol_bis",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "15",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Strict - Minor Idols",
+          "SoundId": "2",
+          "MapIconId": "4",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "19"
+        }
+      },
+      "very_strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Strict - Minor Idols",
+        "types": [
+          "IDOL_1x1_LAGON"
+        ],
+        "subtypes": [
+          1
+        ],
+        "affix_pools": [
+          [
+            846,
+            853,
+            44,
+            851,
+            1068,
+            852,
+            855
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "IDOL_1x1_LAGON"
+              ],
+              "subTypes": [
+                "1"
+              ]
+            }
+          },
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "846",
+                "853",
+                "44",
+                "851",
+                "1068",
+                "852",
+                "855"
+              ],
+              "minOnTheSameItem": "2",
+              "advanced": "false",
+              "comparsion": "ANY",
+              "comparsionValue": "1",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          }
+        ],
+        "x": 24,
+        "occurrence": 1,
+        "family": "idol_bis",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "15",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Strict - Minor Idols",
+          "SoundId": "2",
+          "MapIconId": "4",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "19"
+        }
+      },
+      "conditions_and_target_selection_identical": true,
+      "affixes": [
+        {
+          "id": 44,
+          "translation_key": "Item_Affixes.Item_Affix_44_DisplayName",
+          "en": "Health On Melee Hit",
+          "zh": "近战击中时恢复生命",
+          "can_roll_on": [
+            5,
+            6,
+            7,
+            9,
+            12,
+            13,
+            14,
+            16
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 846,
+          "translation_key": "Item_Affixes.Item_Affix_846_DisplayName",
+          "en": "Ward Retention and Ward Per Second",
+          "zh": "能量护盾维持与每秒获得能量护盾",
+          "can_roll_on": [
+            26
+          ],
+          "class_specificity": 1,
+          "kind": "multi",
+          "special_affix_type": 5
+        },
+        {
+          "id": 851,
+          "translation_key": "Item_Affixes.Item_Affix_851_DisplayName",
+          "en": "Elemental Resistance and Minion Elemental Resistance",
+          "zh": "元素抗性与召唤物元素抗性",
+          "can_roll_on": [
+            26
+          ],
+          "class_specificity": 1,
+          "kind": "multi",
+          "special_affix_type": 5
+        },
+        {
+          "id": 852,
+          "translation_key": "Item_Affixes.Item_Affix_852_DisplayName",
+          "en": "Fire Resistance and Minion Fire Resistance",
+          "zh": "火焰抗性与召唤物火焰抗性",
+          "can_roll_on": [
+            26
+          ],
+          "class_specificity": 1,
+          "kind": "multi",
+          "special_affix_type": 5
+        },
+        {
+          "id": 853,
+          "translation_key": "Item_Affixes.Item_Affix_853_DisplayName",
+          "en": "Health and Added Health Regeneration",
+          "zh": "生命与增加生命再生",
+          "can_roll_on": [
+            26
+          ],
+          "class_specificity": 1,
+          "kind": "multi",
+          "special_affix_type": 5
+        },
+        {
+          "id": 855,
+          "translation_key": "Item_Affixes.Item_Affix_855_DisplayName",
+          "en": "Lightning Resistance and Minion Lightning Resistance",
+          "zh": "闪电抗性与召唤物闪电抗性",
+          "can_roll_on": [
+            26
+          ],
+          "class_specificity": 1,
+          "kind": "multi",
+          "special_affix_type": 5
+        },
+        {
+          "id": 1068,
+          "translation_key": "Item_Affixes.Item_Affix_1068_DisplayName",
+          "en": "Chance to apply Frailty on Minion Hit",
+          "zh": "几率施加虚弱于召唤物击中时",
+          "can_roll_on": [
+            25,
+            26
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 6
+        }
+      ],
+      "corrupted_ids": [
+        1068
+      ],
+      "enchanted_ids": [],
+      "core_idol_ids": [
+        44,
+        846,
+        851,
+        852,
+        853,
+        855
+      ],
+      "equipment_material_ids": []
+    },
+    {
+      "strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Strict - Humble Idols",
+        "types": [
+          "IDOL_2x1"
+        ],
+        "subtypes": [
+          1
+        ],
+        "affix_pools": [
+          [
+            862,
+            319,
+            32,
+            870,
+            866,
+            1058,
+            1071
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "IDOL_2x1"
+              ],
+              "subTypes": [
+                "1"
+              ]
+            }
+          },
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "862",
+                "319",
+                "32",
+                "870",
+                "866",
+                "1058",
+                "1071"
+              ],
+              "minOnTheSameItem": "2",
+              "advanced": "false",
+              "comparsion": "ANY",
+              "comparsionValue": "1",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          }
+        ],
+        "x": 25,
+        "occurrence": 1,
+        "family": "idol_bis",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "15",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Strict - Humble Idols",
+          "SoundId": "2",
+          "MapIconId": "4",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "19"
+        }
+      },
+      "very_strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Strict - Humble Idols",
+        "types": [
+          "IDOL_2x1"
+        ],
+        "subtypes": [
+          1
+        ],
+        "affix_pools": [
+          [
+            862,
+            319,
+            32,
+            870,
+            866,
+            1058,
+            1071
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "IDOL_2x1"
+              ],
+              "subTypes": [
+                "1"
+              ]
+            }
+          },
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "862",
+                "319",
+                "32",
+                "870",
+                "866",
+                "1058",
+                "1071"
+              ],
+              "minOnTheSameItem": "2",
+              "advanced": "false",
+              "comparsion": "ANY",
+              "comparsionValue": "1",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          }
+        ],
+        "x": 25,
+        "occurrence": 1,
+        "family": "idol_bis",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "15",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Strict - Humble Idols",
+          "SoundId": "2",
+          "MapIconId": "4",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "19"
+        }
+      },
+      "conditions_and_target_selection_identical": true,
+      "affixes": [
+        {
+          "id": 32,
+          "translation_key": "Item_Affixes.Item_Affix_32_DisplayName",
+          "en": "Fire Penetration",
+          "zh": "火焰抗性穿透",
+          "can_roll_on": [
+            20
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 319,
+          "translation_key": "Item_Affixes.Item_Affix_319_DisplayName",
+          "en": "Shared Physical Damage",
+          "zh": "共享·物理伤害",
+          "can_roll_on": [
+            25,
+            27,
+            29,
+            31
+          ],
+          "class_specificity": 59,
+          "kind": "multi",
+          "special_affix_type": 0
+        },
+        {
+          "id": 862,
+          "translation_key": "Item_Affixes.Item_Affix_862_DisplayName",
+          "en": "Vitality and Added Health Regen",
+          "zh": "活力与增加生命再生",
+          "can_roll_on": [
+            27
+          ],
+          "class_specificity": 1,
+          "kind": "multi",
+          "special_affix_type": 5
+        },
+        {
+          "id": 866,
+          "translation_key": "Item_Affixes.Item_Affix_866_DisplayName",
+          "en": "Physical Penetration and Minion Physical Penetration",
+          "zh": "你与你的召唤物物理抗性穿透",
+          "can_roll_on": [
+            27
+          ],
+          "class_specificity": 1,
+          "kind": "multi",
+          "special_affix_type": 5
+        },
+        {
+          "id": 870,
+          "translation_key": "Item_Affixes.Item_Affix_870_DisplayName",
+          "en": "Physical Resistance and Minion Physical Resistance",
+          "zh": "物理抗性与召唤物物理抗性",
+          "can_roll_on": [
+            27
+          ],
+          "class_specificity": 1,
+          "kind": "multi",
+          "special_affix_type": 5
+        },
+        {
+          "id": 1058,
+          "translation_key": "Item_Affixes.Item_Affix_1058_DisplayName",
+          "en": "Health Regen",
+          "zh": "生命再生",
+          "can_roll_on": [
+            28,
+            27
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 6
+        },
+        {
+          "id": 1071,
+          "translation_key": "Item_Affixes.Item_Affix_1071_DisplayName",
+          "en": "Bees Per 10 Seconds",
+          "zh": "每10秒召唤蜜蜂",
+          "can_roll_on": [
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 6
+        }
+      ],
+      "corrupted_ids": [
+        1058,
+        1071
+      ],
+      "enchanted_ids": [],
+      "core_idol_ids": [
+        32,
+        319,
+        862,
+        866,
+        870
+      ],
+      "equipment_material_ids": []
+    },
+    {
+      "strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Strict - Large Idols",
+        "types": [
+          "IDOL_1x3"
+        ],
+        "subtypes": [
+          8,
+          3,
+          13
+        ],
+        "affix_pools": [
+          [
+            941,
+            287,
+            897,
+            1071,
+            285,
+            1035,
+            1036
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "IDOL_1x3"
+              ],
+              "subTypes": [
+                "8",
+                "3",
+                "13"
+              ]
+            }
+          },
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "941",
+                "287",
+                "897",
+                "1071",
+                "285",
+                "1035",
+                "1036"
+              ],
+              "minOnTheSameItem": "2",
+              "advanced": "false",
+              "comparsion": "ANY",
+              "comparsionValue": "1",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          }
+        ],
+        "x": 26,
+        "occurrence": 1,
+        "family": "idol_bis",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "15",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Strict - Large Idols",
+          "SoundId": "2",
+          "MapIconId": "4",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "19"
+        }
+      },
+      "very_strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Strict - Large Idols",
+        "types": [
+          "IDOL_1x3"
+        ],
+        "subtypes": [
+          8,
+          3,
+          13
+        ],
+        "affix_pools": [
+          [
+            941,
+            287,
+            897,
+            1071,
+            285,
+            1035,
+            1036
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "IDOL_1x3"
+              ],
+              "subTypes": [
+                "8",
+                "3",
+                "13"
+              ]
+            }
+          },
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "941",
+                "287",
+                "897",
+                "1071",
+                "285",
+                "1035",
+                "1036"
+              ],
+              "minOnTheSameItem": "2",
+              "advanced": "false",
+              "comparsion": "ANY",
+              "comparsionValue": "1",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          }
+        ],
+        "x": 26,
+        "occurrence": 1,
+        "family": "idol_bis",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "15",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Strict - Large Idols",
+          "SoundId": "2",
+          "MapIconId": "4",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "19"
+        }
+      },
+      "conditions_and_target_selection_identical": true,
+      "affixes": [
+        {
+          "id": 285,
+          "translation_key": "Item_Affixes.Item_Affix_285_DisplayName",
+          "en": "Ward Retention",
+          "zh": "能量护盾维持",
+          "can_roll_on": [
+            30,
+            32,
+            33
+          ],
+          "class_specificity": 16,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 287,
+          "translation_key": "Item_Affixes.Item_Affix_287_DisplayName",
+          "en": "Minion Chance To Apply Mark For Death On Hit",
+          "zh": "召唤物击中时施加死亡标记几率",
+          "can_roll_on": [
+            30,
+            32,
+            33
+          ],
+          "class_specificity": 16,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 897,
+          "translation_key": "Item_Affixes.Item_Affix_897_DisplayName",
+          "en": "Ward decay threshold and Ward per second",
+          "zh": "能量护盾衰减阈值与每秒获得能量护盾",
+          "can_roll_on": [
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 4
+        },
+        {
+          "id": 941,
+          "translation_key": "Item_Affixes.Item_Affix_941_DisplayName",
+          "en": "Ward Per Second and Increased Health",
+          "zh": "每秒获得能量护盾与提高生命",
+          "can_roll_on": [
+            30
+          ],
+          "class_specificity": 16,
+          "kind": "multi",
+          "special_affix_type": 0
+        },
+        {
+          "id": 1035,
+          "translation_key": "Item_Affixes.Item_Affix_1035_DisplayName",
+          "en": "Poison Immunity for Minions",
+          "zh": "召唤物免疫中毒",
+          "can_roll_on": [
+            31,
+            32
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 6
+        },
+        {
+          "id": 1036,
+          "translation_key": "Item_Affixes.Item_Affix_1036_DisplayName",
+          "en": "Bleed Immunity for Minions",
+          "zh": "召唤物免疫流血",
+          "can_roll_on": [
+            31,
+            32
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 6
+        },
+        {
+          "id": 1071,
+          "translation_key": "Item_Affixes.Item_Affix_1071_DisplayName",
+          "en": "Bees Per 10 Seconds",
+          "zh": "每10秒召唤蜜蜂",
+          "can_roll_on": [
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 6
+        }
+      ],
+      "corrupted_ids": [
+        1035,
+        1036,
+        1071
+      ],
+      "enchanted_ids": [
+        897
+      ],
+      "core_idol_ids": [
+        285,
+        287,
+        941
+      ],
+      "equipment_material_ids": []
+    },
+    {
+      "strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Strict - Large Omen Idols",
+        "types": [
+          "IDOL_1x3"
+        ],
+        "subtypes": [
+          14,
+          13,
+          12,
+          11,
+          10
+        ],
+        "affix_pools": [
+          [
+            941,
+            287,
+            897,
+            1071,
+            285,
+            1035,
+            1036
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "941",
+                "287",
+                "897",
+                "1071",
+                "285",
+                "1035",
+                "1036"
+              ],
+              "minOnTheSameItem": "2",
+              "advanced": "false",
+              "comparsion": "ANY",
+              "comparsionValue": "1",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "IDOL_1x3"
+              ],
+              "subTypes": [
+                "14",
+                "13",
+                "12",
+                "11",
+                "10"
+              ]
+            }
+          }
+        ],
+        "x": 27,
+        "occurrence": 1,
+        "family": "idol_bis",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "10",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Strict - Large Omen Idols",
+          "SoundId": "2",
+          "MapIconId": "9",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "13"
+        }
+      },
+      "very_strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Strict - Large Omen Idols",
+        "types": [
+          "IDOL_1x3"
+        ],
+        "subtypes": [
+          14,
+          13,
+          12,
+          11,
+          10
+        ],
+        "affix_pools": [
+          [
+            941,
+            287,
+            897,
+            1071,
+            285,
+            1035,
+            1036
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "941",
+                "287",
+                "897",
+                "1071",
+                "285",
+                "1035",
+                "1036"
+              ],
+              "minOnTheSameItem": "2",
+              "advanced": "false",
+              "comparsion": "ANY",
+              "comparsionValue": "1",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "IDOL_1x3"
+              ],
+              "subTypes": [
+                "14",
+                "13",
+                "12",
+                "11",
+                "10"
+              ]
+            }
+          }
+        ],
+        "x": 27,
+        "occurrence": 1,
+        "family": "idol_bis",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "10",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Strict - Large Omen Idols",
+          "SoundId": "2",
+          "MapIconId": "9",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "13"
+        }
+      },
+      "conditions_and_target_selection_identical": true,
+      "affixes": [
+        {
+          "id": 285,
+          "translation_key": "Item_Affixes.Item_Affix_285_DisplayName",
+          "en": "Ward Retention",
+          "zh": "能量护盾维持",
+          "can_roll_on": [
+            30,
+            32,
+            33
+          ],
+          "class_specificity": 16,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 287,
+          "translation_key": "Item_Affixes.Item_Affix_287_DisplayName",
+          "en": "Minion Chance To Apply Mark For Death On Hit",
+          "zh": "召唤物击中时施加死亡标记几率",
+          "can_roll_on": [
+            30,
+            32,
+            33
+          ],
+          "class_specificity": 16,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 897,
+          "translation_key": "Item_Affixes.Item_Affix_897_DisplayName",
+          "en": "Ward decay threshold and Ward per second",
+          "zh": "能量护盾衰减阈值与每秒获得能量护盾",
+          "can_roll_on": [
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 4
+        },
+        {
+          "id": 941,
+          "translation_key": "Item_Affixes.Item_Affix_941_DisplayName",
+          "en": "Ward Per Second and Increased Health",
+          "zh": "每秒获得能量护盾与提高生命",
+          "can_roll_on": [
+            30
+          ],
+          "class_specificity": 16,
+          "kind": "multi",
+          "special_affix_type": 0
+        },
+        {
+          "id": 1035,
+          "translation_key": "Item_Affixes.Item_Affix_1035_DisplayName",
+          "en": "Poison Immunity for Minions",
+          "zh": "召唤物免疫中毒",
+          "can_roll_on": [
+            31,
+            32
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 6
+        },
+        {
+          "id": 1036,
+          "translation_key": "Item_Affixes.Item_Affix_1036_DisplayName",
+          "en": "Bleed Immunity for Minions",
+          "zh": "召唤物免疫流血",
+          "can_roll_on": [
+            31,
+            32
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 6
+        },
+        {
+          "id": 1071,
+          "translation_key": "Item_Affixes.Item_Affix_1071_DisplayName",
+          "en": "Bees Per 10 Seconds",
+          "zh": "每10秒召唤蜜蜂",
+          "can_roll_on": [
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 6
+        }
+      ],
+      "corrupted_ids": [
+        1035,
+        1036,
+        1071
+      ],
+      "enchanted_ids": [
+        897
+      ],
+      "core_idol_ids": [
+        285,
+        287,
+        941
+      ],
+      "equipment_material_ids": []
+    },
+    {
+      "strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Tier 7 - Relic",
+        "types": [
+          "RELIC"
+        ],
+        "subtypes": [],
+        "affix_pools": [
+          [
+            502,
+            623,
+            825,
+            952
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "502",
+                "623",
+                "825",
+                "952"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "true",
+              "comparsion": "MORE_OR_EQUAL",
+              "comparsionValue": "7",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "CorruptionCondition",
+            "fields": {
+              "Corruption": "OnlyUncorrupted"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "RELIC"
+              ],
+              "subTypes": ""
+            }
+          }
+        ],
+        "x": 73,
+        "occurrence": 1,
+        "family": "tier7",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "7",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Tier 7 - Relic",
+          "SoundId": "10",
+          "MapIconId": "7",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "10"
+        }
+      },
+      "very_strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Tier 7 - Relic",
+        "types": [
+          "RELIC"
+        ],
+        "subtypes": [],
+        "affix_pools": [
+          [
+            502,
+            623,
+            825,
+            952
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "502",
+                "623",
+                "825",
+                "952"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "true",
+              "comparsion": "MORE_OR_EQUAL",
+              "comparsionValue": "7",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "CorruptionCondition",
+            "fields": {
+              "Corruption": "OnlyUncorrupted"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "RELIC"
+              ],
+              "subTypes": ""
+            }
+          }
+        ],
+        "x": 59,
+        "occurrence": 1,
+        "family": "tier7",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "7",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Tier 7 - Relic",
+          "SoundId": "10",
+          "MapIconId": "7",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "10"
+        }
+      },
+      "conditions_and_target_selection_identical": true,
+      "affixes": [
+        {
+          "id": 502,
+          "translation_key": "Item_Affixes.Item_Affix_502_DisplayName",
+          "en": "Intelligence",
+          "zh": "智力",
+          "can_roll_on": [
+            0,
+            1,
+            3,
+            21,
+            4,
+            22
+          ],
+          "class_specificity": 21,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 623,
+          "translation_key": "Item_Affixes.Item_Affix_623_DisplayName",
+          "en": "Level of Summon Skeletal Mage",
+          "zh": "召唤骷髅法师等级",
+          "can_roll_on": [
+            22
+          ],
+          "class_specificity": 16,
+          "kind": "multi",
+          "special_affix_type": 0
+        },
+        {
+          "id": 825,
+          "translation_key": "Item_Affixes.Item_Affix_825_DisplayName",
+          "en": "Added Health and Added Health Regeneration",
+          "zh": "增加生命与生命再生",
+          "can_roll_on": [
+            21,
+            22
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 0
+        },
+        {
+          "id": 952,
+          "translation_key": "Item_Affixes.Item_Affix_952_DisplayName",
+          "en": "Added Health Regen and Increased Health Regen per Strength",
+          "zh": "增加生命再生与每点力量提高生命再生",
+          "can_roll_on": [
+            22
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 6
+        }
+      ],
+      "corrupted_ids": [
+        952
+      ],
+      "enchanted_ids": [],
+      "core_idol_ids": [],
+      "equipment_material_ids": [
+        502,
+        623,
+        825
+      ]
+    },
+    {
+      "strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Tier 7 - Ring",
+        "types": [
+          "RING"
+        ],
+        "subtypes": [],
+        "affix_pools": [
+          [
+            70,
+            1016,
+            825
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "70",
+                "1016",
+                "825"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "true",
+              "comparsion": "MORE_OR_EQUAL",
+              "comparsionValue": "7",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "CorruptionCondition",
+            "fields": {
+              "Corruption": "OnlyUncorrupted"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "RING"
+              ],
+              "subTypes": ""
+            }
+          }
+        ],
+        "x": 74,
+        "occurrence": 1,
+        "family": "tier7",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "7",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Tier 7 - Ring",
+          "SoundId": "10",
+          "MapIconId": "7",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "10"
+        }
+      },
+      "very_strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Tier 7 - Ring",
+        "types": [
+          "RING"
+        ],
+        "subtypes": [],
+        "affix_pools": [
+          [
+            70,
+            1016,
+            825
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "70",
+                "1016",
+                "825"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "true",
+              "comparsion": "MORE_OR_EQUAL",
+              "comparsionValue": "7",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "CorruptionCondition",
+            "fields": {
+              "Corruption": "OnlyUncorrupted"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "RING"
+              ],
+              "subTypes": ""
+            }
+          }
+        ],
+        "x": 60,
+        "occurrence": 1,
+        "family": "tier7",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "7",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Tier 7 - Ring",
+          "SoundId": "10",
+          "MapIconId": "7",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "10"
+        }
+      },
+      "conditions_and_target_selection_identical": true,
+      "affixes": [
+        {
+          "id": 70,
+          "translation_key": "Item_Affixes.Item_Affix_70_DisplayName",
+          "en": "Minion Health",
+          "zh": "召唤物生命",
+          "can_roll_on": [
+            0,
+            1,
+            2,
+            4,
+            18,
+            19,
+            20,
+            21,
+            22
+          ],
+          "class_specificity": 19,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 825,
+          "translation_key": "Item_Affixes.Item_Affix_825_DisplayName",
+          "en": "Added Health and Added Health Regeneration",
+          "zh": "增加生命与生命再生",
+          "can_roll_on": [
+            21,
+            22
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 0
+        },
+        {
+          "id": 1016,
+          "translation_key": "Item_Affixes.Item_Affix_1016_DisplayName",
+          "en": "Added Intelligence and Ward Per Second",
+          "zh": "增加智力与每秒获得能量护盾",
+          "can_roll_on": [
+            21,
+            22,
+            0
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 6
+        }
+      ],
+      "corrupted_ids": [
+        1016
+      ],
+      "enchanted_ids": [],
+      "core_idol_ids": [],
+      "equipment_material_ids": [
+        70,
+        825
+      ]
+    },
+    {
+      "strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Tier 7 - Amulet",
+        "types": [
+          "AMULET"
+        ],
+        "subtypes": [],
+        "affix_pools": [
+          [
+            945,
+            90,
+            1014
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "945",
+                "90",
+                "1014"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "true",
+              "comparsion": "MORE_OR_EQUAL",
+              "comparsionValue": "7",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "CorruptionCondition",
+            "fields": {
+              "Corruption": "OnlyUncorrupted"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "AMULET"
+              ],
+              "subTypes": ""
+            }
+          }
+        ],
+        "x": 75,
+        "occurrence": 1,
+        "family": "tier7",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "7",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Tier 7 - Amulet",
+          "SoundId": "10",
+          "MapIconId": "7",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "10"
+        }
+      },
+      "very_strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Tier 7 - Amulet",
+        "types": [
+          "AMULET"
+        ],
+        "subtypes": [],
+        "affix_pools": [
+          [
+            945,
+            90,
+            1014
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "945",
+                "90",
+                "1014"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "true",
+              "comparsion": "MORE_OR_EQUAL",
+              "comparsionValue": "7",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "CorruptionCondition",
+            "fields": {
+              "Corruption": "OnlyUncorrupted"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "AMULET"
+              ],
+              "subTypes": ""
+            }
+          }
+        ],
+        "x": 61,
+        "occurrence": 1,
+        "family": "tier7",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "7",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Tier 7 - Amulet",
+          "SoundId": "10",
+          "MapIconId": "7",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "10"
+        }
+      },
+      "conditions_and_target_selection_identical": true,
+      "affixes": [
+        {
+          "id": 90,
+          "translation_key": "Item_Affixes.Item_Affix_90_DisplayName",
+          "en": "Health Regen per Second",
+          "zh": "每秒生命再生",
+          "can_roll_on": [
+            0,
+            20,
+            4
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 945,
+          "translation_key": "Item_Affixes.Item_Affix_945_DisplayName",
+          "en": "Minion Area and Damage",
+          "zh": "召唤物范围与伤害",
+          "can_roll_on": [
+            20,
+            4
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 0
+        },
+        {
+          "id": 1014,
+          "translation_key": "Item_Affixes.Item_Affix_1014_DisplayName",
+          "en": "Level of All Skills and Added Mana",
+          "zh": "全技能等级与增加魔力",
+          "can_roll_on": [
+            1,
+            20
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 6
+        }
+      ],
+      "corrupted_ids": [
+        1014
+      ],
+      "enchanted_ids": [],
+      "core_idol_ids": [],
+      "equipment_material_ids": [
+        90,
+        945
+      ]
+    },
+    {
+      "strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Tier 7 - Gloves",
+        "types": [
+          "GLOVES"
+        ],
+        "subtypes": [],
+        "affix_pools": [
+          [
+            945,
+            90,
+            1002
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "945",
+                "90",
+                "1002"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "true",
+              "comparsion": "MORE_OR_EQUAL",
+              "comparsionValue": "7",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "CorruptionCondition",
+            "fields": {
+              "Corruption": "OnlyUncorrupted"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "GLOVES"
+              ],
+              "subTypes": ""
+            }
+          }
+        ],
+        "x": 76,
+        "occurrence": 1,
+        "family": "tier7",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "7",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Tier 7 - Gloves",
+          "SoundId": "10",
+          "MapIconId": "7",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "10"
+        }
+      },
+      "very_strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Tier 7 - Gloves",
+        "types": [
+          "GLOVES"
+        ],
+        "subtypes": [],
+        "affix_pools": [
+          [
+            945,
+            90,
+            1002
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "945",
+                "90",
+                "1002"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "true",
+              "comparsion": "MORE_OR_EQUAL",
+              "comparsionValue": "7",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "CorruptionCondition",
+            "fields": {
+              "Corruption": "OnlyUncorrupted"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "GLOVES"
+              ],
+              "subTypes": ""
+            }
+          }
+        ],
+        "x": 62,
+        "occurrence": 1,
+        "family": "tier7",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "7",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Tier 7 - Gloves",
+          "SoundId": "10",
+          "MapIconId": "7",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "10"
+        }
+      },
+      "conditions_and_target_selection_identical": true,
+      "affixes": [
+        {
+          "id": 90,
+          "translation_key": "Item_Affixes.Item_Affix_90_DisplayName",
+          "en": "Health Regen per Second",
+          "zh": "每秒生命再生",
+          "can_roll_on": [
+            0,
+            20,
+            4
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 945,
+          "translation_key": "Item_Affixes.Item_Affix_945_DisplayName",
+          "en": "Minion Area and Damage",
+          "zh": "召唤物范围与伤害",
+          "can_roll_on": [
+            20,
+            4
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 0
+        },
+        {
+          "id": 1002,
+          "translation_key": "Item_Affixes.Item_Affix_1002_DisplayName",
+          "en": "Missing Health gained as Ward per Second and Ward Decay Threshold",
+          "zh": "已损失生命每秒转化为能量护盾与能量护盾衰减阈值",
+          "can_roll_on": [
+            4
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 6
+        }
+      ],
+      "corrupted_ids": [
+        1002
+      ],
+      "enchanted_ids": [],
+      "core_idol_ids": [],
+      "equipment_material_ids": [
+        90,
+        945
+      ]
+    },
+    {
+      "strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Tier 7 - Boots",
+        "types": [
+          "BOOTS"
+        ],
+        "subtypes": [],
+        "affix_pools": [
+          [
+            28,
+            679,
+            676
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "28",
+                "679",
+                "676"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "true",
+              "comparsion": "MORE_OR_EQUAL",
+              "comparsionValue": "7",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "CorruptionCondition",
+            "fields": {
+              "Corruption": "OnlyUncorrupted"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "BOOTS"
+              ],
+              "subTypes": ""
+            }
+          }
+        ],
+        "x": 77,
+        "occurrence": 1,
+        "family": "tier7",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "7",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Tier 7 - Boots",
+          "SoundId": "10",
+          "MapIconId": "7",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "10"
+        }
+      },
+      "very_strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Tier 7 - Boots",
+        "types": [
+          "BOOTS"
+        ],
+        "subtypes": [],
+        "affix_pools": [
+          [
+            28,
+            679,
+            676
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "28",
+                "679",
+                "676"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "true",
+              "comparsion": "MORE_OR_EQUAL",
+              "comparsionValue": "7",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "CorruptionCondition",
+            "fields": {
+              "Corruption": "OnlyUncorrupted"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "BOOTS"
+              ],
+              "subTypes": ""
+            }
+          }
+        ],
+        "x": 63,
+        "occurrence": 1,
+        "family": "tier7",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "7",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Tier 7 - Boots",
+          "SoundId": "10",
+          "MapIconId": "7",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "10"
+        }
+      },
+      "conditions_and_target_selection_identical": true,
+      "affixes": [
+        {
+          "id": 28,
+          "translation_key": "Item_Affixes.Item_Affix_28_DisplayName",
+          "en": "Movement Speed",
+          "zh": "移动速度",
+          "can_roll_on": [
+            3
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 676,
+          "translation_key": "Item_Affixes.Item_Affix_676_DisplayName",
+          "en": "Experimental Haste Effect",
+          "zh": "实验性急速效果",
+          "can_roll_on": [
+            3
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 1
+        },
+        {
+          "id": 679,
+          "translation_key": "Item_Affixes.Item_Affix_679_DisplayName",
+          "en": "Experimental Minions Transported with Traversal Skills",
+          "zh": "使用穿越技能传送的实验性随从",
+          "can_roll_on": [
+            3
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 1
+        }
+      ],
+      "corrupted_ids": [],
+      "enchanted_ids": [],
+      "core_idol_ids": [],
+      "equipment_material_ids": [
+        28,
+        676,
+        679
+      ]
+    },
+    {
+      "strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Tier 7 - Belt",
+        "types": [
+          "BELT"
+        ],
+        "subtypes": [],
+        "affix_pools": [
+          [
+            52,
+            36,
+            996
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "52",
+                "36",
+                "996"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "true",
+              "comparsion": "MORE_OR_EQUAL",
+              "comparsionValue": "7",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "CorruptionCondition",
+            "fields": {
+              "Corruption": "OnlyUncorrupted"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "BELT"
+              ],
+              "subTypes": ""
+            }
+          }
+        ],
+        "x": 78,
+        "occurrence": 1,
+        "family": "tier7",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "7",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Tier 7 - Belt",
+          "SoundId": "10",
+          "MapIconId": "7",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "10"
+        }
+      },
+      "very_strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Tier 7 - Belt",
+        "types": [
+          "BELT"
+        ],
+        "subtypes": [],
+        "affix_pools": [
+          [
+            52,
+            36,
+            996
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "52",
+                "36",
+                "996"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "true",
+              "comparsion": "MORE_OR_EQUAL",
+              "comparsionValue": "7",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "CorruptionCondition",
+            "fields": {
+              "Corruption": "OnlyUncorrupted"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "BELT"
+              ],
+              "subTypes": ""
+            }
+          }
+        ],
+        "x": 64,
+        "occurrence": 1,
+        "family": "tier7",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "7",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Tier 7 - Belt",
+          "SoundId": "10",
+          "MapIconId": "7",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "10"
+        }
+      },
+      "conditions_and_target_selection_identical": true,
+      "affixes": [
+        {
+          "id": 36,
+          "translation_key": "Item_Affixes.Item_Affix_36_DisplayName",
+          "en": "Hybrid Health",
+          "zh": "复合生命",
+          "can_roll_on": [
+            4,
+            3,
+            2
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 0
+        },
+        {
+          "id": 52,
+          "translation_key": "Item_Affixes.Item_Affix_52_FilterOverride",
+          "en": "Increased Health",
+          "zh": "提高生命",
+          "can_roll_on": [
+            1,
+            0,
+            2
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 996,
+          "translation_key": "Item_Affixes.Item_Affix_996_DisplayName",
+          "en": "Increased Health and Missing Health regained on Potion Use",
+          "zh": "提高生命与使用药剂时恢复已损失生命",
+          "can_roll_on": [
+            2
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 6
+        }
+      ],
+      "corrupted_ids": [
+        996
+      ],
+      "enchanted_ids": [],
+      "core_idol_ids": [],
+      "equipment_material_ids": [
+        36,
+        52
+      ]
+    },
+    {
+      "strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Tier 7 - Body Armor",
+        "types": [
+          "BODY_ARMOR"
+        ],
+        "subtypes": [],
+        "affix_pools": [
+          [
+            406,
+            1014
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "406",
+                "1014"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "true",
+              "comparsion": "MORE_OR_EQUAL",
+              "comparsionValue": "7",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "CorruptionCondition",
+            "fields": {
+              "Corruption": "OnlyUncorrupted"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "BODY_ARMOR"
+              ],
+              "subTypes": ""
+            }
+          }
+        ],
+        "x": 79,
+        "occurrence": 1,
+        "family": "tier7",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "7",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Tier 7 - Body Armor",
+          "SoundId": "10",
+          "MapIconId": "7",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "10"
+        }
+      },
+      "very_strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Tier 7 - Body Armor",
+        "types": [
+          "BODY_ARMOR"
+        ],
+        "subtypes": [],
+        "affix_pools": [
+          [
+            406,
+            1014
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "406",
+                "1014"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "true",
+              "comparsion": "MORE_OR_EQUAL",
+              "comparsionValue": "7",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "CorruptionCondition",
+            "fields": {
+              "Corruption": "OnlyUncorrupted"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "BODY_ARMOR"
+              ],
+              "subTypes": ""
+            }
+          }
+        ],
+        "x": 65,
+        "occurrence": 1,
+        "family": "tier7",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "7",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Tier 7 - Body Armor",
+          "SoundId": "10",
+          "MapIconId": "7",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "10"
+        }
+      },
+      "conditions_and_target_selection_identical": true,
+      "affixes": [
+        {
+          "id": 406,
+          "translation_key": "Item_Affixes.Item_Affix_406_DisplayName",
+          "en": "Shared Bleed Chance On Hit",
+          "zh": "共享·击中时施加流血几率",
+          "can_roll_on": [
+            1,
+            0
+          ],
+          "class_specificity": 16,
+          "kind": "multi",
+          "special_affix_type": 0
+        },
+        {
+          "id": 1014,
+          "translation_key": "Item_Affixes.Item_Affix_1014_DisplayName",
+          "en": "Level of All Skills and Added Mana",
+          "zh": "全技能等级与增加魔力",
+          "can_roll_on": [
+            1,
+            20
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 6
+        }
+      ],
+      "corrupted_ids": [
+        1014
+      ],
+      "enchanted_ids": [],
+      "core_idol_ids": [],
+      "equipment_material_ids": [
+        406
+      ]
+    },
+    {
+      "strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Tier 7 - Helmet",
+        "types": [
+          "HELMET"
+        ],
+        "subtypes": [],
+        "affix_pools": [
+          [
+            406,
+            407,
+            1019
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "406",
+                "407",
+                "1019"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "true",
+              "comparsion": "MORE_OR_EQUAL",
+              "comparsionValue": "7",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "CorruptionCondition",
+            "fields": {
+              "Corruption": "OnlyUncorrupted"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "HELMET"
+              ],
+              "subTypes": ""
+            }
+          }
+        ],
+        "x": 80,
+        "occurrence": 1,
+        "family": "tier7",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "7",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Tier 7 - Helmet",
+          "SoundId": "10",
+          "MapIconId": "7",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "10"
+        }
+      },
+      "very_strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Tier 7 - Helmet",
+        "types": [
+          "HELMET"
+        ],
+        "subtypes": [],
+        "affix_pools": [
+          [
+            406,
+            407,
+            1019
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "406",
+                "407",
+                "1019"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "true",
+              "comparsion": "MORE_OR_EQUAL",
+              "comparsionValue": "7",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "CorruptionCondition",
+            "fields": {
+              "Corruption": "OnlyUncorrupted"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "HELMET"
+              ],
+              "subTypes": ""
+            }
+          }
+        ],
+        "x": 66,
+        "occurrence": 1,
+        "family": "tier7",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "7",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Tier 7 - Helmet",
+          "SoundId": "10",
+          "MapIconId": "7",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "10"
+        }
+      },
+      "conditions_and_target_selection_identical": true,
+      "affixes": [
+        {
+          "id": 406,
+          "translation_key": "Item_Affixes.Item_Affix_406_DisplayName",
+          "en": "Shared Bleed Chance On Hit",
+          "zh": "共享·击中时施加流血几率",
+          "can_roll_on": [
+            1,
+            0
+          ],
+          "class_specificity": 16,
+          "kind": "multi",
+          "special_affix_type": 0
+        },
+        {
+          "id": 407,
+          "translation_key": "Item_Affixes.Item_Affix_407_DisplayName",
+          "en": "Shared Increased Bleed Duration",
+          "zh": "共享·提高流血持续时间",
+          "can_roll_on": [
+            0,
+            1
+          ],
+          "class_specificity": 16,
+          "kind": "multi",
+          "special_affix_type": 0
+        },
+        {
+          "id": 1019,
+          "translation_key": "Item_Affixes.Item_Affix_1019_DisplayName",
+          "en": "Increased Health and Health Regen applies to Ward",
+          "zh": "提高生命与生命再生对能量护盾生效",
+          "can_roll_on": [
+            1,
+            0
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 6
+        }
+      ],
+      "corrupted_ids": [
+        1019
+      ],
+      "enchanted_ids": [],
+      "core_idol_ids": [],
+      "equipment_material_ids": [
+        406,
+        407
+      ]
+    },
+    {
+      "strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Tier 7 - Two-Handed Axe",
+        "types": [
+          "TWO_HANDED_AXE"
+        ],
+        "subtypes": [],
+        "affix_pools": [
+          [
+            98,
+            719,
+            50
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "98",
+                "719",
+                "50"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "true",
+              "comparsion": "MORE_OR_EQUAL",
+              "comparsionValue": "7",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "CorruptionCondition",
+            "fields": {
+              "Corruption": "OnlyUncorrupted"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "TWO_HANDED_AXE"
+              ],
+              "subTypes": ""
+            }
+          }
+        ],
+        "x": 81,
+        "occurrence": 1,
+        "family": "tier7",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "7",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Tier 7 - Two-Handed Axe",
+          "SoundId": "10",
+          "MapIconId": "7",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "10"
+        }
+      },
+      "very_strict": {
+        "enabled": true,
+        "action": "SHOW",
+        "name": "Tier 7 - Two-Handed Axe",
+        "types": [
+          "TWO_HANDED_AXE"
+        ],
+        "subtypes": [],
+        "affix_pools": [
+          [
+            98,
+            719,
+            50
+          ]
+        ],
+        "unique_ids": [],
+        "conditions": [
+          {
+            "kind": "AffixCondition",
+            "fields": {
+              "affixes": [
+                "98",
+                "719",
+                "50"
+              ],
+              "minOnTheSameItem": "1",
+              "advanced": "true",
+              "comparsion": "MORE_OR_EQUAL",
+              "comparsionValue": "7",
+              "combinedComparsion": "ANY",
+              "combinedComparsionValue": "1"
+            }
+          },
+          {
+            "kind": "CorruptionCondition",
+            "fields": {
+              "Corruption": "OnlyUncorrupted"
+            }
+          },
+          {
+            "kind": "SubTypeCondition",
+            "fields": {
+              "type": [
+                "TWO_HANDED_AXE"
+              ],
+              "subTypes": ""
+            }
+          }
+        ],
+        "x": 67,
+        "occurrence": 1,
+        "family": "tier7",
+        "rule_fields": {
+          "type": "SHOW",
+          "recolor": "true",
+          "color": "7",
+          "emphasized": "true",
+          "isEnabled": "true",
+          "nameOverride": "Tier 7 - Two-Handed Axe",
+          "SoundId": "10",
+          "MapIconId": "7",
+          "BeamOverride": "true",
+          "BeamSizeOverride": "LARGEST",
+          "BeamColorOverride": "10"
+        }
+      },
+      "conditions_and_target_selection_identical": true,
+      "affixes": [
+        {
+          "id": 50,
+          "translation_key": "Item_Affixes.Item_Affix_50_DisplayName",
+          "en": "All Attributes",
+          "zh": "所有属性",
+          "can_roll_on": [
+            12,
+            13,
+            14,
+            16
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 98,
+          "translation_key": "Item_Affixes.Item_Affix_98_DisplayName",
+          "en": "Damage Over Time for Minions",
+          "zh": "召唤物持续伤害",
+          "can_roll_on": [
+            9,
+            16,
+            5,
+            12,
+            14
+          ],
+          "class_specificity": 0,
+          "kind": "single",
+          "special_affix_type": 0
+        },
+        {
+          "id": 719,
+          "translation_key": "Item_Affixes.Item_Affix_719_DisplayName",
+          "en": "Physical Penetration and Minion Physical Penetration",
+          "zh": "你与你的召唤物物理抗性穿透",
+          "can_roll_on": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            16,
+            23
+          ],
+          "class_specificity": 0,
+          "kind": "multi",
+          "special_affix_type": 0
+        }
+      ],
+      "corrupted_ids": [],
+      "enchanted_ids": [],
+      "core_idol_ids": [],
+      "equipment_material_ids": [
+        50,
+        98,
+        719
+      ]
+    }
+  ],
+  "screenshot_equipment_coverage": [
+    {
+      "type": "HELMET",
+      "ordered_affix_ids": [
+        406
+      ],
+      "absent_from_part_t7_pool": []
+    },
+    {
+      "type": "BODY_ARMOR",
+      "ordered_affix_ids": [
+        406,
+        192
+      ],
+      "absent_from_part_t7_pool": [
+        192
+      ]
+    },
+    {
+      "type": "TWO_HANDED_AXE",
+      "ordered_affix_ids": [
+        98
+      ],
+      "absent_from_part_t7_pool": []
+    },
+    {
+      "type": "GLOVES",
+      "ordered_affix_ids": [
+        945
+      ],
+      "absent_from_part_t7_pool": []
+    },
+    {
+      "type": "BELT",
+      "ordered_affix_ids": [
+        36,
+        52
+      ],
+      "absent_from_part_t7_pool": []
+    },
+    {
+      "type": "BOOTS",
+      "ordered_affix_ids": [
+        28,
+        679
+      ],
+      "absent_from_part_t7_pool": []
+    }
+  ],
+  "very_strict_rule_inventory": [
+    {
+      "x": 1,
+      "name": "All Items",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "HIDE"
+    },
+    {
+      "x": 2,
+      "name": "Runes",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 3,
+      "name": "Important Runes",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 4,
+      "name": "Important Glyphs",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 5,
+      "name": "Woven Echoes",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 6,
+      "name": "Keys & Currency",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 7,
+      "name": "Crystallized Heart",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 8,
+      "name": "Temporal Keystone",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 9,
+      "name": "Movement Speed Rings (10)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 10,
+      "name": "Champion Affixes (40)",
+      "occurrence": 1,
+      "family": "champion",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 11,
+      "name": "Personal Affixes (40)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 12,
+      "name": "Experimental Affixes (40)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 13,
+      "name": "Wanted Experimental Affixes",
+      "occurrence": 1,
+      "family": "experimental",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 14,
+      "name": "All Idols (35)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 15,
+      "name": "Generic Resistances & Health Idols (75)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 16,
+      "name": "All Altars",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 17,
+      "name": "Corrupted Items",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 18,
+      "name": "1 Affix - Minor Idols",
+      "occurrence": 1,
+      "family": "idol_single",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 19,
+      "name": "1 Affix - Humble Idols",
+      "occurrence": 1,
+      "family": "idol_single",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 20,
+      "name": "1 Affix - Large Idols",
+      "occurrence": 1,
+      "family": "idol_single",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 21,
+      "name": "1 Affix - Large Omen Idols",
+      "occurrence": 1,
+      "family": "idol_single",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 22,
+      "name": "Strict - Weaver Idols",
+      "occurrence": 1,
+      "family": "generic_idol",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 23,
+      "name": "Reflect Idols (Alt Leveling)",
+      "occurrence": 1,
+      "family": "generic_idol",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 24,
+      "name": "Strict - Minor Idols",
+      "occurrence": 1,
+      "family": "idol_bis",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 25,
+      "name": "Strict - Humble Idols",
+      "occurrence": 1,
+      "family": "idol_bis",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 26,
+      "name": "Strict - Large Idols",
+      "occurrence": 1,
+      "family": "idol_bis",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 27,
+      "name": "Strict - Large Omen Idols",
+      "occurrence": 1,
+      "family": "idol_bis",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 28,
+      "name": "CoF Rune of Ascendance (Select Item Type)",
+      "occurrence": 1,
+      "family": "ascend",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 29,
+      "name": "Shatter / Removal - Increased Health (60)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 30,
+      "name": "Shatter / Removal - Increased Health T3+ (80)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 31,
+      "name": "Shatter / Removal (Edit Affixes)",
+      "occurrence": 1,
+      "family": "shatter",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 32,
+      "name": "Shatter / Removal (Class Specific Affixes)",
+      "occurrence": 1,
+      "family": "class_shatter",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 33,
+      "name": "Any Tier 7 Suffixes (Rune of Redemption)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 34,
+      "name": "Any Tier 7 Prefixes (Rune of Redemption)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 35,
+      "name": "Open Prefix & Tier 7 (Rune of Havoc)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 36,
+      "name": "Open Suffix & Tier 7 (Rune of Havoc)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 37,
+      "name": "Wanted Affix & Tier 7 (Rune of Havoc)",
+      "occurrence": 1,
+      "family": "havoc",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 38,
+      "name": "Wanted Experimental & Tier 7 (Rune of Havoc)",
+      "occurrence": 1,
+      "family": "havoc",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 39,
+      "name": "Tier 7 Highly Craftable Items (52+ FP)",
+      "occurrence": 1,
+      "family": "maxroll_only_crafting",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 40,
+      "name": "Tier 7 Eternal Gauntlets",
+      "occurrence": 1,
+      "family": "crafting_base",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 41,
+      "name": "Tier 7 Rings & Amulets",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 42,
+      "name": "",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 43,
+      "name": "Rare Set Items",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 44,
+      "name": "Unique Items",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 45,
+      "name": "Cocooned Uniques",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 46,
+      "name": "Primordial Uniques",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 47,
+      "name": "",
+      "occurrence": 2,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 48,
+      "name": "Unique Idols",
+      "occurrence": 1,
+      "family": "generic_idol",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 49,
+      "name": "Suffix Effect Idol Altar (Tier 6 Equivalent)",
+      "occurrence": 1,
+      "family": "altar",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 50,
+      "name": "Prefix Effect Idol Altar (Tier 6 Equivalent)",
+      "occurrence": 1,
+      "family": "altar",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 51,
+      "name": "Generic Good Altars (Min. Tier 7)",
+      "occurrence": 1,
+      "family": "generic_altar",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 52,
+      "name": "Suffix Effect Idol Altar (Tier 7 Equivalent)",
+      "occurrence": 1,
+      "family": "altar",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 53,
+      "name": "Prefix Effect Idol Altar (Tier 7 Equivalent)",
+      "occurrence": 1,
+      "family": "altar",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 54,
+      "name": "Generic Good Altars (Double Exalted)",
+      "occurrence": 1,
+      "family": "generic_altar",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 55,
+      "name": "Tier 6 Wanted Affixes (Can Edit Affixes & Item Type)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 56,
+      "name": "Tier 6 Strict Idol Altar",
+      "occurrence": 1,
+      "family": "altar",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 57,
+      "name": "Exalted Bases for Alt Leveling Setup (T7)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 58,
+      "name": "Wanted Tier 7 (Can Edit Affixes & Item Type)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 59,
+      "name": "Tier 7 - Relic",
+      "occurrence": 1,
+      "family": "tier7",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 60,
+      "name": "Tier 7 - Ring",
+      "occurrence": 1,
+      "family": "tier7",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 61,
+      "name": "Tier 7 - Amulet",
+      "occurrence": 1,
+      "family": "tier7",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 62,
+      "name": "Tier 7 - Gloves",
+      "occurrence": 1,
+      "family": "tier7",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 63,
+      "name": "Tier 7 - Boots",
+      "occurrence": 1,
+      "family": "tier7",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 64,
+      "name": "Tier 7 - Belt",
+      "occurrence": 1,
+      "family": "tier7",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 65,
+      "name": "Tier 7 - Body Armor",
+      "occurrence": 1,
+      "family": "tier7",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 66,
+      "name": "Tier 7 - Helmet",
+      "occurrence": 1,
+      "family": "tier7",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 67,
+      "name": "Tier 7 - Two-Handed Axe",
+      "occurrence": 1,
+      "family": "tier7",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 68,
+      "name": "Tier 7 - Class Specific Affixes",
+      "occurrence": 1,
+      "family": "class_t7",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 69,
+      "name": "Tier 7 Strict Idol Altar",
+      "occurrence": 1,
+      "family": "altar",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 70,
+      "name": "Multi Exalted (Min. Tier 7 & Tier 6)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 71,
+      "name": "Multi Exalted (Min. 2 Tier 7)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 72,
+      "name": "Triple+ Exalted (Min. 1 Tier 7)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 73,
+      "name": "Corrupted Multi Exalted (Min. Tier 7 & Tier 6)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 74,
+      "name": "Uniques with 1 LP (All)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 75,
+      "name": "Dungeons / Arena Uniques",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 76,
+      "name": "Rare Dungeon Drops",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 77,
+      "name": "Rare Monolith Timeline Boss Drops",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 78,
+      "name": "Harbinger Uniques",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 79,
+      "name": "Very Rare Uniques (80% Reroll Chance)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 80,
+      "name": "Very Rare Uniques (85% Reroll Chance)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 81,
+      "name": "Very Rare Uniques (90% Reroll Chance)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 82,
+      "name": "Woven Echoes Uniques",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 83,
+      "name": "Exiled Mage Uniques",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 84,
+      "name": "Shade of Orobyss Uniques",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 85,
+      "name": "Aberroth Uniques",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 86,
+      "name": "Vision of the Observer Uniques",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 87,
+      "name": "Morditas Uniques",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 88,
+      "name": "Final Rift Beast - Evolution's End",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 89,
+      "name": "Dungeons / Arena Uniques - 1 LP+",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 90,
+      "name": "Rare Dungeon Drops - 1 LP+",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 91,
+      "name": "Rare Monolith Timeline Boss Drops - 1 LP+",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 92,
+      "name": "Harbinger Uniques - 1 LP+",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 93,
+      "name": "Very Rare Uniques With 1 LP (80% Reroll Chance)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 94,
+      "name": "Very Rare Uniques With 1 LP(85% Reroll Chance)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 95,
+      "name": "Very Rare Uniques With 1 LP (90% Reroll Chance)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 96,
+      "name": "Woven Echoes Uniques - 1 LP+",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 97,
+      "name": "Exiled Mage Uniques - 1 LP+",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 98,
+      "name": "Shade of Orobyss Uniques - 1 LP+",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 99,
+      "name": "Aberroth Uniques - 1 LP+",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 100,
+      "name": "Morditas Uniques - 1 LP+",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 101,
+      "name": "Final Rift Beast - Evolution's End - 1 LP+",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 102,
+      "name": "Any Class Alt Leveling Uniques - Campaign",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 103,
+      "name": "Any Class Alt Leveling Uniques - Reflect  lvl 35",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 104,
+      "name": "Weaver's Will Items",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 105,
+      "name": "Uniques With 21+ Weaver's Will (≤1% - 30+ LPL)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 106,
+      "name": "Uniques With 20+ Weaver's Will (≤1% - 40+ LPL)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 107,
+      "name": "Uniques With 19+ Weaver's Will (≤1% - 50+ LPL)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 108,
+      "name": "Uniques With 18+ Weaver's Will (≤1% - 68+ LPL)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 109,
+      "name": "Uniques With 2 LP (All)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 110,
+      "name": "Uniques With 2 LP (≤4% - 48+ LPL)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 111,
+      "name": "Uniques With 2 LP (≤1% - 70+ LPL)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 112,
+      "name": "Uniques With 2 LP (80% Reroll Chance)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 113,
+      "name": "Uniques With 2 LP (85% Reroll Chance)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 114,
+      "name": "Uniques With 2 LP (90% Reroll Chance)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 115,
+      "name": "Uniques With 3 LP (All)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": false,
+      "action": "SHOW"
+    },
+    {
+      "x": 116,
+      "name": "Uniques With 3 LP (≤1% - 27+ LPL)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 117,
+      "name": "Legendary Uniques From Planner (Fail Safe Rule)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 118,
+      "name": "Uniques & Sets From Planner (Optional: Add More)",
+      "occurrence": 1,
+      "family": "planner",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 119,
+      "name": "Corrupted Uniques & Sets From Planner (Optional: Add More)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 120,
+      "name": "Uniques From Planner 1 LP - Turtle Rule (Optional: Add More)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 121,
+      "name": "Uniques From Planner 2 LP (Optional: Add More)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 122,
+      "name": "Uniques From Planner 3 LP (Optional: Add More)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 123,
+      "name": "Uniques With 2 LP (≤0.1% - 100+ LPL)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 124,
+      "name": "Uniques With 3 LP (≤0.1% - 58+ LPL)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 125,
+      "name": "Uniques With 22+ Weaver's Will (≤0.6% - All)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 126,
+      "name": "Uniques With 4 LP (All)",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    },
+    {
+      "x": 127,
+      "name": "S Tier & Extremely Rare Uniques",
+      "occurrence": 1,
+      "family": "other",
+      "enabled": true,
+      "action": "SHOW"
+    }
+  ],
+  "current_filter_sha256": "ddfb6889366162de32eaf4a9dbd050f23496a1d902189cff340b5ec444da6ec9",
+  "current_skeleton_idols": [
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "category": "idol_bis",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          24
+        ]
+      ],
+      "number": 123,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Idol two ordinary targets: IDOL_1x1_LAGON",
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "category": "idol_bis",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          25
+        ]
+      ],
+      "number": 124,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Idol two ordinary targets: IDOL_2x1",
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "category": "idol_bis",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          26
+        ]
+      ],
+      "number": 125,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Idol two ordinary targets: IDOL_1x3",
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 99,
+      "base_rule": 98,
+      "category": "idol_bis",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          27
+        ]
+      ],
+      "number": 126,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - Idol two ordinary targets: IDOL_1x3",
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    }
+  ],
+  "current_skeleton_target_double_t7": [
+    {
+      "source_raxx_rule": 38,
+      "base_rule": 38,
+      "category": "C2_target",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          81
+        ]
+      ],
+      "number": 33,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C2 双T7含BD目标] TWO_HANDED_AXE",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 40,
+      "base_rule": 40,
+      "category": "C2_target",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          80
+        ]
+      ],
+      "number": 34,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C2 双T7含BD目标] HELMET",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 41,
+      "base_rule": 41,
+      "category": "C2_target",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          79
+        ]
+      ],
+      "number": 35,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C2 双T7含BD目标] BODY_ARMOR",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 42,
+      "base_rule": 42,
+      "category": "C2_target",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          78
+        ]
+      ],
+      "number": 36,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C2 双T7含BD目标] BELT",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 43,
+      "base_rule": 43,
+      "category": "C2_target",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          77
+        ]
+      ],
+      "number": 37,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C2 双T7含BD目标] BOOTS",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 44,
+      "base_rule": 44,
+      "category": "C2_target",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          76
+        ]
+      ],
+      "number": 38,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C2 双T7含BD目标] GLOVES",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 45,
+      "base_rule": 45,
+      "category": "C2_target",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          75
+        ]
+      ],
+      "number": 39,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C2 双T7含BD目标] AMULET",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 46,
+      "base_rule": 46,
+      "category": "C2_target",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          74
+        ]
+      ],
+      "number": 40,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C2 双T7含BD目标] RING",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    },
+    {
+      "source_raxx_rule": 47,
+      "base_rule": 47,
+      "category": "C2_target",
+      "owners": [
+        "skeleton-necromancer"
+      ],
+      "strict_refs": [
+        [
+          "skeleton-necromancer",
+          73
+        ]
+      ],
+      "number": 41,
+      "role": "SECONDARY",
+      "enabled": true,
+      "name": "SECONDARY - [C2 双T7含BD目标] RELIC",
+      "minimum_t7": 2,
+      "alert_tier": 3,
+      "sound_name": "灵感"
+    }
+  ],
+  "protected_sha256": {
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer-v2.xml": "b98ac8760726009ece4bef27bde7f6ad9cc2d2806e8996630ecbb96d41e1e71c",
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml": "ddfb6889366162de32eaf4a9dbd050f23496a1d902189cff340b5ec444da6ec9",
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer.xml": "a6026b9a065042ead7e4e9bd1461b20f0687a148d5a087669b6763c7f461cc78",
+    "templates/base-manifest.json": "ad19178a51cff97cb61017448c7ca36fca963ec5672914ff90a2c54a564cbee1",
+    "templates/LE-base-v1.xml": "725e8ce0dc642f0e0bd60ae50f3b9c168b775ecee96fcf1064f1a39c3caae4d4",
+    "sources/Raxx's S5 Ultimate Filter v1.0.txt": "146465750ab794175676f73b7251ddba610c42c4508bb16b614b6d4982036288",
+    "sources/builds/maxroll-flay-mana-lich-strict.xml": "4e70c8b9111a28ae257aea7b561d931ac99629a6054646ce18a3ce5e3458995c",
+    "sources/builds/maxroll-skeleton-necromancer-strict.xml": "5033341708ab5594cfcb70448bf3c6084333f03efa4388e5d4c6f4b1409dbade",
+    "sources/builds/maxroll-skeleton-necromancer-very-strict.xml": "7e9bb43a06383fad155298c642991e41cf9d125911702e46c8e508634cf55cb1",
+    "scripts/generate_current_filter.py": "b38e23b62de97b7f46b685e0f589867389f30de8b472074862dbe031fd8eca26"
+  },
+  "filters_and_generator_unchanged": true,
+  "game_execution_tested": false
+}

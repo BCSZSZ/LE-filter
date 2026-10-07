@@ -2,6 +2,15 @@
 
 更新时间：2026-10-07，日本时间。当前阅读顺序：README → SOUND_STYLE_REVIEW → CURRENT_FILTER_GUIDE → CURRENT_RULES_REVIEW → BASE_TEMPLATE → 本memo；填空来源查STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
+## 最新调查：骷髅双目标T7与常驻单目标神像，尚未改成品
+
+- 用户要求先调查新Very Strict与截图，不沿用其策略。证据、结论及建议见SKELETON_STRICT_INVESTIGATION；离线运行`python -X utf8 scripts/investigate_skeleton_strict.py`，只写analysis/skeleton-strict-investigation.json。原图、新XML与人工转录的截图顺序在sources/builds/skeleton-investigation-manifest.json，可复现，不能将截图转录说成XML自动推导。
+- 旧Strict141条、新Very Strict127条；9条部位T7、4条单目标神像、4条双目标神像的启用／目标／底材／条件完全相同。两份都已提供常驻一项源规则X18–21；不是用户给错。当前生成器只采用Skeleton idol_bis来源，成品G123–126四条两目标；这是我们的策略缺口。旧memo所说“未新增一项”是当前实现状态，不是BD不需要，也不是来源不足。
+- 当前双T7只要求至少一个本BD本部位T7，脚G37／戒指G40会保留双目标但没有单独分类。建议后续新增“本BD本部位目标池至少2条EQUAL 7”，先于至少1条目标的双T7层，三T7仍优先；不要跨BD或跨部位混池。声音暂未另行确定，本轮没有自行提升。XML无逐词缀排序／必选关系，截图顺序独立保存。
+- 截图脚28＋679、腰带36＋52均在来源池；戒指常规70＋825，截图未提供戒指排序。部位池另含腐化参考，建议素材目标分列普通／实验，不默认将腐化算作两个常规目标。胸甲截图第二项192不在部位T7池，但在职业碎片与Planner里；证明BD用途，不等于所有推荐低阶属性都应升为T7优选。
+- 神像需自动分三类：常规／Weaver普通0／5、附魔4、腐化6。897是附魔，当前只排除6仍把897算进“普通”，941＋897不能据此说941＋287普通配对齐全。后续补常驻一项开始、精确普通配对灵感：Humble862＋319或870；Minor846＋851或852，Planner另有855；Large941＋287，897另外记录。已附魔／腐化状态不因词缀分列而排除；源尺寸、底材差异与跨职业Omen仍需保留供审阅。
+- 本轮只归档证据和规则建议；当前模板、生成器与162条v3的哈希保持，当前成品行为仍如下，不将建议写成已经生效。
+
 ## 最新成品：v3四档提示
 
 - 用户本轮要求清晰名称、全部情况四档归类、无声无地图图标、主副分组、合并同条件与审查T6压缩。成品v3当前162条（151启用／11关闭）；原138条v2保持不动，其复现脚本在82e557d。当前current三脚本改为生成／验证／渲染v3，报告路径沿用current-filter-report与current-filter-validation。

@@ -19,4 +19,5 @@
 - v3的任意LP=1／2取消原潜能白名单限制；T8补1156全池。其他收集范围保持；共享与主专属暗金合并主11、副9。T6只把相同条件的匕首／单手斧合并，19→18，85级退出；不把不同部位目标混成全局池。骷髅常驻单目标神像及祭坛两目标毕业未新增。
 - v2仅使用Strict20种目标暗金，追加原R15形成152项，不重新加入旧5种正文替代品。普通实验目标已填但沿用关闭；升华、紧缺库存入口及未提供的开荒优选底材关闭，五类定向底材启用且保留Raxx宽门槛，侍祭碎片沿用，其他职业碎片关闭。骷髅神像按源BIS底材与至少2个普通目标，不自动导入常驻1项层或精确Planner组合；跨职业Large Omen来源保留，未猜更窄配对。实际待办与默认选择须同步CURRENT_FILTER_GUIDE与memo。
 - 历史187条XML、transfer-report和GENERATED_RULE_INDEX原由scripts/generate_filter.py重建；其verify_generated_filter与render_rules_review也仅对应历史流程。当前使用上面的current流程，不手改生成输出、不静默截断超过200条的规则；封印等未知语义保留未确认。
+- 最新骷髅调查见docs/SKELETON_STRICT_INVESTIGATION.md：旧／新Strict都已有常驻一项神像来源，当前未生成是本地策略缺口。897为附魔4，不可与普通0／5混称普通双目标毕业。双目标T7、攻略排序、神像一项／精确配对及附魔分列建议已归档，本轮仅调查，尚未修改生成器／成品；旧“未新增”状态不能当作来源不足或未来禁止。
 - 当前逐条中文审阅稿与名单附录由scripts/render_current_filter.py从实际XML和冻结名字库重建，标题须对应真实条件；同步CURRENT_FILTER_GUIDE与memo，历史COMBINED_FILTER_GUIDE不冒充当前设计。
