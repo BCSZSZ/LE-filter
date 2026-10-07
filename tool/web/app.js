@@ -3,12 +3,12 @@ const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;',
 const copy = value => JSON.parse(JSON.stringify(value));
 const STORAGE = 'le-filter-workbench-v1';
 const categories = [
-  ['uniques','所需暗金','用名字选择目标；0LP保留，高潜能仍按四档提示。','选择暗金'],
-  ['equipment','装备词条','每个部位独立填写。至少两个目标时，一条整池条件识别双目标T7。','添加部位'],
-  ['altars','祭坛词条','按祭坛底材绑定目标；至少一项，阶数不限。','添加祭坛'],
-  ['idols','神像词条','','添加神像'],
-  ['bases','所需底材','独立收集制作底材，不给装备T7素材强加同底材要求。','添加底材'],
-  ['leveling_slots','练级分段','保留Raxx的等级、阶数与数量门槛；目标独立填写，空白表示沿用原示例。','']
+  ['uniques','所需暗金','选择暗金'],
+  ['equipment','装备词条','添加部位'],
+  ['altars','祭坛词条','添加祭坛'],
+  ['idols','神像词条','添加神像'],
+  ['bases','所需底材','添加底材'],
+  ['leveling_slots','练级分段','']
 ];
 const levelNames = {63:'武器／副手T6过渡',64:'防具／首饰T6过渡',75:'早期腐化装备',128:'过渡神像：两项目标',129:'过渡神像：一项目标',135:'开荒神像',136:'开荒武器底材',137:'开荒副手底材',138:'开荒头盔底材',139:'开荒胸甲底材',140:'开荒腰带底材',141:'开荒鞋子底材',142:'开荒项链底材',143:'开荒戒指底材',144:'开荒手套底材',145:'开荒遗物底材',146:'T3生命／物抗拆解',147:'T3移速／冷却拆解',148:'T3抗性拆解',149:'T2生命／物抗',150:'T2移速／冷却',151:'T2抗性',152:'早期弓箭词条',153:'早期近战武器词条',154:'早期施法武器词条',156:'早期遗物底材',157:'早期法器底材',158:'早期箭袋底材',159:'早期盾牌底材',160:'早期戒指底材',161:'早期项链底材'};
 let catalog, examples, config, activeId, mode='endgame', category='uniques', view='editor', selection, imported, generated, levelId=136, toastTimer;
@@ -47,8 +47,7 @@ function render(){
   $('profile-note').textContent=mode==='endgame'?'终局目标独立于练级目标。当前已勾选 '+config.builds.filter(b=>b.enabled).length+' 个BD，导出时合并收集。':'练级目标独立填写；Raxx原有等级分段保持。第6项可逐段替换原示例，尚未填写的部分沿用Raxx。';
   $('categories').innerHTML=categories.map(([key,title],i)=>`<button data-category="${key}" class="${category===key?'active':''}"><span class="step-num">0${i+1}</span>${title}</button>`).join('');
   const item=categories.find(c=>c[0]===category);
-  $('category-title').textContent=item[1];$('category-description').textContent=item[2];$('add-target').textContent=item[3];$('add-target').hidden=!item[3];
-  $('category-description').hidden=!item[2];
+  $('category-title').textContent=item[1];$('add-target').textContent=item[2];$('add-target').hidden=!item[2];
   $('extra-t7').checked=config.extra_t7;$('export-xml').textContent=`导出${mode==='endgame'?'终局':'练级'}filter`;
   renderTargets();renderSource();
 }
@@ -57,14 +56,13 @@ function renderTargets(){
   const data=profile()[category];
   if(!data.length){$('targets').innerHTML=`<div class="empty"><strong>为这个BD选择${categories.find(c=>c[0]===category)[1]}</strong>从列表搜索选择，或导入filter填入目标。</div>`;return;}
   if(category==='uniques'){
-    $('targets').innerHTML=`<div class="target-row"><div class="chips">${chips(data,'uniques')}</div><p class="reference">已选${data.length}项。可用中文、英文或ID搜索并增删。</p></div>`;return;
+    $('targets').innerHTML=`<div class="target-row"><div class="chips">${chips(data,'uniques')}</div></div>`;return;
   }
   $('targets').innerHTML=data.map((g,i)=>{
     const commands=`${category!=='bases'?`<button data-pick="affixes" data-index="${i}">词缀</button>`:''}<button data-pick="bases" data-index="${i}">底材</button>${category==='idols'?`<button data-pick="pair_bases" data-index="${i}">两项层底材</button>`:''}<button data-delete="${i}" aria-label="移除此分组">×</button>`;
     const bases=g.bases.length?chips(g.bases,'bases',g.type):'<small>底材不限</small>';
-    const note=category==='equipment'?`${g.affixes.length}个目标；单目标T7${g.affixes.length>=2?'＋整池至少两目标T7':''}。`:'';
-    const extra=[...(g.enchanted||[]),...(g.corrupted||[])];
-    return `<div class="target-row"><div class="row-heading"><strong>${esc(typeName(g.type))}</strong><div class="row-actions">${commands}</div></div><div class="chips">${bases}</div>${category!=='bases'?`<div class="chips" style="margin-top:12px">${g.affixes.length?chips(g.affixes,'affixes'):'<small>尚未填写词缀；此组不会生成目标规则</small>'}</div>`:''}${note?`<p class="reference">${esc(note)}</p>`:''}${extra.length?`<p class="reference">附魔／腐化参考，不计入普通目标：${esc(extra.map(id=>`${label('affixes',id)} (${id})`).join('、'))}</p>`:''}</div>`;
+    const references=category==='bases'?'':[['enchanted','附魔'],['corrupted','腐化']].filter(([key])=>g[key]?.length).map(([key,title])=>`<div class="chips" style="margin-top:12px"><small>${title}参考</small>${chips(g[key],'affixes')}</div>`).join('');
+    return `<div class="target-row"><div class="row-heading"><strong>${esc(typeName(g.type))}</strong><div class="row-actions">${commands}</div></div><div class="chips">${bases}</div>${category!=='bases'?`<div class="chips" style="margin-top:12px">${g.affixes.length?chips(g.affixes,'affixes'):'<small>未选择词缀</small>'}</div>`:''}${references}</div>`;
   }).join('');
 }
 function renderSource(){
@@ -124,7 +122,7 @@ function pickGroup(field,index){
 }
 function showGroupDialog(){
   const types=category==='altars'?['IDOL_ALTAR']:category==='idols'?Object.keys(catalog.types).filter(t=>t.startsWith('IDOL_')&&t!=='IDOL_ALTAR'):catalog.equipment_types;
-  $('group-title').textContent=categories.find(c=>c[0]===category)[3];
+  $('group-title').textContent=categories.find(c=>c[0]===category)[2];
   $('group-type').innerHTML=types.map(t=>`<option value="${t}">${esc(typeName(t))} ${esc(t.startsWith('IDOL_')&&t!=='IDOL_ALTAR'?t.slice(5):'')}</option>`).join('');
   $('group-dialog').showModal();
 }
