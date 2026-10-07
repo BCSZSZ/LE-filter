@@ -11,6 +11,7 @@
 - 26项单元测试通过；隔离ZIP能独立运行、两次ZIP构建相同。实际Pyodide/WASM七组对照全部与本地结果一致，包括两份Strict提取、默认137条、Allie107条、835116条、两攻略组合181条；完整XML及规则元数据均一致。
 - 真实静态浏览器验证启动、Strict Flay文件导入（11暗金／10装备组／1祭坛／2神像／1底材）、练级列表搜索502并19→18、导入原需求JSON恢复19，以及两攻略组合181／175。Codex内置浏览器不能接收Blob下载；不将导出成功提示冒充文件下载实测。下载使用Chrome／Edge；本轮WASM与本地逐字节对照验证生成内容，没有游戏客户端实测。
 - 机器验证见`analysis/pages-validation.json`；`.site/`与下载缓存均忽略。发布流程在`.github/workflows/pages.yml`，只上传`.site/`静态产物。用户已授权公开仓库，不需要再次确认。
+- 首次[云端部署](https://github.com/BCSZSZ/LE-filter/actions/runs/37589464891)成功，线上页面与运行资源HTTP 200；线上runtime.zip的四份攻略JSON及冻结基底与本地字节一致。真实公开网址已加载四个示例并核对编辑界面，交付截图见[pages-live.png](images/pages-live.png)。
 
 ## 最新确认：两份Flay保持不同方案
 

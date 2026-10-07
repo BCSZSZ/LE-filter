@@ -66,6 +66,17 @@
     "codex_in_app_download_confirmed": false,
     "limitation": "In-app browser did not deliver generated file downloads; use Chrome or Edge. XML content validated with actual WASM engine against native results."
   },
+  "initial_deployment": {
+    "repository_visibility": "public",
+    "source_commit": "0a8533e3574d6a6f2baf69e1a96154ff38f900ce",
+    "workflow_run_url": "https://github.com/BCSZSZ/LE-filter/actions/runs/37589464891",
+    "workflow_conclusion": "success",
+    "http_status": 200,
+    "published_guide_documents_match": true,
+    "frozen_template_bytes_match": true,
+    "live_browser_four_examples": true,
+    "screenshot": "docs/images/pages-live.png"
+  },
   "game_client_tested": false,
   "site_url": "https://bcszsz.github.io/LE-filter/"
 }
