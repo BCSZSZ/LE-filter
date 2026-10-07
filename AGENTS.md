@@ -1,5 +1,6 @@
 # LE-filter 工作约束
 
+- 网页勾选／主套路与工作台通过“应用所选BD”主动载入；打开页面、改选或导入后先待应用。空选择显示空状态且不能预览／导出，不自动创建新BD；需求仍保存。多BD工作台以独立标签切换编辑，所有已应用BD共同生成，不合并需求JSON。
 - 用户已授权仓库公开与GitHub Pages发布（替代原private约定）。静态构建`scripts/build_pages.py`使用固定Pyodide 314.0.7、原Python引擎与适配器；不得重写过滤策略或增加网址提取。在线四示例保持两个攻略默认未勾选及两份Flay独立。部署流程`.github/workflows/pages.yml`只发布`.site/`；验证机器结果见`analysis/pages-validation.json`。浏览器生成内容的WASM对照不冒充Codex内置浏览器下载或游戏客户端实测。
 - 共通BD需求格式见`docs/REQUIREMENTS_FORMAT.md`，适配器`tool/requirements.py`；一个BD／一个阶段保存目标和可选来源，终局五类、练级affixes与bases两类，不存基底提示、主副、R分段。同id导入只替换该阶段，保留另一阶段与主副。网页入口区分“BD需求JSON”和整套“配置”。
 - 用户明确要求两份Flay保持不同方案：旧Maxroll Strict来源`flay-mana-lich`与Allie攻略来源`flay-lich-allie-guide`分别保存、选择、编辑和导出需求，不能合并目标或互相补齐／覆盖。新攻略不得自动启用；此前181条组合验证指Allie攻略Flay＋中文骷髅835，不是两份Flay。

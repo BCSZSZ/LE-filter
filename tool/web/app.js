@@ -12,6 +12,8 @@ const endgameCategories = [
 const levelingCategories = [['affixes','所需词条','选择词条'],['bases','所需底材','添加底材']];
 const categories = () => mode==='leveling'?levelingCategories:endgameCategories;
 let catalog, examples, config, activeId, mode='endgame', category='uniques', view='editor', selection, imported, generated, toastTimer;
+let selectionApplied=false;
+const workbenchReady = () => selectionApplied && config.builds.some(b=>b.enabled);
 const emptyProfile = () => ({uniques:[],equipment:[],altars:[],idols:[],bases:[]});
 const emptyLeveling = () => ({affixes:[],bases:[]});
 const build = () => config.builds.find(b => b.id === activeId);
@@ -34,6 +36,7 @@ function save(){
   try{localStorage.setItem(STORAGE,JSON.stringify(config));$('save-state').textContent='已保存在此浏览器';}
   catch{$('save-state').textContent='请用“保存配置”备份';}
 }
+function selectionChanged(){selectionApplied=false;view='editor';save();render();}
 async function download(text,name){
   if(globalThis.LEFilterAPI){
     const url=URL.createObjectURL(new Blob([text],{type:name.endsWith('.xml')?'application/xml':'application/json'}));
@@ -44,19 +47,27 @@ async function download(text,name){
   const a=document.createElement('a');a.href=result.url;a.download=name;document.body.append(a);a.click();a.remove();
 }
 function render(){
-  if(!config.builds.length){config.builds.push({id:crypto.randomUUID(),name:'新BD',enabled:true,profiles:{endgame:emptyProfile(),leveling:emptyLeveling()}});config.main_id=config.builds[0].id;}
-  if(!build())activeId=config.builds[0].id;
-  $('builds').innerHTML=config.builds.map(b=>`<div class="build-card ${b.id===activeId?'editing':''}"><input type="checkbox" data-enable="${esc(b.id)}" ${b.enabled?'checked':''} aria-label="收集${esc(b.name)}"><div><button class="build-name" data-edit="${esc(b.id)}">${esc(b.name)}</button><div class="build-meta"><label><input type="radio" name="main-build" data-main="${esc(b.id)}" ${b.id===config.main_id?'checked':''}>主套路</label><button class="remove-build" data-remove="${esc(b.id)}" aria-label="移除${esc(b.name)}">×</button></div></div></div>`).join('');
-  $('build-title').textContent=build().name;
+  const selected=config.builds.filter(b=>b.enabled),ready=workbenchReady();
+  if(!selected.some(b=>b.id===activeId))activeId=selected.find(b=>b.id===config.main_id)?.id||selected[0]?.id;
+  $('builds').innerHTML=config.builds.map(b=>`<div class="build-card ${ready&&b.id===activeId?'editing':''}"><input type="checkbox" data-enable="${esc(b.id)}" ${b.enabled?'checked':''} aria-label="收集${esc(b.name)}"><div><button class="build-name" data-edit="${esc(b.id)}">${esc(b.name)}</button><div class="build-meta"><label><input type="radio" name="main-build" data-main="${esc(b.id)}" ${b.id===config.main_id?'checked':''}>主套路</label><button class="remove-build" data-remove="${esc(b.id)}" aria-label="移除${esc(b.name)}">×</button></div></div></div>`).join('');
+  $('apply-builds').textContent=`应用所选BD（${selected.length}）`;
+  $('build-title').textContent=ready?build().name:'BD编辑工作台';
+  $('workspace-builds').hidden=!ready;$('workspace-controls').hidden=!ready;$('workspace-empty').hidden=ready;
+  $('workspace-builds').innerHTML=ready?selected.map(b=>`<button data-workspace-build="${esc(b.id)}" class="${b.id===activeId?'active':''}"><span class="dot ${b.id===config.main_id?'pink':'blue'}"></span>${esc(b.name)} · ${b.id===config.main_id?'主':'副'}套路</button>`).join(''):'';
+  $('workspace-message').textContent=selected.length?'选择待应用':'尚未选择BD';
+  $('rename-build').hidden=!ready;
+  ['preview-button','export-xml','save-requirements','extra-t7'].forEach(id=>$(id).disabled=!ready);
   document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));
   document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));
-  $('editor').hidden=view!=='editor';$('preview').hidden=view!=='preview';
+  $('editor').hidden=!ready||view!=='editor';$('preview').hidden=!ready||view!=='preview';
+  $('extra-t7').checked=config.extra_t7;
+  if(!ready){['targets','categories','source-info','preview-rules'].forEach(id=>$(id).replaceChildren());$('preview-summary').textContent='';return;}
   $('profile-note').textContent=mode==='endgame'?'终局目标':'0–29级：至少1项目标；30–49级：目标总阶数≥5；50–79级：≥8，单可用目标T≥5；80级退出。';
   if(!categories().some(c=>c[0]===category))category=categories()[0][0];
   $('categories').innerHTML=categories().map(([key,title],i)=>`<button data-category="${key}" class="${category===key?'active':''}"><span class="step-num">0${i+1}</span>${title}</button>`).join('');
   const item=categories().find(c=>c[0]===category);
   $('category-title').textContent=item[1];$('add-target').textContent=item[2];$('add-target').hidden=!item[2];
-  $('extra-t7').checked=config.extra_t7;$('export-xml').textContent='导出filter';
+  $('export-xml').textContent='导出filter';
   renderTargets();renderSource();
 }
 function renderTargets(){
@@ -119,10 +130,13 @@ function showGroupDialog(){
   $('group-dialog').showModal();
 }
 async function preview(){
+  if(!workbenchReady())return toast('请先勾选BD并点击“应用所选BD”。');
   try{
     $('preview-button').disabled=true;
-    generated=await api('/api/generate',{config});view='preview';render();renderPreview();
-  }catch(e){toast(e.message,true);}finally{$('preview-button').disabled=false;}
+    const snapshot=JSON.stringify(config),out=await api('/api/generate',{config});
+    if(!workbenchReady()||snapshot!==JSON.stringify(config))return;
+    generated=out;view='preview';render();renderPreview();
+  }catch(e){toast(e.message,true);}finally{$('preview-button').disabled=!workbenchReady();}
 }
 function renderPreview(){
   if(!generated)return;
@@ -144,15 +158,17 @@ async function analyzeImport(assignments){
 }
 
 $('builds').addEventListener('click',e=>{
-  const edit=e.target.closest('[data-edit]');if(edit){activeId=edit.dataset.edit;view='editor';render();return;}
-  const remove=e.target.closest('[data-remove]');if(remove){config.builds=config.builds.filter(b=>b.id!==remove.dataset.remove);if(config.main_id===remove.dataset.remove)config.main_id=config.builds.find(b=>b.enabled)?.id;save();render();}
+  const edit=e.target.closest('[data-edit]');if(edit){if(!workbenchReady()||!config.builds.find(b=>b.id===edit.dataset.edit)?.enabled)return toast('请先勾选该BD并点击“应用所选BD”。');activeId=edit.dataset.edit;view='editor';render();return;}
+  const remove=e.target.closest('[data-remove]');if(remove){config.builds=config.builds.filter(b=>b.id!==remove.dataset.remove);if(config.main_id===remove.dataset.remove)config.main_id=config.builds.find(b=>b.enabled)?.id;selectionChanged();}
 });
 $('builds').addEventListener('change',e=>{
   if(e.target.dataset.enable){const b=config.builds.find(b=>b.id===e.target.dataset.enable);b.enabled=e.target.checked;if(!config.builds.find(b=>b.id===config.main_id)?.enabled)config.main_id=config.builds.find(b=>b.enabled)?.id;}
   if(e.target.dataset.main){config.main_id=e.target.dataset.main;config.builds.find(b=>b.id===config.main_id).enabled=true;}
-  save();render();
+  selectionChanged();
 });
-$('add-build').onclick=()=>{const b={id:crypto.randomUUID(),name:`新BD ${config.builds.length+1}`,enabled:true,profiles:{endgame:emptyProfile(),leveling:emptyLeveling()}};config.builds.push(b);activeId=b.id;view='editor';save();render();};
+$('apply-builds').onclick=()=>{selectionApplied=true;if(!config.builds.find(b=>b.id===config.main_id)?.enabled)config.main_id=config.builds.find(b=>b.enabled)?.id;activeId=config.main_id;view='editor';save();render();};
+$('workspace-builds').onclick=e=>{const b=e.target.closest('[data-workspace-build]');if(b){activeId=b.dataset.workspaceBuild;view='editor';render();}};
+$('add-build').onclick=()=>{const b={id:crypto.randomUUID(),name:`新BD ${config.builds.length+1}`,enabled:true,profiles:{endgame:emptyProfile(),leveling:emptyLeveling()}};config.builds.push(b);activeId=b.id;selectionChanged();};
 $('rename-build').onclick=()=>{
   const input=document.createElement('input');input.type='text';input.value=build().name;input.setAttribute('aria-label','BD名称');$('build-title').replaceChildren(input);input.focus();
   const done=()=>{build().name=input.value.trim()||'未命名BD';save();render();};input.onblur=done;input.onkeydown=e=>{if(e.key==='Enter')input.blur();};
@@ -181,11 +197,12 @@ $('apply-import').onclick=async()=>{
   await analyzeImport(assignments);if($('apply-import').disabled)return;
   const id=crypto.randomUUID(),stage=$('import-mode').value;
   const b={id,name:imported.name,enabled:true,profiles:{endgame:emptyProfile(),leveling:emptyLeveling()},source:{name:$('xml-file').files[0]?.name||'粘贴XML',sha256:imported.source_sha256,warnings:imported.warnings,rules:imported.rules}};
-  b.profiles[stage]=copy(stage==='leveling'?imported.leveling_profile:imported.profile);config.builds.push(b);activeId=id;mode=stage;category=categories()[0][0];view='editor';save();render();$('import-dialog').close();toast('已提取目标，可以逐项核对修改。');
+  b.profiles[stage]=copy(stage==='leveling'?imported.leveling_profile:imported.profile);config.builds.push(b);activeId=id;mode=stage;category=categories()[0][0];selectionChanged();$('import-dialog').close();toast('已提取目标，点击“应用所选BD”后核对修改。');
 };
 $('extra-t7').onchange=e=>{config.extra_t7=e.target.checked;save();};
 $('preview-button').onclick=preview;$('preview-search').oninput=renderPreview;
 $('export-xml').onclick=async()=>{
+  if(!workbenchReady())return toast('请先勾选BD并点击“应用所选BD”。');
   try{const out=await api('/api/generate',{config});await download(out.xml,'LE-filter.xml');toast(`已导出${out.count}条规则，包含终局和练级目标。${out.warnings.join(' ')}`);}catch(e){toast(e.message,true);}
 };
 $('save-config').onclick=async()=>{try{await download(JSON.stringify(config,null,2),'LE-filter-targets.json');}catch(e){toast(e.message,true);}};
@@ -201,14 +218,14 @@ $('requirements-file').onchange=async e=>{
     if(!b){b={id:data.id,name:data.name,enabled:false,profiles:{endgame:emptyProfile(),leveling:emptyLeveling()}};config.builds.push(b);}
     b.name=data.name;
     b.profiles[data.stage]=data.profile;b.requirement_sources||={};b.requirement_sources[data.stage]=data.source;
-    activeId=b.id;mode=data.stage;category=categories()[0][0];view='editor';save();render();toast('已载入BD需求，修改后可保存为同一格式的JSON。');
+    activeId=b.id;mode=data.stage;category=categories()[0][0];selectionChanged();toast('已载入BD需求，勾选该BD并点击“应用所选BD”后编辑。');
   }catch(e){toast(e.message,true);}finally{e.target.value='';}
 };
 $('load-config').onclick=()=>$('config-file').click();
 $('config-file').onchange=async e=>{
-  try{const file=e.target.files[0];if(!file)return;const loaded=JSON.parse(await file.text());config=(await api('/api/validate',{config:loaded})).config;activeId=config.main_id;view='editor';save();render();toast('已载入配置。');}catch(e){toast(e.message,true);}finally{e.target.value='';}
+  try{const file=e.target.files[0];if(!file)return;const loaded=JSON.parse(await file.text());config=(await api('/api/validate',{config:loaded})).config;activeId=config.main_id;selectionChanged();toast('已载入配置，点击“应用所选BD”载入工作台。');}catch(e){toast(e.message,true);}finally{e.target.value='';}
 };
-$('load-examples').onclick=()=>{config=copy(examples);activeId=config.main_id;category='uniques';mode='endgame';view='editor';save();render();toast('已载入示例方案。');};
+$('load-examples').onclick=()=>{config=copy(examples);activeId=config.main_id;category='uniques';mode='endgame';selectionChanged();toast('已载入示例方案，点击“应用所选BD”载入工作台。');};
 async function init(){
   try{
     if(globalThis.LEFilterAPI){document.querySelector('.layout').inert=true;document.querySelector('.top-actions').inert=true;$('save-state').textContent='首次加载，请稍候…';}

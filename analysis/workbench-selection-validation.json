@@ -1,0 +1,22 @@
+{
+  "tested_on": "2026-10-07",
+  "unit_tests_passed": 26,
+  "javascript_syntax_check": true,
+  "browser_checks": {
+    "initial_selection_requires_application": true,
+    "zero_selection_clears_targets_and_menus": true,
+    "zero_selection_disables_preview_and_export": true,
+    "zero_selection_survives_reload": true,
+    "changed_selection_requires_reapplication": true,
+    "single_allie_unique_targets": 11,
+    "two_selected_builds_have_independent_tabs": true,
+    "skeleton_835_unique_targets": 25,
+    "independent_leveling_affix_counts": [19, 8],
+    "combined_guide_rules": 181,
+    "combined_guide_enabled_rules": 175,
+    "json_import_requires_selection_and_application": true
+  },
+  "engine_requirements_and_frozen_sources_unchanged": true,
+  "screenshot": "docs/images/workbench-empty.png",
+  "game_client_tested": false
+}

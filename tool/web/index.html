@@ -13,6 +13,7 @@
   <aside>
     <div class="aside-heading"><span>收集的BD</span><button id="add-build" aria-label="新增BD">＋</button></div>
     <div id="builds"></div>
+    <button id="apply-builds" class="wide primary">应用所选BD</button>
     <button id="import-filter" class="wide dashed">＋ 导入filter</button>
     <button id="import-requirements" class="wide dashed">＋ 导入BD需求JSON</button>
     <button id="save-requirements" class="wide">保存本BD需求JSON</button>
@@ -22,7 +23,9 @@
   </aside>
   <main>
     <div class="main-heading"><div><p class="eyebrow">BUILD TARGETS</p><h1 id="build-title">目标配置</h1></div><button id="rename-build">重命名</button></div>
-    <div class="workspace-bar"><div class="segmented"><button data-mode="endgame" class="active">终局目标</button><button data-mode="leveling">练级目标</button></div><div class="view-tabs"><button data-view="editor" class="active">填写目标</button><button data-view="preview">规则预览</button></div></div>
+    <nav id="workspace-builds" class="category-tabs" aria-label="工作台BD" hidden></nav>
+    <section id="workspace-empty" class="panel empty"><strong id="workspace-message"></strong><p>在左侧勾选BD，再点击“应用所选BD”载入编辑工作台。</p></section>
+    <div id="workspace-controls" class="workspace-bar" hidden><div class="segmented"><button data-mode="endgame" class="active">终局目标</button><button data-mode="leveling">练级目标</button></div><div class="view-tabs"><button data-view="editor" class="active">填写目标</button><button data-view="preview">规则预览</button></div></div>
     <div id="editor">
       <div id="profile-note" class="notice"></div>
       <nav id="categories" class="category-tabs"></nav>

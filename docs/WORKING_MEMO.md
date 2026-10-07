@@ -2,6 +2,13 @@
 
 更新时间：2026-10-07，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
+## 最新交互：应用所选BD
+
+- 用户要求由主动按钮把勾选对象载入中间工作台。新增“应用所选BD”：每次打开、改选／主套路、导入或载入配置后先显示待应用，点击按钮才编辑／预览／导出。空选择显示空状态，清空旧目标与预览展示，禁用预览、导出及当前BD需求保存；不删除库中的任何需求，不自动创建新BD补空。
+- 多BD应用后以中间标签分别切换编辑，左侧名称仅切换已应用的勾选对象；主副与生成仍使用同一套config，不能将BD目标混成一份需求。新增／导入后需应用选择，未勾选JSON方案需先勾选；整套保存仍备份全部BD。正在生成的旧预览遇到配置改变不显示。
+- 只改网页交互与说明，需求格式、引擎、冻结来源和历史成品不变。
+- 26项测试及JS语法检查通过。真实静态浏览器验证空选择刷新、单BD载入、多BD标签与独立练级19／8项、组合181／175条及JSON导入后主动应用；截图与机器记录见`docs/images/workbench-empty.png`、`analysis/workbench-selection-validation.json`。
+
 ## 最新实现：GitHub Pages浏览器运行版
 
 - 用户明确授权整个`BCSZSZ/LE-filter`仓库改为公开并发布GitHub Pages；这替代此前private约定。网址为`https://bcszsz.github.io/LE-filter/`。仅支持filter文件／XML文本及需求JSON导入，不增加网址提取功能。
