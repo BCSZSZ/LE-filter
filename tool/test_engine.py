@@ -5,6 +5,7 @@ import xml.etree.ElementTree as ET
 from copy import deepcopy
 
 import engine as e
+from generate_filter import tree
 from verify_generated_filter import ids, predicate
 
 
@@ -105,6 +106,42 @@ class ToolTests(unittest.TestCase):
             self.assertEqual(first(self.output,"BOOTS",{},uid=uid,lp=lp,rarity="UNIQUE")["tier"],tier)
         for ww, tier in [(1,1),(13,1),(14,2),(16,2),(17,3),(19,3),(20,4)]:
             self.assertEqual(first(self.output,"BOOTS",{},uid=253,ww=ww,rarity="UNIQUE")["tier"],tier)
+
+    def test_seasonal_uniques_protected_without_build_targets(self):
+        out = e.generate(self.leveling_config(()))
+        source = e.read_json("sources/seasonal-unique-protection.json")
+        self.assertEqual([len(r["uniques"]) for r in source["releases"]], [30, 9, 16])
+        self.assertEqual(sum(u["primordial"] for r in source["releases"] for u in r["uniques"]), 25)
+        for release in source["releases"]:
+            for u in release["uniques"]:
+                self.assertEqual(e.CATALOG["uniques"][str(u["id"])]["en"], u["en"])
+                row = first(out, u["type"], uid=u["id"], rarity="UNIQUE", lp=0, ww=0)
+                self.assertEqual((row["category"], row["tier"], row["role"]), ("通用暗金／套装0LP保护", 1, "通用"))
+        for lp, tier in [(1, 2), (2, 3), (3, 4)]:
+            self.assertEqual(first(out, "IDOL_2x2", uid=486, rarity="UNIQUE", lp=lp)["tier"], tier)
+        self.assertEqual(first(out, uid=0, rarity="UNIQUE")["action"], "HIDE")
+        self.assertEqual(first(self.output, uid=475, rarity="UNIQUE")["role"], "主")
+        self.assertEqual(first(self.output, uid=471, rarity="UNIQUE")["role"], "副")
+
+    def test_common_protection_merge_preserves_other_rolls(self):
+        common = [(n, r) for n, r in zip(parsed(self.output), self.output["rules"]) if r["category"] == "通用暗金／套装0LP保护"]
+        self.assertEqual(len(common), 1)
+        node, row = common[0]
+        c = e.condition(node, "UniqueModifiersCondition")
+        original = [u for n in [15, 16] for u in e.condition(e.BASE[n], "UniqueModifiersCondition")]
+        expected = {int(u.findtext("UniqueId")) for u in original} | e.SEASONAL_UNIQUES
+        self.assertEqual(set(row["uniques"]), expected)
+        self.assertEqual(len(c), len(expected))
+        self.assertEqual(len(node.find("conditions")), 1)
+        actual = {int(u.findtext("UniqueId")): u for u in c}
+        for uid in e.SEASONAL_UNIQUES:
+            self.assertFalse(len(actual[uid].find("Rolls")))
+        for u in original:
+            uid = int(u.findtext("UniqueId"))
+            if uid not in e.SEASONAL_UNIQUES:
+                self.assertEqual(tree(actual[uid]), tree(u))
+        self.assertFalse(any(r["category"] == "Raxx通用" and r["source_raxx_rule"] in range(12, 17) for r in self.output["rules"]))
+        self.assertEqual(len([r for r in self.output["rules"] if r["category"] == "珍贵名单低WW静音"]), 1)
 
     def test_selection_main_and_phase(self):
         config=deepcopy(self.config)

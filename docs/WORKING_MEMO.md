@@ -2,6 +2,13 @@
 
 更新时间：2026-10-07，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
+## 最新实现：赛季暗金0LP保护与潜能规则去重
+
+- 按1.3／1.4／1.5版本新增暗金范围收集，共55种，包含25种先古和4种暗金神像；不局限于赛季机制限定掉落。冻结JSON为`sources/seasonal-unique-protection.json`，中文审阅与维护见`docs/SEASONAL_UNIQUE_PROTECTION.md`。版本新增页实际物品key经lz-string解码后，数字ID／名字／类型逐项核对version150词库；先古标记直接从哈希已验证数据库脚本读取，25种均覆盖，不用ID区间猜测。
+- `tool/engine.py`将R15珍贵暗金143项、R16套装21项与赛季名单合并为170项。一条常驻通用规则只对赛季条目清空Rolls条件；其他旧条目的原对象、重复与数值边界保留。非BD0LP默认铁匠档；主副BD与高LP／WW层仍先匹配。源文件、冻结Base v1、历史XML不变。BD需求格式和提取器不变。
+- 删除重复生成的原R12／13／14混合潜能兜底，其条件由拆分LP／WW规则覆盖。主／副BD0LP仍各一条；原珍贵名单WW1–13静音层因提示用途不同保留。新增规则元数据`uniques`与预览展开／搜索名单，避免只有门槛文本而看不到不同的物品范围。
+- Pages ZIP增加赛季冻结名单，运行期离线。28项测试通过，涵盖所有55项无BD／0LP／零WW保护、先古数量、暗金神像、高LP优先、BD颜色归属、非目标旧暗金不误放、旧非赛季Rolls保留与无重复通用层。实际Pyodide七组与原生完整输出一致；默认双BD133／127、Allie103／97、835112／106、两攻略177／171。真实网页预览展开170项后逐ID核对55项无遗漏，记录见`analysis/seasonal-unique-validation.json`。以下137／181等是此前历史快照，不代表此轮规则数量。没有游戏客户端实测。
+
 ## 最新交互：应用所选BD
 
 - 用户要求由主动按钮把勾选对象载入中间工作台。新增“应用所选BD”：每次打开、改选／主套路、导入或载入配置后先显示待应用，点击按钮才编辑／预览／导出。空选择显示空状态，清空旧目标与预览展示，禁用预览、导出及当前BD需求保存；不删除库中的任何需求，不自动创建新BD补空。

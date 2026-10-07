@@ -143,8 +143,8 @@ function renderPreview(){
   const selected=config.builds.filter(b=>b.enabled).map(b=>b.name).join('＋');
   $('preview-summary').textContent=`${selected} · 终局＋练级 · ${generated.count}条规则 / ${generated.enabled}条启用。${generated.warnings.join(' ')}`;
   const query=$('preview-search').value.toLowerCase();
-  const rows=generated.rules.filter(r=>`${r.name} ${r.sound} ${r.gate} ${r.types.map(typeName).join(' ')}`.toLowerCase().includes(query));
-  $('preview-rules').innerHTML=`<table class="preview-table"><thead><tr><th>顺序</th><th>档位</th><th>规则与目标</th><th>条件</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${r.number}${r.enabled?'':'<small>关闭</small>'}</td><td><span class="badge tier-${r.tier}">${esc(r.sound)}</span><small>${esc(r.role)}</small></td><td>${esc(r.name)}<small>${esc(r.types.map(typeName).join('、'))}</small>${r.affixes.flat().length<30?`<small>${esc(r.affixes.flat().map(i=>`${label('affixes',i)}(${i})`).join('、'))}</small>`:''}</td><td>${esc(r.gate)}<small>${r.action==='HIDE'?'隐藏':'显示'}</small></td></tr>`).join('')}</tbody></table>`;
+  const rows=generated.rules.filter(r=>`${r.name} ${r.sound} ${r.gate} ${r.types.map(typeName).join(' ')} ${(r.uniques||[]).map(i=>`${label('uniques',i)} ${i}`).join(' ')}`.toLowerCase().includes(query));
+  $('preview-rules').innerHTML=`<table class="preview-table"><thead><tr><th>顺序</th><th>档位</th><th>规则与目标</th><th>条件</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${r.number}${r.enabled?'':'<small>关闭</small>'}</td><td><span class="badge tier-${r.tier}">${esc(r.sound)}</span><small>${esc(r.role)}</small></td><td>${esc(r.name)}<small>${esc(r.types.map(typeName).join('、'))}</small>${r.affixes.flat().length<30?`<small>${esc(r.affixes.flat().map(i=>`${label('affixes',i)}(${i})`).join('、'))}</small>`:''}${r.uniques?.length?`<details><summary>${r.uniques.length}种暗金／套装</summary><small>${esc(r.uniques.map(i=>`${label('uniques',i)}(${i})`).join('、'))}</small></details>`:''}</td><td>${esc(r.gate)}<small>${r.action==='HIDE'?'隐藏':'显示'}</small></td></tr>`).join('')}</tbody></table>`;
 }
 function showImportResult(){
   const p=imported.profile;

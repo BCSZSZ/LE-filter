@@ -2,11 +2,13 @@
 
 [在线工作台](https://bcszsz.github.io/LE-filter/)由GitHub Pages托管。支持导入Maxroll filter XML／TXT、导入需求JSON、列表搜索编辑、多个BD选择及JSON／XML导出；不支持从网址提取攻略。首次打开需要加载运行环境，导入内容与生成过程在浏览器内处理。在线示例包含旧Maxroll Flay／Skeleton，以及独立的Allie Flay攻略／中文骷髅835攻略；两个攻略方案默认未勾选，两份Flay不合并。使用Chrome或Edge进行文件下载；Codex内置浏览器目前不能正常接收浏览器生成的下载文件。
 
-**目标工作台已可使用**：双击[start-tool.cmd](start-tool.cmd)，打开本地 <http://127.0.0.1:8765>。支持导入filter提取目标、中文／英文／ID搜索多选、多个BD勾选合并、主副套路、JSON保存和XML预览导出。终局五类目标、练级只填词缀与底材两份列表，共同导出一份filter。见[工具使用说明](docs/TOOL_GUIDE.md)。内置两BD示例137条（131启用，练级目标留空）。05要求指定底材＋同BD对应部位目标T7常驻；删除专门T6层，练级品质80退出、底材60退出、普通拆解50退出、原常驻拆解60退出。897附魔及腐化不计普通神像目标。
+**目标工作台已可使用**：双击[start-tool.cmd](start-tool.cmd)，打开本地 <http://127.0.0.1:8765>。支持导入filter提取目标、中文／英文／ID搜索多选、多个BD勾选合并、主副套路、JSON保存和XML预览导出。终局五类目标、练级只填词缀与底材两份列表，共同导出一份filter。见[工具使用说明](docs/TOOL_GUIDE.md)。内置两BD示例133条（127启用，练级目标留空）。05要求指定底材＋同BD对应部位目标T7常驻；删除专门T6层，练级品质80退出、底材60退出、普通拆解50退出、原常驻拆解60退出。897附魔及腐化不计普通神像目标。
+
+[赛季暗金通用保护](docs/SEASONAL_UNIQUE_PROTECTION.md)涵盖1.3／1.4／1.5新增的55种暗金，含25种先古和4种暗金神像；0LP也留。与原珍贵暗金／套装合并为170种通用名单，独立于BD选择。预览可按名字／ID搜索并展开完整名单。
 
 新增[共通BD需求JSON格式](docs/REQUIREMENTS_FORMAT.md)：filter与攻略先提供一个BD／一个阶段的目标，网页可导入、修改并保存回该格式，再由基底生成filter。攻略835的[流血骷髅终局需求](requirements/bleed-skeleton-roamer-guide-835.endgame.json)含25暗金／套装、13装备组、3神像组、1祭坛、3独立底材；另有[练级需求](requirements/bleed-skeleton-roamer-guide-835.leveling.json)，8词缀、5底材。练级按1项目标→总阶数5→8收紧，单可用目标T5兜底，跨BD不能合计。见[中文审阅表](docs/BLEED_SKELETON_GUIDE_REVIEW.md)。旧Strict与历史XML保留。
 
-Allie攻略来源的Flay已独立生成[终局需求](requirements/flay-lich-allie-guide.endgame.json)与[练级需求](requirements/flay-lich-allie-guide.leveling.json)：11暗金、10装备组、3神像组、28种终局底材；练级19词缀与3种底材，祭坛未提供目标。835在线清单重新核对一致。四份JSON均已在网页导入并保存读回，新Flay＋835转换181条（175启用），24项测试通过。完整目标、部位链接冲突与验证边界见[双攻略需求审阅](docs/GUIDE_REQUIREMENTS_REVIEW.md)。
+Allie攻略来源的Flay已独立生成[终局需求](requirements/flay-lich-allie-guide.endgame.json)与[练级需求](requirements/flay-lich-allie-guide.leveling.json)：11暗金、10装备组、3神像组、28种终局底材；练级19词缀与3种底材，祭坛未提供目标。835在线清单重新核对一致。四份JSON均已在网页导入并保存读回，新Flay＋835当前转换177条（171启用），28项测试通过。完整目标、部位链接冲突与来源提取时的验证边界见[双攻略需求审阅](docs/GUIDE_REQUIREMENTS_REVIEW.md)。
 
 已归档固定成品：**[Flay＋Skeleton Necromancer v3](filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml)**，162条（151启用／11关闭），采用铁匠／开始／灵感／彗星四档，静音项无图标和光柱，沿用原颜色。旧v2保留不动。[四档分类与能力审阅](docs/SOUND_STYLE_REVIEW.md)、[全部提示索引](docs/CURRENT_ALERT_INDEX.md)、[使用说明](docs/CURRENT_FILTER_GUIDE.md)和[逐条条件](docs/CURRENT_RULES_REVIEW.md)对应这个历史快照。
 

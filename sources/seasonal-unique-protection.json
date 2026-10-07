@@ -1,0 +1,525 @@
+{
+  "captured_at": "2026-10-07",
+  "scope": "All new unique items introduced in patches 1.3, 1.4 and 1.5, including primordial items and unique idols.",
+  "catalog_source": {
+    "url": "https://www.lastepochtools.com/data/version150/db/js/010a2617c7ebb271af8028db2d94bc15.js",
+    "sha256": "af78878c4cdb6c05f2a1fd2095e760f253635ea50f5f7bf43313bc14fdde5a71"
+  },
+  "primordial_source_url": "https://forum.lastepoch.com/t/primal-hunt-coming-to-last-epoch-august-21st/78569",
+  "season5_source_url": "https://forum.lastepoch.com/t/new-uniques-coming-to-last-epoch-october-1/81777",
+  "releases": [
+    {
+      "version": "1.3",
+      "source_url": "https://www.lastepochtools.com/db/version/version130/new/items",
+      "uniques": [
+        {
+          "id": 420,
+          "key": "UAzCcBYCZiA",
+          "decoded": "009420",
+          "en": "Executioner's Tithe",
+          "zh": "处刑者的献祭",
+          "type": "ONE_HANDED_AXE",
+          "primordial": false
+        },
+        {
+          "id": 421,
+          "key": "UAwgsCYEYg",
+          "decoded": "000421",
+          "en": "The Land Before",
+          "zh": "亘古之壤",
+          "type": "IDOL_2x2",
+          "primordial": false
+        },
+        {
+          "id": 422,
+          "key": "UAzBsBYCZKA",
+          "decoded": "006422",
+          "en": "Lightning in a Bottle",
+          "zh": "瓶中闪电",
+          "type": "BELT",
+          "primordial": false
+        },
+        {
+          "id": 423,
+          "key": "UAwRmBYCYGYg",
+          "decoded": "010423",
+          "en": "Legends Entwined",
+          "zh": "传奇交织",
+          "type": "RING",
+          "primordial": true
+        },
+        {
+          "id": 424,
+          "key": "UAwNgzALATBQ",
+          "decoded": "063424",
+          "en": "Tyrant's Skull",
+          "zh": "暴君颅骨",
+          "type": "RELIC",
+          "primordial": true
+        },
+        {
+          "id": 425,
+          "key": "UAwRgzALATArEA",
+          "decoded": "013425",
+          "en": "Wildfire Embers",
+          "zh": "野火余烬",
+          "type": "AMULET",
+          "primordial": true
+        },
+        {
+          "id": 426,
+          "key": "UAzDsBYCYDYg",
+          "decoded": "007426",
+          "en": "Thicket of Blinding Light",
+          "zh": "眩光棘林",
+          "type": "BODY_ARMOR",
+          "primordial": true
+        },
+        {
+          "id": 427,
+          "key": "UAzDMBYCYHYg",
+          "decoded": "003427",
+          "en": "Harmony of the First",
+          "zh": "原初谐律",
+          "type": "TWO_HANDED_SPEAR",
+          "primordial": true
+        },
+        {
+          "id": 428,
+          "key": "UAwRhBYCYA4g",
+          "decoded": "011428",
+          "en": "Onslaught of Cerata",
+          "zh": "棘影猛攻",
+          "type": "SHIELD",
+          "primordial": true
+        },
+        {
+          "id": 429,
+          "key": "UAwRgLGBMCcQ",
+          "decoded": "014429",
+          "en": "Blossom of Immortal Stone",
+          "zh": "不朽石之花",
+          "type": "AMULET",
+          "primordial": true
+        },
+        {
+          "id": 430,
+          "key": "UAwVgbALAzMQ",
+          "decoded": "056430",
+          "en": "Chorus of the Anurok",
+          "zh": "阿努洛克的合唱",
+          "type": "HELMET",
+          "primordial": true
+        },
+        {
+          "id": 431,
+          "key": "UAwRgTALAzCQ",
+          "decoded": "012431",
+          "en": "Carrion of Creation",
+          "zh": "创世残骸",
+          "type": "GLOVES",
+          "primordial": true
+        },
+        {
+          "id": 432,
+          "key": "UAzBsBYGYCYg",
+          "decoded": "006432",
+          "en": "Horn of the Bone Wisp",
+          "zh": "骨火之角",
+          "type": "WAND",
+          "primordial": true
+        },
+        {
+          "id": 433,
+          "key": "UAwNgzALGZA",
+          "decoded": "063433",
+          "en": "Reliquary Nest",
+          "zh": "神圣巢穴",
+          "type": "RELIC",
+          "primordial": true
+        },
+        {
+          "id": 434,
+          "key": "UAzDsBYGZyA",
+          "decoded": "007434",
+          "en": "Mask of Indifference",
+          "zh": "冷漠面具",
+          "type": "HELMET",
+          "primordial": true
+        },
+        {
+          "id": 435,
+          "key": "UAwRhBYGYFYg",
+          "decoded": "011435",
+          "en": "Permanence of Primal Knowledge",
+          "zh": "原识永存",
+          "type": "GLOVES",
+          "primordial": true
+        },
+        {
+          "id": 436,
+          "key": "UAzAsoZgNiA",
+          "decoded": "004436",
+          "en": "Wings of Discord",
+          "zh": "纷争之翼",
+          "type": "BODY_ARMOR",
+          "primordial": true
+        },
+        {
+          "id": 437,
+          "key": "UAzAcBYGYHYg",
+          "decoded": "008437",
+          "en": "Primal Cadence",
+          "zh": "原始节奏",
+          "type": "TWO_HANDED_AXE",
+          "primordial": true
+        },
+        {
+          "id": 438,
+          "key": "UAwRmBYGYA4g",
+          "decoded": "010438",
+          "en": "Whetstone Gavel",
+          "zh": "磨石木槌",
+          "type": "ONE_HANDED_MACES",
+          "primordial": true
+        },
+        {
+          "id": 439,
+          "key": "UAzAcBYGYE4g",
+          "decoded": "008439",
+          "en": "Truesight Glass",
+          "zh": "真视玻璃",
+          "type": "AMULET",
+          "primordial": true
+        },
+        {
+          "id": 440,
+          "key": "UAwRhBZ2I",
+          "decoded": "011440",
+          "en": "Bluefeather Band",
+          "zh": "蓝羽绑带",
+          "type": "RING",
+          "primordial": true
+        },
+        {
+          "id": 441,
+          "key": "UAzAcBZwRiA",
+          "decoded": "008441",
+          "en": "Hydra Arc",
+          "zh": "多头蛇弧光",
+          "type": "BOW",
+          "primordial": true
+        },
+        {
+          "id": 442,
+          "key": "UAzCcBZwJiA",
+          "decoded": "009442",
+          "en": "Velocyn's Jaw",
+          "zh": "维洛西恩之颌",
+          "type": "ONE_HANDED_DAGGER",
+          "primordial": true
+        },
+        {
+          "id": 443,
+          "key": "UAzAcBZwZiA",
+          "decoded": "008443",
+          "en": "Army of Skin",
+          "zh": "肌肤大军",
+          "type": "BOOTS",
+          "primordial": false
+        },
+        {
+          "id": 444,
+          "key": "UAwRgrALFQ",
+          "decoded": "015444",
+          "en": "Evolution's End",
+          "zh": "进化终焉",
+          "type": "AMULET",
+          "primordial": false
+        },
+        {
+          "id": 445,
+          "key": "UAzAcBZwViA",
+          "decoded": "008445",
+          "en": "Spirit Xylem",
+          "zh": "灵体木质部",
+          "type": "TWO_HANDED_STAFF",
+          "primordial": true
+        },
+        {
+          "id": 446,
+          "key": "UAzCsBZwNiA",
+          "decoded": "005446",
+          "en": "Fangs of the Berserker",
+          "zh": "狂战士之牙",
+          "type": "BELT",
+          "primordial": true
+        },
+        {
+          "id": 447,
+          "key": "UAwRgzALBDsQ",
+          "decoded": "013447",
+          "en": "Bones of the Ancestral Pack",
+          "zh": "先祖集群之骨",
+          "type": "CATALYST",
+          "primordial": true
+        },
+        {
+          "id": 448,
+          "key": "UAzAs4DiA",
+          "decoded": "004448",
+          "en": "Architects of Astral Blood",
+          "zh": "星血筑师",
+          "type": "BODY_ARMOR",
+          "primordial": true
+        },
+        {
+          "id": 449,
+          "key": "UAzBsBZwTiA",
+          "decoded": "006449",
+          "en": "The Butcher's Crown",
+          "zh": "屠夫冠冕",
+          "type": "HELMET",
+          "primordial": true
+        }
+      ]
+    },
+    {
+      "version": "1.4",
+      "source_url": "https://www.lastepochtools.com/db/version/version140/new/items",
+      "uniques": [
+        {
+          "id": 450,
+          "key": "UAzAsoVmI",
+          "decoded": "004450",
+          "en": "Unbroken Charge",
+          "zh": "不屈冲锋",
+          "type": "SHIELD",
+          "primordial": false
+        },
+        {
+          "id": 458,
+          "key": "UAzDMBYFYA4g",
+          "decoded": "003458",
+          "en": "Tabi of Dusk and Dawn",
+          "zh": "朝暮足袋",
+          "type": "BOOTS",
+          "primordial": false
+        },
+        {
+          "id": 459,
+          "key": "UAwdgjALArAnEA",
+          "decoded": "071459",
+          "en": "Artifice of Devastation",
+          "zh": "毁灭机巧",
+          "type": "RELIC",
+          "primordial": false
+        },
+        {
+          "id": 460,
+          "key": "UAwdmBYDZiA",
+          "decoded": "070460",
+          "en": "Laup's Path",
+          "zh": "劳普的足迹",
+          "type": "RELIC",
+          "primordial": false
+        },
+        {
+          "id": 461,
+          "key": "UAzDMBYDYEYg",
+          "decoded": "003461",
+          "en": "Ash Wake",
+          "zh": "灰烬觉醒",
+          "type": "BOOTS",
+          "primordial": false
+        },
+        {
+          "id": 462,
+          "key": "UAwgsDYCYg",
+          "decoded": "000462",
+          "en": "Natural Wrath",
+          "zh": "自然之怒",
+          "type": "IDOL_1x3",
+          "primordial": false
+        },
+        {
+          "id": 463,
+          "key": "UAwJgHALAbAzEA",
+          "decoded": "028463",
+          "en": "Rahyeh's Embrace",
+          "zh": "瑞耶之拥",
+          "type": "BODY_ARMOR",
+          "primordial": false
+        },
+        {
+          "id": 469,
+          "key": "UAzAcBYDYE4g",
+          "decoded": "008469",
+          "en": "Exulis",
+          "zh": "流亡",
+          "type": "AMULET",
+          "primordial": false
+        },
+        {
+          "id": 470,
+          "key": "UAwRhBYHZiA",
+          "decoded": "011470",
+          "en": "Oculus of Ruin",
+          "zh": "毁灭之眼",
+          "type": "RING",
+          "primordial": false
+        }
+      ]
+    },
+    {
+      "version": "1.5",
+      "source_url": "https://www.lastepochtools.com/db/version/version150/new/items",
+      "uniques": [
+        {
+          "id": 471,
+          "key": "UAwRgrALA7CQ",
+          "decoded": "015471",
+          "en": "Unbroken Legion",
+          "zh": "不屈军团",
+          "type": "HELMET",
+          "primordial": false
+        },
+        {
+          "id": 472,
+          "key": "UAzBsBYHYCYg",
+          "decoded": "006472",
+          "en": "Heorot's Repose",
+          "zh": "赫罗特的憩息",
+          "type": "TWO_HANDED_SWORD",
+          "primordial": false
+        },
+        {
+          "id": 473,
+          "key": "UAwRmBYHYGYg",
+          "decoded": "010473",
+          "en": "Eternal Font",
+          "zh": "永恒之池",
+          "type": "AMULET",
+          "primordial": false
+        },
+        {
+          "id": 474,
+          "key": "UAwVg7ALJQ",
+          "decoded": "057474",
+          "en": "Fused Elements",
+          "zh": "融合元素",
+          "type": "RELIC",
+          "primordial": false
+        },
+        {
+          "id": 475,
+          "key": "UAwNgzALA7ArEA",
+          "decoded": "063475",
+          "en": "Devoured Knowledge",
+          "zh": "吞噬知识",
+          "type": "BODY_ARMOR",
+          "primordial": false
+        },
+        {
+          "id": 476,
+          "key": "UAzCMBYHYDYg",
+          "decoded": "001476",
+          "en": "Death Dance",
+          "zh": "死亡之舞",
+          "type": "BOOTS",
+          "primordial": false
+        },
+        {
+          "id": 477,
+          "key": "UAwRmBYHZKA",
+          "decoded": "010477",
+          "en": "Unsated Rage",
+          "zh": "不息狂怒",
+          "type": "RING",
+          "primordial": false
+        },
+        {
+          "id": 478,
+          "key": "UAwRgzALA7AHEA",
+          "decoded": "013478",
+          "en": "Gift of the Eidolon",
+          "zh": "幻灵赠礼",
+          "type": "GLOVES",
+          "primordial": false
+        },
+        {
+          "id": 479,
+          "key": "UAzDMBYHYE4g",
+          "decoded": "003479",
+          "en": "Withstand the Elements",
+          "zh": "抵御元素",
+          "type": "GLOVES",
+          "primordial": false
+        },
+        {
+          "id": 480,
+          "key": "UAwRgzALAHMQ",
+          "decoded": "013480",
+          "en": "Perilous Reflection",
+          "zh": "险境映像",
+          "type": "SHIELD",
+          "primordial": false
+        },
+        {
+          "id": 483,
+          "key": "UAwdgTALAHAzEA",
+          "decoded": "072483",
+          "en": "Wrangler's Keepsake",
+          "zh": "牧人的纪念品",
+          "type": "RELIC",
+          "primordial": false
+        },
+        {
+          "id": 484,
+          "key": "UAwZgbALAHBQ",
+          "decoded": "036484",
+          "en": "Effusive Oath",
+          "zh": "奔放誓言",
+          "type": "HELMET",
+          "primordial": false
+        },
+        {
+          "id": 485,
+          "key": "UAwRgrALAHGQ",
+          "decoded": "015485",
+          "en": "Scorched Earth",
+          "zh": "焦土",
+          "type": "IDOL_3x1",
+          "primordial": false
+        },
+        {
+          "id": 486,
+          "key": "UAwRgTALAHAbEA",
+          "decoded": "012486",
+          "en": "Frostborn Solitude",
+          "zh": "霜生孤寂",
+          "type": "IDOL_2x2",
+          "primordial": false
+        },
+        {
+          "id": 487,
+          "key": "UAzBsBYA4HYg",
+          "decoded": "006487",
+          "en": "Vestige of Imprisonment",
+          "zh": "囚禁之迹",
+          "type": "BODY_ARMOR",
+          "primordial": false
+        },
+        {
+          "id": 488,
+          "key": "UAzAcBZVI",
+          "decoded": "008488",
+          "en": "Morditas' Vengeance",
+          "zh": "莫迪塔斯的复仇",
+          "type": "TWO_HANDED_SPEAR",
+          "primordial": false
+        }
+      ]
+    }
+  ]
+}

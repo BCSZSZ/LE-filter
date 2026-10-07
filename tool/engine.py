@@ -14,6 +14,7 @@ from generate_filter import XSI, condition, frozen, read_json, replace_ints, sig
 from generate_current_filter import ALERTS
 
 CATALOG = read_json("sources/tool-catalog.json")
+SEASONAL_UNIQUES = {u["id"] for release in read_json("sources/seasonal-unique-protection.json")["releases"] for u in release["uniques"]}
 MANIFEST = read_json("templates/base-manifest.json")
 EVIDENCE = read_json("analysis/raxx-variable-extraction.json")
 BLUE = set(EVIDENCE["fixed_instruction_slots"]) | {n for v in EVIDENCE["variables"] for n in v["instruction_slots"]}
@@ -250,7 +251,7 @@ def generate(config, mode="endgame"):
         raise ValueError("请勾选至少一个BD，并把勾选的BD之一设为主套路。")
     builds.sort(key=lambda b: b["id"] != config["main_id"])
     replacements, result, warnings = defaultdict(list), [], []
-    skip = BLUE | set(range(38, 49)) | set(range(136, 162)) | {62, 63, 64, 69, 81, 82, 83, *range(99, 128)}
+    skip = BLUE | set(range(12, 17)) | set(range(38, 49)) | set(range(136, 162)) | {62, 63, 64, 69, 81, 82, 83, *range(99, 128)}
     full = MANIFEST["full_affix_ids"]
 
     def add(n, category, tier, build=None, group=None, count=1, affix_tier=None, index=0, name=None):
@@ -323,6 +324,15 @@ def generate(config, mode="endgame"):
     r = add(15, "珍贵名单低WW静音", 0)
     r.find("conditions").append(deepcopy(condition(BASE[14], "PotentialCondition")))
     potential(r, "WeaversWill", 1, 13)
+    r = add(15, "通用暗金／套装0LP保护", 1, name="[通用暗金／套装0LP保护]")
+    c = condition(r, "UniqueModifiersCondition")
+    c.extend(deepcopy(condition(BASE[16], "UniqueModifiersCondition")[:]))
+    for u in c:
+        if int(u.findtext("UniqueId")) in SEASONAL_UNIQUES:
+            u.find("Rolls")[:] = []
+    tmp = deepcopy(BASE[15])
+    select_uniques(tmp, SEASONAL_UNIQUES - set(inspect_rule(r)["unique_ids"]))
+    c.extend(deepcopy(condition(tmp, "UniqueModifiersCondition")[:]))
 
     equipment_targets = set()
     for b in builds:
@@ -453,7 +463,7 @@ def generate(config, mode="endgame"):
         facts = inspect_rule(r)
         rows.append({**row, "number": i + 1, "name": facts["name"] or ("显示传奇" if row["source_raxx_rule"] == 8 else "最终隐藏"),
                      "sound": sound_name, "enabled": facts["enabled"], "types": facts["types"],
-                     "bases": facts["subtypes"], "affixes": facts["affix_pools"], "gate": gate_text(facts), "action": facts["action"]})
+                     "bases": facts["subtypes"], "uniques": facts["unique_ids"], "affixes": facts["affix_pools"], "gate": gate_text(facts), "action": facts["action"]})
         rules.append(r)
     root = deepcopy(BASE_ROOT)
     root.find("rules")[:] = list(reversed(rules))

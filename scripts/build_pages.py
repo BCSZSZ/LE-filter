@@ -14,7 +14,7 @@ def build_archive(output):
     evidence = json.loads((ROOT / "analysis/raxx-variable-extraction.json").read_text(encoding="utf-8"))
     files = ["tool/engine.py", "tool/requirements.py", "tool/browser_runtime.py",
              "scripts/extract_raxx_variables.py", "scripts/generate_filter.py", "scripts/generate_current_filter.py",
-             "sources/tool-catalog.json", "templates/base-manifest.json", "templates/LE-base-v1.xml",
+             "sources/tool-catalog.json", "sources/seasonal-unique-protection.json", "templates/base-manifest.json", "templates/LE-base-v1.xml",
              "analysis/raxx-variable-extraction.json"]
     files += [spec["file"] for spec in evidence["strict_inputs"].values()]
     files += [str(p.relative_to(ROOT)).replace("\\", "/") for p in sorted((ROOT / "requirements").glob("*.json"))]

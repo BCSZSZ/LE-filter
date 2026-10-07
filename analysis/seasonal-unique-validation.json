@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-07",
+  "client_tested": false,
+  "tests": {
+    "count": 28,
+    "passed": true
+  },
+  "source_file": "sources/seasonal-unique-protection.json",
+  "source_sha256": "dd03763aca0d16990d5b0e77214da3486a5761abc92193d22c4f2761babc02f5",
+  "source_scope": "All new unique items introduced in patches 1.3, 1.4, 1.5; includes primordial items and unique idols",
+  "seasonal_unique_count": 55,
+  "primordial_count": 25,
+  "unique_idol_count": 4,
+  "common_protection_count": 170,
+  "native_wasm_cases": [
+    {
+      "name": "bootstrap",
+      "same": true
+    },
+    {
+      "name": "import-skeleton-necromancer",
+      "same": true
+    },
+    {
+      "name": "import-flay-mana-lich",
+      "same": true
+    },
+    {
+      "name": "flay-mana-lich+skeleton-necromancer",
+      "same": true,
+      "count": 133,
+      "enabled": 127,
+      "sha256": "0811cbc6de19454887a86001f4df4273e521ba171e3567852a6acc4e1f0689ab"
+    },
+    {
+      "name": "flay-lich-allie-guide",
+      "same": true,
+      "count": 103,
+      "enabled": 97,
+      "sha256": "b1b76ef72ece6b3d058bb1f5163c1642eb17b203c0e5ff30e3d9ea3a3c631253"
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835",
+      "same": true,
+      "count": 112,
+      "enabled": 106,
+      "sha256": "760f2c88f1e87bcc123c22468d9674f5ae6bd1f62735f2a65dd9ff2c51c17e3d"
+    },
+    {
+      "name": "flay-lich-allie-guide+bleed-skeleton-roamer-guide-835",
+      "same": true,
+      "count": 177,
+      "enabled": 171,
+      "sha256": "02cae861df0d90d4797d03acb5f8127311efc0bbc6533485f0330048df8e8841"
+    }
+  ],
+  "local_browser": {
+    "all_seasonal_ids_visible": true,
+    "missing": [],
+    "rows": 1,
+    "seasonal_count": 55,
+    "summary": "Skeleton Necromancer＋Flay Mana Lich · 终局＋练级 · 133条规则 / 127条启用。"
+  },
+  "frozen_base_and_historical_outputs_modified": false,
+  "policy_notes": [
+    "Seasonal IDs have no LP, WW, affix, level or roll gate in common protection.",
+    "Other original rare and set roll predicates remain unchanged.",
+    "BD and higher potential cues take precedence.",
+    "Original low-WW silent override remains.",
+    "Combined original R12, R13, R14 fallback rules removed; R15 and R16 protection merged."
+  ]
+}
