@@ -101,6 +101,35 @@ class ToolTests(unittest.TestCase):
             self.assertTrue(row["category"].startswith("神像"))
         self.assertEqual(first(self.output,"IDOL_2x1",{862:1},base=1,rarity="RARE")["tier"],2)
 
+    def test_persistent_common_resistance_idols(self):
+        out = e.generate(self.leveling_config(()))
+        category = "共通抗性神像常驻"
+        entries = [(n, r) for n, r in zip(parsed(out), out["rules"]) if r["category"] == category]
+        self.assertEqual(len(entries), 1)
+        node, row = entries[0]
+        pools = {"IDOL_1x2": {111, 112, 113, 117, 885, 886, 887, 888},
+                 "IDOL_2x1": {114, 115, 116, 430, 867, 868, 869, 870}}
+        self.assertEqual(set(row["affixes"][0]), set.union(*pools.values()))
+        self.assertEqual(set(row["types"]), set(pools))
+        self.assertFalse(row["bases"])
+        self.assertFalse(row["owners"])
+        self.assertFalse(any(c.get(e.XSI + "type") == "CharacterLevelCondition" for c in node.find("conditions")))
+        self.assertEqual((node.findtext("recolor"), node.findtext("color"), node.findtext("emphasized")),
+                         tuple(e.BASE[129].findtext(k) for k in ("recolor", "color", "emphasized")))
+        for typ, pool in pools.items():
+            for aid in pool:
+                for base in (0, 1):
+                    match = first(out, typ, {aid: 1}, base=base, rarity="RARE", corrupted=True)
+                    self.assertEqual((match["category"], match["tier"]), (category, 0))
+        for level in (0, 59, 79, 80, 100):
+            self.assertEqual(first(out, "IDOL_1x2", {117: 1}, level=level, rarity="RARE",
+                                   categories={category})["category"], category)
+        for typ, affixes in [("IDOL_1x2", {}), ("IDOL_1x2", {139: 1}), ("IDOL_1x2", {1070: 1}),
+                             ("IDOL_1x2", {897: 7}), ("IDOL_1x1_ETERRA", {835: 1})]:
+            self.assertEqual(first(out, typ, affixes, rarity="RARE")["action"], "HIDE")
+        self.assertEqual(first(self.output, "IDOL_1x2", {886: 1}, base=1, rarity="RARE")["tier"], 2)
+        self.assertEqual(first(self.output, "IDOL_1x2", {876: 1, 886: 1}, base=1, rarity="RARE")["tier"], 3)
+
     def test_unique_and_ww_cues(self):
         for uid, lp, tier in [(253,0,1),(253,1,3),(253,2,3),(253,3,4),(0,1,2),(0,2,3),(0,3,4)]:
             self.assertEqual(first(self.output,"BOOTS",{},uid=uid,lp=lp,rarity="UNIQUE")["tier"],tier)

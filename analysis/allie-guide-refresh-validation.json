@@ -1,0 +1,156 @@
+{
+  "checked_on": "2026-10-08",
+  "source_url": "https://www.lastepochtools.com/build-guides/allies-mana-stacking-flay-lich",
+  "source_updated": "2026-10-07",
+  "requirements_sha256": "cefd84a1027aa53cddfe8f32971bf7b950b4143fc24bc97b8821d107af9fa523",
+  "added_uniques": [
+    {
+      "id": 132,
+      "en": "Transient Rest",
+      "zh": "短暂休息",
+      "type": "BOOTS",
+      "set": false,
+      "hidden": false
+    },
+    {
+      "id": 277,
+      "en": "Red Ring of Atlaria",
+      "zh": "阿特拉里亚的红戒指",
+      "type": "RING",
+      "set": false,
+      "hidden": false
+    },
+    {
+      "id": 353,
+      "en": "Nihilis",
+      "zh": "虚无",
+      "type": "AMULET",
+      "set": false,
+      "hidden": false
+    },
+    {
+      "id": 413,
+      "en": "Shattered Worlds",
+      "zh": "破碎世界",
+      "type": "RELIC",
+      "set": false,
+      "hidden": false
+    },
+    {
+      "id": 469,
+      "en": "Exulis",
+      "zh": "流亡",
+      "type": "AMULET",
+      "set": false,
+      "hidden": false
+    },
+    {
+      "id": 477,
+      "en": "Unsated Rage",
+      "zh": "不息狂怒",
+      "type": "RING",
+      "set": false,
+      "hidden": false
+    }
+  ],
+  "targets": {
+    "uniques": 17,
+    "equipment": 10,
+    "altars": 0,
+    "idols": 4,
+    "bases": 8
+  },
+  "persistent_resistance_rule": {
+    "types": [
+      "IDOL_1x2",
+      "IDOL_2x1"
+    ],
+    "affixes": [
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      430,
+      867,
+      868,
+      869,
+      870,
+      885,
+      886,
+      887,
+      888
+    ],
+    "minimum_matches": 1,
+    "advanced": false,
+    "level_condition": false,
+    "base_condition": false,
+    "enabled": true,
+    "sound_id": "1",
+    "map_icon_id": "1",
+    "beam_size": "NONE",
+    "color": "15"
+  },
+  "unit_tests": {
+    "count": 30,
+    "result": "passed"
+  },
+  "wasm": [
+    {
+      "name": "bootstrap",
+      "same": true
+    },
+    {
+      "name": "import-skeleton-necromancer",
+      "same": true
+    },
+    {
+      "name": "import-flay-mana-lich",
+      "same": true
+    },
+    {
+      "name": "flay-mana-lich+skeleton-necromancer",
+      "same": true,
+      "count": 133,
+      "enabled": 127,
+      "sha256": "07a6ccd882459ea88a6356bdc2a00856a873a18817cf8c8e297170ccd94f8e01"
+    },
+    {
+      "name": "flay-lich-allie-guide",
+      "same": true,
+      "count": 105,
+      "enabled": 99,
+      "sha256": "c11e1b8962ab3f886e7526d94427bca77183f9de2edc41da5727453f8caa5f21"
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835",
+      "same": true,
+      "count": 112,
+      "enabled": 106,
+      "sha256": "7228f0429d2a25341e726fe26fb43dd29a27fe07c0ce5369ce4e19954ff06fd3"
+    },
+    {
+      "name": "flay-lich-allie-guide+bleed-skeleton-roamer-guide-835",
+      "same": true,
+      "count": 179,
+      "enabled": 173,
+      "sha256": "bf6c7ca82c92f1c84ee15b9080c7384108340ff2dbb4e54fa9c76788da96ccab"
+    }
+  ],
+  "browser": {
+    "runtime": "actual packaged Pyodide in in-app browser",
+    "built_in_allie_uniques": 17,
+    "endgame_json_import": "same id, no duplicate; main role and leveling retained",
+    "idol_groups": 4,
+    "corruption_reference": [
+      1069
+    ],
+    "generated_count": 105,
+    "generated_enabled": 99,
+    "common_preview_number": 100,
+    "full_resistance_pool_visible": true
+  },
+  "client_tested": false
+}

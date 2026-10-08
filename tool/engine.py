@@ -410,6 +410,14 @@ def generate(config, mode="endgame"):
         replacements[63].extend(replacements.pop(n, []))
 
     base = deepcopy(BASE)
+    resistance_types = {"IDOL_1x2", "IDOL_2x1"}
+    resistance_suffixes = [int(i) for i, a in CATALOG["affixes"].items()
+                          if not a["prefix"] and a["special"] in {0, 5}
+                          and "Resistance" in a["en"] and resistance_types.intersection(a["types"])]
+    r = add(129, "共通抗性神像常驻", 0, name="[共通抗性神像：1×2／2×1]")
+    set_scope(r, sorted(resistance_types))
+    set_affix(r, resistance_suffixes)
+    r.find("conditions").remove(condition(r, "CharacterLevelCondition"))
     common_idols = {i for n in [128, 129] for pool in inspect_rule(BASE[n])["affix_pools"] for i in pool
                     if CATALOG["affixes"][str(i)]["special"] in {0, 5}}
     for n in [128, 129, 135]:

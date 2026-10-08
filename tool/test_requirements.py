@@ -21,14 +21,20 @@ class RequirementTests(unittest.TestCase):
     def test_allie_guide_targets_and_roundtrip(self):
         endgame, leveling = build_allie_documents()
         self.assertEqual({k: len(v) for k, v in endgame["targets"].items()},
-                         {"uniques": 11, "equipment": 10, "altars": 0, "idols": 3, "bases": 8})
+                         {"uniques": 17, "equipment": 10, "altars": 0, "idols": 4, "bases": 8})
         self.assertEqual(sum(len(g["bases"]) for g in endgame["targets"]["bases"]), 28)
         groups = {g["type"]: g for g in endgame["targets"]["equipment"]}
         self.assertEqual(groups["ONE_HANDED_AXE"]["affixes"], [943, 2, 718, 724])
         self.assertEqual(groups["ONE_HANDED_DAGGER"]["affixes"], [943, 2, 718, 724])
         self.assertNotIn(502, groups["BELT"]["affixes"])
         self.assertEqual(groups["BOOTS"]["affixes"], [502, 97, 505, 36, 715])
-        self.assertEqual(endgame["targets"]["idols"][2]["affixes"], [843, 854, 842])
+        self.assertEqual(endgame["targets"]["idols"][2]["affixes"], [843, 854, 842, 856])
+        self.assertEqual(endgame["targets"]["idols"][2]["corrupted"], [1069])
+        self.assertEqual(endgame["targets"]["idols"][3],
+                         {"type": "IDOL_1x1_ETERRA", "bases": [2], "affixes": [835, 837]})
+        self.assertTrue({132, 253, 277, 353, 413, 469, 477} <= set(endgame["targets"]["uniques"]))
+        self.assertIn(75, groups["BELT"]["affixes"])
+        self.assertEqual(endgame["source"]["updated"], "2026-10-07")
         self.assertIn(376, endgame["targets"]["uniques"])
         self.assertNotIn(374, endgame["targets"]["uniques"])
         self.assertEqual(len(leveling["targets"]["affixes"]), 19)

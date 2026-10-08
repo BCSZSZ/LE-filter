@@ -1,6 +1,14 @@
 # 后续工作 memo
 
-更新时间：2026-10-07，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+更新时间：2026-10-08，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+
+## 最新更新：Allie攻略正文与常驻抗性神像
+
+- Allie页面显示2026-10-07更新。重新核对装备表、神像表、练级、Weaver与整个Endgame章节，旧明确链接均仍存在。遗漏六种后期／替代暗金132短暂休息、277红戒、353虚无、413破碎世界、469流亡、477不息狂怒已加入独立来源快照；253山之麓仍被当前正文推荐为继续Corrupted Form的替代品，保留。共17暗金。数字ID由实际链接lz-string解码并与version150名字／类型交叉核对，不靠名字猜ID。
+- 腰带增加正文75药剂净化；中型编织者增加856耐伤普通后缀、1069虚弱腐化参考（正文无链接，通过准确词缀名及special=6核对）；小型编织者增加835虚空／837物理抗性后缀候选。两条小型后缀是替代目标，不宣称能同时普通掉落。普通／腐化继续分开。终局共10装备组、4神像组、28底材；祭坛仍无目标。练级仍19词缀／3底材，只刷新来源日期与哈希。
+- 重建`python -X utf8 scripts/build_flay_allie_requirements.py`只读提交的解码事实和冻结词库。旧Strict Flay与835未改。Allie仍独立内置方案、默认未启用；网页已有配置不会自动覆写，导入新同id终局JSON只替换终局，保留练级与主副。不增加网页从网址提取入口。
+- 按用户要求在生成器新增一条共通抗性神像规则，独立于所有BD JSON。类型IDOL_1x2／IDOL_2x1，普通special=0／5、后缀且名称Resistance，当前16项。至少一项、阶数不限、全底材、常驻启用且无角色等级条件；不要求未腐化物品，腐化／附魔不能凑普通计数。以原R129为原型并去掉等级条件，保留其色15和普通字体；静音SoundId=1、MapIconId=1、BeamSizeOverride=NONE。规则在BD神像提示之后，原Raxx通用层的退出点另行保留。
+- 30项测试通过，覆盖16项及两类四底材、100级保留、其他尺寸／点燃前缀／腐化／附魔不能单独满足，BD一项／两项提示优先，需求往返与旧阶段保留。实际Pyodide七组与原生完整输出一致。当前默认133／127，Allie105／99，835112／106，两攻略179／173；记录见`analysis/allie-guide-refresh-validation.json`。以下132／176等是此前快照，不代表本轮数量。没有游戏客户端实测。
 
 ## 最新修正：低WW统一铁匠、练级高等级优先
 

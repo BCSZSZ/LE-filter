@@ -1,8 +1,8 @@
 {
   "title": "Allie's Mana Stacking Flay Lich Build Guide",
   "url": "https://www.lastepochtools.com/build-guides/allies-mana-stacking-flay-lich",
-  "source_updated": "2026-10-06",
-  "extracted_on": "2026-10-07",
+  "source_updated": "2026-10-07",
+  "extracted_on": "2026-10-08",
   "equipment": [
     {
       "slot": "helmet",
@@ -826,6 +826,20 @@
         }
       ],
       "origin": "item-stats-preface: critical damage reduction paragraph"
+    },
+    {
+      "type": "BELT",
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/prefixes/AAwdgrEA",
+          "name": "Ward and Ailment Cleansing on Potion Use",
+          "key": "AAwdgrEA",
+          "decoded": "075",
+          "kind": "prefix",
+          "id": 75
+        }
+      ],
+      "origin": "endgame: earlygame belt LP and killing_uber_abberoth"
     }
   ],
   "idols": [
@@ -925,8 +939,56 @@
           "decoded": "842",
           "kind": "prefix",
           "id": 842
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/ABwVgbEA",
+          "name": "Endurance and Endurance Threshold",
+          "key": "ABwVgbEA",
+          "decoded": "856",
+          "kind": "suffix",
+          "id": 856
+        },
+        {
+          "name": "Chance to apply Frailty on Hit",
+          "kind": "corrupted",
+          "id": 1069,
+          "origin": "endgame: midgame_300_corruption, explicit corrupted-affix prose; name and special=6 verified in version150 catalog"
         }
       ]
+    },
+    {
+      "slot": "weaver-small-prose",
+      "items": [
+        {
+          "href": "https://www.lastepochtools.com/db/items/IIwBgTArC7SQ",
+          "name": "Small Weaver Idol",
+          "key": "IIwBgTArC7SQ",
+          "decoded": "1025002000",
+          "kind": "base",
+          "category": "base",
+          "id": 2,
+          "type": "IDOL_1x1_ETERRA"
+        }
+      ],
+      "affixes": [
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/ABwZgrEA",
+          "name": "Void Resistance and Minion Void Resistance",
+          "key": "ABwZgrEA",
+          "decoded": "835",
+          "kind": "suffix",
+          "id": 835
+        },
+        {
+          "href": "https://www.lastepochtools.com/db/suffixes/ABwZg7EA",
+          "name": "Physical Resistance and Minion Physical Resistance",
+          "key": "ABwZg7EA",
+          "decoded": "837",
+          "kind": "suffix",
+          "id": 837
+        }
+      ],
+      "origin": "endgame: unsated_rage alternative and killing_uber_abberoth resistance replacements"
     }
   ],
   "unique_supplements": [
@@ -1039,6 +1101,72 @@
       "category": "unique",
       "id": 415,
       "type": "GLOVES"
+    },
+    {
+      "href": "https://www.lastepochtools.com/db/items/UAwRgTAzArBQ",
+      "name": "Nihilis",
+      "key": "UAwRgTAzArBQ",
+      "decoded": "012353",
+      "kind": "unique",
+      "category": "unique",
+      "id": 353,
+      "type": "AMULET",
+      "origin": "endgame: explicit progression recommendation"
+    },
+    {
+      "href": "https://www.lastepochtools.com/db/items/UAzAsEYGYCYg",
+      "name": "Transient Rest",
+      "key": "UAzAsEYGYCYg",
+      "decoded": "004132",
+      "kind": "unique",
+      "category": "unique",
+      "id": 132,
+      "type": "BOOTS",
+      "origin": "endgame: explicit progression recommendation"
+    },
+    {
+      "href": "https://www.lastepochtools.com/db/items/UAzDMCYHZKA",
+      "name": "Red Ring of Atlaria",
+      "key": "UAzDMCYHZKA",
+      "decoded": "003277",
+      "kind": "unique",
+      "category": "unique",
+      "id": 277,
+      "type": "RING",
+      "origin": "endgame: explicit progression recommendation"
+    },
+    {
+      "href": "https://www.lastepochtools.com/db/items/UAwRmBYHZKA",
+      "name": "Unsated Rage",
+      "key": "UAwRmBYHZKA",
+      "decoded": "010477",
+      "kind": "unique",
+      "category": "unique",
+      "id": 477,
+      "type": "RING",
+      "origin": "endgame: explicit progression recommendation"
+    },
+    {
+      "href": "https://www.lastepochtools.com/db/items/UAwNgTALAjAzEA",
+      "name": "Shattered Worlds",
+      "key": "UAwNgTALAjAzEA",
+      "decoded": "062413",
+      "kind": "unique",
+      "category": "unique",
+      "id": 413,
+      "type": "RELIC",
+      "origin": "endgame: explicit progression recommendation"
+    },
+    {
+      "href": "https://www.lastepochtools.com/db/items/UAzAcBYDYE4g",
+      "name": "Exulis",
+      "key": "UAzAcBYDYE4g",
+      "decoded": "008469",
+      "kind": "unique",
+      "category": "unique",
+      "id": 469,
+      "type": "AMULET",
+      "origin": "endgame: explicit progression recommendation"
     }
   ],
   "leveling": {
