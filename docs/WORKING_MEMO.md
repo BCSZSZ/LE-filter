@@ -2,6 +2,12 @@
 
 更新时间：2026-10-08，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
+## 最新展示：神像底材明确区分
+
+- 神像编辑分组用实际底材名作标题；规则预览补充底材行并支持按底材名称搜索。Allie的中型拉贡（0，普通目标105／109）与中型编织者（1，普通目标842／843／854／856）因此可直接区分。不限底材不猜具体子类型；两项层显示生成结果中的pair_bases实际范围。
+- 仅修改网页展示，不改变目标JSON、XML条件、规则数量或过滤策略。已有浏览器配置刷新即可，无需重新导入需求。
+- 32项测试通过；实际页面核对两种分组标题、各自一项／两项规则的底材行及名称搜索，Allie仍110条／104启用。
+
 ## 最新实现：终局底材首选与替代分开
 
 - 用户纠正：原文没有普通首选时，全部作为替代；不要按列举顺序给手套／腰带／护身符指定首选。Allie的Stat Priorities → Equipment明确首选为头盔70、胸甲64、靴子11、遗物4、戒指9；来源行以preferred_base保存事实，builder不根据首个链接推断。
