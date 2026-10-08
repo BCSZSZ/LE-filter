@@ -1,0 +1,328 @@
+{
+  "checked_on": "2026-10-08",
+  "ordinary_bases_unchanged": 28,
+  "preferred_bases": 5,
+  "alternative_bases": 23,
+  "leveling_targets_unchanged": true,
+  "counts": {
+    "default": {
+      "count": 133,
+      "enabled": 127
+    },
+    "allie": {
+      "count": 110,
+      "enabled": 104
+    },
+    "allie-835": {
+      "count": 184,
+      "enabled": 178
+    },
+    "all-four-by-main": {
+      "skeleton-necromancer": "这些BD生成275条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+      "flay-mana-lich": "这些BD生成275条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+      "flay-lich-allie-guide": "这些BD生成273条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+      "bleed-skeleton-roamer-guide-835": "这些BD生成275条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+    }
+  },
+  "allie_base_rules": [
+    {
+      "category": "终局05首选底材＋BD目标T7",
+      "types": [
+        "HELMET"
+      ],
+      "bases": [
+        70
+      ],
+      "affixes": [
+        [
+          34,
+          502,
+          715
+        ]
+      ],
+      "tier": 0
+    },
+    {
+      "category": "终局05替代底材＋BD目标T7",
+      "types": [
+        "HELMET"
+      ],
+      "bases": [
+        15,
+        51,
+        63
+      ],
+      "affixes": [
+        [
+          34,
+          502,
+          715
+        ]
+      ],
+      "tier": 0
+    },
+    {
+      "category": "终局05首选底材＋BD目标T7",
+      "types": [
+        "BODY_ARMOR"
+      ],
+      "bases": [
+        64
+      ],
+      "affixes": [
+        [
+          25,
+          34,
+          52,
+          502
+        ]
+      ],
+      "tier": 0
+    },
+    {
+      "category": "终局05替代底材＋BD目标T7",
+      "types": [
+        "BODY_ARMOR"
+      ],
+      "bases": [
+        13,
+        15,
+        52,
+        70
+      ],
+      "affixes": [
+        [
+          25,
+          34,
+          52,
+          502
+        ]
+      ],
+      "tier": 0
+    },
+    {
+      "category": "终局05替代底材＋BD目标T7",
+      "types": [
+        "GLOVES"
+      ],
+      "bases": [
+        6,
+        7,
+        10,
+        12
+      ],
+      "affixes": [
+        [
+          2,
+          34,
+          86,
+          502,
+          715
+        ]
+      ],
+      "tier": 0
+    },
+    {
+      "category": "终局05替代底材＋BD目标T7",
+      "types": [
+        "BELT"
+      ],
+      "bases": [
+        4,
+        7,
+        8,
+        10
+      ],
+      "affixes": [
+        [
+          18,
+          36,
+          52,
+          75,
+          330
+        ]
+      ],
+      "tier": 0
+    },
+    {
+      "category": "终局05首选底材＋BD目标T7",
+      "types": [
+        "BOOTS"
+      ],
+      "bases": [
+        11
+      ],
+      "affixes": [
+        [
+          36,
+          97,
+          502,
+          505,
+          715
+        ]
+      ],
+      "tier": 0
+    },
+    {
+      "category": "终局05替代底材＋BD目标T7",
+      "types": [
+        "BOOTS"
+      ],
+      "bases": [
+        6,
+        9,
+        10
+      ],
+      "affixes": [
+        [
+          36,
+          97,
+          502,
+          505,
+          715
+        ]
+      ],
+      "tier": 0
+    },
+    {
+      "category": "终局05首选底材＋BD目标T7",
+      "types": [
+        "RELIC"
+      ],
+      "bases": [
+        4
+      ],
+      "affixes": [
+        [
+          34,
+          429,
+          502
+        ]
+      ],
+      "tier": 0
+    },
+    {
+      "category": "终局05替代底材＋BD目标T7",
+      "types": [
+        "RELIC"
+      ],
+      "bases": [
+        16,
+        19
+      ],
+      "affixes": [
+        [
+          34,
+          429,
+          502
+        ]
+      ],
+      "tier": 0
+    },
+    {
+      "category": "终局05首选底材＋BD目标T7",
+      "types": [
+        "RING"
+      ],
+      "bases": [
+        9
+      ],
+      "affixes": [
+        [
+          25,
+          38,
+          502
+        ]
+      ],
+      "tier": 0
+    },
+    {
+      "category": "终局05替代底材＋BD目标T7",
+      "types": [
+        "RING"
+      ],
+      "bases": [
+        10
+      ],
+      "affixes": [
+        [
+          25,
+          38,
+          502
+        ]
+      ],
+      "tier": 0
+    },
+    {
+      "category": "终局05替代底材＋BD目标T7",
+      "types": [
+        "AMULET"
+      ],
+      "bases": [
+        7,
+        8
+      ],
+      "affixes": [
+        [
+          6,
+          25,
+          34,
+          86,
+          93
+        ]
+      ],
+      "tier": 0
+    }
+  ],
+  "unit_tests_passed": 32,
+  "wasm_checks": [
+    {
+      "name": "allie-requirements-import",
+      "same": true
+    },
+    {
+      "name": "allie-requirements-export",
+      "same": true
+    },
+    {
+      "name": "default",
+      "same": true,
+      "count": 133,
+      "enabled": 127,
+      "sha256": "0ce2dbb2e3d6c35b1165ebe1295d792ef6a8bdaab2cb8375d2d51dbaeeb80a4f"
+    },
+    {
+      "name": "allie",
+      "same": true,
+      "count": 110,
+      "enabled": 104,
+      "sha256": "18342ff1d528b510b5a510e6f257bd7ec011a0a2902ea83c3a991b9eca051216"
+    },
+    {
+      "name": "allie-835",
+      "same": true,
+      "count": 184,
+      "enabled": 178,
+      "sha256": "ec52707b9aac31ac493871ef67161093914c79854199d6fc2613bdded5cf3755"
+    },
+    {
+      "name": "all-four",
+      "same": true
+    },
+    {
+      "name": "legacy-flat-bases-import",
+      "same": true
+    }
+  ],
+  "browser_verified": [
+    "preferred-single-select",
+    "old-preferred-moves-to-alternatives",
+    "preferred-excluded-from-alternative-picker",
+    "empty-preferred-persists-after-reload",
+    "same-id-json-import",
+    "allie-preview-110-with-13-base-rules",
+    "allie-835-preview-184",
+    "base-names-visible-in-preview"
+  ],
+  "game_client_tested": false
+}

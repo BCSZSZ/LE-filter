@@ -2,6 +2,15 @@
 
 更新时间：2026-10-08，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
+## 最新实现：终局底材首选与替代分开
+
+- 用户纠正：原文没有普通首选时，全部作为替代；不要按列举顺序给手套／腰带／护身符指定首选。Allie的Stat Priorities → Equipment明确首选为头盔70、胸甲64、靴子11、遗物4、戒指9；来源行以preferred_base保存事实，builder不根据首个链接推断。
+- 共通JSON仍version=1，终局独立底材新增可选preferred_bases列表，最多一个；原bases为替代列表。两池互斥；其他类别的bases仍是范围。旧filter／JSON没有分类的底材全按替代保留，不改变候选范围。练级只保留原两类输入，旧五类转练级时首选与替代取并集，不能丢首选。
+- 生成器按每BD／类型归并多行底材，首选一条、所有替代一条，空池不生成。最多两条，且首选在替代前；两类均延续同BD对应部位目标恰好T7、常驻、静音及原主副色。缺少对应部位目标时给出原警告，不生成宽兜底。不同BD的底材与词缀不混。
+- 网页05分两行与两个可搜索选择器：首选单选、替代多选。改选／取消首选时原首选移入替代，不丢目标；替代选择器排除当前首选。旧浏览器方案不会自动得到Allie分类，要导入新版同id终局JSON，仅更新终局阶段。
+- Allie目标合计28种保持，5首选／23替代，对应13条05，较原8条增加5条。当前Allie110／104，Allie＋835为184／178，旧Strict默认仍133／127；四个内置方案全选273–275条（Allie主为273，其他主为275），200上限明确报错。下方105／179等属于此前未拆底材快照。
+- 32项测试通过，实际Pyodide7组与原生完整输出一致；网页实测首选单选、切换／清空后旧首选归替代、互斥选择、重新加载、同id需求导入及110／184预览。28种底材并集与上一版相同，练级目标未变。机器记录在analysis/preferred-base-validation.json；未实测游戏客户端。
+
 ## 最新更新：Allie攻略正文与常驻抗性神像
 
 - Allie页面显示2026-10-07更新。重新核对装备表、神像表、练级、Weaver与整个Endgame章节，旧明确链接均仍存在。遗漏六种后期／替代暗金132短暂休息、277红戒、353虚无、413破碎世界、469流亡、477不息狂怒已加入独立来源快照；253山之麓仍被当前正文推荐为继续Corrupted Form的替代品，保留。共17暗金。数字ID由实际链接lz-string解码并与version150名字／类型交叉核对，不靠名字猜ID。

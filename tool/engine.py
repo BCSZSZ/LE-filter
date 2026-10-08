@@ -39,7 +39,7 @@ def to_leveling(profile):
     groups = defaultdict(set)
     for g in profile.get("equipment", []) + profile.get("bases", []):
         result["affixes"].extend(g.get("affixes", []))
-        groups[g["type"]].update(g.get("bases", []))
+        groups[g["type"]].update(g.get("bases", []) + g.get("preferred_bases", []))
     for slot in profile.get("leveling_slots", {}).values():
         types = set(slot["types"]) & set(MANIFEST["scope_types"])
         if not slot["enabled"] or not types:
@@ -206,7 +206,10 @@ def validate_profile(profile):
             allowed = typ in MANIFEST["scope_types"] if category in {"equipment", "bases"} else typ == "IDOL_ALTAR" if category == "altars" else typ.startswith("IDOL_") and typ != "IDOL_ALTAR"
             if not allowed:
                 raise ValueError(f"{category}的物品类型不正确：{typ}。")
-            for bid in set(g["bases"] + g.get("pair_bases", [])):
+            preferred = g.get("preferred_bases", [])
+            if "preferred_bases" in g and category != "bases" or not isinstance(preferred, list) or any(type(i) is not int for i in preferred):
+                raise ValueError("preferred_bases只用于终局独立底材，填写整数ID列表。")
+            for bid in set(g["bases"] + g.get("pair_bases", []) + preferred):
                 if f"{typ}:{bid}" not in CATALOG["bases"]:
                     raise ValueError(f"未知底材{typ}:{bid}。")
             for aid in g.get("affixes", []):
@@ -217,6 +220,11 @@ def validate_profile(profile):
                     raise ValueError(f"神像词缀{aid}是特殊附加词缀，不能加入普通计数。")
                 if category == "equipment" and a["special"] in {4, 6}:
                     raise ValueError(f"装备词缀{aid}需另存附加参考，不属于普通T7目标池。")
+    for typ in {g["type"] for g in profile["bases"]}:
+        preferred = {i for g in profile["bases"] if g["type"] == typ for i in g.get("preferred_bases", [])}
+        alternatives = {i for g in profile["bases"] if g["type"] == typ for i in g["bases"]}
+        if len(preferred) > 1 or preferred & alternatives:
+            raise ValueError(f"{CATALOG['types'][typ]['zh']}最多一个首选底材，且不能同时列为替代。")
 
 
 def validate_leveling(profile):
@@ -336,15 +344,21 @@ def generate(config, mode="endgame"):
         p = b["profiles"]["endgame"]
         for g in p["equipment"]:
             equipment_targets.update(g["affixes"])
+        base_groups = defaultdict(lambda: {"preferred_bases": set(), "bases": set()})
         for g in p["bases"]:
-            if g["bases"]:
-                targets = sorted({i for e in p["equipment"] if e["type"] == g["type"] for i in e["affixes"]})
+            for field in ("preferred_bases", "bases"):
+                base_groups[g["type"]][field].update(g.get(field, []))
+        for typ, pools in base_groups.items():
+            if pools["preferred_bases"] or pools["bases"]:
+                targets = sorted({i for e in p["equipment"] if e["type"] == typ for i in e["affixes"]})
                 if not targets:
-                    warnings.append(f"{b['name']}的{CATALOG['types'][g['type']]['zh']}底材未填写对应部位目标，未生成05保留规则。")
+                    warnings.append(f"{b['name']}的{CATALOG['types'][typ]['zh']}底材未填写对应部位目标，未生成05保留规则。")
                     continue
-                r = add(82, "终局05底材＋BD目标T7", 0, b, g)
-                r.find("conditions").append(deepcopy(condition(BASE[63], "AffixCondition")))
-                set_affix(r, targets, 1, 7)
+                for field, title in (("preferred_bases", "首选"), ("bases", "替代")):
+                    if pools[field]:
+                        r = add(82, f"终局05{title}底材＋BD目标T7", 0, b, {"type": typ, "bases": sorted(pools[field])})
+                        r.find("conditions").append(deepcopy(condition(BASE[63], "AffixCondition")))
+                        set_affix(r, targets, 1, 7)
         for g in p["altars"]:
             if g["affixes"]:
                 add(127, "祭坛一项目标", 2, b, g)

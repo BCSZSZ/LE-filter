@@ -177,8 +177,10 @@
     "bases": [
       {
         "type": "HELMET",
+        "preferred_bases": [
+          70
+        ],
         "bases": [
-          70,
           51,
           15,
           63
@@ -186,8 +188,10 @@
       },
       {
         "type": "BODY_ARMOR",
+        "preferred_bases": [
+          64
+        ],
         "bases": [
-          64,
           70,
           52,
           15,
@@ -196,6 +200,7 @@
       },
       {
         "type": "GLOVES",
+        "preferred_bases": [],
         "bases": [
           12,
           7,
@@ -205,6 +210,7 @@
       },
       {
         "type": "BELT",
+        "preferred_bases": [],
         "bases": [
           8,
           10,
@@ -214,8 +220,10 @@
       },
       {
         "type": "BOOTS",
+        "preferred_bases": [
+          11
+        ],
         "bases": [
-          11,
           10,
           6,
           9
@@ -223,21 +231,26 @@
       },
       {
         "type": "RELIC",
+        "preferred_bases": [
+          4
+        ],
         "bases": [
-          4,
           19,
           16
         ]
       },
       {
         "type": "RING",
+        "preferred_bases": [
+          9
+        ],
         "bases": [
-          9,
           10
         ]
       },
       {
         "type": "AMULET",
+        "preferred_bases": [],
         "bases": [
           7,
           8
@@ -250,10 +263,11 @@
     "url": "https://www.lastepochtools.com/build-guides/allies-mana-stacking-flay-lich",
     "updated": "2026-10-07",
     "extracted_on": "2026-10-08",
-    "sha256": "ae380c07daeae1f3a0d5b4c219fba0ec4a2ddf194b15f8da96e632e9a99243db",
+    "sha256": "0aa01939bd5cb4a672baafef58737b942543f7a57f72af4ea9bc5e8ee2c5cf88",
     "scope": "Flay装备／神像推荐表与正文明确补充，包含替代品和后期升级；不绑定单一Planner变体",
     "warnings": [
       "候选池包含替代品，不要求同一件装备或整套装备同时采用所有候选。",
+      "普通底材首选只取原文明示；手套、腰带、护身符没有普通首选，全部记录为替代。",
       "泛指所缺抗性与生命未扩成BD全量词缀；1×2／2×1抗性神像由基底共通规则处理。",
       "靴子表链接为暴击避免97，正文明确推荐护甲与暴击减伤715；两者均记录为候选。",
       "中期推荐短暂休息132；继续使用Corrupted Form时山之麓253仍是明确替代品，两者均保留。",

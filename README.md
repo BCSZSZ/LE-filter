@@ -8,7 +8,7 @@
 
 新增[共通BD需求JSON格式](docs/REQUIREMENTS_FORMAT.md)：filter与攻略先提供一个BD／一个阶段的目标，网页可导入、修改并保存回该格式，再由基底生成filter。攻略835的[流血骷髅终局需求](requirements/bleed-skeleton-roamer-guide-835.endgame.json)含25暗金／套装、13装备组、3神像组、1祭坛、3独立底材；另有[练级需求](requirements/bleed-skeleton-roamer-guide-835.leveling.json)，8词缀、5底材。练级按1项目标→总阶数5→8收紧，单可用目标T5兜底，跨BD不能合计。见[中文审阅表](docs/BLEED_SKELETON_GUIDE_REVIEW.md)。旧Strict与历史XML保留。
 
-Allie攻略来源的Flay已按2026-10-07正文更新[终局需求](requirements/flay-lich-allie-guide.endgame.json)与[练级需求](requirements/flay-lich-allie-guide.leveling.json)：17暗金、10装备组、4神像组、28种终局底材；练级19词缀与3种底材，祭坛未提供目标。补入短暂休息132、红戒277、虚无353、破碎世界413、流亡469、不息狂怒477，保留山之麓替代品。新Flay＋835当前转换179条（173启用），30项测试通过。完整目标、部位链接冲突与来源提取时的验证边界见[双攻略需求审阅](docs/GUIDE_REQUIREMENTS_REVIEW.md)。已有浏览器配置需导入新版同id终局JSON更新，不覆盖练级或主副设置。
+Allie攻略来源的Flay已按2026-10-07正文更新[终局需求](requirements/flay-lich-allie-guide.endgame.json)与[练级需求](requirements/flay-lich-allie-guide.leveling.json)：17暗金、10装备组、4神像组、28种终局底材（5首选／23替代）；练级19词缀与3种底材，祭坛未提供目标。补入短暂休息132、红戒277、虚无353、破碎世界413、流亡469、不息狂怒477，保留山之麓替代品。终局05每BD／部位首选一条、全部替代一条；没有明确首选不猜。新Flay＋835当前转换184条（178启用）。完整目标、部位链接冲突与来源提取时的验证边界见[双攻略需求审阅](docs/GUIDE_REQUIREMENTS_REVIEW.md)。已有浏览器配置需导入新版同id终局JSON更新，不覆盖练级或主副设置。
 
 基底常驻显示带普通抗性后缀的1×2／2×1神像：全部16条普通抗性后缀，至少一项、阶数不限、所有底材、不随等级关闭。此规则独立于BD需求JSON，静音且无地图标记／光柱；命中BD目标时优先使用BD提示。
 

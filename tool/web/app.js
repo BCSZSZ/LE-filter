@@ -77,6 +77,9 @@ function renderTargets(){
     $('targets').innerHTML=`<div class="target-row"><div class="chips">${chips(data,category)}</div></div>`;return;
   }
   $('targets').innerHTML=data.map((g,i)=>{
+    if(category==='bases'&&mode==='endgame'){
+      return `<div class="target-row"><div class="row-heading"><strong>${esc(typeName(g.type))}</strong><div class="row-actions"><button data-pick="preferred_bases" data-index="${i}">首选底材</button><button data-pick="bases" data-index="${i}">替代底材</button><button data-delete="${i}" aria-label="移除此分组">×</button></div></div><div class="chips"><small>首选</small>${g.preferred_bases?.length?chips(g.preferred_bases,'bases',g.type):'<small>未指定</small>'}</div><div class="chips" style="margin-top:12px"><small>替代</small>${g.bases.length?chips(g.bases,'bases',g.type):'<small>未选择</small>'}</div></div>`;
+    }
     const commands=`${category!=='bases'?`<button data-pick="affixes" data-index="${i}">词缀</button>`:''}<button data-pick="bases" data-index="${i}">底材</button>${category==='idols'?`<button data-pick="pair_bases" data-index="${i}">两项层底材</button>`:''}<button data-delete="${i}" aria-label="移除此分组">×</button>`;
     const bases=g.bases.length?chips(g.bases,'bases',g.type):`<small>${category==='bases'?'未选择底材':'底材不限'}</small>`;
     const references=category==='bases'?'':[['enchanted','附魔'],['corrupted','腐化']].filter(([key])=>g[key]?.length).map(([key,title])=>`<div class="chips" style="margin-top:12px"><small>${title}参考</small>${chips(g[key],'affixes')}</div>`).join('');
@@ -89,9 +92,9 @@ function renderSource(){
   $('source-details').hidden=!source&&!legacy;
   $('source-info').innerHTML=(source?`<p>${esc(source.name)}${source.scope?` · ${esc(source.scope)}`:''}</p>${(source.warnings||[]).map(w=>`<p class="warning">${esc(w)}</p>`).join('')}`:'')+(legacy?'<p>旧练级配置已转换为两份列表；原始数据随整套配置保存。</p>':'');
 }
-function openPicker(kind,field,values,types,apply,normalOnly=false){
+function openPicker(kind,field,values,types,apply,normalOnly=false,single=false,excluded=[]){
   const eligible=normalOnly?values.filter(id=>[0,5].includes(catalog.affixes[id]?.special)):values;
-  selection={kind,field,chosen:new Set(eligible.map(String)),types,apply,normalOnly};
+  selection={kind,field,chosen:new Set(eligible.map(String)),types,apply,normalOnly,single,excluded};
   $('picker-title').textContent=kind==='uniques'?'选择所需暗金':kind==='bases'?'选择底材':'选择目标词缀';
   $('picker-search').value='';$('only-selected').checked=false;$('show-legacy').checked=false;
   renderPicker();$('picker').showModal();setTimeout(()=>$('picker-search').focus(),50);
@@ -100,6 +103,7 @@ function renderPicker(){
   const query=$('picker-search').value.trim().toLowerCase();
   const s=selection;
   const all=Object.values(catalog[s.kind]).filter(a=>{
+    if(s.excluded.includes(a.id))return false;
     const selected=s.chosen.has(String(a.id));
     if(s.kind==='affixes'&&s.normalOnly&&![0,5].includes(a.special))return false;
     if(s.kind==='affixes'&&['equipment','leveling'].includes(s.field)&&[4,6].includes(a.special))return false;
@@ -116,12 +120,15 @@ function renderPicker(){
 function pickGroup(field,index){
   const g=profile()[category][index];
   const kind=field==='affixes'?'affixes':'bases';
+  const ranked=category==='bases'&&mode==='endgame';
   openPicker(kind,category,field==='pair_bases'?(g.pair_bases??g.bases):(g[field]||[]),[g.type],values=>{
     const sameBases=JSON.stringify(g.pair_bases)===JSON.stringify(g.bases);
+    if(ranked&&field==='preferred_bases')g.bases=[...new Set([...g.bases,...(g.preferred_bases||[])])].filter(id=>!values.includes(id));
     g[field]=values;
     if(field==='bases'&&category==='idols'&&sameBases)g.pair_bases=copy(values);
     save();render();
-  },category==='idols'&&kind==='affixes');
+  },category==='idols'&&kind==='affixes',ranked&&field==='preferred_bases',ranked&&field==='bases'?(g.preferred_bases||[]):[]);
+  if(ranked)$('picker-title').textContent=field==='preferred_bases'?'选择首选底材（最多一个）':'选择替代底材';
 }
 function showGroupDialog(){
   const types=category==='altars'?['IDOL_ALTAR']:category==='idols'?Object.keys(catalog.types).filter(t=>t.startsWith('IDOL_')&&t!=='IDOL_ALTAR'):catalog.equipment_types;
@@ -144,7 +151,7 @@ function renderPreview(){
   $('preview-summary').textContent=`${selected} · 终局＋练级 · ${generated.count}条规则 / ${generated.enabled}条启用。${generated.warnings.join(' ')}`;
   const query=$('preview-search').value.toLowerCase();
   const rows=generated.rules.filter(r=>`${r.name} ${r.sound} ${r.gate} ${r.types.map(typeName).join(' ')} ${(r.uniques||[]).map(i=>`${label('uniques',i)} ${i}`).join(' ')}`.toLowerCase().includes(query));
-  $('preview-rules').innerHTML=`<table class="preview-table"><thead><tr><th>顺序</th><th>档位</th><th>规则与目标</th><th>条件</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${r.number}${r.enabled?'':'<small>关闭</small>'}</td><td><span class="badge tier-${r.tier}">${esc(r.sound)}</span><small>${esc(r.role)}</small></td><td>${esc(r.name)}<small>${esc(r.types.map(typeName).join('、'))}</small>${r.affixes.flat().length<30?`<small>${esc(r.affixes.flat().map(i=>`${label('affixes',i)}(${i})`).join('、'))}</small>`:''}${r.uniques?.length?`<details><summary>${r.uniques.length}种暗金／套装</summary><small>${esc(r.uniques.map(i=>`${label('uniques',i)}(${i})`).join('、'))}</small></details>`:''}</td><td>${esc(r.gate)}<small>${r.action==='HIDE'?'隐藏':'显示'}</small></td></tr>`).join('')}</tbody></table>`;
+  $('preview-rules').innerHTML=`<table class="preview-table"><thead><tr><th>顺序</th><th>档位</th><th>规则与目标</th><th>条件</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${r.number}${r.enabled?'':'<small>关闭</small>'}</td><td><span class="badge tier-${r.tier}">${esc(r.sound)}</span><small>${esc(r.role)}</small></td><td>${esc(r.name)}<small>${esc(r.types.map(typeName).join('、'))}</small>${r.category.startsWith('终局05')?`<small>底材：${esc(r.bases.map(i=>`${label('bases',`${r.types[0]}:${i}`)}(${i})`).join('、'))}</small>`:''}${r.affixes.flat().length<30?`<small>${esc(r.affixes.flat().map(i=>`${label('affixes',i)}(${i})`).join('、'))}</small>`:''}${r.uniques?.length?`<details><summary>${r.uniques.length}种暗金／套装</summary><small>${esc(r.uniques.map(i=>`${label('uniques',i)}(${i})`).join('、'))}</small></details>`:''}</td><td>${esc(r.gate)}<small>${r.action==='HIDE'?'隐藏':'显示'}</small></td></tr>`).join('')}</tbody></table>`;
 }
 function showImportResult(){
   const p=imported.profile;
@@ -186,7 +193,7 @@ $('targets').addEventListener('click',e=>{
   const del=e.target.closest('[data-delete]');if(del){profile()[category].splice(Number(del.dataset.delete),1);save();render();}
 });
 ['picker-search','only-selected','show-legacy'].forEach(id=>$(id).addEventListener('input',renderPicker));
-$('picker-list').onchange=e=>{if(e.target.dataset.id){const id=e.target.dataset.id;if(e.target.checked)selection.chosen.add(id);else selection.chosen.delete(id);$('selection-count').textContent=`已选${selection.chosen.size}项`;}};
+$('picker-list').onchange=e=>{if(e.target.dataset.id){const id=e.target.dataset.id;if(e.target.checked){if(selection.single)selection.chosen.clear();selection.chosen.add(id);}else selection.chosen.delete(id);if(selection.single)renderPicker();else $('selection-count').textContent=`已选${selection.chosen.size}项`;}};
 $('apply-selection').onclick=()=>{selection.apply([...selection.chosen].map(Number).sort((a,b)=>a-b));$('picker').close();};
 document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>$(b.dataset.close).close());
 $('import-filter').onclick=()=>{$('import-mode').value=mode;$('import-dialog').showModal();};

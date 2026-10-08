@@ -272,15 +272,21 @@ class ToolTests(unittest.TestCase):
         config = self.leveling_config(())
         p = config["builds"][0]["profiles"]["endgame"]
         p["equipment"] = [{"type": "BOOTS", "bases": [], "affixes": [28]}]
-        p["bases"] = [{"type": "BOOTS", "bases": [11]}]
+        p["bases"] = [{"type": "BOOTS", "preferred_bases": [11], "bases": [9]}, {"type": "BOOTS", "bases": [10]}]
         other = deepcopy(config["builds"][0]);other["id"] = "b";other["name"] = "B"
         other["profiles"]["endgame"]["equipment"][0]["affixes"] = [45]
         other["profiles"]["endgame"]["bases"] = []
         config["builds"].append(other)
         out = e.generate(config)
+        layers = [r for r in out["rules"] if r["category"].startswith("终局05")]
+        self.assertEqual([(r["category"], r["bases"]) for r in layers],
+                         [("终局05首选底材＋BD目标T7", [11]), ("终局05替代底材＋BD目标T7", [9, 10])])
+        categories = {r["category"] for r in layers}
         for affixes, base, shown in [({}, 11, False), ({503: 7}, 11, False), ({45: 7}, 11, False),
-                                     ({28: 6}, 11, False), ({28: 8}, 11, False), ({28: 7}, 0, False), ({28: 7}, 11, True)]:
-            self.assertEqual(first(out, "BOOTS", affixes, base=base, level=100, categories={"终局05底材＋BD目标T7"})["action"] != "HIDE", shown)
+                                     ({28: 6}, 11, False), ({28: 8}, 11, False), ({28: 7}, 0, False),
+                                     ({28: 7}, 11, True), ({28: 7}, 9, True), ({28: 7}, 10, True),
+                                     ({45: 7}, 9, False), ({503: 7}, 10, False)]:
+            self.assertEqual(first(out, "BOOTS", affixes, base=base, level=100, categories=categories)["action"] != "HIDE", shown)
         self.assertEqual(first(out, "BOOTS", {}, base=11, level=100, rarity="NORMAL")["action"], "HIDE")
         p["equipment"] = []
         self.assertTrue(e.generate(config)["warnings"])

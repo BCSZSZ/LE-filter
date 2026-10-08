@@ -22,7 +22,12 @@ class RequirementTests(unittest.TestCase):
         endgame, leveling = build_allie_documents()
         self.assertEqual({k: len(v) for k, v in endgame["targets"].items()},
                          {"uniques": 17, "equipment": 10, "altars": 0, "idols": 4, "bases": 8})
-        self.assertEqual(sum(len(g["bases"]) for g in endgame["targets"]["bases"]), 28)
+        self.assertEqual(sum(len(g["bases"]) + len(g["preferred_bases"]) for g in endgame["targets"]["bases"]), 28)
+        base_groups = {g["type"]: g for g in endgame["targets"]["bases"]}
+        self.assertEqual({t: g["preferred_bases"] for t, g in base_groups.items()},
+                         {"HELMET": [70], "BODY_ARMOR": [64], "GLOVES": [], "BELT": [],
+                          "BOOTS": [11], "RELIC": [4], "RING": [9], "AMULET": []})
+        self.assertEqual(base_groups["HELMET"]["bases"], [51, 15, 63])
         groups = {g["type"]: g for g in endgame["targets"]["equipment"]}
         self.assertEqual(groups["ONE_HANDED_AXE"]["affixes"], [943, 2, 718, 724])
         self.assertEqual(groups["ONE_HANDED_DAGGER"]["affixes"], [943, 2, 718, 724])
@@ -69,6 +74,40 @@ class RequirementTests(unittest.TestCase):
                     for key in ("bases", "affixes", "corrupted", "enchanted"):
                         self.assertEqual(before[key], after[key])
                     self.assertEqual(before.get("pair_bases", before["bases"]), after.get("pair_bases", after["bases"]))
+
+    def test_preferred_bases_validation_and_legacy_union(self):
+        doc = build_allie_documents()[0]
+        for preferred in ([70, 51], [51], [999999], 70):
+            invalid = deepcopy(doc)
+            invalid["targets"]["bases"][0]["preferred_bases"] = preferred
+            with self.assertRaises(ValueError):
+                read_document(invalid)
+        build = as_build(doc)
+        build["profiles"]["endgame"]["bases"].append({"type": "HELMET", "preferred_bases": [63], "bases": []})
+        with self.assertRaises(ValueError):
+            e.generate({"version": 1, "main_id": build["id"], "extra_t7": True, "builds": [build]})
+        doc["stage"] = "leveling"
+        self.assertEqual(set(read_document(doc)["profile"]["bases"][0]["bases"]), {70, 51, 15, 63})
+
+    def test_preferred_base_rule_counts_and_no_inferred_priority(self):
+        from browser_runtime import browser_bootstrap
+        config = deepcopy(browser_bootstrap()["config"])
+        for selected, main, expected in [({"flay-lich-allie-guide"}, "flay-lich-allie-guide", 110),
+                ({"flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835"}, "flay-lich-allie-guide", 184),
+                ({"flay-mana-lich", "skeleton-necromancer"}, "flay-mana-lich", 133)]:
+            for build in config["builds"]:
+                build["enabled"] = build["id"] in selected
+            config["main_id"] = main
+            out = e.generate(config)
+            self.assertEqual(out["count"], expected)
+            layers = [r for r in out["rules"] if r["category"].startswith("终局05")]
+            preferred = [r for r in layers if "首选" in r["category"]]
+            self.assertEqual(len(preferred), 5 if "flay-lich-allie-guide" in selected else 0)
+            self.assertFalse(any(r["types"][0] in {"GLOVES", "BELT", "AMULET"} for r in preferred))
+        for build in config["builds"]:
+            build["enabled"] = True
+        with self.assertRaisesRegex(ValueError, "275条规则，超过200"):
+            e.generate(config)
 
     def test_explicit_unrestricted_idol_pair_roundtrip(self):
         doc = build_document()

@@ -34,7 +34,8 @@ def build_documents():
             if item["category"] == "unique":
                 targets["uniques"].append(item["id"])
             else:
-                pool = bases.setdefault(item["type"], [])
+                entry = bases.setdefault(item["type"], {"type": item["type"], "preferred_bases": [], "bases": []})
+                pool = entry["preferred_bases" if item["id"] == row.get("preferred_base") else "bases"]
                 if item["id"] not in pool:
                     pool.append(item["id"])
         for typ in dict.fromkeys(item["type"] for item in row["items"]):
@@ -45,7 +46,7 @@ def build_documents():
             if aid not in equipment[row["type"]]["affixes"]:
                 equipment[row["type"]]["affixes"].append(aid)
     targets["equipment"] = list(equipment.values())
-    targets["bases"] = [{"type": typ, "bases": ids} for typ, ids in bases.items()]
+    targets["bases"] = list(bases.values())
     targets["uniques"] = sorted(set(targets["uniques"] + [i["id"] for i in facts["unique_supplements"]]))
     for row in facts["idols"]:
         item = row["items"][0]
@@ -54,6 +55,7 @@ def build_documents():
               "extracted_on": facts["extracted_on"], "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
               "scope": "Flay装备／神像推荐表与正文明确补充，包含替代品和后期升级；不绑定单一Planner变体",
               "warnings": ["候选池包含替代品，不要求同一件装备或整套装备同时采用所有候选。",
+                           "普通底材首选只取原文明示；手套、腰带、护身符没有普通首选，全部记录为替代。",
                            "泛指所缺抗性与生命未扩成BD全量词缀；1×2／2×1抗性神像由基底共通规则处理。",
                            "靴子表链接为暴击避免97，正文明确推荐护甲与暴击减伤715；两者均记录为候选。",
                            "中期推荐短暂休息132；继续使用Corrupted Form时山之麓253仍是明确替代品，两者均保留。",

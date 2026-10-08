@@ -6,6 +6,7 @@ from engine import CATALOG, empty_profile, to_leveling, validate_leveling, valid
 FORMAT = "le-filter-requirements"
 CATEGORIES = ("uniques", "equipment", "altars", "idols", "bases")
 GROUP_FIELDS = {"type", "bases", "affixes", "pair_bases", "corrupted", "enchanted"}
+BASE_FIELDS = {"type", "bases", "preferred_bases"}
 
 
 def read_document(document):
@@ -34,15 +35,14 @@ def read_document(document):
                 raise ValueError("暗金ID必须为整数。")
             continue
         for group in profile[category]:
-            if not isinstance(group, dict) or set(group) - GROUP_FIELDS or not isinstance(group.get("type"), str):
+            fields = BASE_FIELDS if category == "bases" else GROUP_FIELDS
+            if not isinstance(group, dict) or set(group) - fields or not isinstance(group.get("type"), str):
                 raise ValueError(f"{category}分组格式不正确。")
-            if category == "bases" and set(group) - {"type", "bases"}:
-                raise ValueError("独立底材分组只填写type和bases。")
             if category != "idols" and "pair_bases" in group:
                 raise ValueError("pair_bases只用于神像的两项目标底材范围。")
             for key in ("bases", "affixes", "corrupted", "enchanted"):
                 group.setdefault(key, [])
-            for key in GROUP_FIELDS - {"type"}:
+            for key in fields - {"type"}:
                 values = group.get(key, [])
                 if not isinstance(values, list) or any(type(v) is not int for v in values):
                     raise ValueError(f"{category}.{key}必须为整数ID列表。")
@@ -79,9 +79,9 @@ def write_document(build, stage):
     for category in (() if stage == "leveling" else CATEGORIES[1:]):
         targets[category] = []
         for group in profile[category]:
-            fields = {"type", "bases"} if category == "bases" else GROUP_FIELDS
+            fields = BASE_FIELDS if category == "bases" else GROUP_FIELDS
             targets[category].append({key: deepcopy(value) for key, value in group.items()
-                                      if key in fields and (value or key in {"type", "bases", "affixes", "pair_bases"})})
+                                      if key in fields and (value or key in {"type", "bases", "affixes", "pair_bases", "preferred_bases"})})
     document = {"format": FORMAT, "version": 1, "id": build["id"], "name": build["name"],
                 "stage": stage, "targets": targets}
     source = build.get("requirement_sources", {}).get(stage, build.get("source", {}))

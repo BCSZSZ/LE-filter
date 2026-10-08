@@ -6,6 +6,7 @@
   "equipment": [
     {
       "slot": "helmet",
+      "preferred_base": 70,
       "items": [
         {
           "href": "https://www.lastepochtools.com/db/items/IIwBjIdnEg",
@@ -77,6 +78,7 @@
     },
     {
       "slot": "body",
+      "preferred_base": 64,
       "items": [
         {
           "href": "https://www.lastepochtools.com/db/items/IIwBhoNgFjEg",
@@ -352,6 +354,7 @@
     },
     {
       "slot": "boots",
+      "preferred_base": 11,
       "items": [
         {
           "href": "https://www.lastepochtools.com/db/items/IIwBhGYWUyA",
@@ -431,6 +434,7 @@
     },
     {
       "slot": "relic",
+      "preferred_base": 4,
       "items": [
         {
           "href": "https://www.lastepochtools.com/db/items/IIwBgTGIgLFJA",
@@ -558,6 +562,7 @@
     },
     {
       "slot": "ring1",
+      "preferred_base": 9,
       "items": [
         {
           "href": "https://www.lastepochtools.com/db/items/IIwBgTKIJwrQ",
@@ -609,6 +614,7 @@
     },
     {
       "slot": "ring2",
+      "preferred_base": 9,
       "items": [
         {
           "href": "https://www.lastepochtools.com/db/items/IIwBgTKIJwrQ",
