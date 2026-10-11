@@ -9,48 +9,130 @@ function fixtures(){
     id:d.id,name:d.name,enabled:i===0,profiles:{endgame:copy(d.targets),leveling:{affixes:[502],bases:[]}},requirement_sources:{endgame:copy(d.source)}
   }))};
 }
-test('editing, renaming and deleting a saved copy cannot change the official library',()=>{
-  const examples=fixtures(),original=copy(examples),templates=W.library(examples),config=W.restore(examples);
-  const b=config.builds[0];b.name='我的魔力巫妖';b.profiles.endgame.idols=[];config.builds=[];
-  assert.deepEqual(templates,original.builds);assert.deepEqual(examples,original);
-  assert.ok(Object.isFrozen(templates[0].profiles.endgame.idols));
-  assert.equal(W.useTemplate(config,templates,templates[0].id).build.profiles.endgame.idols.length,5);
+function setup(){const examples=fixtures();return {examples,templates:W.library(examples),state:W.restore(examples)};}
+
+test('fresh visits and multi-selecting templates create no saved copies',()=>{
+  const {templates,state}=setup();
+  assert.deepEqual(state.saves,[]);assert.equal(state.active_save_id,null);assert.deepEqual(state.draft_config.builds,[]);
+  W.setTemplateEnabled(state,templates,templates[1].id,true);W.setTemplateMain(state,templates[1].id);
+  assert.deepEqual(state.selection,{ids:templates.map(t=>t.id),main_id:templates[1].id});
+  assert.deepEqual(state.saves,[]);assert.deepEqual(state.draft_config.builds,[]);
+  W.setTemplateEnabled(state,templates,templates[1].id,false);
+  assert.equal(state.selection.main_id,templates[0].id);
+  W.setTemplateEnabled(state,templates,templates[0].id,false);
+  assert.equal(state.selection.main_id,null);assert.throws(()=>W.applyTemplates(state,templates,'empty'));
+  assert.deepEqual(state.saves,[]);
 });
-test('migration and reload preserve old edits, deselected builds, both stages and common choices',()=>{
+
+test('Apply creates exactly one editable combined scheme with the chosen main BD',()=>{
+  const {examples,templates,state}=setup(),before=copy(examples);
+  W.setTemplateEnabled(state,templates,templates[1].id,true);W.setTemplateMain(state,templates[1].id);
+  const saved=W.applyTemplates(state,templates,'combined');
+  assert.equal(state.saves.length,1);assert.equal(W.activeSave(state),saved);
+  assert.equal(saved.config.main_id,templates[1].id);assert.equal(saved.config.builds.length,2);
+  for(const b of saved.config.builds){const t=templates.find(t=>t.id===b.id);assert.deepEqual(b.profiles,t.profiles);assert.deepEqual(b.requirement_sources,t.requirement_sources);assert.equal(b.enabled,true);}
+  assert.equal(saved.config.builds[0].profiles.endgame.idols.length,5);
+  assert.deepEqual(saved.config.builds[0].profiles.endgame.altars[0].bases,[3]);
+  saved.name='我的组合';saved.config.builds[0].profiles.endgame.idols=[];saved.config.common.unique_idols=[];
+  assert.deepEqual(templates,before.builds);assert.deepEqual(examples,before);assert.ok(Object.isFrozen(templates[0].profiles.endgame.idols));
+});
+
+test('changing pending selections never changes the current saved scheme or its main BD',()=>{
+  const {examples,templates,state}=setup();W.setTemplateEnabled(state,templates,templates[1].id,true);
+  const saved=W.applyTemplates(state,templates,'old');saved.config.builds[0].profiles.leveling.affixes=[406];
+  const before=copy(state.saves);
+  W.setTemplateMain(state,templates[1].id);W.setTemplateEnabled(state,templates,templates[0].id,false);W.selectDefaults(state,examples);
+  assert.deepEqual(state.saves,before);assert.equal(state.active_save_id,'old');
+});
+
+test('applying again creates a fresh single record and keeps existing edits',()=>{
+  const {templates,state}=setup();const old=W.applyTemplates(state,templates,'old');
+  old.name='旧编辑';old.config.builds[0].profiles.endgame.idols=[];old.config.builds[0].profiles.leveling.affixes=[406];old.config.common.unique_idols=[];
+  const before=copy(old);W.setTemplateEnabled(state,templates,templates[1].id,true);W.setTemplateMain(state,templates[1].id);
+  const fresh=W.applyTemplates(state,templates,'new');
+  assert.equal(state.saves.length,2);assert.equal(fresh.config.builds.length,2);assert.deepEqual(old,before);
+  assert.equal(fresh.config.builds[0].profiles.endgame.idols.length,5);assert.deepEqual(fresh.config.builds[0].profiles.leveling.affixes,[502]);
+  assert.equal(fresh.config.main_id,templates[1].id);assert.deepEqual(fresh.config.common.unique_idols,[]);
+  fresh.config.common.unique_idols.push(211);assert.deepEqual(old.config.common.unique_idols,[]);
+  assert.throws(()=>W.applyTemplates(state,templates,'new'));assert.equal(state.saves.length,2);
+});
+
+test('reopening and reloading saved schemes retain independent targets, main BDs and draft choices',()=>{
+  const {examples,templates,state}=setup();const first=W.applyTemplates(state,templates,'first');
+  first.config.builds[0].name='改名';first.config.builds[0].profiles.endgame.idols=[];
+  W.setTemplateEnabled(state,templates,templates[1].id,true);W.setTemplateMain(state,templates[1].id);
+  const second=W.applyTemplates(state,templates,'second');second.active_build_id=templates[0].id;second.config.extra_t7=false;
+  W.activateSave(state,'first');assert.deepEqual(first.config.builds[0].profiles.endgame.idols,[]);assert.equal(first.config.main_id,templates[0].id);
+  const restored=W.restore(examples,JSON.parse(JSON.stringify(state)));
+  assert.deepEqual(restored,state);assert.equal(W.activeSave(restored).id,'first');assert.equal(restored.selection.main_id,templates[1].id);
+  assert.equal(W.activateSave(restored,'second').active_build_id,templates[0].id);assert.equal(W.activeSave(restored).config.main_id,templates[1].id);
+});
+
+test('legacy browser saves migrate into one scheme, retaining disabled BDs, both stages and references',()=>{
   const examples=fixtures(),old=copy(examples);old.builds[0].name='旧保存';old.builds[0].profiles.endgame.idols=[];
-  old.builds[1].profiles.leveling.affixes=[406];old.common.unique_idols=[];
-  const before=copy(old),restored=W.restore(examples,old);
-  assert.deepEqual(restored.builds[0].profiles,before.builds[0].profiles);
-  assert.equal(restored.builds[0].name,'旧保存');assert.equal(restored.builds[1].enabled,false);
-  assert.deepEqual(restored.builds[1].profiles.leveling,before.builds[1].profiles.leveling);
-  assert.deepEqual(restored.common,before.common);assert.deepEqual(old,before);
+  old.builds[1].profiles.leveling.affixes=[406];old.builds[1].source={name:'原始来源'};old.builds[0].legacy_leveling={equipment:['原记录']};old.common.unique_idols=[];old.extra_t7=false;
+  const before=copy(old),restored=W.restore(examples,old),config=W.activeSave(restored).config;
+  assert.equal(restored.saves.length,1);assert.equal(config.builds.length,2);
+  config.builds.forEach((b,i)=>{assert.deepEqual(b.profiles,before.builds[i].profiles);assert.equal(b.enabled,before.builds[i].enabled);assert.equal(b.name,before.builds[i].name);});
+  assert.deepEqual(config.builds[1].source,before.builds[1].source);assert.deepEqual(config.builds[0].legacy_leveling,before.builds[0].legacy_leveling);
+  assert.deepEqual(config.common,before.common);assert.equal(config.extra_t7,false);assert.equal(config.main_id,before.main_id);assert.deepEqual(old,before);
   assert.deepEqual(W.restore(examples,JSON.parse(JSON.stringify(restored))),restored);
 });
-test('loading a template again resumes saved edits; explicit reset restores only that copy',()=>{
-  const examples=fixtures(),templates=W.library(examples),config=W.restore(examples);
-  const first=W.useTemplate(config,templates,templates[0].id).build;first.name='我的名字';first.profiles.endgame.idols=[];
-  first.enabled=false;
-  const again=W.useTemplate(config,templates,templates[0].id);assert.ok(again.reused);assert.equal(config.builds.length,1);
-  assert.deepEqual(again.build.profiles.endgame.idols,[]);
-  const other=W.useTemplate(config,templates,templates[1].id).build;other.profiles.leveling.affixes=[406];
-  const otherBefore=copy(other),main=config.main_id,common=copy(config.common);
-  const reset=W.resetBuild(config,templates,first.id);
-  assert.deepEqual(reset.profiles,templates[0].profiles);assert.equal(reset.name,'我的名字');assert.equal(reset.enabled,true);
-  assert.deepEqual(other,otherBefore);assert.equal(config.main_id,main);assert.deepEqual(config.common,common);
+
+test('legacy custom BDs remain editable without adding them to the official library',()=>{
+  const examples=fixtures(),old=copy(examples);old.builds[0].id='custom';old.main_id='custom';
+  const state=W.restore(examples,old);
+  assert.equal(W.activeSave(state).config.main_id,'custom');assert.deepEqual(state.selection.ids,[]);assert.equal(examples.builds.length,2);
+  const empty=W.restore(examples,{...old,builds:[],main_id:null});assert.deepEqual(empty.saves,[]);assert.deepEqual(empty.draft_config.common,old.common);
 });
-test('same-id requirements import updates only that saved stage and never the template',()=>{
-  const examples=fixtures(),templates=W.library(examples),config=W.restore(examples),original=copy(templates);
-  const b=config.builds[0],leveling=copy(b.profiles.leveling),main=config.main_id;
+
+test('importing a backup adds independent complete schemes without replacing current saves',()=>{
+  const {examples,templates,state}=setup();const first=W.applyTemplates(state,templates,'first');
+  W.setTemplateEnabled(state,templates,templates[1].id,true);W.setTemplateMain(state,templates[1].id);W.applyTemplates(state,templates,'second');W.activateSave(state,'first');
+  const original=copy(state),incoming=W.restore(examples,original);let sequence=0;
+  W.mergeSaves(state,incoming,()=>`imported-${++sequence}`);
+  assert.equal(state.saves.length,4);assert.deepEqual(state.saves.slice(0,2),original.saves);assert.equal(state.active_save_id,'imported-1');
+  assert.deepEqual(state.saves[3].config,original.saves[1].config);W.activeSave(state).config.builds[0].profiles.endgame.idols=[];
+  assert.equal(first.config.builds[0].profiles.endgame.idols.length,5);assert.deepEqual(incoming,original);
+});
+
+test('explicit BD reset affects only that member of the active combined scheme',()=>{
+  const {templates,state}=setup();W.setTemplateEnabled(state,templates,templates[1].id,true);
+  const saved=W.applyTemplates(state,templates,'combined'),config=saved.config,b=config.builds[0];b.name='玩家名称';b.profiles.endgame.idols=[];
+  const otherBefore=copy(config.builds[1]),main=config.main_id,common=copy(config.common);
+  W.resetBuild(config,templates,b.id);
+  assert.deepEqual(config.builds[0].profiles,templates[0].profiles);assert.equal(config.builds[0].name,'玩家名称');assert.deepEqual(config.builds[1],otherBefore);
+  assert.equal(config.main_id,main);assert.deepEqual(config.common,common);assert.equal(state.saves.length,1);
+});
+
+test('same-id requirements update one stage in one scheme and preserve ownership and main BD',()=>{
+  const {templates,state}=setup();const first=W.applyTemplates(state,templates,'first'),second=W.applyTemplates(state,templates,'second');
+  const b=second.config.builds[0],leveling=copy(b.profiles.leveling),firstBefore=copy(first),templateBefore=copy(templates);
   const data={id:b.id,name:'玩家补充',stage:'endgame',profile:{uniques:[],equipment:[],idols:[],altars:[],bases:[]},source:{name:'玩家JSON'}};
-  W.importRequirement(config,templates,data);
-  assert.equal(b.enabled,true);assert.equal(config.main_id,main);assert.deepEqual(b.profiles.leveling,leveling);
-  assert.deepEqual(b.profiles.endgame,data.profile);assert.deepEqual(templates,original);
+  W.importRequirement(second.config,templates,data);
+  assert.equal(b.enabled,true);assert.equal(second.config.main_id,b.id);assert.deepEqual(b.profiles.leveling,leveling);
+  assert.deepEqual(b.profiles.endgame,data.profile);assert.deepEqual(first,firstBefore);assert.deepEqual(templates,templateBefore);
   b.profiles.endgame.uniques.push(211);assert.deepEqual(data.profile.uniques,[]);
+  b.enabled=false;second.config.main_id=null;W.importRequirement(second.config,templates,data);assert.equal(b.enabled,false);
 });
-test('new imported requirements stay unselected; defaults copy only selected examples',()=>{
-  const examples=fixtures(),templates=W.library(examples),config=W.restore(examples);
-  assert.equal(config.builds.length,1);
-  const b=W.importRequirement(config,templates,{id:'my-build',name:'自定义',stage:'leveling',profile:{affixes:[406],bases:[]},source:{}});
-  assert.equal(b.enabled,false);assert.deepEqual(b.profiles.endgame,{uniques:[],equipment:[],idols:[],altars:[],bases:[]});
-  assert.equal(config.main_id,examples.main_id);assert.equal(templates.length,2);
+
+test('explicitly imported new BDs join only the active scheme and can establish its main BD',()=>{
+  const {examples,templates,state}=setup();const saved=W.addSave(state,W.emptyConfig(examples),'custom','自定义方案');
+  const b=W.importRequirement(saved.config,templates,{id:'my-build',name:'自定义',stage:'leveling',profile:{affixes:[406],bases:[]},source:{}});
+  assert.equal(b.enabled,true);assert.equal(saved.config.main_id,b.id);assert.deepEqual(b.profiles.endgame,{uniques:[],equipment:[],idols:[],altars:[],bases:[]});
+  assert.equal(state.saves.length,1);assert.equal(templates.length,2);
+});
+
+test('deleting a scheme preserves all other schemes and pending template choices',()=>{
+  const {templates,state}=setup();W.applyTemplates(state,templates,'first');const second=W.applyTemplates(state,templates,'second'),before=copy(second),draft=copy(state.selection);
+  W.removeSave(state,'first');assert.equal(state.saves.length,1);assert.deepEqual(second,before);assert.deepEqual(state.selection,draft);
+  W.removeSave(state,'second');assert.equal(state.active_save_id,null);assert.deepEqual(state.saves,[]);assert.deepEqual(state.selection,draft);
+});
+
+test('malformed backups and duplicate BD identities are rejected before loading',()=>{
+  const {examples,templates,state}=setup();W.applyTemplates(state,templates,'first');
+  for(const change of [s=>s.saves.push(copy(s.saves[0])),s=>s.active_save_id='missing',s=>s.saves[0].config.builds.push(copy(s.saves[0].config.builds[0])),s=>s.saves[0].config.main_id='missing']){
+    const broken=copy(state);change(broken);assert.throws(()=>W.restore(examples,broken));
+  }
+  assert.deepEqual(W.restore(examples,state),state);
 });

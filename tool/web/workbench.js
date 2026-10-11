@@ -1,6 +1,7 @@
-/* Official templates and browser-owned working copies have separate lifetimes. */
+/* Template selection is a draft; each saved scheme owns a complete engine config. */
 (function(root){
   const copy = value => JSON.parse(JSON.stringify(value));
+  const FORMAT = 'le-filter-workspaces';
   const emptyProfile = () => ({uniques:[],equipment:[],altars:[],idols:[],bases:[]});
   const emptyLeveling = () => ({affixes:[],bases:[]});
   function freeze(value){
@@ -8,43 +9,119 @@
     return Object.freeze(value);
   }
   function library(examples){return freeze(copy(examples.builds));}
-  function restore(examples,saved){
-    const config=copy(saved||examples);
-    if(!saved)config.builds=config.builds.filter(b=>b.enabled);
-    for(const b of config.builds){
-      if(!b.template_id&&examples.builds.some(t=>t.id===b.id))b.template_id=b.id;
-    }
-    return config;
+  function emptyConfig(examples){return {...copy(examples),main_id:null,builds:[]};}
+  function defaultSelection(examples){
+    const ids=examples.builds.filter(b=>b.enabled).map(b=>b.id);
+    return {ids,main_id:ids.includes(examples.main_id)?examples.main_id:ids[0]||null};
   }
-  function useTemplate(config,templates,id){
-    const template=templates.find(t=>t.id===id);
-    if(!template)throw Error('找不到这个模板。');
-    let b=config.builds.find(b=>b.id===id)||config.builds.find(b=>b.template_id===id);
-    const reused=!!b;
-    if(!b){b={...copy(template),template_id:id};config.builds.push(b);}
-    b.enabled=true;
-    if(!config.builds.some(b=>b.enabled&&b.id===config.main_id))config.main_id=b.id;
-    return {build:b,reused};
+  function configShape(config){
+    if(!config||config.version!==1||!Array.isArray(config.builds))throw Error('方案配置格式不正确。');
+    const ids=new Set();
+    for(const b of config.builds){
+      if(!b||typeof b.id!=='string'||!b.id||ids.has(b.id)||typeof b.name!=='string'||typeof b.enabled!=='boolean'||!b.profiles?.endgame||!b.profiles?.leveling)throw Error('方案中的BD格式不正确或ID重复。');
+      ids.add(b.id);
+    }
+    const selected=config.builds.filter(b=>b.enabled);
+    if(selected.length&&!selected.some(b=>b.id===config.main_id))throw Error('请从方案已启用的BD中选择主BD。');
+  }
+  function attachOrigins(config,examples){
+    for(const b of config.builds)if(!b.template_id&&examples.builds.some(t=>t.id===b.id))b.template_id=b.id;
+  }
+  function schemeName(config){return config.builds.filter(b=>b.enabled).map(b=>b.name).join(' ＋ ')||'我的方案';}
+  function activeSave(state){return state.saves.find(s=>s.id===state.active_save_id);}
+  function addSave(state,config,id,name=schemeName(config)){
+    configShape(config);
+    if(typeof id!=='string'||!id||state.saves.some(s=>s.id===id))throw Error('保存方案的ID重复或无效。');
+    const saved={id,name,config:copy(config),active_build_id:config.main_id};
+    state.saves.push(saved);state.active_save_id=id;
+    return saved;
+  }
+  function restore(examples,saved){
+    const state={format:FORMAT,version:2,selection:defaultSelection(examples),draft_config:emptyConfig(examples),saves:[],active_save_id:null};
+    if(!saved)return state;
+    if(saved.version===1&&Array.isArray(saved.builds)){
+      configShape(saved);
+      const config=copy(saved);attachOrigins(config,examples);
+      const ids=config.builds.filter(b=>b.enabled).map(b=>b.template_id).filter(Boolean);
+      state.selection={ids:[...new Set(ids)],main_id:config.builds.find(b=>b.id===config.main_id)?.template_id||ids[0]||null};
+      state.draft_config={...copy(config),main_id:null,builds:[]};
+      if(config.builds.length)addSave(state,config,'legacy-workspace',schemeName(config));
+      return state;
+    }
+    if(saved.format!==FORMAT||saved.version!==2||!Array.isArray(saved.saves)||!Array.isArray(saved.selection?.ids))throw Error('这不是支持的保存方案文件。');
+    const restored=copy(saved),ids=new Set();
+    configShape(restored.draft_config);
+    if(restored.draft_config.builds.length)throw Error('模板选择草稿不能包含BD副本。');
+    for(const s of restored.saves){
+      if(!s||typeof s.id!=='string'||!s.id||ids.has(s.id)||typeof s.name!=='string')throw Error('保存方案格式不正确或ID重复。');
+      configShape(s.config);attachOrigins(s.config,examples);ids.add(s.id);
+    }
+    restored.selection.ids=[...new Set(restored.selection.ids)].filter(id=>examples.builds.some(t=>t.id===id));
+    if(!restored.selection.ids.includes(restored.selection.main_id))restored.selection.main_id=restored.selection.ids[0]||null;
+    if(restored.active_save_id!==null&&!ids.has(restored.active_save_id))throw Error('找不到当前保存方案。');
+    return restored;
+  }
+  function selectDefaults(state,examples){state.selection=defaultSelection(examples);}
+  function setTemplateEnabled(state,templates,id,enabled){
+    if(!templates.some(t=>t.id===id))throw Error('找不到这个模板。');
+    const ids=new Set(state.selection.ids);
+    if(enabled)ids.add(id);else ids.delete(id);
+    state.selection.ids=templates.filter(t=>ids.has(t.id)).map(t=>t.id);
+    if(!ids.has(state.selection.main_id))state.selection.main_id=state.selection.ids[0]||null;
+  }
+  function setTemplateMain(state,id){
+    if(!state.selection.ids.includes(id))throw Error('请先勾选这个BD。');
+    state.selection.main_id=id;
+  }
+  function applyTemplates(state,templates,id){
+    const selected=templates.filter(t=>state.selection.ids.includes(t.id));
+    if(!selected.length)throw Error('请先选择至少一个官方模板。');
+    if(!selected.some(t=>t.id===state.selection.main_id))throw Error('请从已选模板中选择主BD。');
+    const settings=activeSave(state)?.config||state.draft_config;
+    const config={...copy(settings),main_id:state.selection.main_id,builds:selected.map(t=>({...copy(t),enabled:true,template_id:t.id}))};
+    return addSave(state,config,id);
+  }
+  function activateSave(state,id){
+    const saved=state.saves.find(s=>s.id===id);
+    if(!saved)throw Error('找不到这个保存方案。');
+    state.active_save_id=id;return saved;
+  }
+  function removeSave(state,id){
+    const index=state.saves.findIndex(s=>s.id===id);
+    if(index<0)return;
+    state.saves.splice(index,1);
+    if(state.active_save_id===id)state.active_save_id=state.saves[Math.min(index,state.saves.length-1)]?.id||null;
+  }
+  function mergeSaves(state,incoming,newId){
+    let active;
+    for(const saved of incoming.saves){
+      const added=addSave(state,saved.config,newId(),saved.name);
+      added.active_build_id=saved.active_build_id;
+      if(saved.id===incoming.active_save_id)active=added;
+    }
+    if(active)state.active_save_id=active.id;
+    return activeSave(state);
   }
   function resetBuild(config,templates,id){
     const index=config.builds.findIndex(b=>b.id===id),b=config.builds[index];
     const template=templates.find(t=>t.id===(b?.template_id||b?.id));
-    if(!template)throw Error('这个保存没有对应的官方模板。');
+    if(!template)throw Error('这个BD没有对应的官方模板。');
     config.builds[index]={...copy(template),id:b.id,name:b.name,enabled:b.enabled,template_id:template.id};
     return config.builds[index];
   }
   function importRequirement(config,templates,data){
     let b=config.builds.find(b=>b.id===data.id);
     if(!b){
-      b={id:data.id,name:data.name,enabled:false,profiles:{endgame:emptyProfile(),leveling:emptyLeveling()}};
+      b={id:data.id,name:data.name,enabled:true,profiles:{endgame:emptyProfile(),leveling:emptyLeveling()}};
       if(templates.some(t=>t.id===data.id))b.template_id=data.id;
       config.builds.push(b);
+      if(!config.builds.some(b=>b.enabled&&b.id===config.main_id))config.main_id=b.id;
     }
     b.name=data.name;b.profiles[data.stage]=copy(data.profile);
     b.requirement_sources||={};b.requirement_sources[data.stage]=copy(data.source);
     return b;
   }
-  const api={library,restore,useTemplate,resetBuild,importRequirement};
+  const api={library,restore,emptyConfig,activeSave,addSave,selectDefaults,setTemplateEnabled,setTemplateMain,applyTemplates,activateSave,removeSave,mergeSaves,resetBuild,importRequirement};
   root.LEWorkbench=api;
   if(typeof module!=='undefined')module.exports=api;
 })(globalThis);

@@ -1,7 +1,8 @@
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const copy = value => JSON.parse(JSON.stringify(value));
-const STORAGE = 'le-filter-workbench-v1';
+const STORAGE = 'le-filter-workbench-v2';
+const LEGACY_STORAGE = 'le-filter-workbench-v1';
 const endgameCategories = [
   ['uniques','所需暗金','选择暗金'],
   ['equipment','装备词条','添加部位'],
@@ -11,10 +12,10 @@ const endgameCategories = [
 ];
 const levelingCategories = [['affixes','所需词条','选择词条'],['bases','所需底材','添加底材']];
 const categories = () => mode==='leveling'?levelingCategories:endgameCategories;
-let catalog, examples, templates, config, activeId, mode='endgame', category='uniques', view='editor', selection, imported, generated, toastTimer;
+let catalog, examples, templates, state, config, activeId, mode='endgame', category='uniques', view='editor', selection, imported, generated, toastTimer, previewRequest=0;
 const workspace=globalThis.LEWorkbench;
-let selectionApplied=false;
-const workbenchReady = () => selectionApplied && config.builds.some(b=>b.enabled);
+const currentSave = () => workspace.activeSave(state);
+const workbenchReady = () => !!currentSave() && config.builds.some(b=>b.enabled);
 const emptyProfile = () => ({uniques:[],equipment:[],altars:[],idols:[],bases:[]});
 const emptyLeveling = () => ({affixes:[],bases:[]});
 const build = () => config.builds.find(b => b.id === activeId);
@@ -33,12 +34,28 @@ async function api(path,payload){
   const response=await fetch(path,payload?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}:{});
   const data=await response.json();if(!response.ok)throw Error(data.error || '请求失败');return data;
 }
-function save(){
-  generated=null;
-  try{localStorage.setItem(STORAGE,JSON.stringify(config));$('save-state').textContent='编辑已自动保存';}
+function save(invalidate=true){
+  if(invalidate){generated=null;previewRequest++;}
+  if(currentSave())currentSave().active_build_id=activeId;
+  try{localStorage.setItem(STORAGE,JSON.stringify(state));$('save-state').textContent=currentSave()?'方案已自动保存':'模板选择已记住';}
   catch{$('save-state').textContent='请用“保存配置”备份';}
 }
-function selectionChanged(){selectionApplied=false;view='editor';save();render();}
+function selectionChanged(){save(false);render();}
+function openSave(saved){
+  config=saved.config;activeId=saved.active_build_id||config.main_id;mode='endgame';category='uniques';view='editor';save();render();
+}
+function ensureSave(name){
+  if(!currentSave()){
+    const saved=workspace.addSave(state,state.draft_config,crypto.randomUUID(),name);
+    config=saved.config;
+  }
+}
+function addCustomBuild(){
+  const b={id:crypto.randomUUID(),name:`自定义BD ${config.builds.length+1}`,enabled:true,profiles:{endgame:emptyProfile(),leveling:emptyLeveling()}};
+  config.builds.push(b);
+  if(!config.builds.some(b=>b.enabled&&b.id===config.main_id))config.main_id=b.id;
+  activeId=b.id;mode='endgame';category='uniques';view='editor';save();render();
+}
 async function download(text,name){
   if(globalThis.LEFilterAPI){
     const url=URL.createObjectURL(new Blob([text],{type:name.endsWith('.xml')?'application/xml':'application/json'}));
@@ -49,17 +66,28 @@ async function download(text,name){
   const a=document.createElement('a');a.href=result.url;a.download=name;document.body.append(a);a.click();a.remove();
 }
 function render(){
+  const saved=currentSave();config=saved?.config||state.draft_config;
   const selected=config.builds.filter(b=>b.enabled),ready=workbenchReady();
   if(!selected.some(b=>b.id===activeId))activeId=selected.find(b=>b.id===config.main_id)?.id||selected[0]?.id;
-  $('templates').innerHTML=templates.map(t=>`<div class="template-card"><strong>${esc(t.name)}</strong><small>官方模板 · 只读</small><button data-template="${esc(t.id)}">载入副本</button></div>`).join('');
-  $('builds').innerHTML=config.builds.map(b=>`<div class="build-card ${ready&&b.id===activeId?'editing':''}"><input type="checkbox" data-enable="${esc(b.id)}" ${b.enabled?'checked':''} aria-label="收集${esc(b.name)}"><div><button class="build-name" data-edit="${esc(b.id)}">${esc(b.name)}</button><div class="build-meta"><label><input type="radio" name="main-build" data-main="${esc(b.id)}" ${b.id===config.main_id?'checked':''}>主套路</label><button class="remove-build" data-remove="${esc(b.id)}" aria-label="移除${esc(b.name)}">×</button></div></div></div>`).join('');
-  if(!config.builds.length)$('builds').innerHTML='<p class="saved-empty">从模板载入副本，或导入自己的BD。编辑会自动保存在这里。</p>';
-  $('apply-builds').textContent=`应用所选BD（${selected.length}）`;
+  $('templates').innerHTML=templates.map(t=>{
+    const checked=state.selection.ids.includes(t.id);
+    return `<div class="template-card ${checked?'selected':''}"><label class="template-choice"><input type="checkbox" data-template-enable="${esc(t.id)}" ${checked?'checked':''} aria-label="选择模板：${esc(t.name)}"><strong>${esc(t.name)}</strong></label><small>官方模板 · 只读</small><label class="template-main"><input type="radio" name="template-main" data-template-main="${esc(t.id)}" ${checked&&t.id===state.selection.main_id?'checked':''} ${checked?'':'disabled'} aria-label="将${esc(t.name)}设为主BD">主BD</label></div>`;
+  }).join('');
+  $('builds').innerHTML=state.saves.map(s=>{
+    const members=s.config.builds.filter(b=>b.enabled),main=members.find(b=>b.id===s.config.main_id);
+    return `<div class="save-card ${s.id===state.active_save_id?'editing':''}"><button class="build-name" data-save="${esc(s.id)}" aria-pressed="${s.id===state.active_save_id}">${esc(s.name)}</button><small>${members.length}个BD${main?` · 主BD：${esc(main.name)}`:' · 尚未启用BD'}</small><div class="build-meta"><span>${s.id===state.active_save_id?'正在编辑':'点击继续编辑'}</span><button class="remove-build" data-remove-save="${esc(s.id)}" aria-label="删除方案：${esc(s.name)}">×</button></div></div>`;
+  }).join('')||'<p class="saved-empty">勾选模板不会产生保存。点击“应用所选BD”后，整个组合保存为一条方案。</p>';
+  $('apply-builds').textContent=`应用所选BD（${state.selection.ids.length}）`;
+  $('apply-builds').disabled=!state.selection.ids.length;
   const commonView=view==='common';
-  $('build-title').textContent=commonView?'共通规则':ready?build().name:'BD编辑工作台';
-  $('workspace-builds').hidden=!ready;$('workspace-controls').hidden=!ready;$('workspace-empty').hidden=ready||commonView;
-  $('workspace-builds').innerHTML=ready?selected.map(b=>`<button data-workspace-build="${esc(b.id)}" class="${b.id===activeId?'active':''}"><span class="dot ${b.id===config.main_id?'pink':'blue'}"></span>${esc(b.name)} · ${b.id===config.main_id?'主':'副'}套路</button>`).join(''):'';
-  $('workspace-message').textContent=selected.length?'选择待应用':'尚未选择BD';
+  $('build-title').textContent=commonView?'共通规则':saved?saved.name:'BD编辑工作台';
+  $('workspace-builds').hidden=!saved||!config.builds.length;$('workspace-controls').hidden=!ready;$('workspace-empty').hidden=ready||commonView;
+  $('workspace-builds').innerHTML=saved?config.builds.map(b=>`<div class="workspace-bd ${b.enabled&&b.id===activeId?'active':''}"><input type="checkbox" data-enable="${esc(b.id)}" ${b.enabled?'checked':''} aria-label="在方案中启用${esc(b.name)}"><button data-workspace-build="${esc(b.id)}" ${b.enabled?'':'disabled'}><span class="dot ${b.id===config.main_id?'pink':'blue'}"></span>${esc(b.name)}</button><label><input type="radio" name="scheme-main" data-main="${esc(b.id)}" ${b.enabled&&b.id===config.main_id?'checked':''} ${b.enabled?'':'disabled'} aria-label="将方案内${esc(b.name)}设为主BD">主BD</label><button class="remove-build" data-remove-build="${esc(b.id)}" aria-label="从方案移除${esc(b.name)}">×</button></div>`).join(''):'';
+  $('workspace-message').textContent=saved?'尚未启用BD':'尚未生成方案';
+  $('workspace-help').textContent=saved?'启用方案内的BD，或添加自定义BD。':'在左侧多选官方模板，指定主BD，再点击“应用所选BD”创建一份保存方案。';
+  $('scheme-toolbar').hidden=!saved||commonView;
+  $('current-build').textContent=ready?`正在编辑：${build().name}`:'';
+  $('rename-save').hidden=!saved||commonView;
   $('rename-build').hidden=!ready||commonView;
   $('reset-build').hidden=!ready||commonView||!templates.some(t=>t.id===(build()?.template_id||activeId));
   $('common-button').classList.toggle('active',commonView);
@@ -79,6 +107,10 @@ function render(){
   $('category-title').textContent=item[1];$('add-target').textContent=item[2];$('add-target').hidden=!item[2];
   $('export-xml').textContent='导出filter';
   renderTargets();renderSource();
+  if(view==='preview'){
+    if(generated)renderPreview();
+    else{$('preview-summary').textContent='方案已修改，请重新点击“预览规则”。';$('preview-rules').replaceChildren();}
+  }
 }
 function renderTargets(){
   const data=profile()[category];
@@ -149,13 +181,15 @@ function showGroupDialog(){
   $('group-dialog').showModal();
 }
 async function preview(){
-  if(!workbenchReady())return toast('请先勾选BD并点击“应用所选BD”。');
+  if(!workbenchReady())return toast('请先创建或打开包含已启用BD的保存方案。');
+  const request=++previewRequest,saveId=state.active_save_id;
   try{
+    generated=null;view='preview';render();$('preview-summary').textContent='正在生成规则…';
     $('preview-button').disabled=true;
     const snapshot=JSON.stringify(config),out=await api('/api/generate',{config});
-    if(!workbenchReady()||snapshot!==JSON.stringify(config))return;
-    generated=out;view='preview';render();renderPreview();
-  }catch(e){toast(e.message,true);}finally{$('preview-button').disabled=!workbenchReady();}
+    if(request!==previewRequest||state.active_save_id!==saveId||view!=='preview'||!workbenchReady()||snapshot!==JSON.stringify(config))return;
+    generated=out;render();
+  }catch(e){if(request===previewRequest){$('preview-summary').textContent='生成失败，请调整方案后重试。';toast(e.message,true);}}finally{if(request===previewRequest)$('preview-button').disabled=!workbenchReady();}
 }
 function renderPreview(){
   if(!generated)return;
@@ -176,27 +210,36 @@ async function analyzeImport(assignments){
   }catch(e){$('apply-import').disabled=true;toast(e.message,true);}
 }
 
-$('templates').onclick=e=>{
-  const button=e.target.closest('[data-template]');if(!button)return;
-  const result=workspace.useTemplate(config,templates,button.dataset.template);
-  activeId=result.build.id;selectionChanged();
-  toast(result.reused?'已恢复保存的副本。点击“应用所选BD”继续；需要新版默认值时可从模板重置。':'已建立独立副本，点击“应用所选BD”后编辑。');
+$('templates').onchange=e=>{
+  if(e.target.dataset.templateEnable)workspace.setTemplateEnabled(state,templates,e.target.dataset.templateEnable,e.target.checked);
+  if(e.target.dataset.templateMain)workspace.setTemplateMain(state,e.target.dataset.templateMain);
+  selectionChanged();
 };
 $('builds').addEventListener('click',e=>{
-  const edit=e.target.closest('[data-edit]');if(edit){if(!workbenchReady()||!config.builds.find(b=>b.id===edit.dataset.edit)?.enabled)return toast('请先勾选该BD并点击“应用所选BD”。');activeId=edit.dataset.edit;view='editor';render();return;}
-  const remove=e.target.closest('[data-remove]');if(remove){config.builds=config.builds.filter(b=>b.id!==remove.dataset.remove);if(config.main_id===remove.dataset.remove)config.main_id=config.builds.find(b=>b.enabled)?.id;selectionChanged();}
+  const edit=e.target.closest('[data-save]');if(edit){openSave(workspace.activateSave(state,edit.dataset.save));return;}
+  const remove=e.target.closest('[data-remove-save]');if(remove){workspace.removeSave(state,remove.dataset.removeSave);activeId=currentSave()?.active_build_id;view='editor';save();render();}
 });
-$('builds').addEventListener('change',e=>{
+$('apply-builds').onclick=()=>{
+  try{const saved=workspace.applyTemplates(state,templates,crypto.randomUUID());openSave(saved);toast(`已将${saved.config.builds.length}个BD合成一条保存方案，可继续编辑并导出filter。`);}catch(e){toast(e.message,true);}
+};
+$('workspace-builds').addEventListener('change',e=>{
   if(e.target.dataset.enable){const b=config.builds.find(b=>b.id===e.target.dataset.enable);b.enabled=e.target.checked;if(!config.builds.find(b=>b.id===config.main_id)?.enabled)config.main_id=config.builds.find(b=>b.enabled)?.id;}
-  if(e.target.dataset.main){config.main_id=e.target.dataset.main;config.builds.find(b=>b.id===config.main_id).enabled=true;}
-  selectionChanged();
+  if(e.target.dataset.main)config.main_id=e.target.dataset.main;
+  save();render();
 });
-$('apply-builds').onclick=()=>{selectionApplied=true;if(!config.builds.find(b=>b.id===config.main_id)?.enabled)config.main_id=config.builds.find(b=>b.enabled)?.id;activeId=config.main_id;view='editor';save();render();};
-$('workspace-builds').onclick=e=>{const b=e.target.closest('[data-workspace-build]');if(b){activeId=b.dataset.workspaceBuild;view='editor';render();}};
-$('add-build').onclick=()=>{const b={id:crypto.randomUUID(),name:`新BD ${config.builds.length+1}`,enabled:true,profiles:{endgame:emptyProfile(),leveling:emptyLeveling()}};config.builds.push(b);activeId=b.id;selectionChanged();};
+$('workspace-builds').onclick=e=>{
+  const b=e.target.closest('[data-workspace-build]');if(b){activeId=b.dataset.workspaceBuild;view='editor';save(false);render();return;}
+  const remove=e.target.closest('[data-remove-build]');if(remove){config.builds=config.builds.filter(b=>b.id!==remove.dataset.removeBuild);if(config.main_id===remove.dataset.removeBuild)config.main_id=config.builds.find(b=>b.enabled)?.id;save();render();}
+};
+$('add-save').onclick=()=>{const saved=workspace.addSave(state,workspace.emptyConfig(config),crypto.randomUUID(),'自定义方案');config=saved.config;addCustomBuild();};
+$('add-build').onclick=addCustomBuild;
+$('rename-save').onclick=()=>{
+  const saved=currentSave(),input=document.createElement('input');input.type='text';input.value=saved.name;input.setAttribute('aria-label','方案名称');$('build-title').replaceChildren(input);input.focus();input.select();
+  input.onblur=()=>{saved.name=input.value.trim()||'未命名方案';save();render();};input.onkeydown=e=>{if(e.key==='Enter')input.blur();};
+};
 $('rename-build').onclick=()=>{
-  const input=document.createElement('input');input.type='text';input.value=build().name;input.setAttribute('aria-label','BD名称');$('build-title').replaceChildren(input);input.focus();
-  const done=()=>{build().name=input.value.trim()||'未命名BD';save();render();};input.onblur=done;input.onkeydown=e=>{if(e.key==='Enter')input.blur();};
+  const b=build(),input=document.createElement('input');input.type='text';input.value=b.name;input.setAttribute('aria-label','BD名称');$('current-build').replaceChildren(input);input.focus();input.select();
+  input.onblur=()=>{b.name=input.value.trim()||'未命名BD';save();render();};input.onkeydown=e=>{if(e.key==='Enter')input.blur();};
 };
 $('reset-build').onclick=()=>{$('reset-name').textContent=build().name;$('reset-dialog').showModal();};
 $('confirm-reset').onclick=()=>{
@@ -231,15 +274,15 @@ $('apply-import').onclick=async()=>{
   await analyzeImport(assignments);if($('apply-import').disabled)return;
   const id=crypto.randomUUID(),stage=$('import-mode').value;
   const b={id,name:imported.name,enabled:true,profiles:{endgame:emptyProfile(),leveling:emptyLeveling()},source:{name:$('xml-file').files[0]?.name||'粘贴XML',sha256:imported.source_sha256,warnings:imported.warnings,rules:imported.rules}};
-  b.profiles[stage]=copy(stage==='leveling'?imported.leveling_profile:imported.profile);config.builds.push(b);activeId=id;mode=stage;category=categories()[0][0];selectionChanged();$('import-dialog').close();toast('已提取目标，点击“应用所选BD”后核对修改。');
+  ensureSave(imported.name);b.profiles[stage]=copy(stage==='leveling'?imported.leveling_profile:imported.profile);config.builds.push(b);if(!config.builds.some(b=>b.enabled&&b.id===config.main_id))config.main_id=id;activeId=id;mode=stage;category=categories()[0][0];view='editor';save();render();$('import-dialog').close();toast('已将新BD加入当前保存方案，请核对目标后导出。');
 };
-$('extra-t7').onchange=e=>{config.extra_t7=e.target.checked;save();};
+$('extra-t7').onchange=e=>{config.extra_t7=e.target.checked;save();render();};
 $('preview-button').onclick=preview;$('preview-search').oninput=renderPreview;
 $('export-xml').onclick=async()=>{
-  if(!workbenchReady())return toast('请先勾选BD并点击“应用所选BD”。');
+  if(!workbenchReady())return toast('请先创建或打开包含已启用BD的保存方案。');
   try{const out=await api('/api/generate',{config});await download(out.xml,'LE-filter.xml');toast(`已导出${out.count}条规则，包含终局和练级目标。${out.warnings.join(' ')}`);}catch(e){toast(e.message,true);}
 };
-$('save-config').onclick=async()=>{try{await download(JSON.stringify(config,null,2),'LE-filter-targets.json');}catch(e){toast(e.message,true);}};
+$('save-config').onclick=async()=>{try{await download(JSON.stringify(state,null,2),'LE-filter-workspaces.json');toast('已备份全部保存方案及各方案的主BD、两阶段目标和共通规则。');}catch(e){toast(e.message,true);}};
 $('save-requirements').onclick=async()=>{
   try{const document=await api('/api/requirements/export',{build:build(),stage:mode});await download(JSON.stringify(document,null,2),'LE-filter-requirements.json');toast(`已保存本BD的${mode==='endgame'?'终局':'练级'}需求。`);}catch(e){toast(e.message,true);}
 };
@@ -248,28 +291,37 @@ $('requirements-file').onchange=async e=>{
   try{
     const file=e.target.files[0];if(!file)return;
     const data=await api('/api/requirements/import',{document:JSON.parse(await file.text())});
+    ensureSave(data.name);
     const b=workspace.importRequirement(config,templates,data);
-    activeId=b.id;mode=data.stage;category=categories()[0][0];selectionChanged();toast('已载入BD需求，勾选该BD并点击“应用所选BD”后编辑。');
+    activeId=b.id;mode=data.stage;category=categories()[0][0];view='editor';save();render();toast('已更新当前保存方案中的BD需求，另一阶段及主BD设置保留。');
   }catch(e){toast(e.message,true);}finally{e.target.value='';}
 };
 $('load-config').onclick=()=>$('config-file').click();
 $('config-file').onchange=async e=>{
-  try{const file=e.target.files[0];if(!file)return;const loaded=JSON.parse(await file.text());config=workspace.restore(examples,(await api('/api/validate',{config:loaded})).config);activeId=config.main_id;selectionChanged();toast('已载入我的保存，点击“应用所选BD”载入工作台。');}catch(e){toast(e.message,true);}finally{e.target.value='';}
+  try{
+    const file=e.target.files[0];if(!file)return;
+    const loaded=await validateState(workspace.restore(examples,JSON.parse(await file.text())));
+    if(!loaded.saves.length){state.draft_config=loaded.draft_config;state.selection=loaded.selection;save();render();toast('文件没有保存方案，已载入模板选择及共通规则草稿。');return;}
+    openSave(workspace.mergeSaves(state,loaded,()=>crypto.randomUUID()));toast(`已加入${loaded.saves.length}条保存方案，已有保存保留。`);
+  }catch(e){toast(e.message,true);}finally{e.target.value='';}
 };
 $('load-examples').onclick=()=>{
-  config.builds.forEach(b=>b.enabled=false);
-  const defaults=templates.filter(t=>t.enabled).map(t=>workspace.useTemplate(config,templates,t.id).build);
-  config.main_id=defaults.find(b=>b.template_id===examples.main_id)?.id||defaults[0]?.id;
-  activeId=config.main_id;category='uniques';mode='endgame';selectionChanged();toast('已选择默认组合，保存的修改已保留。点击“应用所选BD”继续。');
+  workspace.selectDefaults(state,examples);selectionChanged();toast('已勾选默认模板组合。点击“应用所选BD”创建新方案。');
 };
+async function validateState(loaded){
+  loaded.draft_config=(await api('/api/validate',{config:loaded.draft_config})).config;
+  for(const saved of loaded.saves)saved.config=(await api('/api/validate',{config:saved.config})).config;
+  return loaded;
+}
 async function init(){
   try{
     if(globalThis.LEFilterAPI){document.querySelector('.layout').inert=true;document.querySelector('.top-actions').inert=true;$('save-state').textContent='首次加载，请稍候…';}
     const boot=await api('/api/bootstrap');catalog=boot.catalog;examples=boot.config;templates=workspace.library(examples);
-    try{config=JSON.parse(localStorage.getItem(STORAGE));}catch{}
-    if(!config||config.version!==1||!Array.isArray(config.builds))config=null;
-    config=(await api('/api/validate',{config:workspace.restore(examples,config)})).config;save();
-    activeId=config.main_id;$('catalog-version').textContent=catalog.version;render();
+    let saved;
+    let stored;try{stored=localStorage.getItem(STORAGE)??localStorage.getItem(LEGACY_STORAGE);}catch{}
+    if(stored)saved=JSON.parse(stored);
+    state=await validateState(workspace.restore(examples,saved));config=currentSave()?.config||state.draft_config;
+    activeId=currentSave()?.active_build_id||config.main_id;$('catalog-version').textContent=catalog.version;render();save();
     document.querySelector('.layout').inert=false;document.querySelector('.top-actions').inert=false;
   }catch(e){toast(`无法启动：${e.message}`,true);}
 }

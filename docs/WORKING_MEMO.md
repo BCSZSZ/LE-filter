@@ -2,7 +2,16 @@
 
 更新时间：2026-10-11，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
-## 最新实现：官方模板／我的保存与共通神像、Allie祭坛
+## 最新实现：多选模板与一条组合保存方案
+
+- 官方模板多选及唯一主BD只保存选择草稿，不创建个人副本；点击“应用所选BD”才将全部选择复制为一条保存方案。再次应用创建新方案，旧编辑保留；打开已有记录直接恢复工作台。各方案含独立的config、两阶段目标、来源、共通设置和主BD，成员仍按BD计分，不混成全局目标池。
+- 工作台可启用多个成员、调整主BD、切换编辑，支持方案和BD分别改名、自定义成员及明确重置单个BD。模板草稿改选不影响当前方案。预览结果按方案和请求核对，异步计算完成时不覆盖已经切换的编辑页或方案。
+- 新存储键le-filter-workbench-v2，首次保存列表为空；旧v1配置整体迁入一条方案，保留全部停用成员及旧练级记录，原v1键保留。整套备份format=le-filter-workspaces、version=2，载入追加完整方案；生成器config与单BD需求仍version=1，同id需求导入只更新当前方案的一阶段。
+- 39项Python检查及其中13项Node状态回归通过。实际静态Pyodide网页验证：两模板勾选0保存→应用1保存→再次应用2保存；编辑与刷新保留、主BD独立调整、共通设置隔离、旧v1载入只追加1条方案、同id终局导入保留练级502、v2备份追加2条完整组合。Allie＋835以任一BD为主均188／182，默认Strict135／129、Allie114／108；引擎、目标、来源、模板、脚本和历史XML共53文件保持上一版字节。记录见[组合方案验证](../analysis/combined-workspace-validation.json)。
+
+## 此前实现：官方模板／我的保存与共通神像、Allie祭坛
+
+以下逐BD副本交互已被上面的组合保存流程替代；共通神像与Allie祭坛规则沿用。
 
 - 左侧并排只读模板和个人保存。模板来自bootstrap，经workbench.js深复制与冻结；编辑器只访问config.builds中的独立副本。旧v1配置迁入保存，保留两阶段、来源、名字及选择；新用户只建立默认启用的Strict副本，攻略模板按需载入。本地server与静态网页使用同一四模板bootstrap。
 - 重复载入恢复已保存副本，不覆盖目标；默认组合只改选择。明确从模板重置并确认后，才替换当前副本的两阶段目标，名称、勾选和主身份保留。需求JSON同id只更新个人保存的对应阶段，模板不受影响。整套JSON备份个人副本和common选项，单BD格式不变。

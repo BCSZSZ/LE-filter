@@ -13,9 +13,9 @@
   <aside>
     <div class="library-columns">
       <section aria-label="官方模板"><div class="aside-heading"><span>官方模板</span><small>只读</small></div><div id="templates"></div></section>
-      <section aria-label="我的保存"><div class="aside-heading"><span>我的保存</span><button id="add-build" aria-label="新增BD">＋</button></div><div id="builds"></div></section>
+      <section aria-label="我的保存"><div class="aside-heading"><span>我的保存</span><button id="add-save" aria-label="新增自定义方案">＋</button></div><div id="builds"></div></section>
     </div>
-    <p class="library-note">从模板载入副本，再勾选收集。工作台编辑自动保存到“我的保存”。</p>
+    <p class="library-note">多选官方模板并指定主BD。点击应用后，整个组合加入“我的保存”，编辑自动保存。</p>
     <button id="apply-builds" class="wide primary">应用所选BD</button>
     <button id="import-filter" class="wide dashed">＋ 导入filter</button>
     <button id="import-requirements" class="wide dashed">＋ 导入BD需求JSON</button>
@@ -25,12 +25,13 @@
     <div class="sidebar-bottom"><span class="online-dot"></span>离线词库 <span id="catalog-version"></span></div>
   </aside>
   <main>
-    <div class="main-heading"><div><p class="eyebrow">BUILD TARGETS</p><h1 id="build-title">目标配置</h1></div><div class="heading-actions"><button id="common-button">共通规则</button><button id="reset-build" hidden>从模板重置</button><button id="rename-build">重命名</button></div></div>
-    <nav id="workspace-builds" class="category-tabs" aria-label="工作台BD" hidden></nav>
-    <section id="workspace-empty" class="panel empty"><strong id="workspace-message"></strong><p>在左侧勾选BD，再点击“应用所选BD”载入编辑工作台。</p></section>
+    <div class="main-heading"><div><p class="eyebrow">SAVED SCHEME</p><h1 id="build-title">目标配置</h1></div><div class="heading-actions"><button id="common-button">共通规则</button><button id="rename-save" hidden>重命名方案</button></div></div>
+    <nav id="workspace-builds" class="scheme-members" aria-label="方案内BD" hidden></nav>
+    <div id="scheme-toolbar" class="scheme-toolbar" hidden><span id="current-build"></span><div><button id="add-build">添加BD</button><button id="reset-build" hidden>从模板重置BD</button><button id="rename-build" hidden>重命名BD</button></div></div>
+    <section id="workspace-empty" class="panel empty"><strong id="workspace-message"></strong><p id="workspace-help">在左侧多选官方模板，指定主BD，再点击“应用所选BD”创建一份保存方案。</p></section>
     <div id="workspace-controls" class="workspace-bar" hidden><div class="segmented"><button data-mode="endgame" class="active">终局目标</button><button data-mode="leveling">练级目标</button></div><div class="view-tabs"><button data-view="editor" class="active">填写目标</button><button data-view="preview">规则预览</button></div></div>
     <section id="common-rules" class="panel" hidden>
-      <div class="panel-heading"><div><h2>共通显示规则</h2><p class="muted">独立于BD模板，随整套配置保存。</p></div></div>
+      <div class="panel-heading"><div><h2>共通显示规则</h2><p class="muted">随当前保存方案保存；创建新方案时沿用当前共通设置。</p></div></div>
       <div class="target-row"><div class="row-heading"><label><input id="common-idols-enabled" type="checkbox">显示暗金神像</label><button id="pick-common-idols">选择暗金神像</button></div><div id="common-idol-targets" class="chips"></div><p class="reference">默认收集全部暗金神像。这里调整共通收集；BD明确需要的神像仍会保留。</p></div>
       <div class="target-row"><div class="row-heading"><strong>先驱者之针 · 独立常驻规则</strong><span class="id-tag">344</span></div><p class="muted">始终显示，不随暗金神像选择或角色等级关闭。</p></div>
     </section>
