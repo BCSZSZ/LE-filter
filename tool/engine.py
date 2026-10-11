@@ -22,6 +22,7 @@ BASE_ROOT = frozen(MANIFEST)
 BASE = dict(zip(MANIFEST["source_rule_order"], sorted(BASE_ROOT.find("rules"), key=lambda r: int(r.findtext("Order")))))
 FAMILIES = {"planner": "uniques", "tier7": "equipment", "idol_single": "idols", "idol_bis": "idols",
             "altar": "altars", "rare_base": "bases", "crafting_base": "bases"}
+MULTI_T7_CATEGORIES = {"BD双目标T7", "双T7含BD目标", "任意双T7", "任意至少三T7"}
 
 
 def empty_profile():
@@ -289,6 +290,8 @@ def generate(config, mode="endgame"):
                 r = add(template, category, alert, b, g, count, None if template == 62 else 7, 1 if template == 62 else 0)
                 if template == 62:
                     set_affix(r, full, 1, 7)
+                    set_level(r, 0, 84)
+                    r.find("nameOverride").text += " · 85级退出"
                 elif category == "双T7含BD目标":
                     r.find("conditions").append(deepcopy(condition(BASE[48], "AffixCondition")))
                     set_affix(r, full, 2, 7, 1)
@@ -445,7 +448,8 @@ def generate(config, mode="endgame"):
     set_affix(base[37], full, 1, 8, op="MORE_OR_EQUAL")
     set_affix(base[60], full, 1, 7)
     base[60].find("isEnabled").text = str(config.get("extra_t7", True)).lower()
-    base[60].find("nameOverride").text = "[额外单T7阶段：手动关闭]"
+    set_level(base[60], 0, 84)
+    base[60].find("nameOverride").text = "[额外单T7阶段：85级退出，可提前关闭]"
     for n in range(84, 89):
         base[n].find("isEnabled").text = str(bool(equipment_targets & {i for pool in inspect_rule(base[n])["affix_pools"] for i in pool})).lower()
     # Experimentals and T8 precede the silent optional single-T7 fallback.
@@ -479,17 +483,20 @@ def generate(config, mode="endgame"):
         if tier:
             if row["owners"]:
                 color, beam = ("8", "11") if row["role"] == "主" else ("12", "15")
+            if row["category"] in MULTI_T7_CATEGORIES:
+                color, beam = "4", "6"
             for field, value in {"recolor": "true", "color": color, "BeamColorOverride": beam, "emphasized": str(tier >= 3).lower()}.items():
                 r.find(field).text = value
         facts = inspect_rule(r)
         rows.append({**row, "number": i + 1, "name": facts["name"] or ("显示传奇" if row["source_raxx_rule"] == 8 else "最终隐藏"),
                      "sound": sound_name, "enabled": facts["enabled"], "types": facts["types"],
+                     "color": r.findtext("color") if r.findtext("recolor") == "true" else None,
                      "bases": facts["subtypes"], "uniques": facts["unique_ids"], "affixes": facts["affix_pools"], "gate": gate_text(facts), "action": facts["action"]})
         rules.append(r)
     root = deepcopy(BASE_ROOT)
     root.find("rules")[:] = list(reversed(rules))
     root.find("name").text = "LE Filter - " + " + ".join(b["name"] for b in builds)
-    root.find("description").text = "Raxx base; main pink, secondary blue, shared main. Only exact T7 counts. Idols exclude enchantments and corruption."
+    root.find("description").text = "Raxx base; multiple T7 gold, other BD cues main pink/secondary blue. Non-target single T7 exits at level 85. Only exact T7 counts. Idols exclude enchantments and corruption."
     ET.indent(root, space="  ")
     xml = ET.tostring(root, encoding="unicode", xml_declaration=True) + "\n"
     return {"xml": xml, "rules": rows, "count": len(rows), "enabled": sum(r["enabled"] for r in rows),

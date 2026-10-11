@@ -1,6 +1,13 @@
 # 后续工作 memo
 
-更新时间：2026-10-08，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+更新时间：2026-10-11，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+
+## 最新玩家反馈：厚实编织者、85级退出与双T7金色
+
+- Allie终局需求增加厚实编织者底材IDOL_1x2:1／普通词缀876（Chance to Ignite on Hit and Fire Penetration with Ignite），与厚实拉贡0／139分组收集；一项即可提示，不强制抗性后缀。builder记录2026-10-11玩家补充于source.user_adjustments，重建后保持可追溯。共5神像组；原攻略快照、旧Strict及练级需求保持原字节。已有浏览器目标通过新版同id终局JSON导入更新。
+- “非目标T7＋低阶BD目标”全体部位规则增加角色等级0–84；额外单T7储备同样85级退出，避免被通用兜底继续显示。储备仍可提前关闭。目标单T7、任意双／多T7、T8及其他通用保护保留原适用范围。
+- 双目标T7、双T7含BD目标、任意双T7、至少三T7的名称与光柱统一金色4／6；原声音、地图图标、光柱大小及优先级保留。其他BD提示仍主粉副蓝。预览读取实际XML颜色并显示金色，退出规则显示等级边界。
+- 当前Allie单独111／105启用、与835合用185／179，默认旧Strict两BD仍133／127。35项测试通过；实际Pyodide网页显示厚实编织者876、双T7金色与全部23条过渡规则0–84级门槛，记录见[玩家反馈验证](../analysis/playtest-adjustments-validation.json)。以下110／184及主副双T7、手动关闭且无自动退出的描述属于旧快照。有限XML匹配及网页验证不等于游戏客户端实测。
 
 ## 最新展示：神像底材明确区分
 

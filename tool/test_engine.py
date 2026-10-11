@@ -75,19 +75,19 @@ class ToolTests(unittest.TestCase):
 
     def test_equipment_priority_and_t8(self):
         cases = [
-            ("HELMET", {503:7, 1:7, 17:7}, 4, "任意至少三T7"),
-            ("HELMET", {503:7, 1:7}, 2, "任意双T7"),
-            ("HELMET", {34:7, 503:7}, 3, "双T7含BD目标"),
-            ("BOOTS", {676:7, 679:7}, 3, "BD双目标T7"),
-            ("HELMET", {34:7}, 2, "BD目标单T7"),
-            ("HELMET", {34:4, 503:7}, 1, "非目标T7＋BD目标"),
-            ("HELMET", {1156:7}, 0, "Raxx通用"),
-            ("HELMET", {503:8}, 1, "Raxx通用"),
-            ("HELMET", {503:8, 34:7}, 2, "BD目标单T7"),
-            ("HELMET", {503:8, 1:7, 17:7}, 2, "任意双T7"),
-            ("HELMET", {718:7}, 0, "Raxx通用")]
-        for typ, affixes, tier, category in cases:
-            row = first(self.output, typ, affixes)
+            ("HELMET", {503:7, 1:7, 17:7}, 4, "任意至少三T7", 100),
+            ("HELMET", {503:7, 1:7}, 2, "任意双T7", 100),
+            ("HELMET", {34:7, 503:7}, 3, "双T7含BD目标", 100),
+            ("BOOTS", {676:7, 679:7}, 3, "BD双目标T7", 100),
+            ("HELMET", {34:7}, 2, "BD目标单T7", 100),
+            ("HELMET", {34:4, 503:7}, 1, "非目标T7＋BD目标", 84),
+            ("HELMET", {1156:7}, 0, "Raxx通用", 84),
+            ("HELMET", {503:8}, 1, "Raxx通用", 100),
+            ("HELMET", {503:8, 34:7}, 2, "BD目标单T7", 100),
+            ("HELMET", {503:8, 1:7, 17:7}, 2, "任意双T7", 100),
+            ("HELMET", {718:7}, 0, "Raxx通用", 84)]
+        for typ, affixes, tier, category, level in cases:
+            row = first(self.output, typ, affixes, level=level)
             self.assertEqual((row["tier"], row["category"]), (tier, category), (typ, affixes, row))
         boots = [r for r in self.output["rules"] if r["category"] == "BD双目标T7" and r["types"] == ["BOOTS"] and r["role"] == "副"]
         self.assertEqual(len(boots), 1)
@@ -100,6 +100,54 @@ class ToolTests(unittest.TestCase):
             self.assertEqual(row["tier"], tier)
             self.assertTrue(row["category"].startswith("神像"))
         self.assertEqual(first(self.output,"IDOL_2x1",{862:1},base=1,rarity="RARE")["tier"],2)
+
+    def test_non_target_single_t7_exits_at_85(self):
+        for extra_t7 in (False, True):
+            config = deepcopy(self.config)
+            config["extra_t7"] = extra_t7
+            out = e.generate(config)
+            for affixes in ({34: 4, 503: 7}, {406: 4, 503: 7}):
+                self.assertEqual(first(out, "HELMET", affixes, level=84)["category"], "非目标T7＋BD目标")
+                for level in (85, 100):
+                    self.assertEqual(first(out, "HELMET", affixes, level=level)["action"], "HIDE")
+            self.assertEqual(first(out, "HELMET", {1156: 7}, level=84)["action"], "SHOW" if extra_t7 else "HIDE")
+            for level in (85, 100):
+                self.assertEqual(first(out, "HELMET", {1156: 7}, level=level)["action"], "HIDE")
+                for aid in (34, 406):
+                    self.assertEqual(first(out, "HELMET", {aid: 7}, level=level)["category"], "BD目标单T7")
+                self.assertEqual(first(out, "HELMET", {503: 7, 17: 7}, level=level)["category"], "任意双T7")
+                self.assertEqual(first(out, "HELMET", {503: 8}, level=level)["tier"], 1)
+
+    def test_multiple_t7_labels_and_beams_are_gold(self):
+        cases = [
+            ("ONE_HANDED_AXE", {2: 7, 718: 7}, "BD双目标T7"),
+            ("BOOTS", {676: 7, 679: 7}, "BD双目标T7"),
+            ("HELMET", {34: 7, 503: 7}, "双T7含BD目标"),
+            ("HELMET", {406: 7, 503: 7}, "双T7含BD目标"),
+            ("BELT", {52: 7, 503: 7}, "双T7含BD目标"),
+            ("HELMET", {503: 7, 17: 7}, "任意双T7"),
+            ("HELMET", {34: 7, 503: 7, 17: 7}, "任意至少三T7"),
+            ("HELMET", {503: 7, 17: 7, 1: 7, 45: 7}, "任意至少三T7"),
+        ]
+        for main_id in ("flay-mana-lich", "skeleton-necromancer"):
+            config = deepcopy(self.config)
+            config["main_id"] = main_id
+            out = e.generate(config)
+            nodes = parsed(out)
+            for typ, affixes, category in cases:
+                row = first(out, typ, affixes)
+                self.assertEqual(row["category"], category)
+                node = nodes[row["number"] - 1]
+                self.assertEqual((node.findtext("recolor"), node.findtext("color"), node.findtext("BeamColorOverride")),
+                                 ("true", "4", "6"), (main_id, row))
+                self.assertEqual(node.findtext("SoundId"), e.ALERTS[row["tier"]][1])
+            for aid, role in ((34, "主" if main_id == "flay-mana-lich" else "副"),
+                              (406, "主" if main_id == "skeleton-necromancer" else "副")):
+                row = first(out, "HELMET", {aid: 7, 503: 8})
+                self.assertEqual(row["category"], "BD目标单T7")
+                node = nodes[row["number"] - 1]
+                self.assertEqual((node.findtext("color"), node.findtext("BeamColorOverride")),
+                                 ("8", "11") if role == "主" else ("12", "15"))
 
     def test_persistent_common_resistance_idols(self):
         out = e.generate(self.leveling_config(()))

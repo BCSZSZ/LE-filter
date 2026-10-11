@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-11",
+  "timezone": "Asia/Tokyo",
+  "baseline_commit": "aa0ee7050b143010653d4bf1a24caf32f08d23ce",
+  "tests": {
+    "command": "python -X utf8 -m unittest discover -s tool -v",
+    "count": 35,
+    "passed": true,
+    "regressions": [
+      "Allie stout Weaver base 1 / affix 876",
+      "Both non-target single T7 paths exit at 85",
+      "All double/triple/quadruple T7 labels and beams gold across main/secondary roles"
+    ]
+  },
+  "native_outputs": [
+    {
+      "builds": [
+        "flay-mana-lich",
+        "skeleton-necromancer"
+      ],
+      "main_id": "flay-mana-lich",
+      "count": 133,
+      "enabled": 127,
+      "xml_sha256": "b264d0b9a8698ea6886924934607c6adc4f38ad15c5889e59b3a12dce7f43f06"
+    },
+    {
+      "builds": [
+        "flay-lich-allie-guide"
+      ],
+      "main_id": "flay-lich-allie-guide",
+      "count": 111,
+      "enabled": 105,
+      "xml_sha256": "2467f2390f18fac820dc7352c022cd6078ba8d32013e90320c0a2841086b8b09"
+    },
+    {
+      "builds": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide"
+      ],
+      "main_id": "flay-lich-allie-guide",
+      "count": 185,
+      "enabled": 179,
+      "xml_sha256": "1ac173a1261aae4024182839cab2fef21f3f440570c4d778707952dcbc2ffb57"
+    }
+  ],
+  "browser": {
+    "url": "http://127.0.0.1:8765/",
+    "runtime": "Pyodide 314.0.7",
+    "allie_idol_editor_shows_stout_weaver_876": true,
+    "allie_preview_count": 111,
+    "allie_preview_enabled": 105,
+    "allie_double_t7_preview_rows_gold": 11,
+    "allie_835_preview_count": 185,
+    "allie_835_preview_enabled": 179,
+    "allie_835_non_target_t7_rules": 23,
+    "all_have_level_0_to_84": true
+  },
+  "preserved_sha256": {
+    "sources/builds/letools-allie-flay-extracted.json": "0aa01939bd5cb4a672baafef58737b942543f7a57f72af4ea9bc5e8ee2c5cf88",
+    "sources/builds/maxroll-flay-mana-lich-strict.xml": "4e70c8b9111a28ae257aea7b561d931ac99629a6054646ce18a3ce5e3458995c",
+    "requirements/flay-lich-allie-guide.leveling.json": "71c601489ef6b3716ece19b2f45892221467150135f57a795e170537a42be3c6",
+    "templates/LE-base-v1.xml": "725e8ce0dc642f0e0bd60ae50f3b9c168b775ecee96fcf1064f1a39c3caae4d4",
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml": "ddfb6889366162de32eaf4a9dbd050f23496a1d902189cff340b5ec444da6ec9"
+  },
+  "limits": {
+    "bounded_xml_matching_only": true,
+    "game_client_tested": false,
+    "in_app_browser_generated_file_download_verified": false,
+    "existing_browser_targets_updated_only_by_requirement_import": true
+  }
+}

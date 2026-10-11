@@ -21,7 +21,7 @@ class RequirementTests(unittest.TestCase):
     def test_allie_guide_targets_and_roundtrip(self):
         endgame, leveling = build_allie_documents()
         self.assertEqual({k: len(v) for k, v in endgame["targets"].items()},
-                         {"uniques": 17, "equipment": 10, "altars": 0, "idols": 4, "bases": 8})
+                         {"uniques": 17, "equipment": 10, "altars": 0, "idols": 5, "bases": 8})
         self.assertEqual(sum(len(g["bases"]) + len(g["preferred_bases"]) for g in endgame["targets"]["bases"]), 28)
         base_groups = {g["type"]: g for g in endgame["targets"]["bases"]}
         self.assertEqual({t: g["preferred_bases"] for t, g in base_groups.items()},
@@ -33,9 +33,10 @@ class RequirementTests(unittest.TestCase):
         self.assertEqual(groups["ONE_HANDED_DAGGER"]["affixes"], [943, 2, 718, 724])
         self.assertNotIn(502, groups["BELT"]["affixes"])
         self.assertEqual(groups["BOOTS"]["affixes"], [502, 97, 505, 36, 715])
-        self.assertEqual(endgame["targets"]["idols"][2]["affixes"], [843, 854, 842, 856])
-        self.assertEqual(endgame["targets"]["idols"][2]["corrupted"], [1069])
-        self.assertEqual(endgame["targets"]["idols"][3],
+        idol_groups = {(g["type"], tuple(g["bases"])): g for g in endgame["targets"]["idols"]}
+        self.assertEqual(idol_groups["IDOL_1x1_LAGON", (1,)]["affixes"], [843, 854, 842, 856])
+        self.assertEqual(idol_groups["IDOL_1x1_LAGON", (1,)]["corrupted"], [1069])
+        self.assertEqual(idol_groups["IDOL_1x1_ETERRA", (2,)],
                          {"type": "IDOL_1x1_ETERRA", "bases": [2], "affixes": [835, 837]})
         self.assertTrue({132, 253, 277, 353, 413, 469, 477} <= set(endgame["targets"]["uniques"]))
         self.assertIn(75, groups["BELT"]["affixes"])
@@ -60,6 +61,21 @@ class RequirementTests(unittest.TestCase):
         self.assertEqual(first(result, "ONE_HANDED_AXE", {943: 7, 724: 7})["category"], "BD双目标T7")
         self.assertEqual(first(result, "IDOL_1x2", {139: 1}, base=0, rarity="RARE")["tier"], 2)
         self.assertEqual(first(result, "IDOL_1x1_LAGON", {843: 1, 854: 1}, base=1, rarity="RARE")["tier"], 3)
+
+    def test_allie_stout_weaver_ignite_target(self):
+        endgame, _ = build_allie_documents()
+        stout = [g for g in endgame["targets"]["idols"] if g["type"] == "IDOL_1x2"]
+        self.assertEqual(stout, [{"type": "IDOL_1x2", "bases": [0], "affixes": [139]},
+                                 {"type": "IDOL_1x2", "bases": [1], "affixes": [876]}])
+        build = as_build(endgame)
+        output = e.generate({"version": 1, "main_id": build["id"], "extra_t7": True, "builds": [build]})
+        row = first(output, "IDOL_1x2", {876: 1}, base=1, rarity="RARE", corrupted=True)
+        self.assertEqual((row["category"], row["tier"]), ("神像一普通目标", 2))
+        self.assertEqual(row["affixes"], [[876]])
+        self.assertEqual(row["bases"], [1])
+        for base, affix in ((0, 876), (1, 139)):
+            self.assertEqual(first(output, "IDOL_1x2", {affix: 1}, base=base, rarity="RARE",
+                                   categories={"神像一普通目标"})["action"], "HIDE")
 
     def test_filter_roundtrip_without_strategy(self):
         for build in e.bootstrap()["config"]["builds"]:
@@ -92,8 +108,8 @@ class RequirementTests(unittest.TestCase):
     def test_preferred_base_rule_counts_and_no_inferred_priority(self):
         from browser_runtime import browser_bootstrap
         config = deepcopy(browser_bootstrap()["config"])
-        for selected, main, expected in [({"flay-lich-allie-guide"}, "flay-lich-allie-guide", 110),
-                ({"flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835"}, "flay-lich-allie-guide", 184),
+        for selected, main, expected in [({"flay-lich-allie-guide"}, "flay-lich-allie-guide", 111),
+                ({"flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835"}, "flay-lich-allie-guide", 185),
                 ({"flay-mana-lich", "skeleton-necromancer"}, "flay-mana-lich", 133)]:
             for build in config["builds"]:
                 build["enabled"] = build["id"] in selected
@@ -106,7 +122,7 @@ class RequirementTests(unittest.TestCase):
             self.assertFalse(any(r["types"][0] in {"GLOVES", "BELT", "AMULET"} for r in preferred))
         for build in config["builds"]:
             build["enabled"] = True
-        with self.assertRaisesRegex(ValueError, "275条规则，超过200"):
+        with self.assertRaisesRegex(ValueError, "276条规则，超过200"):
             e.generate(config)
 
     def test_explicit_unrestricted_idol_pair_roundtrip(self):

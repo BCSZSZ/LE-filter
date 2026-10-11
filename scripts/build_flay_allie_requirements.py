@@ -51,6 +51,9 @@ def build_documents():
     for row in facts["idols"]:
         item = row["items"][0]
         targets["idols"].append(group(item["type"], row["affixes"], [item["id"]]))
+    # Explicit player addition; preserve the frozen guide and the independent Strict targets.
+    user_idol = group("IDOL_1x2", [{"id": 876}], [1])
+    targets["idols"].insert(1, user_idol)
     source = {"name": facts["title"], "url": facts["url"], "updated": facts["source_updated"],
               "extracted_on": facts["extracted_on"], "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
               "scope": "Flay装备／神像推荐表与正文明确补充，包含替代品和后期升级；不绑定单一Planner变体",
@@ -63,7 +66,11 @@ def build_documents():
                            "正文把智力502推荐给普通腰带，但词库不支持该部位；没有加入腰带目标，原链接另留核对记录。"]}
     common = {"format": "le-filter-requirements", "version": 1,
               "id": "flay-lich-allie-guide", "name": "Flay魔力巫妖 · Allie攻略"}
-    endgame = {**common, "stage": "endgame", "targets": targets, "source": source}
+    endgame = {**common, "stage": "endgame", "targets": targets,
+               "source": {**source, "scope": source["scope"] + "；含2026-10-11玩家神像补充",
+                          "user_adjustments": [{"date": "2026-10-11", "origin": "玩家实际游玩反馈",
+                                                "reason": "厚实编织者的点燃几率与点燃火焰穿透也是BD目标。",
+                                                "idols": [user_idol]}]}}
     leveling = {**common, "stage": "leveling",
                 "targets": {"affixes": [a["id"] for a in facts["leveling"]["targets"]],
                             "bases": [{"type": b["type"], "bases": [b["id"]]} for b in facts["leveling"]["bases"]]},
