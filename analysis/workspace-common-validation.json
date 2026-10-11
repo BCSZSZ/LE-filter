@@ -1,0 +1,303 @@
+{
+  "date": "2026-10-11",
+  "base_commit": "5ff895313a830c59b286d4049e4b1983069626aa",
+  "automated": {
+    "command": "python -X utf8 -m unittest discover -s tool -v",
+    "passed": 39,
+    "included_node_state_cases": 5,
+    "skipped": 0
+  },
+  "browser": {
+    "native_local": [
+      "old v1 two-build selection and targets retained",
+      "rename affects saved copy only",
+      "load template again and reload preserve rename"
+    ],
+    "static_pyodide": [
+      "fresh template copies Allie altar base 3 and affix 1105",
+      "Allie preview 114 rules, 108 enabled",
+      "common picker shows only 10 unique idols and excludes needle 344",
+      "disable common idols leaves independent needle rule enabled",
+      "reload preserves 9-id selection and disabled flag",
+      "default selection restored"
+    ],
+    "client_tested": false
+  },
+  "generated": [
+    {
+      "selected": [
+        "flay-mana-lich",
+        "skeleton-necromancer"
+      ],
+      "main": "flay-mana-lich",
+      "rules": 135,
+      "enabled": 129,
+      "sha256": "3fec60ffeb04713ec98f31729519e52587531c51dcf91602e4636737162a81b4",
+      "common_rules": [
+        {
+          "category": "先驱者之针常驻",
+          "tier": 1,
+          "role": "通用",
+          "owners": [],
+          "source_raxx_rule": 15,
+          "number": 11,
+          "name": "[共通：先驱者之针常驻]",
+          "sound": "铁匠",
+          "enabled": true,
+          "types": [],
+          "color": "3",
+          "bases": [],
+          "uniques": [
+            344
+          ],
+          "affixes": [],
+          "gate": "没有额外阶数／等级门槛",
+          "action": "SHOW"
+        },
+        {
+          "category": "共通暗金神像",
+          "tier": 1,
+          "role": "通用",
+          "owners": [],
+          "source_raxx_rule": 15,
+          "number": 14,
+          "name": "[共通：暗金神像]",
+          "sound": "铁匠",
+          "enabled": true,
+          "types": [],
+          "color": "3",
+          "bases": [],
+          "uniques": [
+            211,
+            219,
+            246,
+            324,
+            325,
+            326,
+            421,
+            462,
+            485,
+            486
+          ],
+          "affixes": [],
+          "gate": "没有额外阶数／等级门槛",
+          "action": "SHOW"
+        }
+      ],
+      "allie_altar": []
+    },
+    {
+      "selected": [
+        "flay-lich-allie-guide"
+      ],
+      "main": "flay-lich-allie-guide",
+      "rules": 114,
+      "enabled": 108,
+      "sha256": "39a1ecbf283c1132c7c2d1748b4ca4934a080eb19faa935ecff681c18ce4d185",
+      "common_rules": [
+        {
+          "category": "先驱者之针常驻",
+          "tier": 1,
+          "role": "通用",
+          "owners": [],
+          "source_raxx_rule": 15,
+          "number": 10,
+          "name": "[共通：先驱者之针常驻]",
+          "sound": "铁匠",
+          "enabled": true,
+          "types": [],
+          "color": "3",
+          "bases": [],
+          "uniques": [
+            344
+          ],
+          "affixes": [],
+          "gate": "没有额外阶数／等级门槛",
+          "action": "SHOW"
+        },
+        {
+          "category": "共通暗金神像",
+          "tier": 1,
+          "role": "通用",
+          "owners": [],
+          "source_raxx_rule": 15,
+          "number": 12,
+          "name": "[共通：暗金神像]",
+          "sound": "铁匠",
+          "enabled": true,
+          "types": [],
+          "color": "3",
+          "bases": [],
+          "uniques": [
+            211,
+            219,
+            246,
+            324,
+            325,
+            326,
+            421,
+            462,
+            485,
+            486
+          ],
+          "affixes": [],
+          "gate": "没有额外阶数／等级门槛",
+          "action": "SHOW"
+        }
+      ],
+      "allie_altar": [
+        {
+          "category": "祭坛一项目标",
+          "tier": 2,
+          "role": "主",
+          "owners": [
+            "Flay魔力巫妖 · Allie攻略"
+          ],
+          "source_raxx_rule": 127,
+          "number": 107,
+          "name": "[主 祭坛一项目标] Flay魔力巫妖 · Allie攻略 神像祭坛",
+          "sound": "开始",
+          "enabled": true,
+          "types": [
+            "IDOL_ALTAR"
+          ],
+          "color": "8",
+          "bases": [
+            3
+          ],
+          "uniques": [],
+          "affixes": [
+            [
+              1105
+            ]
+          ],
+          "gate": "至少1项，阶数不限（advanced=false）",
+          "action": "SHOW"
+        }
+      ]
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide"
+      ],
+      "main": "flay-lich-allie-guide",
+      "rules": 188,
+      "enabled": 182,
+      "sha256": "d6ad845e0fb3d3a87999b7545630c02cd71796894c4d2e88c6ab47c511a2cc7e",
+      "common_rules": [
+        {
+          "category": "先驱者之针常驻",
+          "tier": 1,
+          "role": "通用",
+          "owners": [],
+          "source_raxx_rule": 15,
+          "number": 11,
+          "name": "[共通：先驱者之针常驻]",
+          "sound": "铁匠",
+          "enabled": true,
+          "types": [],
+          "color": "3",
+          "bases": [],
+          "uniques": [
+            344
+          ],
+          "affixes": [],
+          "gate": "没有额外阶数／等级门槛",
+          "action": "SHOW"
+        },
+        {
+          "category": "共通暗金神像",
+          "tier": 1,
+          "role": "通用",
+          "owners": [],
+          "source_raxx_rule": 15,
+          "number": 14,
+          "name": "[共通：暗金神像]",
+          "sound": "铁匠",
+          "enabled": true,
+          "types": [],
+          "color": "3",
+          "bases": [],
+          "uniques": [
+            211,
+            219,
+            246,
+            324,
+            325,
+            326,
+            421,
+            462,
+            485,
+            486
+          ],
+          "affixes": [],
+          "gate": "没有额外阶数／等级门槛",
+          "action": "SHOW"
+        }
+      ],
+      "allie_altar": [
+        {
+          "category": "祭坛一项目标",
+          "tier": 2,
+          "role": "主",
+          "owners": [
+            "Flay魔力巫妖 · Allie攻略"
+          ],
+          "source_raxx_rule": 127,
+          "number": 180,
+          "name": "[主 祭坛一项目标] Flay魔力巫妖 · Allie攻略 神像祭坛",
+          "sound": "开始",
+          "enabled": true,
+          "types": [
+            "IDOL_ALTAR"
+          ],
+          "color": "8",
+          "bases": [
+            3
+          ],
+          "uniques": [],
+          "affixes": [
+            [
+              1105
+            ]
+          ],
+          "gate": "至少1项，阶数不限（advanced=false）",
+          "action": "SHOW"
+        }
+      ]
+    }
+  ],
+  "preserved_sha256": {
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer-v2.xml": "b98ac8760726009ece4bef27bde7f6ad9cc2d2806e8996630ecbb96d41e1e71c",
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml": "ddfb6889366162de32eaf4a9dbd050f23496a1d902189cff340b5ec444da6ec9",
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer.xml": "a6026b9a065042ead7e4e9bd1461b20f0687a148d5a087669b6763c7f461cc78",
+    "requirements/flay-lich-allie-guide.leveling.json": "71c601489ef6b3716ece19b2f45892221467150135f57a795e170537a42be3c6",
+    "sources/Raxx's S5 Ultimate Filter v1.0.txt": "146465750ab794175676f73b7251ddba610c42c4508bb16b614b6d4982036288",
+    "sources/builds/flay-mana-lich-guide.json": "1b7f6180f1fd32818c223e5d8daa1c4e9a2a8c405094d8a9a126c5c6ccef0fd8",
+    "sources/builds/flay-mana-lich.json": "fe5932f3f5990bcffa88cef0e882789855d89cbba89c2d66ed1768f6ea531ba7",
+    "sources/builds/letools-allie-flay-extracted.json": "0aa01939bd5cb4a672baafef58737b942543f7a57f72af4ea9bc5e8ee2c5cf88",
+    "sources/builds/letools-guide-zh-835-extracted.json": "aa964dc554078bf8fb20b856515f683db13a1d359734af5b6965195ac701ce9f",
+    "sources/builds/manifest.json": "b88e7550b8cf6ca5ddc6bfe13376be1b6a2c79c5de50712c829e6b87f778c481",
+    "sources/builds/maxroll-flay-mana-lich-strict.xml": "4e70c8b9111a28ae257aea7b561d931ac99629a6054646ce18a3ce5e3458995c",
+    "sources/builds/maxroll-reference-supplement.json": "a8f94e45f86bd8b8e77ae7d09d22869e70dc9436ca9a9113970ecb6a552a9970",
+    "sources/builds/maxroll-skeleton-necromancer-strict.xml": "5033341708ab5594cfcb70448bf3c6084333f03efa4388e5d4c6f4b1409dbade",
+    "sources/builds/maxroll-skeleton-necromancer-very-strict.xml": "7e9bb43a06383fad155298c642991e41cf9d125911702e46c8e508634cf55cb1",
+    "sources/builds/maxroll-strict-manifest.json": "be601551ff46051a0af6ce6ad8ad61e384d6a6ea68c5097b2d96f56c97394354",
+    "sources/builds/review-reference.json": "df489714f6491d6610de0a4257af5a8c7df2b0b3a28983ed659d9759854f96bc",
+    "sources/builds/skeleton-equipment-priorities.png": "a4a853ebd7eb9be59a1ad6d4e64a2451a2eef9e054396df317049a107ff5b0b4",
+    "sources/builds/skeleton-idol-priorities.png": "234aae7df50c586954bf7ce5e82b89d295594ca7baec05ec0022227f7e8cbaf1",
+    "sources/builds/skeleton-investigation-manifest.json": "d70f0726d870281661a96664716bcbac217967ce651b5f6836bf0b37f43a3d99",
+    "sources/builds/skeleton-necromancer.json": "456c46bb25c88dc6077ce4189dcd89e268eb12aa8893f44cbe19e35202cc988d",
+    "sources/builds/strict-variable-reference.json": "0e42a2ff8ca467519900bb85edb4ac3fe851cf75e9f86774dcee18453e07bd9a",
+    "sources/builds/transfer-reference.json": "f571190f25cd97b2bbc292d9ec5463cbb46ef20a6937e16a6a5023f056b0f9e2",
+    "sources/filter-style-reference.json": "37a26db4058ded7f88963d1559a9e369a7c1d74f7894778b63165e05f54b7d39",
+    "sources/game-reference.json": "2f4e8198a2b936b3b639cad53d3f196bab4b3a6fb37bfdaaf002d4995655317b",
+    "sources/manifest.json": "3904c8a1cf61db4e6671056f0f95bf9a690d2b581763d548f3f0979c79aa1e23",
+    "sources/seasonal-unique-protection.json": "dd03763aca0d16990d5b0e77214da3486a5761abc92193d22c4f2761babc02f5",
+    "sources/tool-catalog.json": "cedeabebdd1efb6bb8257b2c70b095cce3dd6169505864f50aea4b3cfbfe60e8",
+    "sources/video-era/Raxx-S5-2026-10-01.txt": "f0e329df63af9737185bf6d5fdd71cb7663c932ddf954773c56c90a6d8c440ed",
+    "templates/LE-base-v1.xml": "725e8ce0dc642f0e0bd60ae50f3b9c168b775ecee96fcf1064f1a39c3caae4d4",
+    "templates/base-manifest.json": "ad19178a51cff97cb61017448c7ca36fca963ec5672914ff90a2c54a564cbee1"
+  }
+}

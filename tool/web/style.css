@@ -6,3 +6,15 @@ dialog{border:1px solid #494354;border-radius:12px;background:#1a1d25;color:var(
 #workspace-controls[hidden],#workspace-builds[hidden]{display:none}
 @media(max-width:1000px){.layout{grid-template-columns:215px minmax(0,1fr)}main{padding:28px 23px 0}.topbar{padding:0 22px}.panel-heading{padding:20px}.target-row{padding:16px 20px}.export-bar{flex-wrap:wrap}.top-actions .muted{display:none}}
 @media(max-width:680px){.layout{display:block}aside{border-right:none;border-bottom:1px solid var(--line);padding:18px}#builds{display:flex;gap:8px;overflow:auto}.build-card{min-width:185px}.side-note,.sidebar-bottom{display:none}.topbar{padding:0 15px}.brand small{display:none}.brand strong{font-size:9px;letter-spacing:1px}.brandmark{font-size:19px}.top-actions button{padding:6px 8px;font-size:11px}main{padding:22px 16px 0}h1{font-size:23px}.workspace-bar{flex-wrap:wrap}.panel-heading{flex-wrap:wrap}.picker-controls{gap:10px}.row-heading{align-items:flex-start}.preview-table{font-size:10px}.preview-table td{padding:8px}.export-bar{position:static}.source-table select{max-width:110px}}
+.layout{grid-template-columns:430px minmax(0,1fr)}
+.library-columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.library-columns section{min-width:0}.library-columns .aside-heading{height:29px;margin-bottom:12px;color:var(--text)}
+.template-card{border:1px solid var(--line);border-radius:9px;padding:12px 10px;margin-bottom:8px;background:#171a21}
+.template-card strong{display:block;font-size:13px;overflow-wrap:anywhere}.template-card small{display:block;margin-top:6px;font-size:10px}
+.template-card button{margin-top:10px;font-size:11px;padding:5px 10px;background:transparent}
+.library-columns #builds{display:block;overflow:visible}.library-columns .build-card{min-width:0}.build-name{font-size:13px}
+.library-note,.saved-empty{font-size:11px;color:var(--muted);margin-top:12px}.heading-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.main-heading{align-items:flex-start}.main-heading h1{overflow-wrap:anywhere}#common-button.active{color:var(--accent);border-color:var(--accent)}
+.reset-message{padding:24px 26px}
+@media(max-width:1100px){.layout{grid-template-columns:350px minmax(0,1fr)}aside{padding:24px 14px}.library-columns{gap:8px}main{padding:28px 23px 0}.main-heading{flex-wrap:wrap}.heading-actions{justify-content:flex-start}}
+@media(max-width:800px){.layout{display:block}aside{border-right:none;border-bottom:1px solid var(--line);padding:18px}.library-columns{gap:16px}.side-note,.sidebar-bottom{display:none}}

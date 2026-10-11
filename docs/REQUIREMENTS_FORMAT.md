@@ -38,7 +38,7 @@
 | `stage` | `endgame`终局或`leveling`独立练级目标；两个阶段不自动复制。 |
 | `targets.uniques` | 暗金／套装数字ID列表。名字由离线词库显示。 |
 | `targets.equipment` | 每个装备类型独立目标池，不能跨部位或BD凑目标数量。实验词缀可作为明确目标。 |
-| `targets.altars` | 祭坛类型、底材与普通词缀池。 |
+| `targets.altars` | 祭坛类型、底材与实际目标词缀池，允许明确指定腐化目标。 |
 | `targets.idols` | 神像类型、底材与普通词缀池；附魔／腐化不混入普通池。 |
 | `targets.bases` | 独立底材：`type`、替代池`bases`、可选首选池`preferred_bases`。终局05还要求同BD对应部位目标T7，不自动限制其他T7素材的底材。 |
 | `source`（可选） | 来源名称、URL、更新日期、范围、哈希与审阅提醒；不参与过滤判断。 |
@@ -46,6 +46,8 @@
 终局五类`targets`字段必须齐全，没有需求就填`[]`。装备／神像／祭坛分组的`bases: []`表示该类型底材不限；独立底材分组的首选与替代都为空时不生成保留规则。ID必须是整数。`affixes`是候选池，不表示要求物品同时拥有池中全部词缀，也不承诺池中任意组合都是BD最终毕业。
 
 装备／神像／祭坛分组可带`corrupted`及`enchanted`参考ID列表，分别只接受冻结词库腐化6／附魔4；不会计入普通目标。神像普通池只接受0／5。装备普通池拒绝4／6。未知ID阻止导入／生成，不猜名字或类别。神像还可选填`pair_bases`：限定两项目标层底材；不填表示与`bases`相同，明确`[]`表示两项层底材不限。
+
+祭坛的`affixes`表示实际筛选目标，不受普通神像计数限制。Allie玩家补充为`{"type":"IDOL_ALTAR","bases":[3],"affixes":[1105]}`：尖塔祭坛与“魔力自装备的每个腐化神像”同时匹配。只放在`corrupted`参考列表不会生成这条目标规则。
 
 练级也使用version=1，`stage: "leveling"`的`targets`只包含以下两份列表：
 
@@ -75,4 +77,4 @@ document = write_document(build, "endgame")  # 编辑后的目标保存回同一
 
 真实样本见流血骷髅的[终局需求](../requirements/bleed-skeleton-roamer-guide-835.endgame.json)、[练级需求](../requirements/bleed-skeleton-roamer-guide-835.leveling.json)与[中文审阅表](BLEED_SKELETON_GUIDE_REVIEW.md)。
 
-Allie攻略来源的Flay也使用同一格式：[终局需求](../requirements/flay-lich-allie-guide.endgame.json)、[练级需求](../requirements/flay-lich-allie-guide.leveling.json)。与旧Maxroll Flay使用不同id；同一攻略的两个阶段使用同id。[两篇攻略的完整审阅与网页读回结果](GUIDE_REQUIREMENTS_REVIEW.md)记录了目标、来源冲突和未提供的祭坛目标。
+Allie攻略来源的Flay也使用同一格式：[终局需求](../requirements/flay-lich-allie-guide.endgame.json)、[练级需求](../requirements/flay-lich-allie-guide.leveling.json)。与旧Maxroll Flay使用不同id；同一攻略的两个阶段使用同id。[两篇攻略的完整审阅与网页读回结果](GUIDE_REQUIREMENTS_REVIEW.md)记录了目标、来源冲突及玩家补充的祭坛目标。

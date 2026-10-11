@@ -187,7 +187,43 @@ class ToolTests(unittest.TestCase):
             row = first(self.output, e.CATALOG["uniques"]["344"]["type"], uid=344, ww=ww, rarity="UNIQUE")
             self.assertEqual(row["tier"], tier, (ww, row))
             if ww < 14:
-                self.assertEqual(row["category"], "通用暗金／套装0LP保护")
+                self.assertEqual(row["category"], "先驱者之针常驻")
+
+    def test_common_unique_idols_selection_and_persistent_needle(self):
+        config = self.leveling_config(())
+        old = deepcopy(config)
+        normalized = e.normalize_config(config)
+        self.assertEqual(config, old)
+        self.assertEqual(normalized["common"], e.default_common())
+        out = e.generate(config)
+        for uid in e.UNIQUE_IDOLS:
+            for level in (1, 84, 85, 100):
+                row = first(out, e.CATALOG["uniques"][str(uid)]["type"], uid=uid, level=level, rarity="UNIQUE")
+                self.assertEqual(row["category"], "先驱者之针常驻" if uid == 344 else "共通暗金神像")
+        for common in ({"unique_idols_enabled": False, "unique_idols": sorted(e.UNIQUE_IDOLS - {344})},
+                       {"unique_idols_enabled": True, "unique_idols": []},
+                       {"unique_idols_enabled": True, "unique_idols": [211]}):
+            config["common"] = common
+            out = e.generate(config)
+            self.assertEqual(first(out, "IDOL_1x1_ETERRA", uid=344, rarity="UNIQUE")["category"], "先驱者之针常驻")
+            for uid in e.UNIQUE_IDOLS - {344}:
+                row = first(out, e.CATALOG["uniques"][str(uid)]["type"], uid=uid, rarity="UNIQUE")
+                expected = "SHOW" if common["unique_idols_enabled"] and uid in common["unique_idols"] else "HIDE"
+                self.assertEqual(row["action"], expected, (uid, common, row))
+        config["common"] = {"unique_idols_enabled": True, "unique_idols": [253]}
+        with self.assertRaises(ValueError):
+            e.normalize_config(config)
+        config["common"] = {"unique_idols_enabled": True, "unique_idols": [211]}
+        config["builds"][0]["profiles"]["endgame"]["uniques"] = [211]
+        out = e.generate(config)
+        self.assertTrue(any(r["category"] == "共通暗金神像" for r in out["rules"]))
+        self.assertEqual(first(out, "IDOL_2x2", uid=211, rarity="UNIQUE")["category"], "BD暗金0LP也留")
+        config["common"]["unique_idols_enabled"] = False
+        self.assertEqual(first(e.generate(config), "IDOL_2x2", uid=211, rarity="UNIQUE")["category"], "BD暗金0LP也留")
+        config["builds"][0]["profiles"]["endgame"]["uniques"] = [344]
+        out = e.generate(config)
+        needle = next(r for r in out["rules"] if r["category"] == "先驱者之针常驻")
+        self.assertEqual((needle["role"], needle["owners"]), ("通用", []))
 
     def test_seasonal_uniques_protected_without_build_targets(self):
         out = e.generate(self.leveling_config(()))
@@ -198,7 +234,8 @@ class ToolTests(unittest.TestCase):
             for u in release["uniques"]:
                 self.assertEqual(e.CATALOG["uniques"][str(u["id"])]["en"], u["en"])
                 row = first(out, u["type"], uid=u["id"], rarity="UNIQUE", lp=0, ww=0)
-                self.assertEqual((row["category"], row["tier"], row["role"]), ("通用暗金／套装0LP保护", 1, "通用"))
+                expected = "共通暗金神像" if u["id"] in e.UNIQUE_IDOLS else "通用暗金／套装0LP保护"
+                self.assertEqual((row["category"], row["tier"], row["role"]), (expected, 1, "通用"))
         for lp, tier in [(1, 2), (2, 3), (3, 4)]:
             self.assertEqual(first(out, "IDOL_2x2", uid=486, rarity="UNIQUE", lp=lp)["tier"], tier)
         self.assertEqual(first(out, uid=0, rarity="UNIQUE")["action"], "HIDE")
@@ -211,16 +248,16 @@ class ToolTests(unittest.TestCase):
         node, row = common[0]
         c = e.condition(node, "UniqueModifiersCondition")
         original = [u for n in [15, 16] for u in e.condition(e.BASE[n], "UniqueModifiersCondition")]
-        expected = {int(u.findtext("UniqueId")) for u in original} | e.SEASONAL_UNIQUES
+        expected = ({int(u.findtext("UniqueId")) for u in original} | e.SEASONAL_UNIQUES) - e.UNIQUE_IDOLS
         self.assertEqual(set(row["uniques"]), expected)
         self.assertEqual(len(c), len(expected))
         self.assertEqual(len(node.find("conditions")), 1)
         actual = {int(u.findtext("UniqueId")): u for u in c}
-        for uid in e.SEASONAL_UNIQUES:
+        for uid in e.SEASONAL_UNIQUES - e.UNIQUE_IDOLS:
             self.assertFalse(len(actual[uid].find("Rolls")))
         for u in original:
             uid = int(u.findtext("UniqueId"))
-            if uid not in e.SEASONAL_UNIQUES:
+            if uid not in e.SEASONAL_UNIQUES | e.UNIQUE_IDOLS:
                 self.assertEqual(tree(actual[uid]), tree(u))
         self.assertFalse(any(r["category"] == "Raxx通用" and r["source_raxx_rule"] in range(12, 17) for r in self.output["rules"]))
         self.assertFalse(any(r["category"] == "珍贵名单低WW静音" for r in self.output["rules"]))

@@ -2,7 +2,9 @@ import {loadPyodide} from './pyodide/pyodide.mjs';
 
 const ready = (async () => {
   const pyodide = await loadPyodide({indexURL:new URL('./pyodide/',import.meta.url).href});
-  const response = await fetch(new URL('runtime.zip',import.meta.url));
+  const runtimeURL=new URL('runtime.zip',import.meta.url);
+  runtimeURL.search=new URL(import.meta.url).search;
+  const response = await fetch(runtimeURL);
   if(!response.ok)throw Error('规则和示例数据加载失败。');
   pyodide.unpackArchive(await response.arrayBuffer(),'zip',{extractDir:'/app'});
   pyodide.runPython("import sys\nsys.path.insert(0, '/app/tool')\nfrom browser_runtime import dispatch_json");

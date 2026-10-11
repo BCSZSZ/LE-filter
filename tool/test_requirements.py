@@ -21,7 +21,7 @@ class RequirementTests(unittest.TestCase):
     def test_allie_guide_targets_and_roundtrip(self):
         endgame, leveling = build_allie_documents()
         self.assertEqual({k: len(v) for k, v in endgame["targets"].items()},
-                         {"uniques": 17, "equipment": 10, "altars": 0, "idols": 5, "bases": 8})
+                         {"uniques": 17, "equipment": 10, "altars": 1, "idols": 5, "bases": 8})
         self.assertEqual(sum(len(g["bases"]) + len(g["preferred_bases"]) for g in endgame["targets"]["bases"]), 28)
         base_groups = {g["type"]: g for g in endgame["targets"]["bases"]}
         self.assertEqual({t: g["preferred_bases"] for t, g in base_groups.items()},
@@ -77,6 +77,21 @@ class RequirementTests(unittest.TestCase):
             self.assertEqual(first(output, "IDOL_1x2", {affix: 1}, base=base, rarity="RARE",
                                    categories={"神像一普通目标"})["action"], "HIDE")
 
+    def test_allie_spire_altar_corrupted_mana_is_a_matching_target(self):
+        endgame, _ = build_allie_documents()
+        self.assertEqual(endgame["targets"]["altars"], [{"type": "IDOL_ALTAR", "bases": [3], "affixes": [1105]}])
+        build = as_build(endgame)
+        output = e.generate({"version": 1, "main_id": build["id"], "extra_t7": True, "builds": [build]})
+        for level in (1, 85, 100):
+            row = first(output, "IDOL_ALTAR", {1105: 1}, base=3, level=level, rarity="RARE", corrupted=True)
+            self.assertEqual((row["category"], row["tier"], row["role"]), ("祭坛一项目标", 2, "主"))
+        for base, affixes in ((0, {1105: 1}), (3, {1106: 1}), (3, {})):
+            self.assertEqual(first(output, "IDOL_ALTAR", affixes, base=base, rarity="RARE")["action"], "HIDE")
+        for original in e.bootstrap()["config"]["builds"]:
+            spec = e.EVIDENCE["strict_inputs"][original["id"]]
+            imported = e.extract((e.ROOT / spec["file"]).read_text(encoding="utf-8-sig"))
+            self.assertEqual(original["profiles"]["endgame"]["altars"], imported["profile"]["altars"])
+
     def test_filter_roundtrip_without_strategy(self):
         for build in e.bootstrap()["config"]["builds"]:
             doc = write_document(build, "endgame")
@@ -108,9 +123,9 @@ class RequirementTests(unittest.TestCase):
     def test_preferred_base_rule_counts_and_no_inferred_priority(self):
         from browser_runtime import browser_bootstrap
         config = deepcopy(browser_bootstrap()["config"])
-        for selected, main, expected in [({"flay-lich-allie-guide"}, "flay-lich-allie-guide", 111),
-                ({"flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835"}, "flay-lich-allie-guide", 185),
-                ({"flay-mana-lich", "skeleton-necromancer"}, "flay-mana-lich", 133)]:
+        for selected, main, expected in [({"flay-lich-allie-guide"}, "flay-lich-allie-guide", 114),
+                ({"flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835"}, "flay-lich-allie-guide", 188),
+                ({"flay-mana-lich", "skeleton-necromancer"}, "flay-mana-lich", 135)]:
             for build in config["builds"]:
                 build["enabled"] = build["id"] in selected
             config["main_id"] = main
@@ -122,7 +137,7 @@ class RequirementTests(unittest.TestCase):
             self.assertFalse(any(r["types"][0] in {"GLOVES", "BELT", "AMULET"} for r in preferred))
         for build in config["builds"]:
             build["enabled"] = True
-        with self.assertRaisesRegex(ValueError, "276条规则，超过200"):
+        with self.assertRaisesRegex(ValueError, "279条规则，超过200"):
             e.generate(config)
 
     def test_explicit_unrestricted_idol_pair_roundtrip(self):

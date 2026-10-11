@@ -11,21 +11,29 @@
 </header>
 <div class="layout">
   <aside>
-    <div class="aside-heading"><span>收集的BD</span><button id="add-build" aria-label="新增BD">＋</button></div>
-    <div id="builds"></div>
+    <div class="library-columns">
+      <section aria-label="官方模板"><div class="aside-heading"><span>官方模板</span><small>只读</small></div><div id="templates"></div></section>
+      <section aria-label="我的保存"><div class="aside-heading"><span>我的保存</span><button id="add-build" aria-label="新增BD">＋</button></div><div id="builds"></div></section>
+    </div>
+    <p class="library-note">从模板载入副本，再勾选收集。工作台编辑自动保存到“我的保存”。</p>
     <button id="apply-builds" class="wide primary">应用所选BD</button>
     <button id="import-filter" class="wide dashed">＋ 导入filter</button>
     <button id="import-requirements" class="wide dashed">＋ 导入BD需求JSON</button>
     <button id="save-requirements" class="wide">保存本BD需求JSON</button>
-    <button id="load-examples" class="wide subtle">载入示例方案</button>
+    <button id="load-examples" class="wide subtle">选择默认组合</button>
     <div class="side-note"><span class="dot" style="background:#ffaa00"></span>双T7及以上金色<br><span class="dot pink"></span>其余主套路粉色<br><span class="dot blue"></span>其余副套路蓝色<br>共享按主套路处理<br>勾选的BD同等收集</div>
     <div class="sidebar-bottom"><span class="online-dot"></span>离线词库 <span id="catalog-version"></span></div>
   </aside>
   <main>
-    <div class="main-heading"><div><p class="eyebrow">BUILD TARGETS</p><h1 id="build-title">目标配置</h1></div><button id="rename-build">重命名</button></div>
+    <div class="main-heading"><div><p class="eyebrow">BUILD TARGETS</p><h1 id="build-title">目标配置</h1></div><div class="heading-actions"><button id="common-button">共通规则</button><button id="reset-build" hidden>从模板重置</button><button id="rename-build">重命名</button></div></div>
     <nav id="workspace-builds" class="category-tabs" aria-label="工作台BD" hidden></nav>
     <section id="workspace-empty" class="panel empty"><strong id="workspace-message"></strong><p>在左侧勾选BD，再点击“应用所选BD”载入编辑工作台。</p></section>
     <div id="workspace-controls" class="workspace-bar" hidden><div class="segmented"><button data-mode="endgame" class="active">终局目标</button><button data-mode="leveling">练级目标</button></div><div class="view-tabs"><button data-view="editor" class="active">填写目标</button><button data-view="preview">规则预览</button></div></div>
+    <section id="common-rules" class="panel" hidden>
+      <div class="panel-heading"><div><h2>共通显示规则</h2><p class="muted">独立于BD模板，随整套配置保存。</p></div></div>
+      <div class="target-row"><div class="row-heading"><label><input id="common-idols-enabled" type="checkbox">显示暗金神像</label><button id="pick-common-idols">选择暗金神像</button></div><div id="common-idol-targets" class="chips"></div><p class="reference">默认收集全部暗金神像。这里调整共通收集；BD明确需要的神像仍会保留。</p></div>
+      <div class="target-row"><div class="row-heading"><strong>先驱者之针 · 独立常驻规则</strong><span class="id-tag">344</span></div><p class="muted">始终显示，不随暗金神像选择或角色等级关闭。</p></div>
+    </section>
     <div id="editor">
       <div id="profile-note" class="notice"></div>
       <nav id="categories" class="category-tabs"></nav>
@@ -48,6 +56,11 @@
   <div id="picker-summary" class="muted"></div><div id="picker-list"></div>
   <div class="dialog-footer"><span id="selection-count"></span><button id="apply-selection" class="primary">应用选择</button></div>
 </dialog>
+<dialog id="reset-dialog">
+  <div class="dialog-heading"><h2>从模板重置</h2><button data-close="reset-dialog" aria-label="关闭重置">×</button></div>
+  <p class="reset-message">将“<strong id="reset-name"></strong>”的终局、练级目标恢复为最新版官方模板。这个副本的目标修改会被替换。</p>
+  <div class="dialog-footer"><button data-close="reset-dialog">取消</button><button id="confirm-reset" class="primary">重置这个副本</button></div>
+</dialog>
 <dialog id="group-dialog">
   <div class="dialog-heading"><h2 id="group-title"></h2><button data-close="group-dialog" aria-label="关闭分组">×</button></div>
   <label class="field-label">物品类型<select id="group-type"></select></label>
@@ -66,5 +79,5 @@
 <input id="config-file" type="file" accept=".json" hidden>
 <input id="requirements-file" type="file" accept=".json" hidden>
 <div id="toast" role="status" hidden></div>
-<script src="app.js"></script>
+<script src="workbench.js"></script><script src="app.js"></script>
 </body></html>

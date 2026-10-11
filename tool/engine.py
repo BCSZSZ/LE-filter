@@ -23,6 +23,12 @@ BASE = dict(zip(MANIFEST["source_rule_order"], sorted(BASE_ROOT.find("rules"), k
 FAMILIES = {"planner": "uniques", "tier7": "equipment", "idol_single": "idols", "idol_bis": "idols",
             "altar": "altars", "rare_base": "bases", "crafting_base": "bases"}
 MULTI_T7_CATEGORIES = {"BD双目标T7", "双T7含BD目标", "任意双T7", "任意至少三T7"}
+UNIQUE_IDOLS = {int(i) for i, u in CATALOG["uniques"].items() if (u.get("type") or "").startswith("IDOL_")}
+HARBINGER_NEEDLE = 344
+
+
+def default_common():
+    return {"unique_idols_enabled": True, "unique_idols": sorted(UNIQUE_IDOLS - {HARBINGER_NEEDLE})}
 
 
 def empty_profile():
@@ -61,6 +67,15 @@ def normalize_config(config):
     config = deepcopy(config)
     if config["version"] != 1 or not isinstance(config["builds"], list):
         raise ValueError("配置格式不正确。")
+    common = config.setdefault("common", default_common())
+    if not isinstance(common, dict):
+        raise ValueError("共通规则格式不正确。")
+    for key, value in default_common().items():
+        common.setdefault(key, value)
+    if type(common["unique_idols_enabled"]) is not bool or not isinstance(common["unique_idols"], list) or any(
+            type(i) is not int or i not in UNIQUE_IDOLS - {HARBINGER_NEEDLE} for i in common["unique_idols"]):
+        raise ValueError("共通暗金神像只能填写神像ID；先驱者之针由独立常驻规则保留。")
+    common["unique_idols"] = sorted(set(common["unique_idols"]))
     for b in config["builds"]:
         p = b["profiles"]["leveling"]
         if "affixes" not in p and any(p.values()):
@@ -304,6 +319,9 @@ def generate(config, mode="endgame"):
     peak = replacements[38].pop(0)
     result.append(peak)
 
+    # Dedicated common rules stay separate from the general zero-LP pool.
+    r = add(15, "先驱者之针常驻", 1, name="[共通：先驱者之针常驻]")
+    select_uniques(r, [HARBINGER_NEEDLE])
     all_targets = {i for b in builds for i in b["profiles"]["endgame"]["uniques"]}
     claimed = set()
     for b in builds:
@@ -318,6 +336,11 @@ def generate(config, mode="endgame"):
         r.find("conditions").append(deepcopy(condition(BASE[14], "RarityCondition")))
         r.find("conditions").append(deepcopy(condition(BASE[14], "PotentialCondition")))
         potential(r, "LegendaryPotential", 1, 1)
+    common = config["common"]
+    if common["unique_idols"]:
+        r = add(15, "共通暗金神像", 1, name="[共通：暗金神像]")
+        select_uniques(r, common["unique_idols"])
+        r.find("isEnabled").text = str(common["unique_idols_enabled"]).lower()
     for n, lp, ww, tier in [(12, 3, 20, 4), (13, 2, 17, 3), (14, 1, 14, 2)]:
         r = add(n, f"任意LP{'≥' if lp == 3 else '='}{lp}", tier)
         r.find("conditions")[:] = [deepcopy(c) for c in BASE[n].find("conditions") if c.get(XSI + "type") != "UniqueModifiersCondition"]
@@ -341,6 +364,7 @@ def generate(config, mode="endgame"):
     tmp = deepcopy(BASE[15])
     select_uniques(tmp, SEASONAL_UNIQUES - set(inspect_rule(r)["unique_ids"]))
     c.extend(deepcopy(condition(tmp, "UniqueModifiersCondition")[:]))
+    c[:] = [u for u in c if int(u.findtext("UniqueId")) not in UNIQUE_IDOLS]
 
     equipment_targets = set()
     for b in builds:
@@ -464,7 +488,10 @@ def generate(config, mode="endgame"):
     # Deduplicate identical predicates, preserving main ownership and cue priority.
     merged, rows = {}, []
     for rule, row in result:
-        key = (signature(rule), rule.findtext("isEnabled"), row["tier"])
+        # Keep the two user-visible common controls identifiable even when a BD
+        # happens to have exactly the same singleton target.
+        common_key = row["category"] if row["category"] in {"先驱者之针常驻", "共通暗金神像"} else None
+        key = (signature(rule), rule.findtext("isEnabled"), row["tier"], common_key)
         if key in merged:
             merged[key][1]["owners"] += [name for name in row["owners"] if name not in merged[key][1]["owners"]]
         else:
@@ -515,4 +542,5 @@ def bootstrap():
         examples.append({"id": slug, "name": imported["name"], "enabled": True,
                          "profiles": {"endgame": imported["profile"], "leveling": empty_leveling()},
                          "source": {"name": Path(spec["file"]).name, "warnings": imported["warnings"], "rules": imported["rules"]}})
-    return {"catalog": catalog, "config": {"version": 1, "main_id": "flay-mana-lich", "extra_t7": True, "builds": examples}}
+    return {"catalog": catalog, "config": {"version": 1, "main_id": "flay-mana-lich", "extra_t7": True,
+                                           "common": default_common(), "builds": examples}}

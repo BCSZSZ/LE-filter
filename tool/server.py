@@ -9,8 +9,9 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
-from engine import bootstrap, extract, generate, normalize_config
+from engine import extract, generate, normalize_config
 from requirements import read_document, write_document
+from browser_runtime import browser_bootstrap
 
 WEB = Path(__file__).parent / "web"
 DOWNLOADS = {}
@@ -38,7 +39,7 @@ class Handler(BaseHTTPRequestHandler):
         if self.path == "/api/bootstrap":
             return self.reply(boot())
         name = "index.html" if self.path == "/" else self.path.lstrip("/")
-        if name not in {"index.html", "app.js", "style.css"}:
+        if name not in {"index.html", "app.js", "workbench.js", "style.css"}:
             return self.reply({"error": "Not found"}, 404)
         return self.reply((WEB / name).read_bytes(), mime=mimetypes.guess_type(name)[0] or "text/plain")
 
@@ -81,7 +82,7 @@ class Handler(BaseHTTPRequestHandler):
 
 @lru_cache(maxsize=1)
 def boot():
-    return bootstrap()
+    return browser_bootstrap()
 
 
 if __name__ == "__main__":

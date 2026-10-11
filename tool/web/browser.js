@@ -1,6 +1,8 @@
 // Only the static publication loads this bridge; the local app keeps its API.
 {
-  const worker = new Worker(new URL('worker.mjs', document.currentScript.src), {type:'module'});
+  const bridgeURL=new URL(document.currentScript.src),workerURL=new URL('worker.mjs',bridgeURL);
+  workerURL.search=bridgeURL.search;
+  const worker = new Worker(workerURL, {type:'module'});
   const pending = new Map();
   let nextId = 0;
   worker.onmessage = ({data}) => {

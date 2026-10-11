@@ -2,7 +2,15 @@
 
 更新时间：2026-10-11，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
-## 最新玩家反馈：厚实编织者、85级退出与双T7金色
+## 最新实现：官方模板／我的保存与共通神像、Allie祭坛
+
+- 左侧并排只读模板和个人保存。模板来自bootstrap，经workbench.js深复制与冻结；编辑器只访问config.builds中的独立副本。旧v1配置迁入保存，保留两阶段、来源、名字及选择；新用户只建立默认启用的Strict副本，攻略模板按需载入。本地server与静态网页使用同一四模板bootstrap。
+- 重复载入恢复已保存副本，不覆盖目标；默认组合只改选择。明确从模板重置并确认后，才替换当前副本的两阶段目标，名称、勾选和主身份保留。需求JSON同id只更新个人保存的对应阶段，模板不受影响。整套JSON备份个人副本和common选项，单BD格式不变。
+- 原170种通用零LP池拆为159种装备／套装＋10种可选暗金神像＋先驱者之针344常驻单条。神像默认全选，可通过独立“共通规则”调整；去掉旧池中的神像，防止取消后被旧池重新显示。BD明确目标仍收集，更高潜能提示仍保留。冻结赛季名单不改。
+- Allie终局增加尖塔祭坛底材3＋1105（魔力自装备的每个腐化神像），作为实际祭坛匹配目标，至少一项、阶数不限、常驻、开始档。源user_adjustments记录玩家补充；不是从冻结攻略空祭坛表推测。旧Strict、普通神像计数、练级和所有冻结模板／历史XML保留。
+- 当前Allie114／108启用、与835组合188／182、默认Strict组合135／129；四BD277–279仍明确报200上限。39项Python检查包含5项Node状态回归，通过；实际静态Pyodide预览祭坛底材3／1105及114／108。浏览器实际验证副本改名、重复载入及刷新保留，模板保持原名。记录见analysis/workspace-common-validation.json。下方数量为当时快照。
+
+## 此前玩家反馈：厚实编织者、85级退出与双T7金色
 
 - Allie终局需求增加厚实编织者底材IDOL_1x2:1／普通词缀876（Chance to Ignite on Hit and Fire Penetration with Ignite），与厚实拉贡0／139分组收集；一项即可提示，不强制抗性后缀。builder记录2026-10-11玩家补充于source.user_adjustments，重建后保持可追溯。共5神像组；原攻略快照、旧Strict及练级需求保持原字节。已有浏览器目标通过新版同id终局JSON导入更新。
 - “非目标T7＋低阶BD目标”全体部位规则增加角色等级0–84；额外单T7储备同样85级退出，避免被通用兜底继续显示。储备仍可提前关闭。目标单T7、任意双／多T7、T8及其他通用保护保留原适用范围。

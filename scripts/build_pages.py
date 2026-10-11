@@ -1,4 +1,5 @@
 """Package the reviewed engine, four independent examples and a pinned Pyodide."""
+import hashlib
 import json
 import shutil
 import zipfile
@@ -8,6 +9,7 @@ from urllib.request import urlopen
 ROOT = Path(__file__).resolve().parents[1]
 PYODIDE_VERSION = "314.0.7"
 PYODIDE_FILES = ("pyodide.mjs", "pyodide.asm.mjs", "pyodide.asm.wasm", "python_stdlib.zip", "pyodide-lock.json")
+WEB_FILES = ("index.html", "app.js", "workbench.js", "style.css", "browser.js", "worker.mjs")
 
 
 def build_archive(output):
@@ -28,13 +30,23 @@ def build_archive(output):
 def main():
     site = ROOT / ".site"
     site.mkdir(exist_ok=True)
-    for name in ("index.html", "app.js", "style.css", "browser.js", "worker.mjs"):
+    for name in WEB_FILES:
         shutil.copyfile(ROOT / "tool/web" / name, site / name)
+    build_archive(site / "runtime.zip")
+    # Hash uncompressed files so Windows and Linux produce the same revision.
+    digest = hashlib.sha256()
+    with zipfile.ZipFile(site / "runtime.zip") as archive:
+        for name in sorted(archive.namelist()):
+            digest.update(name.encode() + b"\0" + archive.read(name))
+    for name in WEB_FILES:
+        digest.update(name.encode() + b"\0" + (site / name).read_bytes())
+    revision = digest.hexdigest()[:16]
     index = (site / "index.html").read_text(encoding="utf-8")
     index = index.replace('<script src="app.js">', '<script src="browser.js"></script>\n<script src="app.js">')
+    for name in ("app.js", "workbench.js", "browser.js", "style.css"):
+        index = index.replace(f'"{name}"', f'"{name}?v={revision}"')
     (site / "index.html").write_text(index, encoding="utf-8", newline="\n")
     (site / ".nojekyll").touch()
-    build_archive(site / "runtime.zip")
     cache = ROOT / ".cache/pyodide" / PYODIDE_VERSION
     cache.mkdir(parents=True, exist_ok=True)
     (site / "pyodide").mkdir(exist_ok=True)
