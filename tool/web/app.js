@@ -12,7 +12,7 @@ const endgameCategories = [
 ];
 const levelingCategories = [['affixes','所需词条','选择词条'],['bases','所需底材','添加底材']];
 const categories = () => mode==='leveling'?levelingCategories:endgameCategories;
-let catalog, examples, templates, state, config, activeId, mode='endgame', category='uniques', view='editor', selection, imported, generated, toastTimer, previewRequest=0;
+let catalog, examples, templates, state, config, activeId, mode='endgame', category='uniques', view='editor', selection, imported, generated, toastTimer, previewRequest=0, draggingAffix;
 const workspace=globalThis.LEWorkbench;
 const currentSave = () => workspace.activeSave(state);
 const workbenchReady = () => !!currentSave() && config.builds.some(b=>b.enabled);
@@ -105,7 +105,7 @@ function render(){
   $('categories').innerHTML=categories().map(([key,title],i)=>`<button data-category="${key}" class="${category===key?'active':''}"><span class="step-num">0${i+1}</span>${title}</button>`).join('');
   const item=categories().find(c=>c[0]===category);
   $('category-title').textContent=item[1];$('add-target').textContent=item[2];$('add-target').hidden=!item[2];
-  $('category-note').textContent=category==='equipment'?'暗金装备需要的词条。每个部位按优先级从高到低排列，1为最高；可用↑↓调整。':category==='uniques'?'按装备部位分类，点击“选择暗金”修改需求。':'';
+  $('category-note').textContent=category==='equipment'?'暗金装备需要的词条，按优先级竖列排列，1为最高。拖动词条放到目标位置，或用↑↓调整。':category==='uniques'?'按装备部位分类。选中任意套装部件，会自动补全整套并加入filter。':'';
   $('category-note').hidden=!['equipment','uniques'].includes(category);
   $('export-xml').textContent='导出filter';
   renderTargets();renderSource();
@@ -118,7 +118,8 @@ function renderTargets(){
   const data=profile()[category];
   if(!data.length){$('targets').innerHTML=`<div class="empty"><strong>为这个BD选择${categories().find(c=>c[0]===category)[1]}</strong>从列表搜索选择，或导入filter填入目标。</div>`;return;}
   if(category==='uniques'){
-    $('targets').innerHTML=workspace.groupUniques(data,catalog).map(g=>`<section class="target-row unique-slot" aria-label="${esc(g.type?typeName(g.type):'未分类')}暗金"><div class="row-heading"><strong>${esc(g.type?typeName(g.type):'未分类')}</strong><small>${g.ids.length}件</small></div><div class="chips">${chips(g.ids,'uniques')}</div></section>`).join('');return;
+    const selected=new Set(data),expanded=workspace.expandUniqueSets(data,catalog);
+    $('targets').innerHTML=workspace.groupUniques(expanded,catalog).map(g=>`<section class="target-row unique-slot" aria-label="${esc(g.type?typeName(g.type):'未分类')}暗金"><div class="row-heading"><strong>${esc(g.type?typeName(g.type):'未分类')}</strong><small>${g.ids.length}件</small></div><div class="chips">${g.ids.map(id=>`<span class="chip ${selected.has(id)?'':'auto-set'}">${esc(label('uniques',id))}<small>${id}</small>${selected.has(id)?'':'<em class="auto-set-label">套装补全</em>'}</span>`).join('')}</div></section>`).join('');return;
   }
   if(category==='affixes'){
     $('targets').innerHTML=`<div class="target-row"><div class="chips">${chips(data,category)}</div></div>`;return;
@@ -132,7 +133,7 @@ function renderTargets(){
     const title=category==='idols'?(g.bases.length?baseNames(g.type,g.bases):`${typeName(g.type)}（底材不限）`):typeName(g.type);
     const references=category==='bases'?'':[['enchanted','附魔'],['corrupted','腐化']].filter(([key])=>g[key]?.length).map(([key,title])=>`<div class="chips" style="margin-top:12px"><small>${title}参考</small>${chips(g[key],'affixes')}</div>`).join('');
     if(category==='equipment'){
-      const ordered=g.affixes.length?`<ol class="affix-priorities" aria-label="${esc(title)}词条优先级">${g.affixes.map((id,j)=>`<li class="chip priority-affix"><span class="priority-number" aria-label="优先级${j+1}">${j+1}</span><span class="affix-name">${esc(label('affixes',id))}</span><small>ID${id}</small><span class="priority-actions"><button data-priority="-1" data-index="${i}" data-affix-index="${j}" ${j?'':'disabled'} aria-label="提高${esc(title)}${esc(label('affixes',id))}的优先级" title="提高优先级">↑</button><button data-priority="1" data-index="${i}" data-affix-index="${j}" ${j<g.affixes.length-1?'':'disabled'} aria-label="降低${esc(title)}${esc(label('affixes',id))}的优先级" title="降低优先级">↓</button></span></li>`).join('')}</ol>`:'<small>选择这个部位的暗金装备需要的词条。</small>';
+      const ordered=g.affixes.length?`<ol class="affix-priorities" aria-label="${esc(title)}词条优先级">${g.affixes.map((id,j)=>`<li class="chip priority-affix" draggable="true" data-priority-row="${j}" data-group-index="${i}"><span class="drag-handle" aria-hidden="true" title="拖动调整优先级">⠿</span><span class="priority-number" aria-label="优先级${j+1}">${j+1}</span><span class="affix-name">${esc(label('affixes',id))}</span><small>ID${id}</small><span class="priority-actions"><button data-priority="-1" data-index="${i}" data-affix-index="${j}" ${j?'':'disabled'} aria-label="提高${esc(title)}${esc(label('affixes',id))}的优先级" title="提高优先级">↑</button><button data-priority="1" data-index="${i}" data-affix-index="${j}" ${j<g.affixes.length-1?'':'disabled'} aria-label="降低${esc(title)}${esc(label('affixes',id))}的优先级" title="降低优先级">↓</button></span></li>`).join('')}</ol>`:'<small>选择这个部位的暗金装备需要的词条。</small>';
       return `<div class="target-row equipment-slot"><div class="row-heading"><strong>${esc(title)}</strong><div class="row-actions">${commands}</div></div>${ordered}${references}</div>`;
     }
     return `<div class="target-row"><div class="row-heading"><strong>${esc(title)}</strong><div class="row-actions">${commands}</div></div><div class="chips">${bases}</div>${category!=='bases'?`<div class="chips" style="margin-top:12px">${g.affixes.length?chips(g.affixes,'affixes'):'<small>未选择词缀</small>'}</div>`:''}${references}</div>`;
@@ -149,8 +150,8 @@ function openPicker(kind,field,values,types,apply,normalOnly=false,single=false,
   selection={kind,field,chosen:new Set(eligible.map(String)),types,apply,normalOnly,single,excluded};
   const prioritized=kind==='affixes'&&field==='equipment';
   $('picker-title').textContent=kind==='uniques'?'选择所需暗金':kind==='bases'?'选择底材':prioritized?'选择暗金装备需要的词条':'选择目标词缀';
-  $('picker-note').hidden=!prioritized;
-  $('picker-note').textContent=prioritized?'已选词条按优先级排列；新增词条放在最后。应用后可用↑↓调整优先级。':'';
+  $('picker-note').hidden=!prioritized&&field!=='uniques';
+  $('picker-note').textContent=prioritized?'已选词条按优先级排列；新增词条放在最后。应用后可拖放或用↑↓调整。':field==='uniques'?'选中任意套装部件，filter会自动收集对应整套；自动补全项在所需暗金页标注。':'';
   $('picker-search').value='';$('only-selected').checked=false;$('show-legacy').checked=false;
   renderPicker();$('picker').showModal();setTimeout(()=>$('picker-search').focus(),50);
 }
@@ -279,6 +280,31 @@ $('targets').addEventListener('click',e=>{
   const pick=e.target.closest('[data-pick]');if(pick)pickGroup(pick.dataset.pick,Number(pick.dataset.index));
   const del=e.target.closest('[data-delete]');if(del){profile()[category].splice(Number(del.dataset.delete),1);save();render();}
 });
+function clearAffixDrag(){
+  draggingAffix=null;document.querySelectorAll('.priority-affix').forEach(row=>row.classList.remove('dragging','drop-before','drop-after'));
+}
+function acceptsAffixDrop(row){
+  return row&&draggingAffix&&category==='equipment'&&mode==='endgame'&&draggingAffix.saveId===state.active_save_id&&draggingAffix.buildId===activeId&&draggingAffix.group===Number(row.dataset.groupIndex);
+}
+$('targets').addEventListener('dragstart',e=>{
+  const row=e.target.closest('[data-priority-row]');if(!row||category!=='equipment')return;
+  draggingAffix={saveId:state.active_save_id,buildId:activeId,group:Number(row.dataset.groupIndex),from:Number(row.dataset.priorityRow)};
+  e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain',String(draggingAffix.from));row.classList.add('dragging');
+});
+$('targets').addEventListener('dragover',e=>{
+  const row=e.target.closest('[data-priority-row]');if(!acceptsAffixDrop(row))return;
+  e.preventDefault();e.dataTransfer.dropEffect='move';
+  document.querySelectorAll('.priority-affix').forEach(r=>r.classList.remove('drop-before','drop-after'));
+  const rect=row.getBoundingClientRect();row.classList.add(e.clientY<rect.top+rect.height/2?'drop-before':'drop-after');
+});
+$('targets').addEventListener('drop',e=>{
+  const row=e.target.closest('[data-priority-row]');if(!acceptsAffixDrop(row)){clearAffixDrag();return;}
+  e.preventDefault();
+  const rect=row.getBoundingClientRect(),from=draggingAffix.from,group=profile().equipment[draggingAffix.group];
+  let to=Number(row.dataset.priorityRow)+(e.clientY<rect.top+rect.height/2?0:1);if(from<to)to--;
+  clearAffixDrag();if(workspace.placeAffix(group,from,to)){save();render();}
+});
+$('targets').addEventListener('dragend',clearAffixDrag);
 ['picker-search','only-selected','show-legacy'].forEach(id=>$(id).addEventListener('input',renderPicker));
 $('picker-list').onchange=e=>{if(e.target.dataset.id){const id=e.target.dataset.id;if(e.target.checked){if(selection.single)selection.chosen.clear();selection.chosen.add(id);}else selection.chosen.delete(id);if(selection.single||selection.kind==='affixes'&&selection.field==='equipment')renderPicker();else $('selection-count').textContent=`已选${selection.chosen.size}项`;}};
 $('apply-selection').onclick=()=>{selection.apply(workspace.selectionValues(selection.chosen,selection.kind==='affixes'&&selection.field==='equipment'));$('picker').close();};

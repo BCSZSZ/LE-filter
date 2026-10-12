@@ -1,0 +1,214 @@
+{
+  "version": "Version 1.5.0",
+  "source": {
+    "url": "https://www.lastepochtools.com/data/version150/db/js/010a2617c7ebb271af8028db2d94bc15.js",
+    "sha256": "af78878c4cdb6c05f2a1fd2095e760f253635ea50f5f7bf43313bc14fdde5a71"
+  },
+  "sets": {
+    "1": {
+      "id": 1,
+      "name_key": "Item_Names.ItemSet_1_Name",
+      "members": [
+        5,
+        16,
+        26
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name_key": "Item_Names.ItemSet_2_Name",
+      "members": [
+        57,
+        63,
+        64
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name_key": "Item_Names.ItemSet_3_Name",
+      "members": [
+        77,
+        78,
+        79
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name_key": "Item_Names.ItemSet_4_Name",
+      "members": [
+        85,
+        86,
+        87
+      ]
+    },
+    "5": {
+      "id": 5,
+      "name_key": "Item_Names.ItemSet_5_Name",
+      "members": [
+        88,
+        89,
+        90
+      ]
+    },
+    "6": {
+      "id": 6,
+      "name_key": "Item_Names.ItemSet_6_Name",
+      "members": [
+        94,
+        95,
+        96
+      ]
+    },
+    "7": {
+      "id": 7,
+      "name_key": "Item_Names.ItemSet_7_Name",
+      "members": [
+        97,
+        98,
+        99
+      ]
+    },
+    "8": {
+      "id": 8,
+      "name_key": "Item_Names.ItemSet_8_Name",
+      "members": [
+        100,
+        101,
+        102
+      ]
+    },
+    "9": {
+      "id": 9,
+      "name_key": "Item_Names.ItemSet_9_Name",
+      "members": [
+        109,
+        110
+      ]
+    },
+    "10": {
+      "id": 10,
+      "name_key": "Item_Names.ItemSet_10_Name",
+      "members": [
+        127,
+        128,
+        129
+      ]
+    },
+    "11": {
+      "id": 11,
+      "name_key": "Item_Names.ItemSet_11_Name",
+      "members": [
+        138,
+        139,
+        140
+      ]
+    },
+    "12": {
+      "id": 12,
+      "name_key": "Item_Names.ItemSet_12_Name",
+      "members": [
+        156,
+        157,
+        158
+      ]
+    },
+    "13": {
+      "id": 13,
+      "name_key": "Item_Names.ItemSet_13_Name",
+      "members": [
+        170,
+        171
+      ]
+    },
+    "14": {
+      "id": 14,
+      "name_key": "Item_Names.ItemSet_14_Name",
+      "members": [
+        173,
+        174
+      ]
+    },
+    "15": {
+      "id": 15,
+      "name_key": "Item_Names.ItemSet_15_Name",
+      "members": [
+        185,
+        186
+      ]
+    },
+    "16": {
+      "id": 16,
+      "name_key": "Item_Names.ItemSet_16_Name",
+      "members": [
+        193,
+        194
+      ]
+    },
+    "17": {
+      "id": 17,
+      "name_key": "Item_Names.ItemSet_17_Name",
+      "members": [
+        227,
+        228
+      ]
+    },
+    "18": {
+      "id": 18,
+      "name_key": "Item_Names.ItemSet_18_Name",
+      "members": [
+        260,
+        261
+      ]
+    },
+    "19": {
+      "id": 19,
+      "name_key": "Item_Names.ItemSet_19_Name",
+      "members": [
+        451,
+        452,
+        453
+      ]
+    },
+    "20": {
+      "id": 20,
+      "name_key": "Item_Names.ItemSet_20_Name",
+      "members": [
+        454,
+        455
+      ]
+    },
+    "21": {
+      "id": 21,
+      "name_key": "Item_Names.ItemSet_21_Name",
+      "members": [
+        456,
+        457
+      ]
+    },
+    "22": {
+      "id": 22,
+      "name_key": "Item_Names.ItemSet_22_Name",
+      "members": [
+        464,
+        465,
+        466
+      ]
+    },
+    "23": {
+      "id": 23,
+      "name_key": "Item_Names.ItemSet_23_Name",
+      "members": [
+        467,
+        468
+      ]
+    },
+    "24": {
+      "id": 24,
+      "name_key": "Item_Names.ItemSet_24_Name",
+      "members": [
+        481,
+        482
+      ]
+    }
+  }
+}

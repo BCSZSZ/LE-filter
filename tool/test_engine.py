@@ -262,6 +262,50 @@ class ToolTests(unittest.TestCase):
         self.assertFalse(any(r["category"] == "Raxx通用" and r["source_raxx_rule"] in range(12, 17) for r in self.output["rules"]))
         self.assertFalse(any(r["category"] == "珍贵名单低WW静音" for r in self.output["rules"]))
 
+    def test_one_set_piece_collects_all_members_without_rewriting_saved_targets(self):
+        config = self.leveling_config(())
+        config["builds"][0]["profiles"]["endgame"]["uniques"] = [77]
+        before = deepcopy(config)
+        out = e.generate(config)
+        targets = next(r for r in out["rules"] if r["category"] == "BD暗金0LP也留")
+        self.assertEqual(set(targets["uniques"]), {77, 78, 79})
+        for uid in (77, 78, 79):
+            self.assertEqual(first(out, e.CATALOG["uniques"][str(uid)]["type"], uid=uid, rarity="SET",
+                                   categories={"BD暗金0LP也留"})["role"], "主")
+        self.assertEqual(first(out, uid=85, rarity="SET", categories={"BD暗金0LP也留"})["action"], "HIDE")
+        self.assertEqual(config, before)
+
+    def test_set_completion_respects_enabled_builds_and_shared_main_ownership(self):
+        config = self.leveling_config(())
+        main = config["builds"][0]
+        main["profiles"]["endgame"]["uniques"] = [77]
+        other = deepcopy(main); other["id"] = "b"; other["name"] = "B"
+        other["profiles"]["endgame"]["uniques"] = [78, 171]
+        config["builds"].append(other)
+        out = e.generate(config)
+        rows = {r["role"]: set(r["uniques"]) for r in out["rules"] if r["category"] == "BD暗金0LP也留"}
+        self.assertEqual(rows, {"主": {77, 78, 79}, "副": {170, 171}})
+        other["enabled"] = False
+        rows = [r for r in e.generate(config)["rules"] if r["category"] == "BD暗金0LP也留"]
+        self.assertEqual(len(rows), 1); self.assertEqual(set(rows[0]["uniques"]), {77, 78, 79})
+
+    def test_all_frozen_sets_expand_and_common_rules_have_one_unique_condition(self):
+        groups = e.ITEM_SETS.values()
+        self.assertEqual(len(e.ITEM_SETS), 24)
+        self.assertEqual({uid for g in groups for uid in g["members"]},
+                         {int(uid) for uid, u in e.CATALOG["uniques"].items() if u["set"]})
+        for group in e.ITEM_SETS.values():
+            for uid in group["members"]:
+                self.assertEqual(e.expand_unique_sets([uid]), sorted(group["members"]))
+        config = self.leveling_config(())
+        output = e.generate(config)
+        for node, row in zip(parsed(output), output["rules"]):
+            if row["category"] in {"通用暗金／套装0LP保护", "共通暗金神像", "先驱者之针常驻"}:
+                conditions = list(node.find("conditions"))
+                self.assertEqual(len(conditions), 1)
+                self.assertEqual(conditions[0].get(e.XSI + "type"), "UniqueModifiersCondition")
+                self.assertTrue(row["enabled"])
+
     def test_selection_main_and_phase(self):
         config=deepcopy(self.config)
         config["main_id"]="skeleton-necromancer"

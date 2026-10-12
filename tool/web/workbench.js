@@ -131,6 +131,15 @@
     [group.affixes[index],group.affixes[next]]=[group.affixes[next],group.affixes[index]];
     return true;
   }
+  function placeAffix(group,from,to){
+    if(!Number.isInteger(from)||!Number.isInteger(to)||from<0||to<0||from>=group.affixes.length||to>=group.affixes.length||from===to)return false;
+    const [id]=group.affixes.splice(from,1);group.affixes.splice(to,0,id);return true;
+  }
+  function expandUniqueSets(ids,catalog){
+    const result=new Set(ids),selected=new Set(ids);
+    for(const group of Object.values(catalog.item_sets))if(group.members.some(id=>selected.has(id)))group.members.forEach(id=>result.add(id));
+    return [...result];
+  }
   function groupUniques(ids,catalog){
     const groups=new Map();
     for(const id of ids){
@@ -141,7 +150,7 @@
     const order=new Map(catalog.equipment_types.map((type,i)=>[type,i]));
     return [...groups.values()].sort((a,b)=>(order.get(a.type)??order.size)-(order.get(b.type)??order.size));
   }
-  const api={library,restore,emptyConfig,activeSave,addSave,selectDefaults,setTemplateEnabled,setTemplateMain,applyTemplates,activateSave,removeSave,mergeSaves,resetBuild,importRequirement,selectionValues,moveAffix,groupUniques};
+  const api={library,restore,emptyConfig,activeSave,addSave,selectDefaults,setTemplateEnabled,setTemplateMain,applyTemplates,activateSave,removeSave,mergeSaves,resetBuild,importRequirement,selectionValues,moveAffix,placeAffix,expandUniqueSets,groupUniques};
   root.LEWorkbench=api;
   if(typeof module!=='undefined')module.exports=api;
 })(globalThis);

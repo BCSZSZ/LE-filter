@@ -159,3 +159,26 @@ test('adjusted equipment priorities survive reload and backup imports without al
   assert.deepEqual(saved.config.builds[0].profiles.leveling,before.builds[0].profiles.leveling);
   assert.equal(saved.config.main_id,before.main_id);assert.deepEqual(templates,templateBefore);
 });
+
+test('drag placement retains every target, stage and saved scheme after reload',()=>{
+  const {examples,templates,state}=setup(),saved=W.applyTemplates(state,templates,'drag');
+  const group=saved.config.builds[0].profiles.endgame.equipment[0],before=copy(saved.config);
+  assert.equal(W.placeAffix(group,0,2),true);assert.deepEqual(group.affixes,[502,715,34]);
+  assert.equal(W.placeAffix(group,2,0),true);assert.deepEqual(group.affixes,[34,502,715]);
+  assert.equal(W.placeAffix(group,0,3),false);assert.equal(W.placeAffix(group,0,0),false);
+  W.placeAffix(group,1,0);
+  assert.deepEqual(W.restore(examples,JSON.parse(JSON.stringify(state))).saves[0].config.builds[0].profiles.endgame.equipment[0].affixes,[502,34,715]);
+  assert.deepEqual(saved.config.builds[0].profiles.leveling,before.builds[0].profiles.leveling);
+  assert.deepEqual(saved.config.builds[0].profiles.endgame.equipment.slice(1),before.builds[0].profiles.endgame.equipment.slice(1));
+  assert.deepEqual(templates[0].profiles.endgame.equipment[0].affixes,[34,502,715]);
+});
+
+test('set completion is derived for display and never replaces explicitly selected items',()=>{
+  const catalog={item_sets:require('../sources/item-sets.json').sets},selected=[79,171],before=copy(selected);
+  assert.deepEqual(W.expandUniqueSets(selected,catalog),[79,171,77,78,170]);
+  assert.deepEqual(selected,before);assert.deepEqual(W.expandUniqueSets([77,79],catalog),[77,79,78]);
+  assert.deepEqual(W.expandUniqueSets([],catalog),[]);assert.deepEqual(W.expandUniqueSets([6],catalog),[6]);
+  for(const group of Object.values(catalog.item_sets))for(const uid of group.members){
+    assert.deepEqual(W.expandUniqueSets([uid],catalog).sort((a,b)=>a-b),group.members);
+  }
+});

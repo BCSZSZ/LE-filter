@@ -25,6 +25,15 @@ FAMILIES = {"planner": "uniques", "tier7": "equipment", "idol_single": "idols", 
 MULTI_T7_CATEGORIES = {"BD双目标T7", "双T7含BD目标", "任意双T7", "任意至少三T7"}
 UNIQUE_IDOLS = {int(i) for i, u in CATALOG["uniques"].items() if (u.get("type") or "").startswith("IDOL_")}
 HARBINGER_NEEDLE = 344
+ITEM_SETS = read_json("sources/item-sets.json")["sets"]
+SET_MEMBERS = {uid: group["members"] for group in ITEM_SETS.values() for uid in group["members"]}
+
+
+def expand_unique_sets(ids):
+    result = set(ids)
+    for uid in ids:
+        result.update(SET_MEMBERS.get(uid, ()))
+    return sorted(result)
 
 
 def default_common():
@@ -322,10 +331,11 @@ def generate(config, mode="endgame"):
     # Dedicated common rules stay separate from the general zero-LP pool.
     r = add(15, "先驱者之针常驻", 1, name="[共通：先驱者之针常驻]")
     select_uniques(r, [HARBINGER_NEEDLE])
-    all_targets = {i for b in builds for i in b["profiles"]["endgame"]["uniques"]}
+    unique_targets = {b["id"]: set(expand_unique_sets(b["profiles"]["endgame"]["uniques"])) for b in builds}
+    all_targets = set().union(*unique_targets.values())
     claimed = set()
     for b in builds:
-        ids = set(b["profiles"]["endgame"]["uniques"]) - claimed
+        ids = unique_targets[b["id"]] - claimed
         claimed |= ids
         if not ids:
             continue
@@ -515,6 +525,8 @@ def generate(config, mode="endgame"):
             for field, value in {"recolor": "true", "color": color, "BeamColorOverride": beam, "emphasized": str(tier >= 3).lower()}.items():
                 r.find(field).text = value
         facts = inspect_rule(r)
+        if sum(c.get(XSI + "type") == "UniqueModifiersCondition" for c in r.find("conditions")) > 1:
+            raise ValueError(f"{r.findtext('nameOverride')}存在重复暗金条件，请合并为一份选择名单。")
         rows.append({**row, "number": i + 1, "name": facts["name"] or ("显示传奇" if row["source_raxx_rule"] == 8 else "最终隐藏"),
                      "sound": sound_name, "enabled": facts["enabled"], "types": facts["types"],
                      "color": r.findtext("color") if r.findtext("recolor") == "true" else None,
@@ -532,6 +544,7 @@ def generate(config, mode="endgame"):
 
 def bootstrap():
     catalog = deepcopy(CATALOG)
+    catalog["item_sets"] = deepcopy(ITEM_SETS)
     catalog["equipment_types"] = MANIFEST["scope_types"]
     examples = []
     for slug, spec in EVIDENCE["strict_inputs"].items():
