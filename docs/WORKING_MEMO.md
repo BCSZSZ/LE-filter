@@ -2,7 +2,14 @@
 
 更新时间：2026-10-12，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
-## 最新共通策略：套装补全、竖列拖放与暗金条件核查
+## 最新共通策略：6件T0从0LP起最高档
+
+- 玩家确认只用6件T0，三神器在其中，不另猜名单：奥利安之眼61、贪婪虚空208、红戒277、永恒之池473、死亡之舞476、幻灵赠礼478。由原已验证version150数据库rarityTier=T0冻结为sources/ultra-rare-uniques.json，构建脚本校验原db.js SHA；运行期／Pages ZIP离线包含，不改冻结词库或攻略目标。
+- 独立常驻首条一份UniqueModifiersCondition、只含6个ID，Rolls清空，无LP／WW／等级／腐化门槛；“从0LP起”包含全部潜能而非恰好0LP。最高彗星声12、图标5、LARGEST光柱、强调开启，名称金色4／光柱6。优先于普通传奇、LP／WW、BD目标及任意多T7，主副切换及未填目标都不降档。共通界面列出6件，已有保存刷新生成即可，不新增配置字段或覆盖保存。
+- 当前Allie115／109、Allie＋835189／183、默认Strict136／130；4BD278–280仍明确报200上限。旧0LP159、神像10与针344保持各自规则；其编号相应加1。其他规则去掉新增首条并归一Order后，与2c31bfe逐条完全一致，历史XML和所有既有来源保持。
+- 验证记录见[极稀有最高档验证](../analysis/ultra-rare-validation.json)：44项Python检查，包含17项Node状态回归；有限XML匹配覆盖6件在0–4LP、不同WW／等级、腐化和传奇状态、主副切换及无BD目标时优先最高档。网页实际预览／运行包对照不等于游戏客户端或实际声音实测。
+
+## 此前共通策略：套装补全、竖列拖放与暗金条件核查
 
 - 启用BD的终局uniques选中任一套装部件，生成时扩展整套，再按原主／副／共享分配0LP、LP及WW规则；不补所有通用套装，不反写明确目标、冻结来源或个人配置。冻结sources/item-sets.json来自同一version150且校验catalog原SHA的数据库，24套／61件完整覆盖；Pages运行ZIP包含此文件。835明确25项→补齐78、170→显示／收集27项，Allie17项不变；Allie114／108、Allie＋835188／182、默认Strict135／129。
 - 装备词条改为同部位竖列拖放，落点在行上／下半部时插在前／后；拖放后重新编号、保存当前组合，刷新恢复。跨部位／BD／方案不接受，保留↑↓操作与JSON顺序。网页实际拖动Allie头盔34从首位到末位，恢复后为502、715、34；其他部位顺序保持。

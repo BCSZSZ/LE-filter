@@ -123,9 +123,9 @@ class RequirementTests(unittest.TestCase):
     def test_preferred_base_rule_counts_and_no_inferred_priority(self):
         from browser_runtime import browser_bootstrap
         config = deepcopy(browser_bootstrap()["config"])
-        for selected, main, expected in [({"flay-lich-allie-guide"}, "flay-lich-allie-guide", 114),
-                ({"flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835"}, "flay-lich-allie-guide", 188),
-                ({"flay-mana-lich", "skeleton-necromancer"}, "flay-mana-lich", 135)]:
+        for selected, main, expected in [({"flay-lich-allie-guide"}, "flay-lich-allie-guide", 115),
+                ({"flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835"}, "flay-lich-allie-guide", 189),
+                ({"flay-mana-lich", "skeleton-necromancer"}, "flay-mana-lich", 136)]:
             for build in config["builds"]:
                 build["enabled"] = build["id"] in selected
             config["main_id"] = main
@@ -137,7 +137,7 @@ class RequirementTests(unittest.TestCase):
             self.assertFalse(any(r["types"][0] in {"GLOVES", "BELT", "AMULET"} for r in preferred))
         for build in config["builds"]:
             build["enabled"] = True
-        with self.assertRaisesRegex(ValueError, "279条规则，超过200"):
+        with self.assertRaisesRegex(ValueError, "280条规则，超过200"):
             e.generate(config)
 
     def test_explicit_unrestricted_idol_pair_roundtrip(self):

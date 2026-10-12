@@ -96,6 +96,7 @@ function render(){
   document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));
   $('editor').hidden=!ready||view!=='editor';$('preview').hidden=!ready||view!=='preview';
   $('common-rules').hidden=!commonView;
+  $('ultra-rare-targets').innerHTML=chips(catalog.ultra_rare_uniques,'uniques');
   $('common-idols-enabled').checked=config.common.unique_idols_enabled;
   $('common-idol-targets').innerHTML=config.common.unique_idols.length?chips(config.common.unique_idols,'uniques'):'<small>未选择暗金神像</small>';
   $('extra-t7').checked=config.extra_t7;

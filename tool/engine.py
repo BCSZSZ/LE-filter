@@ -27,6 +27,8 @@ UNIQUE_IDOLS = {int(i) for i, u in CATALOG["uniques"].items() if (u.get("type") 
 HARBINGER_NEEDLE = 344
 ITEM_SETS = read_json("sources/item-sets.json")["sets"]
 SET_MEMBERS = {uid: group["members"] for group in ITEM_SETS.values() for uid in group["members"]}
+ULTRA_RARE_UNIQUES = {u["id"] for u in read_json("sources/ultra-rare-uniques.json")["uniques"]}
+GOLD_CATEGORIES = MULTI_T7_CATEGORIES | {"T0极稀有暗金0LP起"}
 
 
 def expand_unique_sets(ids):
@@ -300,6 +302,11 @@ def generate(config, mode="endgame"):
         replacements[n].append((r, row))
         return r
 
+    # T0 identity takes precedence over every potential and build-owned cue.
+    r = add(15, "T0极稀有暗金0LP起", 4, name="[共通：T0极稀有暗金 · 0LP起最高档]")
+    select_uniques(r, ULTRA_RARE_UNIQUES)
+    result.append(replacements[15].pop())
+
     # Global multi-T7 and per-build layers are ordered by cue, then main/secondary.
     add(38, "任意至少三T7", 4, name="[任意至少三T7]")
     replacements[38][-1] = (deepcopy(BASE[48]), replacements[38][-1][1])
@@ -520,7 +527,7 @@ def generate(config, mode="endgame"):
         if tier:
             if row["owners"]:
                 color, beam = ("8", "11") if row["role"] == "主" else ("12", "15")
-            if row["category"] in MULTI_T7_CATEGORIES:
+            if row["category"] in GOLD_CATEGORIES:
                 color, beam = "4", "6"
             for field, value in {"recolor": "true", "color": color, "BeamColorOverride": beam, "emphasized": str(tier >= 3).lower()}.items():
                 r.find(field).text = value
@@ -545,6 +552,7 @@ def generate(config, mode="endgame"):
 def bootstrap():
     catalog = deepcopy(CATALOG)
     catalog["item_sets"] = deepcopy(ITEM_SETS)
+    catalog["ultra_rare_uniques"] = sorted(ULTRA_RARE_UNIQUES)
     catalog["equipment_types"] = MANIFEST["scope_types"]
     examples = []
     for slug, spec in EVIDENCE["strict_inputs"].items():

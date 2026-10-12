@@ -189,6 +189,49 @@ class ToolTests(unittest.TestCase):
             if ww < 14:
                 self.assertEqual(row["category"], "先驱者之针常驻")
 
+    def test_t0_unique_rule_has_no_lp_roll_or_level_gate(self):
+        source = e.read_json("sources/ultra-rare-uniques.json")
+        expected = {61, 208, 277, 473, 476, 478}
+        self.assertEqual({u["id"] for u in source["uniques"]}, expected)
+        for item in source["uniques"]:
+            self.assertEqual(item["rarity_tier"], "T0")
+            self.assertEqual(item["en"], e.CATALOG["uniques"][str(item["id"])]["en"])
+        config = self.leveling_config(())
+        before = deepcopy(config)
+        out = e.generate(config)
+        node, row = next((n, r) for n, r in zip(parsed(out), out["rules"])
+                         if r["category"] == "T0极稀有暗金0LP起")
+        self.assertEqual(row["number"], 1)
+        self.assertEqual((row["tier"], row["role"], row["owners"]), (4, "通用", []))
+        self.assertTrue(row["enabled"])
+        self.assertEqual(set(row["uniques"]), expected)
+        self.assertEqual(len(node.find("conditions")), 1)
+        self.assertEqual(next(iter(node.find("conditions"))).get(e.XSI + "type"), "UniqueModifiersCondition")
+        self.assertTrue(all(not len(u.find("Rolls")) for u in e.condition(node, "UniqueModifiersCondition")))
+        self.assertEqual((node.findtext("SoundId"), node.findtext("MapIconId"), node.findtext("BeamSizeOverride")),
+                         e.ALERTS[4][1:4])
+        self.assertEqual((node.findtext("color"), node.findtext("BeamColorOverride"), node.findtext("emphasized")),
+                         ("4", "6", "true"))
+        self.assertEqual(config, before)
+        self.assertEqual(e.generate(config, "leveling")["xml"], out["xml"])
+
+    def test_t0_highest_alert_precedes_bd_lp_ww_and_legendary(self):
+        output = e.generate(self.leveling_config(()))
+        for uid in (61, 208, 277, 473, 476, 478):
+            for lp, ww, level in ((0, 0, 1), (1, 13, 84), (2, 14, 85), (3, 20, 100), (4, 30, 100)):
+                for rarity in ("UNIQUE", "LEGENDARY"):
+                    with self.subTest(uid=uid, lp=lp, ww=ww, level=level, rarity=rarity):
+                        row = first(output, e.CATALOG["uniques"][str(uid)]["type"], uid=uid,
+                                    lp=lp, ww=ww, level=level, rarity=rarity, corrupted=True)
+                        self.assertEqual((row["category"], row["tier"]), ("T0极稀有暗金0LP起", 4))
+        for main in ("flay-mana-lich", "skeleton-necromancer"):
+            config = deepcopy(self.config)
+            config["main_id"] = main
+            output = e.generate(config)
+            for uid in (277, 208):
+                row = first(output, uid=uid, lp=0, rarity="UNIQUE")
+                self.assertEqual((row["category"], row["role"], row["tier"]), ("T0极稀有暗金0LP起", "通用", 4))
+
     def test_common_unique_idols_selection_and_persistent_needle(self):
         config = self.leveling_config(())
         old = deepcopy(config)
@@ -234,8 +277,8 @@ class ToolTests(unittest.TestCase):
             for u in release["uniques"]:
                 self.assertEqual(e.CATALOG["uniques"][str(u["id"])]["en"], u["en"])
                 row = first(out, u["type"], uid=u["id"], rarity="UNIQUE", lp=0, ww=0)
-                expected = "共通暗金神像" if u["id"] in e.UNIQUE_IDOLS else "通用暗金／套装0LP保护"
-                self.assertEqual((row["category"], row["tier"], row["role"]), (expected, 1, "通用"))
+                expected = "T0极稀有暗金0LP起" if u["id"] in e.ULTRA_RARE_UNIQUES else "共通暗金神像" if u["id"] in e.UNIQUE_IDOLS else "通用暗金／套装0LP保护"
+                self.assertEqual((row["category"], row["tier"], row["role"]), (expected, 4 if u["id"] in e.ULTRA_RARE_UNIQUES else 1, "通用"))
         for lp, tier in [(1, 2), (2, 3), (3, 4)]:
             self.assertEqual(first(out, "IDOL_2x2", uid=486, rarity="UNIQUE", lp=lp)["tier"], tier)
         self.assertEqual(first(out, uid=0, rarity="UNIQUE")["action"], "HIDE")

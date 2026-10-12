@@ -1,0 +1,194 @@
+{
+  "date": "2026-10-12",
+  "user_confirmed_ids": [
+    61,
+    208,
+    277,
+    473,
+    476,
+    478
+  ],
+  "source": {
+    "version": "Version 1.5.0",
+    "source": {
+      "url": "https://www.lastepochtools.com/data/version150/db/js/010a2617c7ebb271af8028db2d94bc15.js",
+      "sha256": "af78878c4cdb6c05f2a1fd2095e760f253635ea50f5f7bf43313bc14fdde5a71"
+    },
+    "selection": "Visible non-set T0 equipment; six items confirmed by the player on 2026-10-12.",
+    "uniques": [
+      {
+        "id": 61,
+        "en": "Orian's Eye",
+        "zh": "奥利安之眼",
+        "type": "AMULET",
+        "rarity_tier": "T0",
+        "reroll_chance": 0.97
+      },
+      {
+        "id": 208,
+        "en": "Ravenous Void",
+        "zh": "贪婪虚空",
+        "type": "GLOVES",
+        "rarity_tier": "T0",
+        "reroll_chance": 0.98
+      },
+      {
+        "id": 277,
+        "en": "Red Ring of Atlaria",
+        "zh": "阿特拉里亚的红戒指",
+        "type": "RING",
+        "rarity_tier": "T0",
+        "reroll_chance": 0.98
+      },
+      {
+        "id": 473,
+        "en": "Eternal Font",
+        "zh": "永恒之池",
+        "type": "AMULET",
+        "rarity_tier": "T0",
+        "reroll_chance": 0.998
+      },
+      {
+        "id": 476,
+        "en": "Death Dance",
+        "zh": "死亡之舞",
+        "type": "BOOTS",
+        "rarity_tier": "T0",
+        "reroll_chance": 0.999
+      },
+      {
+        "id": 478,
+        "en": "Gift of the Eidolon",
+        "zh": "幻灵赠礼",
+        "type": "GLOVES",
+        "rarity_tier": "T0",
+        "reroll_chance": 0.999
+      }
+    ]
+  },
+  "top_rule": {
+    "category": "T0极稀有暗金0LP起",
+    "tier": 4,
+    "role": "通用",
+    "owners": [],
+    "source_raxx_rule": 15,
+    "number": 1,
+    "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+    "sound": "彗星",
+    "enabled": true,
+    "types": [],
+    "color": "4",
+    "bases": [],
+    "uniques": [
+      61,
+      208,
+      277,
+      473,
+      476,
+      478
+    ],
+    "affixes": [],
+    "gate": "没有额外阶数／等级门槛",
+    "action": "SHOW",
+    "xml": "<Rule xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\">\n      <type>SHOW</type>\n      <conditions>\n        <Condition i:type=\"UniqueModifiersCondition\">\n          <Uniques>\n            <UniqueId>61</UniqueId>\n            <Rolls />\n          </Uniques>\n          <Uniques>\n            <UniqueId>208</UniqueId>\n            <Rolls />\n          </Uniques>\n          <Uniques>\n            <UniqueId>277</UniqueId>\n            <Rolls />\n          </Uniques>\n          <Uniques>\n            <UniqueId>473</UniqueId>\n            <Rolls />\n          </Uniques>\n          <Uniques>\n            <UniqueId>476</UniqueId>\n            <Rolls />\n          </Uniques>\n          <Uniques>\n            <UniqueId>478</UniqueId>\n            <Rolls />\n          </Uniques>\n        </Condition>\n      </conditions>\n      <recolor>true</recolor>\n      <color>4</color>\n      <isEnabled>true</isEnabled>\n      <levelDependent_deprecated>false</levelDependent_deprecated>\n      <minLvl_deprecated>0</minLvl_deprecated>\n      <maxLvl_deprecated>0</maxLvl_deprecated>\n      <emphasized>true</emphasized>\n      <nameOverride>[共通：T0极稀有暗金 · 0LP起最高档]</nameOverride>\n      <SoundId>12</SoundId>\n      <MapIconId>5</MapIconId>\n      <BeamOverride>true</BeamOverride>\n      <BeamSizeOverride>LARGEST</BeamSizeOverride>\n      <BeamColorOverride>6</BeamColorOverride>\n      <Order>0</Order>\n    </Rule>\n  "
+  },
+  "configs": [
+    {
+      "selected": [
+        "flay-mana-lich",
+        "skeleton-necromancer"
+      ],
+      "main_id": "flay-mana-lich",
+      "count": 136,
+      "enabled": 130,
+      "other_rules_identical_to_2c31bfe_after_order_normalization": true,
+      "xml_sha256": "2cc702d3c90a4763cef2f310756c7c6f0b889779e6a32c57f4eb075cba70d82a"
+    },
+    {
+      "selected": [
+        "flay-lich-allie-guide"
+      ],
+      "main_id": "flay-lich-allie-guide",
+      "count": 115,
+      "enabled": 109,
+      "other_rules_identical_to_2c31bfe_after_order_normalization": true,
+      "xml_sha256": "d9f5c56bcfffadda4306c4357f1e29c527337f49b78220015c4f8533cd37e0cc"
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide"
+      ],
+      "main_id": "flay-lich-allie-guide",
+      "count": 189,
+      "enabled": 183,
+      "other_rules_identical_to_2c31bfe_after_order_normalization": true,
+      "xml_sha256": "dc70e1a58b60d58d8295cdc867dff4cfb671332f9e3c5cb4bc67ad452c910b20"
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide"
+      ],
+      "main_id": "bleed-skeleton-roamer-guide-835",
+      "count": 189,
+      "enabled": 183,
+      "other_rules_identical_to_2c31bfe_after_order_normalization": true,
+      "xml_sha256": "59cce8eba3120d359ac3e91d717cb602bcf722b73e751681538274424e67c558"
+    }
+  ],
+  "existing_frozen_files_unchanged": 34,
+  "tests": {
+    "python_checks": 44,
+    "includes_node_state_tests": 17,
+    "matching_cases": 60,
+    "lp_range": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "ww_values": [
+      0,
+      13,
+      14,
+      20,
+      30
+    ],
+    "levels": [
+      1,
+      84,
+      85,
+      100
+    ],
+    "rarities": [
+      "UNIQUE",
+      "LEGENDARY"
+    ],
+    "with_corruption": true,
+    "no_bd_targets_and_main_secondary_switch": true,
+    "passed": true
+  },
+  "verification_limits": [
+    "Finite XML predicate checks and browser preview, not Last Epoch client import or actual sound playback."
+  ],
+  "browser": {
+    "static_pyodide_page": true,
+    "common_panel_shows_all_six_without_a_saved_scheme": true,
+    "preview_rule_number": 1,
+    "preview_alert": "彗星",
+    "preview_color": "金色",
+    "preview_targets": [
+      61,
+      208,
+      277,
+      473,
+      476,
+      478
+    ],
+    "default_count": 136,
+    "default_enabled": 130,
+    "xml_download_not_claimed": true
+  }
+}

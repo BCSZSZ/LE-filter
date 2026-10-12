@@ -1,0 +1,58 @@
+{
+  "version": "Version 1.5.0",
+  "source": {
+    "url": "https://www.lastepochtools.com/data/version150/db/js/010a2617c7ebb271af8028db2d94bc15.js",
+    "sha256": "af78878c4cdb6c05f2a1fd2095e760f253635ea50f5f7bf43313bc14fdde5a71"
+  },
+  "selection": "Visible non-set T0 equipment; six items confirmed by the player on 2026-10-12.",
+  "uniques": [
+    {
+      "id": 61,
+      "en": "Orian's Eye",
+      "zh": "奥利安之眼",
+      "type": "AMULET",
+      "rarity_tier": "T0",
+      "reroll_chance": 0.97
+    },
+    {
+      "id": 208,
+      "en": "Ravenous Void",
+      "zh": "贪婪虚空",
+      "type": "GLOVES",
+      "rarity_tier": "T0",
+      "reroll_chance": 0.98
+    },
+    {
+      "id": 277,
+      "en": "Red Ring of Atlaria",
+      "zh": "阿特拉里亚的红戒指",
+      "type": "RING",
+      "rarity_tier": "T0",
+      "reroll_chance": 0.98
+    },
+    {
+      "id": 473,
+      "en": "Eternal Font",
+      "zh": "永恒之池",
+      "type": "AMULET",
+      "rarity_tier": "T0",
+      "reroll_chance": 0.998
+    },
+    {
+      "id": 476,
+      "en": "Death Dance",
+      "zh": "死亡之舞",
+      "type": "BOOTS",
+      "rarity_tier": "T0",
+      "reroll_chance": 0.999
+    },
+    {
+      "id": 478,
+      "en": "Gift of the Eidolon",
+      "zh": "幻灵赠礼",
+      "type": "GLOVES",
+      "rarity_tier": "T0",
+      "reroll_chance": 0.999
+    }
+  ]
+}
