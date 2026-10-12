@@ -136,3 +136,26 @@ test('malformed backups and duplicate BD identities are rejected before loading'
   }
   assert.deepEqual(W.restore(examples,state),state);
 });
+
+test('equipment selection retains priorities and appends new targets instead of sorting by ID',()=>{
+  const chosen=new Set(['34','502','715']);
+  assert.deepEqual(W.selectionValues(chosen,true),[34,502,715]);
+  chosen.add('2');chosen.add('36');chosen.delete('502');
+  assert.deepEqual(W.selectionValues(chosen,true),[34,715,2,36]);
+  assert.deepEqual(W.selectionValues(chosen),[2,34,36,715]);
+  assert.deepEqual([...chosen],['34','715','2','36']);
+});
+
+test('adjusted equipment priorities survive reload and backup imports without altering template or targets',()=>{
+  const {examples,templates,state}=setup(),saved=W.applyTemplates(state,templates,'priorities');
+  const group=saved.config.builds[0].profiles.endgame.equipment.find(g=>g.type==='ONE_HANDED_AXE');
+  const before=copy(saved.config),templateBefore=copy(templates),targetSet=[...group.affixes].sort((a,b)=>a-b);
+  assert.equal(W.moveAffix(group,0,-1),false);assert.equal(W.moveAffix(group,group.affixes.length-1,1),false);
+  assert.equal(W.moveAffix(group,2,-1),true);assert.deepEqual(group.affixes,[943,718,2,724]);
+  const restored=W.restore(examples,JSON.parse(JSON.stringify(state)));
+  W.mergeSaves(restored,state,()=> 'imported-priorities');
+  const imported=W.activeSave(restored).config.builds[0].profiles.endgame.equipment.find(g=>g.type==='ONE_HANDED_AXE');
+  assert.deepEqual(imported.affixes,[943,718,2,724]);assert.deepEqual([...imported.affixes].sort((a,b)=>a-b),targetSet);
+  assert.deepEqual(saved.config.builds[0].profiles.leveling,before.builds[0].profiles.leveling);
+  assert.equal(saved.config.main_id,before.main_id);assert.deepEqual(templates,templateBefore);
+});

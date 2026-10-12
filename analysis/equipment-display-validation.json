@@ -1,0 +1,415 @@
+{
+  "date": "2026-10-12",
+  "python_tests": 39,
+  "node_state_tests": 15,
+  "equipment_priorities": {
+    "HELMET": [
+      34,
+      502,
+      715
+    ],
+    "BODY_ARMOR": [
+      34,
+      502,
+      52,
+      25
+    ],
+    "GLOVES": [
+      86,
+      34,
+      2,
+      715,
+      502
+    ],
+    "BELT": [
+      52,
+      36,
+      18,
+      330,
+      75
+    ],
+    "BOOTS": [
+      502,
+      97,
+      505,
+      36,
+      715
+    ],
+    "RELIC": [
+      34,
+      429,
+      502
+    ],
+    "ONE_HANDED_AXE": [
+      943,
+      2,
+      718,
+      724
+    ],
+    "ONE_HANDED_DAGGER": [
+      943,
+      2,
+      718,
+      724
+    ],
+    "RING": [
+      502,
+      38,
+      25
+    ],
+    "AMULET": [
+      34,
+      86,
+      93,
+      6,
+      25
+    ]
+  },
+  "unique_groups": {
+    "flay-lich-allie-guide": {
+      "unique_count": 17,
+      "slot_count": 10,
+      "groups": {
+        "HELMET": [
+          6,
+          357
+        ],
+        "BOOTS": [
+          132,
+          253
+        ],
+        "RING": [
+          277,
+          477
+        ],
+        "ONE_HANDED_DAGGER": [
+          342
+        ],
+        "AMULET": [
+          353,
+          376,
+          469
+        ],
+        "GLOVES": [
+          372,
+          415
+        ],
+        "RELIC": [
+          413,
+          433
+        ],
+        "BELT": [
+          416
+        ],
+        "ONE_HANDED_AXE": [
+          420
+        ],
+        "BODY_ARMOR": [
+          475
+        ]
+      }
+    },
+    "bleed-skeleton-roamer-guide-835": {
+      "unique_count": 25,
+      "slot_count": 13,
+      "groups": {
+        "HELMET": [
+          4,
+          471
+        ],
+        "BODY_ARMOR": [
+          8
+        ],
+        "ONE_HANDED_AXE": [
+          29
+        ],
+        "RING": [
+          66,
+          477
+        ],
+        "CATALYST": [
+          77,
+          447
+        ],
+        "ONE_HANDED_MACES": [
+          79
+        ],
+        "BOOTS": [
+          91,
+          253,
+          296,
+          476
+        ],
+        "AMULET": [
+          164,
+          374,
+          444,
+          469,
+          473
+        ],
+        "SHIELD": [
+          171,
+          295
+        ],
+        "TWO_HANDED_AXE": [
+          269
+        ],
+        "RELIC": [
+          300,
+          413
+        ],
+        "GLOVES": [
+          332
+        ],
+        "BELT": [
+          416
+        ]
+      }
+    }
+  },
+  "original_xml_sha256": "d6ad845e0fb3d3a87999b7545630c02cd71796894c4d2e88c6ab47c511a2cc7e",
+  "xml_unchanged_after_priority_move": true,
+  "requirements_roundtrip_preserves_order": true,
+  "count": 188,
+  "enabled": 182,
+  "browser_checks": {
+    "allie_priorities_match_all_10_source_groups": true,
+    "equipment_base_buttons": 0,
+    "equipment_unrestricted_base_hint": false,
+    "reordered_head_after_picker_apply": [
+      502,
+      34,
+      715
+    ],
+    "reordered_head_after_reload": [
+      502,
+      34,
+      715
+    ],
+    "allie_unique_count": 17,
+    "allie_unique_slots": 10,
+    "guide835_unique_count": 25,
+    "guide835_unique_slots": 13,
+    "preview_count": 188,
+    "preview_enabled": 182,
+    "browser_errors": []
+  },
+  "preserved_file_count": 53,
+  "preserved_files": [
+    {
+      "file": "filters/Flay-Mana-Lich+Skeleton-Necromancer-v2.xml",
+      "sha256": "b98ac8760726009ece4bef27bde7f6ad9cc2d2806e8996630ecbb96d41e1e71c"
+    },
+    {
+      "file": "filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml",
+      "sha256": "ddfb6889366162de32eaf4a9dbd050f23496a1d902189cff340b5ec444da6ec9"
+    },
+    {
+      "file": "filters/Flay-Mana-Lich+Skeleton-Necromancer.xml",
+      "sha256": "a6026b9a065042ead7e4e9bd1461b20f0687a148d5a087669b6763c7f461cc78"
+    },
+    {
+      "file": "requirements/bleed-skeleton-roamer-guide-835.endgame.json",
+      "sha256": "7272c54e9a6436fd4a4617c469d9613dc6e54b1378abd4c41c3408f8376c537d"
+    },
+    {
+      "file": "requirements/bleed-skeleton-roamer-guide-835.leveling.json",
+      "sha256": "46fb51f53b8383abfbb2a2feb88bfbe975a218039715485b2d8dfaee1d25de99"
+    },
+    {
+      "file": "requirements/flay-lich-allie-guide.endgame.json",
+      "sha256": "2a904049a9a2aa82d0a0ab490d52c74477f934175f51d8332418462ca238fd1d"
+    },
+    {
+      "file": "requirements/flay-lich-allie-guide.leveling.json",
+      "sha256": "71c601489ef6b3716ece19b2f45892221467150135f57a795e170537a42be3c6"
+    },
+    {
+      "file": "scripts/analyze_build_inputs.py",
+      "sha256": "4decb984268ca384370119c85f8c91e73d3f04c57b3e424f36964927e721302f"
+    },
+    {
+      "file": "scripts/analyze_filter.py",
+      "sha256": "4fadb51f0b227f09adf9e6d9e5658c589e9b2d4f11009c611613b10438e81e7a"
+    },
+    {
+      "file": "scripts/analyze_maxroll_filters.py",
+      "sha256": "5906cca7e99716412497cae6a132375332f2fa2f39c7b2841a535e9613afaeef"
+    },
+    {
+      "file": "scripts/build_base_template.py",
+      "sha256": "a2cfff343cbe2b1964206c0993ea6d3d74da29bebbac0e8a7825e22cd1716178"
+    },
+    {
+      "file": "scripts/build_flay_allie_requirements.py",
+      "sha256": "bf458ccc56369b4b7c17c4259e37302e320941a4622fc087e8bfda1ba8e9a861"
+    },
+    {
+      "file": "scripts/build_guide_835_requirements.py",
+      "sha256": "810f919b80db65a6eba8f1d50cb485a2dbbababa7c64bb5e6ff9893b5df8c516"
+    },
+    {
+      "file": "scripts/build_pages.py",
+      "sha256": "8c98aeb692d4afdcda8ba337d8270c7e454d177b1c5b3151abb466d4c84fe079"
+    },
+    {
+      "file": "scripts/build_tool_catalog.py",
+      "sha256": "2e17593819e3c100118097e7469b745a51d30d59fe460630deecdb7faa74f26c"
+    },
+    {
+      "file": "scripts/extract_raxx_variables.py",
+      "sha256": "22f07567fae2933612fb0dd2760a6cb4e48fea38eb6111079cdf57c7751d9246"
+    },
+    {
+      "file": "scripts/generate_current_filter.py",
+      "sha256": "b38e23b62de97b7f46b685e0f589867389f30de8b472074862dbe031fd8eca26"
+    },
+    {
+      "file": "scripts/generate_filter.py",
+      "sha256": "bb9ae2f17ed486c72d8dc35d0e25c10a97925286da298eeeb25634b2a0be4126"
+    },
+    {
+      "file": "scripts/investigate_skeleton_strict.py",
+      "sha256": "e37cd48f5311208fa34bf6ff024a48db05bca3df6715ba67655b5ca6afe878ff"
+    },
+    {
+      "file": "scripts/render_current_filter.py",
+      "sha256": "6d02af06c65b0f7926f9f6d96cf3814cd6e0a06ea2056218c46c0fbaf46d1c65"
+    },
+    {
+      "file": "scripts/render_rules_review.py",
+      "sha256": "2b13a92c92d21e57c612c310caeb8498fa5a756358476b9922a209f3ee4ae217"
+    },
+    {
+      "file": "scripts/verify_base_template.py",
+      "sha256": "dce66b512b15cbbe27da47d2655c5997a831bdf354ab21f2779a1ddd27ae0d6d"
+    },
+    {
+      "file": "scripts/verify_current_filter.py",
+      "sha256": "60e295c48351532a6247c32fee15acb252435f91feacaf66216e297a0a0ca755"
+    },
+    {
+      "file": "scripts/verify_generated_filter.py",
+      "sha256": "9602da2ea219cedcd25ff9457fde9cc1d80c4664483429499902e9651acc0f1e"
+    },
+    {
+      "file": "sources/Raxx's S5 Ultimate Filter v1.0.txt",
+      "sha256": "146465750ab794175676f73b7251ddba610c42c4508bb16b614b6d4982036288"
+    },
+    {
+      "file": "sources/builds/flay-mana-lich-guide.json",
+      "sha256": "1b7f6180f1fd32818c223e5d8daa1c4e9a2a8c405094d8a9a126c5c6ccef0fd8"
+    },
+    {
+      "file": "sources/builds/flay-mana-lich.json",
+      "sha256": "fe5932f3f5990bcffa88cef0e882789855d89cbba89c2d66ed1768f6ea531ba7"
+    },
+    {
+      "file": "sources/builds/letools-allie-flay-extracted.json",
+      "sha256": "0aa01939bd5cb4a672baafef58737b942543f7a57f72af4ea9bc5e8ee2c5cf88"
+    },
+    {
+      "file": "sources/builds/letools-guide-zh-835-extracted.json",
+      "sha256": "aa964dc554078bf8fb20b856515f683db13a1d359734af5b6965195ac701ce9f"
+    },
+    {
+      "file": "sources/builds/manifest.json",
+      "sha256": "b88e7550b8cf6ca5ddc6bfe13376be1b6a2c79c5de50712c829e6b87f778c481"
+    },
+    {
+      "file": "sources/builds/maxroll-flay-mana-lich-strict.xml",
+      "sha256": "4e70c8b9111a28ae257aea7b561d931ac99629a6054646ce18a3ce5e3458995c"
+    },
+    {
+      "file": "sources/builds/maxroll-reference-supplement.json",
+      "sha256": "a8f94e45f86bd8b8e77ae7d09d22869e70dc9436ca9a9113970ecb6a552a9970"
+    },
+    {
+      "file": "sources/builds/maxroll-skeleton-necromancer-strict.xml",
+      "sha256": "5033341708ab5594cfcb70448bf3c6084333f03efa4388e5d4c6f4b1409dbade"
+    },
+    {
+      "file": "sources/builds/maxroll-skeleton-necromancer-very-strict.xml",
+      "sha256": "7e9bb43a06383fad155298c642991e41cf9d125911702e46c8e508634cf55cb1"
+    },
+    {
+      "file": "sources/builds/maxroll-strict-manifest.json",
+      "sha256": "be601551ff46051a0af6ce6ad8ad61e384d6a6ea68c5097b2d96f56c97394354"
+    },
+    {
+      "file": "sources/builds/review-reference.json",
+      "sha256": "df489714f6491d6610de0a4257af5a8c7df2b0b3a28983ed659d9759854f96bc"
+    },
+    {
+      "file": "sources/builds/skeleton-equipment-priorities.png",
+      "sha256": "a4a853ebd7eb9be59a1ad6d4e64a2451a2eef9e054396df317049a107ff5b0b4"
+    },
+    {
+      "file": "sources/builds/skeleton-idol-priorities.png",
+      "sha256": "234aae7df50c586954bf7ce5e82b89d295594ca7baec05ec0022227f7e8cbaf1"
+    },
+    {
+      "file": "sources/builds/skeleton-investigation-manifest.json",
+      "sha256": "d70f0726d870281661a96664716bcbac217967ce651b5f6836bf0b37f43a3d99"
+    },
+    {
+      "file": "sources/builds/skeleton-necromancer.json",
+      "sha256": "456c46bb25c88dc6077ce4189dcd89e268eb12aa8893f44cbe19e35202cc988d"
+    },
+    {
+      "file": "sources/builds/strict-variable-reference.json",
+      "sha256": "0e42a2ff8ca467519900bb85edb4ac3fe851cf75e9f86774dcee18453e07bd9a"
+    },
+    {
+      "file": "sources/builds/transfer-reference.json",
+      "sha256": "f571190f25cd97b2bbc292d9ec5463cbb46ef20a6937e16a6a5023f056b0f9e2"
+    },
+    {
+      "file": "sources/filter-style-reference.json",
+      "sha256": "37a26db4058ded7f88963d1559a9e369a7c1d74f7894778b63165e05f54b7d39"
+    },
+    {
+      "file": "sources/game-reference.json",
+      "sha256": "2f4e8198a2b936b3b639cad53d3f196bab4b3a6fb37bfdaaf002d4995655317b"
+    },
+    {
+      "file": "sources/manifest.json",
+      "sha256": "3904c8a1cf61db4e6671056f0f95bf9a690d2b581763d548f3f0979c79aa1e23"
+    },
+    {
+      "file": "sources/seasonal-unique-protection.json",
+      "sha256": "dd03763aca0d16990d5b0e77214da3486a5761abc92193d22c4f2761babc02f5"
+    },
+    {
+      "file": "sources/tool-catalog.json",
+      "sha256": "cedeabebdd1efb6bb8257b2c70b095cce3dd6169505864f50aea4b3cfbfe60e8"
+    },
+    {
+      "file": "sources/video-era/Raxx-S5-2026-10-01.txt",
+      "sha256": "f0e329df63af9737185bf6d5fdd71cb7663c932ddf954773c56c90a6d8c440ed"
+    },
+    {
+      "file": "templates/LE-base-v1.xml",
+      "sha256": "725e8ce0dc642f0e0bd60ae50f3b9c168b775ecee96fcf1064f1a39c3caae4d4"
+    },
+    {
+      "file": "templates/base-manifest.json",
+      "sha256": "ad19178a51cff97cb61017448c7ca36fca963ec5672914ff90a2c54a564cbee1"
+    },
+    {
+      "file": "tool/browser_runtime.py",
+      "sha256": "4953dbde0b040db0850a25d2aa965b814df98dd452acfdab54fe0f1f11251efc"
+    },
+    {
+      "file": "tool/engine.py",
+      "sha256": "8c0914de01c066cfccd4bb07fa705aecf691a6dfee9316ec19777bda9219e89a"
+    },
+    {
+      "file": "tool/requirements.py",
+      "sha256": "49d1e6b4988781fe3c5300b87f1a106ca0ff36cede88989ff3fdb45e3575c01a"
+    }
+  ],
+  "limitations": [
+    "No game-client import or audio playback tested."
+  ]
+}

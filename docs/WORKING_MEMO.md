@@ -1,6 +1,12 @@
 # 后续工作 memo
 
-更新时间：2026-10-11，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+更新时间：2026-10-12，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+
+## 最新展示：装备词条优先级与暗金部位分类
+
+- 每部位装备词条以现有affixes顺序展示1、2、3…，1最高，个人方案可用↑↓调整。Allie的10组攻略顺序保留；选择器修正原先按ID排序的问题，已选项按优先级展示、新增项追加，编辑保存、刷新和JSON回读保留顺序。纯调序不改变目标集合或XML。
+- 装备页默认文案为暗金装备需要的词条，去掉底材按钮与“底材不限”；选择器和新增部位说明同步。神像／祭坛的底材及独立05照常编辑，旧JSON字段仍保留。
+- 所需暗金按冻结词库type分组，Allie17项分10部位、835的25项分13部位，原ID列表完整保留。39项Python检查包含15项Node状态回归通过；实际静态Pyodide页面核对所有Allie序号及来源顺序、调序后应用选择／刷新保留、两份暗金分组完整、组合188／182。验证记录见[装备展示验证](../analysis/equipment-display-validation.json)。
 
 ## 最新实现：多选模板与一条组合保存方案
 

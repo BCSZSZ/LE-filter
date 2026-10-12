@@ -121,7 +121,27 @@
     b.requirement_sources||={};b.requirement_sources[data.stage]=copy(data.source);
     return b;
   }
-  const api={library,restore,emptyConfig,activeSave,addSave,selectDefaults,setTemplateEnabled,setTemplateMain,applyTemplates,activateSave,removeSave,mergeSaves,resetBuild,importRequirement};
+  function selectionValues(chosen,preserveOrder=false){
+    const values=[...chosen].map(Number);
+    return preserveOrder?values:values.sort((a,b)=>a-b);
+  }
+  function moveAffix(group,index,offset){
+    const next=index+offset;
+    if(!Number.isInteger(index)||![-1,1].includes(offset)||index<0||index>=group.affixes.length||next<0||next>=group.affixes.length)return false;
+    [group.affixes[index],group.affixes[next]]=[group.affixes[next],group.affixes[index]];
+    return true;
+  }
+  function groupUniques(ids,catalog){
+    const groups=new Map();
+    for(const id of ids){
+      const type=catalog.uniques[String(id)]?.type||null;
+      if(!groups.has(type))groups.set(type,{type,ids:[]});
+      groups.get(type).ids.push(id);
+    }
+    const order=new Map(catalog.equipment_types.map((type,i)=>[type,i]));
+    return [...groups.values()].sort((a,b)=>(order.get(a.type)??order.size)-(order.get(b.type)??order.size));
+  }
+  const api={library,restore,emptyConfig,activeSave,addSave,selectDefaults,setTemplateEnabled,setTemplateMain,applyTemplates,activateSave,removeSave,mergeSaves,resetBuild,importRequirement,selectionValues,moveAffix,groupUniques};
   root.LEWorkbench=api;
   if(typeof module!=='undefined')module.exports=api;
 })(globalThis);

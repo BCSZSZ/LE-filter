@@ -105,6 +105,8 @@ function render(){
   $('categories').innerHTML=categories().map(([key,title],i)=>`<button data-category="${key}" class="${category===key?'active':''}"><span class="step-num">0${i+1}</span>${title}</button>`).join('');
   const item=categories().find(c=>c[0]===category);
   $('category-title').textContent=item[1];$('add-target').textContent=item[2];$('add-target').hidden=!item[2];
+  $('category-note').textContent=category==='equipment'?'暗金装备需要的词条。每个部位按优先级从高到低排列，1为最高；可用↑↓调整。':category==='uniques'?'按装备部位分类，点击“选择暗金”修改需求。':'';
+  $('category-note').hidden=!['equipment','uniques'].includes(category);
   $('export-xml').textContent='导出filter';
   renderTargets();renderSource();
   if(view==='preview'){
@@ -115,17 +117,24 @@ function render(){
 function renderTargets(){
   const data=profile()[category];
   if(!data.length){$('targets').innerHTML=`<div class="empty"><strong>为这个BD选择${categories().find(c=>c[0]===category)[1]}</strong>从列表搜索选择，或导入filter填入目标。</div>`;return;}
-  if(category==='uniques'||category==='affixes'){
+  if(category==='uniques'){
+    $('targets').innerHTML=workspace.groupUniques(data,catalog).map(g=>`<section class="target-row unique-slot" aria-label="${esc(g.type?typeName(g.type):'未分类')}暗金"><div class="row-heading"><strong>${esc(g.type?typeName(g.type):'未分类')}</strong><small>${g.ids.length}件</small></div><div class="chips">${chips(g.ids,'uniques')}</div></section>`).join('');return;
+  }
+  if(category==='affixes'){
     $('targets').innerHTML=`<div class="target-row"><div class="chips">${chips(data,category)}</div></div>`;return;
   }
   $('targets').innerHTML=data.map((g,i)=>{
     if(category==='bases'&&mode==='endgame'){
       return `<div class="target-row"><div class="row-heading"><strong>${esc(typeName(g.type))}</strong><div class="row-actions"><button data-pick="preferred_bases" data-index="${i}">首选底材</button><button data-pick="bases" data-index="${i}">替代底材</button><button data-delete="${i}" aria-label="移除此分组">×</button></div></div><div class="chips"><small>首选</small>${g.preferred_bases?.length?chips(g.preferred_bases,'bases',g.type):'<small>未指定</small>'}</div><div class="chips" style="margin-top:12px"><small>替代</small>${g.bases.length?chips(g.bases,'bases',g.type):'<small>未选择</small>'}</div></div>`;
     }
-    const commands=`${category!=='bases'?`<button data-pick="affixes" data-index="${i}">词缀</button>`:''}<button data-pick="bases" data-index="${i}">底材</button>${category==='idols'?`<button data-pick="pair_bases" data-index="${i}">两项层底材</button>`:''}<button data-delete="${i}" aria-label="移除此分组">×</button>`;
+    const commands=`${category!=='bases'?`<button data-pick="affixes" data-index="${i}">${category==='equipment'?'选择词条':'词缀'}</button>`:''}${category==='equipment'?'':`<button data-pick="bases" data-index="${i}">底材</button>`}${category==='idols'?`<button data-pick="pair_bases" data-index="${i}">两项层底材</button>`:''}<button data-delete="${i}" aria-label="移除此分组">×</button>`;
     const bases=g.bases.length?chips(g.bases,'bases',g.type):`<small>${category==='bases'?'未选择底材':'底材不限'}</small>`;
     const title=category==='idols'?(g.bases.length?baseNames(g.type,g.bases):`${typeName(g.type)}（底材不限）`):typeName(g.type);
     const references=category==='bases'?'':[['enchanted','附魔'],['corrupted','腐化']].filter(([key])=>g[key]?.length).map(([key,title])=>`<div class="chips" style="margin-top:12px"><small>${title}参考</small>${chips(g[key],'affixes')}</div>`).join('');
+    if(category==='equipment'){
+      const ordered=g.affixes.length?`<ol class="affix-priorities" aria-label="${esc(title)}词条优先级">${g.affixes.map((id,j)=>`<li class="chip priority-affix"><span class="priority-number" aria-label="优先级${j+1}">${j+1}</span><span class="affix-name">${esc(label('affixes',id))}</span><small>ID${id}</small><span class="priority-actions"><button data-priority="-1" data-index="${i}" data-affix-index="${j}" ${j?'':'disabled'} aria-label="提高${esc(title)}${esc(label('affixes',id))}的优先级" title="提高优先级">↑</button><button data-priority="1" data-index="${i}" data-affix-index="${j}" ${j<g.affixes.length-1?'':'disabled'} aria-label="降低${esc(title)}${esc(label('affixes',id))}的优先级" title="降低优先级">↓</button></span></li>`).join('')}</ol>`:'<small>选择这个部位的暗金装备需要的词条。</small>';
+      return `<div class="target-row equipment-slot"><div class="row-heading"><strong>${esc(title)}</strong><div class="row-actions">${commands}</div></div>${ordered}${references}</div>`;
+    }
     return `<div class="target-row"><div class="row-heading"><strong>${esc(title)}</strong><div class="row-actions">${commands}</div></div><div class="chips">${bases}</div>${category!=='bases'?`<div class="chips" style="margin-top:12px">${g.affixes.length?chips(g.affixes,'affixes'):'<small>未选择词缀</small>'}</div>`:''}${references}</div>`;
   }).join('');
 }
@@ -138,13 +147,18 @@ function renderSource(){
 function openPicker(kind,field,values,types,apply,normalOnly=false,single=false,excluded=[]){
   const eligible=normalOnly?values.filter(id=>[0,5].includes(catalog.affixes[id]?.special)):values;
   selection={kind,field,chosen:new Set(eligible.map(String)),types,apply,normalOnly,single,excluded};
-  $('picker-title').textContent=kind==='uniques'?'选择所需暗金':kind==='bases'?'选择底材':'选择目标词缀';
+  const prioritized=kind==='affixes'&&field==='equipment';
+  $('picker-title').textContent=kind==='uniques'?'选择所需暗金':kind==='bases'?'选择底材':prioritized?'选择暗金装备需要的词条':'选择目标词缀';
+  $('picker-note').hidden=!prioritized;
+  $('picker-note').textContent=prioritized?'已选词条按优先级排列；新增词条放在最后。应用后可用↑↓调整优先级。':'';
   $('picker-search').value='';$('only-selected').checked=false;$('show-legacy').checked=false;
   renderPicker();$('picker').showModal();setTimeout(()=>$('picker-search').focus(),50);
 }
 function renderPicker(){
   const query=$('picker-search').value.trim().toLowerCase();
   const s=selection;
+  const prioritized=s.kind==='affixes'&&s.field==='equipment';
+  const priorities=new Map([...s.chosen].map((id,i)=>[id,i+1]));
   const all=Object.values(catalog[s.kind]).filter(a=>{
     if(s.excluded.includes(a.id))return false;
     if(s.field==='common-idols'&&(!(a.type||'').startsWith('IDOL_')||a.id===344))return false;
@@ -157,9 +171,10 @@ function renderPicker(){
     if($('only-selected').checked&&!selected)return false;
     return `${a.zh} ${a.en} ${a.id}`.toLowerCase().includes(query);
   });
+  if(prioritized)all.sort((a,b)=>(priorities.get(String(a.id))??Infinity)-(priorities.get(String(b.id))??Infinity));
   $('picker-summary').textContent=`找到${all.length}项 · 中文、英文和ID均可过滤`;
   $('selection-count').textContent=`已选${s.chosen.size}项`;
-  $('picker-list').innerHTML=all.map(a=>`<label class="pick-row"><input type="checkbox" data-id="${a.id}" ${s.chosen.has(String(a.id))?'checked':''}><div><strong>${esc(a.zh)}</strong><small>${esc(a.en)}${s.kind==='affixes'?` · ${a.prefix?'前缀':'后缀'}${a.special===4?' · 附魔参考':a.special===6?(s.field==='altars'?' · 腐化目标':' · 腐化参考'):a.special===1?' · 实验词缀':''}`:s.kind==='uniques'?` · ${esc(typeName(a.type))}${a.set?' · 套装':''}`:` · 需求等级${a.level}`}${a.legacy||a.hidden?' · 旧／隐藏条目':''}</small></div><span class="id-tag">${a.id}</span></label>`).join('')||'<div class="empty">没有匹配项，试试英文或ID。</div>';
+  $('picker-list').innerHTML=all.map(a=>`<label class="pick-row"><input type="checkbox" data-id="${a.id}" ${s.chosen.has(String(a.id))?'checked':''}>${prioritized&&s.chosen.has(String(a.id))?`<span class="priority-number" aria-label="优先级${priorities.get(String(a.id))}">${priorities.get(String(a.id))}</span>`:''}<div><strong>${esc(a.zh)}</strong><small>${esc(a.en)}${s.kind==='affixes'?` · ${a.prefix?'前缀':'后缀'}${a.special===4?' · 附魔参考':a.special===6?(s.field==='altars'?' · 腐化目标':' · 腐化参考'):a.special===1?' · 实验词缀':''}`:s.kind==='uniques'?` · ${esc(typeName(a.type))}${a.set?' · 套装':''}`:` · 需求等级${a.level}`}${a.legacy||a.hidden?' · 旧／隐藏条目':''}</small></div><span class="id-tag">${a.id}</span></label>`).join('')||'<div class="empty">没有匹配项，试试英文或ID。</div>';
 }
 function pickGroup(field,index){
   const g=profile()[category][index];
@@ -177,6 +192,7 @@ function pickGroup(field,index){
 function showGroupDialog(){
   const types=category==='altars'?['IDOL_ALTAR']:category==='idols'?Object.keys(catalog.types).filter(t=>t.startsWith('IDOL_')&&t!=='IDOL_ALTAR'):catalog.equipment_types;
   $('group-title').textContent=categories().find(c=>c[0]===category)[2];
+  $('group-help').textContent=category==='equipment'?'选择装备部位，再选择暗金装备需要的词条；优先级可在装备词条页面调整。':'先选类型，再从可搜索列表选择底材和词缀。';
   $('group-type').innerHTML=types.map(t=>`<option value="${t}">${esc(typeName(t))} ${esc(t.startsWith('IDOL_')&&t!=='IDOL_ALTAR'?t.slice(5):'')}</option>`).join('');
   $('group-dialog').showModal();
 }
@@ -259,12 +275,13 @@ $('add-target').onclick=()=>{
 };
 $('create-group').onclick=()=>{const g=category==='bases'?{type:$('group-type').value,bases:[]}:{type:$('group-type').value,bases:[],affixes:[],corrupted:[],enchanted:[],sources:[]};if(category==='idols')g.pair_bases=[];profile()[category].push(g);$('group-dialog').close();save();render();pickGroup(category==='bases'?'bases':'affixes',profile()[category].length-1);};
 $('targets').addEventListener('click',e=>{
+  const priority=e.target.closest('[data-priority]');if(priority){if(workspace.moveAffix(profile().equipment[Number(priority.dataset.index)],Number(priority.dataset.affixIndex),Number(priority.dataset.priority))){save();render();}return;}
   const pick=e.target.closest('[data-pick]');if(pick)pickGroup(pick.dataset.pick,Number(pick.dataset.index));
   const del=e.target.closest('[data-delete]');if(del){profile()[category].splice(Number(del.dataset.delete),1);save();render();}
 });
 ['picker-search','only-selected','show-legacy'].forEach(id=>$(id).addEventListener('input',renderPicker));
-$('picker-list').onchange=e=>{if(e.target.dataset.id){const id=e.target.dataset.id;if(e.target.checked){if(selection.single)selection.chosen.clear();selection.chosen.add(id);}else selection.chosen.delete(id);if(selection.single)renderPicker();else $('selection-count').textContent=`已选${selection.chosen.size}项`;}};
-$('apply-selection').onclick=()=>{selection.apply([...selection.chosen].map(Number).sort((a,b)=>a-b));$('picker').close();};
+$('picker-list').onchange=e=>{if(e.target.dataset.id){const id=e.target.dataset.id;if(e.target.checked){if(selection.single)selection.chosen.clear();selection.chosen.add(id);}else selection.chosen.delete(id);if(selection.single||selection.kind==='affixes'&&selection.field==='equipment')renderPicker();else $('selection-count').textContent=`已选${selection.chosen.size}项`;}};
+$('apply-selection').onclick=()=>{selection.apply(workspace.selectionValues(selection.chosen,selection.kind==='affixes'&&selection.field==='equipment'));$('picker').close();};
 document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>$(b.dataset.close).close());
 $('import-filter').onclick=()=>{$('import-mode').value=mode;$('import-dialog').showModal();};
 $('xml-file').onchange=async e=>{if(e.target.files[0]){$('xml-text').value=await e.target.files[0].text();await analyzeImport();}};

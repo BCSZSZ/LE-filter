@@ -39,7 +39,7 @@
       <div id="profile-note" class="notice"></div>
       <nav id="categories" class="category-tabs"></nav>
       <section class="panel">
-        <div class="panel-heading"><div><h2 id="category-title"></h2></div><button id="add-target" class="primary"></button></div>
+        <div class="panel-heading"><div><h2 id="category-title"></h2><p id="category-note" class="muted" hidden></p></div><button id="add-target" class="primary"></button></div>
         <div id="targets"></div>
       </section>
       <details id="source-details" class="source-panel"><summary>导入来源与附加参考</summary><div id="source-info"></div></details>
@@ -54,7 +54,7 @@
 <dialog id="picker">
   <div class="dialog-heading"><div><p class="eyebrow">SEARCH & SELECT</p><h2 id="picker-title"></h2></div><button data-close="picker" aria-label="关闭选择器">×</button></div>
   <div class="picker-controls"><input id="picker-search" type="search" placeholder="搜索中文 / English / ID" aria-label="搜索词库"><label><input id="only-selected" type="checkbox">只看已选</label><label><input id="show-legacy" type="checkbox">显示旧／隐藏条目</label></div>
-  <div id="picker-summary" class="muted"></div><div id="picker-list"></div>
+  <p id="picker-note" class="picker-note" hidden></p><div id="picker-summary" class="muted"></div><div id="picker-list"></div>
   <div class="dialog-footer"><span id="selection-count"></span><button id="apply-selection" class="primary">应用选择</button></div>
 </dialog>
 <dialog id="reset-dialog">
@@ -65,7 +65,7 @@
 <dialog id="group-dialog">
   <div class="dialog-heading"><h2 id="group-title"></h2><button data-close="group-dialog" aria-label="关闭分组">×</button></div>
   <label class="field-label">物品类型<select id="group-type"></select></label>
-  <p class="muted">先选类型，再从可搜索列表选择底材和词缀。</p>
+  <p id="group-help" class="muted">先选类型，再从可搜索列表选择底材和词缀。</p>
   <div class="dialog-footer"><button id="create-group" class="primary">添加分组</button></div>
 </dialog>
 <dialog id="import-dialog" class="large-dialog">
