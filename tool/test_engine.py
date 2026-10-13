@@ -78,7 +78,7 @@ class ToolTests(unittest.TestCase):
             ("HELMET", {503:7, 1:7, 17:7}, 4, "任意至少三T7", 100),
             ("HELMET", {503:7, 1:7}, 2, "任意双T7", 100),
             ("HELMET", {34:7, 503:7}, 3, "双T7含BD目标", 100),
-            ("BOOTS", {676:7, 679:7}, 3, "BD双目标T7", 100),
+            ("BOOTS", {676:7, 679:7}, 4, "BD双目标T7", 100),
             ("HELMET", {34:7}, 2, "BD目标单T7", 100),
             ("HELMET", {34:4, 503:7}, 1, "非目标T7＋BD目标", 84),
             ("HELMET", {1156:7}, 0, "Raxx通用", 84),
@@ -118,7 +118,7 @@ class ToolTests(unittest.TestCase):
                 self.assertEqual(first(out, "HELMET", {503: 7, 17: 7}, level=level)["category"], "任意双T7")
                 self.assertEqual(first(out, "HELMET", {503: 8}, level=level)["tier"], 1)
 
-    def test_multiple_t7_labels_and_beams_are_gold(self):
+    def test_multiple_t7_labels_and_beams_follow_bd_then_tier(self):
         cases = [
             ("ONE_HANDED_AXE", {2: 7, 718: 7}, "BD双目标T7"),
             ("BOOTS", {676: 7, 679: 7}, "BD双目标T7"),
@@ -138,8 +138,10 @@ class ToolTests(unittest.TestCase):
                 row = first(out, typ, affixes)
                 self.assertEqual(row["category"], category)
                 node = nodes[row["number"] - 1]
+                owner = "flay-mana-lich" if typ == "ONE_HANDED_AXE" or 34 in affixes else "skeleton-necromancer" if typ == "BOOTS" or 406 in affixes else main_id if 52 in affixes else None
+                colors = e.ALERTS[row["tier"]][4:6] if owner is None or row["tier"] == 4 else ("8", "11") if owner == main_id else ("12", "15")
                 self.assertEqual((node.findtext("recolor"), node.findtext("color"), node.findtext("BeamColorOverride")),
-                                 ("true", "4", "6"), (main_id, row))
+                                 ("true", *colors), (main_id, row))
                 self.assertEqual(node.findtext("SoundId"), e.ALERTS[row["tier"]][1])
             for aid, role in ((34, "主" if main_id == "flay-mana-lich" else "副"),
                               (406, "主" if main_id == "skeleton-necromancer" else "副")):
@@ -162,8 +164,9 @@ class ToolTests(unittest.TestCase):
         self.assertFalse(row["bases"])
         self.assertFalse(row["owners"])
         self.assertFalse(any(c.get(e.XSI + "type") == "CharacterLevelCondition" for c in node.find("conditions")))
-        self.assertEqual((node.findtext("recolor"), node.findtext("color"), node.findtext("emphasized")),
-                         tuple(e.BASE[129].findtext(k) for k in ("recolor", "color", "emphasized")))
+        self.assertEqual(node.findtext("recolor"), "false")
+        self.assertIsNone(row["color"])
+        self.assertEqual(node.findtext("emphasized"), e.BASE[129].findtext("emphasized"))
         for typ, pool in pools.items():
             for aid in pool:
                 for base in (0, 1):
@@ -211,7 +214,7 @@ class ToolTests(unittest.TestCase):
         self.assertEqual((node.findtext("SoundId"), node.findtext("MapIconId"), node.findtext("BeamSizeOverride")),
                          e.ALERTS[4][1:4])
         self.assertEqual((node.findtext("color"), node.findtext("BeamColorOverride"), node.findtext("emphasized")),
-                         ("4", "6", "true"))
+                         ("7", "10", "true"))
         self.assertEqual(config, before)
         self.assertEqual(e.generate(config, "leveling")["xml"], out["xml"])
 
@@ -259,14 +262,14 @@ class ToolTests(unittest.TestCase):
         config["common"] = {"unique_idols_enabled": True, "unique_idols": [211]}
         config["builds"][0]["profiles"]["endgame"]["uniques"] = [211]
         out = e.generate(config)
-        self.assertTrue(any(r["category"] == "共通暗金神像" for r in out["rules"]))
+        self.assertFalse(any(r["category"] == "共通暗金神像" for r in out["rules"]))
         self.assertEqual(first(out, "IDOL_2x2", uid=211, rarity="UNIQUE")["category"], "BD暗金0LP也留")
         config["common"]["unique_idols_enabled"] = False
         self.assertEqual(first(e.generate(config), "IDOL_2x2", uid=211, rarity="UNIQUE")["category"], "BD暗金0LP也留")
         config["builds"][0]["profiles"]["endgame"]["uniques"] = [344]
         out = e.generate(config)
         needle = next(r for r in out["rules"] if r["category"] == "先驱者之针常驻")
-        self.assertEqual((needle["role"], needle["owners"]), ("通用", []))
+        self.assertEqual((needle["role"], needle["owners"]), ("主", [config["builds"][0]["name"]]))
 
     def test_seasonal_uniques_protected_without_build_targets(self):
         out = e.generate(self.leveling_config(()))
@@ -291,16 +294,17 @@ class ToolTests(unittest.TestCase):
         node, row = common[0]
         c = e.condition(node, "UniqueModifiersCondition")
         original = [u for n in [15, 16] for u in e.condition(e.BASE[n], "UniqueModifiersCondition")]
-        expected = ({int(u.findtext("UniqueId")) for u in original} | e.SEASONAL_UNIQUES) - e.UNIQUE_IDOLS
+        bd_ids = {uid for b in self.config["builds"] if b["enabled"] for uid in e.expand_unique_sets(b["profiles"]["endgame"]["uniques"])}
+        expected = ({int(u.findtext("UniqueId")) for u in original} | e.SEASONAL_UNIQUES) - e.UNIQUE_IDOLS - e.ULTRA_RARE_UNIQUES - bd_ids
         self.assertEqual(set(row["uniques"]), expected)
         self.assertEqual(len(c), len(expected))
         self.assertEqual(len(node.find("conditions")), 1)
         actual = {int(u.findtext("UniqueId")): u for u in c}
-        for uid in e.SEASONAL_UNIQUES - e.UNIQUE_IDOLS:
+        for uid in e.SEASONAL_UNIQUES - e.UNIQUE_IDOLS - e.ULTRA_RARE_UNIQUES - bd_ids:
             self.assertFalse(len(actual[uid].find("Rolls")))
         for u in original:
             uid = int(u.findtext("UniqueId"))
-            if uid not in e.SEASONAL_UNIQUES | e.UNIQUE_IDOLS:
+            if uid not in e.SEASONAL_UNIQUES | e.UNIQUE_IDOLS | e.ULTRA_RARE_UNIQUES | bd_ids:
                 self.assertEqual(tree(actual[uid]), tree(u))
         self.assertFalse(any(r["category"] == "Raxx通用" and r["source_raxx_rule"] in range(12, 17) for r in self.output["rules"]))
         self.assertFalse(any(r["category"] == "珍贵名单低WW静音" for r in self.output["rules"]))
@@ -394,7 +398,7 @@ class ToolTests(unittest.TestCase):
         # Boots can roll both targets: one T5 must not use the single-target exception.
         self.assertEqual(first(out, "BOOTS", {28: 5}, level=60, rarity="RARE", categories=scoring)["action"], "HIDE")
 
-    def test_leveling_quality_order_highest_band_first(self):
+    def test_leveling_primary_first_and_highest_band_within_each_bd(self):
         config = self.leveling_config((502, 28))
         other = deepcopy(config["builds"][0]); other["id"] = "b"; other["name"] = "B"
         other["profiles"]["leveling"]["affixes"] = [45, 27]
@@ -405,8 +409,8 @@ class ToolTests(unittest.TestCase):
             if row["source_raxx_rule"] == 63:
                 c = e.condition(node, "CharacterLevelCondition")
                 bands.append((int(c.findtext("minimumLvl")), int(c.findtext("maximumLvl")), row["role"]))
-        self.assertEqual(bands, [(50, 79, "主"), (50, 79, "主"), (50, 79, "副"), (50, 79, "副"),
-                                 (30, 49, "主"), (30, 49, "副"), (0, 29, "主"), (0, 29, "副")])
+        self.assertEqual(bands, [(50, 79, "主"), (50, 79, "主"), (30, 49, "主"), (0, 29, "主"),
+                                 (50, 79, "副"), (50, 79, "副"), (30, 49, "副"), (0, 29, "副")])
 
     def test_leveling_bases_and_early_fallback(self):
         config = self.leveling_config()
@@ -443,7 +447,8 @@ class ToolTests(unittest.TestCase):
     def test_endgame_05_requires_own_target_t7_forever(self):
         config = self.leveling_config(())
         p = config["builds"][0]["profiles"]["endgame"]
-        p["equipment"] = [{"type": "BOOTS", "bases": [], "affixes": [28]}]
+        # A restricted C1 scope leaves the separately requested 05 bases active.
+        p["equipment"] = [{"type": "BOOTS", "bases": [0], "affixes": [28]}]
         p["bases"] = [{"type": "BOOTS", "preferred_bases": [11], "bases": [9]}, {"type": "BOOTS", "bases": [10]}]
         other = deepcopy(config["builds"][0]);other["id"] = "b";other["name"] = "B"
         other["profiles"]["endgame"]["equipment"][0]["affixes"] = [45]
@@ -503,7 +508,7 @@ class ToolTests(unittest.TestCase):
         with self.assertRaises(ValueError):e.generate(config)
         large=deepcopy(self.config)
         original=large["builds"][0]
-        for i in range(20):
+        for i in range(40):
             b=deepcopy(original);b["id"]=f"extra{i}";b["name"]=f"Extra{i}";b["profiles"]["endgame"]["equipment"][0]["affixes"]=[i,i+1];large["builds"].append(b)
         with self.assertRaisesRegex(ValueError,'超过200'):e.generate(large)
 

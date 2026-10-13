@@ -1,8 +1,16 @@
 # 后续工作 memo
 
-更新时间：2026-10-12，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+更新时间：2026-10-14，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
-## 最新共通策略：6件T0从0LP起最高档
+## 最新配色与压缩：彗星→主副BD→其余三档
+
+- 玩家明确选择命中顺序也按彗星→主BD→副BD→通用其余三档，每个BD内部高档在前。主低阶目标＋非目标双T7允许主粉铁匠，85级退出身份层后按通用开始；主一目标神像先于副两目标。所有彗星统一名称红7／光柱10，含6件T0、至少三T7、BD双目标T7、LP≥3及WW≥20；其余主粉8／11、副蓝12／15，共享按主，通用按档色。双T7／T0金色例外取消；非BD静音不改色。4LP叛徒之舌为彗星红，1–2LP为BD粉／蓝。
+- 两条同BD／部位目标恰好T7升彗星，排在一般传奇和低档提示前。恰好T7、目标计数、85级退出点与神像普通计数沿用。23类表示全部普通装备，神像／祭坛／资源另列。
+- 彗星共用颜色，不生成它的主副颜色分支。BD暗金1–2LP同为灵感及身份色，合并为一条；高于此档的潜能仍先匹配。其余WW与传奇保留必要的BD颜色分支及原Rolls对象。
+- 只输出启用项；关闭的选择及原入口仍留在配置／冻结来源。只在其余条件与显示完全相同时合并装备类型，不混不同部位目标池。05所选底材已被同BD C1完整覆盖时省去输出，窄C1范围外的05仍生成。清除重复BD1LP、针344的重复BD0LP、低档T0及前置BD已覆盖的通用名单ID；相同其他条件与词条判定下，完全被前置类型／底材／计数覆盖的目标层省去。无须为保持通用声音另外增加共享配色分支。保存的目标、首选／替代及两阶段来源均不重写。
+- 当前Strict118、Allie95、835109、Allie＋835169，均启用；四BD超过200仍报错。旧Excel、旧XML及下方历史数量不表示现行生成结果。回归与自查记录见analysis/color-priority-validation.json。
+
+## 历史共通策略：6件T0从0LP起最高档
 
 - 玩家确认只用6件T0，三神器在其中，不另猜名单：奥利安之眼61、贪婪虚空208、红戒277、永恒之池473、死亡之舞476、幻灵赠礼478。由原已验证version150数据库rarityTier=T0冻结为sources/ultra-rare-uniques.json，构建脚本校验原db.js SHA；运行期／Pages ZIP离线包含，不改冻结词库或攻略目标。
 - 独立常驻首条一份UniqueModifiersCondition、只含6个ID，Rolls清空，无LP／WW／等级／腐化门槛；“从0LP起”包含全部潜能而非恰好0LP。最高彗星声12、图标5、LARGEST光柱、强调开启，名称金色4／光柱6。优先于普通传奇、LP／WW、BD目标及任意多T7，主副切换及未填目标都不降档。共通界面列出6件，已有保存刷新生成即可，不新增配置字段或覆盖保存。

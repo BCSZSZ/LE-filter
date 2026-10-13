@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from extract_raxx_variables import family, gate_text, inspect_rule
-from generate_filter import XSI, condition, frozen, read_json, replace_ints, signature
+from generate_filter import XSI, condition, frozen, read_json, replace_ints, signature, tree
 from generate_current_filter import ALERTS
 
 CATALOG = read_json("sources/tool-catalog.json")
@@ -28,7 +28,6 @@ HARBINGER_NEEDLE = 344
 ITEM_SETS = read_json("sources/item-sets.json")["sets"]
 SET_MEMBERS = {uid: group["members"] for group in ITEM_SETS.values() for uid in group["members"]}
 ULTRA_RARE_UNIQUES = {u["id"] for u in read_json("sources/ultra-rare-uniques.json")["uniques"]}
-GOLD_CATEGORIES = MULTI_T7_CATEGORIES | {"T0极稀有暗金0LP起"}
 
 
 def expand_unique_sets(ids):
@@ -221,6 +220,74 @@ def potential(rule, dimension, low, high=None):
             e.text = str(value)
 
 
+def merge_equipment_scopes(entries):
+    """Combine types only when every other predicate and cue is identical."""
+    merged, result = {}, []
+    categories = MULTI_T7_CATEGORIES | {"BD目标单T7", "非目标T7＋BD目标"}
+    for rule, row in entries:
+        scope = next((c for c in rule.find("conditions") if c.get(XSI + "type") == "SubTypeCondition"), None)
+        if row["category"] not in categories or scope is None:
+            result.append((rule, row))
+            continue
+        normalized = deepcopy(rule)
+        condition(normalized, "SubTypeCondition").find("type").clear()
+        key = (row["category"], row["tier"], row["role"], tuple(row["owners"]), signature(normalized))
+        if key not in merged:
+            merged[key] = (rule, row)
+            result.append((rule, row))
+            continue
+        previous, previous_row = merged[key]
+        types = list(dict.fromkeys(inspect_rule(previous)["types"] + inspect_rule(rule)["types"]))
+        set_scope(previous, types, inspect_rule(previous)["subtypes"])
+        previous.find("nameOverride").text = f"[{previous_row['role']} {previous_row['category']}] " + "、".join(previous_row["owners"]) + " " + "／".join(CATALOG["types"][t]["zh"] for t in types)
+        if previous_row["category"] == "非目标T7＋BD目标":
+            previous.find("nameOverride").text += " · 85级退出"
+    return result
+
+
+def remove_shadowed_targets(entries):
+    """Omit generated target rules wholly covered by an earlier rule.
+
+    Compare only scopes, ordinary counts with identical tier predicates, and
+    identical remaining conditions. Frozen rules and combined scores stay out.
+    """
+    categories = MULTI_T7_CATEGORIES | {"BD目标单T7", "非目标T7＋BD目标", "神像一普通目标", "神像两普通目标"}
+    kept, result = [], []
+    for rule, row in entries:
+        if row["category"] not in categories or rule.findtext("isEnabled") != "true":
+            result.append((rule, row))
+            continue
+        scope = condition(rule, "SubTypeCondition")
+        types = {t.text for t in scope.find("type")}
+        bases = {int(b.text) for b in scope.find("subTypes")}
+        other, counts = [], []
+        for c in rule.find("conditions"):
+            if c.get(XSI + "type") == "SubTypeCondition":
+                continue
+            if c.get(XSI + "type") != "AffixCondition":
+                other.append(tree(c))
+                continue
+            if c.findtext("combinedComparsion") != "ANY":
+                counts = []
+                break
+            normalized = deepcopy(c)
+            normalized.find("affixes").clear()
+            normalized.find("minOnTheSameItem").text = "1"
+            counts.append((tree(normalized), {int(i.text) for i in c.find("affixes")}, int(c.findtext("minOnTheSameItem"))))
+        rest = sorted(other, key=repr)
+        # With at least n IDs from pool B, at least n-|B-A| must be from A.
+        covered = counts and any(types <= previous_types and (not previous_bases or bases and bases <= previous_bases) and
+                                 rest == previous_rest and all(any(shape == later_shape and n - len(pool - previous_pool) >= minimum
+                                                                  for later_shape, pool, n in counts)
+                                                              for shape, previous_pool, minimum in previous_counts)
+                                 for previous_types, previous_bases, previous_rest, previous_counts in kept)
+        if not covered:
+            result.append((rule, row))
+            if counts:
+                kept.append((types, bases, rest, counts))
+    return result
+
+
 def validate_profile(profile):
     if profile.get("unresolved_affixes"):
         raise ValueError(f"词库未识别这些来源词缀：{profile['unresolved_affixes']}。请更新词库或取消对应来源规则的提取。")
@@ -288,6 +355,14 @@ def generate(config, mode="endgame"):
     replacements, result, warnings = defaultdict(list), [], []
     skip = BLUE | set(range(12, 17)) | set(range(38, 49)) | set(range(136, 162)) | {62, 63, 64, 69, 81, 82, 83, *range(99, 128)}
     full = MANIFEST["full_affix_ids"]
+    # The unconditional first rule already collects every T0 at Comet strength.
+    unique_targets = {b["id"]: set(expand_unique_sets(b["profiles"]["endgame"]["uniques"])) - ULTRA_RARE_UNIQUES for b in builds}
+    all_targets = set().union(*unique_targets.values())
+    claimed, owned_uniques = set(), []
+    for b in builds:
+        ids = unique_targets[b["id"]] - claimed
+        claimed.update(ids)
+        owned_uniques.append((b, ids))
 
     def add(n, category, tier, build=None, group=None, count=1, affix_tier=None, index=0, name=None):
         r = deepcopy(BASE[n])
@@ -302,10 +377,43 @@ def generate(config, mode="endgame"):
         replacements[n].append((r, row))
         return r
 
-    # T0 identity takes precedence over every potential and build-owned cue.
+    def split_unique_ownership(entry):
+        """Comet is universal red; lower cues retain their BD ID colors."""
+        rule, row = entry
+        if row["tier"] == 4:
+            return [entry]
+        selected = next((c for c in rule.find("conditions") if c.get(XSI + "type") == "UniqueModifiersCondition"), None)
+        if selected is not None:
+            selected[:] = [u for u in selected if int(u.findtext("UniqueId")) not in ULTRA_RARE_UNIQUES]
+        variants = []
+        for b, ids in owned_uniques:
+            ids = ids & set(inspect_rule(rule)["unique_ids"]) if selected is not None else ids
+            if not ids:
+                continue
+            copy = deepcopy(rule)
+            if selected is not None:
+                c = condition(copy, "UniqueModifiersCondition")
+                c[:] = [u for u in c if int(u.findtext("UniqueId")) in ids]
+            else:
+                target = deepcopy(BASE[15])
+                select_uniques(target, ids)
+                copy.find("conditions").append(deepcopy(condition(target, "UniqueModifiersCondition")))
+            role = "主" if b["id"] == config["main_id"] else "副"
+            copy.find("nameOverride").text = f"[{role} {row['category']}] {b['name']}"
+            variants.append((copy, {**row, "role": role, "owners": [b["name"]]}))
+        if selected is not None:
+            remaining = [u for u in selected if int(u.findtext("UniqueId")) not in claimed]
+            if not remaining:
+                return variants
+            fallback = deepcopy(rule)
+            condition(fallback, "UniqueModifiersCondition")[:] = deepcopy(remaining)
+            entry = (fallback, row)
+        return [*variants, entry]
+
+    # Every Comet cue, including T0, takes color priority over BD identity.
     r = add(15, "T0极稀有暗金0LP起", 4, name="[共通：T0极稀有暗金 · 0LP起最高档]")
     select_uniques(r, ULTRA_RARE_UNIQUES)
-    result.append(replacements[15].pop())
+    result.extend(split_unique_ownership(replacements[15].pop()))
 
     # Global multi-T7 and per-build layers are ordered by cue, then main/secondary.
     add(38, "任意至少三T7", 4, name="[任意至少三T7]")
@@ -313,7 +421,9 @@ def generate(config, mode="endgame"):
     r = replacements[38][-1][0]
     r.find("nameOverride").text = "[任意至少三T7]"
     set_affix(r, full, 3, 7)
-    for category, count, alert, template in [("BD双目标T7", 2, 3, 38), ("双T7含BD目标", 1, 3, 38), ("BD目标单T7", 1, 2, 38), ("非目标T7＋BD目标", 1, 1, 62)]:
+    peak = replacements[38].pop()
+    result.append(peak)
+    for category, count, alert, template in [("BD双目标T7", 2, 4, 38), ("双T7含BD目标", 1, 3, 38), ("BD目标单T7", 1, 2, 38), ("非目标T7＋BD目标", 1, 1, 62)]:
         for b in builds:
             for g in b["profiles"]["endgame"]["equipment"]:
                 if not g["affixes"] or category == "BD双目标T7" and len(set(g["affixes"])) < 2:
@@ -326,37 +436,36 @@ def generate(config, mode="endgame"):
                 elif category == "双T7含BD目标":
                     r.find("conditions").append(deepcopy(condition(BASE[48], "AffixCondition")))
                     set_affix(r, full, 2, 7, 1)
+    double_targets = [entry for entry in replacements[38] if entry[1]["category"] == "BD双目标T7"]
+    result.extend(double_targets)
+    replacements[38] = [entry for entry in replacements[38] if entry not in double_targets]
     c1 = [e for e in replacements[38] if e[1]["category"] == "BD目标单T7"]
     replacements[38] = [e for e in replacements[38] if e not in c1]
     r = add(38, "任意双T7", 2, name="[任意双T7]")
     r.find("conditions")[:] = deepcopy(BASE[48].find("conditions")[:])
     set_affix(r, full, 2, 7)
     replacements[38].extend(c1)
-    peak = replacements[38].pop(0)
-    result.append(peak)
 
     # Dedicated common rules stay separate from the general zero-LP pool.
     r = add(15, "先驱者之针常驻", 1, name="[共通：先驱者之针常驻]")
     select_uniques(r, [HARBINGER_NEEDLE])
-    unique_targets = {b["id"]: set(expand_unique_sets(b["profiles"]["endgame"]["uniques"])) for b in builds}
-    all_targets = set().union(*unique_targets.values())
-    claimed = set()
-    for b in builds:
-        ids = unique_targets[b["id"]] - claimed
-        claimed |= ids
+    replacements[15][-1:] = split_unique_ownership(replacements[15][-1])
+    for b, ids in owned_uniques:
         if not ids:
             continue
-        r = add(15, "BD暗金0LP也留", 1, b)
-        select_uniques(r, ids)
-        r = add(14, "BD暗金1LP", 3, b)
+        if ids - {HARBINGER_NEEDLE}:
+            r = add(15, "BD暗金0LP也留", 1, b)
+            select_uniques(r, ids - {HARBINGER_NEEDLE})
+        r = add(14, "BD暗金1–2LP", 3, b)
         select_uniques(r, ids)
         r.find("conditions").append(deepcopy(condition(BASE[14], "RarityCondition")))
         r.find("conditions").append(deepcopy(condition(BASE[14], "PotentialCondition")))
-        potential(r, "LegendaryPotential", 1, 1)
+        potential(r, "LegendaryPotential", 1, 2)
     common = config["common"]
-    if common["unique_idols"]:
+    common_idol_ids = set(common["unique_idols"]) - claimed
+    if common_idol_ids:
         r = add(15, "共通暗金神像", 1, name="[共通：暗金神像]")
-        select_uniques(r, common["unique_idols"])
+        select_uniques(r, common_idol_ids)
         r.find("isEnabled").text = str(common["unique_idols_enabled"]).lower()
     for n, lp, ww, tier in [(12, 3, 20, 4), (13, 2, 17, 3), (14, 1, 14, 2)]:
         r = add(n, f"任意LP{'≥' if lp == 3 else '='}{lp}", tier)
@@ -370,8 +479,13 @@ def generate(config, mode="endgame"):
             tmp = deepcopy(BASE[15])
             select_uniques(tmp, missing)
             c.extend(deepcopy(condition(tmp, "UniqueModifiersCondition")[:]))
-    # Put BD LP1 after higher potentials, ahead of generic LP1.
-    replacements[14].sort(key=lambda e: e[1]["category"] != "BD暗金1LP")
+    # The same BD color and Inspiration cue covers LP1 and LP2 in one rule.
+    bd_lp = [entry for entry in replacements[14] if entry[1]["category"] == "BD暗金1–2LP"]
+    replacements[14] = [entry for entry in replacements[14] if entry not in bd_lp]
+    replacements[13][:0] = bd_lp
+    for n in (12, 13, 14):
+        replacements[n] = [variant for entry in replacements[n]
+                           for variant in (split_unique_ownership(entry) if not entry[1]["owners"] and entry[1]["category"] not in {"任意LP=1", "任意LP=2"} else [entry])]
     r = add(15, "通用暗金／套装0LP保护", 1, name="[通用暗金／套装0LP保护]")
     c = condition(r, "UniqueModifiersCondition")
     c.extend(deepcopy(condition(BASE[16], "UniqueModifiersCondition")[:]))
@@ -381,7 +495,9 @@ def generate(config, mode="endgame"):
     tmp = deepcopy(BASE[15])
     select_uniques(tmp, SEASONAL_UNIQUES - set(inspect_rule(r)["unique_ids"]))
     c.extend(deepcopy(condition(tmp, "UniqueModifiersCondition")[:]))
-    c[:] = [u for u in c if int(u.findtext("UniqueId")) not in UNIQUE_IDOLS]
+    c[:] = [u for u in c if int(u.findtext("UniqueId")) not in UNIQUE_IDOLS | ULTRA_RARE_UNIQUES | claimed]
+    if not len(c):
+        replacements[15].pop()
 
     equipment_targets = set()
     for b in builds:
@@ -400,7 +516,14 @@ def generate(config, mode="endgame"):
                     continue
                 for field, title in (("preferred_bases", "首选"), ("bases", "替代")):
                     if pools[field]:
-                        r = add(82, f"终局05{title}底材＋BD目标T7", 0, b, {"type": typ, "bases": sorted(pools[field])})
+                        # C1 already shows a selected base when it covers every
+                        # target in the 05 pool; avoid an unreachable duplicate.
+                        uncovered = [bid for bid in sorted(pools[field]) if not all(any(
+                            e["type"] == typ and aid in e["affixes"] and (not e["bases"] or bid in e["bases"])
+                            for e in p["equipment"]) for aid in targets)]
+                        if not uncovered:
+                            continue
+                        r = add(82, f"终局05{title}底材＋BD目标T7", 0, b, {"type": typ, "bases": uncovered})
                         r.find("conditions").append(deepcopy(condition(BASE[63], "AffixCondition")))
                         set_affix(r, targets, 1, 7)
         for g in p["altars"]:
@@ -500,15 +623,25 @@ def generate(config, mode="endgame"):
         entries = list(replacements[n])
         if n not in skip:
             tier = {8: 3, 15: 1, 16: 1, 37: 1, 68: 1, 70: 1}.get(n, 0)
-            entries.append((base[n], {"category": "Raxx通用", "tier": tier, "role": "通用", "owners": [], "source_raxx_rule": n}))
+            entry = (base[n], {"category": "Raxx通用", "tier": tier, "role": "通用", "owners": [], "source_raxx_rule": n})
+            entries.extend(split_unique_ownership(entry) if n == 8 else [entry])
         result.extend(entries)
+    # First-match priority: Comet, primary BD, secondary BDs, then generic
+    # alerts. Within each identity, stronger cues come first; ties stay stable.
+    def priority(entry):
+        row = entry[1]
+        band = 0 if row["tier"] == 4 else 1 if row["role"] == "主" else 2 if row["owners"] else 3
+        return band, -row["tier"]
+    result.sort(key=priority)
+    result = merge_equipment_scopes(result)
+    result = remove_shadowed_targets(result)
     # Deduplicate identical predicates, preserving main ownership and cue priority.
     merged, rows = {}, []
     for rule, row in result:
-        # Keep the two user-visible common controls identifiable even when a BD
-        # happens to have exactly the same singleton target.
-        common_key = row["category"] if row["category"] in {"先驱者之针常驻", "共通暗金神像"} else None
-        key = (signature(rule), rule.findtext("isEnabled"), row["tier"], common_key)
+        # Disabled entries remain in the source/config and return when enabled.
+        if rule.findtext("isEnabled") != "true":
+            continue
+        key = (signature(rule), rule.findtext("type"))
         if key in merged:
             merged[key][1]["owners"] += [name for name in row["owners"] if name not in merged[key][1]["owners"]]
         else:
@@ -524,11 +657,11 @@ def generate(config, mode="endgame"):
         if row["owners"]:
             r.find("recolor").text = "true"
             r.find("color").text = "8" if row["role"] == "主" else "12"
+        elif not tier:
+            r.find("recolor").text = "false"
         if tier:
-            if row["owners"]:
+            if row["owners"] and tier != 4:
                 color, beam = ("8", "11") if row["role"] == "主" else ("12", "15")
-            if row["category"] in GOLD_CATEGORIES:
-                color, beam = "4", "6"
             for field, value in {"recolor": "true", "color": color, "BeamColorOverride": beam, "emphasized": str(tier >= 3).lower()}.items():
                 r.find(field).text = value
         facts = inspect_rule(r)
@@ -542,7 +675,7 @@ def generate(config, mode="endgame"):
     root = deepcopy(BASE_ROOT)
     root.find("rules")[:] = list(reversed(rules))
     root.find("name").text = "LE Filter - " + " + ".join(b["name"] for b in builds)
-    root.find("description").text = "Raxx base; multiple T7 gold, other BD cues main pink/secondary blue. Non-target single T7 exits at level 85. Only exact T7 counts. Idols exclude enchantments and corruption."
+    root.find("description").text = "Raxx base; first match: Comet red, primary BD pink, secondary BD blue, then generic alert tiers. Within each BD, stronger cues come first. Two BD target T7 affixes use Comet. Non-target single T7 exits at level 85. Only exact T7 counts. Idols exclude enchantments and corruption."
     ET.indent(root, space="  ")
     xml = ET.tostring(root, encoding="unicode", xml_declaration=True) + "\n"
     return {"xml": xml, "rules": rows, "count": len(rows), "enabled": sum(r["enabled"] for r in rows),
