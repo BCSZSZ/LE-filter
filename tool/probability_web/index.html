@@ -12,7 +12,7 @@
   <form id="settings" class="settings" aria-label="概率设置">
     <label class="item-setting">物品种类<select id="item" name="item"></select></label>
     <label>职业<select id="career" name="career"></select></label>
-    <label>区域等级<input id="area" name="area" type="number" min="1" max="100" step="1" value="100" required></label>
+    <div class="fixed-setting"><span id="area-label">区域等级</span><output id="area" aria-labelledby="area-label">100</output></div>
     <label>命运等级<select id="rank" name="rank"></select></label>
     <label>腐化等级<input id="corruption" name="corruption" type="number" min="0" max="100000" step="1" placeholder="0"></label>
   </form>
@@ -48,7 +48,7 @@
   <section class="rules" aria-labelledby="tier-rules">
     <h2 id="tier-rules">T 级生成规律</h2>
     <p>自然阶数 <span class="arrow">→</span> 镜片升阶 <span class="arrow">→</span> 保证崇高</p>
-    <p>普通崇高预言奖励固定 <strong>100 级</strong>。区域等级与巨石腐化不改变单件 T7 概率。职业按装备底材归属计算。</p>
+    <p>普通崇高预言奖励固定 <strong>100 级</strong>，其单件 T7 概率不受巨石腐化影响。职业按装备底材归属计算。</p>
     <div class="table-scroll"><table class="mechanics"><thead><tr><th>起始阶数</th><th>T1</th><th>T2</th><th>T3</th><th>T4</th><th>T5</th></tr></thead><tbody><tr><th>概率</th><td>16%</td><td>28%</td><td>24%</td><td>18%</td><td>14%</td></tr></tbody></table></div>
     <div class="formula-grid">
       <div><span>T5 → T6</span><strong>a = M × (4.5% + 5.1% × r)</strong></div>

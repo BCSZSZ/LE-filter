@@ -1,0 +1,802 @@
+{
+  "scope": "Native static analysis and mathematical reconstruction, not client sampling",
+  "date": "2026-10-17",
+  "gameVersion": "1.5.2.2",
+  "steamBuildID": 25816319,
+  "gameAssemblySHA256": "d5f9fb458f0e9878e697a92b590a586a52fd77e645f8bf87bb4f2b74c6c56567",
+  "assetBundleSHA256": "7fac4caacd757f5f821f0e5c15f6eccf573aa8ebf89d3f464d124dc2e72ac93c",
+  "ordinaryExaltedProphecy": {
+    "itemLevel": 100,
+    "areaLevelEditable": false,
+    "singleItemT7DistributionAffectedByMonolithCorruption": false,
+    "excludesExperimentalAndChampionRewards": true
+  },
+  "naturalRarityExamples": {
+    "scope": "Fixed ilvl100, ordinary Monolith RollRarity, exclude unique/set, other IIR0; mathematical example only",
+    "source_game_version": "1.5.2.2",
+    "rows": [
+      {
+        "corruption": 0,
+        "power": 0,
+        "increased_item_rarity": 0.0,
+        "extra_roll_mean": 0.0,
+        "extra_rolls_floor": 0,
+        "extra_roll_fraction": 0.0,
+        "unique_set_cutoff": 0.00886,
+        "raw_rarity_probabilities_given_non_unique_set": [
+          0.12222289484835644,
+          0.2219666242912202,
+          0.49438020864862686,
+          0.09080452811913553,
+          0.07062574409266098
+        ],
+        "p_raw_rare_given_non_unique_set": 0.1614302722117965,
+        "p_cof11_force_flag_given_non_unique_set": 0.04035756805294913
+      },
+      {
+        "corruption": 100,
+        "power": 60.0,
+        "increased_item_rarity": 0.6,
+        "extra_roll_mean": 0.216,
+        "extra_rolls_floor": 0,
+        "extra_roll_fraction": 0.216,
+        "unique_set_cutoff": 0.01135853929307033,
+        "raw_rarity_probabilities_given_non_unique_set": [
+          0.09745328437064618,
+          0.19698733054704895,
+          0.5147542687895432,
+          0.10595144363179188,
+          0.08485367266096977
+        ],
+        "p_raw_rare_given_non_unique_set": 0.19080511629276165,
+        "p_cof11_force_flag_given_non_unique_set": 0.04770127907319041
+      },
+      {
+        "corruption": 300,
+        "power": 280.45512385878453,
+        "increased_item_rarity": 2.8045512385878455,
+        "extra_roll_mean": 1.0096384458916243,
+        "extra_rolls_floor": 1,
+        "extra_roll_fraction": 0.009638445891624325,
+        "unique_set_cutoff": 0.015963228804210285,
+        "raw_rarity_probabilities_given_non_unique_set": [
+          0.014938941575065931,
+          0.10312617080519763,
+          0.5842698459542852,
+          0.16092614936051375,
+          0.13673889230493752
+        ],
+        "p_raw_rare_given_non_unique_set": 0.29766504166545127,
+        "p_cof11_force_flag_given_non_unique_set": 0.07441626041636282
+      },
+      {
+        "corruption": 1000,
+        "power": 1079.9226559369304,
+        "increased_item_rarity": 10.799226559369304,
+        "extra_roll_mean": 3.887721561372949,
+        "extra_rolls_floor": 3,
+        "extra_roll_fraction": 0.887721561372949,
+        "unique_set_cutoff": 0.021980068656324472,
+        "raw_rarity_probabilities_given_non_unique_set": [
+          5.524785317977553e-05,
+          0.006027187549221626,
+          0.41924498493905565,
+          0.2750534882990456,
+          0.2996190913594974
+        ],
+        "p_raw_rare_given_non_unique_set": 0.574672579658543,
+        "p_cof11_force_flag_given_non_unique_set": 0.14366814491463575
+      }
+    ],
+    "notes": "Nominal constants and continuous RNG; float32 endpoint differences are not modeled."
+  },
+  "specialAffixEvidence": {
+    "objects": [
+      {
+        "path_id": 132329488204248172,
+        "name": "0821 Exalted Champion Item",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 388,
+        "raw_sha256": "618bedbd7322672411c5c709b5030cb906ecb4fbdf2d56a615405822e25718c9",
+        "complete_read_pass": true
+      },
+      {
+        "path_id": 389249685566715774,
+        "name": "0822 Exalted T6+ Champion Item",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 400,
+        "raw_sha256": "5f731ea8c3ab943db22e637f617c3ab4ee00c2d2ee8ccdd42eb36b6d8a54b31c",
+        "complete_read_pass": true
+      },
+      {
+        "path_id": 993660452980042358,
+        "name": "0813 Exalted T7 Experimental Item",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 408,
+        "raw_sha256": "bec2cc35afa63faec98da02292248763b2afcf2df107914baa35ca4a2683050d",
+        "complete_read_pass": true
+      },
+      {
+        "path_id": 1291029719284954868,
+        "name": "0812 Exalted T6+ Experimental Item",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 416,
+        "raw_sha256": "d27851f05ba2e8fabddb6ded575f84580fe70ae5572d21b8bc15c9d50df70536",
+        "complete_read_pass": true
+      },
+      {
+        "path_id": 2171705412333253226,
+        "name": "0810 Rare Experimental Item BossLoot",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 268,
+        "raw_sha256": "c037b7b07e8db6149df1152bb3a56d372c00de5b5a813f96b52fa8e8485935fb",
+        "complete_read_pass": true
+      },
+      {
+        "path_id": 2632201758528426569,
+        "name": "0823 T7 Exalted Champion Item BossLoot",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 272,
+        "raw_sha256": "d9e65bf49e16b165663c60f7d50ff7fea9a45a12f5a6c9b68bbaf7d60173e7a3",
+        "complete_read_pass": true
+      },
+      {
+        "path_id": 2955332227439360059,
+        "name": "MasterAffixesList",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 399772,
+        "raw_sha256": "3544d42552a0eedad5e52210e1152337ac9feb2534d1d6c7962a306d1e5f0f80",
+        "complete_read_pass": true
+      },
+      {
+        "path_id": 3665157752147965116,
+        "name": "0811 Exalted Experimental Item",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 404,
+        "raw_sha256": "e93f246a6896a77561c690acd7614f6cd78e6b95c72de170bfaeeaa7e97f1073",
+        "complete_read_pass": true
+      },
+      {
+        "path_id": 3669649646199173902,
+        "name": "Random Encounter Data",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 1656,
+        "raw_sha256": "b213bec468c9edfe84d04cdba256bdaf8030b1c64929c32a99aa140adf91ff3c",
+        "complete_read_pass": true
+      },
+      {
+        "path_id": 4159467851315898112,
+        "name": "0823 Exalted T7 Champion Item",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 392,
+        "raw_sha256": "4e0a08882192f79c6c8641629fd63eace7bfb0cfc46f1888cf35b00f5a2e1abe",
+        "complete_read_pass": true
+      },
+      {
+        "path_id": 4263691785961793551,
+        "name": "0813 T7 Exalted Experimental Item BossLoot",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 276,
+        "raw_sha256": "afbb83aeb5cc2f87614c3f6ccb8d6f42a1d43c2e94d387cfd2e7d092a27557be",
+        "complete_read_pass": true
+      },
+      {
+        "path_id": 4412454647599916979,
+        "name": "0810 Rare Experimental Item",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 396,
+        "raw_sha256": "37ae1d58a98a4b310b6fcd0adefdfc1c18dcc8e1d017ac779d8a87035740d19b",
+        "complete_read_pass": true
+      },
+      {
+        "path_id": 5322430148506009150,
+        "name": "0820 Rare Champion Item",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 380,
+        "raw_sha256": "c6437e854ae94b21983a61dee238c2a6c82fd5dcdcfc1f163a1c1ad5a8b96129",
+        "complete_read_pass": true
+      },
+      {
+        "path_id": 5571334784198998653,
+        "name": "0821 Exalted Champion Item BossLoot",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 268,
+        "raw_sha256": "515a2d36a7e638eb24f0e01bd7afaee2eb3de3b9413ca6a5cf0ddc29bf7232b5",
+        "complete_read_pass": true
+      },
+      {
+        "path_id": 5947940316184884999,
+        "name": "0820 Rare Champion Item BossLoot",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 264,
+        "raw_sha256": "fcaeb48c8bd229d73da3a0d4549f0e6fa614e58c51394669e4f378052d4c5786",
+        "complete_read_pass": true
+      },
+      {
+        "path_id": 6175116989126307909,
+        "name": "0822 T6+ Exalted Champion Item BossLoot",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 272,
+        "raw_sha256": "89291e81a50de49aac909029172ff70200346c867dfa0143b46258de05a3b382",
+        "complete_read_pass": true
+      },
+      {
+        "path_id": 6413123887799367117,
+        "name": "0812 T6+ Exalted Experimental Item BossLoot",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 276,
+        "raw_sha256": "0964eb5917becd5b92d1d47e22bd48dc4fdbf4faaa63948ff4a1e239d6b2f9bc",
+        "complete_read_pass": true
+      },
+      {
+        "path_id": 7871598011079352144,
+        "name": "0811 Exalted Experimental Item BossLoot",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 272,
+        "raw_sha256": "4fb8d7c71424d8681803edfbbef337a25cd2146377bd68553599175175f849f6",
+        "complete_read_pass": true
+      },
+      {
+        "path_id": 8762713704717204537,
+        "name": "Champion Data List",
+        "serialized_file": "CAB-PermaLoad",
+        "byte_size": 2308,
+        "raw_sha256": "8c74efd4ef49899b2a2c251fc7f6da70153bb689d75c4f24b6d8e8c579eb0b38",
+        "complete_read_pass": true
+      }
+    ],
+    "constants": {
+      "corruptionT7Divisor": {
+        "rva": "0x4567e68",
+        "value": 1000.0
+      },
+      "corruptionT6Divisor": {
+        "rva": "0x456805c",
+        "value": 400.0
+      },
+      "levelT7Divisor": {
+        "rva": "0x47230a4",
+        "value": 2750.0
+      }
+    },
+    "T7Formula": "p+(1-p)*clamp(C/1000,0,1)*p; p=max(0,(itemLevel-89)/2750) when itemLevel>=90, else0; nominal independent-Roll model",
+    "T7Rows": [
+      {
+        "itemLevel": 100,
+        "monolithCorruption": 0,
+        "specialAffixT7ProbabilityNominal": 0.004,
+        "specialAffixT7PercentNominal": 0.4
+      },
+      {
+        "itemLevel": 100,
+        "monolithCorruption": 100,
+        "specialAffixT7ProbabilityNominal": 0.0043984,
+        "specialAffixT7PercentNominal": 0.43984
+      },
+      {
+        "itemLevel": 100,
+        "monolithCorruption": 200,
+        "specialAffixT7ProbabilityNominal": 0.0047968,
+        "specialAffixT7PercentNominal": 0.47968000000000005
+      },
+      {
+        "itemLevel": 100,
+        "monolithCorruption": 400,
+        "specialAffixT7ProbabilityNominal": 0.005593600000000001,
+        "specialAffixT7PercentNominal": 0.5593600000000001
+      },
+      {
+        "itemLevel": 100,
+        "monolithCorruption": 600,
+        "specialAffixT7ProbabilityNominal": 0.0063904,
+        "specialAffixT7PercentNominal": 0.63904
+      },
+      {
+        "itemLevel": 100,
+        "monolithCorruption": 1000,
+        "specialAffixT7ProbabilityNominal": 0.007984,
+        "specialAffixT7PercentNominal": 0.7984
+      },
+      {
+        "itemLevel": 100,
+        "monolithCorruption": 1500,
+        "specialAffixT7ProbabilityNominal": 0.007984,
+        "specialAffixT7PercentNominal": 0.7984
+      }
+    ],
+    "tierRoute": {
+      "RollSpecialAffixTier": "0x11ca000",
+      "baseT7Roll": "0x11ca1a5",
+      "corruptionT7ExtraAttemptRoll": "0x11ca1eb",
+      "extraT7Roll": "0x11ca22c",
+      "returnTierIndex6": "0x11ca46e",
+      "TryAddSpecialAffixCall": "0x11ccba8",
+      "AddAffixNoCostOrChecksCall": "0x11ccc9d",
+      "ItemAffixTierIndexStore": "0x1215f36"
+    },
+    "runePrisonRoute": {
+      "OnDeath": "0x1565790",
+      "SpawnExperimentalItem": "0x15657a0",
+      "captureActiveWebCorruption": "0x1565b80",
+      "setNoWebCorruption0": "0x1565bd8",
+      "readCapturedCorruption": "0x1566d72",
+      "minTierNullWrites": [
+        "0x1566d82",
+        "0x1566d8d"
+      ],
+      "TryAddSpecialAffixCall": "0x1566d9a",
+      "rebuildAfterSuccess": "0x1566e71",
+      "dropAfterDelay": "0x1566ede",
+      "coroutineDropItemAtPoint": "0x11f12e5"
+    },
+    "limitations": [
+      "Native static analysis, not runtime or server sampling.",
+      "Probability describes the single added Experimental affix being T7; it is not probability of the entire item containing exactly one T7.",
+      "The numerical table ignores finite RNG discretization and uses nominal design probabilities."
+    ]
+  },
+  "ordinaryTierAndZoneLevelAudit": {
+    "conclusion": {
+      "ordinary_fixed_inputs_direct_corruption_read_found": false,
+      "universal_no_effect_claim_supported": false,
+      "confirmed_indirect_channel": "Corruption -> ordinary timeline zone level -> natural tier ilvl gate; Reign of Dragons 85 -> 90 at C50",
+      "M_Q_negative_scope": "Confirmed constructor + CoF rank cases only in inspected named classes / matching relevant store sites. Not a proof against arbitrary reflection, indirect function pointers, server code or future versions."
+    },
+    "native_methods": {
+      "RollTier": {
+        "rva": "0x11ca480",
+        "metadata_length": "0x47f",
+        "native_scan_length": "0x47f"
+      },
+      "GetAffixTierUpgradeChance": {
+        "rva": "0x11c26f0",
+        "metadata_length": "0x17b",
+        "native_scan_length": "0x17b"
+      },
+      "RollAffixes": {
+        "rva": "0x11c5e90",
+        "metadata_length": "0x11c5",
+        "native_scan_length": "0x11c5"
+      },
+      "GenerateItems_ctor": {
+        "rva": "0x11ce360",
+        "metadata_length": "0x121",
+        "native_scan_length": "0x121"
+      },
+      "CoF_ToggleRank": {
+        "rva": "0x208ce90",
+        "metadata_length": "0x5c",
+        "native_scan_length": "0x450"
+      },
+      "CoF_OnRanksToggled": {
+        "rva": "0x208b9b0",
+        "metadata_length": "0x24e",
+        "native_scan_length": "0x24e"
+      },
+      "EchoWeb_getZoneLevel": {
+        "rva": "0x12bddd0",
+        "metadata_length": "0xa0",
+        "native_scan_length": "0xa0"
+      },
+      "Difficulty_getLevel": {
+        "rva": "0x1320f80",
+        "metadata_length": "0x22",
+        "native_scan_length": "0x22"
+      },
+      "ZoneInfoManager_ApplyMonolithLevelScaling": {
+        "rva": "0x18a7080",
+        "metadata_length": "0x2e",
+        "native_scan_length": "0x2e"
+      },
+      "ZoneInfoManager_SetZoneLevel": {
+        "rva": "0x18a76a0",
+        "metadata_length": "0x15d",
+        "native_scan_length": "0x15d"
+      },
+      "SimilarItemExtensions_GetSimilarItem": {
+        "rva": "0x12405a0",
+        "metadata_length": "0x309a",
+        "native_scan_length": "0x309a"
+      },
+      "SimilarItemExtensions_AddAffixesUntilFull": {
+        "rva": "0x1243640",
+        "metadata_length": "0x4ac",
+        "native_scan_length": "0x4ac"
+      }
+    },
+    "instruction_evidence": {
+      "M_default_one": {
+        "rva": "0x11ce451",
+        "bytes": "c787840000000000803f",
+        "instruction": "mov dword ptr [rdi + 0x84], 0x3f800000"
+      },
+      "Q_default_one": {
+        "rva": "0x11ce45e",
+        "bytes": "c787880000000000803f",
+        "instruction": "mov dword ptr [rdi + 0x88], 0x3f800000"
+      },
+      "Cof_rank4_M_write": {
+        "rva": "0x208d065",
+        "bytes": "f30f118184000000",
+        "instruction": "movss dword ptr [rcx + 0x84], xmm0"
+      },
+      "Cof_rank9_Q_write": {
+        "rva": "0x208d158",
+        "bytes": "f30f118188000000",
+        "instruction": "movss dword ptr [rcx + 0x88], xmm0"
+      },
+      "Cof_rank11_forceChance_write": {
+        "rva": "0x208d1d9",
+        "bytes": "f30f11417c",
+        "instruction": "movss dword ptr [rcx + 0x7c], xmm0"
+      },
+      "probability_Q_read": {
+        "rva": "0x11c27f0",
+        "bytes": "f30f10b588000000",
+        "instruction": "movss xmm6, dword ptr [rbp + 0x88]"
+      },
+      "probability_M_read": {
+        "rva": "0x11c2800",
+        "bytes": "f30f108584000000",
+        "instruction": "movss xmm0, dword ptr [rbp + 0x84]"
+      },
+      "nemesis_T6_factor": {
+        "rva": "0x11c2816",
+        "bytes": "f30f590566065603",
+        "instruction": "mulss xmm0, dword ptr [rip + 0x3560666]"
+      },
+      "natural_tier_ilvl_gate": {
+        "rva": "0x11ca84a",
+        "bytes": "44397cb920",
+        "instruction": "cmp dword ptr [rcx + rdi*4 + 0x20], r15d"
+      },
+      "natural_GetChance_call": {
+        "rva": "0x11ca88d",
+        "bytes": "e85e7effff",
+        "instruction": "call 0x1811c26f0"
+      },
+      "lens_before_force": {
+        "rva": "0x11c68d0",
+        "bytes": "e85b5dffff",
+        "instruction": "call 0x1811bc630"
+      },
+      "force_GetChance_call": {
+        "rva": "0x11c6fa1",
+        "bytes": "e84ab7ffff",
+        "instruction": "call 0x1811c26f0"
+      },
+      "web_corruption_read": {
+        "rva": "0x12bde5a",
+        "bytes": "8b5330",
+        "instruction": "mov edx, dword ptr [rbx + 0x30]"
+      },
+      "web_passes_corruption_to_level": {
+        "rva": "0x12bde60",
+        "bytes": "e81b310600",
+        "instruction": "call 0x181320f80"
+      },
+      "difficulty_level_mode_check": {
+        "rva": "0x1320f80",
+        "bytes": "83796c01",
+        "instruction": "cmp dword ptr [rcx + 0x6c], 1"
+      },
+      "difficulty_divisor": {
+        "rva": "0x1320f8d",
+        "bytes": "f77970",
+        "instruction": "idiv dword ptr [rcx + 0x70]"
+      },
+      "difficulty_cap100": {
+        "rva": "0x1320f98",
+        "bytes": "3bc1",
+        "instruction": "cmp eax, ecx"
+      },
+      "apply_actual_zone_level": {
+        "rva": "0x18a70a4",
+        "bytes": "e9f7050000",
+        "instruction": "jmp 0x1818a76a0"
+      },
+      "unrelated_spawnerManager_field_store": {
+        "rva": "0x1319088",
+        "bytes": "f30f11b284000000",
+        "instruction": "movss dword ptr [rdx + 0x84], xmm6"
+      }
+    },
+    "M_Q_and_force_writers": [
+      {
+        "field": "GenerateItems.M +0x84",
+        "site": "0x11ce451",
+        "value": 1,
+        "trigger": "constructor"
+      },
+      {
+        "field": "GenerateItems.Q +0x88",
+        "site": "0x11ce45e",
+        "value": 1,
+        "trigger": "constructor"
+      },
+      {
+        "field": "GenerateItems.M +0x84",
+        "site": "0x208d065",
+        "value_on": 1.5,
+        "value_off": 1,
+        "trigger": "CoF rank 4"
+      },
+      {
+        "field": "GenerateItems.Q +0x88",
+        "site": "0x208d158",
+        "value_on": 2,
+        "value_off": 1,
+        "trigger": "CoF rank 9"
+      },
+      {
+        "field": "GenerateItems.rare_to_force +0x7c",
+        "site": "0x208d1d9",
+        "value_on": 0.25,
+        "value_off": 0,
+        "trigger": "CoF rank 11"
+      }
+    ],
+    "constants": {
+      "natural_min_T6_ilvl": 55,
+      "natural_min_T7_ilvl": 90,
+      "normal_upgrade_chances": [
+        0.045,
+        0.066
+      ],
+      "higher_upgrade_chances": [
+        0.096,
+        0.12
+      ],
+      "magic_rarity_prevention": 0.95,
+      "additional_corruption_effect_enum": {
+        "None": 0,
+        "Level": 1,
+        "RewardRarity": 2
+      }
+    },
+    "timeline_asset_evidence": {
+      "source": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Last Epoch\\Last Epoch_Data\\StreamingAssets\\LEAssetBundles\\PermaLoad.bundle",
+      "bundle_sha256": "7fac4caacd757f5f821f0e5c15f6eccf573aa8ebf89d3f464d124dc2e72ac93c",
+      "cached_decoded_source": ".cache\\t7-natural-corruption\\timeline-corruption-assets.json",
+      "cached_decoded_sha256": "44f66f21d18799b71dddc5b3daa68ca07c0a638e043756a0741bc6f2e545b771",
+      "rows": [
+        {
+          "name": "Heorot Timeline",
+          "timelineID": 9,
+          "path_id": 2322533088954582737,
+          "difficulties": [
+            {
+              "level": 90,
+              "additionalCorruptionEffect": 1,
+              "corruptionRequiredPerLevel": 10,
+              "minimumCorruption": 0,
+              "hasMaxCorruption": 1,
+              "maximumCorruption": 50
+            },
+            {
+              "level": 100,
+              "additionalCorruptionEffect": 2,
+              "corruptionRequiredPerLevel": 0,
+              "minimumCorruption": 100,
+              "hasMaxCorruption": 0,
+              "maximumCorruption": 0
+            }
+          ]
+        },
+        {
+          "name": "Reign of Dragons Timeline",
+          "timelineID": 7,
+          "path_id": 4320164323684558167,
+          "difficulties": [
+            {
+              "level": 85,
+              "additionalCorruptionEffect": 1,
+              "corruptionRequiredPerLevel": 10,
+              "minimumCorruption": 0,
+              "hasMaxCorruption": 1,
+              "maximumCorruption": 50
+            },
+            {
+              "level": 100,
+              "additionalCorruptionEffect": 2,
+              "corruptionRequiredPerLevel": 0,
+              "minimumCorruption": 100,
+              "hasMaxCorruption": 0,
+              "maximumCorruption": 0
+            }
+          ]
+        },
+        {
+          "name": "Undead Abomination Timeline",
+          "timelineID": 1,
+          "path_id": 4807937738728098653,
+          "difficulties": [
+            {
+              "level": 62,
+              "additionalCorruptionEffect": 1,
+              "corruptionRequiredPerLevel": 5,
+              "minimumCorruption": 0,
+              "hasMaxCorruption": 1,
+              "maximumCorruption": 50
+            },
+            {
+              "level": 100,
+              "additionalCorruptionEffect": 2,
+              "corruptionRequiredPerLevel": 0,
+              "minimumCorruption": 100,
+              "hasMaxCorruption": 0,
+              "maximumCorruption": 0
+            }
+          ]
+        },
+        {
+          "name": "Volcano Shamans Timeline",
+          "timelineID": 10,
+          "path_id": 5807305461131733093,
+          "difficulties": [
+            {
+              "level": 90,
+              "additionalCorruptionEffect": 1,
+              "corruptionRequiredPerLevel": 10,
+              "minimumCorruption": 0,
+              "hasMaxCorruption": 1,
+              "maximumCorruption": 50
+            },
+            {
+              "level": 100,
+              "additionalCorruptionEffect": 2,
+              "corruptionRequiredPerLevel": 0,
+              "minimumCorruption": 100,
+              "hasMaxCorruption": 0,
+              "maximumCorruption": 0
+            }
+          ]
+        },
+        {
+          "name": "Undead Vs Void Timeline",
+          "timelineID": 6,
+          "path_id": 6136420033080579441,
+          "difficulties": [
+            {
+              "level": 82,
+              "additionalCorruptionEffect": 1,
+              "corruptionRequiredPerLevel": 5,
+              "minimumCorruption": 0,
+              "hasMaxCorruption": 1,
+              "maximumCorruption": 50
+            },
+            {
+              "level": 100,
+              "additionalCorruptionEffect": 2,
+              "corruptionRequiredPerLevel": 0,
+              "minimumCorruption": 100,
+              "hasMaxCorruption": 0,
+              "maximumCorruption": 0
+            }
+          ]
+        },
+        {
+          "name": "Osprix Lance Timeline",
+          "timelineID": 2,
+          "path_id": 6317293183671662386,
+          "difficulties": [
+            {
+              "level": 66,
+              "additionalCorruptionEffect": 1,
+              "corruptionRequiredPerLevel": 5,
+              "minimumCorruption": 0,
+              "hasMaxCorruption": 1,
+              "maximumCorruption": 50
+            },
+            {
+              "level": 100,
+              "additionalCorruptionEffect": 2,
+              "corruptionRequiredPerLevel": 0,
+              "minimumCorruption": 100,
+              "hasMaxCorruption": 0,
+              "maximumCorruption": 0
+            }
+          ]
+        },
+        {
+          "name": "Gaspar Timeline",
+          "timelineID": 8,
+          "path_id": 7916361574883160858,
+          "difficulties": [
+            {
+              "level": 90,
+              "additionalCorruptionEffect": 1,
+              "corruptionRequiredPerLevel": 10,
+              "minimumCorruption": 0,
+              "hasMaxCorruption": 1,
+              "maximumCorruption": 50
+            },
+            {
+              "level": 100,
+              "additionalCorruptionEffect": 2,
+              "corruptionRequiredPerLevel": 0,
+              "minimumCorruption": 100,
+              "hasMaxCorruption": 0,
+              "maximumCorruption": 0
+            }
+          ]
+        },
+        {
+          "name": "Void Rahyeh Timeline",
+          "timelineID": 3,
+          "path_id": 8027024674933020385,
+          "difficulties": [
+            {
+              "level": 70,
+              "additionalCorruptionEffect": 1,
+              "corruptionRequiredPerLevel": 5,
+              "minimumCorruption": 0,
+              "hasMaxCorruption": 1,
+              "maximumCorruption": 50
+            },
+            {
+              "level": 100,
+              "additionalCorruptionEffect": 2,
+              "corruptionRequiredPerLevel": 0,
+              "minimumCorruption": 100,
+              "hasMaxCorruption": 0,
+              "maximumCorruption": 0
+            }
+          ]
+        },
+        {
+          "name": "Frost Lich Timeline",
+          "timelineID": 4,
+          "path_id": 8973592419301480291,
+          "difficulties": [
+            {
+              "level": 74,
+              "additionalCorruptionEffect": 1,
+              "corruptionRequiredPerLevel": 5,
+              "minimumCorruption": 0,
+              "hasMaxCorruption": 1,
+              "maximumCorruption": 50
+            },
+            {
+              "level": 100,
+              "additionalCorruptionEffect": 2,
+              "corruptionRequiredPerLevel": 0,
+              "minimumCorruption": 100,
+              "hasMaxCorruption": 0,
+              "maximumCorruption": 0
+            }
+          ]
+        },
+        {
+          "name": "Lagon Timeline",
+          "timelineID": 5,
+          "path_id": 8976436190434573665,
+          "difficulties": [
+            {
+              "level": 78,
+              "additionalCorruptionEffect": 1,
+              "corruptionRequiredPerLevel": 5,
+              "minimumCorruption": 0,
+              "hasMaxCorruption": 1,
+              "maximumCorruption": 50
+            },
+            {
+              "level": 100,
+              "additionalCorruptionEffect": 2,
+              "corruptionRequiredPerLevel": 0,
+              "minimumCorruption": 100,
+              "hasMaxCorruption": 0,
+              "maximumCorruption": 0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "webValidation": {
+    "areaOutput": "100",
+    "editableAreaControls": 0,
+    "corruption1000KeepsProphecyProbabilities": true,
+    "regressionTestsPassed": 63
+  }
+}

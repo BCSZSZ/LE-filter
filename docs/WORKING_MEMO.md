@@ -2,6 +2,14 @@
 
 更新时间：2026-10-17，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
+## 最新2026-10-17追加：区域固定100与腐化作用边界
+
+- 玩家要求区域等级只显示100，禁止修改；概率页改为output，保留命运、职业和腐化选择，数字及Excel不变。页面“不受腐化影响”明确限定普通崇高预言，不能推广到所有掉落。
+- 普通自然掉落存在腐化mod→increasedItemRarity→RollRarity最大值重抽→raw词缀数量／魔法稀有结构→CoF11转换比例的间接作用。固定ilvl／词缀池／raw rarity／force等输入下，普通RollTier的直接阶数公式不含巨石腐化。详见[T7_NATURAL_CORRUPTION.md](T7_NATURAL_CORRUPTION.md)。
+- 非强化巨石还可通过腐化提高实际区域等级；本机龙之统治timeline7普通难度85+C/10，C50达到90，跨自然T7门槛。强化难度固定100，主工具不混入该等级通道。
+- 放逐法师实验掉落实读本web腐化，并以minTier=null调用RollSpecialAffixTier；100级时T7的基础p=.004，最终p7=p+(1−p)×clamp(C/1000,0,1)×p，0腐化0.4%、1000腐化0.7984%。这是真实特殊词缀阶数反例，与物品Corrupted状态不同；普通崇高预言specialAffix为空，仍不经过。详见[T7_SPECIAL_CORRUPTION.md](T7_SPECIAL_CORRUPTION.md)。
+- 本轮网页63项回归通过，实际浏览器确认区域无可编辑控件、腐化1000仍保持普通预言的原概率。这些仍为本机1.5.2.2静态代码调查及网页检查，没有客户端掉落采样。
+
 ## 最新2026-10-17：普通崇高预言概率工具
 
 - 新增独立静态页面 `/probability/`，不改过滤器策略或工作台。按物品、底材职业、区域、命运阶级、腐化选择，顺序为四镜片恰好1T7／2T7、腐化曲线、镜片升级规律、基础T级生成。默认区域100、命运12；36组合Excel使用相同冻结结果。

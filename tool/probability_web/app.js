@@ -76,7 +76,7 @@ function render() {
 $("settings").addEventListener("submit",event=>event.preventDefault());
 $("item").addEventListener("change",()=>{updateCareers();render();});
 $("career").addEventListener("change",()=>{if (Number($("career").value)) previousCareer=Number($("career").value);render();});
-for (const id of ["rank","area","corruption"]) $(id).addEventListener("input",()=>{
+for (const id of ["rank","corruption"]) $(id).addEventListener("input",()=>{
   if ($(id).validity.valid) render();
 });
 updateCareers();

@@ -10,6 +10,7 @@
   },
   "defaultInputs": {
     "areaLevel": 100,
+    "areaEditable": false,
     "cofRank": 12,
     "itemType": 21,
     "corruption": null
@@ -37,7 +38,7 @@
       "general relic pool",
       "bow locks to Rogue",
       "rank4 Quality unavailable",
-      "area80 and corruption600 keep same probability",
+      "area100 fixed output has no editable control",
       "corruption600 changes selected marker only"
     ],
     "responsive": {
