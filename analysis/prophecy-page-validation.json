@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "scope": "static model, workbook and actual browser UI; not game-client sampling",
+  "gameVersion": "1.5.2.2",
+  "profiles": 36,
+  "equipmentTypes": 23,
+  "files": {
+    "probabilityDataSHA256": "f8e2ccdf2f889d2cf7807ad8ac748214791b0f1f82d18b0d8c1c1b0b409c4f33",
+    "workbookSHA256": "64cbe7d52d100a08372ff1e7e04a7d9d3b37dafa16731cbfe86d91ae72fed3b1"
+  },
+  "defaultInputs": {
+    "areaLevel": 100,
+    "cofRank": 12,
+    "itemType": 21,
+    "corruption": null
+  },
+  "checks": {
+    "pythonRegressionTests": {
+      "passed": 63
+    },
+    "browserModelTests": {
+      "passed": 3
+    },
+    "workbook": {
+      "numericProbabilityCells": 288,
+      "matchesJSON": true,
+      "renderVisuallyReviewed": true
+    },
+    "independentEnumeration": {
+      "lensDistributions": 128,
+      "maximumError": 1.3211653993039363e-14
+    },
+    "actualBrowserCases": [
+      "ring default four-lens comparison",
+      "Sentinel chest pool",
+      "Acolyte helmet pool",
+      "general relic pool",
+      "bow locks to Rogue",
+      "rank4 Quality unavailable",
+      "area80 and corruption600 keep same probability",
+      "corruption600 changes selected marker only"
+    ],
+    "responsive": {
+      "defaultDesktopVisuallyReviewed": true,
+      "mobileViewportCSSPixels": 355,
+      "documentWidthCSSPixels": 341,
+      "mobileProbabilityTableWidthCSSPixels": 305,
+      "mobileProbabilityContainerWidthCSSPixels": 305,
+      "mobileProbabilityNumbersFullyVisible": true
+    },
+    "newDocumentationLinksResolve": true,
+    "buildProbabilityPageDeterministic": true,
+    "existingFilterEngineUnmodified": true
+  },
+  "deploymentURL": "https://bcszsz.github.io/LE-filter/probability/"
+}

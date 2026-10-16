@@ -1,0 +1,164 @@
+{
+  "scope": "Validation of the reconstructed probability model; not game-client measurements.",
+  "independent_small_pool_enumeration": {
+    "scope": "Small artificial pools; exact rational draw comparison and floating native transition enumeration.",
+    "whole_pool_vs_independent_prefix_suffix_pairs_exactly_equal": true,
+    "identity_pair_outcomes": 36,
+    "full_identity_plus_tier_outcomes": 9216,
+    "reduced_tier_outcomes": 256,
+    "conditional_b_compression_max_absolute_error": {
+      "quality": 9.992007221626409e-16,
+      "origin": 1.27675647831893e-15,
+      "finality": 1.1102230246251565e-15
+    },
+    "direct_count_T7_distributions": {
+      "quality": [
+        0.6268542996861569,
+        0.3407878767816258,
+        0.031287431164883896,
+        0.0010548612162329554,
+        1.553115109881911e-05
+      ],
+      "origin": [
+        0.6295958709686779,
+        0.3386361723131051,
+        0.0307922500724473,
+        0.0009660064279528164,
+        9.700217818975408e-06
+      ],
+      "finality": [
+        0.6286834986976583,
+        0.33987700475503685,
+        0.0305666406918544,
+        0.0008657134475974691,
+        7.142407854662289e-06
+      ]
+    },
+    "reduced_count_T7_distributions": {
+      "quality": [
+        0.6268542996861578,
+        0.3407878767816268,
+        0.031287431164883826,
+        0.0010548612162329537,
+        1.5531151098819106e-05
+      ],
+      "origin": [
+        0.6295958709686772,
+        0.33863617231310383,
+        0.03079225007244732,
+        0.0009660064279528152,
+        9.700217818975407e-06
+      ],
+      "finality": [
+        0.6286834986976572,
+        0.3398770047550364,
+        0.030566640691854347,
+        0.0008657134475974684,
+        7.142407854662286e-06
+      ]
+    }
+  },
+  "procedural_monte_carlo": {
+    "seed": 20261017,
+    "results": [
+      {
+        "lens": null,
+        "items": 5000000,
+        "counts_T7": [
+          3878491,
+          1119325,
+          2182,
+          2,
+          0
+        ],
+        "probability": [
+          0.7756982,
+          0.223865,
+          0.0004364,
+          4e-07,
+          0.0
+        ],
+        "z_scores_1T7_2T7": [
+          -1.479110343867987,
+          -1.9288780078737695
+        ],
+        "prefix_probability": 0.1170634,
+        "suffix_probability": 0.1075332
+      },
+      {
+        "lens": "quality",
+        "items": 5000000,
+        "counts_T7": [
+          3610097,
+          1366290,
+          23575,
+          38,
+          0
+        ],
+        "probability": [
+          0.7220194,
+          0.273258,
+          0.004715,
+          7.6e-06,
+          0.0
+        ],
+        "z_scores_1T7_2T7": [
+          -0.09033976895098321,
+          -2.295957784253585
+        ],
+        "prefix_probability": 0.1461608,
+        "suffix_probability": 0.1349554
+      },
+      {
+        "lens": "origin",
+        "items": 5000000,
+        "counts_T7": [
+          3696765,
+          1285711,
+          17506,
+          18,
+          0
+        ],
+        "probability": [
+          0.739353,
+          0.2571422,
+          0.0035012,
+          3.6e-06,
+          0.0
+        ],
+        "z_scores_1T7_2T7": [
+          -1.337583735690689,
+          1.2290949326511436
+        ],
+        "prefix_probability": 0.1625752,
+        "suffix_probability": 0.100358
+      },
+      {
+        "lens": "finality",
+        "items": 5000000,
+        "counts_T7": [
+          3703751,
+          1279473,
+          16751,
+          25,
+          0
+        ],
+        "probability": [
+          0.7407502,
+          0.2558946,
+          0.0033502,
+          5e-06,
+          0.0
+        ],
+        "z_scores_1T7_2T7": [
+          -0.16395463514436345,
+          -1.0852368819119687
+        ],
+        "prefix_probability": 0.1096864,
+        "suffix_probability": 0.1518748
+      }
+    ]
+  },
+  "normalization_tolerance": 1e-10,
+  "deterministic_reproduction": "python -X utf8 scripts/analyze_t7_lens_probability.py"
+}

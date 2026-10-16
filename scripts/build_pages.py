@@ -10,6 +10,32 @@ ROOT = Path(__file__).resolve().parents[1]
 PYODIDE_VERSION = "314.0.7"
 PYODIDE_FILES = ("pyodide.mjs", "pyodide.asm.mjs", "pyodide.asm.wasm", "python_stdlib.zip", "pyodide-lock.json")
 WEB_FILES = ("index.html", "app.js", "workbench.js", "style.css", "browser.js", "worker.mjs")
+PROBABILITY_FILES = ("index.html", "app.js", "model.mjs", "style.css")
+PROBABILITY_WORKBOOK = "outputs/01a135a3-5a09-7e91-83c5-4bd333aeb5ea/普通崇高预言-T7概率.xlsx"
+
+
+def build_probability_page(site):
+    output = site / "probability"
+    output.mkdir(exist_ok=True)
+    digest = hashlib.sha256()
+    for name in PROBABILITY_FILES:
+        content = (ROOT / "tool/probability_web" / name).read_bytes()
+        digest.update(name.encode() + b"\0" + content)
+        (output / name).write_bytes(content)
+    data = (ROOT / "analysis/prophecy-probabilities.json").read_bytes()
+    digest.update(data)
+    (output / "probabilities.json").write_bytes(data)
+    shutil.copyfile(ROOT / PROBABILITY_WORKBOOK, output / "probabilities.xlsx")
+    revision = digest.hexdigest()[:16]
+    app = (output / "app.js").read_text(encoding="utf-8")
+    app = app.replace('"./model.mjs"', f'"./model.mjs?v={revision}"')
+    app = app.replace('"probabilities.json"', f'"probabilities.json?v={revision}"')
+    (output / "app.js").write_text(app, encoding="utf-8", newline="\n")
+    index = (output / "index.html").read_text(encoding="utf-8")
+    for name in ("app.js", "style.css"):
+        index = index.replace(f'"{name}"', f'"{name}?v={revision}"')
+    index = index.replace('href="probabilities.xlsx"', f'href="probabilities.xlsx?v={revision}"')
+    (output / "index.html").write_text(index, encoding="utf-8", newline="\n")
 
 
 def build_archive(output):
@@ -32,6 +58,7 @@ def main():
     site.mkdir(exist_ok=True)
     for name in WEB_FILES:
         shutil.copyfile(ROOT / "tool/web" / name, site / name)
+    build_probability_page(site)
     build_archive(site / "runtime.zip")
     # Hash uncompressed files so Windows and Linux produce the same revision.
     digest = hashlib.sha256()

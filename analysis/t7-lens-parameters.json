@@ -1,0 +1,469 @@
+{
+  "scope": {
+    "game_version": "1.5.2.2",
+    "steam_build_id": "25816319",
+    "build_hash": "8dfd6929fe2d10f2e77b7ed4c8e6910f49b2736b",
+    "investigated_on": "2026-10-17",
+    "item_type_id": 21,
+    "item_type": "Ring",
+    "item_level": 100,
+    "class_requirement": 0,
+    "affix_effect_modifier": 0,
+    "max_prefixes": 2,
+    "max_suffixes": 2,
+    "excludes": [
+      "corruption outcomes",
+      "champion or experimental guaranteed T7",
+      "nemesis empowerment",
+      "additional loot-source rarity modifiers"
+    ],
+    "normal_affixes_only": true,
+    "natural_comparison": "Non-Monolith, no extra rarity modifiers; exclude unique/set; ordinary random Ring generation."
+  },
+  "parameters": {
+    "craftable_tier_cumulative_cutoffs_T5_T4_T3_T2": [
+      0.14,
+      0.32,
+      0.56,
+      0.84
+    ],
+    "normal_uncraftable_upgrade_chances": [
+      0.045,
+      0.066
+    ],
+    "rare_uncraftable_upgrade_chances": [
+      0.096,
+      0.12
+    ],
+    "natural_min_levels": [
+      55,
+      90
+    ],
+    "magic_exalted_prevention_chance": 0.95,
+    "max_cof_exalted_multiplier": 1.5,
+    "max_cof_t7_multiplier": 2,
+    "max_cof_rare_force_chance": 0.25,
+    "force_skip_chance_per_existing_exalted_affix": 0.7,
+    "lens_trigger_chance": 0.2,
+    "lens_candidate_weights_T1_to_T7": [
+      0.01,
+      0.05,
+      0.1,
+      0.5,
+      1,
+      2,
+      0
+    ],
+    "lens_increase_weights": {
+      "1": 1,
+      "2": 1.5,
+      "3": 2
+    },
+    "ordinary_exalted_prophecy_raw_rarity_probabilities_1_to_4": [
+      0.005,
+      0.00995,
+      0.39402,
+      0.59103
+    ],
+    "normal_unmodified_raw_rarity_probabilities_0_to_4": [
+      0.13,
+      0.22,
+      0.49,
+      0.09,
+      0.07
+    ]
+  },
+  "ring_pool": [
+    {
+      "id": 5,
+      "name": "Increased Critical Strike Chance",
+      "type": 0,
+      "weight": 0.800000011920929
+    },
+    {
+      "id": 7,
+      "name": "Void Resistance",
+      "type": 1,
+      "weight": 1.0
+    },
+    {
+      "id": 8,
+      "name": "Added Dodge Rating",
+      "type": 1,
+      "weight": 1.0
+    },
+    {
+      "id": 9,
+      "name": "Increased Elemental Damage",
+      "type": 0,
+      "weight": 1.0
+    },
+    {
+      "id": 10,
+      "name": "Necrotic Resistance",
+      "type": 1,
+      "weight": 1.0
+    },
+    {
+      "id": 12,
+      "name": "Increased Fire Damage",
+      "type": 0,
+      "weight": 0.5
+    },
+    {
+      "id": 13,
+      "name": "Fire Resistance",
+      "type": 1,
+      "weight": 0.699999988079071
+    },
+    {
+      "id": 15,
+      "name": "Increased Void Damage",
+      "type": 0,
+      "weight": 0.5
+    },
+    {
+      "id": 16,
+      "name": "Increased Cold Damage",
+      "type": 0,
+      "weight": 0.5
+    },
+    {
+      "id": 17,
+      "name": "Cold Resistance",
+      "type": 1,
+      "weight": 0.699999988079071
+    },
+    {
+      "id": 18,
+      "name": "Increased Necrotic Damage",
+      "type": 0,
+      "weight": 1.0
+    },
+    {
+      "id": 19,
+      "name": "Poison Resistance",
+      "type": 1,
+      "weight": 1.0
+    },
+    {
+      "id": 22,
+      "name": "Increased Health Regen",
+      "type": 1,
+      "weight": 1.0
+    },
+    {
+      "id": 23,
+      "name": "Increased Lightning Damage",
+      "type": 0,
+      "weight": 0.5
+    },
+    {
+      "id": 24,
+      "name": "Lightning Resistance",
+      "type": 1,
+      "weight": 0.699999988079071
+    },
+    {
+      "id": 25,
+      "name": "Added Health",
+      "type": 1,
+      "weight": 1.0
+    },
+    {
+      "id": 26,
+      "name": "Increased Minion Damage",
+      "type": 0,
+      "weight": 1.0
+    },
+    {
+      "id": 30,
+      "name": "Increased Physical Damage",
+      "type": 0,
+      "weight": 1.0
+    },
+    {
+      "id": 38,
+      "name": "Increased Spell Damage",
+      "type": 0,
+      "weight": 0.5
+    },
+    {
+      "id": 43,
+      "name": "Increased Healing Effectiveness",
+      "type": 0,
+      "weight": 1.0
+    },
+    {
+      "id": 45,
+      "name": "Physical Resistance",
+      "type": 1,
+      "weight": 1.0
+    },
+    {
+      "id": 51,
+      "name": "Added Stun Avoidance",
+      "type": 1,
+      "weight": 0.699999988079071
+    },
+    {
+      "id": 61,
+      "name": "Increased Poison Damage",
+      "type": 0,
+      "weight": 0.699999988079071
+    },
+    {
+      "id": 70,
+      "name": "Minion Health",
+      "type": 0,
+      "weight": 1.0
+    },
+    {
+      "id": 71,
+      "name": "Minion Dodge Rating",
+      "type": 0,
+      "weight": 0.30000001192092896
+    },
+    {
+      "id": 72,
+      "name": "Increased Damage Over Time",
+      "type": 0,
+      "weight": 1.0
+    },
+    {
+      "id": 80,
+      "name": "Elemental Resistance",
+      "type": 1,
+      "weight": 0.699999988079071
+    },
+    {
+      "id": 83,
+      "name": "Potion Health Converted to Ward",
+      "type": 0,
+      "weight": 0.19999998807907104
+    },
+    {
+      "id": 87,
+      "name": "Increased Throwing Attack Speed",
+      "type": 0,
+      "weight": 0.6000000238418579
+    },
+    {
+      "id": 92,
+      "name": "Endurance",
+      "type": 1,
+      "weight": 0.8500000238418579
+    },
+    {
+      "id": 100,
+      "name": "Increased Elemental Damage Over Time",
+      "type": 0,
+      "weight": 0.30000001192092896
+    },
+    {
+      "id": 330,
+      "name": "Increased Mana Regen",
+      "type": 0,
+      "weight": 1.0
+    },
+    {
+      "id": 501,
+      "name": "Strength",
+      "type": 0,
+      "weight": 1.0
+    },
+    {
+      "id": 502,
+      "name": "Intelligence",
+      "type": 0,
+      "weight": 1.0
+    },
+    {
+      "id": 503,
+      "name": "Dexterity",
+      "type": 0,
+      "weight": 0.30000001192092896
+    },
+    {
+      "id": 504,
+      "name": "Attunement",
+      "type": 0,
+      "weight": 0.699999988079071
+    },
+    {
+      "id": 14,
+      "name": "Freeze Rate Multiplier and Cold Resistance",
+      "type": 0,
+      "weight": 1.0
+    },
+    {
+      "id": 97,
+      "name": "Critical Strike Avoidance and Added Dodge Rating",
+      "type": 1,
+      "weight": 0.699999988079071
+    },
+    {
+      "id": 426,
+      "name": "Block Chance and Effectiveness",
+      "type": 1,
+      "weight": 0.800000011920929
+    },
+    {
+      "id": 507,
+      "name": "Throwing Damage and Reduced Mana Cost",
+      "type": 0,
+      "weight": 0.8500000238418579
+    },
+    {
+      "id": 824,
+      "name": "Ward Per Second and Ward Decay Threshold",
+      "type": 1,
+      "weight": 0.3500000238418579
+    },
+    {
+      "id": 825,
+      "name": "Added Health and Added Health Regeneration",
+      "type": 1,
+      "weight": 0.10000002384185791
+    }
+  ],
+  "evidence": {
+    "GameAssembly.dll_sha256": "d5f9fb458f0e9878e697a92b590a586a52fd77e645f8bf87bb4f2b74c6c56567",
+    "global-metadata.dat_sha256": "81ff3419726bb5cf8e4f86eace2b2df2638ec4bc6ffed8a7a5dbaf09aa6f7bed",
+    "PermaLoad.bundle_sha256": "7fac4caacd757f5f821f0e5c15f6eccf573aa8ebf89d3f464d124dc2e72ac93c",
+    "assets": {
+      "Prophecy Data": {
+        "path_id": 3864826814730378121,
+        "lens_chance_fields": {
+          "originLensPrefixTierUpgradeChance": 0.20000000298023224,
+          "finalityLensSuffixTierUpgradeChance": 0.20000000298023224,
+          "qualityLensRandomAffixTierUpgradeChance": 0.20000000298023224
+        }
+      },
+      "MasterAffixesList": {
+        "path_id": 2955332227439360059,
+        "single_affixes": 616,
+        "multi_affixes": 540
+      },
+      "ordinary_exalted_ring_reward": {
+        "path_id": 5929883376935552949,
+        "data": {
+          "m_Name": "0121 Exalted Ring",
+          "ID": 121,
+          "unlocksAtRank": 4,
+          "genericItem": {
+            "itemTypeType": 0,
+            "itemType": 21,
+            "itemTypeGroup": 0,
+            "subType": -1,
+            "requireSubTypeAffixEffectiveness": 0,
+            "subTypeAffixEffectiveness": 0,
+            "minSpecialAffixTier": -1,
+            "property": 54,
+            "ilvl": 100,
+            "rarityType": 1,
+            "rarity": 0,
+            "rarityGroup": 5,
+            "uniqueID": -1,
+            "requireLegendaryType": 0,
+            "requiredLegendaryType": 0,
+            "socketNum": 0,
+            "minimumLegendaryPotential": 0,
+            "alwaysRequireClassCompatibility": 0,
+            "hasClassRequirement": 0,
+            "classRequirementType": 0,
+            "classRequirement": 0,
+            "hasSubClassRequirement": 0,
+            "subClassRequirement": 0,
+            "corruptionBehaviour": 0,
+            "corruptionOutcome": 0,
+            "cannotBeGifted": 0,
+            "cannotBeTraded": 0,
+            "hostOnly": 0,
+            "duplications": 0.0
+          },
+          "itemGenerationType": 0
+        }
+      }
+    },
+    "methods": [
+      {
+        "method": "GenerateItems.RollTier",
+        "rva": "0x11ca480",
+        "sha256": "dcc8fddb902f01bde1087bc0fca6e02203907bdbb98951898c467a8fe9e889b9",
+        "hashed_bytes_length": "0x47f"
+      },
+      {
+        "method": "GenerateItems.GetAffixTierUpgradeChance",
+        "rva": "0x11c26f0",
+        "sha256": "294f3cba9ce39f354604a0a8020879827195ec14fece1f026d407de9afaaa0a1",
+        "hashed_bytes_length": "0x17b"
+      },
+      {
+        "method": "GenerateItems.RollAffixes",
+        "rva": "0x11c5e90",
+        "sha256": "18e40d842aea833d37c1c2274798989d53a1a983b265fb4aa4cb74ea0e1afdd3",
+        "hashed_bytes_length": "0x11c5"
+      },
+      {
+        "method": "GenerateItems.cctor",
+        "rva": "0x11cd4d0",
+        "sha256": "89ead47102c8da1461d5664241824e5e4db73edbb0a928cf5c9dd76be72d102e",
+        "hashed_bytes_length": "0xe82"
+      },
+      {
+        "method": "GenerateItems.IsValidAffix",
+        "rva": "0x11c2f60",
+        "sha256": "75bd1dd649598a7e554d8a62cde481636ce8c65f080c32d6a329eba8e111dab4",
+        "hashed_bytes_length": "0x14e"
+      },
+      {
+        "method": "GenerateItems.ApplyRandomAffixTierUpgrades",
+        "rva": "0x11bc630",
+        "sha256": "bd8c9dede6ed0a559e4c79297793e74399839f56bc9ea23aa872f0ac3ada59a9",
+        "hashed_bytes_length": "0x240"
+      },
+      {
+        "method": "GenerateItems.ApplyRandomAffixTierUpgrade",
+        "rva": "0x11bc430",
+        "sha256": "d319fe0f0e81e13039b5f2467d267c06c636e3f3d42973a460e6db598c372732",
+        "hashed_bytes_length": "0x1f1"
+      },
+      {
+        "method": "GenerateItems.GetRandomAffixTierUpgradeWeight",
+        "rva": "0x11c2950",
+        "sha256": "be99c3f278ae374395ed709080698d6d03d3d5c5d508c03edb57c978db90841c",
+        "hashed_bytes_length": "0x9e"
+      },
+      {
+        "method": "ProphecySlotReward.BuildLensRollModifiers",
+        "rva": "0x20b0dd0",
+        "sha256": "8069f5478ece9e715a17c540e0a333b8150bfd68fff57aa0e3a21636160bd084",
+        "hashed_bytes_length": "0x2b0"
+      },
+      {
+        "method": "ItemCreationProperties.GetChosenRarityAndForceExalt",
+        "rva": "0x12199a0",
+        "sha256": "e55bb94b1f2367b77ea5a5686d996c7d352aa7ff7dff53d05331b30a5bbb705a",
+        "hashed_bytes_length": "0x2a0"
+      },
+      {
+        "method": "CircleOfFortune.ToggleRank",
+        "rva": "0x208ce90",
+        "sha256": "218fdda5b6fbe62a9fd509e2af9f8b1a9cef644314296c4088fe7010f16a2fc7",
+        "hashed_bytes_length": "0x441"
+      },
+      {
+        "method": "RngElement.TryGetRandomValidWeightedIter",
+        "rva": "0x90d1e0",
+        "sha256": "f157a44abfe64c63a48d3fc058ce67a219fef1f5885bcfd8f4be58491020445b",
+        "hashed_bytes_length": "0x59f"
+      }
+    ],
+    "raw_rarity_methods": {
+      "CalculateRarityBoundaries": "0x11BCBF0",
+      "GetRarity0To4FromRoll": "0x11C2A80",
+      "RollRarity": "0x11C9B30"
+    }
+  }
+}

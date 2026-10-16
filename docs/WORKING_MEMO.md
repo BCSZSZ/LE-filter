@@ -1,6 +1,13 @@
 # 后续工作 memo
 
-更新时间：2026-10-16，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+更新时间：2026-10-17，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+
+## 最新2026-10-17：普通崇高预言概率工具
+
+- 新增独立静态页面 `/probability/`，不改过滤器策略或工作台。按物品、底材职业、区域、命运阶级、腐化选择，顺序为四镜片恰好1T7／2T7、腐化曲线、镜片升级规律、基础T级生成。默认区域100、命运12；36组合Excel使用相同冻结结果。
+- 读取本机1.5.2.2、build25816319的实际资源及原生指令：普通Exalted组奖励入口硬编码ilvl100；区域和巨石腐化不改该入口单件T7概率，图线水平。CoF4起M1.5、9起Q2；4起Origin／Finality、9起Quality，未解锁组合不给伪概率。rank12只增加奖励数量。职业按实际装备底材归属，不能冒充某玩家所有预言奖励的无条件混合。
+- `sources/t7-equipment-pools.json`冻结23类／36池，原有词库及输入保持。`scripts/build_prophecy_probability.py`以有序无放回身份联合矩积分全部7阶、镜片、保证崇高，保留不兼容T6的first Normal替补及覆盖已有T7边界。运行期只读JSON，不加载Python或网络游戏资源。
+- 独立4–6词缀池完整枚举128组分布，最大差1.33e−14；戒指复核旧独立模型，Excel288个数值逐格一致。63项Python检查（含现有Node状态回归及3项新浏览器模型检查）通过。实际浏览器核对职业、腐化、区域、解锁状态及手机双列显示；这是静态模型与网页验证，没有客户端掉落实测。方法、哈希与复现见[概率工具说明](PROPHECY_CALCULATOR.md)。
 
 ## 最新2026-10-16：灵感提前，所有双T7归灵感
 

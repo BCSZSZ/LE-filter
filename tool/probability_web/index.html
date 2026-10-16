@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>崇高预言 · T7 概率</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+<main>
+  <form id="settings" class="settings" aria-label="概率设置">
+    <label class="item-setting">物品种类<select id="item" name="item"></select></label>
+    <label>职业<select id="career" name="career"></select></label>
+    <label>区域等级<input id="area" name="area" type="number" min="1" max="100" step="1" value="100" required></label>
+    <label>命运等级<select id="rank" name="rank"></select></label>
+    <label>腐化等级<input id="corruption" name="corruption" type="number" min="0" max="100000" step="1" placeholder="0"></label>
+  </form>
+
+  <section aria-label="普通崇高预言的单件概率" class="results">
+    <div class="table-scroll">
+      <table class="probabilities">
+        <thead><tr><th scope="col">镜片</th><th scope="col">恰好 1T7</th><th scope="col">恰好 2T7</th></tr></thead>
+        <tbody id="probabilities"></tbody>
+      </table>
+    </div>
+    <a class="download" href="probabilities.xlsx" download="普通崇高预言-T7概率.xlsx">Excel ↓</a>
+  </section>
+
+  <section class="charts" aria-label="T7 概率随腐化变化">
+    <div class="legend" id="legend" aria-label="镜片图例"></div>
+    <figure><figcaption>1T7 随腐化变化</figcaption><svg id="chart-one" viewBox="0 0 1000 300" role="img" aria-label="恰好一条T7的概率与巨石腐化"></svg></figure>
+    <figure><figcaption>2T7 随腐化变化</figcaption><svg id="chart-two" viewBox="0 0 1000 300" role="img" aria-label="恰好两条T7的概率与巨石腐化"></svg></figure>
+  </section>
+
+  <section class="rules" aria-labelledby="lens-rules">
+    <h2 id="lens-rules">升级规律</h2>
+    <p>每件奖励有 <strong>20%</strong> 触发镜片，选中 <strong>1 条</strong>词缀升阶，最高 T7。</p>
+    <div class="lens-scopes"><span>优质镜片 · 全部词缀</span><span>提升前缀镜片 · 前缀</span><span>提升后缀镜片 · 后缀</span></div>
+    <div class="table-scroll">
+      <table class="mechanics"><thead><tr><th>当前阶数</th><th>T1</th><th>T2</th><th>T3</th><th>T4</th><th>T5</th><th>T6</th><th>T7</th></tr></thead>
+      <tbody><tr><th>被选中权重</th><td>0.01</td><td>0.05</td><td>0.1</td><td>0.5</td><td>1</td><td>2</td><td>0</td></tr>
+      <tr><th>选中后升至 T7</th><td>0%</td><td>0%</td><td>0%</td><td>44.444%</td><td>77.778%</td><td>100%</td><td>—</td></tr></tbody></table>
+    </div>
+    <div class="increments"><div><span>升 1 级</span><strong>22.222%</strong></div><div><span>升 2 级</span><strong>33.333%</strong></div><div><span>升 3 级</span><strong>44.444%</strong></div></div>
+  </section>
+
+  <section class="rules" aria-labelledby="tier-rules">
+    <h2 id="tier-rules">T 级生成规律</h2>
+    <p>自然阶数 <span class="arrow">→</span> 镜片升阶 <span class="arrow">→</span> 保证崇高</p>
+    <p>普通崇高预言奖励固定 <strong>100 级</strong>。区域等级与巨石腐化不改变单件 T7 概率。职业按装备底材归属计算。</p>
+    <div class="table-scroll"><table class="mechanics"><thead><tr><th>起始阶数</th><th>T1</th><th>T2</th><th>T3</th><th>T4</th><th>T5</th></tr></thead><tbody><tr><th>概率</th><td>16%</td><td>28%</td><td>24%</td><td>18%</td><td>14%</td></tr></tbody></table></div>
+    <div class="formula-grid">
+      <div><span>T5 → T6</span><strong>a = M × (4.5% + 5.1% × r)</strong></div>
+      <div><span>T6 → T7</span><strong>b = M × Q × (6.6% + 5.4% × r)</strong></div>
+    </div>
+    <p class="formula-detail">r = clamp(1 − 词缀掉落权重, 0, 1)。自然 T6 = 14% × a × (1 − b)，自然 T7 = 14% × a × b。T6 不兼容的词缀不走自然升阶。</p>
+    <p id="cof-rule"></p>
+    <p>词缀数为 1／2／3／4 的概率依次为 0.5%／0.995%／39.402%／59.103%；前缀、后缀各最多 2 条，同一词缀不重复。1／2 词缀起点的自然 T5 → T6 概率额外乘 5%。</p>
+    <p>保证崇高时，每条已有 T6／T7 都有 70% 机会停止；全部未停止后，从所有词缀中等概率抽 1 条。抽中低阶词缀，设为 T6，再以 b 升至 T7；抽中已有 T6／T7 则停止。不兼容词缀按原顺序转向第一条 Normal 词缀，未找到则仍升级原词缀。</p>
+  </section>
+</main>
+</body>
+</html>
