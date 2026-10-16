@@ -142,8 +142,7 @@ class RequirementTests(unittest.TestCase):
                 self.assertFalse(any(g["type"] in {"GLOVES", "BELT", "AMULET"} for g in preferred))
         for build in config["builds"]:
             build["enabled"] = True
-        with self.assertRaisesRegex(ValueError, "超过200"):
-            e.generate(config)
+        self.assertLessEqual(e.generate(config)["count"], 200)
 
     def test_explicit_unrestricted_idol_pair_roundtrip(self):
         doc = build_document()

@@ -1,4 +1,4 @@
-"""First-match regressions for Comet, BD identity and lower alert colors."""
+"""First-match regressions for Comet, Inspiration, then BD identity."""
 import unittest
 from copy import deepcopy
 
@@ -28,18 +28,18 @@ class ColorPriorityTests(unittest.TestCase):
                 self.assert_style(output, {"typ": "ONE_HANDED_DAGGER", "uid": 342, "lp": lp, "rarity": "UNIQUE"},
                                   "7", "10", 4)
 
-    def test_owned_uniques_keep_bd_colors_below_comet(self):
+    def test_owned_uniques_keep_bd_colors_below_inspiration(self):
         for main in ("flay-mana-lich", "skeleton-necromancer"):
             output = e.generate(self.config(main))
             for uid, owner in ((475, "flay-mana-lich"), (471, "skeleton-necromancer"), (253, main)):
                 color, beam = ("8", "11") if owner == main else ("12", "15")
                 for lp, tier in ((0, 1), (1, 3), (2, 3), (3, 4), (4, 4)):
                     self.assert_style(output, {"uid": uid, "lp": lp, "rarity": "UNIQUE"},
-                                      *(('7', '10') if tier == 4 else (color, beam)), tier)
+                                      *(e.ALERTS[tier][4:6] if tier >= 3 else (color, beam)), tier)
                 for ww, tier in ((13, 1), (14, 2), (16, 2), (17, 3), (19, 3), (20, 4)):
                     self.assert_style(output, {"uid": uid, "ww": ww, "rarity": "UNIQUE"},
-                                      *(('7', '10') if tier == 4 else (color, beam)), tier)
-                self.assert_style(output, {"uid": uid, "rarity": "LEGENDARY"}, color, beam, 3)
+                                      *(e.ALERTS[tier][4:6] if tier >= 3 else (color, beam)), tier)
+                self.assert_style(output, {"uid": uid, "rarity": "LEGENDARY"}, "5", "7", 3)
 
     def test_t0_is_always_comet_red(self):
         for main in ("flay-mana-lich", "skeleton-necromancer"):
@@ -65,28 +65,32 @@ class ColorPriorityTests(unittest.TestCase):
             self.assert_style(output, {"uid": 344, "rarity": "UNIQUE"},
                               *(('8', '11') if 344 in targets else ('3', '4')), 1)
 
-    def test_owned_lp1_uses_the_merged_bd_lp_rule(self):
+    def test_owned_lp1_has_one_inspiration_pool_and_lp2_uses_generic_rule(self):
         output = e.generate(self.config())
         self.assertFalse(any(row["owners"] and row["category"] == "任意LP=1" for row in output["rules"]))
+        self.assertEqual(len([r for r in output["rules"] if r["category"] == "BD暗金1LP"]), 1)
         for uid in (475, 471, 253):
-            self.assertEqual(first(output, uid=uid, rarity="UNIQUE", lp=1)["category"], "BD暗金1–2LP")
+            self.assertEqual(first(output, uid=uid, rarity="UNIQUE", lp=1)["category"], "BD暗金1LP")
+            self.assertEqual(first(output, uid=uid, rarity="UNIQUE", lp=2)["category"], "任意LP=2")
 
-    def test_primary_idol_precedes_secondary_pair_and_generic_cues(self):
+    def test_inspiration_idol_pair_precedes_primary_single_target(self):
         config = deepcopy(browser_bootstrap()["config"])
         config["main_id"] = "flay-lich-allie-guide"
         for build in config["builds"]:
             build["enabled"] = build["id"] in {"flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835"}
         output = e.generate(config)
-        self.assert_style(output, {"typ": "IDOL_1x1_LAGON", "base": 1, "affixes": {842: 1, 855: 1}}, "8", "11", 2)
-        self.assert_style(output, {"typ": "IDOL_1x1_LAGON", "base": 1, "affixes": {851: 1, 855: 1}}, "12", "15", 3)
+        self.assert_style(output, {"typ": "IDOL_1x1_LAGON", "base": 1, "affixes": {842: 1, 855: 1}}, "5", "7", 3)
+        self.assert_style(output, {"typ": "IDOL_1x1_LAGON", "base": 1, "affixes": {851: 1, 855: 1}}, "5", "7", 3)
         self.assert_style(output, {"typ": "IDOL_1x1_LAGON", "base": 1, "affixes": {842: 1}}, "8", "11", 2)
 
-    def test_bd_match_priority_precedes_stronger_noncomet_generic_cues(self):
+    def test_all_double_t7_inspiration_precedes_bd_and_keeps_exact_tier(self):
         output = e.generate(self.config())
-        for affixes in ({34: 4, 406: 7, 503: 7}, {34: 4, 503: 7, 17: 7}):
-            self.assert_style(output, {"typ": "HELMET", "level": 84, "affixes": affixes}, "8", "11", 1)
-        self.assert_style(output, {"typ": "HELMET", "level": 85, "affixes": {34: 4, 503: 7, 17: 7}}, "4", "6", 2)
-        self.assert_style(output, {"typ": "HELMET", "uid": 999, "rarity": "LEGENDARY", "affixes": {34: 7}}, "8", "11", 2)
+        self.assert_style(output, {"typ": "HELMET", "level": 84, "affixes": {34: 4, 406: 7, 503: 7}}, "5", "7", 3)
+        self.assert_style(output, {"typ": "HELMET", "level": 84, "affixes": {34: 4, 503: 7, 17: 7}}, "5", "7", 3)
+        self.assert_style(output, {"typ": "HELMET", "level": 85, "affixes": {34: 4, 503: 7, 17: 7}}, "5", "7", 3)
+        self.assert_style(output, {"typ": "HELMET", "level": 84, "affixes": {34: 4, 503: 7, 17: 8}}, "8", "11", 1)
+        self.assert_style(output, {"typ": "HELMET", "level": 100, "affixes": {34: 7}}, "8", "11", 2)
+        self.assert_style(output, {"typ": "HELMET", "uid": 999, "rarity": "LEGENDARY", "affixes": {34: 7}}, "5", "7", 3)
         self.assert_style(output, {"typ": "HELMET", "uid": 999, "rarity": "LEGENDARY", "affixes": {503: 7, 17: 7, 1: 7}}, "7", "10", 4)
 
     def test_double_bd_targets_and_any_triples_are_comet_red(self):
@@ -99,25 +103,30 @@ class ColorPriorityTests(unittest.TestCase):
                                        ("HELMET", {34: 7, 406: 7, 503: 7}, main)):
                 self.assert_style(output, {"typ": typ, "affixes": affixes}, "7", "10", 4)
             self.assert_style(output, {"typ": "HELMET", "affixes": {503: 7, 17: 7, 1: 7}}, "7", "10", 4)
-            self.assert_style(output, {"typ": "HELMET", "affixes": {503: 7, 17: 7}}, "4", "6", 2)
-            self.assert_style(output, {"typ": "HELMET", "affixes": {34: 7, 503: 7}},
-                              *(('8', '11') if main == 'flay-mana-lich' else ('12', '15')), 3)
+            self.assert_style(output, {"typ": "HELMET", "affixes": {503: 7, 17: 7}}, "5", "7", 3)
+            self.assert_style(output, {"typ": "HELMET", "affixes": {34: 7, 503: 7}}, "5", "7", 3)
 
     def test_all_23_equipment_types_are_kept_and_idols_are_outside_scope(self):
         output = e.generate(self.config())
+        doubles = [r for r in output["rules"] if r["category"] == "任意双T7"]
+        self.assertEqual(len(doubles), 1)
+        self.assertEqual(set(doubles[0]["types"]), set(e.MANIFEST["scope_types"]))
+        self.assertFalse(any(r["category"] == "双T7含BD目标" for r in output["rules"]))
         general = next(r for r in output["rules"] if r["category"] == "任意至少三T7" and r["role"] == "通用")
         self.assertEqual(set(general["types"]), set(e.MANIFEST["scope_types"]))
         self.assertEqual(len(general["types"]), 23)
         for typ in general["types"]:
+            self.assert_style(output, {"typ": typ, "affixes": {1154: 7, 1155: 7}}, "5", "7", 3)
             self.assertEqual(first(output, typ, {1154: 7, 1155: 7, 1156: 7},
                                    categories={"任意至少三T7"})["tier"], 4)
         self.assertEqual(first(output, "IDOL_1x2", {1154: 7, 1155: 7, 1156: 7},
                                categories={"任意至少三T7"})["action"], "HIDE")
 
-    def test_existing_default_and_guide_combinations_fit_rule_limit(self):
+    def test_all_builtin_combinations_fit_rule_limit(self):
         config = deepcopy(browser_bootstrap()["config"])
         for selected in ({"flay-mana-lich", "skeleton-necromancer"},
-                         {"flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835"}):
+                         {"flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835"},
+                         {b["id"] for b in config["builds"]}):
             for main in sorted(selected):
                 config["main_id"] = main
                 for build in config["builds"]:
@@ -126,12 +135,15 @@ class ColorPriorityTests(unittest.TestCase):
                 output = e.generate(config)
                 self.assertLessEqual(output["count"], 200)
                 self.assertEqual(config, before)
+                bands = [(0 if r["tier"] == 4 else 1 if r["tier"] == 3 else 2 if r["role"] == "主" else 3 if r["owners"] else 4, -r["tier"])
+                         for r in output["rules"]]
+                self.assertEqual(bands, sorted(bands))
 
     def test_every_emitted_color_uses_bd_or_tier_and_unowned_silent_is_uncolored(self):
         output = e.generate(self.config())
         for node, row in zip(parsed(output), output["rules"]):
-            if row["tier"] == 4:
-                expected = e.ALERTS[4][4:6]
+            if row["tier"] >= 3:
+                expected = e.ALERTS[row["tier"]][4:6]
             elif row["owners"]:
                 expected = ("8", "11") if row["role"] == "主" else ("12", "15")
             elif row["tier"]:
@@ -172,7 +184,7 @@ class ColorPriorityTests(unittest.TestCase):
         secondary["profiles"]["endgame"]["equipment"] = [{"type": "HELMET", "bases": [70], "affixes": [406]}]
         before = deepcopy(config)
         output = e.generate(config)
-        self.assertFalse(any(r["role"] == "副" and r["category"] in {"双T7含BD目标", "BD目标单T7", "非目标T7＋BD目标"} for r in output["rules"]))
+        self.assertFalse(any(r["role"] == "副" and r["category"] in {"BD目标单T7", "非目标T7＋BD目标"} for r in output["rules"]))
         self.assert_style(output, {"typ": "HELMET", "base": 70, "affixes": {406: 7}}, "8", "11", 2)
         self.assertEqual(config, before)
         secondary["profiles"]["endgame"]["equipment"][0]["bases"] = [alternative]

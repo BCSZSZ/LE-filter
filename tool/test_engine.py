@@ -76,15 +76,15 @@ class ToolTests(unittest.TestCase):
     def test_equipment_priority_and_t8(self):
         cases = [
             ("HELMET", {503:7, 1:7, 17:7}, 4, "任意至少三T7", 100),
-            ("HELMET", {503:7, 1:7}, 2, "任意双T7", 100),
-            ("HELMET", {34:7, 503:7}, 3, "双T7含BD目标", 100),
+            ("HELMET", {503:7, 1:7}, 3, "任意双T7", 100),
+            ("HELMET", {34:7, 503:7}, 3, "任意双T7", 100),
             ("BOOTS", {676:7, 679:7}, 4, "BD双目标T7", 100),
             ("HELMET", {34:7}, 2, "BD目标单T7", 100),
             ("HELMET", {34:4, 503:7}, 1, "非目标T7＋BD目标", 84),
             ("HELMET", {1156:7}, 0, "Raxx通用", 84),
             ("HELMET", {503:8}, 1, "Raxx通用", 100),
             ("HELMET", {503:8, 34:7}, 2, "BD目标单T7", 100),
-            ("HELMET", {503:8, 1:7, 17:7}, 2, "任意双T7", 100),
+            ("HELMET", {503:8, 1:7, 17:7}, 3, "任意双T7", 100),
             ("HELMET", {718:7}, 0, "Raxx通用", 84)]
         for typ, affixes, tier, category, level in cases:
             row = first(self.output, typ, affixes, level=level)
@@ -122,9 +122,9 @@ class ToolTests(unittest.TestCase):
         cases = [
             ("ONE_HANDED_AXE", {2: 7, 718: 7}, "BD双目标T7"),
             ("BOOTS", {676: 7, 679: 7}, "BD双目标T7"),
-            ("HELMET", {34: 7, 503: 7}, "双T7含BD目标"),
-            ("HELMET", {406: 7, 503: 7}, "双T7含BD目标"),
-            ("BELT", {52: 7, 503: 7}, "双T7含BD目标"),
+            ("HELMET", {34: 7, 503: 7}, "任意双T7"),
+            ("HELMET", {406: 7, 503: 7}, "任意双T7"),
+            ("BELT", {52: 7, 503: 7}, "任意双T7"),
             ("HELMET", {503: 7, 17: 7}, "任意双T7"),
             ("HELMET", {34: 7, 503: 7, 17: 7}, "任意至少三T7"),
             ("HELMET", {503: 7, 17: 7, 1: 7, 45: 7}, "任意至少三T7"),
@@ -139,7 +139,7 @@ class ToolTests(unittest.TestCase):
                 self.assertEqual(row["category"], category)
                 node = nodes[row["number"] - 1]
                 owner = "flay-mana-lich" if typ == "ONE_HANDED_AXE" or 34 in affixes else "skeleton-necromancer" if typ == "BOOTS" or 406 in affixes else main_id if 52 in affixes else None
-                colors = e.ALERTS[row["tier"]][4:6] if owner is None or row["tier"] == 4 else ("8", "11") if owner == main_id else ("12", "15")
+                colors = e.ALERTS[row["tier"]][4:6] if owner is None or row["tier"] >= 3 else ("8", "11") if owner == main_id else ("12", "15")
                 self.assertEqual((node.findtext("recolor"), node.findtext("color"), node.findtext("BeamColorOverride")),
                                  ("true", *colors), (main_id, row))
                 self.assertEqual(node.findtext("SoundId"), e.ALERTS[row["tier"]][1])

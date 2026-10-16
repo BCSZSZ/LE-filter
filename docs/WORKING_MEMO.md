@@ -1,8 +1,15 @@
 # 后续工作 memo
 
-更新时间：2026-10-14，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+更新时间：2026-10-16，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
-## 最新配色与压缩：彗星→主副BD→其余三档
+## 最新2026-10-16：灵感提前，所有双T7归灵感
+
+- 玩家实用后明确顺序更新为彗星→灵感→主BD→副BD→其余档位。彗星统一名称红7／光柱10，灵感统一橙5／7；主粉8／11、副蓝12／15只用于低于灵感的BD规则，共享按主。灵感的神像两项、BD1LP、任意2LP、名单WW17–19和一般传奇也全部提前。
+- 玩家进一步确认所有任意双T7都升灵感并提前；严格计恰好7阶，T8不凑数，覆盖原23类普通装备。BD双目标T7和至少三T7仍先走彗星。原双T7含BD目标层与任意双T7合成单条通用规则，灵感无需主副配色分支。BD1LP目标合用一个ID池，2LP由通用灵感覆盖；去掉原BD1–2LP和传奇／WW17的身份分支，原WW名单Rolls保留。
+- 主低阶目标＋两个非目标T7现在用灵感橙色；副两普通目标神像先于主一目标。单T7、C3及额外单T7退出点、练级计分、神像普通计数、套装补全及共通选择保留，保存和冻结输入不重写。
+- Strict97、Allie84、83594、Allie＋835142，均启用；四BD全选按主BD为177–197条。超过200仍明确报错且不截断。验证见analysis/inspiration-priority-validation.json。下方数量和顺序均为历史记录。
+
+## 历史2026-10-14配色与压缩：彗星→主副BD→其余三档
 
 - 玩家明确选择命中顺序也按彗星→主BD→副BD→通用其余三档，每个BD内部高档在前。主低阶目标＋非目标双T7允许主粉铁匠，85级退出身份层后按通用开始；主一目标神像先于副两目标。所有彗星统一名称红7／光柱10，含6件T0、至少三T7、BD双目标T7、LP≥3及WW≥20；其余主粉8／11、副蓝12／15，共享按主，通用按档色。双T7／T0金色例外取消；非BD静音不改色。4LP叛徒之舌为彗星红，1–2LP为BD粉／蓝。
 - 两条同BD／部位目标恰好T7升彗星，排在一般传奇和低档提示前。恰好T7、目标计数、85级退出点与神像普通计数沿用。23类表示全部普通装备，神像／祭坛／资源另列。
