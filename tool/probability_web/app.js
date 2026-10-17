@@ -1,4 +1,4 @@
-import {selectProfile, sourceRows, chartExtent, naturalRarityWeights} from "./model.mjs";
+import {selectProfile, sourceRows, chartExtent, naturalRarityWeights, thresholdOutcome} from "./model.mjs";
 
 const data=await fetch("probabilities.json").then(response=>{
   if(!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -6,6 +6,7 @@ const data=await fetch("probabilities.json").then(response=>{
 });
 const $=id=>document.getElementById(id);
 const format=value=>`${(value*100).toFixed(6)}%`;
+const formatAverage=value=>`平均 ${Number.isFinite(value) ? value.toLocaleString("zh-CN",{minimumFractionDigits:2,maximumFractionDigits:2}) : "∞"} 件出 1 件`;
 const makeOption=(value,label)=>new Option(label,value);
 const classNames=new Map(data.classes.map(c=>[c.id,c.id===0 ? "通用" : c.name]));
 for(const type of data.equipmentTypes) $("item").add(makeOption(type.typeID,type.name));
@@ -28,7 +29,7 @@ function drawChart(id,count,rows,extent){
   const svg=$(id),width=Math.max(320,Math.round(svg.clientWidth)),height=300,left=80,right=20,top=28,bottom=50;
   svg.setAttribute("viewBox",`0 0 ${width} ${height}`);
   const active=rows.filter(row=>row.distribution);
-  const values=active.flatMap(row=>row.points.map(point=>point.distribution[count]));
+  const values=active.flatMap(row=>row.points.map(point=>point.outcomes[count].probability));
   const maxValue=Math.max(0,...values),minValue=values.length ? Math.min(...values) : 0;
   const natural=active.length===1 && active[0].id==="natural";
   const spread=Math.max(maxValue-minValue,1e-8);
@@ -47,9 +48,9 @@ function drawChart(id,count,rows,extent){
   }
   content+=`<line class="selected" x1="${x(extent.selected)}" y1="${top}" x2="${x(extent.selected)}" y2="${height-bottom}"/>`;
   for(const row of active){
-    const path=row.points.map((point,i)=>`${i ? "L" : "M"}${x(point.corruption)} ${y(point.distribution[count])}`).join("");
+    const path=row.points.map((point,i)=>`${i ? "L" : "M"}${x(point.corruption)} ${y(point.outcomes[count].probability)}`).join("");
     content+=`<path class="curve" stroke="${row.color}" d="${path}"/>`;
-    content+=`<circle cx="${x(extent.selected)}" cy="${y(row.distribution[count])}" r="4.5" fill="${row.color}"><title>${row.name}：${format(row.distribution[count])}；腐化 ${extent.selected}</title></circle>`;
+    content+=`<circle cx="${x(extent.selected)}" cy="${y(row.outcomes[count].probability)}" r="4.5" fill="${row.color}"><title>${row.name}：${format(row.outcomes[count].probability)}；${formatAverage(row.outcomes[count].averageItems)}；腐化 ${extent.selected}</title></circle>`;
   }
   content+=text(width-right,height-4,"巨石腐化","end","axis-label");
   svg.innerHTML=content;
@@ -60,11 +61,13 @@ function render(){
   const playerCareer=Number($("player-career").value);
   const profile=selectProfile(data,$("item").value,$("career").value);
   const extent=chartExtent($("corruption").value);
-  const valuesAt=corruption=>sourceRows(data,profile,rank,source,corruption,playerCareer);
+  const valuesAt=corruption=>sourceRows(data,profile,rank,source,corruption,playerCareer).map(row=>{
+    return {...row,outcomes:Object.fromEntries([1,2].map(minimum=>[minimum,thresholdOutcome(row.distribution,minimum)]))};
+  });
   const rows=valuesAt(extent.selected);
   const locations=natural ? [...new Set([...Array.from({length:201},(_,i)=>extent.maximum*i/200),100,300,600,1000,extent.selected])].filter(c=>c<=extent.maximum).sort((a,b)=>a-b) : [0,extent.maximum];
   const samples=locations.map(c=>({corruption:c,rows:valuesAt(c)}));
-  for(const row of rows) row.points=samples.map(sample=>({corruption:sample.corruption,distribution:sample.rows.find(r=>r.id===row.id).distribution})).filter(point=>point.distribution);
+  for(const row of rows) row.points=samples.map(sample=>({corruption:sample.corruption,outcomes:sample.rows.find(r=>r.id===row.id).outcomes})).filter(point=>point.outcomes[1].probability!==null);
   $("probabilities").replaceChildren(...rows.map(row=>{
     const tr=document.createElement("tr"),th=document.createElement("th");
     th.scope="row";
@@ -72,8 +75,17 @@ function render(){
     tr.append(th);
     for(const count of [1,2]){
       const td=document.createElement("td");
-      td.textContent=row.distribution ? format(row.distribution[count]) : "未解锁";
-      if(!row.distribution) td.className="unavailable";
+      if(row.distribution){
+        const probability=document.createElement("span"),average=document.createElement("span");
+        probability.className="probability-value";
+        probability.textContent=format(row.outcomes[count].probability);
+        average.className="average-items";
+        average.textContent=formatAverage(row.outcomes[count].averageItems);
+        td.append(probability,average);
+      } else {
+        td.textContent="未解锁";
+        td.className="unavailable";
+      }
       tr.append(td);
     }
     return tr;

@@ -90,13 +90,17 @@ class ProphecyTests(unittest.TestCase):
         with zipfile.ZipFile(ROOT / PROBABILITY_WORKBOOK) as archive:
             sheet = ET.fromstring(archive.read("xl/worksheets/sheet1.xml"))
         cells = {cell.get("r"): cell for cell in sheet.findall(".//s:c", ns)}
-        for row, profile in enumerate(self.data["profiles"], 5):
-            expected = [profile["probabilities"]["9"][lens][i]
+        for index, profile in enumerate(self.data["profiles"]):
+            row = 5 + 2 * index
+            expected = [sum(profile["probabilities"]["9"][lens][i:])
                         for lens in ("none", "quality", "origin", "finality") for i in (1, 2)]
-            for col, value in zip("CDEFGHIJ", expected):
+            for col, value in zip("DEFGHIJK", expected):
                 cell = cells[f"{col}{row}"]
                 self.assertNotIn(cell.get("t"), ("s", "inlineStr", "str", "e"))
                 self.assertAlmostEqual(float(cell.find("s:v", ns).text), value, places=14)
+                average = cells[f"{col}{row+1}"]
+                self.assertEqual(average.find("s:f", ns).text, f"1/{col}{row}")
+                self.assertAlmostEqual(float(average.find("s:v", ns).text), 1/value, places=8)
 
     def test_static_page_is_self_contained_and_deterministic(self):
         with tempfile.TemporaryDirectory() as directory:

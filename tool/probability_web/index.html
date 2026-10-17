@@ -18,12 +18,12 @@
     <label>命运等级<select id="rank" name="rank"></select></label>
     <label>腐化等级<input id="corruption" name="corruption" type="number" min="0" max="100000" step="1" placeholder="0"></label>
   </form>
-  <p id="probability-scope" class="probability-scope">每件最终崇高装备 · 恰好 1T7／2T7</p>
+  <p id="probability-scope" class="probability-scope">每件最终崇高装备 · 至少 1T7／2T7</p>
 
   <section aria-label="单件装备概率" class="results">
     <div class="table-scroll">
       <table class="probabilities">
-        <thead><tr><th scope="col" id="source-heading">镜片</th><th scope="col">恰好 1T7</th><th scope="col">恰好 2T7</th></tr></thead>
+        <thead><tr><th scope="col" id="source-heading">镜片</th><th scope="col">至少 1T7</th><th scope="col">至少 2T7</th></tr></thead>
         <tbody id="probabilities"></tbody>
       </table>
     </div>
@@ -32,8 +32,8 @@
 
   <section class="charts" aria-label="T7 概率随腐化变化">
     <div class="legend" id="legend" aria-label="概率曲线图例"></div>
-    <figure><figcaption>1T7 随腐化变化</figcaption><svg id="chart-one" viewBox="0 0 1000 300" role="img" aria-label="恰好一条T7的概率与巨石腐化"></svg></figure>
-    <figure><figcaption>2T7 随腐化变化</figcaption><svg id="chart-two" viewBox="0 0 1000 300" role="img" aria-label="恰好两条T7的概率与巨石腐化"></svg></figure>
+    <figure><figcaption>至少 1T7 随腐化变化</figcaption><svg id="chart-one" viewBox="0 0 1000 300" role="img" aria-label="至少一条T7的概率与巨石腐化"></svg></figure>
+    <figure><figcaption>至少 2T7 随腐化变化</figcaption><svg id="chart-two" viewBox="0 0 1000 300" role="img" aria-label="至少两条T7的概率与巨石腐化"></svg></figure>
   </section>
 
   <section class="rules" id="lens-section" aria-labelledby="lens-rules">

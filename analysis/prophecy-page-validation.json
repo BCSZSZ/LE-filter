@@ -6,7 +6,7 @@
   "equipmentTypes": 23,
   "files": {
     "probabilityDataSHA256": "8d5fa5c9614802ffd805e358cd16f6aee3f19f4042341aac173029b60419a0a2",
-    "workbookSHA256": "64cbe7d52d100a08372ff1e7e04a7d9d3b37dafa16731cbfe86d91ae72fed3b1"
+    "workbookSHA256": "aacb42f9d1bcd5e69239ae381d8d39444794d17fe9500c7f7e9eba9aa304c087"
   },
   "defaultInputs": {
     "areaLevel": 100,
@@ -23,12 +23,13 @@
       "passed": 65
     },
     "browserModelTests": {
-      "passed": 5
+      "passed": 6
     },
     "workbook": {
       "numericProbabilityCells": 288,
       "matchesJSON": true,
-      "renderVisuallyReviewed": true
+      "renderVisuallyReviewed": true,
+      "reciprocalFormulaCells": 288
     },
     "independentEnumeration": {
       "lensDistributions": 128,
@@ -40,6 +41,27 @@
       "naturalMaximumError": 4.913847106990943e-13
     },
     "actualBrowserCases": [
+      "prophecy ring CoF12 cumulative tails and averages for all four lenses",
+      "ordinary ring CoF12 corruption300: 22.533876% and 0.046440%; means4.44 and2153.33",
+      "both chart captions and point titles use at-least events",
+      "mobile cumulative labels, probabilities and reciprocal counts fully visible",
+      "CoF4 Quality remains locked without reciprocal values",
+      "viewport reset after mobile checks"
+    ],
+    "responsive": {
+      "defaultDesktopVisuallyReviewed": true,
+      "mobileViewportCSSPixels": 355,
+      "documentWidthCSSPixels": 341,
+      "mobileProbabilityTableWidthCSSPixels": 305,
+      "mobileProbabilityContainerWidthCSSPixels": 305,
+      "mobileProbabilityNumbersFullyVisible": true,
+      "ordinaryCurveAxesAndBothChartsVisuallyReviewed": true
+    },
+    "newDocumentationLinksResolve": true,
+    "buildProbabilityPageDeterministic": true,
+    "existingFilterEngineUnmodified": true,
+    "exactCountSnapshotUnchanged": true,
+    "previousSourceValidationCases": [
       "ring default four-lens comparison",
       "Sentinel chest pool",
       "Acolyte helmet pool",
@@ -57,18 +79,80 @@
       "return to prophecy CoF4 restores four rows, Quality locked, player class disabled",
       "prophecy curves each keep constant probability heights"
     ],
-    "responsive": {
-      "defaultDesktopVisuallyReviewed": true,
-      "mobileViewportCSSPixels": 355,
-      "documentWidthCSSPixels": 341,
-      "mobileProbabilityTableWidthCSSPixels": 305,
-      "mobileProbabilityContainerWidthCSSPixels": 305,
-      "mobileProbabilityNumbersFullyVisible": true,
-      "ordinaryCurveAxesAndBothChartsVisuallyReviewed": true
-    },
-    "newDocumentationLinksResolve": true,
-    "buildProbabilityPageDeterministic": true,
-    "existingFilterEngineUnmodified": true
+    "cumulativeExamples": [
+      {
+        "source": "prophecy",
+        "corruption": 300,
+        "rows": [
+          {
+            "id": "none",
+            "atLeast1": {
+              "probability": 0.2245959592238913,
+              "averageItems": 4.452439854463888
+            },
+            "atLeast2": {
+              "probability": 0.00045511269709335426,
+              "averageItems": 2197.2579679421174
+            }
+          },
+          {
+            "id": "quality",
+            "atLeast1": {
+              "probability": 0.2780694872147239,
+              "averageItems": 3.5962234116963896
+            },
+            "atLeast2": {
+              "probability": 0.0047934827807248875,
+              "averageItems": 208.61658333709013
+            }
+          },
+          {
+            "id": "origin",
+            "atLeast1": {
+              "probability": 0.26087748700244845,
+              "averageItems": 3.8332169306376924
+            },
+            "atLeast2": {
+              "probability": 0.0034737580487741054,
+              "averageItems": 287.87266872340217
+            }
+          },
+          {
+            "id": "finality",
+            "atLeast1": {
+              "probability": 0.2593098177655635,
+              "averageItems": 3.856390817042179
+            },
+            "atLeast2": {
+              "probability": 0.0033832211312265115,
+              "averageItems": 295.57630471451694
+            }
+          }
+        ]
+      },
+      {
+        "source": "natural",
+        "corruption": 300,
+        "rows": [
+          {
+            "id": "natural",
+            "atLeast1": {
+              "probability": 0.22533876399106065,
+              "averageItems": 4.437762869950199
+            },
+            "atLeast2": {
+              "probability": 0.0004643965097563925,
+              "averageItems": 2153.332290383853
+            }
+          }
+        ]
+      }
+    ]
   },
-  "deploymentURL": "https://bcszsz.github.io/LE-filter/probability/"
+  "deploymentURL": "https://bcszsz.github.io/LE-filter/probability/",
+  "eventDefinition": {
+    "first": "K>=1",
+    "second": "K>=2",
+    "averageItems": "1 / P(K>=n | final exalted)"
+  }
 }

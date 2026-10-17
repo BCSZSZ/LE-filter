@@ -1,9 +1,29 @@
 import {test} from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import {selectProfile,probabilities,chartExtent,naturalProbability,naturalRarityWeights,sourceRows} from "./probability_web/model.mjs";
+import {selectProfile,probabilities,chartExtent,naturalProbability,naturalRarityWeights,sourceRows,thresholdOutcome} from "./probability_web/model.mjs";
 
 const data=JSON.parse(fs.readFileSync(new URL("../analysis/prophecy-probabilities.json",import.meta.url),"utf8"));
+test("at-least counts include all higher T7 outcomes and use reciprocal waiting times",()=>{
+  const distribution=[.5,.25,.125,.075,.05];
+  assert.deepEqual(thresholdOutcome(distribution,1),{probability:.5,averageItems:2});
+  assert.deepEqual(thresholdOutcome(distribution,2),{probability:.25,averageItems:4});
+  assert.deepEqual(thresholdOutcome(null,1),{probability:null,averageItems:null});
+  assert.deepEqual(thresholdOutcome([1,0,0,0,0],2),{probability:0,averageItems:Infinity});
+  for(const profile of data.profiles) for(const source of ["prophecy","natural"]) for(const rank of [0,4,9,11,12]) {
+    for(const row of sourceRows(data,profile,rank,source,300,3)) {
+      if(!row.distribution) continue;
+      const first=thresholdOutcome(row.distribution,1),second=thresholdOutcome(row.distribution,2);
+      assert.ok(Math.abs(first.probability-(1-row.distribution[0]))<1e-10);
+      assert.ok(Math.abs(second.probability-(row.distribution[2]+row.distribution[3]+row.distribution[4]))<1e-14);
+      assert.ok(first.probability>=second.probability);
+      assert.ok(first.probability>=row.distribution[1]);
+      assert.ok(second.probability>=row.distribution[2]);
+      assert.ok(Math.abs(first.probability*first.averageItems-1)<1e-14);
+      assert.ok(Math.abs(second.probability*second.averageItems-1)<1e-14);
+    }
+  }
+});
 test("every legitimate item/career combination keeps its own exact pool",()=>{
   for(const p of data.profiles) assert.equal(selectProfile(data,p.typeID,p.classRequirement).id,p.id);
   const sentinel=selectProfile(data,1,4),mage=selectProfile(data,1,2);

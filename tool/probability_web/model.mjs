@@ -59,6 +59,12 @@ export function sourceRows(data,profile,rank,source,corruption,playerCareer) {
     distribution:naturalProbability(data,profile,rank,corruption,playerCareer)}];
 }
 
+export function thresholdOutcome(distribution,minimum) {
+  if(distribution===null) return {probability:null,averageItems:null};
+  const probability=distribution.slice(minimum).reduce((sum,value)=>sum+value,0);
+  return {probability,averageItems:probability>0 ? 1/probability : Infinity};
+}
+
 export function chartExtent(corruption) {
   const selected = Number.isFinite(Number(corruption)) ? Math.max(0, Number(corruption)) : 0;
   return {selected, maximum:Math.max(1000, Math.ceil(selected / 1000) * 1000)};
