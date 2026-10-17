@@ -22,7 +22,7 @@ BASE_ROOT = frozen(MANIFEST)
 BASE = dict(zip(MANIFEST["source_rule_order"], sorted(BASE_ROOT.find("rules"), key=lambda r: int(r.findtext("Order")))))
 FAMILIES = {"planner": "uniques", "tier7": "equipment", "idol_single": "idols", "idol_bis": "idols",
             "altar": "altars", "rare_base": "bases", "crafting_base": "bases"}
-MULTI_T7_CATEGORIES = {"BD双目标T7", "任意双T7", "任意至少三T7"}
+MULTI_T7_CATEGORIES = {"双T7含BD目标T7", "三词条双T7", "任意双T7", "任意至少三T7"}
 UNIQUE_IDOLS = {int(i) for i, u in CATALOG["uniques"].items() if (u.get("type") or "").startswith("IDOL_")}
 HARBINGER_NEEDLE = 344
 ITEM_SETS = read_json("sources/item-sets.json")["sets"]
@@ -427,19 +427,46 @@ def generate(config, mode="endgame"):
     set_affix(r, full, 3, 7)
     peak = replacements[38].pop()
     result.append(peak)
-    for category, count, alert, template in [("BD双目标T7", 2, 4, 38), ("BD目标单T7", 1, 2, 38), ("非目标T7＋BD目标", 1, 1, 62)]:
+    # One target is an existential condition, so equal type/base scopes can use
+    # the union of enabled BD pools without combining scores across builds.
+    comet_targets = {}
+    for b in builds:
+        for g in b["profiles"]["endgame"]["equipment"]:
+            if not g["affixes"]:
+                continue
+            key = (g["type"], tuple(sorted(set(g["bases"]))))
+            target = comet_targets.setdefault(key, {"affixes": set(), "owners": []})
+            target["affixes"].update(g["affixes"])
+            if b["name"] not in target["owners"]:
+                target["owners"].append(b["name"])
+    for (typ, bases), target in comet_targets.items():
+        group = {"type": typ, "bases": bases, "affixes": target["affixes"]}
+        r = add(62, "双T7含BD目标T7", 4, group=group, affix_tier=7, index=1,
+                name="[彗星 双T7含BD目标T7] " + CATALOG["types"][typ]["zh"])
+        set_affix(r, full, 2, 7)
+        replacements[62][-1][1]["owners"] = target["owners"]
+        result.append(replacements[62].pop())
+    # AffixCountCondition exposes separate non-sealed prefix/suffix bounds.
+    # The two exact compositions express three occupied ordinary slots.
+    for prefixes, suffixes in ((1, 2), (2, 1)):
+        r = add(38, "三词条双T7", 4, name=f"[彗星 三词条双T7 · {prefixes}前{suffixes}后]")
+        r.find("conditions")[:] = deepcopy(BASE[48].find("conditions")[:])
+        set_affix(r, full, 2, 7)
+        c = ET.SubElement(r.find("conditions"), "Condition", {XSI + "type": "AffixCountCondition"})
+        for field, value in (("minPrefixes", prefixes), ("maxPrefixes", prefixes),
+                             ("minSuffixes", suffixes), ("maxSuffixes", suffixes), ("sealedType", "Any")):
+            ET.SubElement(c, field).text = str(value)
+        result.append(replacements[38].pop())
+    for category, count, alert, template in [("BD目标单T7", 1, 2, 38), ("非目标T7＋BD目标", 1, 1, 62)]:
         for b in builds:
             for g in b["profiles"]["endgame"]["equipment"]:
-                if not g["affixes"] or category == "BD双目标T7" and len(set(g["affixes"])) < 2:
+                if not g["affixes"]:
                     continue
                 r = add(template, category, alert, b, g, count, None if template == 62 else 7, 1 if template == 62 else 0)
                 if template == 62:
                     set_affix(r, full, 1, 7)
                     set_level(r, 0, 84)
                     r.find("nameOverride").text += " · 85级退出"
-    double_targets = [entry for entry in replacements[38] if entry[1]["category"] == "BD双目标T7"]
-    result.extend(double_targets)
-    replacements[38] = [entry for entry in replacements[38] if entry not in double_targets]
     c1 = [e for e in replacements[38] if e[1]["category"] == "BD目标单T7"]
     replacements[38] = [e for e in replacements[38] if e not in c1]
     r = add(38, "任意双T7", 3, name="[灵感 任意双T7]")
@@ -675,7 +702,7 @@ def generate(config, mode="endgame"):
     root = deepcopy(BASE_ROOT)
     root.find("rules")[:] = list(reversed(rules))
     root.find("name").text = "LE Filter - " + " + ".join(b["name"] for b in builds)
-    root.find("description").text = "Raxx base; first match: Comet red, Inspiration orange, primary BD pink, secondary BD blue, then remaining generic alert tiers. Any two exact T7 affixes use Inspiration; two BD target T7 affixes use Comet. Non-target single T7 exits at level 85. Only exact T7 counts. Idols exclude enchantments and corruption."
+    root.find("description").text = "Raxx base; first match: Comet red, Inspiration orange, primary BD pink, secondary BD blue, then remaining generic alert tiers. Three exact T7 affixes, two T7 with at least one matching BD target T7, or two T7 with exactly three non-sealed affixes use Comet. Other two T7 use Inspiration. Non-target single T7 exits at level 85. Only exact T7 counts. Idols exclude enchantments and corruption."
     ET.indent(root, space="  ")
     xml = ET.tostring(root, encoding="unicode", xml_declaration=True) + "\n"
     return {"xml": xml, "rules": rows, "count": len(rows), "enabled": sum(r["enabled"] for r in rows),

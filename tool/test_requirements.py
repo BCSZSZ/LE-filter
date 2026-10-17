@@ -58,7 +58,7 @@ class RequirementTests(unittest.TestCase):
         build = as_build(endgame)
         build["profiles"]["leveling"] = read_document(leveling)["profile"]
         result = e.generate({"version": 1, "main_id": build["id"], "extra_t7": True, "builds": [build]})
-        self.assertEqual(first(result, "ONE_HANDED_AXE", {943: 7, 724: 7})["category"], "BD双目标T7")
+        self.assertEqual(first(result, "ONE_HANDED_AXE", {943: 7, 724: 7})["category"], "双T7含BD目标T7")
         self.assertEqual(first(result, "IDOL_1x2", {139: 1}, base=0, rarity="RARE")["tier"], 2)
         self.assertEqual(first(result, "IDOL_1x1_LAGON", {843: 1, 854: 1}, base=1, rarity="RARE")["tier"], 3)
 
@@ -172,7 +172,7 @@ class RequirementTests(unittest.TestCase):
         for typ, aid in [("ONE_HANDED_MACES", 719), ("SHIELD", 80), ("CATALYST", 26)]:
             self.assertEqual(first(result, typ, {aid: 7})["category"], "BD目标单T7")
         self.assertEqual(first(result, "IDOL_1x3", {266: 1, 287: 1}, base=13, rarity="RARE", corrupted=True)["tier"], 3)
-        self.assertEqual(first(result, "BODY_ARMOR", {406: 7, 192: 7})["category"], "BD双目标T7")
+        self.assertEqual(first(result, "BODY_ARMOR", {406: 7, 192: 7})["category"], "双T7含BD目标T7")
         build["requirement_sources"]["endgame"]["warnings"].append("metadata only")
         self.assertEqual(result["sha256"], e.generate(config)["sha256"])
 

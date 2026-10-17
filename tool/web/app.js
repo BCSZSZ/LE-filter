@@ -101,7 +101,7 @@ function render(){
   $('common-idol-targets').innerHTML=config.common.unique_idols.length?chips(config.common.unique_idols,'uniques'):'<small>未选择暗金神像</small>';
   $('extra-t7').checked=config.extra_t7;
   if(!ready){['targets','categories','source-info','preview-rules'].forEach(id=>$(id).replaceChildren());$('preview-summary').textContent='';return;}
-  $('profile-note').textContent=mode==='endgame'?'命中顺序：彗星红色→灵感橙色→主BD粉色→副BD蓝色→其余档位。任意双T7为灵感；BD双目标T7、至少三T7为彗星。多T7覆盖全部23类装备，不含神像、祭坛、资源。非目标单T7＋低阶BD目标和额外单T7储备在85级退出。':'0–29级：至少1项目标；30–49级：目标总阶数≥5；50–79级：≥8，单可用目标T≥5；80级退出。命中顺序仍为彗星→灵感→主BD→副BD→通用档。';
+  $('profile-note').textContent=mode==='endgame'?'命中顺序：彗星红色→灵感橙色→主BD粉色→副BD蓝色→其余档位。至少三T7、双T7中至少一条对应BD目标T7、双T7且三词条（空一栏）为彗星；其余任意双T7为灵感。三词条按未封印的四个普通栏位计数。多T7覆盖全部23类装备，不含神像、祭坛、资源。非目标单T7＋低阶BD目标和额外单T7储备在85级退出。':'0–29级：至少1项目标；30–49级：目标总阶数≥5；50–79级：≥8，单可用目标T≥5；80级退出。命中顺序仍为彗星→灵感→主BD→副BD→通用档。';
   if(!categories().some(c=>c[0]===category))category=categories()[0][0];
   $('categories').innerHTML=categories().map(([key,title],i)=>`<button data-category="${key}" class="${category===key?'active':''}"><span class="step-num">0${i+1}</span>${title}</button>`).join('');
   const item=categories().find(c=>c[0]===category);

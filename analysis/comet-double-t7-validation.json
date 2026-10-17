@@ -1,0 +1,382 @@
+{
+  "status": "passed",
+  "date": "2026-10-17",
+  "gameExecutionTested": false,
+  "baselineCommit": "9ffbd01db6e0a0e93bbb010100fbf7d67d6b16e9",
+  "policy": {
+    "comet": [
+      "at least 3 exact T7",
+      "at least 2 exact T7 and at least 1 matching BD target T7",
+      "at least 2 exact T7 and exactly 3 non-sealed affixes"
+    ],
+    "inspiration": "remaining at least 2 exact T7",
+    "removedIndependentPairLayer": true
+  },
+  "nativeEvidence": {
+    "gameVersion": "1.5.2.2",
+    "GameAssemblySHA256": "d5f9fb458f0e9878e697a92b590a586a52fd77e645f8bf87bb4f2b74c6c56567",
+    "AffixCountCondition.Match": "0x19685C0",
+    "GetNonSealedPrefixAndSuffixCount": "0x1201DD0",
+    "fields": {
+      "minPrefixes": "0x10",
+      "maxPrefixes": "0x18",
+      "minSuffixes": "0x20",
+      "maxSuffixes": "0x28",
+      "sealedType": "0x30"
+    },
+    "emptySlotCompositions": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "sealedType": "Any"
+  },
+  "aggregation": "Only one-target Comet predicates with equal type/base scopes union their enabled BD pools",
+  "scenarios": [
+    {
+      "selected": [
+        "skeleton-necromancer"
+      ],
+      "main": "skeleton-necromancer",
+      "count": 71,
+      "sha256": "29a32da17910af35891b1e89e8a53d395dd0131a0ac514008c2be9170eee1ded",
+      "targetCometRules": 8,
+      "emptySlotRules": 2,
+      "duplicatePredicates": 0,
+      "inputUnchanged": true
+    },
+    {
+      "selected": [
+        "flay-mana-lich"
+      ],
+      "main": "flay-mana-lich",
+      "count": 68,
+      "sha256": "5db2ababbc1d2710e3df67f6be7ad6d865e50d3f2e516f3ce2095e4365c6f649",
+      "targetCometRules": 8,
+      "emptySlotRules": 2,
+      "duplicatePredicates": 0,
+      "inputUnchanged": true
+    },
+    {
+      "selected": [
+        "flay-lich-allie-guide"
+      ],
+      "main": "flay-lich-allie-guide",
+      "count": 86,
+      "sha256": "6dd6825999c9875d3971840e9c5b7f13238b16f4f09593a75d43ed957de2fdd6",
+      "targetCometRules": 9,
+      "emptySlotRules": 2,
+      "duplicatePredicates": 0,
+      "inputUnchanged": true
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835"
+      ],
+      "main": "bleed-skeleton-roamer-guide-835",
+      "count": 99,
+      "sha256": "cf665c0503a75b8293ca77d303850e09a19c943304c34006cc9231800eb9e618",
+      "targetCometRules": 13,
+      "emptySlotRules": 2,
+      "duplicatePredicates": 0,
+      "inputUnchanged": true
+    },
+    {
+      "selected": [
+        "flay-mana-lich",
+        "skeleton-necromancer"
+      ],
+      "main": "flay-mana-lich",
+      "count": 96,
+      "sha256": "4ca62976f418515a8f7f4e66aea6b44edfd82a6e1c0748cb4e0030491c690486",
+      "targetCometRules": 10,
+      "emptySlotRules": 2,
+      "duplicatePredicates": 0,
+      "inputUnchanged": true
+    },
+    {
+      "selected": [
+        "flay-mana-lich",
+        "skeleton-necromancer"
+      ],
+      "main": "skeleton-necromancer",
+      "count": 96,
+      "sha256": "a47928f009acabe1fe697871997ec308168f38236f51e0982e70236939ec49c0",
+      "targetCometRules": 10,
+      "emptySlotRules": 2,
+      "duplicatePredicates": 0,
+      "inputUnchanged": true
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide"
+      ],
+      "main": "bleed-skeleton-roamer-guide-835",
+      "count": 139,
+      "sha256": "a0572942b0bf7643a5c456468148e8ea96260327fec17b9f45c3072275b8ee75",
+      "targetCometRules": 14,
+      "emptySlotRules": 2,
+      "duplicatePredicates": 0,
+      "inputUnchanged": true
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide"
+      ],
+      "main": "flay-lich-allie-guide",
+      "count": 139,
+      "sha256": "8875fec59a89dd07b3d1f940b7fe0051671a1114f1d52d59b0d67935d8e3a092",
+      "targetCometRules": 14,
+      "emptySlotRules": 2,
+      "duplicatePredicates": 0,
+      "inputUnchanged": true
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "flay-mana-lich",
+        "skeleton-necromancer"
+      ],
+      "main": "bleed-skeleton-roamer-guide-835",
+      "count": 176,
+      "sha256": "d37b7f9f842f17999d10afbe862e0707df23fa9d760b13e2653464879d3f0639",
+      "targetCometRules": 14,
+      "emptySlotRules": 2,
+      "duplicatePredicates": 0,
+      "inputUnchanged": true
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "flay-mana-lich",
+        "skeleton-necromancer"
+      ],
+      "main": "flay-lich-allie-guide",
+      "count": 167,
+      "sha256": "5bd98b75c6120c5fddb1097dbb9d80e6a2d2c93a52a74e64b2015725c9dbf4aa",
+      "targetCometRules": 14,
+      "emptySlotRules": 2,
+      "duplicatePredicates": 0,
+      "inputUnchanged": true
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "flay-mana-lich",
+        "skeleton-necromancer"
+      ],
+      "main": "flay-mana-lich",
+      "count": 182,
+      "sha256": "2b34c5a99d03b7eeb6bcc1fe8c765f8b96fe17d95d8dff9a43311de444a4a666",
+      "targetCometRules": 14,
+      "emptySlotRules": 2,
+      "duplicatePredicates": 0,
+      "inputUnchanged": true
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "flay-mana-lich",
+        "skeleton-necromancer"
+      ],
+      "main": "skeleton-necromancer",
+      "count": 182,
+      "sha256": "8ef3a54e6f8c7117331bd0b10c559d946ffe99aa7a326f636a454a8da2510bc8",
+      "targetCometRules": 14,
+      "emptySlotRules": 2,
+      "duplicatePredicates": 0,
+      "inputUnchanged": true
+    }
+  ],
+  "symbolicCases": [
+    {
+      "affixes": {
+        "503": 7,
+        "17": 7,
+        "1": 7
+      },
+      "category": "任意至少三T7",
+      "tier": 4,
+      "nameColor": "7"
+    },
+    {
+      "affixes": {
+        "34": 7,
+        "503": 7,
+        "17": 2,
+        "1": 2
+      },
+      "category": "双T7含BD目标T7",
+      "tier": 4,
+      "nameColor": "7"
+    },
+    {
+      "affixes": {
+        "406": 7,
+        "503": 7,
+        "17": 2,
+        "1": 2
+      },
+      "category": "双T7含BD目标T7",
+      "tier": 4,
+      "nameColor": "7"
+    },
+    {
+      "affixes": {
+        "34": 7,
+        "406": 7,
+        "17": 2,
+        "1": 2
+      },
+      "category": "双T7含BD目标T7",
+      "tier": 4,
+      "nameColor": "7"
+    },
+    {
+      "affixes": {
+        "503": 7,
+        "17": 7,
+        "1": 2
+      },
+      "category": "三词条双T7",
+      "tier": 4,
+      "nameColor": "7"
+    },
+    {
+      "affixes": {
+        "503": 7,
+        "2": 2,
+        "17": 7
+      },
+      "category": "三词条双T7",
+      "tier": 4,
+      "nameColor": "7"
+    },
+    {
+      "affixes": {
+        "34": 4,
+        "503": 7,
+        "17": 7,
+        "1": 2
+      },
+      "category": "任意双T7",
+      "tier": 3,
+      "nameColor": "5"
+    },
+    {
+      "affixes": {
+        "34": 8,
+        "503": 7,
+        "17": 7,
+        "1": 2
+      },
+      "category": "任意双T7",
+      "tier": 3,
+      "nameColor": "5"
+    },
+    {
+      "affixes": {
+        "503": 7,
+        "17": 7
+      },
+      "category": "任意双T7",
+      "tier": 3,
+      "nameColor": "5"
+    },
+    {
+      "affixes": {
+        "34": 7,
+        "503": 8
+      },
+      "category": "BD目标单T7",
+      "tier": 2,
+      "nameColor": "8"
+    },
+    {
+      "affixes": {
+        "503": 7,
+        "17": 7,
+        "1": 2,
+        "45": 3
+      },
+      "sealed_affixes": [
+        45
+      ],
+      "category": "三词条双T7",
+      "tier": 4,
+      "nameColor": "7"
+    },
+    {
+      "affixes": {
+        "503": 7,
+        "2": 2,
+        "17": 7,
+        "1": 2,
+        "45": 3
+      },
+      "sealed_affixes": [
+        45
+      ],
+      "category": "任意双T7",
+      "tier": 3,
+      "nameColor": "5"
+    }
+  ],
+  "defaultCount": 96,
+  "defaultDeterministic": true,
+  "frozenFilesByteIdentical": {
+    "analysis/prophecy-probabilities.json": "8d5fa5c9614802ffd805e358cd16f6aee3f19f4042341aac173029b60419a0a2",
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer-v2.xml": "b98ac8760726009ece4bef27bde7f6ad9cc2d2806e8996630ecbb96d41e1e71c",
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml": "ddfb6889366162de32eaf4a9dbd050f23496a1d902189cff340b5ec444da6ec9",
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer.xml": "a6026b9a065042ead7e4e9bd1461b20f0687a148d5a087669b6763c7f461cc78",
+    "requirements/bleed-skeleton-roamer-guide-835.endgame.json": "7272c54e9a6436fd4a4617c469d9613dc6e54b1378abd4c41c3408f8376c537d",
+    "requirements/bleed-skeleton-roamer-guide-835.leveling.json": "46fb51f53b8383abfbb2a2feb88bfbe975a218039715485b2d8dfaee1d25de99",
+    "requirements/flay-lich-allie-guide.endgame.json": "2a904049a9a2aa82d0a0ab490d52c74477f934175f51d8332418462ca238fd1d",
+    "requirements/flay-lich-allie-guide.leveling.json": "71c601489ef6b3716ece19b2f45892221467150135f57a795e170537a42be3c6",
+    "sources/builds/flay-mana-lich-guide.json": "1b7f6180f1fd32818c223e5d8daa1c4e9a2a8c405094d8a9a126c5c6ccef0fd8",
+    "sources/builds/flay-mana-lich.json": "fe5932f3f5990bcffa88cef0e882789855d89cbba89c2d66ed1768f6ea531ba7",
+    "sources/builds/letools-allie-flay-extracted.json": "0aa01939bd5cb4a672baafef58737b942543f7a57f72af4ea9bc5e8ee2c5cf88",
+    "sources/builds/letools-guide-zh-835-extracted.json": "aa964dc554078bf8fb20b856515f683db13a1d359734af5b6965195ac701ce9f",
+    "sources/builds/manifest.json": "b88e7550b8cf6ca5ddc6bfe13376be1b6a2c79c5de50712c829e6b87f778c481",
+    "sources/builds/maxroll-flay-mana-lich-strict.xml": "4e70c8b9111a28ae257aea7b561d931ac99629a6054646ce18a3ce5e3458995c",
+    "sources/builds/maxroll-reference-supplement.json": "a8f94e45f86bd8b8e77ae7d09d22869e70dc9436ca9a9113970ecb6a552a9970",
+    "sources/builds/maxroll-skeleton-necromancer-strict.xml": "5033341708ab5594cfcb70448bf3c6084333f03efa4388e5d4c6f4b1409dbade",
+    "sources/builds/maxroll-skeleton-necromancer-very-strict.xml": "7e9bb43a06383fad155298c642991e41cf9d125911702e46c8e508634cf55cb1",
+    "sources/builds/maxroll-strict-manifest.json": "be601551ff46051a0af6ce6ad8ad61e384d6a6ea68c5097b2d96f56c97394354",
+    "sources/builds/review-reference.json": "df489714f6491d6610de0a4257af5a8c7df2b0b3a28983ed659d9759854f96bc",
+    "sources/builds/skeleton-equipment-priorities.png": "a4a853ebd7eb9be59a1ad6d4e64a2451a2eef9e054396df317049a107ff5b0b4",
+    "sources/builds/skeleton-idol-priorities.png": "234aae7df50c586954bf7ce5e82b89d295594ca7baec05ec0022227f7e8cbaf1",
+    "sources/builds/skeleton-investigation-manifest.json": "d70f0726d870281661a96664716bcbac217967ce651b5f6836bf0b37f43a3d99",
+    "sources/builds/skeleton-necromancer.json": "456c46bb25c88dc6077ce4189dcd89e268eb12aa8893f44cbe19e35202cc988d",
+    "sources/builds/strict-variable-reference.json": "0e42a2ff8ca467519900bb85edb4ac3fe851cf75e9f86774dcee18453e07bd9a",
+    "sources/builds/transfer-reference.json": "f571190f25cd97b2bbc292d9ec5463cbb46ef20a6937e16a6a5023f056b0f9e2",
+    "sources/filter-style-reference.json": "37a26db4058ded7f88963d1559a9e369a7c1d74f7894778b63165e05f54b7d39",
+    "sources/game-reference.json": "2f4e8198a2b936b3b639cad53d3f196bab4b3a6fb37bfdaaf002d4995655317b",
+    "sources/item-sets.json": "beeee982d41f3fa91f7f320a5587cb951f25f20b6658c3cd3ab80730f64fa040",
+    "sources/manifest.json": "3904c8a1cf61db4e6671056f0f95bf9a690d2b581763d548f3f0979c79aa1e23",
+    "sources/Raxx's S5 Ultimate Filter v1.0.txt": "146465750ab794175676f73b7251ddba610c42c4508bb16b614b6d4982036288",
+    "sources/seasonal-unique-protection.json": "dd03763aca0d16990d5b0e77214da3486a5761abc92193d22c4f2761babc02f5",
+    "sources/t7-equipment-pools.json": "651c401f24de466cb83cc5e79ba4e382f8b57fa1f4b4a84858b431d0300d9645",
+    "sources/t7-natural-type-selection.json": "300c0927e1cc6e9b7b595817d43d4fa88cfb099bda159170c9557d31ca213861",
+    "sources/tool-catalog.json": "cedeabebdd1efb6bb8257b2c70b095cce3dd6169505864f50aea4b3cfbfe60e8",
+    "sources/ultra-rare-uniques.json": "dcc58fe5f567c3c1e9a6c12487a27d15033b5dfdf29495c5d3844ed585bdb387",
+    "sources/video-era/Raxx-S5-2026-10-01.txt": "f0e329df63af9737185bf6d5fdd71cb7663c932ddf954773c56c90a6d8c440ed",
+    "templates/base-manifest.json": "ad19178a51cff97cb61017448c7ca36fca963ec5672914ff90a2c54a564cbee1",
+    "templates/LE-base-v1.xml": "725e8ce0dc642f0e0bd60ae50f3b9c168b775ecee96fcf1064f1a39c3caae4d4",
+    "tool/probability_web/app.js": "16ea1ad3f94eda6bf5c72aa78172ed798f8336b155c957b19feba6fee1ffe5a2",
+    "tool/probability_web/index.html": "b93d754aef2fea9964210b72fe421a396914ef9d7da65bac99b0f881dc78b141",
+    "tool/probability_web/model.mjs": "f25bf62549e7c623a2b1d5b42f6bdf7e471162f0432baaaf85f9e9f046c2eaf3",
+    "tool/probability_web/style.css": "34ab0d3938c6ae538a13ec1717405d0292605bccb0583fb3696d16d455062d13"
+  }
+}

@@ -2,7 +2,14 @@
 
 更新时间：2026-10-17，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
-## 最新2026-10-17追加：至少T7口径与平均件数
+## 最新2026-10-17追加：双T7彗星条件
+
+- 玩家将旧“同BD两条目标T7”独立层替换为“任意双T7中至少一条对应部位／底材BD目标T7”的彗星；另增加双T7且恰好三条未封印词缀（空一普通栏）的彗星。至少三T7仍彗星，其余双T7仍灵感，颜色与全局顺序保持。
+- 三词条用游戏原生AffixCountCondition的1前2后、2前1后两条规则，不猜不存在的总词缀数字段。Match实际调用GetNonSealedPrefixAndSuffixCount，sealedType=Any，不附加封印状态限制。只有两条、满四条未封印词缀均不命中空栏层。
+- 彗星只需一条目标，故相同类型／底材范围的启用BD目标池可安全取并集，压缩规则；C1／C3／练级及保存的目标仍独立。Strict96、Allie86、83599、Allie＋835139；四BD随主BD为167–182条。超过200仍报错且不截断。
+- 本机1.5.2.2原生字段及指令、边界案例与去冗余说明见[双T7彗星判定](COMET_DOUBLE_T7.md)，复现`python -X utf8 scripts/validate_comet_double_t7.py`。原始来源、模板、需求JSON、历史XML及概率工具保持。未启动游戏，验证不冒充客户端实测。
+
+## 此前2026-10-17追加：至少T7口径与平均件数
 
 - 玩家将两来源的显示统一改为至少1T7／至少2T7。表格、手机标签、曲线及图中提示汇总完整分布的1–4／2–4项；原始精确计数分布和游戏生成机制保持。
 - 每个概率下显示平均N件出1件，N=1/p，先按原始精度求倒数再显示两位小数。分母仍仅所选种类／底材职业的最终崇高装备，未解锁不算、零概率为无穷。

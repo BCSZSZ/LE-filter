@@ -156,6 +156,18 @@ def gate_text(row):
             parts.append(part)
         elif kind == "CharacterLevelCondition":
             parts.append(f"角色{f['minimumLvl']}–{f['maximumLvl']}级（含上限）")
+        elif kind == "AffixCountCondition":
+            for label, low, high in (("未封印前缀", f.get("minPrefixes"), f.get("maxPrefixes")),
+                                     ("未封印后缀", f.get("minSuffixes"), f.get("maxSuffixes"))):
+                if low is not None and low == high:
+                    parts.append(f"{label}={low}")
+                else:
+                    if low is not None:
+                        parts.append(f"{label}≥{low}")
+                    if high is not None:
+                        parts.append(f"{label}≤{high}")
+            if f.get("sealedType", "Any") != "Any":
+                parts.append("封印条件=" + f["sealedType"])
         elif kind == "RarityCondition":
             parts.append("稀有度=" + f["rarity"])
         elif kind == "CorruptionCondition":

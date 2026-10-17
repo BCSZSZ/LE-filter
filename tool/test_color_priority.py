@@ -85,9 +85,9 @@ class ColorPriorityTests(unittest.TestCase):
 
     def test_all_double_t7_inspiration_precedes_bd_and_keeps_exact_tier(self):
         output = e.generate(self.config())
-        self.assert_style(output, {"typ": "HELMET", "level": 84, "affixes": {34: 4, 406: 7, 503: 7}}, "5", "7", 3)
-        self.assert_style(output, {"typ": "HELMET", "level": 84, "affixes": {34: 4, 503: 7, 17: 7}}, "5", "7", 3)
-        self.assert_style(output, {"typ": "HELMET", "level": 85, "affixes": {34: 4, 503: 7, 17: 7}}, "5", "7", 3)
+        self.assert_style(output, {"typ": "HELMET", "level": 84, "affixes": {406: 7, 503: 7, 17: 2, 1: 2}}, "7", "10", 4)
+        self.assert_style(output, {"typ": "HELMET", "level": 84, "affixes": {34: 4, 503: 7, 17: 7, 1: 2}}, "5", "7", 3)
+        self.assert_style(output, {"typ": "HELMET", "level": 85, "affixes": {34: 4, 503: 7, 17: 7, 1: 2}}, "5", "7", 3)
         self.assert_style(output, {"typ": "HELMET", "level": 84, "affixes": {34: 4, 503: 7, 17: 8}}, "8", "11", 1)
         self.assert_style(output, {"typ": "HELMET", "level": 100, "affixes": {34: 7}}, "8", "11", 2)
         self.assert_style(output, {"typ": "HELMET", "uid": 999, "rarity": "LEGENDARY", "affixes": {34: 7}}, "5", "7", 3)
@@ -104,14 +104,15 @@ class ColorPriorityTests(unittest.TestCase):
                 self.assert_style(output, {"typ": typ, "affixes": affixes}, "7", "10", 4)
             self.assert_style(output, {"typ": "HELMET", "affixes": {503: 7, 17: 7, 1: 7}}, "7", "10", 4)
             self.assert_style(output, {"typ": "HELMET", "affixes": {503: 7, 17: 7}}, "5", "7", 3)
-            self.assert_style(output, {"typ": "HELMET", "affixes": {34: 7, 503: 7}}, "5", "7", 3)
+            self.assert_style(output, {"typ": "HELMET", "affixes": {34: 7, 503: 7}}, "7", "10", 4)
 
     def test_all_23_equipment_types_are_kept_and_idols_are_outside_scope(self):
         output = e.generate(self.config())
         doubles = [r for r in output["rules"] if r["category"] == "任意双T7"]
         self.assertEqual(len(doubles), 1)
         self.assertEqual(set(doubles[0]["types"]), set(e.MANIFEST["scope_types"]))
-        self.assertFalse(any(r["category"] == "双T7含BD目标" for r in output["rules"]))
+        self.assertFalse(any(r["category"] == "BD双目标T7" for r in output["rules"]))
+        self.assertEqual(len([r for r in output["rules"] if r["category"] == "三词条双T7"]), 2)
         general = next(r for r in output["rules"] if r["category"] == "任意至少三T7" and r["role"] == "通用")
         self.assertEqual(set(general["types"]), set(e.MANIFEST["scope_types"]))
         self.assertEqual(len(general["types"]), 23)
@@ -121,6 +122,64 @@ class ColorPriorityTests(unittest.TestCase):
                                    categories={"任意至少三T7"})["tier"], 4)
         self.assertEqual(first(output, "IDOL_1x2", {1154: 7, 1155: 7, 1156: 7},
                                categories={"任意至少三T7"})["action"], "HIDE")
+
+    def test_three_affix_double_t7_requires_exactly_three_ordinary_slots(self):
+        config = self.config()
+        for build in config["builds"]:
+            build["profiles"]["endgame"]["equipment"] = []
+        output = e.generate(config)
+        for affixes in ({503: 7, 17: 7, 1: 2}, {503: 7, 34: 2, 17: 7}):
+            row = first(output, affixes=affixes)
+            self.assertEqual(row["category"], "三词条双T7")
+            self.assert_style(output, {"affixes": affixes}, "7", "10", 4)
+        for affixes in ({503: 7, 17: 7}, {503: 7, 34: 2, 17: 7, 1: 2}):
+            self.assertEqual(first(output, affixes=affixes)["category"], "任意双T7")
+            self.assert_style(output, {"affixes": affixes}, "5", "7", 3)
+        self.assertEqual(first(output, affixes={503: 7, 34: 2, 17: 8})["tier"], 1)
+        self.assertEqual(first(output, affixes={503: 7, 17: 7, 1: 8})["category"], "三词条双T7")
+        self.assertEqual(first(output, affixes={503: 7, 17: 7, 1: 2, 45: 3},
+                               sealed_affixes=[45])["category"], "三词条双T7")
+        self.assertEqual(first(output, affixes={503: 7, 34: 2, 17: 7, 1: 2, 45: 3},
+                               sealed_affixes=[45])["category"], "任意双T7")
+        scopes = []
+        for node, row in zip(parsed(output), output["rules"]):
+            if row["category"] != "三词条双T7":
+                continue
+            self.assertEqual(set(row["types"]), set(e.MANIFEST["scope_types"]))
+            self.assertIn("未封印前缀", row["gate"])
+            c = e.condition(node, "AffixCountCondition")
+            self.assertEqual(c.findtext("sealedType"), "Any")
+            self.assertEqual(c.findtext("minPrefixes"), c.findtext("maxPrefixes"))
+            self.assertEqual(c.findtext("minSuffixes"), c.findtext("maxSuffixes"))
+            scopes.append((c.findtext("minPrefixes"), c.findtext("minSuffixes")))
+        self.assertEqual(set(scopes), {("1", "2"), ("2", "1")})
+
+    def test_bd_double_comet_uses_one_t7_target_and_preserves_type_base_binding(self):
+        config = self.config()
+        main = next(b for b in config["builds"] if b["id"] == config["main_id"])
+        secondary = next(b for b in config["builds"] if b["id"] != config["main_id"])
+        main["profiles"]["endgame"]["equipment"] = [{"type": "HELMET", "bases": [70], "affixes": [34]}]
+        secondary["profiles"]["endgame"]["equipment"] = [{"type": "HELMET", "bases": [70], "affixes": [406]}]
+        before = deepcopy(config)
+        output = e.generate(config)
+        self.assertEqual(config, before)
+        for targets in ({34: 7, 503: 7}, {406: 7, 503: 7}, {34: 7, 406: 7}):
+            self.assertEqual(first(output, affixes=targets, base=70)["category"], "双T7含BD目标T7")
+            self.assert_style(output, {"affixes": targets, "base": 70}, "7", "10", 4)
+        for target_tier in (4, 8):
+            self.assertEqual(first(output, affixes={34: target_tier, 503: 7, 17: 7, 1: 2},
+                                   base=70)["category"], "任意双T7")
+        self.assertEqual(first(output, affixes={34: 7, 503: 8}, base=70)["category"], "BD目标单T7")
+        self.assertEqual(first(output, affixes={34: 7, 503: 7}, base=0)["category"], "任意双T7")
+        self.assertEqual(first(output, typ="BODY_ARMOR", affixes={34: 7, 503: 7}, base=70)["category"], "任意双T7")
+        common = [r for r in output["rules"] if r["category"] == "双T7含BD目标T7"]
+        self.assertEqual(len(common), 1)
+        self.assertEqual(set(common[0]["affixes"][1]), {34, 406})
+        self.assertEqual(set(common[0]["owners"]), {main["name"], secondary["name"]})
+        self.assertFalse(any(r["category"] == "BD双目标T7" for r in output["rules"]))
+        secondary["enabled"] = False
+        output = e.generate(config)
+        self.assertEqual(first(output, affixes={406: 7, 503: 7}, base=70)["category"], "任意双T7")
 
     def test_all_builtin_combinations_fit_rule_limit(self):
         config = deepcopy(browser_bootstrap()["config"])

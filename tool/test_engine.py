@@ -17,6 +17,21 @@ def first(output, typ="HELMET", affixes=None, categories=None, **extra):
     item = {"type": typ, "base": 0, "affixes": affixes or {}, "level": 100, "rarity": "EXALTED",
             "corrupted": False, "fp": 0, "uid": -1, "lp": 0, "ww": 0, **extra}
     def matches(c):
+        if c.get(e.XSI + "type") == "AffixCountCondition":
+            # Only the newly audited Any-sealed count bounds are modelled here.
+            if c.findtext("sealedType", "Any") != "Any":
+                return None
+            sealed = item.get("sealed_affixes", ())
+            definitions = [e.CATALOG["affixes"].get(str(aid)) for aid in item["affixes"] if aid not in sealed]
+            if any(a is None for a in definitions):
+                return None
+            prefixes = sum(a["prefix"] for a in definitions)
+            suffixes = len(definitions) - prefixes
+            for name, count in (("Prefixes", prefixes), ("Suffixes", suffixes)):
+                low, high = c.findtext("min" + name), c.findtext("max" + name)
+                if low and count < int(low) or high and count > int(high):
+                    return False
+            return True
         if c.get(e.XSI + "type") == "UniqueModifiersCondition":
             return item["uid"] in ids(c, "Uniques/UniqueId")
         if c.get(e.XSI + "type") == "PotentialCondition":
@@ -77,21 +92,21 @@ class ToolTests(unittest.TestCase):
         cases = [
             ("HELMET", {503:7, 1:7, 17:7}, 4, "任意至少三T7", 100),
             ("HELMET", {503:7, 1:7}, 3, "任意双T7", 100),
-            ("HELMET", {34:7, 503:7}, 3, "任意双T7", 100),
-            ("BOOTS", {676:7, 679:7}, 4, "BD双目标T7", 100),
+            ("HELMET", {34:7, 503:7}, 4, "双T7含BD目标T7", 100),
+            ("BOOTS", {676:7, 679:7}, 4, "双T7含BD目标T7", 100),
             ("HELMET", {34:7}, 2, "BD目标单T7", 100),
             ("HELMET", {34:4, 503:7}, 1, "非目标T7＋BD目标", 84),
             ("HELMET", {1156:7}, 0, "Raxx通用", 84),
             ("HELMET", {503:8}, 1, "Raxx通用", 100),
             ("HELMET", {503:8, 34:7}, 2, "BD目标单T7", 100),
-            ("HELMET", {503:8, 1:7, 17:7}, 3, "任意双T7", 100),
+            ("HELMET", {503:8, 1:7, 17:7}, 4, "三词条双T7", 100),
             ("HELMET", {718:7}, 0, "Raxx通用", 84)]
         for typ, affixes, tier, category, level in cases:
             row = first(self.output, typ, affixes, level=level)
             self.assertEqual((row["tier"], row["category"]), (tier, category), (typ, affixes, row))
-        boots = [r for r in self.output["rules"] if r["category"] == "BD双目标T7" and r["types"] == ["BOOTS"] and r["role"] == "副"]
+        boots = [r for r in self.output["rules"] if r["category"] == "双T7含BD目标T7" and r["types"] == ["BOOTS"]]
         self.assertEqual(len(boots), 1)
-        self.assertEqual(set(boots[0]["affixes"][0]), {28,676,679})
+        self.assertEqual(set(boots[0]["affixes"][1]), {28,36,676,679})
 
     def test_idol_normal_count(self):
         for affixes, tier in [({941:1,287:1},3), ({941:1,897:7},2), ({941:1,1071:1},2),
@@ -120,11 +135,11 @@ class ToolTests(unittest.TestCase):
 
     def test_multiple_t7_labels_and_beams_follow_bd_then_tier(self):
         cases = [
-            ("ONE_HANDED_AXE", {2: 7, 718: 7}, "BD双目标T7"),
-            ("BOOTS", {676: 7, 679: 7}, "BD双目标T7"),
-            ("HELMET", {34: 7, 503: 7}, "任意双T7"),
-            ("HELMET", {406: 7, 503: 7}, "任意双T7"),
-            ("BELT", {52: 7, 503: 7}, "任意双T7"),
+            ("ONE_HANDED_AXE", {2: 7, 718: 7}, "双T7含BD目标T7"),
+            ("BOOTS", {676: 7, 679: 7}, "双T7含BD目标T7"),
+            ("HELMET", {34: 7, 503: 7}, "双T7含BD目标T7"),
+            ("HELMET", {406: 7, 503: 7}, "双T7含BD目标T7"),
+            ("BELT", {52: 7, 503: 7}, "双T7含BD目标T7"),
             ("HELMET", {503: 7, 17: 7}, "任意双T7"),
             ("HELMET", {34: 7, 503: 7, 17: 7}, "任意至少三T7"),
             ("HELMET", {503: 7, 17: 7, 1: 7, 45: 7}, "任意至少三T7"),
@@ -508,7 +523,7 @@ class ToolTests(unittest.TestCase):
         with self.assertRaises(ValueError):e.generate(config)
         large=deepcopy(self.config)
         original=large["builds"][0]
-        for i in range(40):
+        for i in range(80):
             b=deepcopy(original);b["id"]=f"extra{i}";b["name"]=f"Extra{i}";b["profiles"]["endgame"]["equipment"][0]["affixes"]=[i,i+1];large["builds"].append(b)
         with self.assertRaisesRegex(ValueError,'超过200'):e.generate(large)
 
