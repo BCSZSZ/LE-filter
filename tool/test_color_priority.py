@@ -183,9 +183,12 @@ class ColorPriorityTests(unittest.TestCase):
 
     def test_all_builtin_combinations_fit_rule_limit(self):
         config = deepcopy(browser_bootstrap()["config"])
+        ice = "ice-heartseeker-planner-al0dkyek"
         for selected in ({"flay-mana-lich", "skeleton-necromancer"},
                          {"flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835"},
-                         {b["id"] for b in config["builds"]}):
+                         {"flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835", ice},
+                         {"flay-mana-lich", "skeleton-necromancer", ice},
+                         {b["id"] for b in config["builds"] if b["id"] != ice}):
             for main in sorted(selected):
                 config["main_id"] = main
                 for build in config["builds"]:
@@ -197,6 +200,15 @@ class ColorPriorityTests(unittest.TestCase):
                 bands = [(0 if r["tier"] == 4 else 1 if r["tier"] == 3 else 2 if r["role"] == "主" else 3 if r["owners"] else 4, -r["tier"])
                          for r in output["rules"]]
                 self.assertEqual(bands, sorted(bands))
+
+    def test_five_templates_over_limit_report_without_truncation(self):
+        config = deepcopy(browser_bootstrap()["config"])
+        for build in config["builds"]:
+            build["enabled"] = True
+        before = deepcopy(config)
+        with self.assertRaisesRegex(ValueError, "超过200条.*没有截断规则"):
+            e.generate(config)
+        self.assertEqual(config, before)
 
     def test_every_emitted_color_uses_bd_or_tier_and_unowned_silent_is_uncolored(self):
         output = e.generate(self.config())

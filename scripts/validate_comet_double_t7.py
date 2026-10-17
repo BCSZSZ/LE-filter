@@ -16,9 +16,11 @@ from test_engine import first, parsed
 
 
 def main():
-    boot = browser_bootstrap()["config"]
+    boot = deepcopy(browser_bootstrap()["config"])
     strict = {"flay-mana-lich", "skeleton-necromancer"}
     guides = {"flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835"}
+    # Preserve this audit's original four-source policy baseline.
+    boot["builds"] = [b for b in boot["builds"] if b["id"] in strict | guides]
     selected_sets = [*[{b["id"]} for b in boot["builds"]], strict, guides,
                      {b["id"] for b in boot["builds"]}]
     scenarios = []

@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "date": "2026-10-17",
+  "scope": "Static localhost page using the packaged Pyodide worker",
+  "checks": {
+    "officialTemplates": 5,
+    "iceInitiallySelected": false,
+    "freshSavedSchemes": 0,
+    "applyIceCreatesOneSavedScheme": true,
+    "equipmentGroupsDisplayed": 10,
+    "ordinaryIdolGroupsDisplayed": 4,
+    "enchantment892Separate": true,
+    "ringCorruption1075Separate": true,
+    "altarBase9AndFiveTargetsDisplayed": true,
+    "levelingTargetsEmpty": true,
+    "singleCombinedPreviewCount": 79,
+    "reloadRestoresSavedScheme": true,
+    "threeIndependentGuideMembers": true,
+    "threeGuidePreviewCount": 173
+  },
+  "unitTests": {
+    "command": "python -X utf8 -m unittest discover -s tool -v",
+    "count": 70,
+    "status": "passed"
+  },
+  "rebuildHashes": {
+    "sources\\builds\\letools-planner-al0dkyek-ui.json": "6b4f44d7530696c6cdfe33fc625c8ad385f73de0045d0e683714ad52c5dd4dd8",
+    "sources\\builds\\letools-planner-al0dkyek-extracted.json": "37be1dccd00b15011b13c2d0476b476ab30e834e1fc978f9f10f3c3fc5a3a8a4",
+    "requirements\\ice-heartseeker-planner-al0dkyek.endgame.json": "2fed904d9194eb0e5e72078c07e64d906e1c36a7cfffbf2125b83a34972355e2",
+    "requirements\\ice-heartseeker-planner-al0dkyek.leveling.json": "63e65c4bb0b8309657177bf6c3a1ecdb576b85d3faec2c93d055b4d482b7833b"
+  },
+  "screenshot": "docs/images/ice-heartseeker-preview.jpg",
+  "browserBlobDownloadTested": false,
+  "gameExecutionTested": false
+}

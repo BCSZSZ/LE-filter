@@ -1,0 +1,260 @@
+{
+  "format": "le-filter-requirements",
+  "version": 1,
+  "id": "ice-heartseeker-planner-al0dkyek",
+  "name": "冰追心",
+  "stage": "endgame",
+  "targets": {
+    "uniques": [
+      2,
+      19,
+      146,
+      159,
+      211,
+      402,
+      413,
+      439,
+      477,
+      479,
+      487
+    ],
+    "equipment": [
+      {
+        "type": "HELMET",
+        "bases": [],
+        "affixes": [
+          503,
+          489,
+          7,
+          17,
+          25
+        ]
+      },
+      {
+        "type": "BODY_ARMOR",
+        "bases": [],
+        "affixes": [
+          761,
+          503
+        ]
+      },
+      {
+        "type": "GLOVES",
+        "bases": [],
+        "affixes": [
+          503,
+          17,
+          80
+        ],
+        "corrupted": [
+          1027
+        ]
+      },
+      {
+        "type": "BOOTS",
+        "bases": [],
+        "affixes": [
+          503,
+          17,
+          760
+        ]
+      },
+      {
+        "type": "BELT",
+        "bases": [],
+        "affixes": [
+          16,
+          52,
+          59
+        ],
+        "corrupted": [
+          997
+        ]
+      },
+      {
+        "type": "BOW",
+        "bases": [],
+        "affixes": [
+          672,
+          432,
+          20
+        ],
+        "corrupted": [
+          969
+        ]
+      },
+      {
+        "type": "QUIVER",
+        "bases": [],
+        "affixes": [
+          503,
+          432,
+          17,
+          80
+        ],
+        "corrupted": [
+          969
+        ]
+      },
+      {
+        "type": "AMULET",
+        "bases": [],
+        "affixes": [
+          6,
+          17,
+          59
+        ]
+      },
+      {
+        "type": "RING",
+        "bases": [],
+        "affixes": [
+          503,
+          17,
+          19
+        ],
+        "corrupted": [
+          1075
+        ]
+      },
+      {
+        "type": "RELIC",
+        "bases": [],
+        "affixes": [
+          503,
+          6
+        ]
+      }
+    ],
+    "altars": [
+      {
+        "type": "IDOL_ALTAR",
+        "bases": [
+          9
+        ],
+        "affixes": [
+          1095,
+          1089,
+          1100,
+          1096,
+          1093
+        ]
+      }
+    ],
+    "idols": [
+      {
+        "type": "IDOL_2x2",
+        "bases": [
+          11
+        ],
+        "affixes": [
+          743,
+          492
+        ],
+        "corrupted": [
+          1044
+        ],
+        "enchanted": [
+          892
+        ]
+      },
+      {
+        "type": "IDOL_1x3",
+        "bases": [
+          14
+        ],
+        "affixes": [
+          743,
+          492,
+          462,
+          491
+        ],
+        "corrupted": [
+          1052,
+          1112,
+          1029
+        ]
+      },
+      {
+        "type": "IDOL_1x1_LAGON",
+        "bases": [
+          1
+        ],
+        "affixes": [
+          847,
+          850
+        ],
+        "corrupted": [
+          1064,
+          1069
+        ]
+      },
+      {
+        "type": "IDOL_1x1_LAGON",
+        "bases": [
+          0
+        ],
+        "affixes": [
+          142,
+          112
+        ],
+        "corrupted": [
+          1066
+        ]
+      }
+    ],
+    "bases": []
+  },
+  "source": {
+    "name": "冰追心 · Last Epoch Tools 构建器 AL0dkyek",
+    "url": "https://www.lastepochtools.com/planner/zh/AL0dkyek",
+    "extracted_on": "2026-10-17",
+    "sha256": "37be1dccd00b15011b13c2d0476b476ab30e834e1fc978f9f10f3c3fc5a3a8a4",
+    "scope": "玩家指定构建器的当前终局配装；装备后加词缀、神像、祭坛及明确普通底材",
+    "fixed_affix_references": [
+      {
+        "slot": "hands",
+        "type": "GLOVES",
+        "ids": [
+          1145,
+          1147
+        ]
+      },
+      {
+        "slot": "ring1",
+        "type": "RING",
+        "ids": [
+          1126
+        ]
+      },
+      {
+        "slot": "ring2",
+        "type": "RING",
+        "ids": [
+          1117
+        ]
+      }
+    ],
+    "unique_idol_references": [
+      {
+        "slot": "idol3",
+        "unique_id": 211,
+        "type": "IDOL_2x2",
+        "bases": [
+          5
+        ],
+        "corrupted": [
+          1029
+        ]
+      }
+    ],
+    "warnings": [
+      "保留构建器明确选择的全部后加词缀，包括低阶候选，供玩家后续调整优先级或删减。",
+      "暗金固有属性、暗金自身底材、技能及祝福不转成普通词缀素材要求。",
+      "神像按所示类型与底材收集普通0／5目标，附魔4与腐化6只作参考；祭坛腐化作为实际目标。",
+      "暗金固定随机池词缀7另存来源参考，不加入普通T7素材池或增加暗金属性数值门槛。",
+      "暗金神像按暗金ID收集，其附加参考另存来源，不生成普通神像目标层。",
+      "构建器未提供练级路线或替代配装，练级需求留空。"
+    ]
+  }
+}

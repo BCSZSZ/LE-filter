@@ -1,0 +1,21 @@
+{
+  "format": "le-filter-requirements",
+  "version": 1,
+  "id": "ice-heartseeker-planner-al0dkyek",
+  "name": "冰追心",
+  "stage": "leveling",
+  "targets": {
+    "affixes": [],
+    "bases": []
+  },
+  "source": {
+    "name": "冰追心 · Last Epoch Tools 构建器 AL0dkyek",
+    "url": "https://www.lastepochtools.com/planner/zh/AL0dkyek",
+    "extracted_on": "2026-10-17",
+    "sha256": "37be1dccd00b15011b13c2d0476b476ab30e834e1fc978f9f10f3c3fc5a3a8a4",
+    "scope": "练级需求未提供，独立留空，待玩家补充",
+    "warnings": [
+      "当前来源只提供终局配装，未从终局推断练级目标。"
+    ]
+  }
+}

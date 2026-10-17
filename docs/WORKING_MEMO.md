@@ -2,6 +2,16 @@
 
 更新时间：2026-10-17，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
+## 最新2026-10-17追加：第三份新来源模板“冰追心”
+
+- 玩家指定[构建器AL0dkyek](https://www.lastepochtools.com/planner/zh/AL0dkyek)，要求先生成初版、后续指摘。新增稳定id `ice-heartseeker-planner-al0dkyek`、名称“冰追心”，与Allie及835攻略模板同等收集，支持独立主副、组合、编辑及需求导出；保留旧Strict两份及两份Flay身份。官方库共五份模板，三份新来源默认未勾选，已有保存不自动加入或覆盖。
+- 来源为赛季5、1.5.2、100级神射手当前终局配装。读取实际物品编辑器各已选词缀的链接／阶数，冻结UI摘录及解码快照；不是原生Planner JSON响应。构建器自带filter遗漏暗金后加词缀，不能用其空弓目标池代替配装。原始普通词缀、腐化／附魔、固定随机池与提取边界见[冰追心审阅](ICE_HEARTSEEKER_PLANNER_REVIEW.md)。
+- 终局明确11种暗金（包括野望宝座211）、10组装备词缀、4组普通神像、1组无懈祭坛9；所有装备为暗金，独立05留空，暗金自身底材不限制素材。练级两份列表均空，不从终局猜路线。三枚大型黯影预兆合并为底材14的普通池743／492／462／491，仍按现有一项／两项策略，不锁定配对。
+- 分类按冻结词库，普通神像只计0／5；892附魔、真正6类腐化另列参考。页签名称与词缀类别分开：头盔25、戒指19和祭坛1093虽位于腐化页签，其ID类别为普通，分别保留普通候选／实际祭坛目标。手套1145／1147、戒指1126／1117是7类固定随机池，另存`source.fixed_affix_references`；211的1029保留于`source.unique_idol_references`，均不增加普通素材门槛或暗金Rolls条件。
+- 冰追心独立79条；与Allie＋835三BD组合173条，与旧Strict两BD组合130条，切换三种主BD数量均相同。默认旧Strict96条、原四BD167–182条保持。五份全部启用为201–216条，沿用超过200报错且不截断，不为新来源改过滤策略。
+- 离线复现：`python -X utf8 scripts/extract_ice_heartseeker_planner.py`，再运行`python -X utf8 scripts/build_ice_heartseeker_requirements.py`。运行期只读两份新需求JSON，不新增网页网址提取入口。新增组合与边界复核用`python -X utf8 scripts/validate_ice_heartseeker.py`；原`validate_comet_double_t7.py`固定复核其原四来源基线。
+- 70项测试通过；新增20组组合／36个明确目标案例及39份原有输入和引擎字节保持。两阶段JSON往返及离线重建确定；静态网页实际核对默认选择、四类目标、空练级、刷新恢复、79／173条预览。打包WASM在Node下4组完整XML与元数据均与原生Python相等；记录见[目标验证](../analysis/ice-heartseeker-validation.json)、[网页验证](../analysis/ice-heartseeker-browser-validation.json)和[WASM对照](../analysis/ice-heartseeker-wasm-validation.json)。未做游戏客户端或Blob下载实测。
+
 ## 最新2026-10-17追加：双T7彗星条件
 
 - 玩家将旧“同BD两条目标T7”独立层替换为“任意双T7中至少一条对应部位／底材BD目标T7”的彗星；另增加双T7且恰好三条未封印词缀（空一普通栏）的彗星。至少三T7仍彗星，其余双T7仍灵感，颜色与全局顺序保持。

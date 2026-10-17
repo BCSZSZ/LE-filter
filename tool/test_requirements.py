@@ -7,6 +7,7 @@ import engine as e
 from requirements import read_document, write_document
 from build_guide_835_requirements import build_document, build_leveling_document
 from build_flay_allie_requirements import build_documents as build_allie_documents
+from build_ice_heartseeker_requirements import build_documents as build_ice_documents
 from test_engine import first
 
 
@@ -18,6 +19,58 @@ def as_build(document):
 
 
 class RequirementTests(unittest.TestCase):
+    def test_ice_planner_roundtrip_and_empty_independent_leveling(self):
+        endgame, leveling = build_ice_documents()
+        self.assertEqual(endgame["id"], "ice-heartseeker-planner-al0dkyek")
+        self.assertEqual(endgame["name"], "冰追心")
+        self.assertEqual({key: len(values) for key, values in endgame["targets"].items()},
+                         {"uniques": 11, "equipment": 10, "altars": 1, "idols": 4, "bases": 0})
+        self.assertEqual(endgame["targets"]["uniques"], [2, 19, 146, 159, 211, 402, 413, 439, 477, 479, 487])
+        equipment = {g["type"]: g for g in endgame["targets"]["equipment"]}
+        self.assertEqual(equipment["BOW"]["affixes"], [672, 432, 20])
+        self.assertEqual(equipment["BOW"]["corrupted"], [969])
+        self.assertEqual(equipment["RING"]["affixes"], [503, 17, 19])
+        self.assertEqual(equipment["RING"]["corrupted"], [1075])
+        self.assertEqual({aid for row in endgame["source"]["fixed_affix_references"] for aid in row["ids"]},
+                         {1145, 1147, 1126, 1117})
+        omen = next(g for g in endgame["targets"]["idols"] if g["type"] == "IDOL_1x3")
+        self.assertEqual((omen["bases"], omen["affixes"]), ([14], [743, 492, 462, 491]))
+        heretic = next(g for g in endgame["targets"]["idols"] if g["type"] == "IDOL_2x2")
+        self.assertEqual((heretic["affixes"], heretic["enchanted"]), ([743, 492], [892]))
+        self.assertEqual(endgame["targets"]["altars"],
+                         [{"type": "IDOL_ALTAR", "bases": [9], "affixes": [1095, 1089, 1100, 1096, 1093]}])
+        self.assertEqual(leveling["targets"], {"affixes": [], "bases": []})
+        build = as_build(endgame)
+        build["requirement_sources"]["leveling"] = leveling["source"]
+        for document in (endgame, leveling):
+            frozen = json.loads((e.ROOT / f"requirements/{document['id']}.{document['stage']}.json").read_text(encoding="utf-8"))
+            self.assertEqual(document, frozen)
+            self.assertEqual(write_document(build, document["stage"]), frozen)
+
+    def test_ice_planner_targets_use_current_base_rules(self):
+        endgame, _ = build_ice_documents()
+        build = as_build(endgame)
+        config = {"version": 1, "main_id": build["id"], "extra_t7": True, "builds": [build]}
+        output = e.generate(config)
+        self.assertFalse(output["warnings"])
+        bow = next(g for g in endgame["targets"]["equipment"] if g["type"] == "BOW")
+        self.assertTrue(bow["affixes"])
+        self.assertEqual(bow["bases"], [])
+        self.assertEqual(first(output, "BOW", {bow["affixes"][0]: 7})["category"], "BD目标单T7")
+        for group in endgame["targets"]["idols"]:
+            for aid in group["affixes"]:
+                self.assertIn(e.CATALOG["affixes"][str(aid)]["special"], {0, 5})
+            if group["affixes"]:
+                row = first(output, group["type"], {group["affixes"][0]: 1},
+                            base=group["bases"][0], rarity="RARE", corrupted=True)
+                self.assertEqual((row["category"], row["tier"]), ("神像一普通目标", 2))
+            for field in ("corrupted", "enchanted"):
+                if group.get(field):
+                    row = first(output, group["type"], {group[field][0]: 1}, base=group["bases"][0],
+                                rarity="RARE", categories={"神像一普通目标", "神像两普通目标"})
+                    self.assertEqual(row["action"], "HIDE")
+        self.assertEqual(build["profiles"]["leveling"], e.empty_leveling())
+
     def test_allie_guide_targets_and_roundtrip(self):
         endgame, leveling = build_allie_documents()
         self.assertEqual({k: len(v) for k, v in endgame["targets"].items()},
@@ -141,7 +194,7 @@ class RequirementTests(unittest.TestCase):
                 self.assertEqual(len(preferred), 5)
                 self.assertFalse(any(g["type"] in {"GLOVES", "BELT", "AMULET"} for g in preferred))
         for build in config["builds"]:
-            build["enabled"] = True
+            build["enabled"] = build["id"] != "ice-heartseeker-planner-al0dkyek"
         self.assertLessEqual(e.generate(config)["count"], 200)
 
     def test_explicit_unrestricted_idol_pair_roundtrip(self):

@@ -2,7 +2,7 @@
 
 [掉落 T7 概率](https://bcszsz.github.io/LE-filter/probability/)：切换普通掉落与普通崇高预言，对比**最终崇高装备中至少1T7／至少2T7**的概率，并显示平均多少件出一件。区域固定100、命运默认12，可选腐化、23类装备、玩家职业及装备职业；普通随机掉落曲线随腐化变化，普通预言保持水平。预言模式保留三种镜片对比和[Excel](outputs/01a135a3-5a09-7e91-83c5-4bd333aeb5ea/普通崇高预言-T7概率.xlsx)。普通模式采用额外地图稀有度0%、无活动暗金加成的随机来源，不含额外保证稀有及特殊词缀来源。数据挖掘版本1.5.2.2，方法及复现见[概率工具说明](docs/PROPHECY_CALCULATOR.md)。
 
-[在线工作台](https://bcszsz.github.io/LE-filter/)由GitHub Pages托管。支持导入Maxroll filter XML／TXT、导入需求JSON、列表搜索编辑、多个BD选择及JSON／XML导出；不支持从网址提取攻略。首次打开需要加载运行环境，导入内容与生成过程在浏览器内处理。在线示例包含旧Maxroll Flay／Skeleton，以及独立的Allie Flay攻略／中文骷髅835攻略；两个攻略方案默认未勾选，两份Flay不合并。使用Chrome或Edge进行文件下载；Codex内置浏览器目前不能正常接收浏览器生成的下载文件。
+[在线工作台](https://bcszsz.github.io/LE-filter/)由GitHub Pages托管。支持导入Maxroll filter XML／TXT、导入需求JSON、列表搜索编辑、多个BD选择及JSON／XML导出；不支持从网址提取攻略。首次打开需要加载运行环境，导入内容与生成过程在浏览器内处理。在线模板包含旧Maxroll Flay／Skeleton，以及独立的Allie Flay攻略／中文骷髅835攻略／冰追心构建器；三份新来源模板默认未勾选，两份Flay不合并。使用Chrome或Edge进行文件下载；Codex内置浏览器目前不能正常接收浏览器生成的下载文件。
 
 **目标工作台已可使用**：双击[start-tool.cmd](start-tool.cmd)，打开本地 <http://127.0.0.1:8765>。左侧并排“官方模板”和“我的保存”：多选只读模板并指定主BD，点击“应用所选BD”后，所有已选BD生成一条可编辑保存方案。勾选不新增保存，再次应用创建新方案；已有方案可直接打开，编辑自动保存。支持导入filter提取目标、中文／英文／ID搜索多选、方案内主副套路调整、全部方案JSON备份和XML预览导出。终局五类目标、练级只填词缀与底材两份列表，共同导出一份filter。见[工具使用说明](docs/TOOL_GUIDE.md)。默认模板组合两BD96条，均启用，练级目标留空。05要求指定底材＋同BD对应部位目标T7常驻；被C1完整覆盖的底材省去重复规则。删除专门T6层，练级品质80退出、底材60退出、普通拆解50退出、原常驻拆解60退出。897附魔及腐化不计普通神像目标。
 
@@ -10,11 +10,13 @@
 
 新增[共通BD需求JSON格式](docs/REQUIREMENTS_FORMAT.md)：filter与攻略先提供一个BD／一个阶段的目标，网页可导入、修改并保存回该格式，再由基底生成filter。攻略835的[流血骷髅终局需求](requirements/bleed-skeleton-roamer-guide-835.endgame.json)含25暗金／套装、13装备组、3神像组、1祭坛、3独立底材；另有[练级需求](requirements/bleed-skeleton-roamer-guide-835.leveling.json)，8词缀、5底材。练级按1项目标→总阶数5→8收紧，单可用目标T5兜底，跨BD不能合计。见[中文审阅表](docs/BLEED_SKELETON_GUIDE_REVIEW.md)。旧Strict与历史XML保留。
 
+“冰追心”依据玩家提供的[构建器AL0dkyek](https://www.lastepochtools.com/planner/zh/AL0dkyek)新增为独立官方模板，与前两份攻略BD使用相同的编辑、保存、主副和生成规则。初版按当前终局配装提取，来源与目标见[中文审阅表](docs/ICE_HEARTSEEKER_PLANNER_REVIEW.md)、[终局需求](requirements/ice-heartseeker-planner-al0dkyek.endgame.json)；[练级需求](requirements/ice-heartseeker-planner-al0dkyek.leveling.json)留空，待玩家补充。已有保存不会自动插入新BD，可勾选模板后应用新组合，或在当前方案导入终局需求。
+
 Allie攻略来源的Flay已按2026-10-07正文及2026-10-11玩家补充更新[终局需求](requirements/flay-lich-allie-guide.endgame.json)与[练级需求](requirements/flay-lich-allie-guide.leveling.json)：17暗金、10装备组、5神像组、1祭坛组、28种终局底材（5首选／23替代）；练级19词缀与3种底材。厚实拉贡点燃139与厚实编织者点燃／点燃火焰穿透876分别收集。祭坛要求尖塔底材3与“魔力自装备的每个腐化神像”1105同时成立，该腐化词条直接作为祭坛目标。补入短暂休息132、红戒277、虚无353、破碎世界413、流亡469、不息狂怒477，保留山之麓替代品。终局05按首选／替代分别收集，没有明确首选不猜；C1已覆盖的底材不会重复输出。Allie单独86条，与835组合139条，均启用。完整目标、部位链接冲突与来源提取时的验证边界见[双攻略需求审阅](docs/GUIDE_REQUIREMENTS_REVIEW.md)。已有保存可手动补祭坛、导入新版同id终局JSON替换该阶段，或明确从模板重置；刷新不会覆盖自己的目标修改。
 
 工作台按首次命中生成：彗星→灵感→主BD→副BD→其余档位。彗星统一红色，灵感统一橙色；其余主BD粉色、副BD蓝色，共享按主，通用物品按档色。至少三T7、双T7中至少一条对应部位BD目标T7、双T7且三词条（空一栏）均为彗星；其余任意双T7为灵感。三词条按未封印的四个普通栏位计数，旧BD双目标T7独立层取消。副BD两目标神像先于主BD一目标。双T7与T0不另设金色。任意多T7覆盖全部23类普通装备，不含神像、祭坛及资源。非目标单T7＋低阶BD目标和额外单T7储备仅在0–84级显示，85级自动退出；可提前取消储备。目标单T7常驻。详见[双T7彗星判定](docs/COMET_DOUBLE_T7.md)。
 
-四个内置BD手动全选时，按主BD选择生成167–182条，均在200条上限内；超过上限仍报错且不截断。验证见[双T7彗星验证](analysis/comet-double-t7-validation.json)。
+原有四个BD手动全选时，按主BD选择生成167–182条，验证见[双T7彗星验证](analysis/comet-double-t7-validation.json)。新增冰追心单独79条，与Allie＋835三BD组合173条；五份模板全部选择为201–216条，会按200条上限报错且不截断。新增组合与目标验证见[冰追心验证](analysis/ice-heartseeker-validation.json)。
 
 任一启用BD需要套装中的一件，工作台会自动收集整套，并在所需暗金页标注补全项；835攻略补齐两件后共27项，原25项来源目标保留。装备词条按优先级竖列编号，可在同部位内拖放调整并自动保存。套装关系使用已冻结的24套／61件ID映射，浏览器与本地使用同一规则。
 

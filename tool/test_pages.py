@@ -26,13 +26,21 @@ default = generate(config)['sha256']
 for b in config['builds']:
     b['enabled'] = b['id'] in {'flay-lich-allie-guide', 'bleed-skeleton-roamer-guide-835'}
 config['main_id'] = 'flay-lich-allie-guide'
-print(json.dumps([default, generate(config)['sha256']]))
+guides = generate(config)['sha256']
+for b in config['builds']:
+    b['enabled'] = b['id'] == 'ice-heartseeker-planner-al0dkyek'
+config['main_id'] = 'ice-heartseeker-planner-al0dkyek'
+print(json.dumps([default, guides, generate(config)['sha256']]))
 """
         config = deepcopy(browser_bootstrap()["config"])
         expected = [engine.generate(config)["sha256"]]
         for build in config["builds"]:
             build["enabled"] = build["id"] in {"flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835"}
         config["main_id"] = "flay-lich-allie-guide"
+        expected.append(engine.generate(config)["sha256"])
+        for build in config["builds"]:
+            build["enabled"] = build["id"] == "ice-heartseeker-planner-al0dkyek"
+        config["main_id"] = "ice-heartseeker-planner-al0dkyek"
         expected.append(engine.generate(config)["sha256"])
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder)
@@ -47,13 +55,13 @@ print(json.dumps([default, generate(config)['sha256']]))
                                     text=True, capture_output=True, check=True, encoding="utf-8")
             self.assertEqual(json.loads(result.stdout), expected)
 
-    def test_four_separate_examples_and_file_only_dispatch(self):
+    def test_five_separate_examples_and_file_only_dispatch(self):
         boot = json.loads(dispatch_json(json.dumps({"path": "/api/bootstrap"})))
         builds = {b["id"]: b for b in boot["config"]["builds"]}
-        self.assertEqual(len(builds), 4)
+        self.assertEqual(len(builds), 5)
         for original in engine.bootstrap()["config"]["builds"]:
             self.assertEqual(builds[original["id"]], original)
-        for slug in ("flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835"):
+        for slug in ("flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835", "ice-heartseeker-planner-al0dkyek"):
             self.assertFalse(builds[slug]["enabled"])
             for stage in ("endgame", "leveling"):
                 frozen = json.loads((engine.ROOT / f"requirements/{slug}.{stage}.json").read_text(encoding="utf-8"))

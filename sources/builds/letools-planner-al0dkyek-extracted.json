@@ -1,0 +1,1569 @@
+{
+  "url": "https://www.lastepochtools.com/planner/zh/AL0dkyek",
+  "extracted_on": "2026-10-17",
+  "title": "神射手, 等级 100 (赛季 5: Rage of the Frostborn) - Last Epoch构建模拟器",
+  "game_version": "1.5.2",
+  "data_version": "version152",
+  "source_snapshot": "sources/builds/letools-planner-al0dkyek-ui.json",
+  "source_snapshot_sha256": "6b4f44d7530696c6cdfe33fc625c8ad385f73de0045d0e683714ad52c5dd4dd8",
+  "method": "Read-only browser DOM extraction: equipped item editor item links and each used affix tab's selected link/tier. No hidden JavaScript state was accessed. This is a selected-field UI snapshot, not the unavailable raw planner API response.",
+  "notes": [
+    "The web text reader could not access the planner. Normal HTTP requests to the planner returned 403; the already observed planner_data endpoint returned 404 on a separate request.",
+    "The native planner loot-filter export was inspected but omitted the selected ordinary additions on unique equipment (the bow target pool was empty), so it is not the source for equipment targets.",
+    "Two ring1 affixes were visible on the selected item card but absent from their selected-tab result. They are resolved below by an exact match to the frozen catalog's uniquely named modifier and special category, with the evidence text retained.",
+    "Affix tab order is UI slot order, not a claimed build priority. The tier is the displayed item's tier, not a collection minimum. All selected additions are retained, including T1 Life Gained on Kill.",
+    "No leveling targets, alternate equipment recommendations, LP minimum, WW minimum, or build guide priority were supplied by this single endgame snapshot."
+  ],
+  "decoder": "Remove key category character; LZ-String decompressFromEncodedURIComponent. A: decimal affix ID. U: 3-digit subType + 3-digit UniqueID. I: 1 + 3-digit itemType + 3-digit subType + 3-digit variant.",
+  "reference": {
+    "planner_js": {
+      "url": "https://www.lastepochtools.com/planner/js/planner.js?1791683649",
+      "sha256": "a777c87bce28a14ff0900ca63ab5f5d3fe297f4a9391420ed6426434ef67eb4a"
+    },
+    "item_db": {
+      "url": "https://www.lastepochtools.com/data/version152/db/js/8e688d145b13a6e9719c917369f90558.js",
+      "sha256": "8a0293233b168b1eb425d7a9490bf7ad26f0d33f445fe2f5a3f0704432ee4cc5"
+    },
+    "affixes": {
+      "6": {
+        "specialAffixType": 0,
+        "type": 0,
+        "canRollOn": [
+          22,
+          20,
+          5,
+          6,
+          7,
+          8,
+          9,
+          12,
+          13,
+          14,
+          15,
+          16,
+          23,
+          24,
+          10,
+          19
+        ]
+      },
+      "7": {
+        "specialAffixType": 0,
+        "type": 1,
+        "canRollOn": [
+          0,
+          1,
+          2,
+          4,
+          18,
+          19,
+          20,
+          21,
+          22,
+          3,
+          17
+        ]
+      },
+      "16": {
+        "specialAffixType": 0,
+        "type": 0,
+        "canRollOn": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          19,
+          20,
+          21,
+          22,
+          2,
+          23,
+          24
+        ]
+      },
+      "17": {
+        "specialAffixType": 0,
+        "type": 1,
+        "canRollOn": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          18,
+          19,
+          20,
+          21,
+          22,
+          17
+        ]
+      },
+      "19": {
+        "specialAffixType": 0,
+        "type": 1,
+        "canRollOn": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          18,
+          19,
+          20,
+          21,
+          22,
+          17
+        ]
+      },
+      "20": {
+        "specialAffixType": 0,
+        "type": 1,
+        "canRollOn": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          12,
+          13,
+          14,
+          15,
+          16,
+          23,
+          17
+        ]
+      },
+      "25": {
+        "specialAffixType": 0,
+        "type": 1,
+        "canRollOn": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          18,
+          21,
+          22,
+          20
+        ]
+      },
+      "52": {
+        "specialAffixType": 0,
+        "type": 1,
+        "canRollOn": [
+          1,
+          0,
+          2
+        ]
+      },
+      "59": {
+        "specialAffixType": 0,
+        "type": 1,
+        "canRollOn": [
+          1,
+          2,
+          9,
+          20
+        ]
+      },
+      "80": {
+        "specialAffixType": 0,
+        "type": 1,
+        "canRollOn": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          19,
+          18,
+          20,
+          21,
+          22,
+          17
+        ]
+      },
+      "112": {
+        "specialAffixType": 0,
+        "type": 1,
+        "canRollOn": [
+          26,
+          28,
+          30,
+          32,
+          33
+        ]
+      },
+      "142": {
+        "specialAffixType": 0,
+        "type": 0,
+        "canRollOn": [
+          26,
+          33
+        ]
+      },
+      "432": {
+        "specialAffixType": 0,
+        "type": 0,
+        "canRollOn": [
+          23,
+          24,
+          17
+        ]
+      },
+      "462": {
+        "specialAffixType": 0,
+        "type": 1,
+        "canRollOn": [
+          30,
+          32
+        ]
+      },
+      "489": {
+        "specialAffixType": 0,
+        "type": 0,
+        "canRollOn": [
+          0
+        ]
+      },
+      "491": {
+        "specialAffixType": 0,
+        "type": 1,
+        "canRollOn": [
+          30,
+          32
+        ]
+      },
+      "492": {
+        "specialAffixType": 0,
+        "type": 1,
+        "canRollOn": [
+          29,
+          31,
+          33
+        ]
+      },
+      "503": {
+        "specialAffixType": 0,
+        "type": 0,
+        "canRollOn": [
+          0,
+          1,
+          3,
+          21,
+          4,
+          22,
+          17
+        ]
+      },
+      "672": {
+        "specialAffixType": 0,
+        "type": 0,
+        "canRollOn": [
+          23
+        ]
+      },
+      "743": {
+        "specialAffixType": 0,
+        "type": 0,
+        "canRollOn": [
+          33
+        ]
+      },
+      "760": {
+        "specialAffixType": 0,
+        "type": 1,
+        "canRollOn": [
+          3
+        ]
+      },
+      "761": {
+        "specialAffixType": 0,
+        "type": 0,
+        "canRollOn": [
+          1
+        ]
+      },
+      "847": {
+        "specialAffixType": 5,
+        "type": 0,
+        "canRollOn": [
+          26
+        ]
+      },
+      "850": {
+        "specialAffixType": 5,
+        "type": 1,
+        "canRollOn": [
+          26
+        ]
+      },
+      "892": {
+        "specialAffixType": 4,
+        "type": 1,
+        "canRollOn": [
+          29,
+          30,
+          31,
+          32,
+          33
+        ]
+      },
+      "969": {
+        "specialAffixType": 6,
+        "type": 0,
+        "canRollOn": [
+          23,
+          17
+        ]
+      },
+      "997": {
+        "specialAffixType": 6,
+        "type": 0,
+        "canRollOn": [
+          2
+        ]
+      },
+      "1027": {
+        "specialAffixType": 6,
+        "type": 0,
+        "canRollOn": [
+          0,
+          1,
+          4,
+          2,
+          3,
+          17,
+          18,
+          19,
+          21,
+          22
+        ]
+      },
+      "1029": {
+        "specialAffixType": 6,
+        "type": 0,
+        "canRollOn": [
+          33
+        ]
+      },
+      "1044": {
+        "specialAffixType": 6,
+        "type": 0,
+        "canRollOn": [
+          33
+        ]
+      },
+      "1052": {
+        "specialAffixType": 6,
+        "type": 0,
+        "canRollOn": [
+          30,
+          29
+        ]
+      },
+      "1064": {
+        "specialAffixType": 6,
+        "type": 0,
+        "canRollOn": [
+          25,
+          26
+        ]
+      },
+      "1066": {
+        "specialAffixType": 6,
+        "type": 0,
+        "canRollOn": [
+          25,
+          26
+        ]
+      },
+      "1069": {
+        "specialAffixType": 6,
+        "type": 0,
+        "canRollOn": [
+          25,
+          26
+        ]
+      },
+      "1075": {
+        "specialAffixType": 6,
+        "type": 0,
+        "canRollOn": [
+          21,
+          22
+        ]
+      },
+      "1089": {
+        "specialAffixType": 0,
+        "type": 0,
+        "canRollOn": [
+          41
+        ]
+      },
+      "1093": {
+        "specialAffixType": 0,
+        "type": 0,
+        "canRollOn": [
+          41
+        ]
+      },
+      "1095": {
+        "specialAffixType": 0,
+        "type": 0,
+        "canRollOn": [
+          41
+        ]
+      },
+      "1096": {
+        "specialAffixType": 0,
+        "type": 1,
+        "canRollOn": [
+          41
+        ]
+      },
+      "1100": {
+        "specialAffixType": 0,
+        "type": 1,
+        "canRollOn": [
+          41
+        ]
+      },
+      "1112": {
+        "specialAffixType": 6,
+        "type": 0,
+        "canRollOn": [
+          33
+        ]
+      },
+      "1117": {
+        "specialAffixType": 7,
+        "type": 0,
+        "canRollOn": [
+          21
+        ]
+      },
+      "1126": {
+        "specialAffixType": 7,
+        "type": 0,
+        "canRollOn": [
+          21
+        ]
+      },
+      "1145": {
+        "specialAffixType": 7,
+        "type": 0,
+        "canRollOn": [
+          4
+        ]
+      },
+      "1147": {
+        "specialAffixType": 7,
+        "type": 0,
+        "canRollOn": [
+          4
+        ]
+      }
+    },
+    "uniques": {
+      "2": {
+        "baseTypeId": 0,
+        "subTypeIds": [
+          6
+        ],
+        "displayNameKey": "Item_Names.Unique_Name_2"
+      },
+      "19": {
+        "baseTypeId": 3,
+        "subTypeIds": [
+          1
+        ],
+        "displayNameKey": "Item_Names.Unique_Name_19"
+      },
+      "146": {
+        "baseTypeId": 17,
+        "subTypeIds": [
+          3
+        ],
+        "displayNameKey": "Item_Names.Unique_Name_146"
+      },
+      "159": {
+        "baseTypeId": 23,
+        "subTypeIds": [
+          6
+        ],
+        "displayNameKey": "Item_Names.Unique_Name_159"
+      },
+      "211": {
+        "baseTypeId": 33,
+        "subTypeIds": [
+          5
+        ],
+        "displayNameKey": "Item_Names.Unique_Name_211"
+      },
+      "402": {
+        "baseTypeId": 2,
+        "subTypeIds": [
+          7
+        ],
+        "displayNameKey": "Item_Names.Unique_Name_402"
+      },
+      "413": {
+        "baseTypeId": 22,
+        "subTypeIds": [
+          62
+        ],
+        "displayNameKey": "Item_Names.Unique_Name_413"
+      },
+      "439": {
+        "baseTypeId": 20,
+        "subTypeIds": [
+          8
+        ],
+        "displayNameKey": "Item_Names.Unique_Name_439"
+      },
+      "477": {
+        "baseTypeId": 21,
+        "subTypeIds": [
+          10
+        ],
+        "displayNameKey": "Item_Names.Unique_Name_477"
+      },
+      "479": {
+        "baseTypeId": 4,
+        "subTypeIds": [
+          3
+        ],
+        "displayNameKey": "Item_Names.Unique_Name_479"
+      },
+      "487": {
+        "baseTypeId": 1,
+        "subTypeIds": [
+          6
+        ],
+        "displayNameKey": "Item_Names.Unique_Name_487"
+      }
+    },
+    "bases": {
+      "IDOL_ALTAR:9": {
+        "displayNameKey": "Item_Names.Item_SubType_Name_41_9",
+        "levelRequirement": 65,
+        "cannotDrop": 0,
+        "isLegacySubType": 0,
+        "obsoleteItem": 0
+      },
+      "IDOL_2x2:11": {
+        "displayNameKey": "Item_Names.Item_SubType_Name_33_11",
+        "levelRequirement": 0,
+        "cannotDrop": 1,
+        "isLegacySubType": 0,
+        "obsoleteItem": 0
+      },
+      "IDOL_1x3:14": {
+        "displayNameKey": "Item_Names.Item_SubType_Name_30_14",
+        "levelRequirement": 0,
+        "cannotDrop": 0,
+        "isLegacySubType": 0,
+        "obsoleteItem": 0
+      },
+      "IDOL_1x1_LAGON:1": {
+        "displayNameKey": "Item_Names.Item_SubType_Name_26_1",
+        "levelRequirement": 0,
+        "cannotDrop": 1,
+        "isLegacySubType": 0,
+        "obsoleteItem": 0
+      },
+      "IDOL_1x1_LAGON:0": {
+        "displayNameKey": "Item_Names.Item_SubType_Name_26_0",
+        "levelRequirement": 0,
+        "cannotDrop": 0,
+        "isLegacySubType": 0,
+        "obsoleteItem": 0
+      }
+    },
+    "classification_check": "All selected affix special categories and prefix/suffix identities agree with sources/tool-catalog.json; all selected unique type/subType IDs agree with the version152 item database."
+  },
+  "planner": {
+    "level": 100,
+    "class_name": "神射手",
+    "items": {
+      "head": {
+        "name": "雪盲",
+        "source_key": "UAzBsIJiA",
+        "decoded_key": "006002",
+        "url": "https://www.lastepochtools.com/db/zh/items/UAzBsIJiA",
+        "itemType": 0,
+        "subType": 6,
+        "uniqueID": 2,
+        "type": "HELMET",
+        "base_source_key": "IIwBjYNnI",
+        "affixes": [
+          {
+            "id": 503,
+            "tier": 6,
+            "source_tab": "prefixes1",
+            "source_key": "AKwBgzEA",
+            "name": "敏捷",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AKwBgzEA"
+          },
+          {
+            "id": 489,
+            "tier": 7,
+            "source_tab": "prefixes2",
+            "source_key": "ACwDgnEA",
+            "name": "弓箭元素伤害",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/ACwDgnEA"
+          },
+          {
+            "id": 7,
+            "tier": 5,
+            "source_tab": "suffixes1",
+            "source_key": "AAzDsQ",
+            "name": "虚空抗性",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AAzDsQ"
+          },
+          {
+            "id": 17,
+            "tier": 7,
+            "source_tab": "suffixes2",
+            "source_key": "AAwRg7EA",
+            "name": "冰霜抗性",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AAwRg7EA"
+          },
+          {
+            "id": 25,
+            "tier": 1,
+            "source_tab": "corruptedAffixes",
+            "source_key": "AAwJgrEA",
+            "name": "增加生命",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AAwJgrEA"
+          }
+        ],
+        "corruptedAffixes": [],
+        "enchantedAffixes": [],
+        "fixedAffixes": []
+      },
+      "chest": {
+        "name": "囚禁之迹",
+        "source_key": "UAzBsBYA4HYg",
+        "decoded_key": "006487",
+        "url": "https://www.lastepochtools.com/db/zh/items/UAzBsBYA4HYg",
+        "itemType": 1,
+        "subType": 6,
+        "uniqueID": 487,
+        "type": "BODY_ARMOR",
+        "base_source_key": "IIwBhpA2MSA",
+        "affixes": [
+          {
+            "id": 761,
+            "tier": 7,
+            "source_tab": "prefixes1",
+            "source_key": "AOwNgjEA",
+            "name": "追心箭等级",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AOwNgjEA"
+          },
+          {
+            "id": 503,
+            "tier": 7,
+            "source_tab": "prefixes2",
+            "source_key": "AKwBgzEA",
+            "name": "敏捷",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AKwBgzEA"
+          }
+        ],
+        "corruptedAffixes": [],
+        "enchantedAffixes": [],
+        "fixedAffixes": []
+      },
+      "hands": {
+        "name": "抵御元素",
+        "source_key": "UAzDMBYHYE4g",
+        "decoded_key": "003479",
+        "url": "https://www.lastepochtools.com/db/zh/items/UAzDMBYHYE4g",
+        "itemType": 4,
+        "subType": 3,
+        "uniqueID": 479,
+        "type": "GLOVES",
+        "base_source_key": "IIwBhBYwZjEg",
+        "affixes": [
+          {
+            "id": 503,
+            "tier": 7,
+            "source_tab": "prefixes1",
+            "source_key": "AKwBgzEA",
+            "name": "敏捷",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AKwBgzEA"
+          },
+          {
+            "id": 17,
+            "tier": 7,
+            "source_tab": "suffixes1",
+            "source_key": "AAwRg7EA",
+            "name": "冰霜抗性",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AAwRg7EA"
+          },
+          {
+            "id": 80,
+            "tier": 5,
+            "source_tab": "suffixes2",
+            "source_key": "AAwDmQ",
+            "name": "元素抗性",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AAwDmQ"
+          }
+        ],
+        "corruptedAffixes": [
+          {
+            "id": 1027,
+            "tier": 6,
+            "source_tab": "corruptedAffixes",
+            "source_key": "AIwBgTA7EA",
+            "name": "冰霜抗性与虚空抗性",
+            "special": 6,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AIwBgTA7EA"
+          }
+        ],
+        "enchantedAffixes": [],
+        "fixedAffixes": [
+          {
+            "id": 1145,
+            "tier": 5,
+            "source_tab": "sealedAffixes",
+            "source_key": "AIzAsFYg",
+            "name": "每8%溢出上限冰霜抗性使承受持续伤害（至多200%溢出上限冰霜抗性）",
+            "special": 7,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AIzAsFYg"
+          },
+          {
+            "id": 1147,
+            "tier": 4,
+            "source_tab": "primordialAffixes",
+            "source_key": "AIzAsHYg",
+            "name": "每8%溢出上限冰霜抗性提高冷却恢复速度（至多200%溢出上限冰霜抗性）",
+            "special": 7,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AIzAsHYg"
+          }
+        ]
+      },
+      "feet": {
+        "name": "哀霜",
+        "source_key": "UAzCMYTiA",
+        "decoded_key": "001019",
+        "url": "https://www.lastepochtools.com/db/zh/items/UAzCMYTiA",
+        "itemType": 3,
+        "subType": 1,
+        "uniqueID": 19,
+        "type": "BOOTS",
+        "base_source_key": "IIwBhGY1Mg",
+        "affixes": [
+          {
+            "id": 503,
+            "tier": 7,
+            "source_tab": "prefixes1",
+            "source_key": "AKwBgzEA",
+            "name": "敏捷",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AKwBgzEA"
+          },
+          {
+            "id": 17,
+            "tier": 7,
+            "source_tab": "suffixes1",
+            "source_key": "AAwRg7EA",
+            "name": "冰霜抗性",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AAwRg7EA"
+          },
+          {
+            "id": 760,
+            "tier": 6,
+            "source_tab": "suffixes2",
+            "source_key": "AOwNgDEA",
+            "name": "闪避时躲避与提高躲避值",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AOwNgDEA"
+          }
+        ],
+        "corruptedAffixes": [],
+        "enchantedAffixes": [],
+        "fixedAffixes": []
+      },
+      "waist": {
+        "name": "埃莱克的创新",
+        "source_key": "UAzDsBZgJiA",
+        "decoded_key": "007402",
+        "url": "https://www.lastepochtools.com/db/zh/items/UAzDsBZgJiA",
+        "itemType": 2,
+        "subType": 7,
+        "uniqueID": 402,
+        "type": "BELT",
+        "base_source_key": "IIwBhCYwdjEg",
+        "affixes": [
+          {
+            "id": 16,
+            "tier": 7,
+            "source_tab": "prefixes1",
+            "source_key": "AAwRgbEA",
+            "name": "冰霜伤害",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AAwRgbEA"
+          },
+          {
+            "id": 52,
+            "tier": 7,
+            "source_tab": "suffixes1",
+            "source_key": "AAwVgTEA",
+            "name": "提高生命",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AAwVgTEA"
+          },
+          {
+            "id": 59,
+            "tier": 7,
+            "source_tab": "suffixes2",
+            "source_key": "AAwVgnEA",
+            "name": "提高躲避值",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AAwVgnEA"
+          }
+        ],
+        "corruptedAffixes": [
+          {
+            "id": 997,
+            "tier": 7,
+            "source_tab": "corruptedAffixes",
+            "source_key": "AJzDsQ",
+            "name": "使用药剂时恢复魔力与使用药剂时获得能量护盾",
+            "special": 6,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AJzDsQ"
+          }
+        ],
+        "enchantedAffixes": [],
+        "fixedAffixes": []
+      },
+      "weapon1": {
+        "name": "凛冬统御",
+        "source_key": "UAzBsEYFYE4g",
+        "decoded_key": "006159",
+        "url": "https://www.lastepochtools.com/db/zh/items/UAzBsEYFYE4g",
+        "itemType": 23,
+        "subType": 6,
+        "uniqueID": 159,
+        "type": "BOW",
+        "base_source_key": "IIwBgTAzCIGzSQ",
+        "affixes": [
+          {
+            "id": 672,
+            "tier": 7,
+            "source_tab": "prefixes1",
+            "source_key": "AGwdgTEA",
+            "name": "暴击率和弓攻击速度",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AGwdgTEA"
+          },
+          {
+            "id": 432,
+            "tier": 7,
+            "source_tab": "prefixes2",
+            "source_key": "ACwZgTEA",
+            "name": "弓箭攻击速度",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/ACwZgTEA"
+          },
+          {
+            "id": 20,
+            "tier": 1,
+            "source_tab": "suffixes1",
+            "source_key": "AAwJmQ",
+            "name": "击杀时恢复生命",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AAwJmQ"
+          }
+        ],
+        "corruptedAffixes": [
+          {
+            "id": 969,
+            "tier": 3,
+            "source_tab": "corruptedAffixes",
+            "source_key": "AJwNmQ",
+            "name": "提高弓箭攻击速度与弓箭击中时施放冰锥几率",
+            "special": 6,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AJwNmQ"
+          }
+        ],
+        "enchantedAffixes": [],
+        "fixedAffixes": []
+      },
+      "weapon2": {
+        "name": "特罗卡之牙",
+        "source_key": "UAzDMEYBYDYg",
+        "decoded_key": "003146",
+        "url": "https://www.lastepochtools.com/db/zh/items/UAzDMEYBYDYg",
+        "itemType": 17,
+        "subType": 3,
+        "uniqueID": 146,
+        "type": "QUIVER",
+        "base_source_key": "IIwBmHYRBmKSA",
+        "affixes": [
+          {
+            "id": 503,
+            "tier": 7,
+            "source_tab": "prefixes1",
+            "source_key": "AKwBgzEA",
+            "name": "敏捷",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AKwBgzEA"
+          },
+          {
+            "id": 432,
+            "tier": 7,
+            "source_tab": "prefixes2",
+            "source_key": "ACwZgTEA",
+            "name": "弓箭攻击速度",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/ACwZgTEA"
+          },
+          {
+            "id": 17,
+            "tier": 6,
+            "source_tab": "suffixes1",
+            "source_key": "AAwRg7EA",
+            "name": "冰霜抗性",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AAwRg7EA"
+          },
+          {
+            "id": 80,
+            "tier": 5,
+            "source_tab": "suffixes2",
+            "source_key": "AAwDmQ",
+            "name": "元素抗性",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AAwDmQ"
+          }
+        ],
+        "corruptedAffixes": [
+          {
+            "id": 969,
+            "tier": 2,
+            "source_tab": "corruptedAffixes",
+            "source_key": "AJwNmQ",
+            "name": "提高弓箭攻击速度与弓箭击中时施放冰锥几率",
+            "special": 6,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AJwNmQ"
+          }
+        ],
+        "enchantedAffixes": [],
+        "fixedAffixes": []
+      },
+      "amulet": {
+        "name": "真视玻璃",
+        "source_key": "UAzAcBYGYE4g",
+        "decoded_key": "008439",
+        "url": "https://www.lastepochtools.com/db/zh/items/UAzAcBYGYE4g",
+        "itemType": 20,
+        "subType": 8,
+        "uniqueID": 439,
+        "type": "AMULET",
+        "base_source_key": "IIwBgTCkBySQ",
+        "affixes": [
+          {
+            "id": 6,
+            "tier": 7,
+            "source_tab": "prefixes1",
+            "source_key": "AAzBsQ",
+            "name": "暴击伤害加成",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AAzBsQ"
+          },
+          {
+            "id": 17,
+            "tier": 7,
+            "source_tab": "suffixes1",
+            "source_key": "AAwRg7EA",
+            "name": "冰霜抗性",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AAwRg7EA"
+          },
+          {
+            "id": 59,
+            "tier": 7,
+            "source_tab": "suffixes2",
+            "source_key": "AAwVgnEA",
+            "name": "提高躲避值",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AAwVgnEA"
+          }
+        ],
+        "corruptedAffixes": [],
+        "enchantedAffixes": [],
+        "fixedAffixes": []
+      },
+      "ring1": {
+        "name": "不息狂怒",
+        "source_key": "UAwRmBYHZKA",
+        "decoded_key": "010477",
+        "url": "https://www.lastepochtools.com/db/zh/items/UAwRmBYHZKA",
+        "itemType": 21,
+        "subType": 10,
+        "uniqueID": 477,
+        "type": "RING",
+        "base_source_key": "IIwBgTKotQ",
+        "affixes": [],
+        "corruptedAffixes": [
+          {
+            "source_tab": "prefixes1",
+            "id": 1075,
+            "tier": 1,
+            "name": "增加暴击加成与每点敏捷提高暴击几率",
+            "evidence": "+15% 暴击伤害；1% 提高暴击几率自每点敏捷；T1",
+            "resolution": "exact modifier text and unique frozen-catalog special=6 match; no selected affix link was available",
+            "special": 6
+          }
+        ],
+        "enchantedAffixes": [],
+        "fixedAffixes": [
+          {
+            "source_tab": "corruptedAffixes",
+            "id": 1126,
+            "tier": 4,
+            "name": "你拥有血迸之怒",
+            "evidence": "你拥有血迸之怒；你击杀的敌人会爆炸；T4",
+            "resolution": "exact visible fixed-pool name and frozen-catalog special=7 match; no selected affix link was available",
+            "special": 7
+          }
+        ]
+      },
+      "ring2": {
+        "name": "不息狂怒",
+        "source_key": "UAwRmBYHZKA",
+        "decoded_key": "010477",
+        "url": "https://www.lastepochtools.com/db/zh/items/UAwRmBYHZKA",
+        "itemType": 21,
+        "subType": 10,
+        "uniqueID": 477,
+        "type": "RING",
+        "base_source_key": "IIwBgTKotQ",
+        "affixes": [
+          {
+            "id": 503,
+            "tier": 7,
+            "source_tab": "prefixes1",
+            "source_key": "AKwBgzEA",
+            "name": "敏捷",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AKwBgzEA"
+          },
+          {
+            "id": 17,
+            "tier": 7,
+            "source_tab": "suffixes1",
+            "source_key": "AAwRg7EA",
+            "name": "冰霜抗性",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AAwRg7EA"
+          },
+          {
+            "id": 19,
+            "tier": 1,
+            "source_tab": "corruptedAffixes",
+            "source_key": "AAwRgnEA",
+            "name": "毒素抗性",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AAwRgnEA"
+          }
+        ],
+        "corruptedAffixes": [],
+        "enchantedAffixes": [],
+        "fixedAffixes": [
+          {
+            "id": 1117,
+            "tier": 4,
+            "source_tab": "sealedAffixes",
+            "source_key": "AIwjsQ",
+            "name": "你拥有锐利之怒",
+            "special": 7,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AIwjsQ"
+          }
+        ]
+      },
+      "relic": {
+        "name": "破碎世界",
+        "source_key": "UAwNgTALAjAzEA",
+        "decoded_key": "062413",
+        "url": "https://www.lastepochtools.com/db/zh/items/UAwNgTALAjAzEA",
+        "itemType": 22,
+        "subType": 62,
+        "uniqueID": 413,
+        "type": "RELIC",
+        "base_source_key": "IIwBgTGIGySJA",
+        "affixes": [
+          {
+            "id": 503,
+            "tier": 7,
+            "source_tab": "prefixes1",
+            "source_key": "AKwBgzEA",
+            "name": "敏捷",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AKwBgzEA"
+          },
+          {
+            "id": 6,
+            "tier": 7,
+            "source_tab": "prefixes2",
+            "source_key": "AAzBsQ",
+            "name": "暴击伤害加成",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AAzBsQ"
+          }
+        ],
+        "corruptedAffixes": [],
+        "enchantedAffixes": [],
+        "fixedAffixes": []
+      },
+      "altar": {
+        "name": "无懈祭坛",
+        "source_key": "IIwBgLKIJwrQ",
+        "decoded_key": "1041009000",
+        "url": "https://www.lastepochtools.com/db/zh/items/IIwBgLKIJwrQ",
+        "itemType": 41,
+        "subType": 9,
+        "type": "IDOL_ALTAR",
+        "affixes": [
+          {
+            "id": 1095,
+            "tier": 6,
+            "source_tab": "prefixes1",
+            "source_key": "AIwBgnArEA",
+            "name": "预兆神像上限",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AIwBgnArEA"
+          },
+          {
+            "id": 1089,
+            "tier": 4,
+            "source_tab": "prefixes2",
+            "source_key": "AIwBgHAnEA",
+            "name": "折射栏位神像前缀与后缀效果",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AIwBgHAnEA"
+          },
+          {
+            "id": 1100,
+            "tier": 1,
+            "source_tab": "suffixes1",
+            "source_key": "AIzAMqA",
+            "name": "生命自每个折射栏位的神像",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AIzAMqA"
+          },
+          {
+            "id": 1096,
+            "tier": 2,
+            "source_tab": "suffixes2",
+            "source_key": "AIwBgnAbEA",
+            "name": "每秒获得能量护盾自装备的每个异端神像",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AIwBgnAbEA"
+          },
+          {
+            "id": 1093,
+            "tier": 6,
+            "source_tab": "corruptedAffixes",
+            "source_key": "AIwBgnAzEA",
+            "name": "折射栏位神像前缀效果",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AIwBgnAzEA"
+          }
+        ],
+        "corruptedAffixes": [],
+        "enchantedAffixes": [],
+        "fixedAffixes": []
+      }
+    },
+    "idols": [
+      {
+        "position": [
+          4,
+          4
+        ],
+        "name": "异端精装玛加莎神像",
+        "source_key": "IIwBgzGLKIkA",
+        "decoded_key": "1033011000",
+        "url": "https://www.lastepochtools.com/db/zh/items/IIwBgzGLKIkA",
+        "itemType": 33,
+        "subType": 11,
+        "type": "IDOL_2x2",
+        "affixes": [
+          {
+            "id": 743,
+            "tier": 1,
+            "source_tab": "prefixes1",
+            "source_key": "AOwFgzEA",
+            "name": "共享·暴击伤害加成",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AOwFgzEA"
+          },
+          {
+            "id": 492,
+            "tier": 1,
+            "source_tab": "suffixes1",
+            "source_key": "ACwTgTEA",
+            "name": "弓箭暴击几率",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/ACwTgTEA"
+          }
+        ],
+        "corruptedAffixes": [
+          {
+            "id": 1044,
+            "tier": 1,
+            "source_tab": "corruptedAffixes",
+            "source_key": "AIwBgLGQ",
+            "name": "召唤物免疫冰缓",
+            "special": 6,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AIwBgLGQ"
+          }
+        ],
+        "enchantedAffixes": [
+          {
+            "id": 892,
+            "tier": 6,
+            "source_tab": "enchants1",
+            "source_key": "ABwTgTEA",
+            "name": "提高暴击几率与增加暴击伤害加成",
+            "special": 4,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/ABwTgTEA"
+          }
+        ],
+        "fixedAffixes": []
+      },
+      {
+        "position": [
+          3,
+          3
+        ],
+        "name": "大型黯影预兆神像",
+        "source_key": "IIwBgzCLALJJA",
+        "decoded_key": "1030014000",
+        "url": "https://www.lastepochtools.com/db/zh/items/IIwBgzCLALJJA",
+        "itemType": 30,
+        "subType": 14,
+        "type": "IDOL_1x3",
+        "affixes": [
+          {
+            "id": 743,
+            "tier": 1,
+            "source_tab": "prefixes1",
+            "source_key": "AOwFgzEA",
+            "name": "共享·暴击伤害加成",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AOwFgzEA"
+          },
+          {
+            "id": 492,
+            "tier": 1,
+            "source_tab": "suffixes1",
+            "source_key": "ACwTgTEA",
+            "name": "弓箭暴击几率",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/ACwTgTEA"
+          }
+        ],
+        "corruptedAffixes": [
+          {
+            "id": 1052,
+            "tier": 1,
+            "source_tab": "corruptedAffixes",
+            "source_key": "AIwBgrATEA",
+            "name": "暴击伤害加成",
+            "special": 6,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AIwBgrATEA"
+          }
+        ],
+        "enchantedAffixes": [],
+        "fixedAffixes": []
+      },
+      {
+        "position": [
+          1,
+          4
+        ],
+        "name": "野望宝座",
+        "source_key": "UAzCsCYEZKA",
+        "decoded_key": "005211",
+        "url": "https://www.lastepochtools.com/db/zh/items/UAzCsCYEZKA",
+        "itemType": 33,
+        "subType": 5,
+        "uniqueID": 211,
+        "type": "IDOL_2x2",
+        "base_source_key": "IIwBgzGIgrFJA",
+        "affixes": [],
+        "corruptedAffixes": [
+          {
+            "id": 1029,
+            "tier": 1,
+            "source_tab": "corruptedAffixes",
+            "source_key": "AIwBgTAnEA",
+            "name": "狂怒效果至你自身",
+            "special": 6,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AIwBgTAnEA"
+          }
+        ],
+        "enchantedAffixes": [],
+        "fixedAffixes": []
+      },
+      {
+        "position": [
+          2,
+          1
+        ],
+        "name": "大型黯影预兆神像",
+        "source_key": "IIwBgzCLALJJA",
+        "decoded_key": "1030014000",
+        "url": "https://www.lastepochtools.com/db/zh/items/IIwBgzCLALJJA",
+        "itemType": 30,
+        "subType": 14,
+        "type": "IDOL_1x3",
+        "affixes": [
+          {
+            "id": 743,
+            "tier": 1,
+            "source_tab": "prefixes1",
+            "source_key": "AOwFgzEA",
+            "name": "共享·暴击伤害加成",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AOwFgzEA"
+          },
+          {
+            "id": 462,
+            "tier": 1,
+            "source_tab": "suffixes1",
+            "source_key": "ACwNgTEA",
+            "name": "持弓时提高伤害",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/ACwNgTEA"
+          }
+        ],
+        "corruptedAffixes": [
+          {
+            "id": 1112,
+            "tier": 1,
+            "source_tab": "corruptedAffixes",
+            "source_key": "AIwhMQ",
+            "name": "秒狂怒（使用闪避后）",
+            "special": 6,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AIwhMQ"
+          }
+        ],
+        "enchantedAffixes": [],
+        "fixedAffixes": []
+      },
+      {
+        "position": [
+          4,
+          1
+        ],
+        "name": "大型黯影预兆神像",
+        "source_key": "IIwBgzCLALJJA",
+        "decoded_key": "1030014000",
+        "url": "https://www.lastepochtools.com/db/zh/items/IIwBgzCLALJJA",
+        "itemType": 30,
+        "subType": 14,
+        "type": "IDOL_1x3",
+        "affixes": [
+          {
+            "id": 743,
+            "tier": 1,
+            "source_tab": "prefixes1",
+            "source_key": "AOwFgzEA",
+            "name": "共享·暴击伤害加成",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AOwFgzEA"
+          },
+          {
+            "id": 491,
+            "tier": 1,
+            "source_tab": "suffixes1",
+            "source_key": "ACwTgjEA",
+            "name": "弓箭伤害",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/ACwTgjEA"
+          }
+        ],
+        "corruptedAffixes": [
+          {
+            "id": 1029,
+            "tier": 1,
+            "source_tab": "corruptedAffixes",
+            "source_key": "AIwBgTAnEA",
+            "name": "狂怒效果至你自身",
+            "special": 6,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AIwBgTAnEA"
+          }
+        ],
+        "enchantedAffixes": [],
+        "fixedAffixes": []
+      },
+      {
+        "position": [
+          5,
+          3
+        ],
+        "name": "中型编织者神像",
+        "source_key": "IIwBgTAbCKtQ",
+        "decoded_key": "1026001000",
+        "url": "https://www.lastepochtools.com/db/zh/items/IIwBgTAbCKtQ",
+        "itemType": 26,
+        "subType": 1,
+        "type": "IDOL_1x1_LAGON",
+        "affixes": [
+          {
+            "id": 847,
+            "tier": 1,
+            "source_tab": "prefixes1",
+            "source_key": "ABwFg7EA",
+            "name": "你与你的召唤物冰霜抗性穿透",
+            "special": 5,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/ABwFg7EA"
+          },
+          {
+            "id": 850,
+            "tier": 1,
+            "source_tab": "suffixes1",
+            "source_key": "ABwVgDEA",
+            "name": "冰霜抗性与召唤物冰霜抗性",
+            "special": 5,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/ABwVgDEA"
+          }
+        ],
+        "corruptedAffixes": [
+          {
+            "id": 1064,
+            "tier": 1,
+            "source_tab": "corruptedAffixes",
+            "source_key": "AIwBgbALEA",
+            "name": "召唤物毒素抗性",
+            "special": 6,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AIwBgbALEA"
+          }
+        ],
+        "enchantedAffixes": [],
+        "fixedAffixes": []
+      },
+      {
+        "position": [
+          1,
+          3
+        ],
+        "name": "中型编织者神像",
+        "source_key": "IIwBgTAbCKtQ",
+        "decoded_key": "1026001000",
+        "url": "https://www.lastepochtools.com/db/zh/items/IIwBgTAbCKtQ",
+        "itemType": 26,
+        "subType": 1,
+        "type": "IDOL_1x1_LAGON",
+        "affixes": [
+          {
+            "id": 847,
+            "tier": 1,
+            "source_tab": "prefixes1",
+            "source_key": "ABwFg7EA",
+            "name": "你与你的召唤物冰霜抗性穿透",
+            "special": 5,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/ABwFg7EA"
+          },
+          {
+            "id": 850,
+            "tier": 1,
+            "source_tab": "suffixes1",
+            "source_key": "ABwVgDEA",
+            "name": "冰霜抗性与召唤物冰霜抗性",
+            "special": 5,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/ABwVgDEA"
+          }
+        ],
+        "corruptedAffixes": [
+          {
+            "id": 1069,
+            "tier": 1,
+            "source_tab": "corruptedAffixes",
+            "source_key": "AIwBgbAnEA",
+            "name": "击中时施加虚弱几率",
+            "special": 6,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AIwBgbAnEA"
+          }
+        ],
+        "enchantedAffixes": [],
+        "fixedAffixes": []
+      },
+      {
+        "position": [
+          3,
+          1
+        ],
+        "name": "中型拉贡神像",
+        "source_key": "IIwBgTAbC00A",
+        "decoded_key": "1026000000",
+        "url": "https://www.lastepochtools.com/db/zh/items/IIwBgTAbC00A",
+        "itemType": 26,
+        "subType": 0,
+        "type": "IDOL_1x1_LAGON",
+        "affixes": [
+          {
+            "id": 142,
+            "tier": 1,
+            "source_tab": "prefixes1",
+            "source_key": "AIwFgTEA",
+            "name": "能量护盾维持",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AIwFgTEA"
+          },
+          {
+            "id": 112,
+            "tier": 1,
+            "source_tab": "suffixes1",
+            "source_key": "AIzBMQ",
+            "name": "冰霜抗性",
+            "special": 0,
+            "url": "https://www.lastepochtools.com/db/zh/suffixes/AIzBMQ"
+          }
+        ],
+        "corruptedAffixes": [
+          {
+            "id": 1066,
+            "tier": 1,
+            "source_tab": "corruptedAffixes",
+            "source_key": "AIwBgbGQ",
+            "name": "降低承受暴击额外伤害",
+            "special": 6,
+            "url": "https://www.lastepochtools.com/db/zh/prefixes/AIwBgbGQ"
+          }
+        ],
+        "enchantedAffixes": [],
+        "fixedAffixes": []
+      }
+    ],
+    "leveling_targets": null
+  },
+  "game_client_tested": false
+}

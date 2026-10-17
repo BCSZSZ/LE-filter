@@ -1,4 +1,4 @@
-"""Package the reviewed engine, four independent examples and a pinned Pyodide."""
+"""Package the reviewed engine, independent examples and a pinned Pyodide."""
 import hashlib
 import json
 import shutil

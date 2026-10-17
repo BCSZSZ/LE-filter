@@ -14,8 +14,13 @@ class WebTests(unittest.TestCase):
                                 cwd=engine.ROOT, capture_output=True, text=True, encoding="utf-8")
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
-    def test_local_server_exposes_same_four_templates(self):
-        self.assertEqual(len(boot()["config"]["builds"]), 4)
+    def test_local_server_exposes_same_five_templates(self):
+        builds = boot()["config"]["builds"]
+        self.assertEqual(len(builds), 5)
+        self.assertEqual({b["id"] for b in builds if b["enabled"]},
+                         {"flay-mana-lich", "skeleton-necromancer"})
+        self.assertEqual(builds[-1]["id"], "ice-heartseeker-planner-al0dkyek")
+        self.assertEqual(builds[-1]["name"], "冰追心")
         index = (engine.ROOT / "tool/web/index.html").read_text(encoding="utf-8")
         self.assertIn('<script src="workbench.js">', index)
         self.assertTrue((engine.ROOT / "tool/web/workbench.js").is_file())

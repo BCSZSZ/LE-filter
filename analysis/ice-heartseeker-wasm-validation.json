@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "date": "2026-10-17",
+  "runtime": "Pyodide 314.0.7 / Node.js",
+  "scope": "Packaged WASM runtime compared with native Python: complete XML, rule metadata and warnings.",
+  "browserDownloadTested": false,
+  "gameExecutionTested": false,
+  "cases": [
+    {
+      "name": "ice-heartseeker-planner-al0dkyek/ice-heartseeker-planner-al0dkyek",
+      "count": 79,
+      "sha256": "f49571cd9989545b56febe7660cf2ad53b05396c8be7ac2a0e218183cbcee710",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+flay-lich-allie-guide+ice-heartseeker-planner-al0dkyek/bleed-skeleton-roamer-guide-835",
+      "count": 173,
+      "sha256": "186e7f5bb13ae88ec799c46c06dd848708ef0dd6070656675ef2d07e13e3f714",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+flay-lich-allie-guide+ice-heartseeker-planner-al0dkyek/flay-lich-allie-guide",
+      "count": 173,
+      "sha256": "edf94239e6e93a17d51d187e0e6feb84e0d5b56f870134b18234e318e9a1f1b6",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+flay-lich-allie-guide+ice-heartseeker-planner-al0dkyek/ice-heartseeker-planner-al0dkyek",
+      "count": 173,
+      "sha256": "bc90a71918136c81694917eee51efe1650e03bfda3f04fa361663b7493db574d",
+      "completeOutputEqual": true
+    }
+  ]
+}
