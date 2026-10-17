@@ -2,7 +2,7 @@
   "status": "passed",
   "scope": "independent finite identity/tier/lens/force enumeration; not client sampling",
   "modelPath": "scripts/build_prophecy_probability.py",
-  "modelSHA256": "21a23d3a9a67f441e17163be23d8b477365616ddcf4beb61212590643a19b763",
+  "modelSHA256": "55ea9f21bb6da61b089643521d633f46b01d7f3c4d781b3c24d2f290bf3def95",
   "validationScriptSHA256": "d7b64301e4988550f7e21dcaf389e9ae927092c69f2a7cbd125669006a891932",
   "nativeMechanismSources": [
     "docs/T7_LENS_DATAMINING.md",
@@ -84,7 +84,7 @@
     "No sealed/experimental/champion affixes or post-drop corruption",
     "Input provenance is documented separately in docs/T7_EQUIPMENT_POOLS.md"
   ],
-  "elapsedSeconds": 7.25,
+  "elapsedSeconds": 12.0,
   "checks": [
     {
       "fixture": "normal_distinct_weights_4",

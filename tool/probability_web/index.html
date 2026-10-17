@@ -3,24 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>崇高预言 · T7 概率</title>
+  <title>掉落与崇高预言 · T7 概率</title>
   <link rel="stylesheet" href="style.css">
   <script type="module" src="app.js"></script>
 </head>
 <body>
 <main>
   <form id="settings" class="settings" aria-label="概率设置">
+    <label>掉落来源<select id="source" name="source"><option value="prophecy">普通崇高预言</option><option value="natural">普通掉落</option></select></label>
     <label class="item-setting">物品种类<select id="item" name="item"></select></label>
-    <label>职业<select id="career" name="career"></select></label>
+    <label>玩家职业<select id="player-career" name="player-career"></select></label>
+    <label>装备职业<select id="career" name="career"></select></label>
     <div class="fixed-setting"><span id="area-label">区域等级</span><output id="area" aria-labelledby="area-label">100</output></div>
     <label>命运等级<select id="rank" name="rank"></select></label>
     <label>腐化等级<input id="corruption" name="corruption" type="number" min="0" max="100000" step="1" placeholder="0"></label>
   </form>
+  <p id="probability-scope" class="probability-scope">每件最终崇高装备 · 恰好 1T7／2T7</p>
 
-  <section aria-label="普通崇高预言的单件概率" class="results">
+  <section aria-label="单件装备概率" class="results">
     <div class="table-scroll">
       <table class="probabilities">
-        <thead><tr><th scope="col">镜片</th><th scope="col">恰好 1T7</th><th scope="col">恰好 2T7</th></tr></thead>
+        <thead><tr><th scope="col" id="source-heading">镜片</th><th scope="col">恰好 1T7</th><th scope="col">恰好 2T7</th></tr></thead>
         <tbody id="probabilities"></tbody>
       </table>
     </div>
@@ -28,12 +31,12 @@
   </section>
 
   <section class="charts" aria-label="T7 概率随腐化变化">
-    <div class="legend" id="legend" aria-label="镜片图例"></div>
+    <div class="legend" id="legend" aria-label="概率曲线图例"></div>
     <figure><figcaption>1T7 随腐化变化</figcaption><svg id="chart-one" viewBox="0 0 1000 300" role="img" aria-label="恰好一条T7的概率与巨石腐化"></svg></figure>
     <figure><figcaption>2T7 随腐化变化</figcaption><svg id="chart-two" viewBox="0 0 1000 300" role="img" aria-label="恰好两条T7的概率与巨石腐化"></svg></figure>
   </section>
 
-  <section class="rules" aria-labelledby="lens-rules">
+  <section class="rules" id="lens-section" aria-labelledby="lens-rules">
     <h2 id="lens-rules">升级规律</h2>
     <p>每件奖励有 <strong>20%</strong> 触发镜片，选中 <strong>1 条</strong>词缀升阶，最高 T7。</p>
     <div class="lens-scopes"><span>优质镜片 · 全部词缀</span><span>提升前缀镜片 · 前缀</span><span>提升后缀镜片 · 后缀</span></div>
@@ -47,8 +50,8 @@
 
   <section class="rules" aria-labelledby="tier-rules">
     <h2 id="tier-rules">T 级生成规律</h2>
-    <p>自然阶数 <span class="arrow">→</span> 镜片升阶 <span class="arrow">→</span> 保证崇高</p>
-    <p>普通崇高预言奖励固定 <strong>100 级</strong>，其单件 T7 概率不受巨石腐化影响。职业按装备底材归属计算。</p>
+    <p id="generation-order">自然阶数 <span class="arrow">→</span> 镜片升阶 <span class="arrow">→</span> 保证崇高</p>
+    <p id="generation-scope"></p>
     <div class="table-scroll"><table class="mechanics"><thead><tr><th>起始阶数</th><th>T1</th><th>T2</th><th>T3</th><th>T4</th><th>T5</th></tr></thead><tbody><tr><th>概率</th><td>16%</td><td>28%</td><td>24%</td><td>18%</td><td>14%</td></tr></tbody></table></div>
     <div class="formula-grid">
       <div><span>T5 → T6</span><strong>a = M × (4.5% + 5.1% × r)</strong></div>
@@ -56,8 +59,12 @@
     </div>
     <p class="formula-detail">r = clamp(1 − 词缀掉落权重, 0, 1)。自然 T6 = 14% × a × (1 − b)，自然 T7 = 14% × a × b。T6 不兼容的词缀不走自然升阶。</p>
     <p id="cof-rule"></p>
-    <p>词缀数为 1／2／3／4 的概率依次为 0.5%／0.995%／39.402%／59.103%；前缀、后缀各最多 2 条，同一词缀不重复。1／2 词缀起点的自然 T5 → T6 概率额外乘 5%。</p>
-    <p>保证崇高时，每条已有 T6／T7 都有 70% 机会停止；全部未停止后，从所有词缀中等概率抽 1 条。抽中低阶词缀，设为 T6，再以 b 升至 T7；抽中已有 T6／T7 则停止。不兼容词缀按原顺序转向第一条 Normal 词缀，未找到则仍升级原词缀。</p>
+    <p id="affix-count-rule"></p>
+    <div id="natural-rules" hidden>
+      <p>腐化 C 先增加稀有度 I：C ≤ 100 时 I = 0.006 × C；超过 100 时 I = 0.01 × (0.002 × C<sup>1.52</sup> + 1.055 × C − 47.692955)。</p>
+      <p>稀有度带来平均 0.36 × I 次额外抽取并取最高值，改变 0–4 词缀的分布。已按玩家职业修正 2 词缀分支的神像分流。</p>
+    </div>
+    <p id="force-rule">保证崇高时，每条已有 T6／T7 都有 70% 机会停止；全部未停止后，从所有词缀中等概率抽 1 条。抽中低阶词缀，设为 T6，再以 b 升至 T7；抽中已有 T6／T7 则停止。不兼容词缀按原顺序转向第一条 Normal 词缀，未找到则仍升级原词缀。</p>
   </section>
 </main>
 </body>

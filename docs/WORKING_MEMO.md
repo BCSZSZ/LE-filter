@@ -2,7 +2,14 @@
 
 更新时间：2026-10-17，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
-## 最新2026-10-17追加：区域固定100与腐化作用边界
+## 最新2026-10-17追加：普通掉落与预言切换
+
+- 玩家确认普通掉落分母只取最终崇高装备，与普通崇高预言直接比较恰好1T7／2T7；不添加全部装备分母开关。页面区域固定100、命运默认12，另设玩家职业与装备职业。普通模式无镜片，预言四镜片及原Excel保留。
+- 普通模式采用额外地图稀有度0%、无活动暗金加成的普通随机来源，不混入额外保证稀有、实验、冠军及固定奖励。腐化先改RollRarity及初始词缀数量，再影响最终崇高条件分布；CoF11仅raw3/4混入25% force。普通曲线自动取实际百分比纵轴范围，预言曲线保持水平。
+- 42候选RollBaseType中仅raw2允许神像；冻结五玩家职业的拒绝重抽权重与1000次上限，按所选普通类型做Bayes修正，再用所选底材职业词缀池。底材职业抽取因子跨raw共用。resources的489条UniqueList已复读，330个随机条目及所有职业候选非空，当前100级默认调用不存在失败回流普通装备；范围见[NATURAL_DROP_CALCULATOR_SCOPE.md](NATURAL_DROP_CALCULATOR_SCOPE.md)。
+- 普通模型独立枚举2,647,575个身份／阶数状态，48组原始分布、96组条件混合及64个生产组件，最大误差4.92e−13；原预言128组分布误差仍≤1.33e−14，原Excel288个数值不变。工具只读取已提交JSON，过滤器引擎、模板及历史XML保持。复现见[概率工具说明](PROPHECY_CALCULATOR.md)，页面检查记录见analysis/prophecy-page-validation.json。均为静态数据挖掘、数学与浏览器验证，无客户端掉落采样。
+
+## 此前2026-10-17追加：区域固定100与腐化作用边界
 
 - 玩家要求区域等级只显示100，禁止修改；概率页改为output，保留命运、职业和腐化选择，数字及Excel不变。页面“不受腐化影响”明确限定普通崇高预言，不能推广到所有掉落。
 - 普通自然掉落存在腐化mod→increasedItemRarity→RollRarity最大值重抽→raw词缀数量／魔法稀有结构→CoF11转换比例的间接作用。固定ilvl／词缀池／raw rarity／force等输入下，普通RollTier的直接阶数公式不含巨石腐化。详见[T7_NATURAL_CORRUPTION.md](T7_NATURAL_CORRUPTION.md)。

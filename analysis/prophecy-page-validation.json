@@ -5,22 +5,25 @@
   "profiles": 36,
   "equipmentTypes": 23,
   "files": {
-    "probabilityDataSHA256": "f8e2ccdf2f889d2cf7807ad8ac748214791b0f1f82d18b0d8c1c1b0b409c4f33",
+    "probabilityDataSHA256": "8d5fa5c9614802ffd805e358cd16f6aee3f19f4042341aac173029b60419a0a2",
     "workbookSHA256": "64cbe7d52d100a08372ff1e7e04a7d9d3b37dafa16731cbfe86d91ae72fed3b1"
   },
   "defaultInputs": {
     "areaLevel": 100,
     "areaEditable": false,
+    "source": "prophecy",
+    "denominator": "final_exalted_equipment_only",
+    "playerClassID": 3,
     "cofRank": 12,
     "itemType": 21,
     "corruption": null
   },
   "checks": {
     "pythonRegressionTests": {
-      "passed": 63
+      "passed": 65
     },
     "browserModelTests": {
-      "passed": 3
+      "passed": 5
     },
     "workbook": {
       "numericProbabilityCells": 288,
@@ -29,7 +32,12 @@
     },
     "independentEnumeration": {
       "lensDistributions": 128,
-      "maximumError": 1.3211653993039363e-14
+      "maximumError": 1.3211653993039363e-14,
+      "naturalRawRegimes": 48,
+      "naturalConditionalMixtures": 96,
+      "naturalProductionComponents": 64,
+      "naturalTierStates": 2647575,
+      "naturalMaximumError": 4.913847106990943e-13
     },
     "actualBrowserCases": [
       "ring default four-lens comparison",
@@ -39,7 +47,15 @@
       "bow locks to Rogue",
       "rank4 Quality unavailable",
       "area100 fixed output has no editable control",
-      "corruption600 changes selected marker only"
+      "prophecy corruption changes selected marker only",
+      "ordinary drop source shows one conditional exalted row and hides lenses/Excel",
+      "ring CoF12 player Acolyte corruption300: 22.487437% exact1, 0.046404% exact2",
+      "ring CoF12 player Acolyte corruption1000: 22.488505% exact1, 0.047884% exact2",
+      "natural curves each contain 201 distinct probability heights",
+      "player Mage and Acolyte equipment helmet can be selected independently",
+      "CoF0 ordinary drop gives probabilities while prophecy is locked",
+      "return to prophecy CoF4 restores four rows, Quality locked, player class disabled",
+      "prophecy curves each keep constant probability heights"
     ],
     "responsive": {
       "defaultDesktopVisuallyReviewed": true,
@@ -47,7 +63,8 @@
       "documentWidthCSSPixels": 341,
       "mobileProbabilityTableWidthCSSPixels": 305,
       "mobileProbabilityContainerWidthCSSPixels": 305,
-      "mobileProbabilityNumbersFullyVisible": true
+      "mobileProbabilityNumbersFullyVisible": true,
+      "ordinaryCurveAxesAndBothChartsVisuallyReviewed": true
     },
     "newDocumentationLinksResolve": true,
     "buildProbabilityPageDeterministic": true,

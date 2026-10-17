@@ -1,0 +1,6680 @@
+{
+  "status": "passed",
+  "scope": "ordinary ilvl100; full identity and 7^n tier/force enumeration, no lenses; ideal independent RNG; not client test",
+  "modelSHA256": "55ea9f21bb6da61b089643521d633f46b01d7f3c4d781b3c24d2f290bf3def95",
+  "productionFunctionsTested": [
+    "natural_outcomes",
+    "integrate",
+    "evaluate_profile naturalComponents"
+  ],
+  "helperSHA256": "d7b64301e4988550f7e21dcaf389e9ae927092c69f2a7cbd125669006a891932",
+  "scriptSHA256": "621d5b9bb16e5944a5c842515f39177e71b9b19618f753cabd7c98df290617d9",
+  "fixtures": 4,
+  "rawRegimeChecks": 48,
+  "rawMixedConditionalChecks": 96,
+  "orderedIdentityPaths": 1917,
+  "productionProfileComponentChecks": 64,
+  "rawTypeConditionalChecks": 575,
+  "snapshotSHA256": "8d5fa5c9614802ffd805e358cd16f6aee3f19f4042341aac173029b60419a0a2",
+  "tierStateEvaluations": 2647575,
+  "maximumAbsoluteError": 4.913847106990943e-13,
+  "elapsedSeconds": 17.203999999997905,
+  "forceFallbackOverwriteT7": {
+    "inputTiers": [
+      4,
+      7,
+      1,
+      4
+    ],
+    "P_E_K": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.04921500000000001,
+        0.913795,
+        0.03699000000000001,
+        0.0,
+        0.0
+      ]
+    ],
+    "forcedExaltedPreserved": true
+  },
+  "formulaRequirements": [
+    "raw3/4 f=.25 only if CoF11 and area>=45 and incoming force=false",
+    "magic suppression applies to natural T6 entry only",
+    "P(nonExalted) integrates ordered identity correlations",
+    "no-force state must include any pre-force post-processing",
+    "zero P(E) returns no conditional result"
+  ],
+  "checks": [
+    {
+      "fixture": "normal_distinct_weights_4",
+      "n": 1,
+      "M": 1.0,
+      "Q": 1.0,
+      "identityPaths": 4,
+      "tierStates": 28,
+      "maxError": 1.822986206434507e-13,
+      "plainExaltedProbability": 0.0003909856034482762,
+      "productionCountMaxError": 1.1102230246251565e-16,
+      "productionExaltedError": 2.5478751053409354e-17
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "n": 2,
+      "M": 1.0,
+      "Q": 1.0,
+      "identityPaths": 12,
+      "tierStates": 588,
+      "maxError": 4.3853809472693683e-14,
+      "plainExaltedProbability": 0.0008036036929779555,
+      "productionCountMaxError": 9.992007221626409e-16,
+      "productionExaltedError": 1.2761059570154387e-16
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "n": 3,
+      "M": 1.0,
+      "Q": 1.0,
+      "identityPaths": 24,
+      "tierStates": 8232,
+      "maxError": 7.327471962526033e-15,
+      "plainExaltedProbability": 0.025388890731763154,
+      "productionCountMaxError": 1.3322676295501878e-15,
+      "productionExaltedError": 1.734723475976807e-16
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "n": 4,
+      "M": 1.0,
+      "Q": 1.0,
+      "identityPaths": 24,
+      "tierStates": 57624,
+      "maxError": 1.0547118733938987e-14,
+      "plainExaltedProbability": 0.03669162772120776,
+      "productionCountMaxError": 9.43689570931383e-15,
+      "productionExaltedError": 8.257283745649602e-16
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "n": 1,
+      "M": 1.5,
+      "Q": 1.0,
+      "identityPaths": 4,
+      "tierStates": 28,
+      "maxError": 1.504352198367087e-14,
+      "plainExaltedProbability": 0.0005864784051724146,
+      "productionCountMaxError": 1.1102230246251565e-16,
+      "productionExaltedError": 7.3075226425523e-17
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "n": 2,
+      "M": 1.5,
+      "Q": 1.0,
+      "identityPaths": 12,
+      "tierStates": 588,
+      "maxError": 8.409939411535561e-15,
+      "plainExaltedProbability": 0.0012052865717777368,
+      "productionCountMaxError": 8.881784197001252e-16,
+      "productionExaltedError": 8.391724815037804e-17
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "n": 3,
+      "M": 1.5,
+      "Q": 1.0,
+      "identityPaths": 24,
+      "tierStates": 8232,
+      "maxError": 8.881784197001252e-15,
+      "plainExaltedProbability": 0.037925002220898014,
+      "productionCountMaxError": 5.204170427930421e-18,
+      "productionExaltedError": 4.510281037539698e-16
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "n": 4,
+      "M": 1.5,
+      "Q": 1.0,
+      "identityPaths": 24,
+      "tierStates": 57624,
+      "maxError": 8.548717289613705e-15,
+      "plainExaltedProbability": 0.05466310781629766,
+      "productionCountMaxError": 8.43769498715119e-15,
+      "productionExaltedError": 4.163336342344337e-16
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "n": 1,
+      "M": 1.5,
+      "Q": 2.0,
+      "identityPaths": 4,
+      "tierStates": 28,
+      "maxError": 2.169375790117556e-13,
+      "plainExaltedProbability": 0.0005864784051724145,
+      "productionCountMaxError": 1.1102230246251565e-16,
+      "productionExaltedError": 7.296680620827445e-17
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "n": 2,
+      "M": 1.5,
+      "Q": 2.0,
+      "identityPaths": 12,
+      "tierStates": 588,
+      "maxError": 3.68594044175552e-14,
+      "plainExaltedProbability": 0.001205286571777737,
+      "productionCountMaxError": 8.881784197001252e-16,
+      "productionExaltedError": 8.413408858487514e-17
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "n": 3,
+      "M": 1.5,
+      "Q": 2.0,
+      "identityPaths": 24,
+      "tierStates": 8232,
+      "maxError": 7.771561172376096e-16,
+      "plainExaltedProbability": 0.03792500222089797,
+      "productionCountMaxError": 4.440892098500626e-16,
+      "productionExaltedError": 3.469446951953614e-17
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "n": 4,
+      "M": 1.5,
+      "Q": 2.0,
+      "identityPaths": 24,
+      "tierStates": 57624,
+      "maxError": 8.770761894538737e-15,
+      "plainExaltedProbability": 0.05466310781629731,
+      "productionCountMaxError": 8.770761894538737e-15,
+      "productionExaltedError": 4.85722573273506e-16
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "n": 1,
+      "M": 1.0,
+      "Q": 1.0,
+      "identityPaths": 6,
+      "tierStates": 42,
+      "maxError": 1.2567724638756772e-13,
+      "plainExaltedProbability": 0.0003423724137931038,
+      "productionCountMaxError": 2.710505431213761e-20,
+      "productionExaltedError": 1.3227266504323154e-17
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "n": 2,
+      "M": 1.0,
+      "Q": 1.0,
+      "identityPaths": 30,
+      "tierStates": 1470,
+      "maxError": 4.14890344302421e-13,
+      "plainExaltedProbability": 0.0006972284496573576,
+      "productionCountMaxError": 9.992007221626409e-16,
+      "productionExaltedError": 1.1449174941446927e-16
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "n": 3,
+      "M": 1.0,
+      "Q": 1.0,
+      "identityPaths": 108,
+      "tierStates": 37044,
+      "maxError": 4.3298697960381105e-15,
+      "plainExaltedProbability": 0.022309001729559998,
+      "productionCountMaxError": 4.107825191113079e-15,
+      "productionExaltedError": 3.469446951953614e-17
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "n": 4,
+      "M": 1.0,
+      "Q": 1.0,
+      "identityPaths": 216,
+      "tierStates": 518616,
+      "maxError": 2.3092638912203256e-14,
+      "plainExaltedProbability": 0.03266865825547617,
+      "productionCountMaxError": 2.3092638912203256e-14,
+      "productionExaltedError": 2.3592239273284576e-16
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "n": 1,
+      "M": 1.5,
+      "Q": 1.0,
+      "identityPaths": 6,
+      "tierStates": 42,
+      "maxError": 4.218847493575595e-14,
+      "plainExaltedProbability": 0.0005135586206896557,
+      "productionCountMaxError": 2.220446049250313e-16,
+      "productionExaltedError": 7.535205098774256e-17
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "n": 2,
+      "M": 1.5,
+      "Q": 1.0,
+      "identityPaths": 30,
+      "tierStates": 1470,
+      "maxError": 9.581224702515101e-14,
+      "plainExaltedProbability": 0.001045759851593214,
+      "productionCountMaxError": 8.881784197001252e-16,
+      "productionExaltedError": 4.96564594998361e-17
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "n": 3,
+      "M": 1.5,
+      "Q": 1.0,
+      "identityPaths": 108,
+      "tierStates": 37044,
+      "maxError": 1.3766765505351941e-14,
+      "plainExaltedProbability": 0.03334860010995709,
+      "productionCountMaxError": 3.3306690738754696e-15,
+      "productionExaltedError": 3.191891195797325e-16
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "n": 4,
+      "M": 1.5,
+      "Q": 1.0,
+      "identityPaths": 216,
+      "tierStates": 518616,
+      "maxError": 5.440092820663267e-14,
+      "plainExaltedProbability": 0.04871797476381991,
+      "productionCountMaxError": 5.440092820663267e-14,
+      "productionExaltedError": 5.689893001203927e-16
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "n": 1,
+      "M": 1.5,
+      "Q": 2.0,
+      "identityPaths": 6,
+      "tierStates": 42,
+      "maxError": 3.0042635046356736e-13,
+      "plainExaltedProbability": 0.0005135586206896558,
+      "productionCountMaxError": 3.3306690738754696e-16,
+      "productionExaltedError": 7.546047120499111e-17
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "n": 2,
+      "M": 1.5,
+      "Q": 2.0,
+      "identityPaths": 30,
+      "tierStates": 1470,
+      "maxError": 6.472600233564663e-14,
+      "plainExaltedProbability": 0.0010457598515932135,
+      "productionCountMaxError": 9.992007221626409e-16,
+      "productionExaltedError": 4.92227786308419e-17
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "n": 3,
+      "M": 1.5,
+      "Q": 2.0,
+      "identityPaths": 108,
+      "tierStates": 37044,
+      "maxError": 5.773159728050814e-15,
+      "plainExaltedProbability": 0.03334860010995697,
+      "productionCountMaxError": 3.9968028886505635e-15,
+      "productionExaltedError": 1.3183898417423734e-16
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "n": 4,
+      "M": 1.5,
+      "Q": 2.0,
+      "identityPaths": 216,
+      "tierStates": 518616,
+      "maxError": 5.495603971894525e-14,
+      "plainExaltedProbability": 0.048717974763820136,
+      "productionCountMaxError": 5.495603971894525e-14,
+      "productionExaltedError": 2.42861286636753e-16
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "n": 1,
+      "M": 1.0,
+      "Q": 1.0,
+      "identityPaths": 4,
+      "tierStates": 28,
+      "maxError": 4.913847106990943e-13,
+      "plainExaltedProbability": 0.0003346376923076926,
+      "productionCountMaxError": 2.220446049250313e-16,
+      "productionExaltedError": 1.0055975149803054e-16
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "n": 2,
+      "M": 1.0,
+      "Q": 1.0,
+      "identityPaths": 12,
+      "tierStates": 588,
+      "maxError": 8.548717289613705e-14,
+      "plainExaltedProbability": 0.000635548184782295,
+      "productionCountMaxError": 3.3306690738754696e-16,
+      "productionExaltedError": 1.196959198423997e-16
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "n": 3,
+      "M": 1.0,
+      "Q": 1.0,
+      "identityPaths": 24,
+      "tierStates": 8232,
+      "maxError": 1.9761969838327786e-14,
+      "plainExaltedProbability": 0.017106900760712893,
+      "productionCountMaxError": 9.992007221626409e-16,
+      "productionExaltedError": 2.5326962749261384e-16
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "n": 4,
+      "M": 1.0,
+      "Q": 1.0,
+      "identityPaths": 24,
+      "tierStates": 57624,
+      "maxError": 7.66053886991358e-15,
+      "plainExaltedProbability": 0.0186534609072001,
+      "productionCountMaxError": 7.66053886991358e-15,
+      "productionExaltedError": 2.185751579730777e-16
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "n": 1,
+      "M": 1.5,
+      "Q": 1.0,
+      "identityPaths": 4,
+      "tierStates": 28,
+      "maxError": 1.986188991054405e-13,
+      "plainExaltedProbability": 0.000501956538461539,
+      "productionCountMaxError": 1.1102230246251565e-16,
+      "productionExaltedError": 9.519295074422729e-17
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "n": 2,
+      "M": 1.5,
+      "Q": 1.0,
+      "identityPaths": 12,
+      "tierStates": 588,
+      "maxError": 2.503552920529728e-13,
+      "plainExaltedProbability": 0.000953256117826353,
+      "productionCountMaxError": 6.661338147750939e-16,
+      "productionExaltedError": 9.085614205428527e-17
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "n": 3,
+      "M": 1.5,
+      "Q": 1.0,
+      "identityPaths": 24,
+      "tierStates": 8232,
+      "maxError": 3.1086244689504383e-15,
+      "plainExaltedProbability": 0.025605588124028824,
+      "productionCountMaxError": 6.661338147750939e-16,
+      "productionExaltedError": 2.42861286636753e-17
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "n": 4,
+      "M": 1.5,
+      "Q": 1.0,
+      "identityPaths": 24,
+      "tierStates": 57624,
+      "maxError": 5.329070518200751e-15,
+      "plainExaltedProbability": 0.02791498704119994,
+      "productionCountMaxError": 5.329070518200751e-15,
+      "productionExaltedError": 4.85722573273506e-17
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "n": 1,
+      "M": 1.5,
+      "Q": 2.0,
+      "identityPaths": 4,
+      "tierStates": 28,
+      "maxError": 5.051514762044462e-14,
+      "plainExaltedProbability": 0.000501956538461539,
+      "productionCountMaxError": 1.3552527156068805e-19,
+      "productionExaltedError": 9.519295074422729e-17
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "n": 2,
+      "M": 1.5,
+      "Q": 2.0,
+      "identityPaths": 12,
+      "tierStates": 588,
+      "maxError": 1.4632739464559563e-13,
+      "plainExaltedProbability": 0.0009532561178263529,
+      "productionCountMaxError": 5.551115123125783e-16,
+      "productionExaltedError": 9.074772183703672e-17
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "n": 3,
+      "M": 1.5,
+      "Q": 2.0,
+      "identityPaths": 24,
+      "tierStates": 8232,
+      "maxError": 1.9984014443252818e-15,
+      "plainExaltedProbability": 0.02560558812402887,
+      "productionCountMaxError": 6.661338147750939e-16,
+      "productionExaltedError": 6.938893903907228e-17
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "n": 4,
+      "M": 1.5,
+      "Q": 2.0,
+      "identityPaths": 24,
+      "tierStates": 57624,
+      "maxError": 5.329070518200751e-15,
+      "plainExaltedProbability": 0.027914987041200098,
+      "productionCountMaxError": 5.329070518200751e-15,
+      "productionExaltedError": 3.469446951953614e-18
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "n": 1,
+      "M": 1.0,
+      "Q": 1.0,
+      "identityPaths": 5,
+      "tierStates": 35,
+      "maxError": 3.8180569816859133e-13,
+      "plainExaltedProbability": 0.00030712500000000027,
+      "productionCountMaxError": 2.220446049250313e-16,
+      "productionExaltedError": 7.443047914112988e-17
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "n": 2,
+      "M": 1.0,
+      "Q": 1.0,
+      "identityPaths": 20,
+      "tierStates": 980,
+      "maxError": 2.6856294965682537e-13,
+      "plainExaltedProbability": 0.0006175952983892052,
+      "productionCountMaxError": 6.661338147750939e-16,
+      "productionExaltedError": 2.3310346708438345e-17
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "n": 3,
+      "M": 1.0,
+      "Q": 1.0,
+      "identityPaths": 54,
+      "tierStates": 18522,
+      "maxError": 8.881784197001252e-15,
+      "plainExaltedProbability": 0.021624808266159166,
+      "productionCountMaxError": 6.994405055138486e-15,
+      "productionExaltedError": 4.0939474033052647e-16
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "n": 4,
+      "M": 1.0,
+      "Q": 1.0,
+      "identityPaths": 72,
+      "tierStates": 172872,
+      "maxError": 2.6201263381153694e-14,
+      "plainExaltedProbability": 0.03258962113062024,
+      "productionCountMaxError": 2.6201263381153694e-14,
+      "productionExaltedError": 5.620504062164855e-16
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "n": 1,
+      "M": 1.5,
+      "Q": 1.0,
+      "identityPaths": 5,
+      "tierStates": 35,
+      "maxError": 2.856603842360528e-13,
+      "plainExaltedProbability": 0.0004606875000000006,
+      "productionCountMaxError": 5.421010862427522e-20,
+      "productionExaltedError": 5.594483210025203e-17
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "n": 2,
+      "M": 1.5,
+      "Q": 1.0,
+      "identityPaths": 20,
+      "tierStates": 980,
+      "maxError": 2.9765079290200447e-13,
+      "plainExaltedProbability": 0.0009263246486484379,
+      "productionCountMaxError": 1.3322676295501878e-15,
+      "productionExaltedError": 6.429318882839041e-17
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "n": 3,
+      "M": 1.5,
+      "Q": 1.0,
+      "identityPaths": 54,
+      "tierStates": 18522,
+      "maxError": 1.1546319456101628e-14,
+      "plainExaltedProbability": 0.03233159485047509,
+      "productionCountMaxError": 1.1546319456101628e-14,
+      "productionExaltedError": 1.0408340855860843e-16
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "n": 4,
+      "M": 1.5,
+      "Q": 1.0,
+      "identityPaths": 72,
+      "tierStates": 172872,
+      "maxError": 3.885780586188048e-14,
+      "plainExaltedProbability": 0.048601170791664684,
+      "productionCountMaxError": 3.8746783559417963e-14,
+      "productionExaltedError": 1.3183898417423734e-16
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "n": 1,
+      "M": 1.5,
+      "Q": 2.0,
+      "identityPaths": 5,
+      "tierStates": 35,
+      "maxError": 8.948397578478762e-14,
+      "plainExaltedProbability": 0.0004606875000000005,
+      "productionCountMaxError": 1.1102230246251565e-16,
+      "productionExaltedError": 5.605325231750058e-17
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "n": 2,
+      "M": 1.5,
+      "Q": 2.0,
+      "identityPaths": 20,
+      "tierStates": 980,
+      "maxError": 2.5424107263916085e-14,
+      "plainExaltedProbability": 0.0009263246486484392,
+      "productionCountMaxError": 1.1102230246251565e-15,
+      "productionExaltedError": 6.299214622140781e-17
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "n": 3,
+      "M": 1.5,
+      "Q": 2.0,
+      "identityPaths": 54,
+      "tierStates": 18522,
+      "maxError": 1.1213252548714081e-14,
+      "plainExaltedProbability": 0.032331594850475175,
+      "productionCountMaxError": 1.1102230246251565e-14,
+      "productionExaltedError": 1.457167719820518e-16
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "n": 4,
+      "M": 1.5,
+      "Q": 2.0,
+      "identityPaths": 72,
+      "tierStates": 172872,
+      "maxError": 4.007905118896815e-14,
+      "plainExaltedProbability": 0.048601170791663116,
+      "productionCountMaxError": 4.007905118896815e-14,
+      "productionExaltedError": 2.1441182163073336e-15
+    }
+  ],
+  "mixedChecks": [
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 0,
+      "CoF11": false,
+      "maxError": 2.248201624865942e-15,
+      "PExalted": 0.005380871268096248,
+      "countDistribution": [
+        0.9995116234801817,
+        0.0004879390959971954,
+        4.372457559230681e-07,
+        1.7803936697026797e-10,
+        2.5750445343114195e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.9092383936568296,
+        0.09068031396518211,
+        8.125928574347135e-05,
+        3.308746076604399e-08,
+        4.78555313073392e-12
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 0,
+      "CoF11": true,
+      "maxError": 7.771561172376096e-16,
+      "PExalted": 0.04451423938300858,
+      "countDistribution": [
+        0.9961496047283241,
+        0.003847998411832692,
+        2.396327735908224e-06,
+        5.320615767677466e-10,
+        4.570005127417771e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.9135019417371966,
+        0.08644421347344199,
+        5.383283572004423e-05,
+        1.1952615256205827e-08,
+        1.0266389341389434e-12
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 100,
+      "CoF11": false,
+      "maxError": 9.769962616701378e-15,
+      "PExalted": 0.006294086634974552,
+      "countDistribution": [
+        0.9994277497048728,
+        0.0005717296189350792,
+        5.204632707770721e-07,
+        2.1289048038457004e-10,
+        3.093800834370055e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.9090812808410742,
+        0.09083599449650581,
+        8.269083362866302e-05,
+        3.382388783808515e-08,
+        4.915408722178422e-12
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 100,
+      "CoF11": true,
+      "maxError": 1.3322676295501878e-15,
+      "PExalted": 0.052544513459841576,
+      "countDistribution": [
+        0.9954522658969911,
+        0.004544886886500385,
+        2.846580983097509e-06,
+        6.354706072833757e-10,
+        5.4906567587038986e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.9134498769983924,
+        0.08649593624982227,
+        5.417465679405477e-05,
+        1.2093947882285552e-08,
+        1.0449533923080792e-12
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 300,
+      "CoF11": false,
+      "maxError": 2.9531932455029164e-14,
+      "PExalted": 0.00961275120748846,
+      "countDistribution": [
+        0.9991228767396056,
+        0.000876299389682393,
+        8.235307642917101e-07,
+        3.3989807308662303e-10,
+        4.985557912078922e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.908754191025872,
+        0.09116010294740014,
+        8.567066248944099e-05,
+        3.5359083549550095e-08,
+        5.186400651038495e-12
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 300,
+      "CoF11": true,
+      "maxError": 2.4424906541753444e-15,
+      "PExalted": 0.08175328438548618,
+      "countDistribution": [
+        0.9929155714686955,
+        0.007079941694583175,
+        4.485824373359843e-06,
+        1.012259666082465e-09,
+        8.848012109169785e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.9133438052727068,
+        0.0866013120793969,
+        5.487026493282049e-05,
+        1.2381883782300658e-08,
+        1.0822821585306962e-12
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 1000,
+      "CoF11": false,
+      "maxError": 2.886579864025407e-15,
+      "PExalted": 0.01831607847986417,
+      "countDistribution": [
+        0.9983155403162873,
+        0.00168277333044987,
+        1.6856334215558357e-06,
+        7.197320827200525e-10,
+        1.0924238937127188e-13
+      ],
+      "conditionalExaltedDistribution": [
+        0.9080338247313969,
+        0.09187410570990026,
+        9.203025764543111e-05,
+        3.929509711979515e-08,
+        5.9642892167866504e-12
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 1000,
+      "CoF11": true,
+      "maxError": 2.220446049250313e-15,
+      "PExalted": 0.157490019614964,
+      "countDistribution": [
+        0.9862879215037603,
+        0.013703047230032336,
+        9.029141105256136e-06,
+        2.124908263605861e-09,
+        1.9387559046297426e-13
+      ],
+      "conditionalExaltedDistribution": [
+        0.9129336669729082,
+        0.08700898802053571,
+        5.733151298939978e-05,
+        1.3492336014694111e-08,
+        1.2310341375089463e-12
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 0,
+      "CoF11": false,
+      "maxError": 1.3322676295501878e-14,
+      "PExalted": 0.008030433053181744,
+      "countDistribution": [
+        0.9989023824590088,
+        0.0010954053359229264,
+        2.2101778953934836e-06,
+        2.026513096063277e-09,
+        6.599557495944231e-13
+      ],
+      "conditionalExaltedDistribution": [
+        0.8633177645934844,
+        0.13640675772633645,
+        0.00027522524386375247,
+        2.523541486047693e-07,
+        8.21818381678609e-11
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 0,
+      "CoF11": true,
+      "maxError": 7.771561172376096e-16,
+      "PExalted": 0.04656190495749858,
+      "countDistribution": [
+        0.9939248199655973,
+        0.006066419537059935,
+        8.755800320794911e-06,
+        4.696022632327123e-09,
+        9.993285692456164e-13
+      ],
+      "conditionalExaltedDistribution": [
+        0.8695246674304228,
+        0.13028718525578636,
+        0.0001880464368626488,
+        1.0085546621457227e-07,
+        2.1462364354675725e-11
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 100,
+      "CoF11": false,
+      "maxError": 6.106226635438361e-15,
+      "PExalted": 0.009392529415714045,
+      "countDistribution": [
+        0.9987139004893383,
+        0.0012834662814912607,
+        2.6308051839422574e-06,
+        2.4231936118740446e-09,
+        7.929073154024196e-13
+      ],
+      "conditionalExaltedDistribution": [
+        0.8630720806144007,
+        0.1366475658137386,
+        0.00028009549584596716,
+        2.579915914684231e-07,
+        8.441893342126315e-11
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 100,
+      "CoF11": true,
+      "maxError": 2.3314683517128287e-15,
+      "PExalted": 0.05492966494082485,
+      "countDistribution": [
+        0.9928282832167581,
+        0.007161308653577631,
+        1.0402518858907167e-05,
+        5.609604864520986e-09,
+        1.2006485791394922e-12
+      ],
+      "conditionalExaltedDistribution": [
+        0.8694381844315284,
+        0.13037233453530864,
+        0.00018937888789443173,
+        1.0212341310590834e-07,
+        2.185792650351933e-11
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 300,
+      "CoF11": false,
+      "maxError": 1.4876988529977098e-14,
+      "PExalted": 0.014342391256452494,
+      "countDistribution": [
+        0.9980287886055801,
+        0.001967044850222366,
+        4.1626741079380544e-06,
+        3.868812057722703e-09,
+        1.2777439633261652e-12
+      ],
+      "conditionalExaltedDistribution": [
+        0.8625604782931128,
+        0.1371490161612634,
+        0.00029023570989707246,
+        2.6974665441386313e-07,
+        8.908862828235294e-11
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 300,
+      "CoF11": true,
+      "maxError": 1.2212453270876722e-15,
+      "PExalted": 0.08536422732665436,
+      "countDistribution": [
+        0.9888396334967913,
+        0.011143959670095443,
+        1.6397892699233696e-05,
+        8.938479344248638e-09,
+        1.9348055494897533e-12
+      ],
+      "conditionalExaltedDistribution": [
+        0.8692617873702236,
+        0.13054601463739626,
+        0.0001920932598204819,
+        1.0470989575111709e-07,
+        2.2665296812047925e-11
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 1000,
+      "CoF11": false,
+      "maxError": 1.2989609388114332e-14,
+      "PExalted": 0.027318360015385852,
+      "countDistribution": [
+        0.9962147060499864,
+        0.0037767658945199907,
+        8.519860717614746e-06,
+        8.191976559275939e-09,
+        2.799762955722325e-12
+      ],
+      "conditionalExaltedDistribution": [
+        0.8614377309662203,
+        0.13825009599378935,
+        0.00031187306678791526,
+        2.998707299655679e-07,
+        1.0248649458259877e-10
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 1000,
+      "CoF11": true,
+      "maxError": 2.220446049250313e-15,
+      "PExalted": 0.16428412621766855,
+      "countDistribution": [
+        0.9784143914841239,
+        0.021552542265592486,
+        3.30474604260499e-05,
+        1.878561823844077e-08,
+        4.239501073349709e-12
+      ],
+      "conditionalExaltedDistribution": [
+        0.8686080693683318,
+        0.1311906558582319,
+        0.00020116039928449084,
+        1.1434834679980421e-07,
+        2.580590816018691e-11
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 0,
+      "CoF11": false,
+      "maxError": 1.765254609153999e-14,
+      "PExalted": 0.008030433053181822,
+      "countDistribution": [
+        0.9978091852751281,
+        0.002181982114063209,
+        8.81640926335917e-06,
+        1.619098618451919e-08,
+        1.055929199351077e-11
+      ],
+      "conditionalExaltedDistribution": [
+        0.7271859798390511,
+        0.2717141279446521,
+        0.0010978746980358585,
+        2.016203370016763e-06,
+        1.3149094106857615e-09
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 0,
+      "CoF11": true,
+      "maxError": 4.9960036108132044e-15,
+      "PExalted": 0.04656190495749865,
+      "countDistribution": [
+        0.9878671515338351,
+        0.012097844040977855,
+        3.496687299547738e-05,
+        3.753620254440112e-08,
+        1.5989257107929863e-11
+      ],
+      "conditionalExaltedDistribution": [
+        0.7394254277775005,
+        0.2598227897252201,
+        0.0007509759969527637,
+        8.061569340572272e-07,
+        3.433978296748111e-10
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 100,
+      "CoF11": false,
+      "maxError": 3.9968028886505635e-15,
+      "PExalted": 0.00939252941571414,
+      "countDistribution": [
+        0.9974330625906302,
+        0.002556423875065165,
+        1.0494161442202114e-05,
+        1.9360175860899474e-08,
+        1.2686517046438714e-11
+      ],
+      "conditionalExaltedDistribution": [
+        0.726704352389339,
+        0.2721762969182879,
+        0.0011172881103406385,
+        2.061231325877883e-06,
+        1.3507029347401967e-09
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 100,
+      "CoF11": true,
+      "maxError": 9.992007221626409e-16,
+      "PExalted": 0.05492966494082493,
+      "countDistribution": [
+        0.985677371473635,
+        0.01428104087974363,
+        4.1542788992820306e-05,
+        4.483841816163541e-08,
+        1.9210377266231875e-11
+      ],
+      "conditionalExaltedDistribution": [
+        0.7392551266825572,
+        0.25998776608465435,
+        0.0007562905952106909,
+        8.162878511991526e-07,
+        3.4972682405630884e-10
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 300,
+      "CoF11": false,
+      "maxError": 9.547918011776346e-15,
+      "PExalted": 0.014342391256452642,
+      "countDistribution": [
+        0.9960659025619313,
+        0.003917462206663373,
+        1.6604301352914667e-05,
+        3.090960865495518e-08,
+        2.0443903413218644e-11
+      ],
+      "conditionalExaltedDistribution": [
+        0.7257014281841766,
+        0.27313870725015305,
+        0.0011577080178623905,
+        2.155122399205847e-06,
+        1.4254180525176324e-09
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 300,
+      "CoF11": true,
+      "maxError": 1.1102230246251565e-15,
+      "PExalted": 0.08536422732665447,
+      "countDistribution": [
+        0.9777120627828504,
+        0.022222381384791573,
+        6.548435548013698e-05,
+        7.144592097640543e-08,
+        3.095688879183605e-11
+      ],
+      "conditionalExaltedDistribution": [
+        0.7389077613054161,
+        0.2603242843135624,
+        0.0007671170645000366,
+        8.3695387651095e-07,
+        3.6264474899276633e-10
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 1000,
+      "CoF11": false,
+      "maxError": 2.886579864025407e-15,
+      "PExalted": 0.027318360015386144,
+      "countDistribution": [
+        0.992446451827007,
+        0.007519501475630772,
+        3.398120634605862e-05,
+        6.544622005962439e-08,
+        4.47962072915572e-11
+      ],
+      "conditionalExaltedDistribution": [
+        0.7234992082709661,
+        0.2752544981249119,
+        0.0012438962780679313,
+        2.3956862718978745e-06,
+        1.639783913321563e-09
+      ]
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 1000,
+      "CoF11": true,
+      "maxError": 2.220446049250313e-15,
+      "PExalted": 0.16428412621766877,
+      "countDistribution": [
+        0.9568948778975787,
+        0.04297300736927419,
+        0.00013196451603336403,
+        1.5014928187317894e-07,
+        6.783201717359535e-11
+      ],
+      "conditionalExaltedDistribution": [
+        0.7376184595868435,
+        0.26157735600295895,
+        0.0008032700363181603,
+        9.139609853373063e-07,
+        4.1289453056299e-10
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 0,
+      "CoF11": false,
+      "maxError": 1.9872992140790302e-14,
+      "PExalted": 0.004753697868021019,
+      "countDistribution": [
+        0.9995474319775184,
+        0.00045220506686299,
+        3.6283140129800803e-07,
+        1.2420420561014865e-10,
+        1.3178773177335356e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.9047966372608376,
+        0.09512701047011314,
+        7.632613838141463e-05,
+        2.612791327057041e-08,
+        2.7723203163565222e-12
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 0,
+      "CoF11": true,
+      "maxError": 2.220446049250313e-15,
+      "PExalted": 0.04402801425280427,
+      "countDistribution": [
+        0.995907977924624,
+        0.004089867040422371,
+        2.154659730384422e-06,
+        3.7520080381221685e-10,
+        2.2528847457200694e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.9070586728740471,
+        0.09289238022270958,
+        4.89383808684305e-05,
+        8.521865230120371e-09,
+        5.116934715211638e-13
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 100,
+      "CoF11": false,
+      "maxError": 1.6209256159527285e-14,
+      "PExalted": 0.005562070921743012,
+      "countDistribution": [
+        0.9994699443554049,
+        0.0005296236881533031,
+        4.318078920882081e-07,
+        1.4853394861019936e-10,
+        1.5833706527687922e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.9047017465162077,
+        0.09522059240253852,
+        7.763437362875093e-05,
+        2.6704792279716666e-08,
+        2.846728628682433e-12
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 100,
+      "CoF11": true,
+      "maxError": 3.9968028886505635e-15,
+      "PExalted": 0.05197941835165486,
+      "countDistribution": [
+        0.9951673303140374,
+        0.0048301096975593965,
+        2.55954005712432e-06,
+        4.4831923190079026e-10,
+        2.7067402575668963e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.9070272457981677,
+        0.09292350416240511,
+        4.924141397289861e-05,
+        8.62493744866072e-09,
+        5.207330792459171e-13
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 300,
+      "CoF11": false,
+      "maxError": 1.7985612998927536e-14,
+      "PExalted": 0.008499855002257587,
+      "countDistribution": [
+        0.9991883007336371,
+        0.0008110160245889488,
+        6.83004548555412e-07,
+        2.372000493610731e-10,
+        2.551549536727808e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.9045043396449299,
+        0.09541527759868146,
+        8.035484703844994e-05,
+        2.790636420245664e-08,
+        3.0018741920304626e-12
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 300,
+      "CoF11": true,
+      "maxError": 2.55351295663786e-15,
+      "PExalted": 0.08090182094678104,
+      "countDistribution": [
+        0.9924731574825043,
+        0.007522808206070744,
+        4.0335966255161e-06,
+        7.147560501338283e-10,
+        4.361822570198799e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.906963249659769,
+        0.09298688358349078,
+        4.9857921346040986e-05,
+        8.834857383544064e-09,
+        5.391501104861533e-13
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 1000,
+      "CoF11": false,
+      "maxError": 6.328271240363392e-15,
+      "PExalted": 0.01621869552224989,
+      "countDistribution": [
+        0.9984440139392341,
+        0.001554589519447377,
+        1.3960385721697183e-06,
+        5.026905468674878e-10,
+        5.59089620272964e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.9040621942355767,
+        0.09585169888137347,
+        8.607588509535426e-05,
+        3.099451162258169e-08,
+        3.447192281931475e-12
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 1000,
+      "CoF11": true,
+      "maxError": 4.551914400963142e-15,
+      "PExalted": 0.15590575982472948,
+      "countDistribution": [
+        0.9854563840326507,
+        0.014535494740088424,
+        8.119721848120431e-06,
+        1.5053174450744984e-09,
+        9.557524513507567e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.9067153389092275,
+        0.09323257047353058,
+        5.208096132720618e-05,
+        9.655303606273356e-09,
+        6.130321627791182e-13
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 0,
+      "CoF11": false,
+      "maxError": 2.786659791809143e-14,
+      "PExalted": 0.007099942961837703,
+      "countDistribution": [
+        0.9989827423254501,
+        0.0010154217835439989,
+        1.8344766553322153e-06,
+        1.4140129572119846e-09,
+        3.377575422519424e-13
+      ],
+      "conditionalExaltedDistribution": [
+        0.8567231201690435,
+        0.1430183015556471,
+        0.00025837906940838175,
+        1.9915835448430006e-07,
+        4.757186699490321e-11
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 0,
+      "CoF11": true,
+      "maxError": 4.440892098500626e-15,
+      "PExalted": 0.045840274236086685,
+      "countDistribution": [
+        0.9935872635760773,
+        0.006404905232507985,
+        7.827883177795147e-06,
+        3.307740331708788e-09,
+        4.967523725480123e-13
+      ],
+      "conditionalExaltedDistribution": [
+        0.8601069358595941,
+        0.13972222765338244,
+        0.00017076431823858566,
+        7.215795251732694e-08,
+        1.083659251228815e-11
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 100,
+      "CoF11": false,
+      "maxError": 1.4876988529977098e-14,
+      "PExalted": 0.00830670529756913,
+      "countDistribution": [
+        0.9988085891549779,
+        0.001189225945242598,
+        2.183208380998462e-06,
+        1.6909927293209682e-09,
+        4.058005801881267e-13
+      ],
+      "conditionalExaltedDistribution": [
+        0.8565723951503759,
+        0.14316457640439134,
+        0.0002628248267863018,
+        2.03569606570227e-07,
+        4.885217010249298e-11
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 100,
+      "CoF11": true,
+      "maxError": 4.3298697960381105e-15,
+      "PExalted": 0.05409117651874361,
+      "countDistribution": [
+        0.9924301718835012,
+        0.007560524183373783,
+        9.299979733434428e-06,
+        3.9527948091404134e-09,
+        5.968257574525047e-13
+      ],
+      "conditionalExaltedDistribution": [
+        0.8600542897439908,
+        0.13977370562006391,
+        0.00017193154839610135,
+        7.307651753092661e-08,
+        1.103369894802886e-11
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 300,
+      "CoF11": false,
+      "maxError": 1.84297022087776e-14,
+      "PExalted": 0.012692270988234736,
+      "countDistribution": [
+        0.998175597434289,
+        0.0018209466560102662,
+        3.4532086433640145e-06,
+        2.700403625056385e-09,
+        6.539342386902791e-13
+      ],
+      "conditionalExaltedDistribution": [
+        0.8562587761164139,
+        0.14346893930158094,
+        0.0002720717708095746,
+        2.127596887554291e-07,
+        5.1522240527046096e-11
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 300,
+      "CoF11": true,
+      "maxError": 6.661338147750939e-15,
+      "PExalted": 0.08410145547789669,
+      "countDistribution": [
+        0.9882213370760211,
+        0.01176399703986096,
+        1.4659579803752654e-05,
+        6.303352478920415e-09,
+        9.617650057314339e-13
+      ],
+      "conditionalExaltedDistribution": [
+        0.8599469788358836,
+        0.13987863792622163,
+        0.00017430827707381883,
+        7.494938634655431e-08,
+        1.1435771239229056e-11
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 1000,
+      "CoF11": false,
+      "maxError": 1.7541523789077473e-14,
+      "PExalted": 0.02421100900909948,
+      "countDistribution": [
+        0.996502957368513,
+        0.0034899790026197293,
+        7.0579046592502625e-06,
+        5.72277532030952e-09,
+        1.432885546332389e-12
+      ],
+      "conditionalExaltedDistribution": [
+        0.8555598145383911,
+        0.14414843269473213,
+        0.00029151633691093233,
+        2.3637078975761268e-07,
+        5.918322304509706e-11
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 1000,
+      "CoF11": true,
+      "maxError": 1.354472090042691e-14,
+      "PExalted": 0.1619367828932992,
+      "countDistribution": [
+        0.9772556317513044,
+        0.022714813782612253,
+        2.9541177520645e-05,
+        1.328645529234602e-08,
+        2.107397187889964e-12
+      ],
+      "conditionalExaltedDistribution": [
+        0.8595478566245073,
+        0.14026963718044919,
+        0.00018242413485582086,
+        8.204717331639543e-08,
+        1.3013702941588857e-11
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 0,
+      "CoF11": false,
+      "maxError": 4.6629367034256575e-15,
+      "PExalted": 0.007099942961837773,
+      "countDistribution": [
+        0.997969153604886,
+        0.002023514141842352,
+        7.320946572023334e-06,
+        1.1301295416343815e-08,
+        5.404120676031078e-12
+      ],
+      "conditionalExaltedDistribution": [
+        0.7139629985719952,
+        0.2850042814032098,
+        0.0010311275191045135,
+        1.5917445361305478e-06,
+        7.61149871918444e-10
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 0,
+      "CoF11": true,
+      "maxError": 3.6637359812630166e-15,
+      "PExalted": 0.045840274236086734,
+      "countDistribution": [
+        0.9871901829195033,
+        0.012778518774772762,
+        3.127185174925702e-05,
+        2.644602657774876e-08,
+        7.948037960768197e-12
+      ],
+      "conditionalExaltedDistribution": [
+        0.7205554003773293,
+        0.27876183089483264,
+        0.0006821916376023543,
+        5.769168491782215e-07,
+        1.7338548019661022e-10
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 100,
+      "CoF11": false,
+      "maxError": 1.0769163338864018e-14,
+      "PExalted": 0.008306705297569213,
+      "countDistribution": [
+        0.9976215447275293,
+        0.002369729199671174,
+        8.712551350455926e-06,
+        1.3514956216001728e-08,
+        6.492809283010027e-12
+      ],
+      "conditionalExaltedDistribution": [
+        0.7136704400519936,
+        0.2852790745284567,
+        0.001048857644318437,
+        1.6269935831185202e-06,
+        7.816347216398798e-10
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 100,
+      "CoF11": true,
+      "maxError": 4.440892098500626e-15,
+      "PExalted": 0.05409117651874367,
+      "countDistribution": [
+        0.9848789437276628,
+        0.015083872159808078,
+        3.7152499719846205e-05,
+        3.1603260048884824e-08,
+        9.549212119240075e-12
+      ],
+      "conditionalExaltedDistribution": [
+        0.7204524426068367,
+        0.2788601234173787,
+        0.0006868495401828082,
+        5.842590618810753e-07,
+        1.7653918316846155e-10
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 300,
+      "CoF11": false,
+      "maxError": 1.0325074129013956e-14,
+      "PExalted": 0.012692270988234864,
+      "countDistribution": [
+        0.9963581012871723,
+        0.0036280966746373537,
+        1.3780445424377118e-05,
+        2.1582303104812993e-08,
+        1.0462947819044466e-11
+      ],
+      "conditionalExaltedDistribution": [
+        0.7130616958774705,
+        0.2858508676658754,
+        0.0010857352035069958,
+        1.7004287983465503e-06,
+        8.243558484327293e-10
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 300,
+      "CoF11": true,
+      "maxError": 6.5503158452884236e-15,
+      "PExalted": 0.08410145547789677,
+      "countDistribution": [
+        0.9764719933135733,
+        0.023469393572927665,
+        5.856270206762371e-05,
+        5.03960433511799e-08,
+        1.5388240091702942e-11
+      ],
+      "conditionalExaltedDistribution": [
+        0.7202425742487853,
+        0.27906049234897967,
+        0.0006963339901176257,
+        5.992291460927783e-07,
+        1.8297233982766472e-10
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 1000,
+      "CoF11": false,
+      "maxError": 1.787459069646502e-14,
+      "PExalted": 0.024211009009099737,
+      "countDistribution": [
+        0.9930200305492098,
+        0.006951760711791296,
+        2.816297972241046e-05,
+        4.573635022499353e-08,
+        2.2926168741318224e-11
+      ],
+      "conditionalExaltedDistribution": [
+        0.7117026618689588,
+        0.2871322177930902,
+        0.0011632303185639794,
+        1.8890724549234386e-06,
+        9.46931568721543e-10
+      ]
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 1000,
+      "CoF11": true,
+      "maxError": 1.3655743202889425e-14,
+      "PExalted": 0.16193678289329944,
+      "countDistribution": [
+        0.9545703458618647,
+        0.0453115425570145,
+        0.00011800532319660435,
+        1.0622420562875564e-07,
+        3.3718355006239425e-11
+      ],
+      "conditionalExaltedDistribution": [
+        0.7194605615447539,
+        0.279810070000405,
+        0.0007287122856723562,
+        6.559609480370315e-07,
+        2.0821924706542142e-10
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 0,
+      "CoF11": false,
+      "maxError": 2.7755575615628914e-15,
+      "PExalted": 0.003259279450752779,
+      "countDistribution": [
+        0.9997066621092675,
+        0.00029323651966460724,
+        1.0137106788924e-07,
+        0.0,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.9099991592728421,
+        0.08996973843310058,
+        3.110229405638318e-05,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 0,
+      "CoF11": true,
+      "maxError": 7.771561172376096e-16,
+      "PExalted": 0.04289914785179397,
+      "countDistribution": [
+        0.995841411343301,
+        0.004157131758542802,
+        1.4567971754497512e-06,
+        1.0098087241327565e-10,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.9030612759240352,
+        0.09690476307139416,
+        3.3958650658577834e-05,
+        2.3539132469982807e-09,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 100,
+      "CoF11": false,
+      "maxError": 2.120525977034049e-14,
+      "PExalted": 0.0037883860243232447,
+      "countDistribution": [
+        0.999658956336247,
+        0.0003409237435511664,
+        1.1992020185038055e-07,
+        0.0,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.9099765278503125,
+        0.08999181745531565,
+        3.165469439503674e-05,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 100,
+      "CoF11": true,
+      "maxError": 8.881784197001252e-16,
+      "PExalted": 0.050640836223144386,
+      "countDistribution": [
+        0.99508931634922,
+        0.00490895866281029,
+        1.724868087024156e-06,
+        1.1988258328201513e-10,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.9030291753251973,
+        0.0969367614938149,
+        3.406081367660828e-05,
+        2.367310499253272e-09,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 300,
+      "CoF11": false,
+      "maxError": 2.6867397195928788e-14,
+      "PExalted": 0.005709442792851893,
+      "countDistribution": [
+        0.9994857426236976,
+        0.0005140699672324541,
+        1.8740907009382136e-07,
+        0.0,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.9099286226413855,
+        0.090038552952323,
+        3.282440632007973e-05,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 300,
+      "CoF11": true,
+      "maxError": 1.1102230246251565e-15,
+      "PExalted": 0.07879980289696023,
+      "countDistribution": [
+        0.9923535764892831,
+        0.007643722988417508,
+        2.7003336075809823e-06,
+        1.886918168234279e-10,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.902963925928654,
+        0.0970018033980688,
+        3.4268278705112724e-05,
+        2.3945721929046455e-09,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 1000,
+      "CoF11": false,
+      "maxError": 1.9206858326015208e-14,
+      "PExalted": 0.010562713049234368,
+      "countDistribution": [
+        0.9990478534836287,
+        0.0009517812745761259,
+        3.652417953856784e-07,
+        0.0,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.9098577693123728,
+        0.09010765228021746,
+        3.45784074302911e-05,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 1000,
+      "CoF11": true,
+      "maxError": 2.1094237467877974e-15,
+      "PExalted": 0.1516572965298839,
+      "countDistribution": [
+        0.9852514459375215,
+        0.014743262431327384,
+        5.2912532305747275e-06,
+        3.779207114274724e-10,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.9027507782352406,
+        0.09721432973336855,
+        3.48895394527364e-05,
+        2.491938865288974e-09,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 0,
+      "CoF11": false,
+      "maxError": 3.7414515929867775e-14,
+      "PExalted": 0.004879308634746877,
+      "countDistribution": [
+        0.9993402748519802,
+        0.0006592119569884896,
+        5.131910311892774e-07,
+        0.0,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.8647912650325545,
+        0.13510355797009085,
+        0.00010517699731775629,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 0,
+      "CoF11": true,
+      "maxError": 2.220446049250313e-15,
+      "PExalted": 0.044162721668211724,
+      "countDistribution": [
+        0.9935855695287265,
+        0.0064093596964037896,
+        5.070008046212282e-06,
+        7.66823499888312e-10,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.854754638550941,
+        0.14513054119617902,
+        0.00011480288928527854,
+        1.736359243547869e-08,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 100,
+      "CoF11": false,
+      "maxError": 2.6201263381153694e-14,
+      "PExalted": 0.005671209933974124,
+      "countDistribution": [
+        0.9992329890321233,
+        0.0007664038718547164,
+        6.070960218675516e-07,
+        0.0,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.8647535575641717,
+        0.13513939367038308,
+        0.00010704876541964417,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 100,
+      "CoF11": true,
+      "maxError": 2.220446049250313e-15,
+      "PExalted": 0.05210207945728676,
+      "countDistribution": [
+        0.9924295924638892,
+        0.0075644038521626,
+        6.002773589770895e-06,
+        9.103583667978025e-10,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.8547004723234307,
+        0.14518429841872035,
+        0.00011521178525498131,
+        1.7472591809778217e-08,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 300,
+      "CoF11": false,
+      "maxError": 2.886579864025407e-14,
+      "PExalted": 0.008546396766471138,
+      "countDistribution": [
+        0.9988434479913286,
+        0.0011556032502537444,
+        9.487584173499707e-07,
+        0.0,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.8646737285579027,
+        0.13521525876113757,
+        0.00011101268093146571,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 300,
+      "CoF11": true,
+      "maxError": 1.4432899320127035e-15,
+      "PExalted": 0.08097823890642605,
+      "countDistribution": [
+        0.9882249772899286,
+        0.011765624339700029,
+        9.396937492707142e-06,
+        1.432878484002906e-09,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.8545902841419175,
+        0.14529365541396536,
+        0.00011604274950416889,
+        1.7694611581497352e-08,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 1000,
+      "CoF11": false,
+      "maxError": 7.549516567451064e-15,
+      "PExalted": 0.01580944261901922,
+      "countDistribution": [
+        0.9978586975807135,
+        0.0021394533826972397,
+        1.849036589139997e-06,
+        0.0,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.8645554766927427,
+        0.13532756557295794,
+        0.00011695773429200799,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 1000,
+      "CoF11": true,
+      "maxError": 1.4432899320127035e-15,
+      "PExalted": 0.15562589518714018,
+      "countDistribution": [
+        0.9773190634589023,
+        0.02266252413992094,
+        1.8409531341293934e-05,
+        2.869835402402369e-09,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.8542598806334649,
+        0.1456218074290866,
+        0.0001182934968448308,
+        1.8440603338868453e-08,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 0,
+      "CoF11": false,
+      "maxError": 3.042011087472929e-14,
+      "PExalted": 0.004879308634746884,
+      "countDistribution": [
+        0.9986815760860229,
+        0.0013163711498522218,
+        2.0527641247571098e-06,
+        0.0,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.7297928840597897,
+        0.26978640795091025,
+        0.00042070798927102456,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 0,
+      "CoF11": true,
+      "maxError": 3.1086244689504383e-15,
+      "PExalted": 0.04416272166821174,
+      "countDistribution": [
+        0.9871812790735452,
+        0.012798443961563735,
+        2.0270830302850462e-05,
+        6.134587999106496e-09,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.7097388828804542,
+        0.2898019750167716,
+        0.0004590031940318881,
+        1.389087394838295e-07,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 100,
+      "CoF11": false,
+      "maxError": 4.218847493575595e-15,
+      "PExalted": 0.005671209933974134,
+      "countDistribution": [
+        0.9984671922562905,
+        0.001530379359621962,
+        2.4283840874702065e-06,
+        0.0,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.7297212126592401,
+        0.26985059227908703,
+        0.00042819506167857585,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 100,
+      "CoF11": true,
+      "maxError": 6.661338147750939e-16,
+      "PExalted": 0.052102079457286773,
+      "countDistribution": [
+        0.9848711904749581,
+        0.015104802072116324,
+        2.4000170058682e-05,
+        7.28286693438242e-09,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.7096313682173753,
+        0.28990785453197165,
+        0.00046063746991820766,
+        1.397807344782257e-07,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 300,
+      "CoF11": false,
+      "maxError": 8.770761894538737e-15,
+      "PExalted": 0.008546396766471153,
+      "countDistribution": [
+        0.9976887934994926,
+        0.0023074114668380887,
+        3.7950336693998827e-06,
+        0.0,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.7295694824777357,
+        0.26998646679854876,
+        0.00044405072372586204,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 300,
+      "CoF11": true,
+      "maxError": 1.5543122344752192e-15,
+      "PExalted": 0.08097823890642608,
+      "countDistribution": [
+        0.9764687484548431,
+        0.023493669526700147,
+        3.757055542902052e-05,
+        1.1463027872023248e-08,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.7094126537828479,
+        0.2901232459975836,
+        0.00046395866267769727,
+        1.415568926519788e-07,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 1000,
+      "CoF11": false,
+      "maxError": 3.3306690738754696e-15,
+      "PExalted": 0.015809442619019252,
+      "countDistribution": [
+        0.9957210932346054,
+        0.004271510619037919,
+        7.396146356559988e-06,
+        0.0,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.7293448688540822,
+        0.2701873002087473,
+        0.00046783093716803103,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 1000,
+      "CoF11": true,
+      "maxError": 1.5543122344752192e-15,
+      "PExalted": 0.1556258951871402,
+      "countDistribution": [
+        0.9546749459804873,
+        0.04525142737348914,
+        7.360368734034689e-05,
+        2.295868321921895e-08,
+        0.0
+      ],
+      "conditionalExaltedDistribution": [
+        0.7087563482606201,
+        0.29077055151441394,
+        0.00047295270013925653,
+        1.475248267109476e-07,
+        0.0
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 0,
+      "CoF11": false,
+      "maxError": 8.770761894538737e-15,
+      "PExalted": 0.004638795144286865,
+      "countDistribution": [
+        0.9995739529911941,
+        0.0004257309147429443,
+        3.1599575179982734e-07,
+        9.830104546460896e-11,
+        1.0033547375923517e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.9081556750074251,
+        0.09177618357802975,
+        6.812022130121598e-05,
+        2.1191072769332445e-08,
+        2.1629641024956284e-12
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 0,
+      "CoF11": true,
+      "maxError": 1.887379141862766e-15,
+      "PExalted": 0.04393003900915515,
+      "countDistribution": [
+        0.9962726162808007,
+        0.003725467895985575,
+        1.915507182581923e-06,
+        3.1601285439531167e-10,
+        1.8246402983659783e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.9151518231426441,
+        0.08480456607855905,
+        4.360358483138897e-05,
+        7.1935482308461785e-09,
+        4.1535139497274696e-13
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 100,
+      "CoF11": false,
+      "maxError": 8.881784197001252e-15,
+      "PExalted": 0.005434938247747432,
+      "countDistribution": [
+        0.9994998496399274,
+        0.0004997737118219695,
+        3.765305776187365e-07,
+        1.1766087005481732e-10,
+        1.2054858403303069e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.9079749691213418,
+        0.09195572958517166,
+        6.92796422801664e-05,
+        2.1648980115566744e-08,
+        2.218030427171704e-12
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 100,
+      "CoF11": true,
+      "maxError": 1.9984014443252818e-15,
+      "PExalted": 0.0518720851465321,
+      "countDistribution": [
+        0.9955960745491113,
+        0.0044016481105499244,
+        2.2769623575073373e-06,
+        3.7795938791385213e-10,
+        2.1922237080918727e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.915100281038477,
+        0.08485581595796321,
+        4.389571676317244e-05,
+        7.286373525301027e-09,
+        4.226210883752055e-13
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 300,
+      "CoF11": false,
+      "maxError": 4.3298697960381105e-15,
+      "PExalted": 0.00832878075403153,
+      "countDistribution": [
+        0.9992304280706814,
+        0.0007689747160927804,
+        5.970249826246194e-07,
+        1.882237589797018e-10,
+        1.9426006362111546e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.90760088996867,
+        0.09232740527124089,
+        7.168215856031876e-05,
+        2.259919723407204e-08,
+        2.332394973022723e-12
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 300,
+      "CoF11": true,
+      "maxError": 3.219646771412954e-15,
+      "PExalted": 0.08076097471565158,
+      "countDistribution": [
+        0.9931349429826127,
+        0.006861463358952116,
+        3.593054681764166e-06,
+        6.03718037477105e-10,
+        3.5326961359326916e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.9149953669881004,
+        0.08496013554950763,
+        4.448998658590765e-05,
+        7.47536838928349e-09,
+        4.3742613909389215e-13
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 1000,
+      "CoF11": false,
+      "maxError": 9.325873406851315e-15,
+      "PExalted": 0.015973226449859563,
+      "countDistribution": [
+        0.9985121951994735,
+        0.0014865726079255456,
+        1.2317910592609464e-06,
+        4.0149907716053995e-10,
+        4.256581486691996e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.9068563383110644,
+        0.09306652056752227,
+        7.711598299364098e-05,
+        2.513575315674999e-08,
+        2.6648226017790036e-12
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.0,
+      "Q": 1.0,
+      "corruption": 1000,
+      "CoF11": true,
+      "maxError": 6.8833827526759706e-15,
+      "PExalted": 0.15571325845991732,
+      "countDistribution": [
+        0.9867000579142673,
+        0.013292669547147591,
+        7.2712579588098324e-06,
+        1.2805489821834345e-09,
+        7.74076188899433e-14
+      ],
+      "conditionalExaltedDistribution": [
+        0.914586964416031,
+        0.08536633089962152,
+        4.6696460087768e-05,
+        8.223763312441791e-09,
+        4.971164283346435e-13
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 0,
+      "CoF11": false,
+      "maxError": 1.942890293094024e-14,
+      "PExalted": 0.006928562886975669,
+      "countDistribution": [
+        0.9990422828991579,
+        0.0009561181186602186,
+        1.597862785778199e-06,
+        1.1191389041174168e-09,
+        2.5714884505247747e-13
+      ],
+      "conditionalExaltedDistribution": [
+        0.8617726191614001,
+        0.1379965996206128,
+        0.00023061965545291733,
+        1.6152540178587064e-07,
+        3.711431205104114e-11
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 0,
+      "CoF11": true,
+      "maxError": 4.773959005888173e-15,
+      "PExalted": 0.04569404367375673,
+      "countDistribution": [
+        0.9941469076731184,
+        0.0058461393356342845,
+        6.9502283792663416e-06,
+        2.762470909989756e-09,
+        3.968945977614158e-13
+      ],
+      "conditionalExaltedDistribution": [
+        0.8719068864057843,
+        0.12794094953325116,
+        0.00015210359645316394,
+        6.045582066916776e-08,
+        8.685915402785038e-12
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 100,
+      "CoF11": false,
+      "maxError": 2.7422508708241367e-14,
+      "PExalted": 0.008117146154640039,
+      "countDistribution": [
+        0.9988757205994004,
+        0.0011223741078429132,
+        1.9039529032497886e-06,
+        1.339544286110653e-09,
+        3.0895283587527923e-13
+      ],
+      "conditionalExaltedDistribution": [
+        0.8614932663301947,
+        0.13827200920871996,
+        0.0002345593964895438,
+        1.6502650815827967e-07,
+        3.806175594099303e-11
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 100,
+      "CoF11": true,
+      "maxError": 3.885780586188048e-15,
+      "PExalted": 0.05393103348117499,
+      "countDistribution": [
+        0.9930872090821306,
+        0.0069045245210042575,
+        8.263092078970344e-06,
+        3.304309155148986e-09,
+        4.768511073691336e-13
+      ],
+      "conditionalExaltedDistribution": [
+        0.8718216493981634,
+        0.1280250734192648,
+        0.00015321590456549724,
+        6.126916066428392e-08,
+        8.841868523353662e-12
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 300,
+      "CoF11": false,
+      "maxError": 6.5503158452884236e-15,
+      "PExalted": 0.012437401818328829,
+      "countDistribution": [
+        0.9982701421595237,
+        0.0017268368305124778,
+        3.01886658608923e-06,
+        2.142879882859573e-09,
+        4.978672958664607e-13
+      ],
+      "conditionalExaltedDistribution": [
+        0.8609148545858671,
+        0.13884224822323116,
+        0.00024272485766604145,
+        1.7229320996139567e-07,
+        4.0029847321709945e-11
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 300,
+      "CoF11": true,
+      "maxError": 4.6629367034256575e-15,
+      "PExalted": 0.08389149490450504,
+      "countDistribution": [
+        0.9892323599498571,
+        0.01075459129568913,
+        1.3043474666945215e-05,
+        5.279018301594641e-09,
+        7.684298177234957e-13
+      ],
+      "conditionalExaltedDistribution": [
+        0.8716480131579516,
+        0.12819644360767732,
+        0.0001554802984711716,
+        6.292674016125029e-08,
+        9.159805992230929e-12
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 1000,
+      "CoF11": false,
+      "maxError": 1.4210854715202004e-14,
+      "PExalted": 0.023845890190836362,
+      "countDistribution": [
+        0.9966559033290228,
+        0.0033378637769364873,
+        6.228322048679052e-06,
+        4.5709011696069325e-09,
+        1.0909152786791486e-12
+      ],
+      "conditionalExaltedDistribution": [
+        0.8597621374494836,
+        0.13997648023302486,
+        0.0002611905866727721,
+        1.916850716423858e-07,
+        4.57485658932696e-11
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.5,
+      "Q": 1.0,
+      "corruption": 1000,
+      "CoF11": true,
+      "maxError": 1.0769163338864018e-14,
+      "PExalted": 0.16165034596109687,
+      "countDistribution": [
+        0.9791468765810805,
+        0.0208266806679509,
+        2.6431543843457056e-05,
+        1.120544140161293e-08,
+        1.683765605226746e-12
+      ],
+      "conditionalExaltedDistribution": [
+        0.8709985846616244,
+        0.12883783541646793,
+        0.0001635105924847085,
+        6.931900661882689e-08,
+        1.041609651507931e-11
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 0,
+      "CoF11": false,
+      "maxError": 6.217248937900877e-15,
+      "PExalted": 0.00692856288697573,
+      "countDistribution": [
+        0.9980877615244017,
+        0.0019058514989535582,
+        6.378027647835665e-06,
+        8.944882469897659e-09,
+        4.1143815208396395e-12
+      ],
+      "conditionalExaltedDistribution": [
+        0.724006477707968,
+        0.27507168947490773,
+        0.0009205412077337195,
+        1.291015556301321e-06,
+        5.93828992816653e-10
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 0,
+      "CoF11": true,
+      "maxError": 2.4424906541753444e-15,
+      "PExalted": 0.045694043673756776,
+      "countDistribution": [
+        0.9883077158037896,
+        0.011664494329401802,
+        2.7767773391615832e-05,
+        2.2087066652789696e-08,
+        6.3503135641826524e-12
+      ],
+      "conditionalExaltedDistribution": [
+        0.7441179800218559,
+        0.255273847346126,
+        0.0006076891244265947,
+        4.833686160604527e-07,
+        1.3897464644456046e-10
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 100,
+      "CoF11": false,
+      "maxError": 7.549516567451064e-15,
+      "PExalted": 0.008117146154640112,
+      "countDistribution": [
+        0.9977552491052255,
+        0.0022371404388669214,
+        7.599744496433882e-06,
+        1.070646779813722e-08,
+        4.943245374004468e-12
+      ],
+      "conditionalExaltedDistribution": [
+        0.7234556515295327,
+        0.2756067706860342,
+        0.0009362581813424093,
+        1.3189940890761144e-06,
+        6.08988095055883e-10
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 100,
+      "CoF11": true,
+      "maxError": 2.9976021664879227e-15,
+      "PExalted": 0.05393103348117505,
+      "countDistribution": [
+        0.9861909443493733,
+        0.01377601649573275,
+        3.301272805044616e-05,
+        2.6419214005756094e-08,
+        7.629617717906138e-12
+      ],
+      "conditionalExaltedDistribution": [
+        0.7439497306231502,
+        0.2554376507644963,
+        0.0006121286005388613,
+        4.898703455215239e-07,
+        1.4146989637365844e-10
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 300,
+      "CoF11": false,
+      "maxError": 1.4988010832439613e-14,
+      "PExalted": 0.012437401818328944,
+      "countDistribution": [
+        0.9965463220532154,
+        0.0034416110479769573,
+        1.2049763734577699e-05,
+        1.7127107309408866e-08,
+        7.965876733863371e-12
+      ],
+      "conditionalExaltedDistribution": [
+        0.7223151589671295,
+        0.2767146304548166,
+        0.0009688328728609553,
+        1.3770647245768585e-06,
+        6.404775571473532e-10
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 300,
+      "CoF11": true,
+      "maxError": 4.884981308350689e-15,
+      "PExalted": 0.0838914949045051,
+      "countDistribution": [
+        0.9784908068505852,
+        0.021457040360672842,
+        5.211056889047734e-05,
+        4.220755665859e-08,
+        1.2294877083575931e-11
+      ],
+      "conditionalExaltedDistribution": [
+        0.7436069869311659,
+        0.2557713435086322,
+        0.0006211662928380946,
+        5.031208074982508e-07,
+        1.4655689587569474e-10
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 1000,
+      "CoF11": false,
+      "maxError": 1.4654943925052066e-14,
+      "PExalted": 0.023845890190836584,
+      "countDistribution": [
+        0.9933242633043247,
+        0.0066508416823579525,
+        2.4858463562647596e-05,
+        3.653230006793774e-08,
+        1.7454644458866377e-11
+      ],
+      "conditionalExaltedDistribution": [
+        0.7200466561638095,
+        0.2789093478637973,
+        0.001042463223796951,
+        1.532016619030488e-06,
+        7.319770542923069e-10
+      ]
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "M": 1.5,
+      "Q": 2.0,
+      "corruption": 1000,
+      "CoF11": true,
+      "maxError": 1.0769163338864018e-14,
+      "PExalted": 0.16165034596109704,
+      "countDistribution": [
+        0.9583466162532153,
+        0.04154770237970623,
+        0.00010559175048738338,
+        8.958965071353624e-08,
+        2.6940249683627936e-11
+      ],
+      "conditionalExaltedDistribution": [
+        0.7423241905290505,
+        0.25702204429370756,
+        0.0006532107918457237,
+        5.542187378621323e-07,
+        1.6665754424126878e-10
+      ]
+    }
+  ],
+  "profileComponentChecks": [
+    {
+      "fixture": "normal_distinct_weights_4",
+      "rank": "0",
+      "n": 1,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "rank": "0",
+      "n": 2,
+      "maxError": 9.992007221626409e-16
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "rank": "0",
+      "n": 3,
+      "maxError": 1.3322676295501878e-15
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "rank": "0",
+      "n": 4,
+      "maxError": 9.43689570931383e-15
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "rank": "4",
+      "n": 1,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "rank": "4",
+      "n": 2,
+      "maxError": 8.881784197001252e-16
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "rank": "4",
+      "n": 3,
+      "maxError": 4.510281037539698e-16
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "rank": "4",
+      "n": 4,
+      "maxError": 8.43769498715119e-15
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "rank": "9",
+      "n": 1,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "rank": "9",
+      "n": 2,
+      "maxError": 8.881784197001252e-16
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "rank": "9",
+      "n": 3,
+      "maxError": 4.440892098500626e-16
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "rank": "9",
+      "n": 4,
+      "maxError": 8.770761894538737e-15
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "rank": "11",
+      "n": 1,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "rank": "11",
+      "n": 2,
+      "maxError": 8.881784197001252e-16
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "rank": "11",
+      "n": 3,
+      "maxError": 3.3306690738754696e-16
+    },
+    {
+      "fixture": "normal_distinct_weights_4",
+      "rank": "11",
+      "n": 4,
+      "maxError": 6.328271240363392e-15
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "rank": "0",
+      "n": 1,
+      "maxError": 1.3227266504323154e-17
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "rank": "0",
+      "n": 2,
+      "maxError": 9.992007221626409e-16
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "rank": "0",
+      "n": 3,
+      "maxError": 4.107825191113079e-15
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "rank": "0",
+      "n": 4,
+      "maxError": 2.3092638912203256e-14
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "rank": "4",
+      "n": 1,
+      "maxError": 2.220446049250313e-16
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "rank": "4",
+      "n": 2,
+      "maxError": 8.881784197001252e-16
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "rank": "4",
+      "n": 3,
+      "maxError": 3.3306690738754696e-15
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "rank": "4",
+      "n": 4,
+      "maxError": 5.440092820663267e-14
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "rank": "9",
+      "n": 1,
+      "maxError": 3.3306690738754696e-16
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "rank": "9",
+      "n": 2,
+      "maxError": 9.992007221626409e-16
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "rank": "9",
+      "n": 3,
+      "maxError": 3.9968028886505635e-15
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "rank": "9",
+      "n": 4,
+      "maxError": 5.495603971894525e-14
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "rank": "11",
+      "n": 1,
+      "maxError": 3.3306690738754696e-16
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "rank": "11",
+      "n": 2,
+      "maxError": 9.992007221626409e-16
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "rank": "11",
+      "n": 3,
+      "maxError": 2.886579864025407e-15
+    },
+    {
+      "fixture": "allowed_and_blocked_maximum_with_normal_6",
+      "rank": "11",
+      "n": 4,
+      "maxError": 4.118927421359331e-14
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "rank": "0",
+      "n": 1,
+      "maxError": 2.220446049250313e-16
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "rank": "0",
+      "n": 2,
+      "maxError": 3.3306690738754696e-16
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "rank": "0",
+      "n": 3,
+      "maxError": 9.992007221626409e-16
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "rank": "0",
+      "n": 4,
+      "maxError": 7.66053886991358e-15
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "rank": "4",
+      "n": 1,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "rank": "4",
+      "n": 2,
+      "maxError": 6.661338147750939e-16
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "rank": "4",
+      "n": 3,
+      "maxError": 6.661338147750939e-16
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "rank": "4",
+      "n": 4,
+      "maxError": 5.329070518200751e-15
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "rank": "9",
+      "n": 1,
+      "maxError": 9.519295074422729e-17
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "rank": "9",
+      "n": 2,
+      "maxError": 5.551115123125783e-16
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "rank": "9",
+      "n": 3,
+      "maxError": 6.661338147750939e-16
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "rank": "9",
+      "n": 4,
+      "maxError": 5.329070518200751e-15
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "rank": "11",
+      "n": 1,
+      "maxError": 9.519295074422729e-17
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "rank": "11",
+      "n": 2,
+      "maxError": 5.551115123125783e-16
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "rank": "11",
+      "n": 3,
+      "maxError": 4.440892098500626e-16
+    },
+    {
+      "fixture": "maximum_and_incompatible_without_normal_4",
+      "rank": "11",
+      "n": 4,
+      "maxError": 4.107825191113079e-15
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "rank": "0",
+      "n": 1,
+      "maxError": 2.220446049250313e-16
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "rank": "0",
+      "n": 2,
+      "maxError": 6.661338147750939e-16
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "rank": "0",
+      "n": 3,
+      "maxError": 6.994405055138486e-15
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "rank": "0",
+      "n": 4,
+      "maxError": 2.6201263381153694e-14
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "rank": "4",
+      "n": 1,
+      "maxError": 5.594483210025203e-17
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "rank": "4",
+      "n": 2,
+      "maxError": 1.3322676295501878e-15
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "rank": "4",
+      "n": 3,
+      "maxError": 1.1546319456101628e-14
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "rank": "4",
+      "n": 4,
+      "maxError": 3.8746783559417963e-14
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "rank": "9",
+      "n": 1,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "rank": "9",
+      "n": 2,
+      "maxError": 1.1102230246251565e-15
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "rank": "9",
+      "n": 3,
+      "maxError": 1.1102230246251565e-14
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "rank": "9",
+      "n": 4,
+      "maxError": 4.007905118896815e-14
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "rank": "11",
+      "n": 1,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "rank": "11",
+      "n": 2,
+      "maxError": 1.1102230246251565e-15
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "rank": "11",
+      "n": 3,
+      "maxError": 8.326672684688674e-15
+    },
+    {
+      "fixture": "same_weight_distinct_ids_5",
+      "rank": "11",
+      "n": 4,
+      "maxError": 2.986499936241671e-14
+    }
+  ],
+  "rawTypeChecks": [
+    {
+      "playerClass": 0,
+      "typeID": 0,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 0,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 0,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 0,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 0,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 1,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 1,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 1,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 1,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 1,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 2,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 2,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 2,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 2,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 2,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 3,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 3,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 3,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 3,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 3,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 4,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 4,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 4,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 4,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 4,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 5,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 5,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 5,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 5,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 5,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 6,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 6,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 6,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 6,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 6,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 7,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 7,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 7,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 7,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 7,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 8,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 8,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 8,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 8,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 8,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 9,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 9,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 9,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 9,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 9,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 10,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 10,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 10,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 10,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 10,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 12,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 12,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 12,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 12,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 12,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 13,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 13,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 13,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 13,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 13,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 14,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 14,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 14,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 14,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 14,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 15,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 15,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 15,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 15,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 15,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 16,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 16,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 16,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 16,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 16,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 17,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 17,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 17,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 17,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 17,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 18,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 18,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 18,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 18,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 18,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 19,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 19,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 19,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 19,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 19,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 20,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 20,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 20,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 20,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 20,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 21,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 21,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 21,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 21,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 21,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 22,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 22,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 22,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 22,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 22,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 23,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 0,
+      "typeID": 23,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 23,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 23,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 0,
+      "typeID": 23,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 0,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 0,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 0,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 0,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 0,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 1,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 1,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 1,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 1,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 1,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 2,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 2,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 2,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 2,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 2,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 3,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 3,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 3,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 3,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 3,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 4,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 4,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 4,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 4,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 4,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 5,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 5,
+      "corruption": 100,
+      "maxError": 2.7755575615628914e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 5,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 5,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 5,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 6,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 6,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 6,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 6,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 6,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 7,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 7,
+      "corruption": 100,
+      "maxError": 2.7755575615628914e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 7,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 7,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 7,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 8,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 8,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 8,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 8,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 8,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 9,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 9,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 9,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 9,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 9,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 10,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 10,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 10,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 10,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 10,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 12,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 12,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 12,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 12,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 12,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 13,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 13,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 13,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 13,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 13,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 14,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 14,
+      "corruption": 100,
+      "maxError": 2.7755575615628914e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 14,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 14,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 14,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 15,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 15,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 15,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 15,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 15,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 16,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 16,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 16,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 16,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 16,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 17,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 17,
+      "corruption": 100,
+      "maxError": 2.7755575615628914e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 17,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 17,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 17,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 18,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 18,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 18,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 18,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 18,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 19,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 19,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 19,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 19,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 19,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 20,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 20,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 20,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 20,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 20,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 21,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 21,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 21,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 21,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 21,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 22,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 22,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 22,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 22,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 22,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 23,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 1,
+      "typeID": 23,
+      "corruption": 100,
+      "maxError": 2.7755575615628914e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 23,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 1,
+      "typeID": 23,
+      "corruption": 1000,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 1,
+      "typeID": 23,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 0,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 0,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 0,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 0,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 0,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 1,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 1,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 1,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 1,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 1,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 2,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 2,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 2,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 2,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 2,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 3,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 3,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 3,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 3,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 3,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 4,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 4,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 4,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 4,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 4,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 5,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 5,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 5,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 5,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 5,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 6,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 6,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 6,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 6,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 6,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 7,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 7,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 7,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 7,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 7,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 8,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 8,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 8,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 8,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 8,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 9,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 9,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 9,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 9,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 9,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 10,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 10,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 10,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 10,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 10,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 12,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 12,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 12,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 12,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 12,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 13,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 13,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 13,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 13,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 13,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 14,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 14,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 14,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 14,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 14,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 15,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 15,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 15,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 15,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 15,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 16,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 16,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 16,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 16,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 16,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 17,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 17,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 17,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 17,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 17,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 18,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 18,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 18,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 18,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 18,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 19,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 19,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 19,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 19,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 19,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 20,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 20,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 20,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 20,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 20,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 21,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 21,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 21,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 21,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 21,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 22,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 22,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 22,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 22,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 22,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 23,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 2,
+      "typeID": 23,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 23,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 23,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 2,
+      "typeID": 23,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 0,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 0,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 0,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 0,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 0,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 1,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 1,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 1,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 1,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 1,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 2,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 2,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 2,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 2,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 2,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 3,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 3,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 3,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 3,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 3,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 4,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 4,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 4,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 4,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 4,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 5,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 5,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 5,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 5,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 5,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 6,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 6,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 6,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 6,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 6,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 7,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 7,
+      "corruption": 100,
+      "maxError": 2.7755575615628914e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 7,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 7,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 7,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 8,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 8,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 8,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 8,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 8,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 9,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 9,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 9,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 9,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 9,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 10,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 10,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 10,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 10,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 10,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 12,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 12,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 12,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 12,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 12,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 13,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 13,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 13,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 13,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 13,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 14,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 14,
+      "corruption": 100,
+      "maxError": 2.7755575615628914e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 14,
+      "corruption": 300,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 14,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 14,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 15,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 15,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 15,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 15,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 15,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 16,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 16,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 16,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 16,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 16,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 17,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 17,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 17,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 17,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 17,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 18,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 18,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 18,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 18,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 18,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 19,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 19,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 19,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 19,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 19,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 20,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 20,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 20,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 20,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 20,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 21,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 21,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 21,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 21,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 21,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 22,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 22,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 22,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 22,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 22,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 23,
+      "corruption": 0,
+      "maxError": 5.551115123125783e-17
+    },
+    {
+      "playerClass": 3,
+      "typeID": 23,
+      "corruption": 100,
+      "maxError": 1.1102230246251565e-16
+    },
+    {
+      "playerClass": 3,
+      "typeID": 23,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 23,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 3,
+      "typeID": 23,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 0,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 0,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 0,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 0,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 0,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 1,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 1,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 1,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 1,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 1,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 2,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 2,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 2,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 2,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 2,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 3,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 3,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 3,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 3,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 3,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 4,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 4,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 4,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 4,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 4,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 5,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 5,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 5,
+      "corruption": 300,
+      "maxError": 2.7755575615628914e-17
+    },
+    {
+      "playerClass": 4,
+      "typeID": 5,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 5,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 6,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 6,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 6,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 6,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 6,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 7,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 7,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 7,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 7,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 7,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 8,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 8,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 8,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 8,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 8,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 9,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 9,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 9,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 9,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 9,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 10,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 10,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 10,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 10,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 10,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 12,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 12,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 12,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 12,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 12,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 13,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 13,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 13,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 13,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 13,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 14,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 14,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 14,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 14,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 14,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 15,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 15,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 15,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 15,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 15,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 16,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 16,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 16,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 16,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 16,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 17,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 17,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 17,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 17,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 17,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 18,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 18,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 18,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 18,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 18,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 19,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 19,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 19,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 19,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 19,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 20,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 20,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 20,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 20,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 20,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 21,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 21,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 21,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 21,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 21,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 22,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 22,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 22,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 22,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 22,
+      "corruption": 100000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 23,
+      "corruption": 0,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 23,
+      "corruption": 100,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 23,
+      "corruption": 300,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 23,
+      "corruption": 1000,
+      "maxError": 0.0
+    },
+    {
+      "playerClass": 4,
+      "typeID": 23,
+      "corruption": 100000,
+      "maxError": 0.0
+    }
+  ]
+}
