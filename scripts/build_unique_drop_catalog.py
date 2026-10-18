@@ -15,9 +15,10 @@ INPUT = ROOT / "sources/unique-drop-inputs-2026-10-18.json"
 OUTPUT = ROOT / "sources/unique-drop-catalog.json"
 CLASSES = {"Sentinel": 4, "Mage": 2, "Primalist": 1, "Acolyte": 8, "Rogue": 16}
 CLASS_ZH = {"Sentinel": "守卫", "Mage": "法师", "Primalist": "原始人", "Acolyte": "侍祭", "Rogue": "游侠"}
+CURIOSITY_EXPONENT = 0.800000011920929
 
 
-def reroll_distribution(reroll_chances, max_rerolls=60):
+def reroll_distribution(reroll_chances, max_rerolls=60, *, weight_exponent=1):
     """Uniform proposals, 60 rejected proposals, then accept the final draw.
 
     Returns a distribution in input order. This also works for the all-reject
@@ -25,8 +26,12 @@ def reroll_distribution(reroll_chances, max_rerolls=60):
     """
     if not reroll_chances:
         return []
-    if max_rerolls < 0 or any(not 0 <= r <= 1 for r in reroll_chances):
+    if max_rerolls < 0 or not 0 < weight_exponent <= 1 or any(not 0 <= r <= 1 for r in reroll_chances):
         raise ValueError("Invalid reroll model")
+    if weight_exponent != 1:
+        # Native ApplyUniqueWeightCompression changes acceptance weights before
+        # the same finite reroll process; the whole pool must be normalized.
+        reroll_chances = [1 - (1 - r) ** weight_exponent for r in reroll_chances]
     n = len(reroll_chances)
     rejection = sum(reroll_chances) / n
     factor = sum(rejection ** attempt for attempt in range(max_rerolls)) / n
@@ -121,7 +126,7 @@ def reference_display(row, prophecy_probability=None):
         probability = scenario["maximumProbability"]
         text = percentage(probability)
     elif row["primordial"]:
-        text = "无固定掉率"
+        text = "随进化／材料／腐化变化，暂未计算"
     elif row["cocooned"]:
         text = "概率未公开"
     return {"kind": row["kind"], "source": location["name"], "probability": probability, "probabilityText": text}
@@ -190,12 +195,14 @@ def build():
             unique_pools[item["baseType"]].append(item)
     probabilities = defaultdict(dict)
     references = {}
+    curiosity_references = {}
     pools = {}
     idol_counts = Counter(frozen["uniqueIdolBaseTypeOccurrences"])
     for base, pool in sorted(unique_pools.items()):
         pools[str(base)] = [i["uniqueID"] for i in pool]
         factor = idol_counts[base] / sum(idol_counts.values()) if 25 <= base <= 33 else 1
         references.update({i["uniqueID"]: p * factor for i, p in zip(pool, reroll_distribution([i["rerollChance"] for i in pool]))})
+        curiosity_references.update({i["uniqueID"]: p * factor for i, p in zip(pool, reroll_distribution([i["rerollChance"] for i in pool], weight_exponent=CURIOSITY_EXPONENT))})
         for klass, mask in CLASSES.items():
             if 25 <= base <= 33:
                 # Unique Idol first samples the cached list of base types, one
@@ -307,11 +314,14 @@ def build():
         if not row["locations"]:
             row["locations"].append({"kind": "special", "name": "特殊获取", "url": source_url, "probabilityText": "当前来源／概率未核实", "conditions": ["非世界随机掉落"]})
         row["display"] = reference_display(row, references.get(uid))
+        if kind == "world" and not raw["isSetItem"] and raw["rerollChance"] > 0:
+            probability = curiosity_references[uid]
+            row["display"].update(curiosityProbability=probability, curiosityProbabilityText=percentage(probability))
         items[str(uid)] = row
     return {"version": 1, "gameVersion": frozen["gameVersion"], "asOf": frozen["retrievedOn"],
             "context": {"areaLevel": 100, "circleOfFortuneRank": 12, "lens": "none", "denominator": "每件同类型普通暗金预言奖励；神像使用暗金神像预言", "bossRateScope": "每次独立奖励的基础掉率及其稀有度范围，额外奖励次数不合并，未计命运Boss奖励加成；副本/腐化/开启者条件逐项保留", "classCompatibilityChance": frozen["nativeRoll"]["classCompatibilityChance"], "uniqueIdolBaseTypeOccurrences": frozen["uniqueIdolBaseTypeOccurrences"]},
             "sources": {**frozen["sources"], "frozenInput": {"path": INPUT.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(INPUT.read_bytes()).hexdigest()}, "official": frozen["officialSources"]},
-            "displayPolicy": {"prophecy": "100级／命运12／无镜片／同类型通用池，不计职业偏置", "boss": "主要来源，最高副本层级／开启者奖励／资料表内上限；每次独立奖励，不合并额外次数"},
+            "displayPolicy": {"prophecy": "100级／命运12／无镜片／同类型通用池，不计职业偏置", "curiosityLens": {"name": "求索镜片", "english": "Lens Of Curiosity", "weightExponent": CURIOSITY_EXPONENT, "scope": "有reroll的世界暗金；同类型通用池，每件奖励"}, "boss": "主要来源，最高副本层级／开启者奖励／资料表内上限；每次独立奖励，不合并额外次数"},
             "prophecyPools": pools, "items": items,
             "summary": {"items": len(items), "kinds": dict(Counter(i["kind"] for i in items.values())), "numericProphecy": sum(bool(i.get("prophecyByClass")) for i in items.values()), "icons": sum("iconUrl" in i for i in items.values()), "iconsVerified": len(frozen["iconValidation"]), "gameExecutionTested": False}}
 

@@ -7,7 +7,7 @@ from collections import Counter
 import engine
 from browser_runtime import browser_bootstrap
 from scripts.build_unique_drop_catalog import (
-    CLASSES, INPUT, build, independent_reward_scenarios, prophecy_distribution,
+    CLASSES, CURIOSITY_EXPONENT, INPUT, build, independent_reward_scenarios, prophecy_distribution,
     reference_display, reroll_distribution, single_reward_probability,
 )
 
@@ -49,6 +49,14 @@ class UniqueDropMathTests(unittest.TestCase):
         for invalid in ([-.1], [1.1]):
             with self.assertRaises(ValueError):
                 reroll_distribution(invalid)
+
+    def test_curiosity_compresses_all_pool_weights_before_finite_rerolls(self):
+        # sqrt([1, .25]) gives acceptance [1, .5]. Enumerating two rejection
+        # rounds then one forced draw gives these exact probabilities.
+        self.assertEqual(reroll_distribution([0., .75], 2, weight_exponent=.5), [.65625, .34375])
+        self.assertEqual(reroll_distribution([1., 1.], weight_exponent=CURIOSITY_EXPONENT), [.5, .5])
+        with self.assertRaises(ValueError):
+            reroll_distribution([.5], weight_exponent=0)
 
     def test_class_bias_includes_neutral_items_and_falls_back_when_empty(self):
         pool = [{"uniqueID": uid, "rerollChance": 0.,
@@ -97,7 +105,10 @@ class UniqueDropSnapshotTests(unittest.TestCase):
                          hashlib.sha256(INPUT.read_bytes()).hexdigest())
         self.assertFalse(self.snapshot["summary"]["gameExecutionTested"])
         for row in self.snapshot["items"].values():
-            self.assertEqual(set(row["display"]), {"kind", "source", "probability", "probabilityText"})
+            expected = {"kind", "source", "probability", "probabilityText"}
+            if "curiosityProbability" in row["display"]:
+                expected |= {"curiosityProbability", "curiosityProbabilityText"}
+            self.assertEqual(set(row["display"]), expected)
             self.assertTrue(row["display"]["source"])
             self.assertTrue(row["display"]["probabilityText"])
             self.assertIn(row["kind"], {"world", "boss", "special", "legacy"})
@@ -169,6 +180,31 @@ class UniqueDropSnapshotTests(unittest.TestCase):
         self.assertAlmostEqual(items["238"]["display"]["probability"], 10 / 27)
         self.assertEqual(items["253"]["display"]["probability"], .45)
         self.assertEqual(items["153"]["display"]["probability"], .45)
+
+    def test_curiosity_covers_every_eligible_positive_reroll_and_matches_independent_examples(self):
+        native = {str(i["uniqueID"]): i for i in self.inputs["uniques"]}
+        eligible = {uid for uid, row in self.snapshot["items"].items()
+                    if row["kind"] == "world" and not row["set"] and native[uid]["rerollChance"] > 0}
+        actual = {uid for uid, row in self.snapshot["items"].items() if "curiosityProbability" in row["display"]}
+        self.assertEqual(actual, eligible)
+        self.assertEqual(len(actual), 100)
+        for pool in self.snapshot["prophecyPools"].values():
+            base = native[str(pool[0])]["baseType"]
+            factor = self.inputs["uniqueIdolBaseTypeOccurrences"].count(base) / 7 if 25 <= base <= 33 else 1
+            weights = {uid: (1 - native[str(uid)]["rerollChance"]) ** CURIOSITY_EXPONENT for uid in pool}
+            for uid in pool:
+                if str(uid) in eligible:
+                    expected = factor * weights[uid] / sum(weights.values())
+                    self.assertAlmostEqual(self.snapshot["items"][str(uid)]["display"]["curiosityProbability"], expected, places=12)
+        death = self.snapshot["items"]["476"]["display"]
+        self.assertAlmostEqual(death["probability"], .00006848757830072423, places=15)
+        self.assertAlmostEqual(death["curiosityProbability"], .00025947122102598636, places=15)
+        self.assertEqual(death["curiosityProbabilityText"], "0.026%")
+        self.assertAlmostEqual(self.snapshot["items"]["277"]["display"]["curiosityProbability"], .003516431526165029, places=15)
+        for uid in ("246", "485"):
+            display = self.snapshot["items"][uid]["display"]
+            self.assertAlmostEqual(display["curiosityProbability"], display["probability"], places=15)
+        self.assertIn("暂未计算", self.snapshot["items"]["449"]["display"]["probabilityText"])
 
     def test_native_boss_and_echo_examples_use_single_reward_rates(self):
         items = self.snapshot["items"]

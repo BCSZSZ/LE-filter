@@ -202,7 +202,7 @@ function renderPicker(){
 function uniquePickRow(item,s){
   const drop=catalog.unique_drops?.items?.[item.id];
   const info=drop?.display;
-  const details=`<div class="unique-drop-record"><span>${esc(info?.source||'来源未收录')}</span><strong>${info?.kind==='world'?'预言':'掉落'}：${esc(info?.probabilityText||'概率未公开')}</strong></div>`;
+  const details=`<div class="unique-drop-record"><span>${esc(info?.source||'来源未收录')}</span><strong>${info?.kind==='world'?'预言':'掉落'}：${esc(info?.probabilityText||'概率未公开')}</strong>${info?.curiosityProbabilityText?`<strong>求索：${esc(info.curiosityProbabilityText)}</strong>`:''}</div>`;
   const icon=drop?.iconUrl?.startsWith('https://')?`<img class="unique-icon" src="${esc(drop.iconUrl)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">`:'';
   return `<div class="unique-pick-row"><label class="unique-choice"><input type="checkbox" data-id="${item.id}" aria-label="选择暗金：${esc(item.zh)}" ${s.chosen.has(String(item.id))?'checked':''}>${icon}<span class="unique-identity"><strong>${esc(item.zh)}</strong><small>${esc(item.en)}</small><small>${item.id}${item.set?' · 套装':''}${item.legacy||item.hidden||drop?.kind==='legacy'?' · 旧／隐藏条目':''}</small></span></label><div class="unique-drop-info">${details}</div></div>`;
 }

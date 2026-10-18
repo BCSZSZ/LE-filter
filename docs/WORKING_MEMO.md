@@ -3,7 +3,14 @@
 更新时间：2026-10-19，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
 
-## 最新2026-10-19：通用规则保持完整
+## 最新2026-10-19：求索镜片概率与先古文案
+
+- 正reroll的100个世界非套装暗金，在原预言概率下静态增加“求索”数值，保持无额外控件。普通／求索均由`reroll_distribution`计算；求索用本机原生接受权重指数0.800000011920929，再走相同60次拒绝＋最终抽取。不是T7词缀模型；完整证据见[求索机制](research/CURIOSITY_LENS_UNIQUE_PROBABILITY.md)。
+- 死亡之舞476原值0.00684875783%，求索0.02594712210%；红戒277为0.16569992513%→0.35164315262%。神像先按原生尺寸选择再压缩内部池，246／485单ID池仍为1/7，不强造提升。套装预言不在本轮范围。
+- 屠夫冠冕449属于裂隙野兽先古暗金，并可用20尖牙／40犄角／20000骨骼兑换。裂隙概率受进化、材料、腐化等影响，目前未建模，文案改为“随进化／材料／腐化变化，暂未计算”。原研究字段、BD配置与过滤策略保持。
+- 116项回归、JS语法、Pages构建和WASM选择器核查通过；原无镜片概率与研究字段完整保持，默认98条XML哈希保持。见[验证记录](../analysis/curiosity-lens-validation.json)与[页面截图](images/unique-picker-curiosity.jpg)。
+
+## 此前2026-10-19：通用规则保持完整
 
 - 玩家要求非BD通用规则固定，按游戏首次命中决定提示。已取消通用暗金／套装／暗金神像的BD与T0扣除、针通用规则替换、WW通用池扣除与追加，以及同条件合并误删通用规则。通用暗金及网页名单完整181种，套装61件；WW各保留原412项和Rolls，名单外BD目标用独立规则补充。
 - [同类去重清单及边界](COMMON_RULE_STABILITY.md)也列出保留的BD专属压缩：共享暗金归属、C1覆盖05、目标层完整覆盖和等价BD规则合并。职业拆解开关仍按BD目标适配；保存、需求、套装扩展、主副配色及优先级保持。此前161／175／167池大小与97／98手里剑规则数为旧逻辑记录。

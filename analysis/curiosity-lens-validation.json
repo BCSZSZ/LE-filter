@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-19",
+  "status": "passed",
+  "baselineCommit": "6555d3b842c18fb215d3c9eabc46c8012b895696",
+  "scope": "Static Curiosity lens comparison for positive-reroll world non-set Uniques, and precise unmodeled Rift Beast wording; no additional controls",
+  "displayPolicy": {
+    "prophecy": "100级／命运12／无镜片／同类型通用池，不计职业偏置",
+    "curiosityLens": {
+      "name": "求索镜片",
+      "english": "Lens Of Curiosity",
+      "weightExponent": 0.800000011920929,
+      "scope": "有reroll的世界暗金；同类型通用池，每件奖励"
+    },
+    "boss": "主要来源，最高副本层级／开启者奖励／资料表内上限；每次独立奖励，不合并额外次数"
+  },
+  "dataset": {
+    "items": 489,
+    "curiosityItems": 100,
+    "sha256": "b324f8e4a996d910515aae803f3a1b4196b313e70ca975a378f464614eefbd8f",
+    "originalResearchFieldsUnchanged": true,
+    "allOriginalProbabilitiesUnchanged": true,
+    "deterministicRebuild": true
+  },
+  "nativeEvidence": {
+    "path": "sources/curiosity-lens-native-evidence-2026-10-19.json",
+    "sha256": "6f73ea090dde4d48589117ee5cb8a18e0991c307b5aa85dca38215bc776d7f43",
+    "exponent": 0.800000011920929,
+    "independentSamplesMatched": 6,
+    "iterativeVsClosedFormMaxError": 2.220446049250313e-16
+  },
+  "examples": {
+    "476": {
+      "kind": "world",
+      "source": "世界掉落",
+      "probability": 6.848757830072423e-05,
+      "probabilityText": "0.0068%",
+      "curiosityProbability": 0.00025947122102598636,
+      "curiosityProbabilityText": "0.026%"
+    },
+    "277": {
+      "kind": "world",
+      "source": "世界掉落",
+      "probability": 0.0016569992512888705,
+      "probabilityText": "0.17%",
+      "curiosityProbability": 0.003516431526165029,
+      "curiosityProbabilityText": "0.35%"
+    },
+    "246": {
+      "kind": "world",
+      "source": "世界掉落",
+      "probability": 0.14285714285714285,
+      "probabilityText": "14.29%",
+      "curiosityProbability": 0.14285714285714285,
+      "curiosityProbabilityText": "14.29%"
+    },
+    "485": {
+      "kind": "world",
+      "source": "世界掉落",
+      "probability": 0.14285714285714285,
+      "probabilityText": "14.29%",
+      "curiosityProbability": 0.14285714285714285,
+      "curiosityProbabilityText": "14.29%"
+    },
+    "449": {
+      "kind": "boss",
+      "source": "裂隙野兽",
+      "probability": null,
+      "probabilityText": "随进化／材料／腐化变化，暂未计算"
+    }
+  },
+  "tests": {
+    "command": "python -X utf8 -m unittest discover -s tool -v",
+    "passed": 116,
+    "seconds": 134.21,
+    "javascriptSyntax": true,
+    "pagesBuild": true
+  },
+  "browser": {
+    "origin": "http://127.0.0.1:8877/",
+    "deathDanceMatchesDataset": true,
+    "butchersCrownExplicitlyUnmodeled": true,
+    "singleIdIdolUnchanged": true,
+    "zeroRerollHasNoExtraLine": true,
+    "visibleExtraFilters": 0,
+    "dropdowns": 0,
+    "sourceToggles": 0,
+    "cancelLeavesTargetsUnchanged": true,
+    "itemImageLoaded": true,
+    "consoleWarningsAndErrors": 0,
+    "screenshot": "docs/images/unique-picker-curiosity.jpg"
+  },
+  "unchanged": {
+    "protectedChangedFiles": [],
+    "defaultRules": 98,
+    "defaultXMLSHA256": "bf9eebbff8de328e42517ad70a68fbfaea30ec19d988d8c9f8b4585357d4c8d6"
+  },
+  "gameExecutionTested": false
+}

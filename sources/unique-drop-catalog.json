@@ -65,6 +65,12 @@
   },
   "displayPolicy": {
     "prophecy": "100级／命运12／无镜片／同类型通用池，不计职业偏置",
+    "curiosityLens": {
+      "name": "求索镜片",
+      "english": "Lens Of Curiosity",
+      "weightExponent": 0.800000011920929,
+      "scope": "有reroll的世界暗金；同类型通用池，每件奖励"
+    },
     "boss": "主要来源，最高副本层级／开启者奖励／资料表内上限；每次独立奖励，不合并额外次数"
   },
   "prophecyPools": {
@@ -833,7 +839,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.033444816080180156,
-        "probabilityText": "3.34%"
+        "probabilityText": "3.34%",
+        "curiosityProbability": 0.03731845209226016,
+        "curiosityProbabilityText": "3.73%"
       }
     },
     "12": {
@@ -1487,7 +1495,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.015625003637978786,
-        "probabilityText": "1.56%"
+        "probabilityText": "1.56%",
+        "curiosityProbability": 0.0236945029069878,
+        "curiosityProbabilityText": "2.37%"
       }
     },
     "31": {
@@ -1662,7 +1672,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.028571429706755136,
-        "probabilityText": "2.86%"
+        "probabilityText": "2.86%",
+        "curiosityProbability": 0.035812663720285326,
+        "curiosityProbabilityText": "3.58%"
       }
     },
     "36": {
@@ -1732,7 +1744,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.15463917639800576,
-        "probabilityText": "15.46%"
+        "probabilityText": "15.46%",
+        "curiosityProbability": 0.15430892605900912,
+        "curiosityProbabilityText": "15.43%"
       }
     },
     "38": {
@@ -1767,7 +1781,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.10309278426533718,
-        "probabilityText": "10.31%"
+        "probabilityText": "10.31%",
+        "curiosityProbability": 0.11156244903064615,
+        "curiosityProbabilityText": "11.16%"
       }
     },
     "39": {
@@ -2012,7 +2028,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.026315788028973285,
-        "probabilityText": "2.63%"
+        "probabilityText": "2.63%",
+        "curiosityProbability": 0.03557656493578344,
+        "curiosityProbabilityText": "3.56%"
       }
     },
     "46": {
@@ -2284,7 +2302,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.01980197897098565,
-        "probabilityText": "1.98%"
+        "probabilityText": "1.98%",
+        "curiosityProbability": 0.026557616503816054,
+        "curiosityProbabilityText": "2.66%"
       }
     },
     "54": {
@@ -2557,7 +2577,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.0023452135404560277,
-        "probabilityText": "0.23%"
+        "probabilityText": "0.23%",
+        "curiosityProbability": 0.004554380272525557,
+        "curiosityProbabilityText": "0.46%"
       }
     },
     "62": {
@@ -2718,7 +2740,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.06628003301420786,
-        "probabilityText": "6.63%"
+        "probabilityText": "6.63%",
+        "curiosityProbability": 0.06725901567958749,
+        "curiosityProbabilityText": "6.73%"
       }
     },
     "67": {
@@ -2889,7 +2913,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.018433178698214817,
-        "probabilityText": "1.84%"
+        "probabilityText": "1.84%",
+        "curiosityProbability": 0.021663038136297646,
+        "curiosityProbabilityText": "2.17%"
       }
     },
     "72": {
@@ -2962,7 +2988,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.0729927004758713,
-        "probabilityText": "7.3%"
+        "probabilityText": "7.3%",
+        "curiosityProbability": 0.07964446166095235,
+        "curiosityProbabilityText": "7.96%"
       }
     },
     "74": {
@@ -3067,7 +3095,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.041425020788200144,
-        "probabilityText": "4.14%"
+        "probabilityText": "4.14%",
+        "curiosityProbability": 0.04618006288338743,
+        "curiosityProbabilityText": "4.62%"
       }
     },
     "77": {
@@ -3186,7 +3216,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.14285714285714285,
-        "probabilityText": "14.29%"
+        "probabilityText": "14.29%",
+        "curiosityProbability": 0.16068636414454548,
+        "curiosityProbabilityText": "16.07%"
       }
     },
     "81": {
@@ -3327,7 +3359,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.024855013460569546,
-        "probabilityText": "2.49%"
+        "probabilityText": "2.49%",
+        "curiosityProbability": 0.03068849081592048,
+        "curiosityProbabilityText": "3.07%"
       }
     },
     "85": {
@@ -3530,7 +3564,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.020546538835188928,
-        "probabilityText": "2.05%"
+        "probabilityText": "2.05%",
+        "curiosityProbability": 0.024876582400140224,
+        "curiosityProbabilityText": "2.49%"
       }
     },
     "92": {
@@ -3565,7 +3601,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.009615386874806238,
-        "probabilityText": "0.96%"
+        "probabilityText": "0.96%",
+        "curiosityProbability": 0.015036701171351571,
+        "curiosityProbabilityText": "1.5%"
       }
     },
     "93": {
@@ -3601,7 +3639,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.05351170552894161,
-        "probabilityText": "5.35%"
+        "probabilityText": "5.35%",
+        "curiosityProbability": 0.05435251053575754,
+        "curiosityProbabilityText": "5.44%"
       }
     },
     "94": {
@@ -3923,7 +3963,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.02739538239209835,
-        "probabilityText": "2.74%"
+        "probabilityText": "2.74%",
+        "curiosityProbability": 0.031314225308986914,
+        "curiosityProbabilityText": "3.13%"
       }
     },
     "105": {
@@ -4067,7 +4109,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.018433178698214817,
-        "probabilityText": "1.84%"
+        "probabilityText": "1.84%",
+        "curiosityProbability": 0.021663038136297646,
+        "curiosityProbabilityText": "2.17%"
       }
     },
     "109": {
@@ -6946,7 +6990,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.012427504261161125,
-        "probabilityText": "1.24%"
+        "probabilityText": "1.24%",
+        "curiosityProbability": 0.01762590651158976,
+        "curiosityProbabilityText": "1.76%"
       }
     },
     "126": {
@@ -6981,7 +7027,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.01866716529198115,
-        "probabilityText": "1.87%"
+        "probabilityText": "1.87%",
+        "curiosityProbability": 0.0232659416236662,
+        "curiosityProbabilityText": "2.33%"
       }
     },
     "127": {
@@ -7154,7 +7202,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.04794192122728728,
-        "probabilityText": "4.79%"
+        "probabilityText": "4.79%",
+        "curiosityProbability": 0.04899729772373231,
+        "curiosityProbabilityText": "4.9%"
       }
     },
     "133": {
@@ -7189,7 +7239,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.05472170053208352,
-        "probabilityText": "5.47%"
+        "probabilityText": "5.47%",
+        "curiosityProbability": 0.05659929994647715,
+        "curiosityProbabilityText": "5.66%"
       }
     },
     "134": {
@@ -7294,7 +7346,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.08474576305432144,
-        "probabilityText": "8.47%"
+        "probabilityText": "8.47%",
+        "curiosityProbability": 0.09485850488402504,
+        "curiosityProbabilityText": "9.49%"
       }
     },
     "137": {
@@ -7588,7 +7642,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.04950495037818911,
-        "probabilityText": "4.95%"
+        "probabilityText": "4.95%",
+        "curiosityProbability": 0.05527657524258302,
+        "curiosityProbabilityText": "5.53%"
       }
     },
     "146": {
@@ -7658,7 +7714,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.023970962654758805,
-        "probabilityText": "2.4%"
+        "probabilityText": "2.4%",
+        "curiosityProbability": 0.02814155933173463,
+        "curiosityProbabilityText": "2.81%"
       }
     },
     "148": {
@@ -7728,7 +7786,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.014598543575737446,
-        "probabilityText": "1.46%"
+        "probabilityText": "1.46%",
+        "curiosityProbability": 0.021977568995171615,
+        "curiosityProbabilityText": "2.2%"
       }
     },
     "150": {
@@ -10388,7 +10448,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.012444775625043309,
-        "probabilityText": "1.24%"
+        "probabilityText": "1.24%",
+        "curiosityProbability": 0.016820836529362428,
+        "curiosityProbabilityText": "1.68%"
       }
     },
     "168": {
@@ -10423,7 +10485,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.057471264544999935,
-        "probabilityText": "5.75%"
+        "probabilityText": "5.75%",
+        "curiosityProbability": 0.06459668337584579,
+        "curiosityProbabilityText": "6.46%"
       }
     },
     "169": {
@@ -10458,7 +10522,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.03649635023793565,
-        "probabilityText": "3.65%"
+        "probabilityText": "3.65%",
+        "curiosityProbability": 0.045743730669301645,
+        "curiosityProbabilityText": "4.57%"
       }
     },
     "170": {
@@ -10550,7 +10616,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.023904383482436314,
-        "probabilityText": "2.39%"
+        "probabilityText": "2.39%",
+        "curiosityProbability": 0.029057229321361528,
+        "curiosityProbabilityText": "2.91%"
       }
     },
     "173": {
@@ -10969,7 +11037,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.01563477091494885,
-        "probabilityText": "1.56%"
+        "probabilityText": "1.56%",
+        "curiosityProbability": 0.020775744842062127,
+        "curiosityProbabilityText": "2.08%"
       }
     },
     "177": {
@@ -12304,7 +12374,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.14432989551354852,
-        "probabilityText": "14.43%"
+        "probabilityText": "14.43%",
+        "curiosityProbability": 0.1460227300390767,
+        "curiosityProbabilityText": "14.6%"
       }
     },
     "182": {
@@ -12375,7 +12447,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.04411764873455965,
-        "probabilityText": "4.41%"
+        "probabilityText": "4.41%",
+        "curiosityProbability": 0.054870099520288866,
+        "curiosityProbabilityText": "5.49%"
       }
     },
     "184": {
@@ -12501,7 +12575,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.009333580791574389,
-        "probabilityText": "0.93%"
+        "probabilityText": "0.93%",
+        "curiosityProbability": 0.01336277220090939,
+        "curiosityProbabilityText": "1.34%"
       }
     },
     "188": {
@@ -12767,7 +12843,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.030303031397697792,
-        "probabilityText": "3.03%"
+        "probabilityText": "3.03%",
+        "curiosityProbability": 0.03762214194379351,
+        "curiosityProbabilityText": "3.76%"
       }
     },
     "196": {
@@ -12802,7 +12880,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.030303031397697792,
-        "probabilityText": "3.03%"
+        "probabilityText": "3.03%",
+        "curiosityProbability": 0.03762214194379351,
+        "curiosityProbabilityText": "3.76%"
       }
     },
     "197": {
@@ -12837,7 +12917,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.030303031397697792,
-        "probabilityText": "3.03%"
+        "probabilityText": "3.03%",
+        "curiosityProbability": 0.03762214194379351,
+        "curiosityProbabilityText": "3.76%"
       }
     },
     "198": {
@@ -12872,7 +12954,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.009900992436217807,
-        "probabilityText": "0.99%"
+        "probabilityText": "0.99%",
+        "curiosityProbability": 0.015253348705931062,
+        "curiosityProbabilityText": "1.53%"
       }
     },
     "199": {
@@ -13384,7 +13468,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.0012444764498546188,
-        "probabilityText": "0.12%"
+        "probabilityText": "0.12%",
+        "curiosityProbability": 0.002665920950695049,
+        "curiosityProbabilityText": "0.27%"
       }
     },
     "209": {
@@ -15260,7 +15346,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.03703703158622355,
-        "probabilityText": "3.7%"
+        "probabilityText": "3.7%",
+        "curiosityProbability": 0.05129049293460782,
+        "curiosityProbabilityText": "5.13%"
       }
     },
     "221": {
@@ -15296,7 +15384,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.00796812941060347,
-        "probabilityText": "0.8%"
+        "probabilityText": "0.8%",
+        "curiosityProbability": 0.012065831621499757,
+        "curiosityProbabilityText": "1.21%"
       }
     },
     "222": {
@@ -15332,7 +15422,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.031872508143665684,
-        "probabilityText": "3.19%"
+        "probabilityText": "3.19%",
+        "curiosityProbability": 0.03657675363875091,
+        "curiosityProbabilityText": "3.66%"
       }
     },
     "223": {
@@ -15402,7 +15494,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.05263157605794657,
-        "probabilityText": "5.26%"
+        "probabilityText": "5.26%",
+        "curiosityProbability": 0.06194239780180227,
+        "curiosityProbabilityText": "6.19%"
       }
     },
     "225": {
@@ -15563,7 +15657,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.04109307562926269,
-        "probabilityText": "4.11%"
+        "probabilityText": "4.11%",
+        "curiosityProbability": 0.04331264427944974,
+        "curiosityProbabilityText": "4.33%"
       }
     },
     "230": {
@@ -15668,7 +15764,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.04687500160071066,
-        "probabilityText": "4.69%"
+        "probabilityText": "4.69%",
+        "curiosityProbability": 0.05706167848366123,
+        "curiosityProbabilityText": "5.71%"
       }
     },
     "233": {
@@ -15773,7 +15871,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.024855013460569546,
-        "probabilityText": "2.49%"
+        "probabilityText": "2.49%",
+        "curiosityProbability": 0.03068849081592048,
+        "curiosityProbabilityText": "3.07%"
       }
     },
     "236": {
@@ -16824,7 +16924,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.045977008895556504,
-        "probabilityText": "4.6%"
+        "probabilityText": "4.6%",
+        "curiosityProbability": 0.05403587496282847,
+        "curiosityProbabilityText": "5.4%"
       }
     },
     "243": {
@@ -16964,7 +17066,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.14285714285714285,
-        "probabilityText": "14.29%"
+        "probabilityText": "14.29%",
+        "curiosityProbability": 0.14285714285714285,
+        "curiosityProbabilityText": "14.29%"
       }
     },
     "247": {
@@ -17063,7 +17167,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.023041474746147438,
-        "probabilityText": "2.3%"
+        "probabilityText": "2.3%",
+        "curiosityProbability": 0.025896877147116026,
+        "curiosityProbabilityText": "2.59%"
       }
     },
     "250": {
@@ -17098,7 +17204,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.07352941163580311,
-        "probabilityText": "7.35%"
+        "probabilityText": "7.35%",
+        "curiosityProbability": 0.082568564921092,
+        "curiosityProbabilityText": "8.26%"
       }
     },
     "251": {
@@ -17133,7 +17241,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.16666666614926526,
-        "probabilityText": "16.67%"
+        "probabilityText": "16.67%",
+        "curiosityProbability": 0.17295763973646403,
+        "curiosityProbabilityText": "17.3%"
       }
     },
     "252": {
@@ -17168,7 +17278,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.07812499956344254,
-        "probabilityText": "7.81%"
+        "probabilityText": "7.81%",
+        "curiosityProbability": 0.08586645450939137,
+        "curiosityProbabilityText": "8.59%"
       }
     },
     "253": {
@@ -19607,7 +19719,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.018433178698214817,
-        "probabilityText": "1.84%"
+        "probabilityText": "1.84%",
+        "curiosityProbability": 0.021663038136297646,
+        "curiosityProbabilityText": "2.17%"
       }
     },
     "269": {
@@ -19642,7 +19756,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.12345679157700705,
-        "probabilityText": "12.35%"
+        "probabilityText": "12.35%",
+        "curiosityProbability": 0.1343816380441299,
+        "curiosityProbabilityText": "13.44%"
       }
     },
     "270": {
@@ -19678,7 +19794,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.031872508143665684,
-        "probabilityText": "3.19%"
+        "probabilityText": "3.19%",
+        "curiosityProbability": 0.03657675363875091,
+        "curiosityProbabilityText": "3.66%"
       }
     },
     "271": {
@@ -19749,7 +19867,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.016722408040090078,
-        "probabilityText": "1.67%"
+        "probabilityText": "1.67%",
+        "curiosityProbability": 0.021433822087600675,
+        "curiosityProbabilityText": "2.14%"
       }
     },
     "273": {
@@ -19819,7 +19939,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.0729927004758713,
-        "probabilityText": "7.3%"
+        "probabilityText": "7.3%",
+        "curiosityProbability": 0.07964446166095235,
+        "curiosityProbabilityText": "7.96%"
       }
     },
     "275": {
@@ -19855,7 +19977,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.033444816080180156,
-        "probabilityText": "3.34%"
+        "probabilityText": "3.34%",
+        "curiosityProbability": 0.03731845209226016,
+        "curiosityProbabilityText": "3.73%"
       }
     },
     "276": {
@@ -19925,7 +20049,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.0016569992512888705,
-        "probabilityText": "0.17%"
+        "probabilityText": "0.17%",
+        "curiosityProbability": 0.003516431526165029,
+        "curiosityProbabilityText": "0.35%"
       }
     },
     "278": {
@@ -20381,7 +20507,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.028142590442622992,
-        "probabilityText": "2.81%"
+        "probabilityText": "2.81%",
+        "curiosityProbability": 0.03324869809531539,
+        "curiosityProbabilityText": "3.32%"
       }
     },
     "291": {
@@ -20879,7 +21007,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.04013377889752291,
-        "probabilityText": "4.01%"
+        "probabilityText": "4.01%",
+        "curiosityProbability": 0.04317860587269956,
+        "curiosityProbabilityText": "4.32%"
       }
     },
     "305": {
@@ -20949,7 +21079,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.0342442300312381,
-        "probabilityText": "3.42%"
+        "probabilityText": "3.42%",
+        "curiosityProbability": 0.037434298951132275,
+        "curiosityProbabilityText": "3.74%"
       }
     },
     "307": {
@@ -20985,7 +21117,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.055776891626102,
-        "probabilityText": "5.58%"
+        "probabilityText": "5.58%",
+        "curiosityProbability": 0.05723156393369733,
+        "curiosityProbabilityText": "5.72%"
       }
     },
     "308": {
@@ -21091,7 +21225,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.041237111248211354,
-        "probabilityText": "4.12%"
+        "probabilityText": "4.12%",
+        "curiosityProbability": 0.053600150236875914,
+        "curiosityProbabilityText": "5.36%"
       }
     },
     "311": {
@@ -21304,7 +21440,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.04780876459018558,
-        "probabilityText": "4.78%"
+        "probabilityText": "4.78%",
+        "curiosityProbability": 0.050591573114779395,
+        "curiosityProbabilityText": "5.06%"
       }
     },
     "317": {
@@ -21374,7 +21512,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.0654205545003429,
-        "probabilityText": "6.54%"
+        "probabilityText": "6.54%",
+        "curiosityProbability": 0.08281750612140827,
+        "curiosityProbabilityText": "8.28%"
       }
     },
     "319": {
@@ -21641,7 +21781,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.0729927004758713,
-        "probabilityText": "7.3%"
+        "probabilityText": "7.3%",
+        "curiosityProbability": 0.07964446166095235,
+        "curiosityProbabilityText": "7.96%"
       }
     },
     "324": {
@@ -21781,7 +21923,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.02884615489320289,
-        "probabilityText": "2.88%"
+        "probabilityText": "2.88%",
+        "curiosityProbability": 0.03621174966458212,
+        "curiosityProbabilityText": "3.62%"
       }
     },
     "328": {
@@ -21956,7 +22100,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.024889551250086617,
-        "probabilityText": "2.49%"
+        "probabilityText": "2.49%",
+        "curiosityProbability": 0.02928677767349238,
+        "curiosityProbabilityText": "2.93%"
       }
     },
     "333": {
@@ -22026,7 +22172,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.09195402292944446,
-        "probabilityText": "9.2%"
+        "probabilityText": "9.2%",
+        "curiosityProbability": 0.09408192775736353,
+        "curiosityProbabilityText": "9.41%"
       }
     },
     "335": {
@@ -22062,7 +22210,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.051792829295487314,
-        "probabilityText": "5.18%"
+        "probabilityText": "5.18%",
+        "curiosityProbability": 0.05393713520699235,
+        "curiosityProbabilityText": "5.39%"
       }
     },
     "336": {
@@ -22097,7 +22247,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.01904761791229248,
-        "probabilityText": "1.9%"
+        "probabilityText": "1.9%",
+        "curiosityProbability": 0.025891879721179456,
+        "curiosityProbabilityText": "2.59%"
       }
     },
     "337": {
@@ -22132,7 +22284,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.013697691196049175,
-        "probabilityText": "1.37%"
+        "probabilityText": "1.37%",
+        "curiosityProbability": 0.017985299401608118,
+        "curiosityProbabilityText": "1.8%"
       }
     },
     "338": {
@@ -22167,7 +22321,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.09876542737472707,
-        "probabilityText": "9.88%"
+        "probabilityText": "9.88%",
+        "curiosityProbability": 0.11241179904552026,
+        "curiosityProbabilityText": "11.24%"
       }
     },
     "339": {
@@ -22585,7 +22741,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.06779660640246427,
-        "probabilityText": "6.78%"
+        "probabilityText": "6.78%",
+        "curiosityProbability": 0.07935023969033483,
+        "curiosityProbabilityText": "7.94%"
       }
     },
     "343": {
@@ -24460,7 +24618,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.14432989551354852,
-        "probabilityText": "14.43%"
+        "probabilityText": "14.43%",
+        "curiosityProbability": 0.1460227300390767,
+        "curiosityProbabilityText": "14.6%"
       }
     },
     "352": {
@@ -25305,7 +25465,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.02739538239209835,
-        "probabilityText": "2.74%"
+        "probabilityText": "2.74%",
+        "curiosityProbability": 0.031314225308986914,
+        "curiosityProbabilityText": "3.13%"
       }
     },
     "357": {
@@ -27342,7 +27504,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.05472170053208352,
-        "probabilityText": "5.47%"
+        "probabilityText": "5.47%",
+        "curiosityProbability": 0.05659929994647715,
+        "curiosityProbabilityText": "5.66%"
       }
     },
     "369": {
@@ -27519,7 +27683,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.06374501984936194,
-        "probabilityText": "6.37%"
+        "probabilityText": "6.37%",
+        "curiosityProbability": 0.06368383034062226,
+        "curiosityProbabilityText": "6.37%"
       }
     },
     "374": {
@@ -27554,7 +27720,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.0469043150746091,
-        "probabilityText": "4.69%"
+        "probabilityText": "4.69%",
+        "curiosityProbability": 0.05003266422711824,
+        "curiosityProbabilityText": "5%"
       }
     },
     "375": {
@@ -27589,7 +27757,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.0469043150746091,
-        "probabilityText": "4.69%"
+        "probabilityText": "4.69%",
+        "curiosityProbability": 0.05003266422711824,
+        "curiosityProbabilityText": "5%"
       }
     },
     "376": {
@@ -27624,7 +27794,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.0469043150746091,
-        "probabilityText": "4.69%"
+        "probabilityText": "4.69%",
+        "curiosityProbability": 0.05003266422711824,
+        "curiosityProbabilityText": "5%"
       }
     },
     "377": {
@@ -29102,7 +29274,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.03686635945649801,
-        "probabilityText": "3.69%"
+        "probabilityText": "3.69%",
+        "curiosityProbability": 0.037717542102282696,
+        "curiosityProbabilityText": "3.77%"
       }
     },
     "415": {
@@ -29496,7 +29670,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.07812499956344254,
-        "probabilityText": "7.81%"
+        "probabilityText": "7.81%",
+        "curiosityProbability": 0.08586645450939137,
+        "curiosityProbabilityText": "8.59%"
       }
     },
     "421": {
@@ -29605,7 +29781,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "424": {
@@ -29644,7 +29820,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "425": {
@@ -29683,7 +29859,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "426": {
@@ -29722,7 +29898,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "427": {
@@ -29761,7 +29937,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "428": {
@@ -29800,7 +29976,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "429": {
@@ -29839,7 +30015,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "430": {
@@ -29878,7 +30054,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "431": {
@@ -29916,7 +30092,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "432": {
@@ -29955,7 +30131,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "433": {
@@ -29994,7 +30170,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "434": {
@@ -30033,7 +30209,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "435": {
@@ -30071,7 +30247,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "436": {
@@ -30110,7 +30286,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "437": {
@@ -30149,7 +30325,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "438": {
@@ -30188,7 +30364,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "439": {
@@ -30227,7 +30403,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "440": {
@@ -30266,7 +30442,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "441": {
@@ -30305,7 +30481,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "442": {
@@ -30345,7 +30521,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "443": {
@@ -30380,7 +30556,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.05136634504685715,
-        "probabilityText": "5.14%"
+        "probabilityText": "5.14%",
+        "curiosityProbability": 0.05177769508568538,
+        "curiosityProbabilityText": "5.18%"
       }
     },
     "444": {
@@ -30447,7 +30625,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "446": {
@@ -30486,7 +30664,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "447": {
@@ -30525,7 +30703,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "448": {
@@ -30564,7 +30742,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "449": {
@@ -30603,7 +30781,7 @@
         "kind": "boss",
         "source": "裂隙野兽",
         "probability": null,
-        "probabilityText": "无固定掉率"
+        "probabilityText": "随进化／材料／腐化变化，暂未计算"
       }
     },
     "450": {
@@ -30638,7 +30816,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.02970297140720346,
-        "probabilityText": "2.97%"
+        "probabilityText": "2.97%",
+        "curiosityProbability": 0.03673348552926688,
+        "curiosityProbabilityText": "3.67%"
       }
     },
     "451": {
@@ -30869,7 +31049,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.04794192122728728,
-        "probabilityText": "4.79%"
+        "probabilityText": "4.79%",
+        "curiosityProbability": 0.04899729772373231,
+        "curiosityProbabilityText": "4.9%"
       }
     },
     "459": {
@@ -30905,7 +31087,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.03225806409525485,
-        "probabilityText": "3.23%"
+        "probabilityText": "3.23%",
+        "curiosityProbability": 0.03389610691918096,
+        "curiosityProbabilityText": "3.39%"
       }
     },
     "460": {
@@ -30976,7 +31160,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.04794192122728728,
-        "probabilityText": "4.79%"
+        "probabilityText": "4.79%",
+        "curiosityProbability": 0.04899729772373231,
+        "curiosityProbabilityText": "4.9%"
       }
     },
     "462": {
@@ -31011,7 +31197,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.1269841267213199,
-        "probabilityText": "12.7%"
+        "probabilityText": "12.7%",
+        "curiosityProbability": 0.1301398369044725,
+        "curiosityProbabilityText": "13.01%"
       }
     },
     "463": {
@@ -31047,7 +31235,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.033444816080180156,
-        "probabilityText": "3.34%"
+        "probabilityText": "3.34%",
+        "curiosityProbability": 0.03731845209226016,
+        "curiosityProbabilityText": "3.73%"
       }
     },
     "464": {
@@ -31367,7 +31557,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.06374501984936194,
-        "probabilityText": "6.37%"
+        "probabilityText": "6.37%",
+        "curiosityProbability": 0.06368383034062226,
+        "curiosityProbabilityText": "6.37%"
       }
     },
     "472": {
@@ -31474,7 +31666,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.00015634570555369103,
-        "probabilityText": "0.016%"
+        "probabilityText": "0.016%",
+        "curiosityProbability": 0.0005218577369365657,
+        "curiosityProbabilityText": "0.052%"
       }
     },
     "474": {
@@ -31546,7 +31740,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.05351170552894161,
-        "probabilityText": "5.35%"
+        "probabilityText": "5.35%",
+        "curiosityProbability": 0.05435251053575754,
+        "curiosityProbabilityText": "5.44%"
       }
     },
     "476": {
@@ -31581,7 +31777,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 6.848757830072423e-05,
-        "probabilityText": "0.0068%"
+        "probabilityText": "0.0068%",
+        "curiosityProbability": 0.00025947122102598636,
+        "curiosityProbabilityText": "0.026%"
       }
     },
     "477": {
@@ -31688,7 +31886,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 6.222308072625629e-05,
-        "probabilityText": "0.0062%"
+        "probabilityText": "0.0062%",
+        "curiosityProbability": 0.00024267168955563443,
+        "curiosityProbabilityText": "0.024%"
       }
     },
     "479": {
@@ -31887,7 +32087,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.023041474746147438,
-        "probabilityText": "2.3%"
+        "probabilityText": "2.3%",
+        "curiosityProbability": 0.025896877147116026,
+        "curiosityProbabilityText": "2.59%"
       }
     },
     "484": {
@@ -31923,7 +32125,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.06374501984936194,
-        "probabilityText": "6.37%"
+        "probabilityText": "6.37%",
+        "curiosityProbability": 0.06368383034062226,
+        "curiosityProbabilityText": "6.37%"
       }
     },
     "485": {
@@ -31958,7 +32162,9 @@
         "kind": "world",
         "source": "世界掉落",
         "probability": 0.14285714285714285,
-        "probabilityText": "14.29%"
+        "probabilityText": "14.29%",
+        "curiosityProbability": 0.14285714285714285,
+        "curiosityProbabilityText": "14.29%"
       }
     },
     "486": {
