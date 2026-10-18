@@ -13,6 +13,7 @@ from engine import extract, generate, normalize_config
 from requirements import read_document, write_document
 from browser_runtime import browser_bootstrap
 from letools import import_profiles
+from profile_proxy import ProfileReadError, proxy
 
 WEB = Path(__file__).parent / "web"
 DOWNLOADS = {}
@@ -40,7 +41,7 @@ class Handler(BaseHTTPRequestHandler):
         if self.path == "/api/bootstrap":
             return self.reply(boot())
         name = "index.html" if self.path == "/" else self.path.lstrip("/")
-        if name not in {"index.html", "app.js", "workbench.js", "profile-reader.js", "style.css"}:
+        if name not in {"index.html", "app.js", "workbench.js", "profile-import.js", "style.css"}:
             return self.reply({"error": "Not found"}, 404)
         return self.reply((WEB / name).read_bytes(), mime=mimetypes.guess_type(name)[0] or "text/plain")
 
@@ -71,11 +72,15 @@ class Handler(BaseHTTPRequestHandler):
                 return self.reply(write_document(payload["build"], payload["stage"]))
             if self.path == "/api/profiles/import":
                 return self.reply(import_profiles(payload["bundle"]))
+            if self.path == "/api/profiles/read":
+                return self.reply(proxy.read(payload))
             if self.path == "/api/generate":
                 return self.reply(generate(payload["config"], payload.get("mode", "endgame")))
             if self.path == "/api/validate":
                 return self.reply({"valid": True, "config": normalize_config(payload["config"])})
             return self.reply({"error": "Not found"}, 404)
+        except ProfileReadError as e:
+            return self.reply({"error": str(e)}, e.status)
         except (ValueError, KeyError, TypeError, ET.ParseError) as e:
             return self.reply({"error": str(e)}, 400)
 

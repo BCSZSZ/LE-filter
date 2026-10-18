@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-18",
+  "status": "passed",
+  "runtime": "Pyodide 314.0.7 / Node.js",
+  "cases": [
+    {
+      "name": "maxroll-four-profiles",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "MAONG",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "ShurikenAmhali",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "S5Luciann",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "MaadCity",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "personal-filter",
+      "completeOutputEqual": true,
+      "count": 93
+    },
+    {
+      "name": "unsupported-version-1",
+      "completeOutputEqual": true,
+      "error": "暂不支持物品序列化版本1，本次未导入。"
+    },
+    {
+      "name": "unsupported-version-7",
+      "completeOutputEqual": true,
+      "error": "暂不支持物品序列化版本7，本次未导入。"
+    }
+  ],
+  "browserDownloadTested": false,
+  "gameClientTested": false
+}

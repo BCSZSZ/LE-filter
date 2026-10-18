@@ -13,7 +13,7 @@ const endgameCategories = [
 const levelingCategories = [['affixes','所需词条','选择词条'],['bases','所需底材','添加底材']];
 const categories = () => mode==='leveling'?levelingCategories:endgameCategories;
 let catalog, examples, templates, state, config, activeId, mode='endgame', category='uniques', view='editor', selection, imported, generated, toastTimer, previewRequest=0, draggingAffix;
-let profileImport;
+let profileImport,profileReadController,profileReadRequest=0;
 const workspace=globalThis.LEWorkbench;
 const currentSave = () => workspace.activeSave(state);
 const workbenchReady = () => !!currentSave() && config.builds.some(b=>b.enabled);
@@ -350,33 +350,44 @@ $('save-requirements').onclick=async()=>{
 $('import-requirements').onclick=()=>$('requirements-file').click();
 $('import-profiles').onclick=()=>$('profiles-dialog').showModal();
 function invalidateProfiles(){
-  profileImport=null;$('apply-profiles').disabled=true;$('profiles-reader').hidden=true;
-  $('profiles-result').textContent='';$('profiles-bookmark').removeAttribute('href');$('profiles-open').removeAttribute('href');
+  profileReadRequest++;profileReadController?.abort();profileReadController=null;
+  profileImport=null;$('apply-profiles').disabled=true;$('profiles-result').textContent='';
+  $('read-profiles').disabled=false;$('read-profiles').textContent='读取角色并预览并集';
 }
 $('profiles-links').oninput=invalidateProfiles;
-$('prepare-profiles').onclick=()=>{
+$('profiles-dialog').addEventListener('close',invalidateProfiles);
+$('read-profiles').onclick=async()=>{
   invalidateProfiles();
+  const request=profileReadRequest;
   try{
-    const urls=LEProfileReader.normalizeLinks($('profiles-links').value),back=new URL(location.href);back.hash='';back.search='';
-    $('profiles-bookmark').href=LEProfileReader.makeBookmarklet(urls,back.href,$('profiles-name').value);
-    $('profiles-open').href=urls[0];$('profiles-reader').hidden=false;
-    profileImport=null;$('apply-profiles').disabled=true;$('profiles-result').textContent=`${urls.length}个不同角色，准备读取。`;
-  }catch(e){toast(e.message,true);}
+    const urls=LEProfileImport.normalizeLinks($('profiles-links').value);
+    profileReadController=new AbortController();
+    const signal=AbortSignal.any([profileReadController.signal,AbortSignal.timeout(100000)]);
+    $('read-profiles').disabled=true;$('read-profiles').textContent='正在读取…';
+    $('profiles-result').textContent=`正在读取${urls.length}个不同角色的当前配装，请稍候…`;
+    const bundle=await LEProfileImport.readProfiles(urls,{name:$('profiles-name').value,signal});
+    if(request!==profileReadRequest)return;
+    await analyzeProfiles(bundle,request);
+  }catch(e){if(request===profileReadRequest&&e.name!=='AbortError'){$('profiles-result').textContent=`读取失败：${e.message} 本次未保存任何目标。`;toast(e.message,true);}}
+  finally{if(request===profileReadRequest){profileReadController=null;$('read-profiles').disabled=false;$('read-profiles').textContent='读取角色并预览并集';}}
 };
-async function analyzeProfiles(bundle){
+async function analyzeProfiles(bundle,request=profileReadRequest){
   profileImport=null;$('apply-profiles').disabled=true;$('profiles-result').textContent='正在核对角色ID与目标分类…';
   if(!$('profiles-dialog').open)$('profiles-dialog').showModal();
   try{
-    profileImport=await api('/api/profiles/import',{bundle});
-    $('profiles-name').value=profileImport.name;
+    const result=await api('/api/profiles/import',{bundle});
+    if(request!==profileReadRequest)return;
+    profileImport=result;
+    if(!$('profiles-name').value.trim())$('profiles-name').value=profileImport.name;
     $('profiles-links').value=profileImport.source.profiles.map(p=>p.url).join('\n');
     $('profiles-result').innerHTML=`<h3>${esc(profileImport.source.name)}</h3><div class="import-summary">${endgameCategories.map(([key,title])=>`<span class="stat">${title} <strong>${profileImport.profile[key].length}</strong>${key==='uniques'?'项':'组'}</span>`).join('')}</div><p>腐化／附魔参考单列，练级目标留空。保存后可逐项编辑、预览和导出filter。</p>${profileImport.source.warnings.map(w=>`<p class="warning">${esc(w)}</p>`).join('')}<details><summary>查看${profileImport.source.profiles.length}个来源角色</summary>${profileImport.source.profiles.map(p=>`<p><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.character)} · ${esc(p.account)}</a>，${p.items.length}件物品</p>`).join('')}</details>`;
     $('apply-profiles').disabled=false;
-  }catch(e){$('profiles-result').textContent=`导入失败：${e.message}`;toast(e.message,true);}
+  }catch(e){if(request===profileReadRequest){$('profiles-result').textContent=`导入失败：${e.message}`;toast(e.message,true);}}
 }
 $('profiles-file').onchange=async e=>{
-  try{const file=e.target.files[0];if(file){if(file.size>1024*1024)throw Error('角色JSON超过1MB。');await analyzeProfiles(JSON.parse(await file.text()));}}
-  catch(error){profileImport=null;$('apply-profiles').disabled=true;$('profiles-result').textContent=error.message;toast(error.message,true);}
+  invalidateProfiles();const request=profileReadRequest;
+  try{const file=e.target.files[0];if(file){if(file.size>1024*1024)throw Error('角色JSON超过1MB。');const text=await file.text();if(request===profileReadRequest)await analyzeProfiles(JSON.parse(text),request);}}
+  catch(error){if(request===profileReadRequest){profileImport=null;$('apply-profiles').disabled=true;$('profiles-result').textContent=error.message;toast(error.message,true);}}
   finally{e.target.value='';}
 };
 $('apply-profiles').onclick=()=>{
@@ -421,10 +432,6 @@ async function init(){
     state=await validateState(workspace.restore(examples,saved));config=currentSave()?.config||state.draft_config;
     activeId=currentSave()?.active_build_id||config.main_id;$('catalog-version').textContent=catalog.version;render();save();
     document.querySelector('.layout').inert=false;document.querySelector('.top-actions').inert=false;
-    if(location.hash.startsWith('#profile-import=')){
-      const hash=location.hash;history.replaceState(null,'',location.pathname+location.search);
-      try{await analyzeProfiles(LEProfileReader.bundleFromHash(hash));}catch(error){toast(`角色数据无效：${error.message}`,true);}
-    }
   }catch(e){toast(`无法启动：${e.message}`,true);}
 }
 init();

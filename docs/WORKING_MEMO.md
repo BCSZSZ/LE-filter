@@ -3,7 +3,14 @@
 更新时间：2026-10-18，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
 
-## 最新2026-10-18：四角色并集与个人profile导入
+## 最新2026-10-18追加：多链接API直接读取
+
+- 用户确认上线无需书签／转存Planner的多链接导入。前端通过Sites后端按LETools链接的账号／角色名读取Maxroll公开角色API，整批成功后才提取并集，个人保存与模版完全独立。`tool/character_save.py`解码物品目标，Python与Pyodide沿用同一分类和引擎。
+- LETools Planner实际POST `import_character.php`可从本机读取，但Cloudflare Workers来源被返回403；未获知具体WAF规则。官方Character Data API有合作方使用先例，没有找到可直接实施的公开接口契约。改用已验证云端可达的Maxroll接口，无需另开Render；实际来源保存在个人需求的source中。调查见`docs/research/LE_OFFICIAL_CHARACTER_API.md`，接口、布局、维护入口见`docs/PROFILE_IMPORT.md`。
+- 四角色76件逐位置与独立LETools API比较，类型／底材／暗金ID／普通、腐化、附魔、固定词缀池全部相同。只有四角色的个人并集为13暗金／10装备组／11神像组／1祭坛／0底材，生成93条。此前模版97条、14／10／15／1保持，53份既有源文件、模版、需求、历史XML及引擎字节未改。
+- 生产书签脚本、回调与旧测试已移除，已有角色JSON备份格式兼容保留。后端固定目的地、禁止重定向、3并发、5分钟缓存；错误及未知格式明确退出整批。API原生、打包WASM和浏览器证据使用`analysis/profile-api-*.json`；历史四角色模版验证仍保留，不把静态／浏览器验证当游戏客户端实测。
+
+## 此前2026-10-18：四角色并集与个人profile导入
 
 - 玩家指定MAONG、ShurikenAmhali、S5Luciann、MaadCity与原追心手里剑XML模版取并集。冻结可见UI摘录76件于`sources/builds/heartseeker-shuriken-profiles-2026-10-18.json`；此为Profile→Planner逐件已用页签读取，不是原生API响应。原XML和其他来源保持。
 - 新模版14暗金／10装备组、56项普通部位目标／15神像组／1祭坛，无05，练级保持原空文件字节。新增92／402／344，原11种及全部原目标保留，原词缀顺序在前、新项追加。按ID分类，普通词缀可位于腐化页签；普通神像仅0／5，附魔4／腐化6及固定随机7分列。不同神像底材范围保持独立。

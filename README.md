@@ -2,7 +2,7 @@
 
 [掉落 T7 概率](https://bcszsz.github.io/LE-filter/probability/)：切换普通掉落与普通崇高预言，对比**最终崇高装备中至少1T7／至少2T7**的概率，并显示平均多少件出一件。区域固定100、命运默认12，可选腐化、23类装备、玩家职业及装备职业；普通随机掉落曲线随腐化变化，普通预言保持水平。预言模式保留三种镜片对比和[Excel](outputs/01a135a3-5a09-7e91-83c5-4bd333aeb5ea/普通崇高预言-T7概率.xlsx)。普通模式采用额外地图稀有度0%、无活动暗金加成的随机来源，不含额外保证稀有及特殊词缀来源。数据挖掘版本1.5.2.2，方法及复现见[概率工具说明](docs/PROPHECY_CALCULATOR.md)。
 
-[在线工作台](https://bcszsz.github.io/LE-filter/)由GitHub Pages托管。支持导入Maxroll filter XML／TXT、需求JSON，以及[LETools多角色profile并集](docs/PROFILE_IMPORT.md)，可搜索编辑、多BD组合及导出JSON／XML；角色链接通过来源站读取书签导入，攻略网址不提取。首次打开需要加载运行环境，导入内容与生成过程在浏览器内处理。在线模板包含旧Maxroll Flay／Skeleton，以及独立的Allie Flay攻略／中文骷髅835攻略／冰追心／追心手里剑；四份新来源模板默认未勾选，两份Flay不合并。使用Chrome或Edge进行文件下载；Codex内置浏览器目前不能正常接收浏览器生成的下载文件。
+[在线工作台](https://bcszsz.github.io/LE-filter/)由GitHub Pages托管。支持导入Maxroll filter XML／TXT、需求JSON，以及[LETools多角色profile并集](docs/PROFILE_IMPORT.md)，可搜索编辑、多BD组合及导出JSON／XML。粘贴1–12个角色链接即可经后端API读取并预览并集，无需书签或转存Planner；个人导入只创建个人方案，不更新已有模版，攻略网址不提取。首次打开需要加载运行环境，目标提取与生成仍在浏览器内处理。在线模板包含旧Maxroll Flay／Skeleton，以及独立的Allie Flay攻略／中文骷髅835攻略／冰追心／追心手里剑；四份新来源模板默认未勾选，两份Flay不合并。使用Chrome或Edge进行文件下载；Codex内置浏览器目前不能正常接收浏览器生成的下载文件。
 
 **目标工作台已可使用**：双击[start-tool.cmd](start-tool.cmd)，打开本地 <http://127.0.0.1:8765>。左侧并排“已有模版”和“我的保存”：多选只读模板并指定主BD，点击“应用所选BD”后，所有已选BD生成一条可编辑保存方案。勾选不新增保存，再次应用创建新方案；已有方案可直接打开，编辑自动保存。支持导入filter提取目标、中文／英文／ID搜索多选、方案内主副套路调整、全部方案JSON备份和XML预览导出。终局五类目标、练级只填词缀与底材两份列表，共同导出一份filter。见[工具使用说明](docs/TOOL_GUIDE.md)。默认模板组合两BD96条，均启用，练级目标留空。05要求指定底材＋同BD对应部位目标T7常驻；被C1完整覆盖的底材省去重复规则。删除专门T6层，练级品质80退出、底材60退出、普通拆解50退出、原常驻拆解60退出。897附魔及腐化不计普通神像目标。
 

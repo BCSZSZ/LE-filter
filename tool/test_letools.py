@@ -110,7 +110,25 @@ class LEToolsTests(unittest.TestCase):
         self.assertEqual(len(browser_bootstrap()["config"]["builds"]), 6)
 
     @unittest.skipUnless(shutil.which("node"), "Node development checks")
-    def test_bookmarklet_network_sequence_and_personal_saves(self):
-        result = subprocess.run([shutil.which("node"), "--test", "tool/test_profile_reader.cjs"], cwd=e.ROOT,
+    def test_api_relay_and_personal_save_contract(self):
+        result = subprocess.run([shutil.which("node"), "--test", "tool/test_profile_relay.mjs"], cwd=e.ROOT,
                                 capture_output=True, text=True, encoding="utf-8")
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_native_api_targets_match_visible_ui_without_replacing_template(self):
+        fixture = json.loads((e.ROOT / "sources/builds/letools-character-api-2026-10-18.json").read_text(encoding="utf-8"))
+        bundle = {"format": "letools-profile-bundle", "version": 1, "profiles": [
+            {"url": row["url"], "data_version": row["response"]["buildInfo"]["data_version"],
+             "data": row["response"]["buildInfo"]["data"]} for row in fixture["responses"]]}
+        imported = import_profiles(bundle)
+        self.assertEqual([len(s["items"]) for s in imported["source"]["profiles"]], [19] * 4)
+
+        def pools(profile):
+            result = {"uniques": sorted(profile["uniques"])}
+            for category in ("equipment", "idols", "altars", "bases"):
+                rows = [{k: sorted(v) if isinstance(v, list) else v for k, v in group.items() if v != []}
+                        for group in profile[category]]
+                result[category] = sorted(rows, key=lambda x: json.dumps(x, sort_keys=True))
+            return result
+
+        self.assertEqual(pools(imported["profile"]), pools(self.imported["profile"]))

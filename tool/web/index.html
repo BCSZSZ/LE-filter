@@ -88,17 +88,14 @@
   <p>粘贴同一个BD的1–12个profile链接，每行一个。暗金、按部位的装备词缀、神像、祭坛和明确普通底材合并为一个个人BD。</p>
   <label class="field-label">个人BD名称<input id="profiles-name" type="text" placeholder="例如：我的追心手里剑"></label>
   <textarea id="profiles-links" placeholder="https://www.lastepochtools.com/profile/账号/character/角色" aria-label="LETools角色链接（每行一个）"></textarea>
-  <button id="prepare-profiles">生成读取书签</button>
-  <div id="profiles-reader" class="notice" hidden>
-    <ol><li>把 <a id="profiles-bookmark">读取LETools角色</a> 拖到浏览器收藏栏。</li><li><a id="profiles-open" target="_blank" rel="noopener">打开第一个角色页面</a>，加载完成后点击收藏栏里的读取书签，一次读取全部链接。</li><li>完成后点击“返回工作台，预览并集”，核对后创建个人方案。</li></ol>
-    <p class="muted">来源站禁止跨站读取，读取在你打开的LETools页面进行。新增个人需求，不会修改已有模版。遇到访问验证时先在该站完成；任何链接失败都不会导入半份并集。</p>
-  </div>
-  <label class="file-drop">也可选择读取书签导出的角色JSON<input id="profiles-file" type="file" accept=".json"></label>
+  <button id="read-profiles" class="primary">读取角色并预览并集</button>
+  <p class="muted">读取当前公开配装，重复链接只读取一次；任意角色读取失败都不会保存部分结果。核对后保存到“我的保存”，已有模版保持原样。</p>
+  <details><summary>导入已有角色JSON</summary><label class="file-drop">选择角色JSON<input id="profiles-file" type="file" accept=".json"></label></details>
   <div id="profiles-result" role="status"></div>
   <div class="dialog-footer"><label>导入到 <select id="profiles-destination"><option value="new-save">新建个人方案</option><option value="current-save">当前方案，添加独立BD</option></select></label><button id="apply-profiles" class="primary" disabled>保存个人BD</button></div>
 </dialog>
 <input id="config-file" type="file" accept=".json" hidden>
 <input id="requirements-file" type="file" accept=".json" hidden>
 <div id="toast" role="status" hidden></div>
-<script src="workbench.js"></script><script src="profile-reader.js"></script><script src="app.js"></script>
+<script src="workbench.js"></script><script src="profile-import.js"></script><script src="app.js"></script>
 </body></html>

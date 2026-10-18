@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-18",
+  "status": "passed",
+  "backend": "https://le-filter-profile-api.astutestoat4.chatgpt.site",
+  "site_version": 5,
+  "site_source_sha": "173141b0ef1ec92b39fffebf81cf64b22ede44de",
+  "provider": "Maxroll",
+  "requests": [
+    {
+      "path": "/health",
+      "method": "GET",
+      "status": 200,
+      "cors": "https://bcszsz.github.io",
+      "seconds": 1.46
+    },
+    {
+      "path": "/api/profiles/read",
+      "method": "OPTIONS",
+      "status": 204,
+      "cors": "https://bcszsz.github.io",
+      "seconds": 1.49
+    },
+    {
+      "path": "/api/profiles/read",
+      "method": "POST",
+      "status": 200,
+      "cors": "https://bcszsz.github.io",
+      "seconds": 4.31,
+      "items": [
+        19,
+        19,
+        19,
+        19
+      ]
+    }
+  ],
+  "frontend_tests": {
+    "url": "http://127.0.0.1:8878/",
+    "uses_production_relay": true,
+    "four_links_read": true,
+    "counts": {
+      "uniques": 13,
+      "equipment": 10,
+      "altars": 1,
+      "idols": 11,
+      "bases": 0
+    },
+    "save_and_reload": true,
+    "personal_rules": 93,
+    "invalid_link_keeps_save_disabled": true,
+    "prior_saves_preserved": true
+  },
+  "unittest": {
+    "tests": 99,
+    "result": "passed"
+  },
+  "node_relay_contract_cases": 9,
+  "game_client_tested": false,
+  "browser_blob_download_tested": false
+}

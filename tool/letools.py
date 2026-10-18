@@ -7,6 +7,7 @@ from urllib.parse import unquote, urlsplit, quote
 
 from engine import CATALOG, MANIFEST, empty_profile, validate_profile
 from requirements import read_document
+from character_save import decode_character
 
 # Numeric order copied from the frozen sources/game-reference.json equipment_enum.
 TYPES = ("HELMET BODY_ARMOR BELT BOOTS GLOVES ONE_HANDED_AXE ONE_HANDED_DAGGER "
@@ -137,6 +138,15 @@ def merge_targets(*profiles):
 
 
 def item_identity(key):
+    if isinstance(key, dict):
+        tid, base, uid = key.get("type_id"), key.get("base"), key.get("unique_id")
+        if (type(tid) is not int or not 0 <= tid < len(TYPES) or type(base) is not int
+                or f"{TYPES[tid]}:{base}" not in CATALOG["bases"]):
+            raise ValueError(f"未知角色物品／底材编码：{key}。")
+        typ = TYPES[tid]
+        if uid is not None and (type(uid) is not int or CATALOG["uniques"].get(str(uid), {}).get("type") != typ):
+            raise ValueError(f"未知暗金ID或类型不一致：{uid}，请更新词库。")
+        return typ, base, uid
     decoded = decode_key(key)
     if not decoded.isascii() or not decoded.isdecimal():
         raise ValueError("LETools物品标识不是数字编码。")
@@ -157,7 +167,13 @@ def extract_character(entry):
     if not isinstance(entry, dict):
         raise ValueError("角色数据必须为对象。")
     url, account, character = profile_url(entry.get("url"))
-    data = entry.get("data")
+    provider = entry.get("provider", "LETools")
+    if "save" in entry:
+        if provider != "Maxroll":
+            raise ValueError("未知角色数据来源。")
+        data = decode_character(entry["save"], character)
+    else:
+        data = entry.get("data")
     if not isinstance(data, dict) or not isinstance(data.get("equipment"), dict) or not isinstance(data.get("idols"), list):
         raise ValueError(f"{character}缺少装备或神像数据，请重新读取。")
     if len(data["equipment"]) > 20 or len(data["idols"]) > 25:
@@ -184,10 +200,13 @@ def extract_character(entry):
             if not isinstance(affix, dict):
                 raise ValueError("物品词缀数据不正确。")
             key = affix.get("id")
-            decoded = decode_key(key)
-            if not key.startswith("A") or not decoded.isascii() or not decoded.isdecimal():
-                raise ValueError("LETools词缀编码不正确。")
-            aid = int(decoded)
+            if type(key) is int:
+                aid = key
+            else:
+                decoded = decode_key(key)
+                if not key.startswith("A") or not decoded.isascii() or not decoded.isdecimal():
+                    raise ValueError("LETools词缀编码不正确。")
+                aid = int(decoded)
             catalog = CATALOG["affixes"].get(str(aid))
             if catalog is None:
                 raise ValueError(f"未知词缀ID {aid}，请更新词库；未将其猜成普通词缀。")
@@ -240,6 +259,9 @@ def extract_character(entry):
     if not records:
         raise ValueError(f"{character}没有可读取的装备，未创建空BD。")
     return targets, {"url": url, "account": account, "character": character,
+                     **({"provider": provider} if "provider" in entry else {}),
+                     **({"api_url": f"https://planners.maxroll.gg/lastepoch/characters/{quote(account, safe='')}/{quote(character, safe='')}"} if provider == "Maxroll" else {}),
+                     **({"last_updated": entry["last_updated"]} if "last_updated" in entry else {}),
                      "data_version": entry.get("data_version"), "items": records,
                      "fixed_affix_references": fixed, "unique_idol_references": unique_idols}
 
@@ -247,7 +269,7 @@ def extract_character(entry):
 def import_profiles(bundle):
     if (not isinstance(bundle, dict) or bundle.get("format") != "letools-profile-bundle" or bundle.get("version") != 1
             or not isinstance(bundle.get("profiles"), list) or not 1 <= len(bundle["profiles"]) <= 12):
-        raise ValueError("请读取1–12个角色，或选择读取书签导出的角色JSON。")
+        raise ValueError("请读取1–12个角色，或选择已有角色JSON。")
     targets, sources, seen = empty_profile(), [], set()
     for entry in bundle["profiles"]:
         profile, source = extract_character(entry)
@@ -265,7 +287,9 @@ def import_profiles(bundle):
                 "暗金固定随机词缀7另存参考；不添加暗金固有属性、技能、祝福或练级目标。"]
     document = {"format": "le-filter-requirements", "version": 1, "id": "profile-union-" + digest,
                 "name": name, "stage": "endgame", "targets": targets,
-                "source": {"name": f"LETools · {len(sources)}个角色并集", "profiles": sources, "warnings": warnings}}
+                "source": {"name": (f"角色并集 · {len(sources)}个（{'／'.join(dict.fromkeys(s.get('provider', 'LETools') for s in sources))}）"
+                                    if any(s.get("provider") == "Maxroll" for s in sources) else f"LETools · {len(sources)}个角色并集"),
+                           "profiles": sources, "warnings": warnings}}
     result = read_document(document)
     result["document"] = document
     return result

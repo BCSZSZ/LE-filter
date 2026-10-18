@@ -54,7 +54,7 @@ def main():
                  "flay-mana-lich": "Strict Flay", "skeleton-necromancer": "Strict Skeleton",
                  "flay-lich-allie-guide": "Allie", "bleed-skeleton-roamer-guide-835": "835"}
         lines.append(f"| {'＋'.join(names[i] for i in row['selected'])} | {names[row['main']]} | {row.get('count', row.get('error'))} |")
-    lines += ["", "独立97条；当前配装四角色个人并集单独93条。沿用200条上限，超限报错且不截断。[原生验证](../analysis/profile-import-validation.json)和[WASM对照](../analysis/profile-import-wasm-validation.json)检查输入、组合、完整输出与冻结文件字节；[导入使用说明](PROFILE_IMPORT.md)说明同源读取书签及验证边界。未做游戏客户端实测。", "",
+    lines += ["", "独立97条；当前配装四角色个人并集单独93条。沿用200条上限，超限报错且不截断。[原生验证](../analysis/profile-import-validation.json)和[WASM对照](../analysis/profile-import-wasm-validation.json)检查输入、组合、完整输出与冻结文件字节；[导入使用说明](PROFILE_IMPORT.md)说明多链接直接读取及验证边界。未做游戏客户端实测。", "",
               "```powershell", "python -X utf8 scripts/extract_shuriken_profiles.py", "python -X utf8 scripts/build_shuriken_marksman_requirements.py", "python -X utf8 scripts/validate_profile_import.py", "python -X utf8 scripts/render_shuriken_profile_review.py", "```", ""]
     (ROOT / "docs/SHURIKEN_MARKSMAN_REVIEW.md").write_text("\n".join(lines), encoding="utf-8", newline="\n")
     print("Rendered docs/SHURIKEN_MARKSMAN_REVIEW.md")

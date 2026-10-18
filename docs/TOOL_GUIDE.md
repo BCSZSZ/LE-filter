@@ -4,7 +4,7 @@
 
 ## 在线使用
 
-打开[GitHub Pages工作台](https://bcszsz.github.io/LE-filter/)，首次等待运行环境加载。网页支持Maxroll filter文件／XML文本、共通需求JSON，以及[LETools角色profile多链接并集导入](PROFILE_IMPORT.md)。来源站禁止跨站读取，因此通过角色页面的读取书签回传，或选择该书签导出的角色JSON；提取与生成计算在浏览器内完成。配置保存在当前浏览器，跨设备用“保存配置”与“载入配置”转移。
+打开[GitHub Pages工作台](https://bcszsz.github.io/LE-filter/)，首次等待运行环境加载。网页支持Maxroll filter文件／XML文本、共通需求JSON，以及[LETools角色profile多链接并集导入](PROFILE_IMPORT.md)。角色链接通过后端调用LETools角色API直接读取，无需书签或转存Planner；提取与生成计算在浏览器内完成。配置保存在当前浏览器，跨设备用“保存配置”与“载入配置”转移。
 
 左侧并排“已有模版”和“我的保存”。已有模版提供六个独立BD：旧Maxroll Strict的Flay／Skeleton，以及Allie Flay攻略／中文流血骷髅835攻略／冰追心／追心手里剑。冰追心当前终局目标以2026-10-18玩家导出的`LE-filter (10).xml`为准；追心手里剑为玩家提供的`Shuriken Marksman` Very Strict XML与四个指定天梯角色的并集，稳定id为`heartseeker-shuriken-marksman`，与冰追心独立，练级同样留空；来源边界见[冰追心审阅](ICE_HEARTSEEKER_PLANNER_REVIEW.md)及[手里剑审阅](SHURIKEN_MARKSMAN_REVIEW.md)。四份新来源模板默认未勾选。已有模版栏支持多选，主BD只能在已勾选项中指定；取消主BD时自动改选另一项。首次预选旧Strict两BD，但“我的保存”为空。勾选、改选主BD或“选择默认组合”都只改变待应用的选择，当前保存与编辑不受影响。
 
@@ -55,7 +55,7 @@ python -X utf8 tool/server.py --open
 
 ## LETools角色链接导入
 
-点击左侧“导入LETools角色（多链接并集）”，粘贴同一BD的1–12个具体profile链接，生成读取书签；拖到收藏栏后打开第一个角色并运行书签，一次读取全部链接。完成后返回工作台核对，默认新建个人方案，也可向当前方案添加独立BD。个人导入不改已有模版；已有保存和其他阶段保留。任一来源失败或未知ID都不生成部分并集。详细步骤及分类见[角色导入说明](PROFILE_IMPORT.md)。
+点击左侧“导入LETools角色（多链接并集）”，粘贴同一BD的1–12个具体profile链接，点击“读取角色并预览并集”。读取完成后核对暗金、装备、神像与祭坛数量，点击“保存个人BD”，再预览或导出filter。默认新建个人方案，也可向当前方案添加独立BD。个人导入不改已有模版；已有保存和其他阶段保留。重复链接去重，任一来源失败、身份不符或未知ID都不生成部分并集。详细步骤及分类见[角色导入说明](PROFILE_IMPORT.md)。
 
 ## 填写与导入
 

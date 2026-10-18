@@ -113,7 +113,7 @@
 | 835＋Allie＋Strict Flay＋追心手里剑＋冰追心＋Strict Skeleton | 冰追心 | 这些BD生成265条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。 |
 | 835＋Allie＋Strict Flay＋追心手里剑＋冰追心＋Strict Skeleton | Strict Skeleton | 这些BD生成265条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。 |
 
-独立97条；当前配装四角色个人并集单独93条。沿用200条上限，超限报错且不截断。[原生验证](../analysis/profile-import-validation.json)和[WASM对照](../analysis/profile-import-wasm-validation.json)检查输入、组合、完整输出与冻结文件字节；[导入使用说明](PROFILE_IMPORT.md)说明同源读取书签及验证边界。未做游戏客户端实测。
+独立97条；当前配装四角色个人并集单独93条。沿用200条上限，超限报错且不截断。[原生验证](../analysis/profile-import-validation.json)和[WASM对照](../analysis/profile-import-wasm-validation.json)检查输入、组合、完整输出与冻结文件字节；[导入使用说明](PROFILE_IMPORT.md)说明多链接直接读取及验证边界。未做游戏客户端实测。
 
 ```powershell
 python -X utf8 scripts/extract_shuriken_profiles.py

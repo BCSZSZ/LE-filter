@@ -1,0 +1,1359 @@
+{
+  "format": "letools-character-api-fixture",
+  "version": 1,
+  "captured_on": "2026-10-18",
+  "endpoint": "https://www.lastepochtools.com/import_character.php",
+  "note": "Native API response target fields only; rolls, skills, account IDs and other fields omitted. Existing template is not rebuilt from this fixture.",
+  "responses": [
+    {
+      "url": "https://www.lastepochtools.com/profile/vsnail/character/MAONG",
+      "response": {
+        "buildInfo": {
+          "data_version": "Version 1.5.2",
+          "data": {
+            "equipment": {
+              "head": {
+                "id": "UAzBMoVgNiA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AGwRhQ"
+                  },
+                  {
+                    "tier": 7,
+                    "id": "AAwVgTEA"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AAwRgzEA"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AKwBgzEA"
+                  }
+                ]
+              },
+              "chest": {
+                "id": "UAzAsoZgNiA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwVgTEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 4,
+                  "id": "AIwBmCYg"
+                }
+              },
+              "weapon1": {
+                "id": "UAwRhCYHYSA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "ACwZgTEA"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AAzBsQ"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 4,
+                  "id": "AJwNhQ"
+                }
+              },
+              "weapon2": {
+                "id": "UAzDMEYA4E4g",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "ACwZgTEA"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AAwJgLEA"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AKwBgzEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 7,
+                  "id": "AJwNhQ"
+                }
+              },
+              "hands": {
+                "id": "UAzCsEYGYBYg",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwDhQ"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AAwVgHEA"
+                  },
+                  {
+                    "tier": 7,
+                    "id": "AAwZgbEA"
+                  }
+                ]
+              },
+              "waist": {
+                "id": "UAzCswRgdiA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwDhQ"
+                  },
+                  {
+                    "tier": 7,
+                    "id": "AAwVgnEA"
+                  },
+                  {
+                    "tier": 6,
+                    "id": "AAwTg7EA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 4,
+                  "id": "AIwBgTALEA"
+                }
+              },
+              "feet": {
+                "id": "UAwRmGZwdiA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwJgHEA"
+                  },
+                  {
+                    "tier": 7,
+                    "id": "AKwBgzEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 5,
+                  "id": "AJzCMQ"
+                }
+              },
+              "ring1": {
+                "id": "UAwRmBYHZKA",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "AIzBMDYg"
+                  },
+                  {
+                    "tier": 7,
+                    "id": "AKwBg7EA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 5,
+                  "id": "AAwRgbEA"
+                }
+              },
+              "ring2": {
+                "id": "UAwRmBYHZKA",
+                "affixes": [
+                  {
+                    "tier": 2,
+                    "id": "AIzBMyA"
+                  },
+                  {
+                    "tier": 7,
+                    "id": "AKwBg7EA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 2,
+                  "id": "AIwBg7ALEA"
+                }
+              },
+              "amulet": {
+                "id": "UAzCsEYGZKA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwDhQ"
+                  },
+                  {
+                    "tier": 6,
+                    "id": "AAwZhQ"
+                  },
+                  {
+                    "tier": 6,
+                    "id": "AAzAcQ"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 2,
+                  "id": "AAwdgTEA"
+                }
+              },
+              "relic": {
+                "id": "UAwNgTALAjAzEA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwDhQ"
+                  }
+                ]
+              },
+              "idol_altar": {
+                "id": "IIwBgLKyiJA",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "AIwBgnGQ"
+                  },
+                  {
+                    "tier": 2,
+                    "id": "AIzAMqA"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AIwBgnAzEA"
+                  },
+                  {
+                    "tier": 3,
+                    "id": "AIwBgnALEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 7,
+                  "id": "AIwBgHAnEA"
+                }
+              }
+            },
+            "idols": [
+              {
+                "id": "IIwBgTA7CKtQ",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "ABwdgzEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "ABwNgTEA"
+                  }
+                ]
+              },
+              {
+                "id": "IIwBgzATCIJzSQ",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "ACwdgDEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "AOwNgzEA"
+                  },
+                  {
+                    "tier": 6,
+                    "id": "ABwTgTEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AIwBgzA7EA"
+                }
+              },
+              {
+                "id": "IIwBgzGLKIkA",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "ACwTgDEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "AOwFgzEA"
+                  },
+                  {
+                    "tier": 3,
+                    "id": "ABwTgTEA"
+                  },
+                  {
+                    "tier": 3,
+                    "id": "AJwZgLEA"
+                  }
+                ]
+              },
+              {
+                "id": "IIwBgTAnCwCwvQ",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "ACwTgDEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "AOwFgzEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AIwBgzMQ"
+                }
+              },
+              {
+                "id": "IIwBgTArC00A",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "AIzAcQ"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "AIzAsQ"
+                  }
+                ]
+              },
+              {
+                "id": "IIwBgzCkJySQ",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "AIzDsQ"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "AJwFgTEA"
+                  },
+                  {
+                    "tier": 6,
+                    "id": "ABwTgTEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AIwBgrCQ"
+                }
+              },
+              {
+                "id": "IIwBgTAHCKtQ",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "ABwdmQ"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "ABzCsQ"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AIwBg7CQ"
+                }
+              }
+            ]
+          }
+        },
+        "charInfo": {
+          "accountName": "vsnail",
+          "characterName": "MAONG",
+          "lastUpdated": 1792146029000
+        }
+      }
+    },
+    {
+      "url": "https://www.lastepochtools.com/profile/Amhali/character/ShurikenAmhali",
+      "response": {
+        "buildInfo": {
+          "data_version": "Version 1.5.2",
+          "data": {
+            "equipment": {
+              "head": {
+                "id": "UAzBMoVgNiA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AGwRhQ"
+                  },
+                  {
+                    "tier": 6,
+                    "id": "ACwdgjEA"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AAwTg7EA"
+                  }
+                ]
+              },
+              "chest": {
+                "id": "UAzAsoZgNiA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwVgTEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 4,
+                  "id": "AIwBhA4g"
+                }
+              },
+              "weapon1": {
+                "id": "UAwRhCYHYSA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "ACwZgTEA"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AAwVhQ"
+                  },
+                  {
+                    "tier": 6,
+                    "id": "AAzBsQ"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 3,
+                  "id": "AJwNhQ"
+                }
+              },
+              "weapon2": {
+                "id": "UAzDMEYA4E4g",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "ACwZgTEA"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AAwVhQ"
+                  },
+                  {
+                    "tier": 4,
+                    "id": "AAwNmQ"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 4,
+                  "id": "AJwNhQ"
+                }
+              },
+              "hands": {
+                "id": "UAzCsEYGYBYg",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwDhQ"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "ACwJgnEA"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AAwZgbEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 5,
+                  "id": "AIwBhFYg"
+                }
+              },
+              "waist": {
+                "id": "UAzCMwTgJiA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwDhQ"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AAwZmQ"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 4,
+                  "id": "AJzCsQ"
+                }
+              },
+              "feet": {
+                "id": "UAwRmGZwdiA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwJgHEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AIwBgTALEA"
+                }
+              },
+              "ring1": {
+                "id": "UAwRmBYHZKA",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "AIwjsQ"
+                  },
+                  {
+                    "tier": 7,
+                    "id": "AKwBg7EA"
+                  }
+                ]
+              },
+              "ring2": {
+                "id": "UAwRmBYHZKA",
+                "affixes": [
+                  {
+                    "tier": 3,
+                    "id": "AIzBMyA"
+                  },
+                  {
+                    "tier": 7,
+                    "id": "AKwBg7EA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 7,
+                  "id": "AIwBgTAzEA"
+                }
+              },
+              "amulet": {
+                "id": "UAzCsEYGZKA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwDhQ"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AAzAcQ"
+                  },
+                  {
+                    "tier": 6,
+                    "id": "AAwZhQ"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AAwo"
+                }
+              },
+              "relic": {
+                "id": "UAwNgTALAjAzEA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwDhQ"
+                  }
+                ]
+              },
+              "idol_altar": {
+                "id": "IIwBgLKyiJA",
+                "affixes": [
+                  {
+                    "tier": 2,
+                    "id": "AIwBgnA7EA"
+                  },
+                  {
+                    "tier": 2,
+                    "id": "AIwBgnAzEA"
+                  },
+                  {
+                    "tier": 3,
+                    "id": "AIwBgHGQ"
+                  },
+                  {
+                    "tier": 6,
+                    "id": "AIwBgHAnEA"
+                  }
+                ]
+              }
+            },
+            "idols": [
+              {
+                "id": "IIwBgzGLKIkA",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "ACwTgDEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "AOwFgzEA"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "ABwTgTEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AIwBgLAzEA"
+                }
+              },
+              {
+                "id": "IIwBgzATCIJzSQ",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "AOwNgzEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "ACwdgDEA"
+                  },
+                  {
+                    "tier": 3,
+                    "id": "AJwZgrEA"
+                  },
+                  {
+                    "tier": 3,
+                    "id": "ABwTgTEA"
+                  }
+                ]
+              },
+              {
+                "id": "IIwBgTAnCwCwvQ",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "ACwTgDEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "AOwFgzEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AIwBgTAnEA"
+                }
+              },
+              {
+                "id": "IIwBgzCkJySQ",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "AJwFgTEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "AIzDsQ"
+                  },
+                  {
+                    "tier": 6,
+                    "id": "ABwTgTEA"
+                  }
+                ]
+              },
+              {
+                "id": "IIwBgTA7CKtQ",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "ABwNgTEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "ABwNmQ"
+                  }
+                ]
+              },
+              {
+                "id": "IIwBgTAHCKtQ",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "ABzAMQ"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "ABzBsQ"
+                  }
+                ]
+              },
+              {
+                "id": "IIwBgTArC00A",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "AIzAcQ"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "AMwRgnEA"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "charInfo": {
+          "accountName": "Amhali",
+          "characterName": "ShurikenAmhali",
+          "lastUpdated": 1791957816000
+        }
+      }
+    },
+    {
+      "url": "https://www.lastepochtools.com/profile/chachapieng/character/S5Luciann",
+      "response": {
+        "buildInfo": {
+          "data_version": "Version 1.5.2",
+          "data": {
+            "equipment": {
+              "head": {
+                "id": "UAzBMoVgNiA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AGwRhQ"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AAzDsQ"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AAzAcQ"
+                  },
+                  {
+                    "tier": 7,
+                    "id": "AOwNgTEA"
+                  }
+                ]
+              },
+              "chest": {
+                "id": "UAzAsoZgNiA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AKwBgzEA"
+                  },
+                  {
+                    "tier": 6,
+                    "id": "ACwdgjEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 7,
+                  "id": "AIwBmCYg"
+                }
+              },
+              "weapon1": {
+                "id": "UAwRhCYHYSA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "ACwZgTEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "AAwNgLEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 7,
+                  "id": "AJwNhQ"
+                }
+              },
+              "weapon2": {
+                "id": "UAzDMEYA4E4g",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "ACwZgTEA"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AAwNgHEA"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AKwBgzEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 3,
+                  "id": "AJwNhQ"
+                }
+              },
+              "hands": {
+                "id": "UAzCsEYGYBYg",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwDhQ"
+                  },
+                  {
+                    "tier": 6,
+                    "id": "AKwBgzEA"
+                  },
+                  {
+                    "tier": 7,
+                    "id": "AAwDgbEA"
+                  }
+                ]
+              },
+              "waist": {
+                "id": "UAzCMwTgJiA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwDhQ"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AAzAcQ"
+                  },
+                  {
+                    "tier": 7,
+                    "id": "AAwVgnEA"
+                  }
+                ]
+              },
+              "feet": {
+                "id": "UAwRmGZwdiA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwJgHEA"
+                  }
+                ]
+              },
+              "ring1": {
+                "id": "UAwRmBYHZKA",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "AIzBMDYg"
+                  },
+                  {
+                    "tier": 7,
+                    "id": "AKwBg7EA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 5,
+                  "id": "AAwTgTEA"
+                }
+              },
+              "ring2": {
+                "id": "UAwRmBYHZKA",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "AIzBMyA"
+                  },
+                  {
+                    "tier": 7,
+                    "id": "AKwBg7EA"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AAzAcQ"
+                  }
+                ]
+              },
+              "amulet": {
+                "id": "UAzCsEYGZKA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwDhQ"
+                  },
+                  {
+                    "tier": 6,
+                    "id": "AAwDmQ"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AAwZhQ"
+                  },
+                  {
+                    "tier": 6,
+                    "id": "AAwVgnEA"
+                  }
+                ]
+              },
+              "relic": {
+                "id": "UAwNgTALAjAzEA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAzBsQ"
+                  }
+                ]
+              },
+              "idol_altar": {
+                "id": "IIwBgLKyiJA",
+                "affixes": [
+                  {
+                    "tier": 6,
+                    "id": "AIzAMGYg"
+                  },
+                  {
+                    "tier": 3,
+                    "id": "AIwBgnAzEA"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AIwBgHAnEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 6,
+                  "id": "AIzAMA4g"
+                }
+              }
+            },
+            "idols": [
+              {
+                "id": "IIwBgTA7CKtQ",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "ABwNg7EA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "ABwNgTEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AIwBg7CQ"
+                }
+              },
+              {
+                "id": "IIwBgTAnCwCwvQ",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "ACwTgTEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "AOwFgzEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AIwBgTAnEA"
+                }
+              },
+              {
+                "id": "IIwBgzGIgLFJA",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "AOwFgzEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "ACwTgDEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AIwBgLAzEA"
+                }
+              },
+              {
+                "id": "IIwBgTAHCKtQ",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "ABwdmQ"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "ABzBsQ"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AIwBgrAnEA"
+                }
+              },
+              {
+                "id": "IIwBgTArC00A",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "AMwRgnEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "AIzAcQ"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AIwBgbAnEA"
+                }
+              },
+              {
+                "id": "IIwBgzATCIJzSQ",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "ACwdgDEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "AOwNgzEA"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AJwZhQ"
+                  }
+                ]
+              },
+              {
+                "id": "IIwBgzCkJySQ",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "ACwTgjEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "AJwFgTEA"
+                  },
+                  {
+                    "tier": 4,
+                    "id": "ABwTgTEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "ABwTg7EA"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "charInfo": {
+          "accountName": "chachapieng",
+          "characterName": "S5Luciann",
+          "lastUpdated": 1792263981000
+        }
+      }
+    },
+    {
+      "url": "https://www.lastepochtools.com/profile/47x47/character/MaadCity",
+      "response": {
+        "buildInfo": {
+          "data_version": "Version 1.5.2",
+          "data": {
+            "equipment": {
+              "head": {
+                "id": "UAzBMoVgNiA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AGwRhQ"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AOwNgTEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AIwBmHYg"
+                }
+              },
+              "chest": {
+                "id": "UAzAsoZgNiA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AKwBgzEA"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AAwDmQ"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 3,
+                  "id": "AIwBmBYg"
+                }
+              },
+              "weapon1": {
+                "id": "UAwRhCYHYSA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "ACwZgTEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 5,
+                  "id": "AJwNhQ"
+                }
+              },
+              "weapon2": {
+                "id": "UAzDMEYA4E4g",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "ACwZgTEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 3,
+                  "id": "AJwNhQ"
+                }
+              },
+              "hands": {
+                "id": "UAzCsEYGYBYg",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwDhQ"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 5,
+                  "id": "AKwBgzEA"
+                }
+              },
+              "waist": {
+                "id": "UAzDsBZgJiA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwDhQ"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AAwDgzEA"
+                }
+              },
+              "feet": {
+                "id": "UAwRmGZwdiA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwJgHEA"
+                  }
+                ]
+              },
+              "ring1": {
+                "id": "UAwRmBYHZKA",
+                "affixes": [
+                  {
+                    "tier": 4,
+                    "id": "AIw5A"
+                  },
+                  {
+                    "tier": 7,
+                    "id": "AKwBg7EA"
+                  }
+                ]
+              },
+              "ring2": {
+                "id": "UAwRmBYHZKA",
+                "affixes": [
+                  {
+                    "tier": 2,
+                    "id": "AIwjsQ"
+                  },
+                  {
+                    "tier": 7,
+                    "id": "AKwBg7EA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 4,
+                  "id": "AIwBmDYg"
+                }
+              },
+              "amulet": {
+                "id": "UAzCsEYGZKA",
+                "affixes": [
+                  {
+                    "tier": 7,
+                    "id": "AAwDhQ"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AAzBsQ"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AAzCsQ"
+                }
+              },
+              "relic": {
+                "id": "UAwNgTALAjAzEA",
+                "affixes": []
+              },
+              "idol_altar": {
+                "id": "IIwBgLKyiJA",
+                "affixes": [
+                  {
+                    "tier": 5,
+                    "id": "AIwBgnALEA"
+                  },
+                  {
+                    "tier": 3,
+                    "id": "AIzAMqA"
+                  },
+                  {
+                    "tier": 3,
+                    "id": "AIwBgnGQ"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 7,
+                  "id": "AIwBgHAnEA"
+                }
+              }
+            },
+            "idols": [
+              {
+                "id": "IIwBgzATCIJzSQ",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "AOwNgzEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "ACwDgDEA"
+                  },
+                  {
+                    "tier": 4,
+                    "id": "AJwZgrEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "AJwJg7EA"
+                  }
+                ]
+              },
+              {
+                "id": "IIwBgTAnCJdQ",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "ACwTgDEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "ACwVgbEA"
+                  },
+                  {
+                    "tier": 6,
+                    "id": "ABwTgTEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AIwBgrAzEA"
+                }
+              },
+              {
+                "id": "IIwBgzGLKIkA",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "AOwFgzEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "ACwTgDEA"
+                  },
+                  {
+                    "tier": 5,
+                    "id": "AJwZgLEA"
+                  },
+                  {
+                    "tier": 2,
+                    "id": "ABwThQ"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AIwhMQ"
+                }
+              },
+              {
+                "id": "IIwBgTA7CKtQ",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "ABwNgDEA"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "AIzAsQ"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AIwBgrAnEA"
+                }
+              },
+              {
+                "id": "IIwBgzCLALJJA",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "AIzBsQ"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "AOwNgzEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AIwBgLAzEA"
+                }
+              },
+              {
+                "id": "UAzCMGYBZKA",
+                "affixes": []
+              },
+              {
+                "id": "IIwBgTAHC00A",
+                "affixes": [
+                  {
+                    "tier": 1,
+                    "id": "AIzDsQ"
+                  },
+                  {
+                    "tier": 1,
+                    "id": "AIwJgzEA"
+                  }
+                ],
+                "corruptedAffix": {
+                  "tier": 1,
+                  "id": "AIwBgrAnEA"
+                }
+              }
+            ]
+          }
+        },
+        "charInfo": {
+          "accountName": "47x47",
+          "characterName": "MaadCity",
+          "lastUpdated": 1792301297000
+        }
+      }
+    }
+  ]
+}
