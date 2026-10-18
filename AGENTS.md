@@ -1,5 +1,7 @@
 # LE-filter 工作约束
 
+- 2026-10-18侧栏入口：常驻“用所选模版新建方案”“从角色链接创建”“更多”；三个低频filter／BD需求导入及本BD需求导出收进默认折叠的“更多”。删除“选择默认组合”快捷操作，首次预选、保存恢复与自动保存契约保留。交互说明以docs/TOOL_GUIDE.md为准。
+
 - 2026-10-18角色导入：LETools具体profile的1–12链接同BD取并集，网页经后端固定读取Maxroll公开角色API（LETools的PHP接口云端403）。个人导入只写“我的保存”，默认新方案，已有模版保持字节。任一来源失败、身份不符、未知序列化或ID均退出整批；词缀按冻结ID分类，神像底材范围独立。修改导入／后端先读docs/PROFILE_IMPORT.md；Sites身份在services/letools-relay/hosting.json，沿用原引擎与200条上限。既有追心手里剑14暗金／10装备组／15神像组／1祭坛及空练级保持；界面称“已有模版”。
 
 - 2026-10-17多T7共通判定：至少三条恰好T7；双T7中至少一条启用BD在对应部位／底材范围的目标T7；双T7且恰好三条未封印词缀（空一普通栏），以上为彗星。其余任意双T7为灵感。删除旧BD双目标T7独立层。同类型、同底材范围的单目标彗星池可取启用BD并集，C1／C3／练级仍逐BD独立。空栏用AffixCountCondition的1前2后、2前1后两条规则，sealedType=Any，不限制封印状态。原生证据和边界见docs/COMET_DOUBLE_T7.md，验证见analysis/comet-double-t7-validation.json。

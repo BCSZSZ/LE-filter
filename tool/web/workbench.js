@@ -61,7 +61,6 @@
     if(restored.active_save_id!==null&&!ids.has(restored.active_save_id))throw Error('找不到当前保存方案。');
     return restored;
   }
-  function selectDefaults(state,examples){state.selection=defaultSelection(examples);}
   function setTemplateEnabled(state,templates,id,enabled){
     if(!templates.some(t=>t.id===id))throw Error('找不到这个模板。');
     const ids=new Set(state.selection.ids);
@@ -159,7 +158,7 @@
     const order=new Map(catalog.equipment_types.map((type,i)=>[type,i]));
     return [...groups.values()].sort((a,b)=>(order.get(a.type)??order.size)-(order.get(b.type)??order.size));
   }
-  const api={library,restore,emptyConfig,activeSave,addSave,selectDefaults,setTemplateEnabled,setTemplateMain,applyTemplates,activateSave,removeSave,mergeSaves,resetBuild,importRequirement,importProfiles,selectionValues,moveAffix,placeAffix,expandUniqueSets,groupUniques};
+  const api={library,restore,emptyConfig,activeSave,addSave,setTemplateEnabled,setTemplateMain,applyTemplates,activateSave,removeSave,mergeSaves,resetBuild,importRequirement,importProfiles,selectionValues,moveAffix,placeAffix,expandUniqueSets,groupUniques};
   root.LEWorkbench=api;
   if(typeof module!=='undefined')module.exports=api;
 })(globalThis);

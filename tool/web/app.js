@@ -77,15 +77,15 @@ function render(){
   $('builds').innerHTML=state.saves.map(s=>{
     const members=s.config.builds.filter(b=>b.enabled),main=members.find(b=>b.id===s.config.main_id);
     return `<div class="save-card ${s.id===state.active_save_id?'editing':''}"><button class="build-name" data-save="${esc(s.id)}" aria-pressed="${s.id===state.active_save_id}">${esc(s.name)}</button><small>${members.length}个BD${main?` · 主BD：${esc(main.name)}`:' · 尚未启用BD'}</small><div class="build-meta"><span>${s.id===state.active_save_id?'正在编辑':'点击继续编辑'}</span><button class="remove-build" data-remove-save="${esc(s.id)}" aria-label="删除方案：${esc(s.name)}">×</button></div></div>`;
-  }).join('')||'<p class="saved-empty">勾选模板不会产生保存。点击“应用所选BD”后，整个组合保存为一条方案。</p>';
-  $('apply-builds').textContent=`应用所选BD（${state.selection.ids.length}）`;
+  }).join('')||'<p class="saved-empty">勾选模版后，点击“用所选模版新建方案”，整个组合保存为一条方案。</p>';
+  $('apply-builds').textContent=`用所选模版新建方案（${state.selection.ids.length}）`;
   $('apply-builds').disabled=!state.selection.ids.length;
   const commonView=view==='common';
   $('build-title').textContent=commonView?'共通规则':saved?saved.name:'BD编辑工作台';
   $('workspace-builds').hidden=!saved||!config.builds.length;$('workspace-controls').hidden=!ready;$('workspace-empty').hidden=ready||commonView;
   $('workspace-builds').innerHTML=saved?config.builds.map(b=>`<div class="workspace-bd ${b.enabled&&b.id===activeId?'active':''}"><input type="checkbox" data-enable="${esc(b.id)}" ${b.enabled?'checked':''} aria-label="在方案中启用${esc(b.name)}"><button data-workspace-build="${esc(b.id)}" ${b.enabled?'':'disabled'}><span class="dot ${b.id===config.main_id?'pink':'blue'}"></span>${esc(b.name)}</button><label><input type="radio" name="scheme-main" data-main="${esc(b.id)}" ${b.enabled&&b.id===config.main_id?'checked':''} ${b.enabled?'':'disabled'} aria-label="将方案内${esc(b.name)}设为主BD">主BD</label><button class="remove-build" data-remove-build="${esc(b.id)}" aria-label="从方案移除${esc(b.name)}">×</button></div>`).join(''):'';
   $('workspace-message').textContent=saved?'尚未启用BD':'尚未生成方案';
-  $('workspace-help').textContent=saved?'启用方案内的BD，或添加自定义BD。':'在左侧多选已有模版，指定主BD，再点击“应用所选BD”创建一份保存方案。';
+  $('workspace-help').textContent=saved?'启用方案内的BD，或添加自定义BD。':'在左侧多选已有模版，指定主BD，再点击“用所选模版新建方案”。';
   $('scheme-toolbar').hidden=!saved||commonView;
   $('current-build').textContent=ready?`正在编辑：${build().name}`:'';
   $('rename-save').hidden=!saved||commonView;
@@ -327,6 +327,7 @@ $('targets').addEventListener('dragend',clearAffixDrag);
 $('picker-list').onchange=e=>{if(e.target.dataset.id){const id=e.target.dataset.id;if(e.target.checked){if(selection.single)selection.chosen.clear();selection.chosen.add(id);}else selection.chosen.delete(id);if(selection.single||selection.kind==='affixes'&&selection.field==='equipment')renderPicker();else $('selection-count').textContent=`已选${selection.chosen.size}项`;}};
 $('apply-selection').onclick=()=>{selection.apply(workspace.selectionValues(selection.chosen,selection.kind==='affixes'&&selection.field==='equipment'));$('picker').close();};
 document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>$(b.dataset.close).close());
+$('sidebar-more').addEventListener('click',e=>{if(e.target.closest('button'))$('sidebar-more').open=false;});
 $('import-filter').onclick=()=>{$('import-mode').value=mode;$('import-dialog').showModal();};
 $('xml-file').onchange=async e=>{if(e.target.files[0]){$('xml-text').value=await e.target.files[0].text();await analyzeImport();}};
 $('analyze-import').onclick=()=>analyzeImport();
@@ -413,9 +414,6 @@ $('config-file').onchange=async e=>{
     if(!loaded.saves.length){state.draft_config=loaded.draft_config;state.selection=loaded.selection;save();render();toast('文件没有保存方案，已载入模板选择及共通规则草稿。');return;}
     openSave(workspace.mergeSaves(state,loaded,()=>crypto.randomUUID()));toast(`已加入${loaded.saves.length}条保存方案，已有保存保留。`);
   }catch(e){toast(e.message,true);}finally{e.target.value='';}
-};
-$('load-examples').onclick=()=>{
-  workspace.selectDefaults(state,examples);selectionChanged();toast('已勾选默认模板组合。点击“应用所选BD”创建新方案。');
 };
 async function validateState(loaded){
   loaded.draft_config=(await api('/api/validate',{config:loaded.draft_config})).config;

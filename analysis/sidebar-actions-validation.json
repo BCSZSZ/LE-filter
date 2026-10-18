@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-18",
+  "status": "passed",
+  "scope": "Sidebar entry arrangement and wording only",
+  "unittest_count": 99,
+  "state_contract_cases": 18,
+  "preserved_input_and_engine_files": 65,
+  "local_browser": {
+    "url": "http://127.0.0.1:8878/",
+    "primary_entries": [
+      "用所选模版新建方案",
+      "从角色链接创建",
+      "更多"
+    ],
+    "more_collapsed_initially": true,
+    "more_actions": [
+      "导入filter",
+      "导入BD需求JSON",
+      "导出本BD需求"
+    ],
+    "filter_dialog_opens": true,
+    "selection_closes_more": true,
+    "profile_dialog_opens": true,
+    "apply_creates_one_independent_scheme": true,
+    "existing_saves_still_visible": true,
+    "default_shortcut_removed": true
+  },
+  "game_client_tested": false,
+  "browser_blob_download_tested": false
+}

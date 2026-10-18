@@ -38,10 +38,10 @@ test('Apply creates exactly one editable combined scheme with the chosen main BD
 });
 
 test('changing pending selections never changes the current saved scheme or its main BD',()=>{
-  const {examples,templates,state}=setup();W.setTemplateEnabled(state,templates,templates[1].id,true);
+  const {templates,state}=setup();W.setTemplateEnabled(state,templates,templates[1].id,true);
   const saved=W.applyTemplates(state,templates,'old');saved.config.builds[0].profiles.leveling.affixes=[406];
   const before=copy(state.saves);
-  W.setTemplateMain(state,templates[1].id);W.setTemplateEnabled(state,templates,templates[0].id,false);W.selectDefaults(state,examples);
+  W.setTemplateMain(state,templates[1].id);W.setTemplateEnabled(state,templates,templates[0].id,false);
   assert.deepEqual(state.saves,before);assert.equal(state.active_save_id,'old');
 });
 

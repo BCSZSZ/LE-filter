@@ -3,6 +3,11 @@
 更新时间：2026-10-18，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
 
+## 最新2026-10-18追加：侧栏入口精简
+
+- 按玩家确认，常驻入口改为“用所选模版新建方案”“从角色链接创建”“更多”。计数仍表示勾选的模版数量；三个低频操作收进默认折叠的“更多”：导入filter、导入BD需求JSON、导出本BD需求。选择操作后菜单收起。
+- 删除“选择默认组合”按钮、事件与无调用的selectDefaults辅助函数；保留首次默认选择、v1／v2恢复、模版只读与个人保存隔离。仅调整入口及文案，过滤规则、所有BD需求、角色读取后端保持。
+
 ## 最新2026-10-18追加：多链接API直接读取
 
 - 用户确认上线无需书签／转存Planner的多链接导入。前端通过Sites后端按LETools链接的账号／角色名读取Maxroll公开角色API，整批成功后才提取并集，个人保存与模版完全独立。`tool/character_save.py`解码物品目标，Python与Pyodide沿用同一分类和引擎。
