@@ -295,7 +295,7 @@ class ToolTests(unittest.TestCase):
             for u in release["uniques"]:
                 self.assertEqual(e.CATALOG["uniques"][str(u["id"])]["en"], u["en"])
                 row = first(out, u["type"], uid=u["id"], rarity="UNIQUE", lp=0, ww=0)
-                expected = "T0极稀有暗金0LP起" if u["id"] in e.ULTRA_RARE_UNIQUES else "共通暗金神像" if u["id"] in e.UNIQUE_IDOLS else "通用暗金／套装0LP保护"
+                expected = "T0极稀有暗金0LP起" if u["id"] in e.ULTRA_RARE_UNIQUES else "共通暗金神像" if u["id"] in e.UNIQUE_IDOLS else "通用套装保护" if e.CATALOG["uniques"][str(u["id"])]["set"] else "通用暗金0LP保护"
                 self.assertEqual((row["category"], row["tier"], row["role"]), (expected, 4 if u["id"] in e.ULTRA_RARE_UNIQUES else 1, "通用"))
         for lp, tier in [(1, 2), (2, 3), (3, 4)]:
             self.assertEqual(first(out, "IDOL_2x2", uid=486, rarity="UNIQUE", lp=lp)["tier"], tier)
@@ -303,18 +303,20 @@ class ToolTests(unittest.TestCase):
         self.assertEqual(first(self.output, uid=475, rarity="UNIQUE")["role"], "主")
         self.assertEqual(first(self.output, uid=471, rarity="UNIQUE")["role"], "副")
 
-    def test_common_protection_merge_preserves_other_rolls(self):
-        common = [(n, r) for n, r in zip(parsed(self.output), self.output["rules"]) if r["category"] == "通用暗金／套装0LP保护"]
-        self.assertEqual(len(common), 1)
-        node, row = common[0]
-        c = e.condition(node, "UniqueModifiersCondition")
+    def test_common_protection_split_preserves_membership_and_other_rolls(self):
+        common = [(n, r) for n, r in zip(parsed(self.output), self.output["rules"]) if r["category"] in {"通用暗金0LP保护", "通用套装保护"}]
+        self.assertEqual(len(common), 2)
+        actual = {}
+        for node, row in common:
+            c = e.condition(node, "UniqueModifiersCondition")
+            self.assertEqual(len(node.find("conditions")), 1)
+            self.assertTrue(all(e.CATALOG["uniques"][str(uid)]["set"] == (row["category"] == "通用套装保护") for uid in row["uniques"]))
+            actual.update({int(u.findtext("UniqueId")): u for u in c})
         original = [u for n in [15, 16] for u in e.condition(e.BASE[n], "UniqueModifiersCondition")]
         bd_ids = {uid for b in self.config["builds"] if b["enabled"] for uid in e.expand_unique_sets(b["profiles"]["endgame"]["uniques"])}
         expected = ({int(u.findtext("UniqueId")) for u in original} | e.SEASONAL_UNIQUES) - e.UNIQUE_IDOLS - e.ULTRA_RARE_UNIQUES - bd_ids
-        self.assertEqual(set(row["uniques"]), expected)
-        self.assertEqual(len(c), len(expected))
-        self.assertEqual(len(node.find("conditions")), 1)
-        actual = {int(u.findtext("UniqueId")): u for u in c}
+        self.assertEqual(set(actual), expected)
+        self.assertEqual(sum(len(row["uniques"]) for _, row in common), len(expected))
         for uid in e.SEASONAL_UNIQUES - e.UNIQUE_IDOLS - e.ULTRA_RARE_UNIQUES - bd_ids:
             self.assertFalse(len(actual[uid].find("Rolls")))
         for u in original:
@@ -362,7 +364,7 @@ class ToolTests(unittest.TestCase):
         config = self.leveling_config(())
         output = e.generate(config)
         for node, row in zip(parsed(output), output["rules"]):
-            if row["category"] in {"通用暗金／套装0LP保护", "共通暗金神像", "先驱者之针常驻"}:
+            if row["category"] in {"通用暗金0LP保护", "通用套装保护", "共通暗金神像", "先驱者之针常驻"}:
                 conditions = list(node.find("conditions"))
                 self.assertEqual(len(conditions), 1)
                 self.assertEqual(conditions[0].get(e.XSI + "type"), "UniqueModifiersCondition")

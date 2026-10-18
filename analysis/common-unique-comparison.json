@@ -1,0 +1,3489 @@
+{
+  "date": "2026-10-18",
+  "status": "comparison_only",
+  "replacementApplied": false,
+  "source": {
+    "file": "sources/tunklab-unique-reroll-2026-10-18.json",
+    "sha256": "dd3a4e2893e72b5579c79c38e36a959da1310a4d3a57c261d34e976283dc291c",
+    "url": "https://lastepoch.tunklab.com/uniques"
+  },
+  "scope": "Equipment and sets before T0/BD deduplication; unique idols retain their independent category.",
+  "counts": {
+    "old": {
+      "uniques": 138,
+      "sets": 21,
+      "total": 159
+    },
+    "proposed": {
+      "uniques": 97,
+      "sets": 23,
+      "total": 120
+    },
+    "overlap": {
+      "uniques": 47,
+      "sets": 18,
+      "total": 65
+    },
+    "old_only": {
+      "uniques": 91,
+      "sets": 3,
+      "total": 94
+    },
+    "new_only": {
+      "uniques": 50,
+      "sets": 5,
+      "total": 55
+    }
+  },
+  "oldOnlyReasons": {
+    "random_reroll_zero": 10,
+    "not_random_dash": 61,
+    "cocooned_hidden": 23
+  },
+  "defaultStrictAfterDeduplication": {
+    "old": {
+      "uniques": 122,
+      "sets": 21,
+      "total": 143
+    },
+    "proposed": {
+      "uniques": 84,
+      "sets": 23,
+      "total": 107
+    },
+    "overlap": {
+      "uniques": 38,
+      "sets": 18,
+      "total": 56
+    },
+    "old_only": {
+      "uniques": 84,
+      "sets": 3,
+      "total": 87
+    },
+    "new_only": {
+      "uniques": 46,
+      "sets": 5,
+      "total": 51
+    }
+  },
+  "separatePositiveRerollIdols": [
+    {
+      "id": 246,
+      "en": "Singularity",
+      "zh": "奇点",
+      "type": "IDOL_1x1_ETERRA",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Singularity",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.3,
+      "tunklab_display": "30%",
+      "old_sources": [
+        "Raxx R15"
+      ]
+    },
+    {
+      "id": 462,
+      "en": "Natural Wrath",
+      "zh": "自然之怒",
+      "type": "IDOL_1x3",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Natural Wrath",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.2,
+      "tunklab_display": "20%",
+      "old_sources": [
+        "Raxx R15",
+        "赛季1.4"
+      ]
+    },
+    {
+      "id": 485,
+      "en": "Scorched Earth",
+      "zh": "焦土",
+      "type": "IDOL_3x1",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Scorched Earth",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.3,
+      "tunklab_display": "30%",
+      "old_sources": [
+        "Raxx R15",
+        "赛季1.5"
+      ]
+    }
+  ],
+  "groups": {
+    "overlap": [
+      {
+        "id": 35,
+        "en": "Eye of Reen",
+        "zh": "雷恩之眼",
+        "type": "ONE_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Eye of Reen",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 45,
+        "en": "Morditas' Reach",
+        "zh": "莫迪塔斯的领域",
+        "type": "TWO_HANDED_SPEAR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Morditas' Reach",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.8,
+        "tunklab_display": "80%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 53,
+        "en": "Rahyeh's Light",
+        "zh": "瑞耶的光翼",
+        "type": "SHIELD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Rahyeh's Light",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.8,
+        "tunklab_display": "80%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 61,
+        "en": "Orian's Eye",
+        "zh": "奥利安之眼",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Orian's Eye",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.97,
+        "tunklab_display": "97%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 84,
+        "en": "Heirloom of the Last Nomad",
+        "zh": "终末游牧民的传家宝",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Heirloom of the Last Nomad",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 88,
+        "en": "Blade of the Forgotten Knight",
+        "zh": "遗忘骑士之刃",
+        "type": "ONE_HANDED_SWORD",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Blade of the Forgotten Knight",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 90,
+        "en": "Locket of the Forgotten Knight",
+        "zh": "遗忘骑士的挂坠",
+        "type": "AMULET",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Locket of the Forgotten Knight",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 91,
+        "en": "Fiery Dragon Shoes",
+        "zh": "火龙靴",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Fiery Dragon Shoes",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 92,
+        "en": "Jungle Queen's Chaps of Holding",
+        "zh": "丛林女王的储物腰带",
+        "type": "BELT",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Jungle Queen's Chaps of Holding",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.9,
+        "tunklab_display": "90%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 125,
+        "en": "Oceareon",
+        "zh": "大海无量",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Oceareon",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.85,
+        "tunklab_display": "85%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 126,
+        "en": "Mortality's Grasp",
+        "zh": "死亡之握",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Mortality's Grasp",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 127,
+        "en": "Boardman's Plank",
+        "zh": "博德曼的宽木板",
+        "type": "ONE_HANDED_SCEPTRE",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Boardman's Plank",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 128,
+        "en": "Boardman's Fallacy",
+        "zh": "博德曼的谬误",
+        "type": "BODY_ARMOR",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Boardman's Fallacy",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 129,
+        "en": "Boardman's Legacy",
+        "zh": "博德曼的传承",
+        "type": "HELMET",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Boardman's Legacy",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 149,
+        "en": "Omnividence",
+        "zh": "全视",
+        "type": "TWO_HANDED_STAFF",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Omnividence",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.9,
+        "tunklab_display": "90%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 167,
+        "en": "Ravens' Rise",
+        "zh": "渡鸦的崛起",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Ravens' Rise",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.8,
+        "tunklab_display": "80%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 169,
+        "en": "Aergon's Refuge",
+        "zh": "艾尔冈的庇护",
+        "type": "TWO_HANDED_STAFF",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Aergon's Refuge",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.75,
+        "tunklab_display": "75%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 172,
+        "en": "Herald of the Scurry",
+        "zh": "松鼠使者",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Herald of the Scurry",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 176,
+        "en": "Aurora's Time Glass",
+        "zh": "奥罗拉的沙漏",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Aurora's Time Glass",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.8,
+        "tunklab_display": "80%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 183,
+        "en": "Leviathan Carver",
+        "zh": "利维坦刻刀",
+        "type": "TWO_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Leviathan Carver",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 185,
+        "en": "Vilatria's Storm Crown",
+        "zh": "维拉提亚的风暴王冠",
+        "type": "HELMET",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Vilatria's Storm Crown",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.75,
+        "tunklab_display": "75%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 187,
+        "en": "Salt the Wound",
+        "zh": "血上加霜",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Salt the Wound",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.85,
+        "tunklab_display": "85%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 195,
+        "en": "Scales of Eterra",
+        "zh": "伊泰拉的天平",
+        "type": "CATALYST",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Scales of Eterra",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 196,
+        "en": "Scales of Eterra",
+        "zh": "伊泰拉的天平",
+        "type": "CATALYST",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Scales of Eterra",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 197,
+        "en": "Scales of Eterra",
+        "zh": "伊泰拉的天平",
+        "type": "CATALYST",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Scales of Eterra",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 198,
+        "en": "Bastion of Honour",
+        "zh": "荣誉堡垒",
+        "type": "SHIELD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Bastion of Honour",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.9,
+        "tunklab_display": "90%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 208,
+        "en": "Ravenous Void",
+        "zh": "贪婪虚空",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Ravenous Void",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.98,
+        "tunklab_display": "98%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 220,
+        "en": "Death's Embrace",
+        "zh": "死亡之拥",
+        "type": "TWO_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Death's Embrace",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.85,
+        "tunklab_display": "85%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 221,
+        "en": "Paranoia",
+        "zh": "草木皆兵",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Paranoia",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.9,
+        "tunklab_display": "90%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 232,
+        "en": "Hakar's Phoenix",
+        "zh": "哈卡尔的凤凰",
+        "type": "ONE_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Hakar's Phoenix",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 235,
+        "en": "Silvafrond",
+        "zh": "森之蕨叶",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Silvafrond",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 272,
+        "en": "Aaron's Will",
+        "zh": "亚伦的意志",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Aaron's Will",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.75,
+        "tunklab_display": "75%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 277,
+        "en": "Red Ring of Atlaria",
+        "zh": "阿特拉里亚的红戒指",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Red Ring of Atlaria",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.98,
+        "tunklab_display": "98%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 310,
+        "en": "Wrongwarp",
+        "zh": "错乱折跃",
+        "type": "WAND",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Wrongwarp",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.8,
+        "tunklab_display": "80%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 318,
+        "en": "The Shattered Cycle",
+        "zh": "朝暮轮转",
+        "type": "ONE_HANDED_SCEPTRE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "The Shattered Cycle",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.72,
+        "tunklab_display": "72%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 327,
+        "en": "Communion of the Erased",
+        "zh": "被抹灭者的圣餐仪式",
+        "type": "BELT",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Communion of the Erased",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 335,
+        "en": "Wraithlord's Harbour",
+        "zh": "幽灵领主的港湾",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Wraithlord's Harbour",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.35,
+        "tunklab_display": "35%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 336,
+        "en": "Naal's Tooth",
+        "zh": "纳奥的牙齿",
+        "type": "ONE_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Naal's Tooth",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.8,
+        "tunklab_display": "80%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 337,
+        "en": "Razorfall",
+        "zh": "剃刀降临",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Razorfall",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.8,
+        "tunklab_display": "80%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 420,
+        "en": "Executioner's Tithe",
+        "zh": "处刑者的献祭",
+        "type": "ONE_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Executioner's Tithe",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 443,
+        "en": "Army of Skin",
+        "zh": "肌肤大军",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Army of Skin",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.25,
+        "tunklab_display": "25%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 450,
+        "en": "Unbroken Charge",
+        "zh": "不屈冲锋",
+        "type": "SHIELD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Unbroken Charge",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "赛季1.4"
+        ]
+      },
+      {
+        "id": 451,
+        "en": "Doppelganger's Mimicry",
+        "zh": "分身的模仿",
+        "type": "RELIC",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Doppelganger's Mimicry",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 452,
+        "en": "Doppelganger's Deception",
+        "zh": "分身的欺骗",
+        "type": "BODY_ARMOR",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Doppelganger's Deception",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 453,
+        "en": "Doppelganger's Facade",
+        "zh": "分身的假象",
+        "type": "HELMET",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Doppelganger's Facade",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 454,
+        "en": "Abandoned Eyes of the Weaver",
+        "zh": "编织者的遗弃之眼",
+        "type": "AMULET",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Abandoned Eyes of the Weaver",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 455,
+        "en": "Abandoned Chitin of the Weaver",
+        "zh": "编织者的遗弃壳质",
+        "type": "RING",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Abandoned Chitin of the Weaver",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 456,
+        "en": "Kuzon's Fury",
+        "zh": "库宗的盛怒",
+        "type": "ONE_HANDED_SWORD",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Kuzon's Fury",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 457,
+        "en": "Kuzon's Guise",
+        "zh": "库宗的伪装",
+        "type": "HELMET",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Kuzon's Guise",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 458,
+        "en": "Tabi of Dusk and Dawn",
+        "zh": "朝暮足袋",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Tabi of Dusk and Dawn",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.3,
+        "tunklab_display": "30%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.4"
+        ]
+      },
+      {
+        "id": 459,
+        "en": "Artifice of Devastation",
+        "zh": "毁灭机巧",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Artifice of Devastation",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.3,
+        "tunklab_display": "30%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.4"
+        ]
+      },
+      {
+        "id": 461,
+        "en": "Ash Wake",
+        "zh": "灰烬觉醒",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Ash Wake",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.3,
+        "tunklab_display": "30%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.4"
+        ]
+      },
+      {
+        "id": 463,
+        "en": "Rahyeh's Embrace",
+        "zh": "瑞耶之拥",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Rahyeh's Embrace",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.4"
+        ]
+      },
+      {
+        "id": 464,
+        "en": "Jormun's Thirst",
+        "zh": "乔尔曼的焦渴",
+        "type": "BELT",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Jormun's Thirst",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.3,
+        "tunklab_display": "30%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 465,
+        "en": "Jormun's Hunger",
+        "zh": "乔尔曼的饥饿",
+        "type": "ONE_HANDED_AXE",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Jormun's Hunger",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.3,
+        "tunklab_display": "30%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 466,
+        "en": "Jormun's Feast",
+        "zh": "乔尔曼的盛宴",
+        "type": "ONE_HANDED_SWORD",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Jormun's Feast",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.3,
+        "tunklab_display": "30%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 467,
+        "en": "Keplahan's Pyrolith",
+        "zh": "克普拉汉的火晶",
+        "type": "RING",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Keplahan's Pyrolith",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.3,
+        "tunklab_display": "30%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 468,
+        "en": "Keplahan's Cryolith",
+        "zh": "克普拉汉的冰晶",
+        "type": "RING",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Keplahan's Cryolith",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.3,
+        "tunklab_display": "30%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 471,
+        "en": "Unbroken Legion",
+        "zh": "不屈军团",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Unbroken Legion",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ]
+      },
+      {
+        "id": 473,
+        "en": "Eternal Font",
+        "zh": "永恒之池",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Eternal Font",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.998,
+        "tunklab_display": "99.8%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ]
+      },
+      {
+        "id": 475,
+        "en": "Devoured Knowledge",
+        "zh": "吞噬知识",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Devoured Knowledge",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ]
+      },
+      {
+        "id": 476,
+        "en": "Death Dance",
+        "zh": "死亡之舞",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Death Dance",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.999,
+        "tunklab_display": "99.9%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ]
+      },
+      {
+        "id": 478,
+        "en": "Gift of the Eidolon",
+        "zh": "幻灵赠礼",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Gift of the Eidolon",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.999,
+        "tunklab_display": "99.9%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ]
+      },
+      {
+        "id": 483,
+        "en": "Wrangler's Keepsake",
+        "zh": "牧人的纪念品",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Wrangler's Keepsake",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ]
+      },
+      {
+        "id": 484,
+        "en": "Effusive Oath",
+        "zh": "奔放誓言",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Effusive Oath",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ]
+      }
+    ],
+    "old_only": [
+      {
+        "id": 13,
+        "en": "Titan Heart",
+        "zh": "泰坦之心",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Titan Heart",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "tunklab_display": "0%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 77,
+        "en": "Apiarist's Smoker",
+        "zh": "蜂农烟熏器",
+        "type": "CATALYST",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Apiarist's Smoker",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "tunklab_display": "0%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 78,
+        "en": "Apiarist's Suit",
+        "zh": "蜂农防护服",
+        "type": "BODY_ARMOR",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Apiarist's Suit",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "tunklab_display": "0%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 79,
+        "en": "Apiarist's Comb",
+        "zh": "蜂农梳",
+        "type": "ONE_HANDED_MACES",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Apiarist's Comb",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "tunklab_display": "0%",
+        "old_sources": [
+          "Raxx R16"
+        ]
+      },
+      {
+        "id": 175,
+        "en": "Omnis",
+        "zh": "全能",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Omnis",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 179,
+        "en": "Apathy's Maw",
+        "zh": "暮色巨口",
+        "type": "TWO_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Apathy's Maw",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 180,
+        "en": "Shattered Chains",
+        "zh": "破碎锁链",
+        "type": "BELT",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Shattered Chains",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 216,
+        "en": "Twisted Heart of Uhkeiros",
+        "zh": "乌凯罗斯的扭曲之心",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Twisted Heart of Uhkeiros",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 253,
+        "en": "Foot of the Mountain",
+        "zh": "山之麓",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Foot of the Mountain",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 254,
+        "en": "Face of the Mountain",
+        "zh": "山之貌",
+        "type": "SHIELD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Face of the Mountain",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 255,
+        "en": "Core of the Mountain",
+        "zh": "山之核",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Core of the Mountain",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 256,
+        "en": "Peak of the Mountain",
+        "zh": "山之巅",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Peak of the Mountain",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 258,
+        "en": "Immolator's Oblation",
+        "zh": "献祭者的奉献",
+        "type": "BELT",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Immolator's Oblation",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 296,
+        "en": "Advent of the Erased",
+        "zh": "被抹灭者的降临",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Advent of the Erased",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "tunklab_display": "0%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 311,
+        "en": "Transcriber's Graver",
+        "zh": "誊录錾剑",
+        "type": "ONE_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Transcriber's Graver",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "tunklab_display": "0%",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 339,
+        "en": "Black Blade of Chaos",
+        "zh": "混沌黑刃",
+        "type": "TWO_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Black Blade of Chaos",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 345,
+        "en": "Bane of Winter",
+        "zh": "凛冬克星",
+        "type": "TWO_HANDED_SPEAR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Bane of Winter",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 347,
+        "en": "The Inevitable",
+        "zh": "天命",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "The Inevitable",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 353,
+        "en": "Nihilis",
+        "zh": "虚无",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Nihilis",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 354,
+        "en": "Wall of Nothing",
+        "zh": "空无之墙",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Wall of Nothing",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 355,
+        "en": "Aberroth's Command",
+        "zh": "阿波罗斯的命令",
+        "type": "ONE_HANDED_SCEPTRE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Aberroth's Command",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 357,
+        "en": "Seed of Ekkidrasil",
+        "zh": "无界树种",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Seed of Ekkidrasil",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 358,
+        "en": "Null Portent",
+        "zh": "失效征兆",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Null Portent",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 361,
+        "en": "Phase Point",
+        "zh": "相位点",
+        "type": "QUIVER",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Phase Point",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 364,
+        "en": "Event Horizon",
+        "zh": "事件视界",
+        "type": "TWO_HANDED_MACE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Event Horizon",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 365,
+        "en": "World Splitter",
+        "zh": "世界分离者",
+        "type": "TWO_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "World Splitter",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 366,
+        "en": "Flames of Midnight",
+        "zh": "午夜烈焰",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Flames of Midnight",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 367,
+        "en": "Celestial Doom",
+        "zh": "天界末日",
+        "type": "TWO_HANDED_STAFF",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Celestial Doom",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 379,
+        "en": "Cocooned Short Sword",
+        "zh": "茧化短剑",
+        "type": "ONE_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Short Sword",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 380,
+        "en": "Cocooned Cleaver",
+        "zh": "茧化斧",
+        "type": "ONE_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Cleaver",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 381,
+        "en": "Cocooned Club",
+        "zh": "茧化棍棒",
+        "type": "ONE_HANDED_MACES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Club",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 382,
+        "en": "Cocooned Great Sword",
+        "zh": "茧化巨剑",
+        "type": "TWO_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Great Sword",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 383,
+        "en": "Cocooned Great Axe",
+        "zh": "茧化巨斧",
+        "type": "TWO_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Great Axe",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 384,
+        "en": "Cocooned Great Mace",
+        "zh": "茧化巨锤",
+        "type": "TWO_HANDED_MACE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Great Mace",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 385,
+        "en": "Cocooned Spear",
+        "zh": "茧化长矛",
+        "type": "TWO_HANDED_SPEAR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Spear",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 386,
+        "en": "Cocooned Staff",
+        "zh": "茧化长杖",
+        "type": "TWO_HANDED_STAFF",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Staff",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 387,
+        "en": "Cocooned Cuirass",
+        "zh": "茧化胸甲",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Cuirass",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 388,
+        "en": "Cocooned Dagger",
+        "zh": "茧化匕首",
+        "type": "ONE_HANDED_DAGGER",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Dagger",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 389,
+        "en": "Cocooned Sceptre",
+        "zh": "茧化权杖",
+        "type": "ONE_HANDED_SCEPTRE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Sceptre",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 390,
+        "en": "Cocooned Wand",
+        "zh": "茧化魔杖",
+        "type": "WAND",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Wand",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 391,
+        "en": "Cocooned Bow",
+        "zh": "茧化弓",
+        "type": "BOW",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Bow",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 392,
+        "en": "Cocooned Quiver",
+        "zh": "茧化箭袋",
+        "type": "QUIVER",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Quiver",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 393,
+        "en": "Cocooned Shield",
+        "zh": "茧化盾牌",
+        "type": "SHIELD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Shield",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 394,
+        "en": "Cocooned Catalyst",
+        "zh": "茧化法器",
+        "type": "CATALYST",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Catalyst",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 395,
+        "en": "Cocooned Relic",
+        "zh": "茧化遗物",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Relic",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 396,
+        "en": "Cocooned Ring",
+        "zh": "茧化戒指",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Ring",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 397,
+        "en": "Cocooned Amulet",
+        "zh": "茧化护身符",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Amulet",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 398,
+        "en": "Cocooned Gloves",
+        "zh": "茧化手套",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Gloves",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 399,
+        "en": "Cocooned Belt",
+        "zh": "茧化腰带",
+        "type": "BELT",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Belt",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 400,
+        "en": "Cocooned Boots",
+        "zh": "茧化靴子",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Boots",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 401,
+        "en": "Cocooned Helmet",
+        "zh": "茧化头盔",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Helmet",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 403,
+        "en": "Soul of the Mountain",
+        "zh": "山之魂",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Soul of the Mountain",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 411,
+        "en": "Countenance of Majasa",
+        "zh": "玛加莎的面容",
+        "type": "SHIELD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Countenance of Majasa",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 413,
+        "en": "Shattered Worlds",
+        "zh": "破碎世界",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Shattered Worlds",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 415,
+        "en": "Immortal Vise",
+        "zh": "不朽台钳",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Immortal Vise",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 416,
+        "en": "Brewmaster's Buckle",
+        "zh": "酿酒大师的皮带扣",
+        "type": "BELT",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Brewmaster's Buckle",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 417,
+        "en": "Clotho's Needle",
+        "zh": "克洛托的针刺",
+        "type": "TWO_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Clotho's Needle",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ]
+      },
+      {
+        "id": 422,
+        "en": "Lightning in a Bottle",
+        "zh": "瓶中闪电",
+        "type": "BELT",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Lightning in a Bottle",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "tunklab_display": "0%",
+        "old_sources": [
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 423,
+        "en": "Legends Entwined",
+        "zh": "传奇交织",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Legends Entwined",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 424,
+        "en": "Tyrant's Skull",
+        "zh": "暴君颅骨",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Tyrant's Skull",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 425,
+        "en": "Wildfire Embers",
+        "zh": "野火余烬",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Wildfire Embers",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 426,
+        "en": "Thicket of Blinding Light",
+        "zh": "眩光棘林",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Thicket of Blinding Light",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 427,
+        "en": "Harmony of the First",
+        "zh": "原初谐律",
+        "type": "TWO_HANDED_SPEAR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Harmony of the First",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 428,
+        "en": "Onslaught of Cerata",
+        "zh": "棘影猛攻",
+        "type": "SHIELD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Onslaught of Cerata",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 429,
+        "en": "Blossom of Immortal Stone",
+        "zh": "不朽石之花",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Blossom of Immortal Stone",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 430,
+        "en": "Chorus of the Anurok",
+        "zh": "阿努洛克的合唱",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Chorus of the Anurok",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 431,
+        "en": "Carrion of Creation",
+        "zh": "创世残骸",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Carrion of Creation",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 432,
+        "en": "Horn of the Bone Wisp",
+        "zh": "骨火之角",
+        "type": "WAND",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Horn of the Bone Wisp",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 433,
+        "en": "Reliquary Nest",
+        "zh": "神圣巢穴",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Reliquary Nest",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 434,
+        "en": "Mask of Indifference",
+        "zh": "冷漠面具",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Mask of Indifference",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 435,
+        "en": "Permanence of Primal Knowledge",
+        "zh": "原识永存",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Permanence of Primal Knowledge",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 436,
+        "en": "Wings of Discord",
+        "zh": "纷争之翼",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Wings of Discord",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 437,
+        "en": "Primal Cadence",
+        "zh": "原始节奏",
+        "type": "TWO_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Primal Cadence",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 438,
+        "en": "Whetstone Gavel",
+        "zh": "磨石木槌",
+        "type": "ONE_HANDED_MACES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Whetstone Gavel",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 439,
+        "en": "Truesight Glass",
+        "zh": "真视玻璃",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Truesight Glass",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 440,
+        "en": "Bluefeather Band",
+        "zh": "蓝羽绑带",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Bluefeather Band",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 441,
+        "en": "Hydra Arc",
+        "zh": "多头蛇弧光",
+        "type": "BOW",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Hydra Arc",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 442,
+        "en": "Velocyn's Jaw",
+        "zh": "维洛西恩之颌",
+        "type": "ONE_HANDED_DAGGER",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Velocyn's Jaw",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 444,
+        "en": "Evolution's End",
+        "zh": "进化终焉",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Evolution's End",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 445,
+        "en": "Spirit Xylem",
+        "zh": "灵体木质部",
+        "type": "TWO_HANDED_STAFF",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Spirit Xylem",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 446,
+        "en": "Fangs of the Berserker",
+        "zh": "狂战士之牙",
+        "type": "BELT",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Fangs of the Berserker",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 447,
+        "en": "Bones of the Ancestral Pack",
+        "zh": "先祖集群之骨",
+        "type": "CATALYST",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Bones of the Ancestral Pack",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 448,
+        "en": "Architects of Astral Blood",
+        "zh": "星血筑师",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Architects of Astral Blood",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 449,
+        "en": "The Butcher's Crown",
+        "zh": "屠夫冠冕",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "The Butcher's Crown",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ]
+      },
+      {
+        "id": 460,
+        "en": "Laup's Path",
+        "zh": "劳普的足迹",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Laup's Path",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "tunklab_display": "0%",
+        "old_sources": [
+          "赛季1.4"
+        ]
+      },
+      {
+        "id": 469,
+        "en": "Exulis",
+        "zh": "流亡",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Exulis",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.4"
+        ]
+      },
+      {
+        "id": 470,
+        "en": "Oculus of Ruin",
+        "zh": "毁灭之眼",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Oculus of Ruin",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "赛季1.4"
+        ]
+      },
+      {
+        "id": 472,
+        "en": "Heorot's Repose",
+        "zh": "赫罗特的憩息",
+        "type": "TWO_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Heorot's Repose",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ]
+      },
+      {
+        "id": 474,
+        "en": "Fused Elements",
+        "zh": "融合元素",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Fused Elements",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "tunklab_display": "0%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ]
+      },
+      {
+        "id": 477,
+        "en": "Unsated Rage",
+        "zh": "不息狂怒",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Unsated Rage",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "赛季1.5"
+        ]
+      },
+      {
+        "id": 479,
+        "en": "Withstand the Elements",
+        "zh": "抵御元素",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Withstand the Elements",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ]
+      },
+      {
+        "id": 480,
+        "en": "Perilous Reflection",
+        "zh": "险境映像",
+        "type": "SHIELD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Perilous Reflection",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "tunklab_display": "0%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ]
+      },
+      {
+        "id": 487,
+        "en": "Vestige of Imprisonment",
+        "zh": "囚禁之迹",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Vestige of Imprisonment",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ]
+      },
+      {
+        "id": 488,
+        "en": "Morditas' Vengeance",
+        "zh": "莫迪塔斯的复仇",
+        "type": "TWO_HANDED_SPEAR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Morditas' Vengeance",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ]
+      }
+    ],
+    "new_only": [
+      {
+        "id": 11,
+        "en": "Exsanguinous",
+        "zh": "大失血",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Exsanguinous",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": []
+      },
+      {
+        "id": 30,
+        "en": "Undisputed",
+        "zh": "无可争议",
+        "type": "ONE_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Undisputed",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.9,
+        "tunklab_display": "90%",
+        "old_sources": []
+      },
+      {
+        "id": 37,
+        "en": "Cinder Song",
+        "zh": "灰烬之歌",
+        "type": "WAND",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Cinder Song",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.25,
+        "tunklab_display": "25%",
+        "old_sources": []
+      },
+      {
+        "id": 38,
+        "en": "Alchemist's Ladle",
+        "zh": "炼金术士的勺子",
+        "type": "WAND",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Alchemist's Ladle",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": []
+      },
+      {
+        "id": 66,
+        "en": "Hollow Finger",
+        "zh": "空心手指",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Hollow Finger",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": []
+      },
+      {
+        "id": 71,
+        "en": "Valdyr's Chalice",
+        "zh": "瓦尔迪尔的圣餐杯",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Valdyr's Chalice",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.6,
+        "tunklab_display": "60%",
+        "old_sources": []
+      },
+      {
+        "id": 73,
+        "en": "Plague Bearer's Staff",
+        "zh": "瘟疫载体的长杖",
+        "type": "TWO_HANDED_STAFF",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Plague Bearer's Staff",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": []
+      },
+      {
+        "id": 76,
+        "en": "Liath's Signet",
+        "zh": "莉亚丝的图章",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Liath's Signet",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": []
+      },
+      {
+        "id": 80,
+        "en": "Bloodgeon",
+        "zh": "鲜血重击",
+        "type": "ONE_HANDED_MACES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Bloodgeon",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": []
+      },
+      {
+        "id": 86,
+        "en": "Sunforged Cuirass",
+        "zh": "耀阳胸铠",
+        "type": "BODY_ARMOR",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Sunforged Cuirass",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": []
+      },
+      {
+        "id": 87,
+        "en": "Sunforged Greathelm",
+        "zh": "耀阳重盔",
+        "type": "HELMET",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Sunforged Greathelm",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": []
+      },
+      {
+        "id": 93,
+        "en": "Kermode's Cage",
+        "zh": "克莫德的囚笼",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Kermode's Cage",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": []
+      },
+      {
+        "id": 97,
+        "en": "Halvar's Pledge",
+        "zh": "哈瓦尔的誓约",
+        "type": "TWO_HANDED_STAFF",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Halvar's Pledge",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": []
+      },
+      {
+        "id": 104,
+        "en": "Suloron's Step",
+        "zh": "苏洛隆的脚步",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Suloron's Step",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.6,
+        "tunklab_display": "60%",
+        "old_sources": []
+      },
+      {
+        "id": 108,
+        "en": "Melvern's Writ",
+        "zh": "梅尔文的令状",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Melvern's Writ",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.6,
+        "tunklab_display": "60%",
+        "old_sources": []
+      },
+      {
+        "id": 132,
+        "en": "Transient Rest",
+        "zh": "短暂休息",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Transient Rest",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.3,
+        "tunklab_display": "30%",
+        "old_sources": []
+      },
+      {
+        "id": 133,
+        "en": "Xithara's Conundrum",
+        "zh": "西塔拉的谜团",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Xithara's Conundrum",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.3,
+        "tunklab_display": "30%",
+        "old_sources": []
+      },
+      {
+        "id": 136,
+        "en": "Smoke Weaver",
+        "zh": "烟雾编织者",
+        "type": "ONE_HANDED_DAGGER",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Smoke Weaver",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": []
+      },
+      {
+        "id": 139,
+        "en": "Zerrick's Greed",
+        "zh": "泽里克的贪婪",
+        "type": "GLOVES",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Zerrick's Greed",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": []
+      },
+      {
+        "id": 145,
+        "en": "Life's Journey",
+        "zh": "生命轮回",
+        "type": "SHIELD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Life's Journey",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": []
+      },
+      {
+        "id": 147,
+        "en": "Raindance",
+        "zh": "祈雨之舞",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Raindance",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.65,
+        "tunklab_display": "65%",
+        "old_sources": []
+      },
+      {
+        "id": 168,
+        "en": "Flight of the First",
+        "zh": "原初者的飞翔",
+        "type": "BOW",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Flight of the First",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": []
+      },
+      {
+        "id": 181,
+        "en": "Marina's Lost Soul",
+        "zh": "玛丽娜的失落灵魂",
+        "type": "WAND",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Marina's Lost Soul",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.3,
+        "tunklab_display": "30%",
+        "old_sources": []
+      },
+      {
+        "id": 222,
+        "en": "Prismatic Gaze",
+        "zh": "棱镜凝视",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Prismatic Gaze",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.6,
+        "tunklab_display": "60%",
+        "old_sources": []
+      },
+      {
+        "id": 224,
+        "en": "The Judicator",
+        "zh": "审判者",
+        "type": "TWO_HANDED_SPEAR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "The Judicator",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.6,
+        "tunklab_display": "60%",
+        "old_sources": []
+      },
+      {
+        "id": 228,
+        "en": "Ferebor's Persistence",
+        "zh": "费洛波尔的毅力",
+        "type": "RING",
+        "set": true,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Ferebor's Persistence",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.4,
+        "tunklab_display": "40%",
+        "old_sources": []
+      },
+      {
+        "id": 229,
+        "en": "Roots of Vithrasil",
+        "zh": "维斯拉塞尔的根须",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Roots of Vithrasil",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.4,
+        "tunklab_display": "40%",
+        "old_sources": []
+      },
+      {
+        "id": 242,
+        "en": "Shadow String",
+        "zh": "影弦",
+        "type": "BOW",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Shadow String",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.6,
+        "tunklab_display": "60%",
+        "old_sources": []
+      },
+      {
+        "id": 249,
+        "en": "Diothaen's Bloody Nib",
+        "zh": "迪奥塔恩的血腥羽毛笔",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Diothaen's Bloody Nib",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": []
+      },
+      {
+        "id": 250,
+        "en": "Torkrefin's Hunger",
+        "zh": "托克瑞芬的饥渴",
+        "type": "TWO_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Torkrefin's Hunger",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": []
+      },
+      {
+        "id": 251,
+        "en": "Zeurial's Hunt",
+        "zh": "泽乌尔的狩猎",
+        "type": "QUIVER",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Zeurial's Hunt",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": []
+      },
+      {
+        "id": 252,
+        "en": "Pact Severance",
+        "zh": "断绝契约",
+        "type": "ONE_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Pact Severance",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": []
+      },
+      {
+        "id": 268,
+        "en": "Bloodkeeper's Nest",
+        "zh": "血腥守护者的巢穴",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Bloodkeeper's Nest",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.6,
+        "tunklab_display": "60%",
+        "old_sources": []
+      },
+      {
+        "id": 269,
+        "en": "Scales of Lemniscate",
+        "zh": "双纽线天平",
+        "type": "TWO_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Scales of Lemniscate",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": []
+      },
+      {
+        "id": 270,
+        "en": "Hive Mind",
+        "zh": "虫巢意识",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Hive Mind",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.6,
+        "tunklab_display": "60%",
+        "old_sources": []
+      },
+      {
+        "id": 274,
+        "en": "Branch of Hallows",
+        "zh": "神圣枝芽",
+        "type": "TWO_HANDED_STAFF",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Branch of Hallows",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": []
+      },
+      {
+        "id": 275,
+        "en": "Unstable Core",
+        "zh": "不稳定核心",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Unstable Core",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": []
+      },
+      {
+        "id": 290,
+        "en": "Apostate's Sanctuary",
+        "zh": "叛教者的圣所",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Apostate's Sanctuary",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.64,
+        "tunklab_display": "64%",
+        "old_sources": []
+      },
+      {
+        "id": 304,
+        "en": "Static Shell",
+        "zh": "静电之壳",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Static Shell",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.4,
+        "tunklab_display": "40%",
+        "old_sources": []
+      },
+      {
+        "id": 306,
+        "en": "Blood of the Exile",
+        "zh": "流亡者之血",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Blood of the Exile",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": []
+      },
+      {
+        "id": 307,
+        "en": "Crest of Unity",
+        "zh": "团结之徽",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Crest of Unity",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.3,
+        "tunklab_display": "30%",
+        "old_sources": []
+      },
+      {
+        "id": 316,
+        "en": "Apex of Thought",
+        "zh": "思维巅峰",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Apex of Thought",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.4,
+        "tunklab_display": "40%",
+        "old_sources": []
+      },
+      {
+        "id": 323,
+        "en": "Wheel of Torment",
+        "zh": "折磨之轮",
+        "type": "TWO_HANDED_STAFF",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Wheel of Torment",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": []
+      },
+      {
+        "id": 332,
+        "en": "Blood Roost",
+        "zh": "鲜血鸟栖",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Blood Roost",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.6,
+        "tunklab_display": "60%",
+        "old_sources": []
+      },
+      {
+        "id": 334,
+        "en": "Talons of Valor",
+        "zh": "英勇利爪",
+        "type": "BOW",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Talons of Valor",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": []
+      },
+      {
+        "id": 338,
+        "en": "Sword Catcher",
+        "zh": "剑刃捕手",
+        "type": "TWO_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Sword Catcher",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.6,
+        "tunklab_display": "60%",
+        "old_sources": []
+      },
+      {
+        "id": 342,
+        "en": "Traitor's Tongue",
+        "zh": "叛徒之舌",
+        "type": "ONE_HANDED_DAGGER",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Traitor's Tongue",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.6,
+        "tunklab_display": "60%",
+        "old_sources": []
+      },
+      {
+        "id": 351,
+        "en": "Triboelectra",
+        "zh": "电光石火",
+        "type": "WAND",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Triboelectra",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.3,
+        "tunklab_display": "30%",
+        "old_sources": []
+      },
+      {
+        "id": 356,
+        "en": "Stealth",
+        "zh": "影匿",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Stealth",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.6,
+        "tunklab_display": "60%",
+        "old_sources": []
+      },
+      {
+        "id": 368,
+        "en": "Mana Guide",
+        "zh": "魔力向导",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Mana Guide",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.3,
+        "tunklab_display": "30%",
+        "old_sources": []
+      },
+      {
+        "id": 373,
+        "en": "Ravager's Dart",
+        "zh": "掠夺者飞镖",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Ravager's Dart",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": []
+      },
+      {
+        "id": 374,
+        "en": "Pearls of the Swine",
+        "zh": "猪猡的珍珠",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Pearls of the Swine",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.4,
+        "tunklab_display": "40%",
+        "old_sources": []
+      },
+      {
+        "id": 375,
+        "en": "Pearls of the Swine",
+        "zh": "猪猡的珍珠",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Pearls of the Swine",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.4,
+        "tunklab_display": "40%",
+        "old_sources": []
+      },
+      {
+        "id": 376,
+        "en": "Pearls of the Swine",
+        "zh": "猪猡的珍珠",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Pearls of the Swine",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.4,
+        "tunklab_display": "40%",
+        "old_sources": []
+      },
+      {
+        "id": 414,
+        "en": "Downfall of the Righteous",
+        "zh": "正义陨落",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Downfall of the Righteous",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": []
+      }
+    ]
+  }
+}

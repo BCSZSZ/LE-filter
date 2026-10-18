@@ -2,7 +2,16 @@
 
 更新时间：2026-10-18，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
-## 最新2026-10-18追加：追心手里剑独立模板
+## 最新2026-10-18：实验开关、旧通用名单拆分与口径对照
+
+- 玩家要求崇高实验默认关闭、通用暗金与套装可分别关闭；随后明确“旧名单先别删”，要求先比较Tunklab reroll不为0的口径。旧159种装备／套装完整保留，不应用新筛选。按原条目拆成138暗金／21套装，保留每个UniqueModifiers及Rolls对象；T0和BD前置去重后默认Strict仍122／21种、总96条。
+- config.common新增`exalted_experimentals_enabled=false`、`common_uniques_enabled=true`、`common_sets_enabled=true`；“共通规则”提供三个独立开关与原名单展开。旧保存补缺字段，显式开关保留，保存／刷新／备份恢复。关闭通用项不拦截BD明确目标、整套补全、T0及更高LP／WW规则。冻结Base v1及各需求JSON均不改。
+- [完整对照](COMMON_UNIQUE_COMPARISON.md)按未扣T0／BD的基础池：旧159（138暗金／21套装），新120（97／23），交集65（47／18），旧独有94（91／3），新独有55（50／5）。旧独有为61非随机显示“－”、23茧化主表隐藏、10随机reroll=0。3个正reroll暗金神像仍另列，不并回装备池。新旧并集214只是比较数字，未落地。
+- Tunklab当前页面及发布脚本已读取，487条元数据、源URL及SHA冻结于`sources/tunklab-unique-reroll-2026-10-18.json`。这是对照证据，不加入运行ZIP，也不替换旧赛季名单。提取器`scripts/extract_tunklab_unique_reroll.py`只读已校验哈希的缓存，不执行外部JS；对照脚本`compare_common_unique_protection.py`生成全部ID、来源、名字及差分。
+- 全套77项测试及18项JS状态测试通过；旧159种ID和默认143个实际Unique条目连同Rolls完整相同，8组开关和6组打包WASM完整输出对照通过，46份旧源文件／基底／需求／历史XML字节保持。记录见[通用规则验证](../analysis/common-protection-validation.json)、[WASM对照](../analysis/common-protection-wasm-validation.json)和[浏览器验证](../analysis/common-protection-browser-validation.json)。浏览器已核对默认状态、独立开关、刷新恢复及95条预览；[截图](images/common-protection-switches.jpg)保留默认状态，未做游戏客户端实测。
+- 冰追心原导入时完整XML字节相等属于当时共通策略的验证；如今共通策略可变，回归改为BD目标规则与冻结玩家XML一致，不再要求通用实验／暗金规则与旧导出相同。
+
+## 此前2026-10-18追加：追心手里剑独立模板
 
 - 玩家粘贴`Shuriken Marksman` Very Strict XML，要求加入模板库。稳定id为`heartseeker-shuriken-marksman`、名称“追心手里剑”；默认未勾选，独立于冰追心及其他四BD。官方库现六份，默认仍仅旧Strict两BD，已有个人保存不自动插入。
 - 原样冻结`sources/builds/maxroll-shuriken-marksman-very-strict.xml`，SHA-256为`9a79e7351c3a114e746839a4fd8e605cfc8ffc53ab59cfbe1bf17e0ab4312cdf`。137条均无Order字段，文档使用物理X编号，不猜源优先级；原XML只作数据来源。

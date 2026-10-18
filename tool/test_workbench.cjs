@@ -146,6 +146,20 @@ test('equipment selection retains priorities and appends new targets instead of 
   assert.deepEqual([...chosen],['34','715','2','36']);
 });
 
+test('common switches survive saved schemes, reload and backup without changing templates',()=>{
+  const {examples,templates,state}=setup(),saved=W.applyTemplates(state,templates,'common-switches');
+  const before=copy(templates);
+  saved.config.common.exalted_experimentals_enabled=true;
+  saved.config.common.common_uniques_enabled=false;
+  saved.config.common.common_sets_enabled=true;
+  const restored=W.restore(examples,JSON.parse(JSON.stringify(state)));
+  const second=W.applyTemplates(restored,templates,'inherited-switches');
+  assert.deepEqual(second.config.common,saved.config.common);
+  W.mergeSaves(restored,state,()=> 'imported-switches');
+  assert.deepEqual(W.activeSave(restored).config.common,saved.config.common);
+  assert.deepEqual(templates,before);
+});
+
 test('adjusted equipment priorities survive reload and backup imports without altering template or targets',()=>{
   const {examples,templates,state}=setup(),saved=W.applyTemplates(state,templates,'priorities');
   const group=saved.config.builds[0].profiles.endgame.equipment.find(g=>g.type==='ONE_HANDED_AXE');

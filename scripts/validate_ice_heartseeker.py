@@ -75,7 +75,10 @@ def main():
         build["enabled"] = build["id"] == BUILD_ID
     output = e.generate(config)
     assert e.generate(config) == output
-    assert output["xml"].encode("utf-8") == PLAYER_SOURCE.read_bytes()
+    def bd_rules(root):
+        return sorted([e.inspect_rule(node) for node in root.find("rules")
+                       if "冰追心" in (node.findtext("nameOverride") or "") or "双T7含BD目标T7" in (node.findtext("nameOverride") or "")], key=repr)
+    assert bd_rules(e.ET.fromstring(output["xml"])) == bd_rules(e.ET.fromstring(PLAYER_SOURCE.read_bytes()))
     changes = []
     original, _ = build_planner_documents()
     for category in ("equipment", "altars", "idols"):
@@ -116,7 +119,8 @@ def main():
         "source": {"file": PLAYER_SOURCE.relative_to(ROOT).as_posix(),
                    "sha256": hashlib.sha256(PLAYER_SOURCE.read_bytes()).hexdigest(),
                    "originalFilename": documents[0]["source"]["original_filename"]},
-        "completePlayerXmlEqual": True, "targetChangesFromPlanner": changes,
+        "completePlayerXmlEqual": output["xml"].encode("utf-8") == PLAYER_SOURCE.read_bytes(),
+        "playerBdRulesEqual": True, "commonRulesFollowCurrentConfig": True, "targetChangesFromPlanner": changes,
         "targetCounts": {key: len(values) for key, values in documents[0]["targets"].items()},
         "levelingEmpty": True, "templateInitiallySelected": False, "defaultOutputUnchanged": True,
         "requirementsRoundtrip": True, "deterministic": True, "scenarios": scenarios,

@@ -64,6 +64,8 @@
 
 格式不保存主副身份、勾选状态、声音／地图提示、LP／WW、T7门槛、规则编号或原Strict筛选条件。它们留在工具配置和基底。右上角“保存配置”备份全部组合方案，各方案含独立BD目标及主BD、共通设置；备份version=2，方案内引擎config与单BD需求仍version=1，详见[工具说明](TOOL_GUIDE.md)。左侧“保存本BD需求JSON”只保存正在编辑的BD、当前阶段的目标及来源。
 
+2026-10-18新增的三个共通开关保存在方案config.common：`exalted_experimentals_enabled`默认false，`common_uniques_enabled`与`common_sets_enabled`默认true。不写入BD需求JSON；旧配置缺字段时补默认，显式值、BD目标及独立阶段保持。
+
 导入范围是当前保存方案。新id加入为启用的可编辑BD；尚无方案时创建导入方案。同id只替换文件`stage`的目标和来源，保留另一个阶段、启用状态和主副身份，同id位于其他保存方案时不受影响。审阅后可在方案内停用BD。两阶段共同导出一份XML。旧五类练级需求仍可读，装备词缀／底材转为两份列表，原五类内容保存在`source.legacy_targets`；旧工具配置的已启用装备R覆盖会转换，原始练级配置另存`legacy_leveling`。不再提供第六个逐R编辑入口。
 
 程序接口：

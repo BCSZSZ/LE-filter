@@ -52,12 +52,17 @@ class RequirementTests(unittest.TestCase):
             self.assertEqual(document, frozen)
             self.assertEqual(write_document(build, document["stage"]), frozen)
 
-    def test_ice_player_revision_reproduces_complete_xml_with_current_base_rules(self):
+    def test_ice_player_revision_preserves_bd_rules_with_current_common_policy(self):
         endgame, _ = build_ice_documents()
         build = as_build(endgame)
         config = {"version": 1, "main_id": build["id"], "extra_t7": True, "builds": [build]}
         output = e.generate(config)
-        self.assertEqual(output["xml"].encode("utf-8"), PLAYER_SOURCE.read_bytes())
+        # Common policy can evolve while this player's BD targets stay frozen.
+        def bd_rules(root):
+            rules = [e.inspect_rule(node) for node in root.find("rules")
+                     if "冰追心" in (node.findtext("nameOverride") or "") or "双T7含BD目标T7" in (node.findtext("nameOverride") or "")]
+            return sorted(rules, key=repr)
+        self.assertEqual(bd_rules(e.ET.fromstring(output["xml"])), bd_rules(e.ET.fromstring(PLAYER_SOURCE.read_bytes())))
         self.assertFalse(output["warnings"])
         bow = next(g for g in endgame["targets"]["equipment"] if g["type"] == "BOW")
         self.assertTrue(bow["affixes"])

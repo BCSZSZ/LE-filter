@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "date": "2026-10-18",
+  "surface": "Isolated IAB on local static Pages build",
+  "url": "http://127.0.0.1:8791/",
+  "replacementApplied": false,
+  "checks": {
+    "experimentalsInitiallyOff": true,
+    "uniqueAndSetSwitchesInitiallyOn": true,
+    "oldBaseListSizes": [
+      132,
+      21
+    ],
+    "setSwitchIndependent": true,
+    "setSwitchPersistsAfterReload": true,
+    "disabledSetAbsentFrom95RulePreview": true,
+    "uniquePoolStillPresentInPreview": true,
+    "experimentalAbsentFromPreview": true,
+    "defaultSwitchesRestored": true
+  },
+  "screenshot": "docs/images/common-protection-switches.jpg",
+  "browserDownloadTested": false,
+  "gameExecutionTested": false
+}

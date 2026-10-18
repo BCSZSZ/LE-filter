@@ -97,6 +97,13 @@ function render(){
   $('editor').hidden=!ready||view!=='editor';$('preview').hidden=!ready||view!=='preview';
   $('common-rules').hidden=!commonView;
   $('ultra-rare-targets').innerHTML=chips(catalog.ultra_rare_uniques,'uniques');
+  $('common-experimentals-enabled').checked=config.common.exalted_experimentals_enabled;
+  $('common-uniques-enabled').checked=config.common.common_uniques_enabled;
+  $('common-sets-enabled').checked=config.common.common_sets_enabled;
+  $('common-unique-targets').innerHTML=chips(catalog.common_unique_ids,'uniques');
+  $('common-set-targets').innerHTML=chips(catalog.common_set_ids,'uniques');
+  $('common-uniques-summary').textContent=`查看原暗金名单（${catalog.common_unique_ids.length}种，T0另列）`;
+  $('common-sets-summary').textContent=`查看原套装名单（${catalog.common_set_ids.length}件）`;
   $('common-idols-enabled').checked=config.common.unique_idols_enabled;
   $('common-idol-targets').innerHTML=config.common.unique_idols.length?chips(config.common.unique_idols,'uniques'):'<small>未选择暗金神像</small>';
   $('extra-t7').checked=config.extra_t7;
@@ -265,6 +272,9 @@ $('confirm-reset').onclick=()=>{
   workspace.resetBuild(config,templates,activeId);$('reset-dialog').close();save();render();toast('这个副本已恢复为最新版模板。');
 };
 $('common-button').onclick=()=>{view='common';render();};
+for(const [id,key] of [['common-experimentals-enabled','exalted_experimentals_enabled'],['common-uniques-enabled','common_uniques_enabled'],['common-sets-enabled','common_sets_enabled']]){
+  $(id).onchange=e=>{config.common[key]=e.target.checked;save();render();};
+}
 $('common-idols-enabled').onchange=e=>{config.common.unique_idols_enabled=e.target.checked;save();render();};
 $('pick-common-idols').onclick=()=>openPicker('uniques','common-idols',config.common.unique_idols,[],values=>{
   config.common.unique_idols=values;save();render();

@@ -28,6 +28,8 @@ HARBINGER_NEEDLE = 344
 ITEM_SETS = read_json("sources/item-sets.json")["sets"]
 SET_MEMBERS = {uid: group["members"] for group in ITEM_SETS.values() for uid in group["members"]}
 ULTRA_RARE_UNIQUES = {u["id"] for u in read_json("sources/ultra-rare-uniques.json")["uniques"]}
+COMMON_ZERO_LP_IDS = ({uid for n in (15, 16) for uid in inspect_rule(BASE[n])["unique_ids"]}
+                      | SEASONAL_UNIQUES) - UNIQUE_IDOLS
 
 
 def expand_unique_sets(ids):
@@ -38,7 +40,8 @@ def expand_unique_sets(ids):
 
 
 def default_common():
-    return {"unique_idols_enabled": True, "unique_idols": sorted(UNIQUE_IDOLS - {HARBINGER_NEEDLE})}
+    return {"unique_idols_enabled": True, "unique_idols": sorted(UNIQUE_IDOLS - {HARBINGER_NEEDLE}),
+            "exalted_experimentals_enabled": False, "common_uniques_enabled": True, "common_sets_enabled": True}
 
 
 def empty_profile():
@@ -82,6 +85,9 @@ def normalize_config(config):
         raise ValueError("共通规则格式不正确。")
     for key, value in default_common().items():
         common.setdefault(key, value)
+    for key in ("exalted_experimentals_enabled", "common_uniques_enabled", "common_sets_enabled"):
+        if type(common[key]) is not bool:
+            raise ValueError("共通规则开关必须为true或false。")
     if type(common["unique_idols_enabled"]) is not bool or not isinstance(common["unique_idols"], list) or any(
             type(i) is not int or i not in UNIQUE_IDOLS - {HARBINGER_NEEDLE} for i in common["unique_idols"]):
         raise ValueError("共通暗金神像只能填写神像ID；先驱者之针由独立常驻规则保留。")
@@ -513,7 +519,9 @@ def generate(config, mode="endgame"):
     for n in (12, 13, 14):
         replacements[n] = [variant for entry in replacements[n]
                            for variant in (split_unique_ownership(entry) if not entry[1]["owners"] and entry[1]["category"] not in {"任意LP=1", "任意LP=2"} else [entry])]
-    r = add(15, "通用暗金／套装0LP保护", 1, name="[通用暗金／套装0LP保护]")
+    # Preserve the existing fixed membership and every original Rolls object.
+    # The proposed Tunklab criterion remains comparison evidence only.
+    r = deepcopy(BASE[15])
     c = condition(r, "UniqueModifiersCondition")
     c.extend(deepcopy(condition(BASE[16], "UniqueModifiersCondition")[:]))
     for u in c:
@@ -523,8 +531,14 @@ def generate(config, mode="endgame"):
     select_uniques(tmp, SEASONAL_UNIQUES - set(inspect_rule(r)["unique_ids"]))
     c.extend(deepcopy(condition(tmp, "UniqueModifiersCondition")[:]))
     c[:] = [u for u in c if int(u.findtext("UniqueId")) not in UNIQUE_IDOLS | ULTRA_RARE_UNIQUES | claimed]
-    if not len(c):
-        replacements[15].pop()
+    for key, is_set, category in (("common_uniques_enabled", False, "通用暗金0LP保护"),
+                                  ("common_sets_enabled", True, "通用套装保护")):
+        selected = [u for u in c if CATALOG["uniques"][u.findtext("UniqueId")]["set"] == is_set]
+        if common[key] and selected:
+            separate = add(15, category, 1, name=f"[{category}]")
+            separate.find("conditions").clear()
+            pool = ET.SubElement(separate.find("conditions"), "Condition", {XSI + "type": "UniqueModifiersCondition"})
+            pool.extend(deepcopy(selected))
 
     equipment_targets = set()
     for b in builds:
@@ -618,6 +632,7 @@ def generate(config, mode="endgame"):
         replacements[63].extend(replacements.pop(n, []))
 
     base = deepcopy(BASE)
+    base[68].find("isEnabled").text = str(common["exalted_experimentals_enabled"]).lower()
     resistance_types = {"IDOL_1x2", "IDOL_2x1"}
     resistance_suffixes = [int(i) for i, a in CATALOG["affixes"].items()
                           if not a["prefix"] and a["special"] in {0, 5}
@@ -713,6 +728,8 @@ def bootstrap():
     catalog = deepcopy(CATALOG)
     catalog["item_sets"] = deepcopy(ITEM_SETS)
     catalog["ultra_rare_uniques"] = sorted(ULTRA_RARE_UNIQUES)
+    catalog["common_unique_ids"] = sorted(uid for uid in COMMON_ZERO_LP_IDS - ULTRA_RARE_UNIQUES if not CATALOG["uniques"][str(uid)]["set"])
+    catalog["common_set_ids"] = sorted(uid for uid in COMMON_ZERO_LP_IDS if CATALOG["uniques"][str(uid)]["set"])
     catalog["equipment_types"] = MANIFEST["scope_types"]
     examples = []
     for slug, spec in EVIDENCE["strict_inputs"].items():
