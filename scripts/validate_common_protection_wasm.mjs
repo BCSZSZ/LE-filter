@@ -15,8 +15,8 @@ try {
     assert.deepStrictEqual(result, value.output, name);
     cases.push({name, count:result.count, sha256:result.sha256, completeOutputEqual:true});
   }
-  writeFileSync(new URL('../analysis/common-protection-wasm-validation.json', import.meta.url), JSON.stringify({
-    status:'passed', date:'2026-10-18', runtime:'Pyodide 314.0.7 / Node.js', replacementApplied:false,
+  writeFileSync(new URL('../analysis/common-protection-pool-wasm-validation.json', import.meta.url), JSON.stringify({
+    status:'passed', date:'2026-10-18', runtime:'Pyodide 314.0.7 / Node.js', replacementApplied:true,
     browserDownloadTested:false, gameExecutionTested:false, cases}, null, 2)+'\n');
   console.log(`PASS: ${cases.length} complete common-rule WASM/native outputs match`);
 } catch (error) {

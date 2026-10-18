@@ -2,6 +2,21 @@
 
 更新时间：2026-10-18，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
+## 最新2026-10-18追加：暗金候选补齐、全部套装独立，已落实
+
+- 玩家订正①②③④只讨论非套装暗金，套装全部保留、单独一条。当前[完整规则名单](COMMON_UNIQUE_PROTECTION.md)：暗金181（旧138移出13／296／311／422／460／474／480，补50正reroll），套装61件／24套全收（比旧21件增40）。基础池242个物品ID，不是242条规则。蜂农三件从暗金②类移出并保留在套装池。
+- [分类研究](COMMON_UNIQUE_CLASSIFICATION.md)及机器JSON已订正为旧138暗金的23／7／60／47／1五类；补齐后正reroll暗金97全覆盖，茧化、旧非随机与其他特殊奖励保留。先古25来源按官方1.3.2补正。旧159混合池与204候选仅是此前统计，不再作为现行范围。
+- 新冻结`sources/common-unique-protection.json`由`scripts/build_common_unique_protection.py`离线重建，运行期和Pages ZIP使用同一181／61名单；不联网或依赖缓存。保留旧非赛季Rolls对象，新追加ID无Rolls门槛，T0／BD前置去重与套装补全保持。默认Strict仍96条，实际两条通用规则161暗金／61套装，网页基础暗金池175＋T0六件另列。两个开关仍默认开启、实验关闭，旧保存原开关与目标保留。
+- 全套80项测试（含18组JS状态）通过；8组开关、7组打包WASM完整输出及47份冻结源／需求／基底／历史XML字节保持通过。记录见[新名单验证](../analysis/common-protection-pool-validation.json)、[WASM对照](../analysis/common-protection-pool-wasm-validation.json)、[网页验证](../analysis/common-protection-pool-browser-validation.json)与[截图](images/common-protection-pool.jpg)。网页核对175＋T0六件／全部套装61、套装开关刷新恢复、关闭95条／开启96条且两条独立规则。无游戏客户端实测。
+
+## 此前2026-10-18：旧通用名单来源研究（当时含套装统计）
+
+- 玩家确认茧化及非世界随机来源要保留，只想移出“世界随机且reroll=0”，并希望正reroll全部覆盖。本轮仍只研究旧名单；引擎、配置、冻结基底和需求JSON均未改。
+- [完整分类](COMMON_UNIQUE_CLASSIFICATION.md)：旧159种装备／套装分为茧化23、世界随机0的10、限定Boss／裂隙体系60、正reroll65、其他特殊奖励1（酿酒大师皮带扣416，完成The Grand Brewery）。③包括进化终焉444的裂隙谱系奖励，不表示所有物品只有单一Boss途径；③／⑤页面reroll为“－”，底层0不能与世界随机0混删。
+- [10件逐项核查](research/ZERO_REROLL_DROP_SOURCES.md)：13／77／78／79／296／311／422／460／474／480均明确世界随机0，并非Boss专属；时间线装备类型奖励节点不等于Boss专属。296为WW，移出通用池也不等于最终隐藏。
+- 不能把25先古中的22件因Tunklab未列Boss而归为仅兑换。官方1.3.2已明确此前仅可购买的先古也加入Rift Beast掉落；③60种细分为34种其他Boss来源、25先古、1进化终焉。来源分歧与官方补正均记录在新快照`sources/common-unique-drop-sources-2026-10-18.json`；旧reroll证据不反写。
+- 正reroll装备／套装共120，旧覆盖65、缺55（50暗金／5套装）；只移出②后旧保留149，加55为候选204（181暗金／23套装），这是物品ID数量而非XML规则数，未应用。独立3个正reroll暗金神像及T0前置规则另计。离线重建`scripts/classify_common_unique_protection.py`，完整机器分类`analysis/common-unique-classification.json`。
+
 ## 最新2026-10-18：实验开关、旧通用名单拆分与口径对照
 
 - 玩家要求崇高实验默认关闭、通用暗金与套装可分别关闭；随后明确“旧名单先别删”，要求先比较Tunklab reroll不为0的口径。旧159种装备／套装完整保留，不应用新筛选。按原条目拆成138暗金／21套装，保留每个UniqueModifiers及Rolls对象；T0和BD前置去重后默认Strict仍122／21种、总96条。

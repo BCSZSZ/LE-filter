@@ -1,0 +1,325 @@
+{
+  "version": 1,
+  "retrieved_on": "2026-10-18",
+  "scope": "10 old-list random-drop zero-reroll equipment/set items; research only",
+  "replacement_applied": false,
+  "summary": {
+    "items": 10,
+    "uniques": 7,
+    "sets": 3,
+    "can_drop_randomly": 10,
+    "reroll_zero": 10,
+    "boss_exclusive": 0,
+    "letools_monster_source_rows": 341,
+    "letools_monster_unique_ids": 105
+  },
+  "letools_evidence": {
+    "url": "https://www.lastepochtools.com/data/version152/db/js/8e688d145b13a6e9719c917369f90558.js",
+    "raw_js_sha256": "8a0293233b168b1eb425d7a9490bf7ad26f0d33f445fe2f5a3f0704432ee4cc5",
+    "decoded_json_sha256": "b9f44fb8f44b8b1d455539c3bb11c47a53fc39e9933dadd53280f5669d4fe37e",
+    "current_direct_refetch": "403 Forbidden; comparison uses existing cached version152",
+    "executed_remote_javascript": false
+  },
+  "items": [
+    {
+      "id": 13,
+      "zh": "泰坦之心",
+      "en": "Titan Heart",
+      "set": false,
+      "tunklab_item_url": "https://lastepoch.tunklab.com/unique/titan_heart",
+      "tunklab_live_page": {
+        "retrieved_on": "2026-10-18",
+        "method": "web_tool_item_page_read_manual_source_classification",
+        "random_drop_listed": true,
+        "no_reroll_chance_listed": true,
+        "random_rarity_label": "common",
+        "named_boss_source_listed": false
+      },
+      "tunklab_frozen_metadata": {
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "is_cocooned": false
+      },
+      "letools_cached_version152": {
+        "canDropRandomly": 1,
+        "rerollChance": 0,
+        "isCocoonedItem": 0,
+        "legendaryType": 0,
+        "monsterItemDrops": []
+      },
+      "category": 2,
+      "category_label": "世界随机掉落且reroll为0",
+      "boss_exclusive": false
+    },
+    {
+      "id": 77,
+      "zh": "蜂农烟熏器",
+      "en": "Apiarist's Smoker",
+      "set": true,
+      "tunklab_item_url": "https://lastepoch.tunklab.com/unique/apiarists_smoker",
+      "tunklab_live_page": {
+        "retrieved_on": "2026-10-18",
+        "method": "web_tool_item_page_read_manual_source_classification",
+        "random_drop_listed": true,
+        "no_reroll_chance_listed": true,
+        "random_rarity_label": "common",
+        "named_boss_source_listed": false
+      },
+      "tunklab_frozen_metadata": {
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "is_cocooned": false
+      },
+      "letools_cached_version152": {
+        "canDropRandomly": 1,
+        "rerollChance": 0,
+        "isCocoonedItem": 0,
+        "legendaryType": 0,
+        "monsterItemDrops": []
+      },
+      "category": 2,
+      "category_label": "世界随机掉落且reroll为0",
+      "boss_exclusive": false
+    },
+    {
+      "id": 78,
+      "zh": "蜂农防护服",
+      "en": "Apiarist's Suit",
+      "set": true,
+      "tunklab_item_url": "https://lastepoch.tunklab.com/unique/apiarists_suit",
+      "tunklab_live_page": {
+        "retrieved_on": "2026-10-18",
+        "method": "web_tool_item_page_read_manual_source_classification",
+        "random_drop_listed": true,
+        "no_reroll_chance_listed": true,
+        "random_rarity_label": "common",
+        "named_boss_source_listed": false
+      },
+      "tunklab_frozen_metadata": {
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "is_cocooned": false
+      },
+      "letools_cached_version152": {
+        "canDropRandomly": 1,
+        "rerollChance": 0,
+        "isCocoonedItem": 0,
+        "legendaryType": 0,
+        "monsterItemDrops": []
+      },
+      "category": 2,
+      "category_label": "世界随机掉落且reroll为0",
+      "boss_exclusive": false
+    },
+    {
+      "id": 79,
+      "zh": "蜂农梳",
+      "en": "Apiarist's Comb",
+      "set": true,
+      "tunklab_item_url": "https://lastepoch.tunklab.com/unique/apiarists_comb",
+      "tunklab_live_page": {
+        "retrieved_on": "2026-10-18",
+        "method": "web_tool_item_page_read_manual_source_classification",
+        "random_drop_listed": true,
+        "no_reroll_chance_listed": true,
+        "random_rarity_label": "common",
+        "named_boss_source_listed": false
+      },
+      "tunklab_frozen_metadata": {
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "is_cocooned": false
+      },
+      "letools_cached_version152": {
+        "canDropRandomly": 1,
+        "rerollChance": 0,
+        "isCocoonedItem": 0,
+        "legendaryType": 0,
+        "monsterItemDrops": []
+      },
+      "category": 2,
+      "category_label": "世界随机掉落且reroll为0",
+      "boss_exclusive": false
+    },
+    {
+      "id": 296,
+      "zh": "被抹灭者的降临",
+      "en": "Advent of the Erased",
+      "set": false,
+      "tunklab_item_url": "https://lastepoch.tunklab.com/unique/advent_of_the_erased",
+      "tunklab_live_page": {
+        "retrieved_on": "2026-10-18",
+        "method": "web_tool_item_page_read_manual_source_classification",
+        "random_drop_listed": true,
+        "no_reroll_chance_listed": true,
+        "random_rarity_label": "common",
+        "named_boss_source_listed": false
+      },
+      "tunklab_frozen_metadata": {
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "is_cocooned": false
+      },
+      "letools_cached_version152": {
+        "canDropRandomly": 1,
+        "rerollChance": 0,
+        "isCocoonedItem": 0,
+        "legendaryType": 1,
+        "monsterItemDrops": []
+      },
+      "category": 2,
+      "category_label": "世界随机掉落且reroll为0",
+      "boss_exclusive": false
+    },
+    {
+      "id": 311,
+      "zh": "誊录錾剑",
+      "en": "Transcriber's Graver",
+      "set": false,
+      "tunklab_item_url": "https://lastepoch.tunklab.com/unique/transcribers_graver",
+      "tunklab_live_page": {
+        "retrieved_on": "2026-10-18",
+        "method": "web_tool_item_page_read_manual_source_classification",
+        "random_drop_listed": true,
+        "no_reroll_chance_listed": true,
+        "random_rarity_label": "common",
+        "named_boss_source_listed": false
+      },
+      "tunklab_frozen_metadata": {
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "is_cocooned": false
+      },
+      "letools_cached_version152": {
+        "canDropRandomly": 1,
+        "rerollChance": 0,
+        "isCocoonedItem": 0,
+        "legendaryType": 0,
+        "monsterItemDrops": []
+      },
+      "category": 2,
+      "category_label": "世界随机掉落且reroll为0",
+      "boss_exclusive": false
+    },
+    {
+      "id": 422,
+      "zh": "瓶中闪电",
+      "en": "Lightning in a Bottle",
+      "set": false,
+      "tunklab_item_url": "https://lastepoch.tunklab.com/unique/lightning_in_a_bottle",
+      "tunklab_live_page": {
+        "retrieved_on": "2026-10-18",
+        "method": "web_tool_item_page_read_manual_source_classification",
+        "random_drop_listed": true,
+        "no_reroll_chance_listed": true,
+        "random_rarity_label": "common",
+        "named_boss_source_listed": false
+      },
+      "tunklab_frozen_metadata": {
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "is_cocooned": false
+      },
+      "letools_cached_version152": {
+        "canDropRandomly": 1,
+        "rerollChance": 0,
+        "isCocoonedItem": 0,
+        "legendaryType": 0,
+        "monsterItemDrops": []
+      },
+      "category": 2,
+      "category_label": "世界随机掉落且reroll为0",
+      "boss_exclusive": false
+    },
+    {
+      "id": 460,
+      "zh": "劳普的足迹",
+      "en": "Laup's Path",
+      "set": false,
+      "tunklab_item_url": "https://lastepoch.tunklab.com/unique/laups_path",
+      "tunklab_live_page": {
+        "retrieved_on": "2026-10-18",
+        "method": "web_tool_item_page_read_manual_source_classification",
+        "random_drop_listed": true,
+        "no_reroll_chance_listed": true,
+        "random_rarity_label": "common",
+        "named_boss_source_listed": false
+      },
+      "tunklab_frozen_metadata": {
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "is_cocooned": false
+      },
+      "letools_cached_version152": {
+        "canDropRandomly": 1,
+        "rerollChance": 0,
+        "isCocoonedItem": 0,
+        "legendaryType": 0,
+        "monsterItemDrops": []
+      },
+      "category": 2,
+      "category_label": "世界随机掉落且reroll为0",
+      "boss_exclusive": false
+    },
+    {
+      "id": 474,
+      "zh": "融合元素",
+      "en": "Fused Elements",
+      "set": false,
+      "tunklab_item_url": "https://lastepoch.tunklab.com/unique/fused_elements",
+      "tunklab_live_page": {
+        "retrieved_on": "2026-10-18",
+        "method": "web_tool_item_page_read_manual_source_classification",
+        "random_drop_listed": true,
+        "no_reroll_chance_listed": true,
+        "random_rarity_label": "common",
+        "named_boss_source_listed": false
+      },
+      "tunklab_frozen_metadata": {
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "is_cocooned": false
+      },
+      "letools_cached_version152": {
+        "canDropRandomly": 1,
+        "rerollChance": 0,
+        "isCocoonedItem": 0,
+        "legendaryType": 0,
+        "monsterItemDrops": []
+      },
+      "category": 2,
+      "category_label": "世界随机掉落且reroll为0",
+      "boss_exclusive": false
+    },
+    {
+      "id": 480,
+      "zh": "险境映像",
+      "en": "Perilous Reflection",
+      "set": false,
+      "tunklab_item_url": "https://lastepoch.tunklab.com/unique/perilous_reflection",
+      "tunklab_live_page": {
+        "retrieved_on": "2026-10-18",
+        "method": "web_tool_item_page_read_manual_source_classification",
+        "random_drop_listed": true,
+        "no_reroll_chance_listed": true,
+        "random_rarity_label": "common",
+        "named_boss_source_listed": false
+      },
+      "tunklab_frozen_metadata": {
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "is_cocooned": false
+      },
+      "letools_cached_version152": {
+        "canDropRandomly": 1,
+        "rerollChance": 0,
+        "isCocoonedItem": 0,
+        "legendaryType": 0,
+        "monsterItemDrops": []
+      },
+      "category": 2,
+      "category_label": "世界随机掉落且reroll为0",
+      "boss_exclusive": false
+    }
+  ]
+}

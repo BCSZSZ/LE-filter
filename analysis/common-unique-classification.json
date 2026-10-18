@@ -1,0 +1,6612 @@
+{
+  "date": "2026-10-18",
+  "status": "unique_only_classification_with_applied_policy",
+  "replacementApplied": true,
+  "scope": "Non-set equipment uniques only, before T0/BD deduplication. All sets are independent and retained.",
+  "evidence": [
+    {
+      "file": "sources/common-unique-drop-sources-2026-10-18.json",
+      "sha256": "cad91cb9add4b0a81de598d90986ed49ecb5ea376444466e9935535cc73733a4"
+    },
+    {
+      "file": "sources/zero-reroll-drop-sources-2026-10-18.json",
+      "sha256": "daae367b4b5b35b6c58eb997acf08d7c22bb219008d1bb970a7da65becf4b375"
+    }
+  ],
+  "category3Convention": "Includes Rift Beast restricted drops and Evolution's End lineage reward; does not assert one exclusive boss or exclude vendor/echo alternatives.",
+  "counts": {
+    "old": {
+      "total": 138,
+      "uniques": 138,
+      "sets": 0
+    },
+    "categories": {
+      "1": {
+        "total": 23,
+        "uniques": 23,
+        "sets": 0
+      },
+      "2": {
+        "total": 7,
+        "uniques": 7,
+        "sets": 0
+      },
+      "3": {
+        "total": 60,
+        "uniques": 60,
+        "sets": 0
+      },
+      "4": {
+        "total": 47,
+        "uniques": 47,
+        "sets": 0
+      },
+      "5": {
+        "total": 1,
+        "uniques": 1,
+        "sets": 0
+      }
+    },
+    "positiveRerollAllEquipment": {
+      "total": 97,
+      "uniques": 97,
+      "sets": 0
+    },
+    "positiveRerollMissing": {
+      "total": 50,
+      "uniques": 50,
+      "sets": 0
+    },
+    "retainedOld": {
+      "total": 131,
+      "uniques": 131,
+      "sets": 0
+    },
+    "candidateRemove2AndComplete4": {
+      "total": 181,
+      "uniques": 181,
+      "sets": 0
+    },
+    "oldSetsSeparate": {
+      "total": 21,
+      "uniques": 0,
+      "sets": 21
+    },
+    "allSetsRetained": 61
+  },
+  "groups": {
+    "1": [
+      {
+        "id": 379,
+        "en": "Cocooned Short Sword",
+        "zh": "茧化短剑",
+        "type": "ONE_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Short Sword",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 379,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_short_sword",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "4ef287eb0655e22e1476cf27368763d2abd5ae5166947a22860fdfab448e4ae1",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 380,
+        "en": "Cocooned Cleaver",
+        "zh": "茧化斧",
+        "type": "ONE_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Cleaver",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 380,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_cleaver",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "aa1a5cff1d92a9c812034d0a5f4001b732eb7544596a2c5aeceaade4c4cb1a8e",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 381,
+        "en": "Cocooned Club",
+        "zh": "茧化棍棒",
+        "type": "ONE_HANDED_MACES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Club",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 381,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_club",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "1101f057366dc7ba338fd7b60d9b4849816659b0f24f81799f56e85a50f4c180",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 382,
+        "en": "Cocooned Great Sword",
+        "zh": "茧化巨剑",
+        "type": "TWO_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Great Sword",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 382,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_great_sword",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "fdf5158831c600a7ef548220c042b400f0d3d07856df52891494357bc628c57e",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 383,
+        "en": "Cocooned Great Axe",
+        "zh": "茧化巨斧",
+        "type": "TWO_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Great Axe",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 383,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_great_axe",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "80e027b1d4334fcbb09e4e91226f416ce49ec33e6cfbad778284317b980458f6",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 384,
+        "en": "Cocooned Great Mace",
+        "zh": "茧化巨锤",
+        "type": "TWO_HANDED_MACE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Great Mace",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 384,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_great_mace",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "d79e1a7ce53f0d9707a071fa5eac8236badde06d9e574940cd0bd2c481fbeee2",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 385,
+        "en": "Cocooned Spear",
+        "zh": "茧化长矛",
+        "type": "TWO_HANDED_SPEAR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Spear",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 385,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_spear",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "b8bc13cfc2df4504aceebd2a74e216a9791b4577509133f21e7e0d47d9f8ac77",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 386,
+        "en": "Cocooned Staff",
+        "zh": "茧化长杖",
+        "type": "TWO_HANDED_STAFF",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Staff",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 386,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_staff",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "19da09eb8388e8e822e20eef9ff34a2356580de2e4e25bda32ae88f4dd5b6288",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 387,
+        "en": "Cocooned Cuirass",
+        "zh": "茧化胸甲",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Cuirass",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 387,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_cuirass",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "6f5cff18325f37278275e7eb1d533ff6ab047d1f12987b881fc5c8a25842e8c5",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 388,
+        "en": "Cocooned Dagger",
+        "zh": "茧化匕首",
+        "type": "ONE_HANDED_DAGGER",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Dagger",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 388,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_dagger",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "302b5badeb709d8b8f93fca7b305978e5ed9ff46cdbc942afdd4b94ae1c5b41c",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 389,
+        "en": "Cocooned Sceptre",
+        "zh": "茧化权杖",
+        "type": "ONE_HANDED_SCEPTRE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Sceptre",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 389,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_sceptre",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "7c573952b2b4483b395ba8bc2ad0831ca3f7948962415607e7ea41fef9062603",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 390,
+        "en": "Cocooned Wand",
+        "zh": "茧化魔杖",
+        "type": "WAND",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Wand",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 390,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_wand",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "59bd30e892821d83fe77fef773af0086deada2196e241c9a61eee2a57afbd2af",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 391,
+        "en": "Cocooned Bow",
+        "zh": "茧化弓",
+        "type": "BOW",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Bow",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 391,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_bow",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "ce93c4951008a9e4ce92bf6ece987bde1ea8225a024192371715055e34e60ee7",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 392,
+        "en": "Cocooned Quiver",
+        "zh": "茧化箭袋",
+        "type": "QUIVER",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Quiver",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 392,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_quiver",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "cfc797af92bee90044e1b77bae9993d122e3bd1c5015806707a3ba3ada7b0347",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 393,
+        "en": "Cocooned Shield",
+        "zh": "茧化盾牌",
+        "type": "SHIELD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Shield",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 393,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_shield",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "6dad56189171fb74e910dc176d44e525acbd598860cedc74e4a15e378caa332b",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 394,
+        "en": "Cocooned Catalyst",
+        "zh": "茧化法器",
+        "type": "CATALYST",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Catalyst",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 394,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_catalyst",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "2fd2b4c61b76a92051e65ceed0d6363774bc317aac3dd7ce9fb2f010fb61e24a",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 395,
+        "en": "Cocooned Relic",
+        "zh": "茧化遗物",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Relic",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 395,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_relic",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "322c8712272a692c6cdcd97f906b708b263402009cd9ad78b68e96a82f58393a",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 396,
+        "en": "Cocooned Ring",
+        "zh": "茧化戒指",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Ring",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 396,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_ring",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "1062cca19115180c7dcba04d8666b700863d296e89c726b40f58d3f6ec682713",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 397,
+        "en": "Cocooned Amulet",
+        "zh": "茧化护身符",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Amulet",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 397,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_amulet",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "0119e66230ebd14cd8a4cac5165659ca6fc54ae9a9ab013a9017d22cdcdf0cff",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 398,
+        "en": "Cocooned Gloves",
+        "zh": "茧化手套",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Gloves",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 398,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_gloves",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "4c8e34386de695556ba00ed7ef0c3afa7d4df694caf65b6a4b90813cd52cfe14",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 399,
+        "en": "Cocooned Belt",
+        "zh": "茧化腰带",
+        "type": "BELT",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Belt",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 399,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_belt",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "a4f04d50ab8c683124eb92dfa564bc62ba789e6663bf765276540c17cd0a0c89",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 400,
+        "en": "Cocooned Boots",
+        "zh": "茧化靴子",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Boots",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 400,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_boots",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "e2e80e9fc0e9cb29121f0b0a60779a7f9bb8813bfcf74120761a91d4650e7c30",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 401,
+        "en": "Cocooned Helmet",
+        "zh": "茧化头盔",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": true,
+        "source_name": "Cocooned Helmet",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "主表隐藏（茧化）",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 1,
+        "drop_source": {
+          "id": 401,
+          "url": "https://lastepoch.tunklab.com/unique/cocooned_helmet",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "9e4bb1825b402ec59d29f42f32e26d04f56cb9e43719a490cc8033387f9f3952",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      }
+    ],
+    "2": [
+      {
+        "id": 13,
+        "en": "Titan Heart",
+        "zh": "泰坦之心",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Titan Heart",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "tunklab_display": "0%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 2,
+        "drop_source": {
+          "id": 13,
+          "url": "https://lastepoch.tunklab.com/unique/titan_heart",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 296,
+        "en": "Advent of the Erased",
+        "zh": "被抹灭者的降临",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Advent of the Erased",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "tunklab_display": "0%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 2,
+        "drop_source": {
+          "id": 296,
+          "url": "https://lastepoch.tunklab.com/unique/advent_of_the_erased",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 311,
+        "en": "Transcriber's Graver",
+        "zh": "誊录錾剑",
+        "type": "ONE_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Transcriber's Graver",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "tunklab_display": "0%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 2,
+        "drop_source": {
+          "id": 311,
+          "url": "https://lastepoch.tunklab.com/unique/transcribers_graver",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 422,
+        "en": "Lightning in a Bottle",
+        "zh": "瓶中闪电",
+        "type": "BELT",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Lightning in a Bottle",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "tunklab_display": "0%",
+        "old_sources": [
+          "赛季1.3"
+        ],
+        "category": 2,
+        "drop_source": {
+          "id": 422,
+          "url": "https://lastepoch.tunklab.com/unique/lightning_in_a_bottle",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 460,
+        "en": "Laup's Path",
+        "zh": "劳普的足迹",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Laup's Path",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "tunklab_display": "0%",
+        "old_sources": [
+          "赛季1.4"
+        ],
+        "category": 2,
+        "drop_source": {
+          "id": 460,
+          "url": "https://lastepoch.tunklab.com/unique/laups_path",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 474,
+        "en": "Fused Elements",
+        "zh": "融合元素",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Fused Elements",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "tunklab_display": "0%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ],
+        "category": 2,
+        "drop_source": {
+          "id": 474,
+          "url": "https://lastepoch.tunklab.com/unique/fused_elements",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 480,
+        "en": "Perilous Reflection",
+        "zh": "险境映像",
+        "type": "SHIELD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Perilous Reflection",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.0,
+        "tunklab_display": "0%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ],
+        "category": 2,
+        "drop_source": {
+          "id": 480,
+          "url": "https://lastepoch.tunklab.com/unique/perilous_reflection",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      }
+    ],
+    "3": [
+      {
+        "id": 175,
+        "en": "Omnis",
+        "zh": "全能",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Omnis",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 175,
+          "url": "https://lastepoch.tunklab.com/unique/omnis",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 175,
+              "monsterNameKey": "Actors.Actor_Name_Shade of Orobyss",
+              "chanceModifier": 3,
+              "chance": 0.15,
+              "maxChance": 0,
+              "minCorruption": 200,
+              "orobyss": true
+            },
+            {
+              "uniqueId": 175,
+              "chanceModifier": 3,
+              "chance": 0.35,
+              "maxChance": 0,
+              "minCorruption": 200,
+              "wovenEcho": 17
+            }
+          ],
+          "tunklab_html_sha256": "0d66233ff5196d2b05274b1b23d312504899f7c02aae64eff3021185a62ea55f",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Acquired from",
+            "Shade of Orobyss",
+            "(",
+            "200+ corruption",
+            ")"
+          ]
+        }
+      },
+      {
+        "id": 179,
+        "en": "Apathy's Maw",
+        "zh": "暮色巨口",
+        "type": "TWO_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Apathy's Maw",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 179,
+          "url": "https://lastepoch.tunklab.com/unique/apathys_maw",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 179,
+              "monsterNameKey": "Actors.Actor_Name_Shade of Orobyss",
+              "chanceModifier": 3,
+              "chance": 0.25,
+              "maxChance": 0,
+              "minCorruption": 50,
+              "orobyss": true
+            },
+            {
+              "uniqueId": 179,
+              "chanceModifier": 3,
+              "chance": 0.5,
+              "maxChance": 0,
+              "minCorruption": 50,
+              "wovenEcho": 17
+            }
+          ],
+          "tunklab_html_sha256": "82b2f67cf3031ffafe278458748e40c5abc8e15261b31df35e06ba72a684e2c4",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Acquired from",
+            "Shade of Orobyss",
+            "(",
+            "50+ corruption",
+            ")"
+          ]
+        }
+      },
+      {
+        "id": 180,
+        "en": "Shattered Chains",
+        "zh": "破碎锁链",
+        "type": "BELT",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Shattered Chains",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 180,
+          "url": "https://lastepoch.tunklab.com/unique/shattered_chains",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 180,
+              "monsterNameKey": "Actors.Actor_Name_Shade of Orobyss",
+              "chanceModifier": 3,
+              "chance": 0.15,
+              "maxChance": 0,
+              "minCorruption": 120,
+              "orobyss": true
+            },
+            {
+              "uniqueId": 180,
+              "chanceModifier": 3,
+              "chance": 0.45,
+              "maxChance": 0,
+              "minCorruption": 120,
+              "wovenEcho": 17
+            }
+          ],
+          "tunklab_html_sha256": "71d0562c428b9e13cb8df56c1d947ddb44a38c98cd758dda58452cc71a390557",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Acquired from",
+            "Shade of Orobyss",
+            "(",
+            "120+ corruption",
+            ")"
+          ]
+        }
+      },
+      {
+        "id": 216,
+        "en": "Twisted Heart of Uhkeiros",
+        "zh": "乌凯罗斯的扭曲之心",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Twisted Heart of Uhkeiros",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 216,
+          "url": "https://lastepoch.tunklab.com/unique/twisted_heart_of_uhkeiros",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 216,
+              "monsterNameKey": "Actors.Actor_Name_Emperor of Corpses",
+              "chanceModifier": 0,
+              "chance": 0.06,
+              "maxChance": 0.48,
+              "rarityForMaxChance": 20,
+              "timelineInfo": {
+                "id": 7,
+                "empoweredOnly": false
+              },
+              "minCorruption": 0
+            }
+          ],
+          "tunklab_html_sha256": "a1fd8b0f57782ec12830e43b6e64e7d1b7875bf957f31c09d9db89132a554a83",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/UndeadDragonBoss",
+              "name": "Emperor of Corpses"
+            }
+          ],
+          "tunklab_echo_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/echo/collapsing_horizon",
+              "name": "Collapsing Horizon"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+              "name": "The Fading Brink"
+            }
+          ],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Emperor of Corpses",
+            "Boss-specific drop",
+            "6% - 48%",
+            "Collapsing Horizon",
+            "Reward for completing the Woven Echo",
+            "6% - 48%",
+            "The Fading Brink",
+            "Reward for completing the Woven Echo",
+            "6% - 48%"
+          ]
+        }
+      },
+      {
+        "id": 253,
+        "en": "Foot of the Mountain",
+        "zh": "山之麓",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Foot of the Mountain",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 253,
+          "url": "https://lastepoch.tunklab.com/unique/foot_of_the_mountain",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 253,
+              "monsterNameKey": "Actors.Actor_Name_The Mountain Beneath",
+              "chanceModifier": 2,
+              "chancePerTier": [
+                0,
+                0.2,
+                0.35,
+                0.45
+              ],
+              "dungeonInfo": {
+                "id": 2,
+                "gamble": false
+              },
+              "minCorruption": 0
+            }
+          ],
+          "tunklab_html_sha256": "e860a555247715b9fa9c7d77920fc4f7f90a558761d43217b18e01bdfef15cce",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/StoneTitanHeartBoss",
+              "name": "Stone Titan's Heart"
+            }
+          ],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Stone Titan's Heart",
+            "Boss-specific drop",
+            "Tier",
+            "2",
+            ":",
+            "20%",
+            "Tier",
+            "3",
+            ":",
+            "35%",
+            "Tier",
+            "4",
+            ":",
+            "45%"
+          ]
+        }
+      },
+      {
+        "id": 254,
+        "en": "Face of the Mountain",
+        "zh": "山之貌",
+        "type": "SHIELD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Face of the Mountain",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 254,
+          "url": "https://lastepoch.tunklab.com/unique/face_of_the_mountain",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 254,
+              "monsterNameKey": "Actors.Actor_Name_The Mountain Beneath",
+              "chanceModifier": 2,
+              "chancePerTier": [
+                0,
+                0,
+                0.12,
+                0.18
+              ],
+              "dungeonInfo": {
+                "id": 2,
+                "gamble": false
+              },
+              "minCorruption": 0
+            }
+          ],
+          "tunklab_html_sha256": "027c759799d2bda3da1972138447dc6be79c96c56b6d894d05663ebdab9052d8",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/StoneTitanHeartBoss",
+              "name": "Stone Titan's Heart"
+            }
+          ],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Stone Titan's Heart",
+            "Boss-specific drop",
+            "Tier",
+            "3",
+            ":",
+            "12%",
+            "Tier",
+            "4",
+            ":",
+            "18%"
+          ]
+        }
+      },
+      {
+        "id": 255,
+        "en": "Core of the Mountain",
+        "zh": "山之核",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Core of the Mountain",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 255,
+          "url": "https://lastepoch.tunklab.com/unique/core_of_the_mountain",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 255,
+              "monsterNameKey": "Actors.Actor_Name_The Mountain Beneath",
+              "chanceModifier": 2,
+              "chancePerTier": [
+                0,
+                0,
+                0,
+                0.12
+              ],
+              "dungeonInfo": {
+                "id": 2,
+                "gamble": false
+              },
+              "minCorruption": 0
+            }
+          ],
+          "tunklab_html_sha256": "3d1476c359e731abf8f302a8944319c2757735fe2af36b0b1d2f681105947a0d",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/StoneTitanHeartBoss",
+              "name": "Stone Titan's Heart"
+            }
+          ],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Stone Titan's Heart",
+            "Boss-specific drop",
+            "Tier",
+            "4",
+            ":",
+            "12%"
+          ]
+        }
+      },
+      {
+        "id": 256,
+        "en": "Peak of the Mountain",
+        "zh": "山之巅",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Peak of the Mountain",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 256,
+          "url": "https://lastepoch.tunklab.com/unique/peak_of_the_mountain",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 256,
+              "monsterNameKey": "Actors.Actor_Name_The Mountain Beneath",
+              "chanceModifier": 2,
+              "chancePerTier": [
+                0.45,
+                0.47,
+                0.48,
+                0.5
+              ],
+              "dungeonInfo": {
+                "id": 2,
+                "gamble": false
+              },
+              "minCorruption": 0
+            }
+          ],
+          "tunklab_html_sha256": "f39c18ddff4f85fd393dba1f6ec130a24b5ac577622a97378553cff28dc29c82",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/StoneTitanHeartBoss",
+              "name": "Stone Titan's Heart"
+            }
+          ],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Stone Titan's Heart",
+            "Boss-specific drop",
+            "Tier",
+            "1",
+            ":",
+            "45%",
+            "Tier",
+            "2",
+            ":",
+            "47%",
+            "Tier",
+            "3",
+            ":",
+            "48%",
+            "Tier",
+            "4",
+            ":",
+            "50%"
+          ]
+        }
+      },
+      {
+        "id": 258,
+        "en": "Immolator's Oblation",
+        "zh": "献祭者的奉献",
+        "type": "BELT",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Immolator's Oblation",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 258,
+          "url": "https://lastepoch.tunklab.com/unique/immolators_oblation",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 258,
+              "monsterNameKey": "Actors.Actor_Name_Fire Lich Cremorus",
+              "chanceModifier": 2,
+              "chancePerTier": [
+                0,
+                0,
+                0.12,
+                0.18
+              ],
+              "dungeonInfo": {
+                "id": 3,
+                "gamble": false
+              },
+              "minCorruption": 0
+            }
+          ],
+          "tunklab_html_sha256": "133ef36a4e12eb1f95a7e85ab221e27b9bacc761aeec9234b0de9ce6cff99225",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/FireLichBoss",
+              "name": "Fire Lich Cremorus"
+            }
+          ],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Fire Lich Cremorus",
+            "Boss-specific drop",
+            "Tier",
+            "3",
+            ":",
+            "12%",
+            "Tier",
+            "4",
+            ":",
+            "18%"
+          ]
+        }
+      },
+      {
+        "id": 339,
+        "en": "Black Blade of Chaos",
+        "zh": "混沌黑刃",
+        "type": "TWO_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Black Blade of Chaos",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 339,
+          "url": "https://lastepoch.tunklab.com/unique/black_blade_of_chaos",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 339,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "hostOnly": true,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 339,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 339,
+              "monsterNameKey": "Actors.Actor_Name_Harbinger of Chaos",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0.22,
+              "rarityForMaxChance": 12,
+              "timelineInfo": {
+                "id": 5,
+                "empoweredOnly": true
+              },
+              "minCorruption": 0,
+              "harbinger": true
+            },
+            {
+              "uniqueId": 339,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18,
+              "hostOnly": true
+            },
+            {
+              "uniqueId": 339,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18
+            }
+          ],
+          "tunklab_html_sha256": "a20dc7881570fe1fbe90f59119d5753ba5abc98615508a355ad2861446d2523c",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/AgileHarbinger-Lagon",
+              "name": "Harbinger of Chaos"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+              "name": "Aberroth"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+              "name": "Herald of Oblivion"
+            }
+          ],
+          "tunklab_echo_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+              "name": "The Fading Brink"
+            }
+          ],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Harbinger of Chaos",
+            "Boss-specific drop, Empowered only",
+            "10% - 22%",
+            "Aberroth",
+            "Boss-specific drop",
+            "11.8%",
+            "Herald of Oblivion",
+            "Boss-specific drop",
+            "11.8%",
+            "The Fading Brink",
+            "Reward for completing the Woven Echo, Empowered only",
+            "10% - 22%"
+          ]
+        }
+      },
+      {
+        "id": 345,
+        "en": "Bane of Winter",
+        "zh": "凛冬克星",
+        "type": "TWO_HANDED_SPEAR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Bane of Winter",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 345,
+          "url": "https://lastepoch.tunklab.com/unique/bane_of_winter",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 345,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "hostOnly": true,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 345,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 345,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18,
+              "hostOnly": true
+            },
+            {
+              "uniqueId": 345,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18
+            },
+            {
+              "uniqueId": 345,
+              "monsterNameKey": "Actors.Actor_Name_Harbinger of Tyranny",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0.22,
+              "rarityForMaxChance": 12,
+              "timelineInfo": {
+                "id": 9,
+                "empoweredOnly": true
+              },
+              "minCorruption": 0,
+              "harbinger": true
+            }
+          ],
+          "tunklab_html_sha256": "b4b4e322bd30f90f1deeaafa233c2d03ee8ee71181cc40921cce9eedeb254c9a",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+              "name": "Aberroth"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/BruteHarbinger-Heorot",
+              "name": "Harbinger of Tyranny"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+              "name": "Herald of Oblivion"
+            }
+          ],
+          "tunklab_echo_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+              "name": "The Fading Brink"
+            }
+          ],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Aberroth",
+            "Boss-specific drop",
+            "11.8%",
+            "Harbinger of Tyranny",
+            "Boss-specific drop, Empowered only",
+            "10% - 22%",
+            "Herald of Oblivion",
+            "Boss-specific drop",
+            "11.8%",
+            "The Fading Brink",
+            "Reward for completing the Woven Echo, Empowered only",
+            "10% - 22%"
+          ]
+        }
+      },
+      {
+        "id": 347,
+        "en": "The Inevitable",
+        "zh": "天命",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "The Inevitable",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 347,
+          "url": "https://lastepoch.tunklab.com/unique/the_inevitable",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 347,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "hostOnly": true,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 347,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 347,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18,
+              "hostOnly": true
+            },
+            {
+              "uniqueId": 347,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18
+            },
+            {
+              "uniqueId": 347,
+              "monsterNameKey": "Actors.Actor_Name_Harbinger of Fear",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0.22,
+              "rarityForMaxChance": 12,
+              "timelineInfo": {
+                "id": 8,
+                "empoweredOnly": true
+              },
+              "minCorruption": 0,
+              "harbinger": true
+            }
+          ],
+          "tunklab_html_sha256": "da31d0626954d9e099854cd748e9e970263a787754f900e55024325b20952279",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/AgileHarbinger-Gaspar",
+              "name": "Harbinger of Fear"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+              "name": "Aberroth"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+              "name": "Herald of Oblivion"
+            }
+          ],
+          "tunklab_echo_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+              "name": "The Fading Brink"
+            }
+          ],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Harbinger of Fear",
+            "Boss-specific drop, Empowered only",
+            "10% - 22%",
+            "Aberroth",
+            "Boss-specific drop",
+            "11.8%",
+            "Herald of Oblivion",
+            "Boss-specific drop",
+            "11.8%",
+            "The Fading Brink",
+            "Reward for completing the Woven Echo, Empowered only",
+            "10% - 22%"
+          ]
+        }
+      },
+      {
+        "id": 353,
+        "en": "Nihilis",
+        "zh": "虚无",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Nihilis",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 353,
+          "url": "https://lastepoch.tunklab.com/unique/nihilis",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 353,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.14285715,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "hostOnly": true,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 353,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.14285715,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18,
+              "hostOnly": true
+            },
+            {
+              "uniqueId": 353,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.14285715,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18,
+              "hostOnly": true
+            }
+          ],
+          "tunklab_html_sha256": "64a57bf2740719a823f8457db5ac21b111563cce90b7c8fb761613ee2cafa4cd",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+              "name": "Aberroth"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+              "name": "Herald of Oblivion"
+            }
+          ],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Aberroth",
+            "Boss-specific drop",
+            "14.29%",
+            "Herald of Oblivion",
+            "Boss-specific drop",
+            "26.53%"
+          ]
+        }
+      },
+      {
+        "id": 354,
+        "en": "Wall of Nothing",
+        "zh": "空无之墙",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Wall of Nothing",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 354,
+          "url": "https://lastepoch.tunklab.com/unique/wall_of_nothing",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 354,
+              "monsterNameKey": "Actors.Actor_Name_Harbinger of Treason",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0.22,
+              "rarityForMaxChance": 12,
+              "timelineInfo": {
+                "id": 6,
+                "empoweredOnly": true
+              },
+              "minCorruption": 0,
+              "harbinger": true
+            },
+            {
+              "uniqueId": 354,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "hostOnly": true,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 354,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 354,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18,
+              "hostOnly": true
+            },
+            {
+              "uniqueId": 354,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18
+            }
+          ],
+          "tunklab_html_sha256": "e13425de84971ea3bf92f93d6cb7dc623b29f1946f660063057bfe6dce38de66",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/AgileHarbinger-VoidHarton",
+              "name": "Harbinger of Treason"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+              "name": "Aberroth"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+              "name": "Herald of Oblivion"
+            }
+          ],
+          "tunklab_echo_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+              "name": "The Fading Brink"
+            }
+          ],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Harbinger of Treason",
+            "Boss-specific drop, Empowered only",
+            "10% - 22%",
+            "Aberroth",
+            "Boss-specific drop",
+            "11.8%",
+            "Herald of Oblivion",
+            "Boss-specific drop",
+            "11.8%",
+            "The Fading Brink",
+            "Reward for completing the Woven Echo, Empowered only",
+            "10% - 22%"
+          ]
+        }
+      },
+      {
+        "id": 355,
+        "en": "Aberroth's Command",
+        "zh": "阿波罗斯的命令",
+        "type": "ONE_HANDED_SCEPTRE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Aberroth's Command",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 355,
+          "url": "https://lastepoch.tunklab.com/unique/aberroths_command",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 355,
+              "monsterNameKey": "Actors.Actor_Name_Harbinger of Defilement",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0.22,
+              "rarityForMaxChance": 12,
+              "timelineInfo": {
+                "id": 1,
+                "empoweredOnly": true
+              },
+              "minCorruption": 0,
+              "harbinger": true
+            },
+            {
+              "uniqueId": 355,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "hostOnly": true,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 355,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 355,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18,
+              "hostOnly": true
+            },
+            {
+              "uniqueId": 355,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18
+            }
+          ],
+          "tunklab_html_sha256": "d8482c3fd4db480bb89410faa88b940bf2418d1556c7c5cb2a8c9a018d8e8911",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+              "name": "Aberroth"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/BruteHarbinger-Abomination",
+              "name": "Harbinger of Defilement"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+              "name": "Herald of Oblivion"
+            }
+          ],
+          "tunklab_echo_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+              "name": "The Fading Brink"
+            }
+          ],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Aberroth",
+            "Boss-specific drop",
+            "11.8%",
+            "Harbinger of Defilement",
+            "Boss-specific drop, Empowered only",
+            "10% - 22%",
+            "Herald of Oblivion",
+            "Boss-specific drop",
+            "11.8%",
+            "The Fading Brink",
+            "Reward for completing the Woven Echo, Empowered only",
+            "10% - 22%"
+          ]
+        }
+      },
+      {
+        "id": 357,
+        "en": "Seed of Ekkidrasil",
+        "zh": "无界树种",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Seed of Ekkidrasil",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 357,
+          "url": "https://lastepoch.tunklab.com/unique/seed_of_ekkidrasil",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 357,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.3809524,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "hostOnly": true,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 357,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.3809524,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18,
+              "hostOnly": true
+            },
+            {
+              "uniqueId": 357,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.3809524,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18,
+              "hostOnly": true
+            }
+          ],
+          "tunklab_html_sha256": "af43b244d97c6cdf1659b69ad13e0066767fc748ddc72daf78d0704d3f3c4983",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+              "name": "Aberroth"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+              "name": "Herald of Oblivion"
+            }
+          ],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Aberroth",
+            "Boss-specific drop",
+            "38.1%",
+            "Herald of Oblivion",
+            "Boss-specific drop",
+            "61.68%"
+          ]
+        }
+      },
+      {
+        "id": 358,
+        "en": "Null Portent",
+        "zh": "失效征兆",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Null Portent",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 358,
+          "url": "https://lastepoch.tunklab.com/unique/null_portent",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 358,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.47619048,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "hostOnly": true,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 358,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.47619048,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18,
+              "hostOnly": true
+            },
+            {
+              "uniqueId": 358,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.47619048,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18,
+              "hostOnly": true
+            }
+          ],
+          "tunklab_html_sha256": "c7955de411e927aaa3f05367dd92777e1f9bb63aa00d5ac4b48992d83f7de29b",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+              "name": "Aberroth"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+              "name": "Herald of Oblivion"
+            }
+          ],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Aberroth",
+            "Boss-specific drop",
+            "47.62%",
+            "Herald of Oblivion",
+            "Boss-specific drop",
+            "72.56%"
+          ]
+        }
+      },
+      {
+        "id": 361,
+        "en": "Phase Point",
+        "zh": "相位点",
+        "type": "QUIVER",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Phase Point",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 361,
+          "url": "https://lastepoch.tunklab.com/unique/phase_point",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 361,
+              "monsterNameKey": "Actors.Actor_Name_Harbinger of Pride",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0.22,
+              "rarityForMaxChance": 12,
+              "timelineInfo": {
+                "id": 2,
+                "empoweredOnly": true
+              },
+              "minCorruption": 0,
+              "harbinger": true
+            },
+            {
+              "uniqueId": 361,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "hostOnly": true,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 361,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 361,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18,
+              "hostOnly": true
+            },
+            {
+              "uniqueId": 361,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18
+            }
+          ],
+          "tunklab_html_sha256": "993603e5320ba44164aed96379bc8b22faed9e3bed55d48757306bf3a6e4f126",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/AgileHarbinger-Argentus",
+              "name": "Harbinger of Pride"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+              "name": "Aberroth"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+              "name": "Herald of Oblivion"
+            }
+          ],
+          "tunklab_echo_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+              "name": "The Fading Brink"
+            }
+          ],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Harbinger of Pride",
+            "Boss-specific drop, Empowered only",
+            "10% - 22%",
+            "Aberroth",
+            "Boss-specific drop",
+            "11.8%",
+            "Herald of Oblivion",
+            "Boss-specific drop",
+            "11.8%",
+            "The Fading Brink",
+            "Reward for completing the Woven Echo, Empowered only",
+            "10% - 22%"
+          ]
+        }
+      },
+      {
+        "id": 364,
+        "en": "Event Horizon",
+        "zh": "事件视界",
+        "type": "TWO_HANDED_MACE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Event Horizon",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 364,
+          "url": "https://lastepoch.tunklab.com/unique/event_horizon",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 364,
+              "monsterNameKey": "Actors.Actor_Name_Harbinger of Destruction",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0.22,
+              "rarityForMaxChance": 12,
+              "timelineInfo": {
+                "id": 7,
+                "empoweredOnly": true
+              },
+              "minCorruption": 0,
+              "harbinger": true
+            },
+            {
+              "uniqueId": 364,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "hostOnly": true,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 364,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 364,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18,
+              "hostOnly": true
+            },
+            {
+              "uniqueId": 364,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18
+            }
+          ],
+          "tunklab_html_sha256": "1d22c6fef17609982d7f3c7597df78fda862500f61d03db6c340147fa4d9d647",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+              "name": "Aberroth"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/BruteHarbinger-UndeadDragon",
+              "name": "Harbinger of Destruction"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+              "name": "Herald of Oblivion"
+            }
+          ],
+          "tunklab_echo_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+              "name": "The Fading Brink"
+            }
+          ],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Aberroth",
+            "Boss-specific drop",
+            "11.8%",
+            "Harbinger of Destruction",
+            "Boss-specific drop, Empowered only",
+            "10% - 22%",
+            "Herald of Oblivion",
+            "Boss-specific drop",
+            "11.8%",
+            "The Fading Brink",
+            "Reward for completing the Woven Echo, Empowered only",
+            "10% - 22%"
+          ]
+        }
+      },
+      {
+        "id": 365,
+        "en": "World Splitter",
+        "zh": "世界分离者",
+        "type": "TWO_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "World Splitter",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 365,
+          "url": "https://lastepoch.tunklab.com/unique/world_splitter",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 365,
+              "monsterNameKey": "Actors.Actor_Name_Harbinger of Hatred",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0.22,
+              "rarityForMaxChance": 12,
+              "timelineInfo": {
+                "id": 3,
+                "empoweredOnly": true
+              },
+              "minCorruption": 0,
+              "harbinger": true
+            },
+            {
+              "uniqueId": 365,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "hostOnly": true,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 365,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 365,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18,
+              "hostOnly": true
+            },
+            {
+              "uniqueId": 365,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18
+            }
+          ],
+          "tunklab_html_sha256": "b41cff06cbc6a4d869a13149fca6740898917aa34213bfbe50fef52b853fbaca",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+              "name": "Aberroth"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/BruteHarbinger-VoidRahyeh",
+              "name": "Harbinger of Hatred"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+              "name": "Herald of Oblivion"
+            }
+          ],
+          "tunklab_echo_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+              "name": "The Fading Brink"
+            }
+          ],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Aberroth",
+            "Boss-specific drop",
+            "11.8%",
+            "Harbinger of Hatred",
+            "Boss-specific drop, Empowered only",
+            "10% - 22%",
+            "Herald of Oblivion",
+            "Boss-specific drop",
+            "11.8%",
+            "The Fading Brink",
+            "Reward for completing the Woven Echo, Empowered only",
+            "10% - 22%"
+          ]
+        }
+      },
+      {
+        "id": 366,
+        "en": "Flames of Midnight",
+        "zh": "午夜烈焰",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Flames of Midnight",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 366,
+          "url": "https://lastepoch.tunklab.com/unique/flames_of_midnight",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 366,
+              "monsterNameKey": "Actors.Actor_Name_Harbinger of Ash",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0.22,
+              "rarityForMaxChance": 12,
+              "timelineInfo": {
+                "id": 10,
+                "empoweredOnly": true
+              },
+              "minCorruption": 0,
+              "harbinger": true
+            },
+            {
+              "uniqueId": 366,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "hostOnly": true,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 366,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 366,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18,
+              "hostOnly": true
+            },
+            {
+              "uniqueId": 366,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18
+            }
+          ],
+          "tunklab_html_sha256": "c7a03ce22cfdcae159907c1d6789abf1e9dd95732bb4924d2b5963dee1c6d71e",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+              "name": "Aberroth"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/BruteHarbinger-FireShamans",
+              "name": "Harbinger of Ash"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+              "name": "Herald of Oblivion"
+            }
+          ],
+          "tunklab_echo_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+              "name": "The Fading Brink"
+            }
+          ],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Aberroth",
+            "Boss-specific drop",
+            "11.8%",
+            "Harbinger of Ash",
+            "Boss-specific drop, Empowered only",
+            "10% - 22%",
+            "Herald of Oblivion",
+            "Boss-specific drop",
+            "11.8%",
+            "The Fading Brink",
+            "Reward for completing the Woven Echo, Empowered only",
+            "10% - 22%"
+          ]
+        }
+      },
+      {
+        "id": 367,
+        "en": "Celestial Doom",
+        "zh": "天界末日",
+        "type": "TWO_HANDED_STAFF",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Celestial Doom",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 367,
+          "url": "https://lastepoch.tunklab.com/unique/celestial_doom",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 367,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "hostOnly": true,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 367,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "aberroth": true
+            },
+            {
+              "uniqueId": 367,
+              "monsterNameKey": "Actors.Actor_Name_Harbinger of War",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0.22,
+              "rarityForMaxChance": 12,
+              "timelineInfo": {
+                "id": 4,
+                "empoweredOnly": true
+              },
+              "minCorruption": 0,
+              "harbinger": true
+            },
+            {
+              "uniqueId": 367,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18,
+              "hostOnly": true
+            },
+            {
+              "uniqueId": 367,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.020000001,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18
+            }
+          ],
+          "tunklab_html_sha256": "5b9c0030fddb8eb5f1e4661486b4ec0e9099067cae137780a48efbbb1451aeb5",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/AgileHarbinger-FrostLich",
+              "name": "Harbinger of War"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+              "name": "Aberroth"
+            },
+            {
+              "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+              "name": "Herald of Oblivion"
+            }
+          ],
+          "tunklab_echo_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+              "name": "The Fading Brink"
+            }
+          ],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Sources this item drops from",
+            "Source",
+            "Chance",
+            "Harbinger of War",
+            "Boss-specific drop, Empowered only",
+            "10% - 22%",
+            "Aberroth",
+            "Boss-specific drop",
+            "11.8%",
+            "Herald of Oblivion",
+            "Boss-specific drop",
+            "11.8%",
+            "The Fading Brink",
+            "Reward for completing the Woven Echo, Empowered only",
+            "10% - 22%"
+          ]
+        }
+      },
+      {
+        "id": 403,
+        "en": "Soul of the Mountain",
+        "zh": "山之魂",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Soul of the Mountain",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 403,
+          "url": "https://lastepoch.tunklab.com/unique/soul_of_the_mountain",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 403,
+              "monsterNameKey": "Actors.Actor_Name_Draal Queen",
+              "chanceModifier": 0,
+              "chance": 1,
+              "maxChance": 1,
+              "rarityForMaxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 13
+            }
+          ],
+          "tunklab_html_sha256": "3d2bbb9322f32503a1d391013c7661b65ffd6b00dbc8cca8156f0c7080a05275",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/DraalQueen",
+              "name": "Draal Queen"
+            }
+          ],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Draal Queen",
+            "(",
+            "100%",
+            ")"
+          ]
+        }
+      },
+      {
+        "id": 411,
+        "en": "Countenance of Majasa",
+        "zh": "玛加莎的面容",
+        "type": "SHIELD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Countenance of Majasa",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 411,
+          "url": "https://lastepoch.tunklab.com/unique/countenance_of_majasa",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 411,
+              "monsterNameKey": "Actors.Actor_Name_Majasa",
+              "chanceModifier": 0,
+              "chance": 1,
+              "maxChance": 1,
+              "rarityForMaxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 5
+            }
+          ],
+          "tunklab_html_sha256": "8f960f4aa5ed328503764bfa3e9a7f11222e2be7921bfc386249bd066230a34a",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/MajasaEndgamePhase2",
+              "name": "Goddess of Blood"
+            }
+          ],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Goddess of Blood",
+            "(",
+            "100%",
+            ")"
+          ]
+        }
+      },
+      {
+        "id": 413,
+        "en": "Shattered Worlds",
+        "zh": "破碎世界",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Shattered Worlds",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 413,
+          "url": "https://lastepoch.tunklab.com/unique/shattered_worlds",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 413,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.2,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18,
+              "hostOnly": true
+            }
+          ],
+          "tunklab_html_sha256": "e658bf028409903e502a14b45db0f3cd996430db41917f6d4a6fe5962ab3642f",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+              "name": "Herald of Oblivion"
+            }
+          ],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Herald of Oblivion",
+            "(",
+            "20%",
+            ")"
+          ]
+        }
+      },
+      {
+        "id": 415,
+        "en": "Immortal Vise",
+        "zh": "不朽台钳",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Immortal Vise",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 415,
+          "url": "https://lastepoch.tunklab.com/unique/immortal_vise",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 415,
+              "monsterNameKey": "Actors.Actor_Name_Aberroth",
+              "chanceModifier": 0,
+              "chance": 0.8,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 18,
+              "hostOnly": true
+            }
+          ],
+          "tunklab_html_sha256": "36868b04b311b7705b4069db4bf86b2d0bee2c208c386cabc7bcdf29dcecad70",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+              "name": "Herald of Oblivion"
+            }
+          ],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Herald of Oblivion",
+            "(",
+            "80%",
+            ")"
+          ]
+        }
+      },
+      {
+        "id": 417,
+        "en": "Clotho's Needle",
+        "zh": "克洛托的针刺",
+        "type": "TWO_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Clotho's Needle",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 417,
+          "url": "https://lastepoch.tunklab.com/unique/clothos_needle",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 417,
+              "monsterNameKey": "Actors.Actor_Name_Fateweaver Clotho",
+              "chanceModifier": 0,
+              "chance": 0.3,
+              "maxChance": 0.45,
+              "rarityForMaxChance": 13,
+              "minCorruption": 0,
+              "wovenEcho": 14
+            }
+          ],
+          "tunklab_html_sha256": "97bdfb75ee2e324a2177e7dd02777998bbf3cf9a3a580b40cc42e27dd9c7c757",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/FateweaverClothoRapier",
+              "name": "Fateweaver Clotho"
+            }
+          ],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Fateweaver Clotho",
+            "(",
+            "30% - 45%",
+            ")"
+          ]
+        }
+      },
+      {
+        "id": 423,
+        "en": "Legends Entwined",
+        "zh": "传奇交织",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Legends Entwined",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 423,
+          "url": "https://lastepoch.tunklab.com/unique/legends_entwined",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "caaa4d143ed44ac9dd8b3088e535d90323100df878d1804f80ca46cffa1048d4",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 424,
+        "en": "Tyrant's Skull",
+        "zh": "暴君颅骨",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Tyrant's Skull",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 424,
+          "url": "https://lastepoch.tunklab.com/unique/tyrants_skull",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "b562043c3c37e799e8b1c1a37b696c9fdbe266a219840363be186bc8729dc7f7",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 425,
+        "en": "Wildfire Embers",
+        "zh": "野火余烬",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Wildfire Embers",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 425,
+          "url": "https://lastepoch.tunklab.com/unique/wildfire_embers",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "68f3d5b1b9d5efe29589225ff598f26105a9e419a484aec31f4db1bb67a35c80",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 426,
+        "en": "Thicket of Blinding Light",
+        "zh": "眩光棘林",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Thicket of Blinding Light",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 426,
+          "url": "https://lastepoch.tunklab.com/unique/thicket_of_blinding_light",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "78e0cf0aadf2f4c0f8110fd5b5e4b8c326942e0a78ddad5cd6771b8ff3d26fc9",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 427,
+        "en": "Harmony of the First",
+        "zh": "原初谐律",
+        "type": "TWO_HANDED_SPEAR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Harmony of the First",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 427,
+          "url": "https://lastepoch.tunklab.com/unique/harmony_of_the_first",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "631e6d2148827fbdb1288133ac9644eed13632ea9ae069dc6e7f4d5906bdde96",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 428,
+        "en": "Onslaught of Cerata",
+        "zh": "棘影猛攻",
+        "type": "SHIELD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Onslaught of Cerata",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 428,
+          "url": "https://lastepoch.tunklab.com/unique/onslaught_of_cerata",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "b27ecf97dd3c8694314b2a6270a04ab2392b4f28d31267bf9b3b819d0007270d",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 429,
+        "en": "Blossom of Immortal Stone",
+        "zh": "不朽石之花",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Blossom of Immortal Stone",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 429,
+          "url": "https://lastepoch.tunklab.com/unique/blossom_of_immortal_stone",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "a157bbc8c414e1296408fab38e7582f9a8eba4b0928d076283c6e871e7e971ee",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Acquired from",
+            "Rift Beast"
+          ]
+        }
+      },
+      {
+        "id": 430,
+        "en": "Chorus of the Anurok",
+        "zh": "阿努洛克的合唱",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Chorus of the Anurok",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 430,
+          "url": "https://lastepoch.tunklab.com/unique/chorus_of_the_anurok",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "c4360deb3b40e2fc1ffebc5b83e04e5976ba609865b8e549e20db0a7b5b31434",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 431,
+        "en": "Carrion of Creation",
+        "zh": "创世残骸",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Carrion of Creation",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 431,
+          "url": "https://lastepoch.tunklab.com/unique/carrion_of_creation",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "1a6487bbc5070cd9ba7a386c0fa3a69d7f46f155a8327d6fd1972d2d19c77a8f",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Acquired from",
+            "Rift Beast"
+          ]
+        }
+      },
+      {
+        "id": 432,
+        "en": "Horn of the Bone Wisp",
+        "zh": "骨火之角",
+        "type": "WAND",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Horn of the Bone Wisp",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 432,
+          "url": "https://lastepoch.tunklab.com/unique/horn_of_the_bone_wisp",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "ff27e62950f377c6f062688b5f43fdf495f8d8fa97923d63e6993e2d0cbb6c6c",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 433,
+        "en": "Reliquary Nest",
+        "zh": "神圣巢穴",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Reliquary Nest",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 433,
+          "url": "https://lastepoch.tunklab.com/unique/reliquary_nest",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "561e236fd9a1ce66e7bf4b13392336794a2d3f917a2f1e99e509820f78d34c09",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 434,
+        "en": "Mask of Indifference",
+        "zh": "冷漠面具",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Mask of Indifference",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 434,
+          "url": "https://lastepoch.tunklab.com/unique/mask_of_indifference",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "8654317841cf4c4bf92e439a4a1fe1ac4cbbd70d8bf6ba65496dcaeb9054620c",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 435,
+        "en": "Permanence of Primal Knowledge",
+        "zh": "原识永存",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Permanence of Primal Knowledge",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 435,
+          "url": "https://lastepoch.tunklab.com/unique/permanence_of_primal_knowledge",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "76d94c0f7a85b32bcc037ca4d268d9304c8b245e8ed460852fe3bc38e55e6a48",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Acquired from",
+            "Rift Beast"
+          ]
+        }
+      },
+      {
+        "id": 436,
+        "en": "Wings of Discord",
+        "zh": "纷争之翼",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Wings of Discord",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 436,
+          "url": "https://lastepoch.tunklab.com/unique/wings_of_discord",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "36548244509d164e29130237580e71582842fcbbde9130bac448e5115b35ea0b",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 437,
+        "en": "Primal Cadence",
+        "zh": "原始节奏",
+        "type": "TWO_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Primal Cadence",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 437,
+          "url": "https://lastepoch.tunklab.com/unique/primal_cadence",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "06e356e0a4dd20023844eec49656b172b935970d211b9cb24359022f015ff3fa",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 438,
+        "en": "Whetstone Gavel",
+        "zh": "磨石木槌",
+        "type": "ONE_HANDED_MACES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Whetstone Gavel",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 438,
+          "url": "https://lastepoch.tunklab.com/unique/whetstone_gavel",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "8cb6ecc4a3d31b4bf8cca586d1b44d54cb24fb8e8d9b8c05e5149ab207d427c4",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 439,
+        "en": "Truesight Glass",
+        "zh": "真视玻璃",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Truesight Glass",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 439,
+          "url": "https://lastepoch.tunklab.com/unique/truesight_glass",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "da79657c95360081f506fbc7111420e407bea019c97aab8bc36346004d899df3",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 440,
+        "en": "Bluefeather Band",
+        "zh": "蓝羽绑带",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Bluefeather Band",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 440,
+          "url": "https://lastepoch.tunklab.com/unique/bluefeather_band",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "aeddae596a1b3703b8cfb84006f2e8993df8eced1eed8947b5e71a04d1300d90",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 441,
+        "en": "Hydra Arc",
+        "zh": "多头蛇弧光",
+        "type": "BOW",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Hydra Arc",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 441,
+          "url": "https://lastepoch.tunklab.com/unique/hydra_arc",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "fdaccc5c775f3d38f46e759db948ca9e657a6dbc353570668f47e55b13ffe9f4",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 442,
+        "en": "Velocyn's Jaw",
+        "zh": "维洛西恩之颌",
+        "type": "ONE_HANDED_DAGGER",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Velocyn's Jaw",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 442,
+          "url": "https://lastepoch.tunklab.com/unique/velocyns_jaw",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "0193a4f0362581f945545c56a29a1c0a0613bca005ef0b4311c3ff991828603a",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 444,
+        "en": "Evolution's End",
+        "zh": "进化终焉",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Evolution's End",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 444,
+          "url": "https://lastepoch.tunklab.com/unique/evolutions_end",
+          "is_primordial": false,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "5d01e5cb88ac69663cf514c47ae285b18d83f427d46ee86c1b792bb6d6be1ad1",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 445,
+        "en": "Spirit Xylem",
+        "zh": "灵体木质部",
+        "type": "TWO_HANDED_STAFF",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Spirit Xylem",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 445,
+          "url": "https://lastepoch.tunklab.com/unique/spirit_xylem",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "eff6d81e35a1913b02b0c317232ed5b6fc395ade4b1fc770ad804c98eb79826f",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 446,
+        "en": "Fangs of the Berserker",
+        "zh": "狂战士之牙",
+        "type": "BELT",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Fangs of the Berserker",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 446,
+          "url": "https://lastepoch.tunklab.com/unique/fangs_of_the_berserker",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "3426f5413c244043bb102928e4592024f4bd293f308227d4312885a2c350f7fe",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 447,
+        "en": "Bones of the Ancestral Pack",
+        "zh": "先祖集群之骨",
+        "type": "CATALYST",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Bones of the Ancestral Pack",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 447,
+          "url": "https://lastepoch.tunklab.com/unique/bones_of_the_ancestral_pack",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "9dfab8e9d0f753f627f7a276113914c6cfc66ac3e171b96fc50dd4a2c5d30e1b",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 448,
+        "en": "Architects of Astral Blood",
+        "zh": "星血筑师",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Architects of Astral Blood",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 448,
+          "url": "https://lastepoch.tunklab.com/unique/architects_of_astral_blood",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "58e0031e406b91bd9d21bd37719bf7b19b13b1559e5667a4ba218e3117519a22",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 449,
+        "en": "The Butcher's Crown",
+        "zh": "屠夫冠冕",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "The Butcher's Crown",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 449,
+          "url": "https://lastepoch.tunklab.com/unique/the_butchers_crown",
+          "is_primordial": true,
+          "letools_monster_item_drops": [],
+          "tunklab_html_sha256": "eadd1df988694901e9a7a200f7137a4379fdf184af919b63060d23f99e72a843",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Not random drop"
+          ]
+        }
+      },
+      {
+        "id": 469,
+        "en": "Exulis",
+        "zh": "流亡",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Exulis",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.4"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 469,
+          "url": "https://lastepoch.tunklab.com/unique/exulis",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 469,
+              "monsterNameKey": "Actors.Actor_Name_Vision of the Observer",
+              "chanceModifier": 0,
+              "chance": 0.1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 43,
+              "hostOnly": true
+            }
+          ],
+          "tunklab_html_sha256": "9993667df4453d01942ac6f634f83bf1f262c1d3275fa2295bcbbb0c7a48f2a9",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/SuperShade",
+              "name": "Vision of the Observer"
+            }
+          ],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Vision of the Observer",
+            "(",
+            "10%",
+            ")"
+          ]
+        }
+      },
+      {
+        "id": 470,
+        "en": "Oculus of Ruin",
+        "zh": "毁灭之眼",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Oculus of Ruin",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "赛季1.4"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 470,
+          "url": "https://lastepoch.tunklab.com/unique/oculus_of_ruin",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 470,
+              "monsterNameKey": "Actors.Actor_Name_Vision of the Observer",
+              "chanceModifier": 0,
+              "chance": 1,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 43,
+              "hostOnly": true
+            }
+          ],
+          "tunklab_html_sha256": "67af0cba88913e1ee69c247d37fc5bdc01fa388eb88b5c593c22d9c3bdc06163",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/SuperShade",
+              "name": "Vision of the Observer"
+            }
+          ],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Vision of the Observer",
+            "(",
+            "100%",
+            ")"
+          ]
+        }
+      },
+      {
+        "id": 472,
+        "en": "Heorot's Repose",
+        "zh": "赫罗特的憩息",
+        "type": "TWO_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Heorot's Repose",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 472,
+          "url": "https://lastepoch.tunklab.com/unique/heorots_repose",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 472,
+              "monsterNameKey": "Actors.Actor_Name_Morditas",
+              "chanceModifier": 0,
+              "chance": 0.2,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 46,
+              "hostOnly": true
+            }
+          ],
+          "tunklab_html_sha256": "38697a7101f442587542b6f96865fc5fc4deee5a2edad237b1a8ef362be9dc5e",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/MorditasBoss",
+              "name": "Morditas"
+            }
+          ],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "Morditas",
+            "(",
+            "20%",
+            ")"
+          ]
+        }
+      },
+      {
+        "id": 477,
+        "en": "Unsated Rage",
+        "zh": "不息狂怒",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Unsated Rage",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "赛季1.5"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 477,
+          "url": "https://lastepoch.tunklab.com/unique/unsated_rage",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 477,
+              "monsterNameKey": "Actors.Actor_Name_Morditas",
+              "chanceModifier": 0,
+              "chance": 0.5,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 47,
+              "hostOnly": true
+            }
+          ],
+          "tunklab_html_sha256": "b1aa9a239761aeff4fd8913c6e22772c35f0da8bb435c6df307f7de965cea5b8",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Acquired from",
+            "Rage of Morditas"
+          ]
+        }
+      },
+      {
+        "id": 479,
+        "en": "Withstand the Elements",
+        "zh": "抵御元素",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Withstand the Elements",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 479,
+          "url": "https://lastepoch.tunklab.com/unique/withstand_the_elements",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 479,
+              "monsterNameKey": "Actors.Actor_Name_Morditas",
+              "chanceModifier": 0,
+              "chance": 0.5,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 46,
+              "hostOnly": true
+            }
+          ],
+          "tunklab_html_sha256": "6b35638e63a8c467b6f88f89639d92995a704c40fc15412f13096076e39fe463",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Acquired from",
+            "Rage of Morditas"
+          ]
+        }
+      },
+      {
+        "id": 487,
+        "en": "Vestige of Imprisonment",
+        "zh": "囚禁之迹",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Vestige of Imprisonment",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 487,
+          "url": "https://lastepoch.tunklab.com/unique/vestige_of_imprisonment",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 487,
+              "monsterNameKey": "Actors.Actor_Name_Morditas",
+              "chanceModifier": 0,
+              "chance": 0.8,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 47,
+              "hostOnly": true
+            }
+          ],
+          "tunklab_html_sha256": "141d1fec08f2cda544b450240b793b34aebe506752035f94f985103e981f93f9",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/MorditasBossPinnacle",
+              "name": "God of Bloodshed"
+            }
+          ],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "God of Bloodshed",
+            "(",
+            "80%",
+            ")"
+          ]
+        }
+      },
+      {
+        "id": 488,
+        "en": "Morditas' Vengeance",
+        "zh": "莫迪塔斯的复仇",
+        "type": "TWO_HANDED_SPEAR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Morditas' Vengeance",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ],
+        "category": 3,
+        "drop_source": {
+          "id": 488,
+          "url": "https://lastepoch.tunklab.com/unique/morditas_vengeance",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 488,
+              "monsterNameKey": "Actors.Actor_Name_Morditas",
+              "chanceModifier": 0,
+              "chance": 0.2,
+              "maxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 47,
+              "hostOnly": true
+            }
+          ],
+          "tunklab_html_sha256": "a44a2e26876b89b270c3dbc9f82a04538cc40d51843077be07f1a5dafc68cfae",
+          "tunklab_boss_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/npc/MorditasBossPinnacle",
+              "name": "God of Bloodshed"
+            }
+          ],
+          "tunklab_echo_links": [],
+          "tunklab_acquisition_excerpt": [
+            "Dropped By",
+            "God of Bloodshed",
+            "(",
+            "20%",
+            ")"
+          ]
+        }
+      }
+    ],
+    "4": [
+      {
+        "id": 35,
+        "en": "Eye of Reen",
+        "zh": "雷恩之眼",
+        "type": "ONE_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Eye of Reen",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 35,
+          "url": "https://lastepoch.tunklab.com/unique/eye_of_reen",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 45,
+        "en": "Morditas' Reach",
+        "zh": "莫迪塔斯的领域",
+        "type": "TWO_HANDED_SPEAR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Morditas' Reach",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.8,
+        "tunklab_display": "80%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 45,
+          "url": "https://lastepoch.tunklab.com/unique/morditas_reach",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 53,
+        "en": "Rahyeh's Light",
+        "zh": "瑞耶的光翼",
+        "type": "SHIELD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Rahyeh's Light",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.8,
+        "tunklab_display": "80%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 53,
+          "url": "https://lastepoch.tunklab.com/unique/rahyehs_light",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 61,
+        "en": "Orian's Eye",
+        "zh": "奥利安之眼",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Orian's Eye",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.97,
+        "tunklab_display": "97%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 61,
+          "url": "https://lastepoch.tunklab.com/unique/orians_eye",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 84,
+        "en": "Heirloom of the Last Nomad",
+        "zh": "终末游牧民的传家宝",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Heirloom of the Last Nomad",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 84,
+          "url": "https://lastepoch.tunklab.com/unique/heirloom_of_the_last_nomad",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 91,
+        "en": "Fiery Dragon Shoes",
+        "zh": "火龙靴",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Fiery Dragon Shoes",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 91,
+          "url": "https://lastepoch.tunklab.com/unique/fiery_dragon_shoes",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 92,
+        "en": "Jungle Queen's Chaps of Holding",
+        "zh": "丛林女王的储物腰带",
+        "type": "BELT",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Jungle Queen's Chaps of Holding",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.9,
+        "tunklab_display": "90%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 92,
+          "url": "https://lastepoch.tunklab.com/unique/jungle_queens_chaps_of_holding",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 125,
+        "en": "Oceareon",
+        "zh": "大海无量",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Oceareon",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.85,
+        "tunklab_display": "85%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 125,
+          "url": "https://lastepoch.tunklab.com/unique/oceareon",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 126,
+        "en": "Mortality's Grasp",
+        "zh": "死亡之握",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Mortality's Grasp",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 126,
+          "url": "https://lastepoch.tunklab.com/unique/mortalitys_grasp",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 149,
+        "en": "Omnividence",
+        "zh": "全视",
+        "type": "TWO_HANDED_STAFF",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Omnividence",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.9,
+        "tunklab_display": "90%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 149,
+          "url": "https://lastepoch.tunklab.com/unique/omnividence",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 167,
+        "en": "Ravens' Rise",
+        "zh": "渡鸦的崛起",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Ravens' Rise",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.8,
+        "tunklab_display": "80%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 167,
+          "url": "https://lastepoch.tunklab.com/unique/ravens_rise",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 169,
+        "en": "Aergon's Refuge",
+        "zh": "艾尔冈的庇护",
+        "type": "TWO_HANDED_STAFF",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Aergon's Refuge",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.75,
+        "tunklab_display": "75%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 169,
+          "url": "https://lastepoch.tunklab.com/unique/aergons_refuge",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 172,
+        "en": "Herald of the Scurry",
+        "zh": "松鼠使者",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Herald of the Scurry",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 172,
+          "url": "https://lastepoch.tunklab.com/unique/herald_of_the_scurry",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 176,
+        "en": "Aurora's Time Glass",
+        "zh": "奥罗拉的沙漏",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Aurora's Time Glass",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.8,
+        "tunklab_display": "80%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 176,
+          "url": "https://lastepoch.tunklab.com/unique/auroras_time_glass",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 183,
+        "en": "Leviathan Carver",
+        "zh": "利维坦刻刀",
+        "type": "TWO_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Leviathan Carver",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 183,
+          "url": "https://lastepoch.tunklab.com/unique/leviathan_carver",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 187,
+        "en": "Salt the Wound",
+        "zh": "血上加霜",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Salt the Wound",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.85,
+        "tunklab_display": "85%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 187,
+          "url": "https://lastepoch.tunklab.com/unique/salt_the_wound",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 195,
+        "en": "Scales of Eterra",
+        "zh": "伊泰拉的天平",
+        "type": "CATALYST",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Scales of Eterra",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 195,
+          "url": "https://lastepoch.tunklab.com/unique/scales_of_eterra_fire_cold",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 196,
+        "en": "Scales of Eterra",
+        "zh": "伊泰拉的天平",
+        "type": "CATALYST",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Scales of Eterra",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 196,
+          "url": "https://lastepoch.tunklab.com/unique/scales_of_eterra_cold_lightning",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 197,
+        "en": "Scales of Eterra",
+        "zh": "伊泰拉的天平",
+        "type": "CATALYST",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Scales of Eterra",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 197,
+          "url": "https://lastepoch.tunklab.com/unique/scales_of_eterra_fire_lightning",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 198,
+        "en": "Bastion of Honour",
+        "zh": "荣誉堡垒",
+        "type": "SHIELD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Bastion of Honour",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.9,
+        "tunklab_display": "90%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 198,
+          "url": "https://lastepoch.tunklab.com/unique/bastion_of_honour",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 208,
+        "en": "Ravenous Void",
+        "zh": "贪婪虚空",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Ravenous Void",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.98,
+        "tunklab_display": "98%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 208,
+          "url": "https://lastepoch.tunklab.com/unique/ravenous_void",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 208,
+              "monsterNameKey": "Actors.Actor_Name_The Husk of Elder Gaspar",
+              "chanceModifier": 0,
+              "chance": 0,
+              "maxChance": 0.045,
+              "rarityForMaxChance": 7,
+              "timelineInfo": {
+                "id": 8,
+                "empoweredOnly": false
+              },
+              "minCorruption": 0
+            }
+          ]
+        }
+      },
+      {
+        "id": 220,
+        "en": "Death's Embrace",
+        "zh": "死亡之拥",
+        "type": "TWO_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Death's Embrace",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.85,
+        "tunklab_display": "85%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 220,
+          "url": "https://lastepoch.tunklab.com/unique/deaths_embrace",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 221,
+        "en": "Paranoia",
+        "zh": "草木皆兵",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Paranoia",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.9,
+        "tunklab_display": "90%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 221,
+          "url": "https://lastepoch.tunklab.com/unique/paranoia",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 232,
+        "en": "Hakar's Phoenix",
+        "zh": "哈卡尔的凤凰",
+        "type": "ONE_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Hakar's Phoenix",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 232,
+          "url": "https://lastepoch.tunklab.com/unique/hakars_phoenix",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 235,
+        "en": "Silvafrond",
+        "zh": "森之蕨叶",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Silvafrond",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 235,
+          "url": "https://lastepoch.tunklab.com/unique/silvafrond",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 272,
+        "en": "Aaron's Will",
+        "zh": "亚伦的意志",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Aaron's Will",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.75,
+        "tunklab_display": "75%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 272,
+          "url": "https://lastepoch.tunklab.com/unique/aarons_will",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 277,
+        "en": "Red Ring of Atlaria",
+        "zh": "阿特拉里亚的红戒指",
+        "type": "RING",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Red Ring of Atlaria",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.98,
+        "tunklab_display": "98%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 277,
+          "url": "https://lastepoch.tunklab.com/unique/red_ring_of_atlaria",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 310,
+        "en": "Wrongwarp",
+        "zh": "错乱折跃",
+        "type": "WAND",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Wrongwarp",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.8,
+        "tunklab_display": "80%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 310,
+          "url": "https://lastepoch.tunklab.com/unique/wrongwarp",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 318,
+        "en": "The Shattered Cycle",
+        "zh": "朝暮轮转",
+        "type": "ONE_HANDED_SCEPTRE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "The Shattered Cycle",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.72,
+        "tunklab_display": "72%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 318,
+          "url": "https://lastepoch.tunklab.com/unique/the_shattered_cycle",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 327,
+        "en": "Communion of the Erased",
+        "zh": "被抹灭者的圣餐仪式",
+        "type": "BELT",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Communion of the Erased",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 327,
+          "url": "https://lastepoch.tunklab.com/unique/communion_of_the_erased",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 335,
+        "en": "Wraithlord's Harbour",
+        "zh": "幽灵领主的港湾",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Wraithlord's Harbour",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.35,
+        "tunklab_display": "35%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 335,
+          "url": "https://lastepoch.tunklab.com/unique/wraithlords_harbour",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 336,
+        "en": "Naal's Tooth",
+        "zh": "纳奥的牙齿",
+        "type": "ONE_HANDED_SWORD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Naal's Tooth",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.8,
+        "tunklab_display": "80%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 336,
+          "url": "https://lastepoch.tunklab.com/unique/naals_tooth",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 337,
+        "en": "Razorfall",
+        "zh": "剃刀降临",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Razorfall",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.8,
+        "tunklab_display": "80%",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 337,
+          "url": "https://lastepoch.tunklab.com/unique/razorfall",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 420,
+        "en": "Executioner's Tithe",
+        "zh": "处刑者的献祭",
+        "type": "ONE_HANDED_AXE",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Executioner's Tithe",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 420,
+          "url": "https://lastepoch.tunklab.com/unique/executioners_tithe",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 443,
+        "en": "Army of Skin",
+        "zh": "肌肤大军",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Army of Skin",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.25,
+        "tunklab_display": "25%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.3"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 443,
+          "url": "https://lastepoch.tunklab.com/unique/army_of_skin",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 450,
+        "en": "Unbroken Charge",
+        "zh": "不屈冲锋",
+        "type": "SHIELD",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Unbroken Charge",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.7,
+        "tunklab_display": "70%",
+        "old_sources": [
+          "赛季1.4"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 450,
+          "url": "https://lastepoch.tunklab.com/unique/unbroken_charge",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 458,
+        "en": "Tabi of Dusk and Dawn",
+        "zh": "朝暮足袋",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Tabi of Dusk and Dawn",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.3,
+        "tunklab_display": "30%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.4"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 458,
+          "url": "https://lastepoch.tunklab.com/unique/tabi_of_dusk_and_dawn",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 459,
+        "en": "Artifice of Devastation",
+        "zh": "毁灭机巧",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Artifice of Devastation",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.3,
+        "tunklab_display": "30%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.4"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 459,
+          "url": "https://lastepoch.tunklab.com/unique/artifice_of_devastation",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 461,
+        "en": "Ash Wake",
+        "zh": "灰烬觉醒",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Ash Wake",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.3,
+        "tunklab_display": "30%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.4"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 461,
+          "url": "https://lastepoch.tunklab.com/unique/ash_wake",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 463,
+        "en": "Rahyeh's Embrace",
+        "zh": "瑞耶之拥",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Rahyeh's Embrace",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.4"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 463,
+          "url": "https://lastepoch.tunklab.com/unique/rahyehs_embrace",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 471,
+        "en": "Unbroken Legion",
+        "zh": "不屈军团",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Unbroken Legion",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 471,
+          "url": "https://lastepoch.tunklab.com/unique/unbroken_legion",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 473,
+        "en": "Eternal Font",
+        "zh": "永恒之池",
+        "type": "AMULET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Eternal Font",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.998,
+        "tunklab_display": "99.8%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 473,
+          "url": "https://lastepoch.tunklab.com/unique/eternal_font",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 475,
+        "en": "Devoured Knowledge",
+        "zh": "吞噬知识",
+        "type": "BODY_ARMOR",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Devoured Knowledge",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 475,
+          "url": "https://lastepoch.tunklab.com/unique/devoured_knowledge",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 476,
+        "en": "Death Dance",
+        "zh": "死亡之舞",
+        "type": "BOOTS",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Death Dance",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.999,
+        "tunklab_display": "99.9%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 476,
+          "url": "https://lastepoch.tunklab.com/unique/death_dance",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 478,
+        "en": "Gift of the Eidolon",
+        "zh": "幻灵赠礼",
+        "type": "GLOVES",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Gift of the Eidolon",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.999,
+        "tunklab_display": "99.9%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 478,
+          "url": "https://lastepoch.tunklab.com/unique/gift_of_the_eidolon",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 483,
+        "en": "Wrangler's Keepsake",
+        "zh": "牧人的纪念品",
+        "type": "RELIC",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Wrangler's Keepsake",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.5,
+        "tunklab_display": "50%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 483,
+          "url": "https://lastepoch.tunklab.com/unique/wranglers_keepsake",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      },
+      {
+        "id": 484,
+        "en": "Effusive Oath",
+        "zh": "奔放誓言",
+        "type": "HELMET",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Effusive Oath",
+        "can_drop_randomly": true,
+        "reroll_chance": 0.2,
+        "tunklab_display": "20%",
+        "old_sources": [
+          "Raxx R15",
+          "赛季1.5"
+        ],
+        "category": 4,
+        "drop_source": {
+          "id": 484,
+          "url": "https://lastepoch.tunklab.com/unique/effusive_oath",
+          "is_primordial": false,
+          "letools_monster_item_drops": []
+        }
+      }
+    ],
+    "5": [
+      {
+        "id": 416,
+        "en": "Brewmaster's Buckle",
+        "zh": "酿酒大师的皮带扣",
+        "type": "BELT",
+        "set": false,
+        "catalog_hidden": false,
+        "is_cocooned": false,
+        "source_name": "Brewmaster's Buckle",
+        "can_drop_randomly": false,
+        "reroll_chance": 0.0,
+        "tunklab_display": "非随机，显示－",
+        "old_sources": [
+          "Raxx R15"
+        ],
+        "category": 5,
+        "drop_source": {
+          "id": 416,
+          "url": "https://lastepoch.tunklab.com/unique/brewmasters_buckle",
+          "is_primordial": false,
+          "letools_monster_item_drops": [
+            {
+              "uniqueId": 416,
+              "chanceModifier": 0,
+              "chance": 1,
+              "maxChance": 1,
+              "rarityForMaxChance": 0,
+              "minCorruption": 0,
+              "wovenEcho": 20
+            }
+          ],
+          "tunklab_html_sha256": "e3ea79200ce24255b4361d4c37a139620b61ea984290a9fef7687dec9164197b",
+          "tunklab_boss_links": [],
+          "tunklab_echo_links": [
+            {
+              "url": "https://lastepoch.tunklab.com/echo/the_grand_brewery",
+              "name": "The Grand Brewery"
+            }
+          ],
+          "tunklab_acquisition_excerpt": [
+            "Dropped by completing",
+            "The Grand Brewery",
+            "(",
+            "guaranteed",
+            ")"
+          ]
+        }
+      }
+    ]
+  },
+  "positiveRerollAdditions": [
+    {
+      "id": 11,
+      "en": "Exsanguinous",
+      "zh": "大失血",
+      "type": "BODY_ARMOR",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Exsanguinous",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.5,
+      "tunklab_display": "50%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 11,
+        "url": "https://lastepoch.tunklab.com/unique/exsanguinous",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 30,
+      "en": "Undisputed",
+      "zh": "无可争议",
+      "type": "ONE_HANDED_AXE",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Undisputed",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.9,
+      "tunklab_display": "90%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 30,
+        "url": "https://lastepoch.tunklab.com/unique/undisputed",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 37,
+      "en": "Cinder Song",
+      "zh": "灰烬之歌",
+      "type": "WAND",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Cinder Song",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.25,
+      "tunklab_display": "25%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 37,
+        "url": "https://lastepoch.tunklab.com/unique/cinder_song",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 38,
+      "en": "Alchemist's Ladle",
+      "zh": "炼金术士的勺子",
+      "type": "WAND",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Alchemist's Ladle",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.5,
+      "tunklab_display": "50%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 38,
+        "url": "https://lastepoch.tunklab.com/unique/alchemists_ladle",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 66,
+      "en": "Hollow Finger",
+      "zh": "空心手指",
+      "type": "RING",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Hollow Finger",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.2,
+      "tunklab_display": "20%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 66,
+        "url": "https://lastepoch.tunklab.com/unique/hollow_finger",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 71,
+      "en": "Valdyr's Chalice",
+      "zh": "瓦尔迪尔的圣餐杯",
+      "type": "RELIC",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Valdyr's Chalice",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.6,
+      "tunklab_display": "60%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 71,
+        "url": "https://lastepoch.tunklab.com/unique/valdyrs_chalice",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 73,
+      "en": "Plague Bearer's Staff",
+      "zh": "瘟疫载体的长杖",
+      "type": "TWO_HANDED_STAFF",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Plague Bearer's Staff",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.5,
+      "tunklab_display": "50%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 73,
+        "url": "https://lastepoch.tunklab.com/unique/plague_bearers_staff",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 76,
+      "en": "Liath's Signet",
+      "zh": "莉亚丝的图章",
+      "type": "RING",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Liath's Signet",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.5,
+      "tunklab_display": "50%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 76,
+        "url": "https://lastepoch.tunklab.com/unique/liaths_signet",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 80,
+      "en": "Bloodgeon",
+      "zh": "鲜血重击",
+      "type": "ONE_HANDED_MACES",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Bloodgeon",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.5,
+      "tunklab_display": "50%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 80,
+        "url": "https://lastepoch.tunklab.com/unique/bloodgeon",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 93,
+      "en": "Kermode's Cage",
+      "zh": "克莫德的囚笼",
+      "type": "BODY_ARMOR",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Kermode's Cage",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.2,
+      "tunklab_display": "20%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 93,
+        "url": "https://lastepoch.tunklab.com/unique/kermodes_cage",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 104,
+      "en": "Suloron's Step",
+      "zh": "苏洛隆的脚步",
+      "type": "BOOTS",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Suloron's Step",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.6,
+      "tunklab_display": "60%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 104,
+        "url": "https://lastepoch.tunklab.com/unique/sulorons_step",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 108,
+      "en": "Melvern's Writ",
+      "zh": "梅尔文的令状",
+      "type": "RELIC",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Melvern's Writ",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.6,
+      "tunklab_display": "60%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 108,
+        "url": "https://lastepoch.tunklab.com/unique/melverns_writ",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 132,
+      "en": "Transient Rest",
+      "zh": "短暂休息",
+      "type": "BOOTS",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Transient Rest",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.3,
+      "tunklab_display": "30%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 132,
+        "url": "https://lastepoch.tunklab.com/unique/transient_rest",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 133,
+      "en": "Xithara's Conundrum",
+      "zh": "西塔拉的谜团",
+      "type": "AMULET",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Xithara's Conundrum",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.3,
+      "tunklab_display": "30%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 133,
+        "url": "https://lastepoch.tunklab.com/unique/xitharas_conundrum",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 136,
+      "en": "Smoke Weaver",
+      "zh": "烟雾编织者",
+      "type": "ONE_HANDED_DAGGER",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Smoke Weaver",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.5,
+      "tunklab_display": "50%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 136,
+        "url": "https://lastepoch.tunklab.com/unique/smoke_weaver",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 145,
+      "en": "Life's Journey",
+      "zh": "生命轮回",
+      "type": "SHIELD",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Life's Journey",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.5,
+      "tunklab_display": "50%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 145,
+        "url": "https://lastepoch.tunklab.com/unique/lifes_journey",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 147,
+      "en": "Raindance",
+      "zh": "祈雨之舞",
+      "type": "BOOTS",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Raindance",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.65,
+      "tunklab_display": "65%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 147,
+        "url": "https://lastepoch.tunklab.com/unique/raindance",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 168,
+      "en": "Flight of the First",
+      "zh": "原初者的飞翔",
+      "type": "BOW",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Flight of the First",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.5,
+      "tunklab_display": "50%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 168,
+        "url": "https://lastepoch.tunklab.com/unique/flight_of_the_first",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 181,
+      "en": "Marina's Lost Soul",
+      "zh": "玛丽娜的失落灵魂",
+      "type": "WAND",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Marina's Lost Soul",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.3,
+      "tunklab_display": "30%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 181,
+        "url": "https://lastepoch.tunklab.com/unique/marinas_lost_soul",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 222,
+      "en": "Prismatic Gaze",
+      "zh": "棱镜凝视",
+      "type": "HELMET",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Prismatic Gaze",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.6,
+      "tunklab_display": "60%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 222,
+        "url": "https://lastepoch.tunklab.com/unique/prismatic_gaze",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 224,
+      "en": "The Judicator",
+      "zh": "审判者",
+      "type": "TWO_HANDED_SPEAR",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "The Judicator",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.6,
+      "tunklab_display": "60%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 224,
+        "url": "https://lastepoch.tunklab.com/unique/the_judicator",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 229,
+      "en": "Roots of Vithrasil",
+      "zh": "维斯拉塞尔的根须",
+      "type": "BOOTS",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Roots of Vithrasil",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.4,
+      "tunklab_display": "40%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 229,
+        "url": "https://lastepoch.tunklab.com/unique/roots_of_vithrasil",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 242,
+      "en": "Shadow String",
+      "zh": "影弦",
+      "type": "BOW",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Shadow String",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.6,
+      "tunklab_display": "60%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 242,
+        "url": "https://lastepoch.tunklab.com/unique/shadow_string",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 249,
+      "en": "Diothaen's Bloody Nib",
+      "zh": "迪奥塔恩的血腥羽毛笔",
+      "type": "RELIC",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Diothaen's Bloody Nib",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.5,
+      "tunklab_display": "50%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 249,
+        "url": "https://lastepoch.tunklab.com/unique/diothaens_bloody_nib",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 250,
+      "en": "Torkrefin's Hunger",
+      "zh": "托克瑞芬的饥渴",
+      "type": "TWO_HANDED_SWORD",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Torkrefin's Hunger",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.5,
+      "tunklab_display": "50%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 250,
+        "url": "https://lastepoch.tunklab.com/unique/torkrefins_hunger",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 251,
+      "en": "Zeurial's Hunt",
+      "zh": "泽乌尔的狩猎",
+      "type": "QUIVER",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Zeurial's Hunt",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.2,
+      "tunklab_display": "20%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 251,
+        "url": "https://lastepoch.tunklab.com/unique/zeurials_hunt",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 252,
+      "en": "Pact Severance",
+      "zh": "断绝契约",
+      "type": "ONE_HANDED_AXE",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Pact Severance",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.5,
+      "tunklab_display": "50%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 252,
+        "url": "https://lastepoch.tunklab.com/unique/pact_severance",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 268,
+      "en": "Bloodkeeper's Nest",
+      "zh": "血腥守护者的巢穴",
+      "type": "RELIC",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Bloodkeeper's Nest",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.6,
+      "tunklab_display": "60%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 268,
+        "url": "https://lastepoch.tunklab.com/unique/bloodkeepers_nest",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 269,
+      "en": "Scales of Lemniscate",
+      "zh": "双纽线天平",
+      "type": "TWO_HANDED_AXE",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Scales of Lemniscate",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.5,
+      "tunklab_display": "50%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 269,
+        "url": "https://lastepoch.tunklab.com/unique/scales_of_lemniscate",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 270,
+      "en": "Hive Mind",
+      "zh": "虫巢意识",
+      "type": "HELMET",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Hive Mind",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.6,
+      "tunklab_display": "60%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 270,
+        "url": "https://lastepoch.tunklab.com/unique/hive_mind",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 274,
+      "en": "Branch of Hallows",
+      "zh": "神圣枝芽",
+      "type": "TWO_HANDED_STAFF",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Branch of Hallows",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.5,
+      "tunklab_display": "50%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 274,
+        "url": "https://lastepoch.tunklab.com/unique/branch_of_hallows",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 275,
+      "en": "Unstable Core",
+      "zh": "不稳定核心",
+      "type": "BODY_ARMOR",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Unstable Core",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.5,
+      "tunklab_display": "50%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 275,
+        "url": "https://lastepoch.tunklab.com/unique/unstable_core",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 290,
+      "en": "Apostate's Sanctuary",
+      "zh": "叛教者的圣所",
+      "type": "AMULET",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Apostate's Sanctuary",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.64,
+      "tunklab_display": "64%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 290,
+        "url": "https://lastepoch.tunklab.com/unique/apostates_sanctuary",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 304,
+      "en": "Static Shell",
+      "zh": "静电之壳",
+      "type": "BODY_ARMOR",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Static Shell",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.4,
+      "tunklab_display": "40%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 304,
+        "url": "https://lastepoch.tunklab.com/unique/static_shell",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 306,
+      "en": "Blood of the Exile",
+      "zh": "流亡者之血",
+      "type": "BOOTS",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Blood of the Exile",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.5,
+      "tunklab_display": "50%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 306,
+        "url": "https://lastepoch.tunklab.com/unique/blood_of_the_exile",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 307,
+      "en": "Crest of Unity",
+      "zh": "团结之徽",
+      "type": "HELMET",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Crest of Unity",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.3,
+      "tunklab_display": "30%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 307,
+        "url": "https://lastepoch.tunklab.com/unique/crest_of_unity",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 316,
+      "en": "Apex of Thought",
+      "zh": "思维巅峰",
+      "type": "HELMET",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Apex of Thought",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.4,
+      "tunklab_display": "40%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 316,
+        "url": "https://lastepoch.tunklab.com/unique/apex_of_thought",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 323,
+      "en": "Wheel of Torment",
+      "zh": "折磨之轮",
+      "type": "TWO_HANDED_STAFF",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Wheel of Torment",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.5,
+      "tunklab_display": "50%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 323,
+        "url": "https://lastepoch.tunklab.com/unique/wheel_of_torment",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 332,
+      "en": "Blood Roost",
+      "zh": "鲜血鸟栖",
+      "type": "GLOVES",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Blood Roost",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.6,
+      "tunklab_display": "60%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 332,
+        "url": "https://lastepoch.tunklab.com/unique/blood_roost",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 334,
+      "en": "Talons of Valor",
+      "zh": "英勇利爪",
+      "type": "BOW",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Talons of Valor",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.2,
+      "tunklab_display": "20%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 334,
+        "url": "https://lastepoch.tunklab.com/unique/talons_of_valor",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 338,
+      "en": "Sword Catcher",
+      "zh": "剑刃捕手",
+      "type": "TWO_HANDED_AXE",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Sword Catcher",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.6,
+      "tunklab_display": "60%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 338,
+        "url": "https://lastepoch.tunklab.com/unique/sword_catcher",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 342,
+      "en": "Traitor's Tongue",
+      "zh": "叛徒之舌",
+      "type": "ONE_HANDED_DAGGER",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Traitor's Tongue",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.6,
+      "tunklab_display": "60%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 342,
+        "url": "https://lastepoch.tunklab.com/unique/traitors_tongue",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 351,
+      "en": "Triboelectra",
+      "zh": "电光石火",
+      "type": "WAND",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Triboelectra",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.3,
+      "tunklab_display": "30%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 351,
+        "url": "https://lastepoch.tunklab.com/unique/triboelectra",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 356,
+      "en": "Stealth",
+      "zh": "影匿",
+      "type": "BOOTS",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Stealth",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.6,
+      "tunklab_display": "60%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 356,
+        "url": "https://lastepoch.tunklab.com/unique/stealth",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 368,
+      "en": "Mana Guide",
+      "zh": "魔力向导",
+      "type": "AMULET",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Mana Guide",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.3,
+      "tunklab_display": "30%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 368,
+        "url": "https://lastepoch.tunklab.com/unique/mana_guide",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 373,
+      "en": "Ravager's Dart",
+      "zh": "掠夺者飞镖",
+      "type": "HELMET",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Ravager's Dart",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.2,
+      "tunklab_display": "20%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 373,
+        "url": "https://lastepoch.tunklab.com/unique/ravagers_dart",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 374,
+      "en": "Pearls of the Swine",
+      "zh": "猪猡的珍珠",
+      "type": "AMULET",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Pearls of the Swine",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.4,
+      "tunklab_display": "40%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 374,
+        "url": "https://lastepoch.tunklab.com/unique/pearls_of_the_swine_blood",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 375,
+      "en": "Pearls of the Swine",
+      "zh": "猪猡的珍珠",
+      "type": "AMULET",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Pearls of the Swine",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.4,
+      "tunklab_display": "40%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 375,
+        "url": "https://lastepoch.tunklab.com/unique/pearls_of_the_swine_fire",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 376,
+      "en": "Pearls of the Swine",
+      "zh": "猪猡的珍珠",
+      "type": "AMULET",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Pearls of the Swine",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.4,
+      "tunklab_display": "40%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 376,
+        "url": "https://lastepoch.tunklab.com/unique/pearls_of_the_swine_poison",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    },
+    {
+      "id": 414,
+      "en": "Downfall of the Righteous",
+      "zh": "正义陨落",
+      "type": "RELIC",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Downfall of the Righteous",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.2,
+      "tunklab_display": "20%",
+      "old_sources": [],
+      "drop_source": {
+        "id": 414,
+        "url": "https://lastepoch.tunklab.com/unique/downfall_of_the_righteous",
+        "is_primordial": false,
+        "letools_monster_item_drops": []
+      }
+    }
+  ],
+  "candidateIds": [
+    11,
+    30,
+    35,
+    37,
+    38,
+    45,
+    53,
+    61,
+    66,
+    71,
+    73,
+    76,
+    80,
+    84,
+    91,
+    92,
+    93,
+    104,
+    108,
+    125,
+    126,
+    132,
+    133,
+    136,
+    145,
+    147,
+    149,
+    167,
+    168,
+    169,
+    172,
+    175,
+    176,
+    179,
+    180,
+    181,
+    183,
+    187,
+    195,
+    196,
+    197,
+    198,
+    208,
+    216,
+    220,
+    221,
+    222,
+    224,
+    229,
+    232,
+    235,
+    242,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    258,
+    268,
+    269,
+    270,
+    272,
+    274,
+    275,
+    277,
+    290,
+    304,
+    306,
+    307,
+    310,
+    316,
+    318,
+    323,
+    327,
+    332,
+    334,
+    335,
+    336,
+    337,
+    338,
+    339,
+    342,
+    345,
+    347,
+    351,
+    353,
+    354,
+    355,
+    356,
+    357,
+    358,
+    361,
+    364,
+    365,
+    366,
+    367,
+    368,
+    373,
+    374,
+    375,
+    376,
+    379,
+    380,
+    381,
+    382,
+    383,
+    384,
+    385,
+    386,
+    387,
+    388,
+    389,
+    390,
+    391,
+    392,
+    393,
+    394,
+    395,
+    396,
+    397,
+    398,
+    399,
+    400,
+    401,
+    403,
+    411,
+    413,
+    414,
+    415,
+    416,
+    417,
+    420,
+    423,
+    424,
+    425,
+    426,
+    427,
+    428,
+    429,
+    430,
+    431,
+    432,
+    433,
+    434,
+    435,
+    436,
+    437,
+    438,
+    439,
+    440,
+    441,
+    442,
+    443,
+    444,
+    445,
+    446,
+    447,
+    448,
+    449,
+    450,
+    458,
+    459,
+    461,
+    463,
+    469,
+    470,
+    471,
+    472,
+    473,
+    475,
+    476,
+    477,
+    478,
+    479,
+    483,
+    484,
+    487,
+    488
+  ],
+  "separatePositiveRerollIdols": [
+    {
+      "id": 246,
+      "en": "Singularity",
+      "zh": "奇点",
+      "type": "IDOL_1x1_ETERRA",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Singularity",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.3,
+      "tunklab_display": "30%",
+      "old_sources": [
+        "Raxx R15"
+      ]
+    },
+    {
+      "id": 462,
+      "en": "Natural Wrath",
+      "zh": "自然之怒",
+      "type": "IDOL_1x3",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Natural Wrath",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.2,
+      "tunklab_display": "20%",
+      "old_sources": [
+        "Raxx R15",
+        "赛季1.4"
+      ]
+    },
+    {
+      "id": 485,
+      "en": "Scorched Earth",
+      "zh": "焦土",
+      "type": "IDOL_3x1",
+      "set": false,
+      "catalog_hidden": false,
+      "is_cocooned": false,
+      "source_name": "Scorched Earth",
+      "can_drop_randomly": true,
+      "reroll_chance": 0.3,
+      "tunklab_display": "30%",
+      "old_sources": [
+        "Raxx R15",
+        "赛季1.5"
+      ]
+    }
+  ],
+  "checks": {
+    "oldUniquePoolPartitionedExactlyOnce": true,
+    "all97PositiveUniquesCovered": true,
+    "onlyCategory2RemovedFromOldUniques": true,
+    "setsExcludedFromNumberedGroups": true,
+    "candidateMatchesActiveUniquePool": true
+  }
+}

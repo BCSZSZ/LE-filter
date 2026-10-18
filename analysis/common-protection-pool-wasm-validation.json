@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "date": "2026-10-18",
+  "runtime": "Pyodide 314.0.7 / Node.js",
+  "replacementApplied": true,
+  "browserDownloadTested": false,
+  "gameExecutionTested": false,
+  "cases": [
+    {
+      "name": "bootstrap_active_pool",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "experimentals=False,uniques=False,sets=False",
+      "count": 94,
+      "sha256": "62e26919507ae19ebed103a78520475cb67a535c34ef4e5d00fff1eede220294",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "experimentals=False,uniques=False,sets=True",
+      "count": 95,
+      "sha256": "05ac2e7f60db750550a10a07abe7567adefd4644dd8125721f5e1d78429c432f",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "experimentals=False,uniques=True,sets=False",
+      "count": 95,
+      "sha256": "2fa9e7ecb119c767c54c70054bb09690212acb2dd09b6a08283c3903db946d1e",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "experimentals=False,uniques=True,sets=True",
+      "count": 96,
+      "sha256": "5cab59d74e551255548f70048db15b7775daa0d4072eea8cadfbadb0c31d0ef9",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "experimentals=True,uniques=True,sets=True",
+      "count": 97,
+      "sha256": "f22740e1ae45682d0c367da0b28a690ef4cd65eef691ebd766722d5663a41582",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "legacy_missing_switches",
+      "count": 96,
+      "sha256": "5cab59d74e551255548f70048db15b7775daa0d4072eea8cadfbadb0c31d0ef9",
+      "completeOutputEqual": true
+    }
+  ]
+}

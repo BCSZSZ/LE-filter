@@ -295,6 +295,9 @@ class ToolTests(unittest.TestCase):
             for u in release["uniques"]:
                 self.assertEqual(e.CATALOG["uniques"][str(u["id"])]["en"], u["en"])
                 row = first(out, u["type"], uid=u["id"], rarity="UNIQUE", lp=0, ww=0)
+                if u["id"] in e.COMMON_PROTECTION["removed_unique_ids"]:
+                    self.assertEqual(row["action"], "HIDE")
+                    continue
                 expected = "T0极稀有暗金0LP起" if u["id"] in e.ULTRA_RARE_UNIQUES else "共通暗金神像" if u["id"] in e.UNIQUE_IDOLS else "通用套装保护" if e.CATALOG["uniques"][str(u["id"])]["set"] else "通用暗金0LP保护"
                 self.assertEqual((row["category"], row["tier"], row["role"]), (expected, 4 if u["id"] in e.ULTRA_RARE_UNIQUES else 1, "通用"))
         for lp, tier in [(1, 2), (2, 3), (3, 4)]:
@@ -303,7 +306,7 @@ class ToolTests(unittest.TestCase):
         self.assertEqual(first(self.output, uid=475, rarity="UNIQUE")["role"], "主")
         self.assertEqual(first(self.output, uid=471, rarity="UNIQUE")["role"], "副")
 
-    def test_common_protection_split_preserves_membership_and_other_rolls(self):
+    def test_common_protection_split_applies_pool_and_preserves_retained_rolls(self):
         common = [(n, r) for n, r in zip(parsed(self.output), self.output["rules"]) if r["category"] in {"通用暗金0LP保护", "通用套装保护"}]
         self.assertEqual(len(common), 2)
         actual = {}
@@ -314,14 +317,14 @@ class ToolTests(unittest.TestCase):
             actual.update({int(u.findtext("UniqueId")): u for u in c})
         original = [u for n in [15, 16] for u in e.condition(e.BASE[n], "UniqueModifiersCondition")]
         bd_ids = {uid for b in self.config["builds"] if b["enabled"] for uid in e.expand_unique_sets(b["profiles"]["endgame"]["uniques"])}
-        expected = ({int(u.findtext("UniqueId")) for u in original} | e.SEASONAL_UNIQUES) - e.UNIQUE_IDOLS - e.ULTRA_RARE_UNIQUES - bd_ids
+        expected = e.COMMON_ZERO_LP_IDS - e.ULTRA_RARE_UNIQUES - bd_ids
         self.assertEqual(set(actual), expected)
         self.assertEqual(sum(len(row["uniques"]) for _, row in common), len(expected))
-        for uid in e.SEASONAL_UNIQUES - e.UNIQUE_IDOLS - e.ULTRA_RARE_UNIQUES - bd_ids:
+        for uid in (e.SEASONAL_UNIQUES & expected) | ((set(actual) - {int(u.findtext("UniqueId")) for u in original})):
             self.assertFalse(len(actual[uid].find("Rolls")))
         for u in original:
             uid = int(u.findtext("UniqueId"))
-            if uid not in e.SEASONAL_UNIQUES | e.UNIQUE_IDOLS | e.ULTRA_RARE_UNIQUES | bd_ids:
+            if uid in actual and uid not in e.SEASONAL_UNIQUES:
                 self.assertEqual(tree(actual[uid]), tree(u))
         self.assertFalse(any(r["category"] == "Raxx通用" and r["source_raxx_rule"] in range(12, 17) for r in self.output["rules"]))
         self.assertFalse(any(r["category"] == "珍贵名单低WW静音" for r in self.output["rules"]))

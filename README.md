@@ -6,7 +6,9 @@
 
 **目标工作台已可使用**：双击[start-tool.cmd](start-tool.cmd)，打开本地 <http://127.0.0.1:8765>。左侧并排“官方模板”和“我的保存”：多选只读模板并指定主BD，点击“应用所选BD”后，所有已选BD生成一条可编辑保存方案。勾选不新增保存，再次应用创建新方案；已有方案可直接打开，编辑自动保存。支持导入filter提取目标、中文／英文／ID搜索多选、方案内主副套路调整、全部方案JSON备份和XML预览导出。终局五类目标、练级只填词缀与底材两份列表，共同导出一份filter。见[工具使用说明](docs/TOOL_GUIDE.md)。默认模板组合两BD96条，均启用，练级目标留空。05要求指定底材＋同BD对应部位目标T7常驻；被C1完整覆盖的底材省去重复规则。删除专门T6层，练级品质80退出、底材60退出、普通拆解50退出、原常驻拆解60退出。897附魔及腐化不计普通神像目标。
 
-[赛季暗金通用保护](docs/SEASONAL_UNIQUE_PROTECTION.md)涵盖1.3／1.4／1.5新增的55种暗金，含25种先古和4种暗金神像；0LP也留。原170种名单完整保留：159种装备／套装现拆为两条独立开关，基础池138暗金／21套装；另有10种可选暗金神像与先驱者之针344独立常驻。生成时省去已由T0及BD前置规则覆盖的低档ID。通用暗金、套装默认开启，崇高实验装备默认关闭，均可在“共通规则”调整；关闭通用类别不取消BD明确需求。与Tunklab reroll大于0的[完整重合与差分](docs/COMMON_UNIQUE_COMPARISON.md)已整理，新口径尚未替换旧名单。
+[通用暗金与全部套装保护](docs/COMMON_UNIQUE_PROTECTION.md)已更新到生成器：暗金181种（旧138移出7种世界随机reroll=0，补齐50种正reroll暗金），套装全部61件／24套，分别一条规则、两个独立开关，默认开启。暗金编号分类不含套装；茧化、原限定来源和特殊奖励保留，包含全部25先古。T0及BD前置已覆盖的低档ID会省去重复，默认Strict两BD实际通用池161暗金／61套装，仍96条规则。崇高实验默认关闭；10种可选暗金神像与先驱者之针344仍独立。刷新网页并重新导出XML即可更新已有方案的生成结果，原开关、BD目标和[赛季冻结来源](docs/SEASONAL_UNIQUE_PROTECTION.md)保留。
+
+旧暗金的[五类来源核查](docs/COMMON_UNIQUE_CLASSIFICATION.md)已按非套装对象订正：茧化23、世界随机reroll=0的7、限定Boss／裂隙体系60、正reroll47、其他特殊奖励1。蜂农三件移出暗金②类，随全部套装保留；先古来源按官方1.3.2补正。此前[纯reroll重合与差分](docs/COMMON_UNIQUE_COMPARISON.md)保留为历史对照，当前以181暗金＋全部61套装的242个物品ID为准。
 
 新增[共通BD需求JSON格式](docs/REQUIREMENTS_FORMAT.md)：filter与攻略先提供一个BD／一个阶段的目标，网页可导入、修改并保存回该格式，再由基底生成filter。攻略835的[流血骷髅终局需求](requirements/bleed-skeleton-roamer-guide-835.endgame.json)含25暗金／套装、13装备组、3神像组、1祭坛、3独立底材；另有[练级需求](requirements/bleed-skeleton-roamer-guide-835.leveling.json)，8词缀、5底材。练级按1项目标→总阶数5→8收紧，单可用目标T5兜底，跨BD不能合计。见[中文审阅表](docs/BLEED_SKELETON_GUIDE_REVIEW.md)。旧Strict与历史XML保留。
 

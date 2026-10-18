@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-18",
+  "status": "passed",
+  "surface": "Codex in-app browser / static Pages build on localhost",
+  "experimentalDefault": false,
+  "commonUniqueDefault": true,
+  "commonSetDefault": true,
+  "visibleUniquePoolExcludingT0": 175,
+  "t0Separate": 6,
+  "visibleAllSetPool": 61,
+  "independentSetSwitchPersistedAcrossReload": true,
+  "setDisabledPreviewRules": 95,
+  "setDisabledCommonRuleAbsent": true,
+  "bothEnabledPreviewRules": 96,
+  "bothEnabledCategories": [
+    "通用暗金0LP保护",
+    "通用套装保护"
+  ],
+  "screenshot": {
+    "file": "docs/images/common-protection-pool.jpg",
+    "sha256": "3a5fd897810095d920752b4f4fa72eebf0113975f1278214de9b5b01da66af96"
+  },
+  "browserDownloadTested": false,
+  "gameExecutionTested": false
+}

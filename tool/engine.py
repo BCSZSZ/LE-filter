@@ -28,8 +28,10 @@ HARBINGER_NEEDLE = 344
 ITEM_SETS = read_json("sources/item-sets.json")["sets"]
 SET_MEMBERS = {uid: group["members"] for group in ITEM_SETS.values() for uid in group["members"]}
 ULTRA_RARE_UNIQUES = {u["id"] for u in read_json("sources/ultra-rare-uniques.json")["uniques"]}
-COMMON_ZERO_LP_IDS = ({uid for n in (15, 16) for uid in inspect_rule(BASE[n])["unique_ids"]}
-                      | SEASONAL_UNIQUES) - UNIQUE_IDOLS
+COMMON_PROTECTION = read_json("sources/common-unique-protection.json")
+COMMON_UNIQUE_IDS = set(COMMON_PROTECTION["unique_ids"])
+COMMON_SET_IDS = set(COMMON_PROTECTION["set_ids"])
+COMMON_ZERO_LP_IDS = COMMON_UNIQUE_IDS | COMMON_SET_IDS
 
 
 def expand_unique_sets(ids):
@@ -519,8 +521,8 @@ def generate(config, mode="endgame"):
     for n in (12, 13, 14):
         replacements[n] = [variant for entry in replacements[n]
                            for variant in (split_unique_ownership(entry) if not entry[1]["owners"] and entry[1]["category"] not in {"任意LP=1", "任意LP=2"} else [entry])]
-    # Preserve the existing fixed membership and every original Rolls object.
-    # The proposed Tunklab criterion remains comparison evidence only.
+    # Apply the approved unique pool and all sets. Retained non-seasonal
+    # entries keep their original Rolls; newly added IDs have no roll gate.
     r = deepcopy(BASE[15])
     c = condition(r, "UniqueModifiersCondition")
     c.extend(deepcopy(condition(BASE[16], "UniqueModifiersCondition")[:]))
@@ -528,9 +530,9 @@ def generate(config, mode="endgame"):
         if int(u.findtext("UniqueId")) in SEASONAL_UNIQUES:
             u.find("Rolls")[:] = []
     tmp = deepcopy(BASE[15])
-    select_uniques(tmp, SEASONAL_UNIQUES - set(inspect_rule(r)["unique_ids"]))
+    select_uniques(tmp, COMMON_ZERO_LP_IDS - set(inspect_rule(r)["unique_ids"]))
     c.extend(deepcopy(condition(tmp, "UniqueModifiersCondition")[:]))
-    c[:] = [u for u in c if int(u.findtext("UniqueId")) not in UNIQUE_IDOLS | ULTRA_RARE_UNIQUES | claimed]
+    c[:] = [u for u in c if int(u.findtext("UniqueId")) in COMMON_ZERO_LP_IDS - ULTRA_RARE_UNIQUES - claimed]
     for key, is_set, category in (("common_uniques_enabled", False, "通用暗金0LP保护"),
                                   ("common_sets_enabled", True, "通用套装保护")):
         selected = [u for u in c if CATALOG["uniques"][u.findtext("UniqueId")]["set"] == is_set]
@@ -728,8 +730,8 @@ def bootstrap():
     catalog = deepcopy(CATALOG)
     catalog["item_sets"] = deepcopy(ITEM_SETS)
     catalog["ultra_rare_uniques"] = sorted(ULTRA_RARE_UNIQUES)
-    catalog["common_unique_ids"] = sorted(uid for uid in COMMON_ZERO_LP_IDS - ULTRA_RARE_UNIQUES if not CATALOG["uniques"][str(uid)]["set"])
-    catalog["common_set_ids"] = sorted(uid for uid in COMMON_ZERO_LP_IDS if CATALOG["uniques"][str(uid)]["set"])
+    catalog["common_unique_ids"] = sorted(COMMON_UNIQUE_IDS - ULTRA_RARE_UNIQUES)
+    catalog["common_set_ids"] = sorted(COMMON_SET_IDS)
     catalog["equipment_types"] = MANIFEST["scope_types"]
     examples = []
     for slug, spec in EVIDENCE["strict_inputs"].items():

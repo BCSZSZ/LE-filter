@@ -1,4 +1,4 @@
-"""Audit unchanged fixed pools, independent switches and prepared WASM cases."""
+"""Audit approved unique coverage, all sets, switches and native/WASM cases."""
 from copy import deepcopy
 import hashlib
 import itertools
@@ -12,28 +12,35 @@ sys.path.insert(0, str(ROOT / "tool"))
 import engine as e
 from browser_runtime import browser_bootstrap
 from test_engine import parsed
+from build_common_unique_protection import build
 
 
 def main():
     boot = deepcopy(browser_bootstrap()["config"])
+    manifest = build()
+    assert manifest == e.COMMON_PROTECTION
+    approved = set(manifest["unique_ids"]) | set(manifest["set_ids"])
     original = [deepcopy(u) for n in (15, 16) for u in e.condition(e.BASE[n], "UniqueModifiersCondition")]
     expected = {int(u.findtext("UniqueId")): u for u in original}
-    for uid in e.SEASONAL_UNIQUES:
-        if uid in expected:
+    for uid in approved:
+        if uid in expected and uid in e.SEASONAL_UNIQUES:
             expected[uid].find("Rolls").clear()
-        else:
+        elif uid not in expected:
             node = deepcopy(e.BASE[15])
             e.select_uniques(node, [uid])
             expected[uid] = deepcopy(e.condition(node, "UniqueModifiersCondition")[0])
     claimed = {uid for b in boot["builds"] if b["enabled"] for uid in e.expand_unique_sets(b["profiles"]["endgame"]["uniques"])}
-    expected = {uid: node for uid, node in expected.items() if uid not in e.UNIQUE_IDOLS | e.ULTRA_RARE_UNIQUES | claimed}
+    expected = {uid: node for uid, node in expected.items() if uid in approved - e.ULTRA_RARE_UNIQUES - claimed}
     output = e.generate(boot)
     actual = {int(u.findtext("UniqueId")): u for node, row in zip(parsed(output), output["rules"])
               if row["category"] in {"通用暗金0LP保护", "通用套装保护"}
               for u in e.condition(node, "UniqueModifiersCondition")}
     assert {uid: e.tree(node) for uid, node in actual.items()} == {uid: e.tree(node) for uid, node in expected.items()}
-    assert len(e.COMMON_ZERO_LP_IDS) == 159 and len(actual) == 143
-    cases, native = [], {}
+    assert len(e.COMMON_UNIQUE_IDS) == 181 and len(e.COMMON_SET_IDS) == 61
+    assert e.COMMON_ZERO_LP_IDS == approved
+    assert not set(manifest["removed_unique_ids"]) & set(actual)
+    assert len([row for row in output["rules"] if row["category"] in {"通用暗金0LP保护", "通用套装保护"}]) == 2
+    cases, native = [], {"bootstrap_active_pool": {"request": {"path": "/api/bootstrap"}, "output": browser_bootstrap()}}
     for experimentals, uniques, sets in itertools.product((False, True), repeat=3):
         config = deepcopy(boot)
         config["common"].update(exalted_experimentals_enabled=experimentals,
@@ -60,15 +67,21 @@ def main():
         current = (ROOT / name).read_bytes()
         assert current == subprocess.check_output(["git", "show", f"HEAD:{name}"], cwd=ROOT), name
         protected[name] = hashlib.sha256(current).hexdigest()
-    result = {"status": "passed", "date": "2026-10-18", "replacementApplied": False,
-              "oldBasePoolUnchanged": 159, "defaultStrictPoolUnchanged": 143, "sameUniqueEntriesAndRolls": True,
+    result = {"status": "passed", "date": "2026-10-18", "replacementApplied": True,
+              "baseUniques": len(e.COMMON_UNIQUE_IDS), "baseSets": len(e.COMMON_SET_IDS),
+              "defaultStrictRules": output["count"], "defaultStrictCommonPool": len(actual),
+              "defaultStrictCommonUniques": sum(not e.CATALOG["uniques"][str(uid)]["set"] for uid in actual),
+              "defaultStrictCommonSets": sum(e.CATALOG["uniques"][str(uid)]["set"] for uid in actual),
+              "removedUniqueIds": manifest["removed_unique_ids"], "addedUniqueIds": manifest["added_unique_ids"],
+              "addedSetIds": manifest["added_set_ids"], "all97PositiveEquipmentUniquesIncluded": True,
+              "all61SetItemsIncluded": True, "retainedOriginalRollsPreserved": True, "offlineManifestRebuiltExactly": True,
               "experimentalsDefault": False, "uniquesDefault": True, "setsDefault": True,
               "legacySettingsDefaulted": True, "scenarios": cases, "preservedFiles": protected,
               "gameExecutionTested": False}
-    (ROOT / "analysis/common-protection-validation.json").write_text(
+    (ROOT / "analysis/common-protection-pool-validation.json").write_text(
         json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     (ROOT / ".cache/common-protection-native.json").write_text(json.dumps(native, ensure_ascii=False), encoding="utf-8")
-    print(f"PASS: 159 fixed IDs and original entries preserved, {len(cases)} switch combinations, {len(protected)} original files")
+    print(f"PASS: 181 unique IDs / 61 set IDs, {len(cases)} switch combinations, {len(protected)} original files; default {output['count']} rules / {len(actual)} common IDs")
 
 
 if __name__ == "__main__":

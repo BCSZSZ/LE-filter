@@ -1,0 +1,3386 @@
+{
+  "version": 1,
+  "retrieved_on": "2026-10-18",
+  "scope": "159 old equipment/set IDs and 55 positive-reroll additions; classification evidence only",
+  "replacement_applied": false,
+  "source_files": {
+    "reroll": "sources/tunklab-unique-reroll-2026-10-18.json",
+    "zero_reroll": "sources/zero-reroll-drop-sources-2026-10-18.json"
+  },
+  "tunklab_data": {
+    "url": "https://lastepoch.tunklab.com/_next/static/chunks/2k6d3rtcxh7q6.js",
+    "sha256": "05cb81a6a3b098ac872164740071ec4ee3deceab6251b30555536d052ee45391",
+    "read_as_text_only": true,
+    "live_item_pages_read": 84
+  },
+  "letools": {
+    "url": "https://www.lastepochtools.com/data/version152/db/js/8e688d145b13a6e9719c917369f90558.js",
+    "raw_js_sha256": "8a0293233b168b1eb425d7a9490bf7ad26f0d33f445fe2f5a3f0704432ee4cc5",
+    "decoded_json_sha256": "b9f44fb8f44b8b1d455539c3bb11c47a53fc39e9933dadd53280f5669d4fe37e",
+    "method": "Existing version152 cache; this turn direct refetch was 403. Raw monster rows retained separately from live Tunklab source labels."
+  },
+  "official_evidence": [
+    {
+      "url": "https://forum.lastepoch.com/t/last-epoch-beneath-ancient-skies-patch-notes/78635/2",
+      "published_on": "2025-08-15",
+      "claims": [
+        "裂隙野兽属于Boss；先古暗金共25种，最初22种可兑换、3种仅掉落。",
+        "结束裂隙野兽谱系会产出非先古暗金Evolution’s End。"
+      ]
+    },
+    {
+      "url": "https://forum.lastepoch.com/t/last-epoch-patch-1-3-2-notes/79385",
+      "published_on": "2025-09-03",
+      "claims": [
+        "原本只能购买的先古暗金也加入裂隙野兽掉落；据此不能把Tunklab详情未列Boss的22件判为仅兑换。"
+      ]
+    }
+  ],
+  "classification_convention": "Cocooned first; random + zero second; nonrandom boss/Rift Beast source third (including lineage completion Evolution’s End); positive random reroll fourth; remaining restricted rewards fifth. Group3 is not a claim of one exclusive named boss or no alternative rewards/vendor source.",
+  "items": [
+    {
+      "id": 11,
+      "url": "https://lastepoch.tunklab.com/unique/exsanguinous",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 13,
+      "url": "https://lastepoch.tunklab.com/unique/titan_heart",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 30,
+      "url": "https://lastepoch.tunklab.com/unique/undisputed",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 35,
+      "url": "https://lastepoch.tunklab.com/unique/eye_of_reen",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 37,
+      "url": "https://lastepoch.tunklab.com/unique/cinder_song",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 38,
+      "url": "https://lastepoch.tunklab.com/unique/alchemists_ladle",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 45,
+      "url": "https://lastepoch.tunklab.com/unique/morditas_reach",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 53,
+      "url": "https://lastepoch.tunklab.com/unique/rahyehs_light",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 61,
+      "url": "https://lastepoch.tunklab.com/unique/orians_eye",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 66,
+      "url": "https://lastepoch.tunklab.com/unique/hollow_finger",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 71,
+      "url": "https://lastepoch.tunklab.com/unique/valdyrs_chalice",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 73,
+      "url": "https://lastepoch.tunklab.com/unique/plague_bearers_staff",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 76,
+      "url": "https://lastepoch.tunklab.com/unique/liaths_signet",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 77,
+      "url": "https://lastepoch.tunklab.com/unique/apiarists_smoker",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 78,
+      "url": "https://lastepoch.tunklab.com/unique/apiarists_suit",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 79,
+      "url": "https://lastepoch.tunklab.com/unique/apiarists_comb",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 80,
+      "url": "https://lastepoch.tunklab.com/unique/bloodgeon",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 84,
+      "url": "https://lastepoch.tunklab.com/unique/heirloom_of_the_last_nomad",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 86,
+      "url": "https://lastepoch.tunklab.com/unique/sunforged_cuirass",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 87,
+      "url": "https://lastepoch.tunklab.com/unique/sunforged_greathelm",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 88,
+      "url": "https://lastepoch.tunklab.com/unique/blade_of_the_forgotten_knight",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 90,
+      "url": "https://lastepoch.tunklab.com/unique/locket_of_the_forgotten_knight",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 91,
+      "url": "https://lastepoch.tunklab.com/unique/fiery_dragon_shoes",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 92,
+      "url": "https://lastepoch.tunklab.com/unique/jungle_queens_chaps_of_holding",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 93,
+      "url": "https://lastepoch.tunklab.com/unique/kermodes_cage",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 97,
+      "url": "https://lastepoch.tunklab.com/unique/halvars_pledge",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 104,
+      "url": "https://lastepoch.tunklab.com/unique/sulorons_step",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 108,
+      "url": "https://lastepoch.tunklab.com/unique/melverns_writ",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 125,
+      "url": "https://lastepoch.tunklab.com/unique/oceareon",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 126,
+      "url": "https://lastepoch.tunklab.com/unique/mortalitys_grasp",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 127,
+      "url": "https://lastepoch.tunklab.com/unique/boardmans_plank",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 128,
+      "url": "https://lastepoch.tunklab.com/unique/boardmans_fallacy",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 129,
+      "url": "https://lastepoch.tunklab.com/unique/boardmans_legacy",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 132,
+      "url": "https://lastepoch.tunklab.com/unique/transient_rest",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 133,
+      "url": "https://lastepoch.tunklab.com/unique/xitharas_conundrum",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 136,
+      "url": "https://lastepoch.tunklab.com/unique/smoke_weaver",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 139,
+      "url": "https://lastepoch.tunklab.com/unique/zerricks_greed",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 145,
+      "url": "https://lastepoch.tunklab.com/unique/lifes_journey",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 147,
+      "url": "https://lastepoch.tunklab.com/unique/raindance",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 149,
+      "url": "https://lastepoch.tunklab.com/unique/omnividence",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 167,
+      "url": "https://lastepoch.tunklab.com/unique/ravens_rise",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 168,
+      "url": "https://lastepoch.tunklab.com/unique/flight_of_the_first",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 169,
+      "url": "https://lastepoch.tunklab.com/unique/aergons_refuge",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 172,
+      "url": "https://lastepoch.tunklab.com/unique/herald_of_the_scurry",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 175,
+      "url": "https://lastepoch.tunklab.com/unique/omnis",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 175,
+          "monsterNameKey": "Actors.Actor_Name_Shade of Orobyss",
+          "chanceModifier": 3,
+          "chance": 0.15,
+          "maxChance": 0,
+          "minCorruption": 200,
+          "orobyss": true
+        },
+        {
+          "uniqueId": 175,
+          "chanceModifier": 3,
+          "chance": 0.35,
+          "maxChance": 0,
+          "minCorruption": 200,
+          "wovenEcho": 17
+        }
+      ],
+      "tunklab_html_sha256": "0d66233ff5196d2b05274b1b23d312504899f7c02aae64eff3021185a62ea55f",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Acquired from",
+        "Shade of Orobyss",
+        "(",
+        "200+ corruption",
+        ")"
+      ]
+    },
+    {
+      "id": 176,
+      "url": "https://lastepoch.tunklab.com/unique/auroras_time_glass",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 179,
+      "url": "https://lastepoch.tunklab.com/unique/apathys_maw",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 179,
+          "monsterNameKey": "Actors.Actor_Name_Shade of Orobyss",
+          "chanceModifier": 3,
+          "chance": 0.25,
+          "maxChance": 0,
+          "minCorruption": 50,
+          "orobyss": true
+        },
+        {
+          "uniqueId": 179,
+          "chanceModifier": 3,
+          "chance": 0.5,
+          "maxChance": 0,
+          "minCorruption": 50,
+          "wovenEcho": 17
+        }
+      ],
+      "tunklab_html_sha256": "82b2f67cf3031ffafe278458748e40c5abc8e15261b31df35e06ba72a684e2c4",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Acquired from",
+        "Shade of Orobyss",
+        "(",
+        "50+ corruption",
+        ")"
+      ]
+    },
+    {
+      "id": 180,
+      "url": "https://lastepoch.tunklab.com/unique/shattered_chains",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 180,
+          "monsterNameKey": "Actors.Actor_Name_Shade of Orobyss",
+          "chanceModifier": 3,
+          "chance": 0.15,
+          "maxChance": 0,
+          "minCorruption": 120,
+          "orobyss": true
+        },
+        {
+          "uniqueId": 180,
+          "chanceModifier": 3,
+          "chance": 0.45,
+          "maxChance": 0,
+          "minCorruption": 120,
+          "wovenEcho": 17
+        }
+      ],
+      "tunklab_html_sha256": "71d0562c428b9e13cb8df56c1d947ddb44a38c98cd758dda58452cc71a390557",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Acquired from",
+        "Shade of Orobyss",
+        "(",
+        "120+ corruption",
+        ")"
+      ]
+    },
+    {
+      "id": 181,
+      "url": "https://lastepoch.tunklab.com/unique/marinas_lost_soul",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 183,
+      "url": "https://lastepoch.tunklab.com/unique/leviathan_carver",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 185,
+      "url": "https://lastepoch.tunklab.com/unique/vilatrias_storm_crown",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 187,
+      "url": "https://lastepoch.tunklab.com/unique/salt_the_wound",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 195,
+      "url": "https://lastepoch.tunklab.com/unique/scales_of_eterra_fire_cold",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 196,
+      "url": "https://lastepoch.tunklab.com/unique/scales_of_eterra_cold_lightning",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 197,
+      "url": "https://lastepoch.tunklab.com/unique/scales_of_eterra_fire_lightning",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 198,
+      "url": "https://lastepoch.tunklab.com/unique/bastion_of_honour",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 208,
+      "url": "https://lastepoch.tunklab.com/unique/ravenous_void",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 208,
+          "monsterNameKey": "Actors.Actor_Name_The Husk of Elder Gaspar",
+          "chanceModifier": 0,
+          "chance": 0,
+          "maxChance": 0.045,
+          "rarityForMaxChance": 7,
+          "timelineInfo": {
+            "id": 8,
+            "empoweredOnly": false
+          },
+          "minCorruption": 0
+        }
+      ]
+    },
+    {
+      "id": 216,
+      "url": "https://lastepoch.tunklab.com/unique/twisted_heart_of_uhkeiros",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 216,
+          "monsterNameKey": "Actors.Actor_Name_Emperor of Corpses",
+          "chanceModifier": 0,
+          "chance": 0.06,
+          "maxChance": 0.48,
+          "rarityForMaxChance": 20,
+          "timelineInfo": {
+            "id": 7,
+            "empoweredOnly": false
+          },
+          "minCorruption": 0
+        }
+      ],
+      "tunklab_html_sha256": "a1fd8b0f57782ec12830e43b6e64e7d1b7875bf957f31c09d9db89132a554a83",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/UndeadDragonBoss",
+          "name": "Emperor of Corpses"
+        }
+      ],
+      "tunklab_echo_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/echo/collapsing_horizon",
+          "name": "Collapsing Horizon"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+          "name": "The Fading Brink"
+        }
+      ],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Emperor of Corpses",
+        "Boss-specific drop",
+        "6% - 48%",
+        "Collapsing Horizon",
+        "Reward for completing the Woven Echo",
+        "6% - 48%",
+        "The Fading Brink",
+        "Reward for completing the Woven Echo",
+        "6% - 48%"
+      ]
+    },
+    {
+      "id": 220,
+      "url": "https://lastepoch.tunklab.com/unique/deaths_embrace",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 221,
+      "url": "https://lastepoch.tunklab.com/unique/paranoia",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 222,
+      "url": "https://lastepoch.tunklab.com/unique/prismatic_gaze",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 224,
+      "url": "https://lastepoch.tunklab.com/unique/the_judicator",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 228,
+      "url": "https://lastepoch.tunklab.com/unique/ferebors_persistence",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 229,
+      "url": "https://lastepoch.tunklab.com/unique/roots_of_vithrasil",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 232,
+      "url": "https://lastepoch.tunklab.com/unique/hakars_phoenix",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 235,
+      "url": "https://lastepoch.tunklab.com/unique/silvafrond",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 242,
+      "url": "https://lastepoch.tunklab.com/unique/shadow_string",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 249,
+      "url": "https://lastepoch.tunklab.com/unique/diothaens_bloody_nib",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 250,
+      "url": "https://lastepoch.tunklab.com/unique/torkrefins_hunger",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 251,
+      "url": "https://lastepoch.tunklab.com/unique/zeurials_hunt",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 252,
+      "url": "https://lastepoch.tunklab.com/unique/pact_severance",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 253,
+      "url": "https://lastepoch.tunklab.com/unique/foot_of_the_mountain",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 253,
+          "monsterNameKey": "Actors.Actor_Name_The Mountain Beneath",
+          "chanceModifier": 2,
+          "chancePerTier": [
+            0,
+            0.2,
+            0.35,
+            0.45
+          ],
+          "dungeonInfo": {
+            "id": 2,
+            "gamble": false
+          },
+          "minCorruption": 0
+        }
+      ],
+      "tunklab_html_sha256": "e860a555247715b9fa9c7d77920fc4f7f90a558761d43217b18e01bdfef15cce",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/StoneTitanHeartBoss",
+          "name": "Stone Titan's Heart"
+        }
+      ],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Stone Titan's Heart",
+        "Boss-specific drop",
+        "Tier",
+        "2",
+        ":",
+        "20%",
+        "Tier",
+        "3",
+        ":",
+        "35%",
+        "Tier",
+        "4",
+        ":",
+        "45%"
+      ]
+    },
+    {
+      "id": 254,
+      "url": "https://lastepoch.tunklab.com/unique/face_of_the_mountain",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 254,
+          "monsterNameKey": "Actors.Actor_Name_The Mountain Beneath",
+          "chanceModifier": 2,
+          "chancePerTier": [
+            0,
+            0,
+            0.12,
+            0.18
+          ],
+          "dungeonInfo": {
+            "id": 2,
+            "gamble": false
+          },
+          "minCorruption": 0
+        }
+      ],
+      "tunklab_html_sha256": "027c759799d2bda3da1972138447dc6be79c96c56b6d894d05663ebdab9052d8",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/StoneTitanHeartBoss",
+          "name": "Stone Titan's Heart"
+        }
+      ],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Stone Titan's Heart",
+        "Boss-specific drop",
+        "Tier",
+        "3",
+        ":",
+        "12%",
+        "Tier",
+        "4",
+        ":",
+        "18%"
+      ]
+    },
+    {
+      "id": 255,
+      "url": "https://lastepoch.tunklab.com/unique/core_of_the_mountain",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 255,
+          "monsterNameKey": "Actors.Actor_Name_The Mountain Beneath",
+          "chanceModifier": 2,
+          "chancePerTier": [
+            0,
+            0,
+            0,
+            0.12
+          ],
+          "dungeonInfo": {
+            "id": 2,
+            "gamble": false
+          },
+          "minCorruption": 0
+        }
+      ],
+      "tunklab_html_sha256": "3d1476c359e731abf8f302a8944319c2757735fe2af36b0b1d2f681105947a0d",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/StoneTitanHeartBoss",
+          "name": "Stone Titan's Heart"
+        }
+      ],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Stone Titan's Heart",
+        "Boss-specific drop",
+        "Tier",
+        "4",
+        ":",
+        "12%"
+      ]
+    },
+    {
+      "id": 256,
+      "url": "https://lastepoch.tunklab.com/unique/peak_of_the_mountain",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 256,
+          "monsterNameKey": "Actors.Actor_Name_The Mountain Beneath",
+          "chanceModifier": 2,
+          "chancePerTier": [
+            0.45,
+            0.47,
+            0.48,
+            0.5
+          ],
+          "dungeonInfo": {
+            "id": 2,
+            "gamble": false
+          },
+          "minCorruption": 0
+        }
+      ],
+      "tunklab_html_sha256": "f39c18ddff4f85fd393dba1f6ec130a24b5ac577622a97378553cff28dc29c82",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/StoneTitanHeartBoss",
+          "name": "Stone Titan's Heart"
+        }
+      ],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Stone Titan's Heart",
+        "Boss-specific drop",
+        "Tier",
+        "1",
+        ":",
+        "45%",
+        "Tier",
+        "2",
+        ":",
+        "47%",
+        "Tier",
+        "3",
+        ":",
+        "48%",
+        "Tier",
+        "4",
+        ":",
+        "50%"
+      ]
+    },
+    {
+      "id": 258,
+      "url": "https://lastepoch.tunklab.com/unique/immolators_oblation",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 258,
+          "monsterNameKey": "Actors.Actor_Name_Fire Lich Cremorus",
+          "chanceModifier": 2,
+          "chancePerTier": [
+            0,
+            0,
+            0.12,
+            0.18
+          ],
+          "dungeonInfo": {
+            "id": 3,
+            "gamble": false
+          },
+          "minCorruption": 0
+        }
+      ],
+      "tunklab_html_sha256": "133ef36a4e12eb1f95a7e85ab221e27b9bacc761aeec9234b0de9ce6cff99225",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/FireLichBoss",
+          "name": "Fire Lich Cremorus"
+        }
+      ],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Fire Lich Cremorus",
+        "Boss-specific drop",
+        "Tier",
+        "3",
+        ":",
+        "12%",
+        "Tier",
+        "4",
+        ":",
+        "18%"
+      ]
+    },
+    {
+      "id": 268,
+      "url": "https://lastepoch.tunklab.com/unique/bloodkeepers_nest",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 269,
+      "url": "https://lastepoch.tunklab.com/unique/scales_of_lemniscate",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 270,
+      "url": "https://lastepoch.tunklab.com/unique/hive_mind",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 272,
+      "url": "https://lastepoch.tunklab.com/unique/aarons_will",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 274,
+      "url": "https://lastepoch.tunklab.com/unique/branch_of_hallows",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 275,
+      "url": "https://lastepoch.tunklab.com/unique/unstable_core",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 277,
+      "url": "https://lastepoch.tunklab.com/unique/red_ring_of_atlaria",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 290,
+      "url": "https://lastepoch.tunklab.com/unique/apostates_sanctuary",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 296,
+      "url": "https://lastepoch.tunklab.com/unique/advent_of_the_erased",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 304,
+      "url": "https://lastepoch.tunklab.com/unique/static_shell",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 306,
+      "url": "https://lastepoch.tunklab.com/unique/blood_of_the_exile",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 307,
+      "url": "https://lastepoch.tunklab.com/unique/crest_of_unity",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 310,
+      "url": "https://lastepoch.tunklab.com/unique/wrongwarp",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 311,
+      "url": "https://lastepoch.tunklab.com/unique/transcribers_graver",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 316,
+      "url": "https://lastepoch.tunklab.com/unique/apex_of_thought",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 318,
+      "url": "https://lastepoch.tunklab.com/unique/the_shattered_cycle",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 323,
+      "url": "https://lastepoch.tunklab.com/unique/wheel_of_torment",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 327,
+      "url": "https://lastepoch.tunklab.com/unique/communion_of_the_erased",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 332,
+      "url": "https://lastepoch.tunklab.com/unique/blood_roost",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 334,
+      "url": "https://lastepoch.tunklab.com/unique/talons_of_valor",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 335,
+      "url": "https://lastepoch.tunklab.com/unique/wraithlords_harbour",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 336,
+      "url": "https://lastepoch.tunklab.com/unique/naals_tooth",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 337,
+      "url": "https://lastepoch.tunklab.com/unique/razorfall",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 338,
+      "url": "https://lastepoch.tunklab.com/unique/sword_catcher",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 339,
+      "url": "https://lastepoch.tunklab.com/unique/black_blade_of_chaos",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 339,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "hostOnly": true,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 339,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 339,
+          "monsterNameKey": "Actors.Actor_Name_Harbinger of Chaos",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0.22,
+          "rarityForMaxChance": 12,
+          "timelineInfo": {
+            "id": 5,
+            "empoweredOnly": true
+          },
+          "minCorruption": 0,
+          "harbinger": true
+        },
+        {
+          "uniqueId": 339,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18,
+          "hostOnly": true
+        },
+        {
+          "uniqueId": 339,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18
+        }
+      ],
+      "tunklab_html_sha256": "a20dc7881570fe1fbe90f59119d5753ba5abc98615508a355ad2861446d2523c",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/AgileHarbinger-Lagon",
+          "name": "Harbinger of Chaos"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+          "name": "Aberroth"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+          "name": "Herald of Oblivion"
+        }
+      ],
+      "tunklab_echo_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+          "name": "The Fading Brink"
+        }
+      ],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Harbinger of Chaos",
+        "Boss-specific drop, Empowered only",
+        "10% - 22%",
+        "Aberroth",
+        "Boss-specific drop",
+        "11.8%",
+        "Herald of Oblivion",
+        "Boss-specific drop",
+        "11.8%",
+        "The Fading Brink",
+        "Reward for completing the Woven Echo, Empowered only",
+        "10% - 22%"
+      ]
+    },
+    {
+      "id": 342,
+      "url": "https://lastepoch.tunklab.com/unique/traitors_tongue",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 345,
+      "url": "https://lastepoch.tunklab.com/unique/bane_of_winter",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 345,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "hostOnly": true,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 345,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 345,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18,
+          "hostOnly": true
+        },
+        {
+          "uniqueId": 345,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18
+        },
+        {
+          "uniqueId": 345,
+          "monsterNameKey": "Actors.Actor_Name_Harbinger of Tyranny",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0.22,
+          "rarityForMaxChance": 12,
+          "timelineInfo": {
+            "id": 9,
+            "empoweredOnly": true
+          },
+          "minCorruption": 0,
+          "harbinger": true
+        }
+      ],
+      "tunklab_html_sha256": "b4b4e322bd30f90f1deeaafa233c2d03ee8ee71181cc40921cce9eedeb254c9a",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+          "name": "Aberroth"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/BruteHarbinger-Heorot",
+          "name": "Harbinger of Tyranny"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+          "name": "Herald of Oblivion"
+        }
+      ],
+      "tunklab_echo_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+          "name": "The Fading Brink"
+        }
+      ],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Aberroth",
+        "Boss-specific drop",
+        "11.8%",
+        "Harbinger of Tyranny",
+        "Boss-specific drop, Empowered only",
+        "10% - 22%",
+        "Herald of Oblivion",
+        "Boss-specific drop",
+        "11.8%",
+        "The Fading Brink",
+        "Reward for completing the Woven Echo, Empowered only",
+        "10% - 22%"
+      ]
+    },
+    {
+      "id": 347,
+      "url": "https://lastepoch.tunklab.com/unique/the_inevitable",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 347,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "hostOnly": true,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 347,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 347,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18,
+          "hostOnly": true
+        },
+        {
+          "uniqueId": 347,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18
+        },
+        {
+          "uniqueId": 347,
+          "monsterNameKey": "Actors.Actor_Name_Harbinger of Fear",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0.22,
+          "rarityForMaxChance": 12,
+          "timelineInfo": {
+            "id": 8,
+            "empoweredOnly": true
+          },
+          "minCorruption": 0,
+          "harbinger": true
+        }
+      ],
+      "tunklab_html_sha256": "da31d0626954d9e099854cd748e9e970263a787754f900e55024325b20952279",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/AgileHarbinger-Gaspar",
+          "name": "Harbinger of Fear"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+          "name": "Aberroth"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+          "name": "Herald of Oblivion"
+        }
+      ],
+      "tunklab_echo_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+          "name": "The Fading Brink"
+        }
+      ],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Harbinger of Fear",
+        "Boss-specific drop, Empowered only",
+        "10% - 22%",
+        "Aberroth",
+        "Boss-specific drop",
+        "11.8%",
+        "Herald of Oblivion",
+        "Boss-specific drop",
+        "11.8%",
+        "The Fading Brink",
+        "Reward for completing the Woven Echo, Empowered only",
+        "10% - 22%"
+      ]
+    },
+    {
+      "id": 351,
+      "url": "https://lastepoch.tunklab.com/unique/triboelectra",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 353,
+      "url": "https://lastepoch.tunklab.com/unique/nihilis",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 353,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.14285715,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "hostOnly": true,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 353,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.14285715,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18,
+          "hostOnly": true
+        },
+        {
+          "uniqueId": 353,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.14285715,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18,
+          "hostOnly": true
+        }
+      ],
+      "tunklab_html_sha256": "64a57bf2740719a823f8457db5ac21b111563cce90b7c8fb761613ee2cafa4cd",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+          "name": "Aberroth"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+          "name": "Herald of Oblivion"
+        }
+      ],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Aberroth",
+        "Boss-specific drop",
+        "14.29%",
+        "Herald of Oblivion",
+        "Boss-specific drop",
+        "26.53%"
+      ]
+    },
+    {
+      "id": 354,
+      "url": "https://lastepoch.tunklab.com/unique/wall_of_nothing",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 354,
+          "monsterNameKey": "Actors.Actor_Name_Harbinger of Treason",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0.22,
+          "rarityForMaxChance": 12,
+          "timelineInfo": {
+            "id": 6,
+            "empoweredOnly": true
+          },
+          "minCorruption": 0,
+          "harbinger": true
+        },
+        {
+          "uniqueId": 354,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "hostOnly": true,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 354,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 354,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18,
+          "hostOnly": true
+        },
+        {
+          "uniqueId": 354,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18
+        }
+      ],
+      "tunklab_html_sha256": "e13425de84971ea3bf92f93d6cb7dc623b29f1946f660063057bfe6dce38de66",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/AgileHarbinger-VoidHarton",
+          "name": "Harbinger of Treason"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+          "name": "Aberroth"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+          "name": "Herald of Oblivion"
+        }
+      ],
+      "tunklab_echo_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+          "name": "The Fading Brink"
+        }
+      ],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Harbinger of Treason",
+        "Boss-specific drop, Empowered only",
+        "10% - 22%",
+        "Aberroth",
+        "Boss-specific drop",
+        "11.8%",
+        "Herald of Oblivion",
+        "Boss-specific drop",
+        "11.8%",
+        "The Fading Brink",
+        "Reward for completing the Woven Echo, Empowered only",
+        "10% - 22%"
+      ]
+    },
+    {
+      "id": 355,
+      "url": "https://lastepoch.tunklab.com/unique/aberroths_command",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 355,
+          "monsterNameKey": "Actors.Actor_Name_Harbinger of Defilement",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0.22,
+          "rarityForMaxChance": 12,
+          "timelineInfo": {
+            "id": 1,
+            "empoweredOnly": true
+          },
+          "minCorruption": 0,
+          "harbinger": true
+        },
+        {
+          "uniqueId": 355,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "hostOnly": true,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 355,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 355,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18,
+          "hostOnly": true
+        },
+        {
+          "uniqueId": 355,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18
+        }
+      ],
+      "tunklab_html_sha256": "d8482c3fd4db480bb89410faa88b940bf2418d1556c7c5cb2a8c9a018d8e8911",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+          "name": "Aberroth"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/BruteHarbinger-Abomination",
+          "name": "Harbinger of Defilement"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+          "name": "Herald of Oblivion"
+        }
+      ],
+      "tunklab_echo_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+          "name": "The Fading Brink"
+        }
+      ],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Aberroth",
+        "Boss-specific drop",
+        "11.8%",
+        "Harbinger of Defilement",
+        "Boss-specific drop, Empowered only",
+        "10% - 22%",
+        "Herald of Oblivion",
+        "Boss-specific drop",
+        "11.8%",
+        "The Fading Brink",
+        "Reward for completing the Woven Echo, Empowered only",
+        "10% - 22%"
+      ]
+    },
+    {
+      "id": 356,
+      "url": "https://lastepoch.tunklab.com/unique/stealth",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 357,
+      "url": "https://lastepoch.tunklab.com/unique/seed_of_ekkidrasil",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 357,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.3809524,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "hostOnly": true,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 357,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.3809524,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18,
+          "hostOnly": true
+        },
+        {
+          "uniqueId": 357,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.3809524,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18,
+          "hostOnly": true
+        }
+      ],
+      "tunklab_html_sha256": "af43b244d97c6cdf1659b69ad13e0066767fc748ddc72daf78d0704d3f3c4983",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+          "name": "Aberroth"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+          "name": "Herald of Oblivion"
+        }
+      ],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Aberroth",
+        "Boss-specific drop",
+        "38.1%",
+        "Herald of Oblivion",
+        "Boss-specific drop",
+        "61.68%"
+      ]
+    },
+    {
+      "id": 358,
+      "url": "https://lastepoch.tunklab.com/unique/null_portent",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 358,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.47619048,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "hostOnly": true,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 358,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.47619048,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18,
+          "hostOnly": true
+        },
+        {
+          "uniqueId": 358,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.47619048,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18,
+          "hostOnly": true
+        }
+      ],
+      "tunklab_html_sha256": "c7955de411e927aaa3f05367dd92777e1f9bb63aa00d5ac4b48992d83f7de29b",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+          "name": "Aberroth"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+          "name": "Herald of Oblivion"
+        }
+      ],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Aberroth",
+        "Boss-specific drop",
+        "47.62%",
+        "Herald of Oblivion",
+        "Boss-specific drop",
+        "72.56%"
+      ]
+    },
+    {
+      "id": 361,
+      "url": "https://lastepoch.tunklab.com/unique/phase_point",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 361,
+          "monsterNameKey": "Actors.Actor_Name_Harbinger of Pride",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0.22,
+          "rarityForMaxChance": 12,
+          "timelineInfo": {
+            "id": 2,
+            "empoweredOnly": true
+          },
+          "minCorruption": 0,
+          "harbinger": true
+        },
+        {
+          "uniqueId": 361,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "hostOnly": true,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 361,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 361,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18,
+          "hostOnly": true
+        },
+        {
+          "uniqueId": 361,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18
+        }
+      ],
+      "tunklab_html_sha256": "993603e5320ba44164aed96379bc8b22faed9e3bed55d48757306bf3a6e4f126",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/AgileHarbinger-Argentus",
+          "name": "Harbinger of Pride"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+          "name": "Aberroth"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+          "name": "Herald of Oblivion"
+        }
+      ],
+      "tunklab_echo_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+          "name": "The Fading Brink"
+        }
+      ],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Harbinger of Pride",
+        "Boss-specific drop, Empowered only",
+        "10% - 22%",
+        "Aberroth",
+        "Boss-specific drop",
+        "11.8%",
+        "Herald of Oblivion",
+        "Boss-specific drop",
+        "11.8%",
+        "The Fading Brink",
+        "Reward for completing the Woven Echo, Empowered only",
+        "10% - 22%"
+      ]
+    },
+    {
+      "id": 364,
+      "url": "https://lastepoch.tunklab.com/unique/event_horizon",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 364,
+          "monsterNameKey": "Actors.Actor_Name_Harbinger of Destruction",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0.22,
+          "rarityForMaxChance": 12,
+          "timelineInfo": {
+            "id": 7,
+            "empoweredOnly": true
+          },
+          "minCorruption": 0,
+          "harbinger": true
+        },
+        {
+          "uniqueId": 364,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "hostOnly": true,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 364,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 364,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18,
+          "hostOnly": true
+        },
+        {
+          "uniqueId": 364,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18
+        }
+      ],
+      "tunklab_html_sha256": "1d22c6fef17609982d7f3c7597df78fda862500f61d03db6c340147fa4d9d647",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+          "name": "Aberroth"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/BruteHarbinger-UndeadDragon",
+          "name": "Harbinger of Destruction"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+          "name": "Herald of Oblivion"
+        }
+      ],
+      "tunklab_echo_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+          "name": "The Fading Brink"
+        }
+      ],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Aberroth",
+        "Boss-specific drop",
+        "11.8%",
+        "Harbinger of Destruction",
+        "Boss-specific drop, Empowered only",
+        "10% - 22%",
+        "Herald of Oblivion",
+        "Boss-specific drop",
+        "11.8%",
+        "The Fading Brink",
+        "Reward for completing the Woven Echo, Empowered only",
+        "10% - 22%"
+      ]
+    },
+    {
+      "id": 365,
+      "url": "https://lastepoch.tunklab.com/unique/world_splitter",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 365,
+          "monsterNameKey": "Actors.Actor_Name_Harbinger of Hatred",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0.22,
+          "rarityForMaxChance": 12,
+          "timelineInfo": {
+            "id": 3,
+            "empoweredOnly": true
+          },
+          "minCorruption": 0,
+          "harbinger": true
+        },
+        {
+          "uniqueId": 365,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "hostOnly": true,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 365,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 365,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18,
+          "hostOnly": true
+        },
+        {
+          "uniqueId": 365,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18
+        }
+      ],
+      "tunklab_html_sha256": "b41cff06cbc6a4d869a13149fca6740898917aa34213bfbe50fef52b853fbaca",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+          "name": "Aberroth"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/BruteHarbinger-VoidRahyeh",
+          "name": "Harbinger of Hatred"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+          "name": "Herald of Oblivion"
+        }
+      ],
+      "tunklab_echo_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+          "name": "The Fading Brink"
+        }
+      ],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Aberroth",
+        "Boss-specific drop",
+        "11.8%",
+        "Harbinger of Hatred",
+        "Boss-specific drop, Empowered only",
+        "10% - 22%",
+        "Herald of Oblivion",
+        "Boss-specific drop",
+        "11.8%",
+        "The Fading Brink",
+        "Reward for completing the Woven Echo, Empowered only",
+        "10% - 22%"
+      ]
+    },
+    {
+      "id": 366,
+      "url": "https://lastepoch.tunklab.com/unique/flames_of_midnight",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 366,
+          "monsterNameKey": "Actors.Actor_Name_Harbinger of Ash",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0.22,
+          "rarityForMaxChance": 12,
+          "timelineInfo": {
+            "id": 10,
+            "empoweredOnly": true
+          },
+          "minCorruption": 0,
+          "harbinger": true
+        },
+        {
+          "uniqueId": 366,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "hostOnly": true,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 366,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 366,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18,
+          "hostOnly": true
+        },
+        {
+          "uniqueId": 366,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18
+        }
+      ],
+      "tunklab_html_sha256": "c7a03ce22cfdcae159907c1d6789abf1e9dd95732bb4924d2b5963dee1c6d71e",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+          "name": "Aberroth"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/BruteHarbinger-FireShamans",
+          "name": "Harbinger of Ash"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+          "name": "Herald of Oblivion"
+        }
+      ],
+      "tunklab_echo_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+          "name": "The Fading Brink"
+        }
+      ],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Aberroth",
+        "Boss-specific drop",
+        "11.8%",
+        "Harbinger of Ash",
+        "Boss-specific drop, Empowered only",
+        "10% - 22%",
+        "Herald of Oblivion",
+        "Boss-specific drop",
+        "11.8%",
+        "The Fading Brink",
+        "Reward for completing the Woven Echo, Empowered only",
+        "10% - 22%"
+      ]
+    },
+    {
+      "id": 367,
+      "url": "https://lastepoch.tunklab.com/unique/celestial_doom",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 367,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "hostOnly": true,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 367,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "aberroth": true
+        },
+        {
+          "uniqueId": 367,
+          "monsterNameKey": "Actors.Actor_Name_Harbinger of War",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0.22,
+          "rarityForMaxChance": 12,
+          "timelineInfo": {
+            "id": 4,
+            "empoweredOnly": true
+          },
+          "minCorruption": 0,
+          "harbinger": true
+        },
+        {
+          "uniqueId": 367,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18,
+          "hostOnly": true
+        },
+        {
+          "uniqueId": 367,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.020000001,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18
+        }
+      ],
+      "tunklab_html_sha256": "5b9c0030fddb8eb5f1e4661486b4ec0e9099067cae137780a48efbbb1451aeb5",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/AgileHarbinger-FrostLich",
+          "name": "Harbinger of War"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/Aterroth",
+          "name": "Aberroth"
+        },
+        {
+          "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+          "name": "Herald of Oblivion"
+        }
+      ],
+      "tunklab_echo_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/echo/the_fading_brink",
+          "name": "The Fading Brink"
+        }
+      ],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Sources this item drops from",
+        "Source",
+        "Chance",
+        "Harbinger of War",
+        "Boss-specific drop, Empowered only",
+        "10% - 22%",
+        "Aberroth",
+        "Boss-specific drop",
+        "11.8%",
+        "Herald of Oblivion",
+        "Boss-specific drop",
+        "11.8%",
+        "The Fading Brink",
+        "Reward for completing the Woven Echo, Empowered only",
+        "10% - 22%"
+      ]
+    },
+    {
+      "id": 368,
+      "url": "https://lastepoch.tunklab.com/unique/mana_guide",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 373,
+      "url": "https://lastepoch.tunklab.com/unique/ravagers_dart",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 374,
+      "url": "https://lastepoch.tunklab.com/unique/pearls_of_the_swine_blood",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 375,
+      "url": "https://lastepoch.tunklab.com/unique/pearls_of_the_swine_fire",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 376,
+      "url": "https://lastepoch.tunklab.com/unique/pearls_of_the_swine_poison",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 379,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_short_sword",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "4ef287eb0655e22e1476cf27368763d2abd5ae5166947a22860fdfab448e4ae1",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 380,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_cleaver",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "aa1a5cff1d92a9c812034d0a5f4001b732eb7544596a2c5aeceaade4c4cb1a8e",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 381,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_club",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "1101f057366dc7ba338fd7b60d9b4849816659b0f24f81799f56e85a50f4c180",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 382,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_great_sword",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "fdf5158831c600a7ef548220c042b400f0d3d07856df52891494357bc628c57e",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 383,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_great_axe",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "80e027b1d4334fcbb09e4e91226f416ce49ec33e6cfbad778284317b980458f6",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 384,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_great_mace",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "d79e1a7ce53f0d9707a071fa5eac8236badde06d9e574940cd0bd2c481fbeee2",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 385,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_spear",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "b8bc13cfc2df4504aceebd2a74e216a9791b4577509133f21e7e0d47d9f8ac77",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 386,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_staff",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "19da09eb8388e8e822e20eef9ff34a2356580de2e4e25bda32ae88f4dd5b6288",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 387,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_cuirass",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "6f5cff18325f37278275e7eb1d533ff6ab047d1f12987b881fc5c8a25842e8c5",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 388,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_dagger",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "302b5badeb709d8b8f93fca7b305978e5ed9ff46cdbc942afdd4b94ae1c5b41c",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 389,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_sceptre",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "7c573952b2b4483b395ba8bc2ad0831ca3f7948962415607e7ea41fef9062603",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 390,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_wand",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "59bd30e892821d83fe77fef773af0086deada2196e241c9a61eee2a57afbd2af",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 391,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_bow",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "ce93c4951008a9e4ce92bf6ece987bde1ea8225a024192371715055e34e60ee7",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 392,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_quiver",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "cfc797af92bee90044e1b77bae9993d122e3bd1c5015806707a3ba3ada7b0347",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 393,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_shield",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "6dad56189171fb74e910dc176d44e525acbd598860cedc74e4a15e378caa332b",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 394,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_catalyst",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "2fd2b4c61b76a92051e65ceed0d6363774bc317aac3dd7ce9fb2f010fb61e24a",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 395,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_relic",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "322c8712272a692c6cdcd97f906b708b263402009cd9ad78b68e96a82f58393a",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 396,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_ring",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "1062cca19115180c7dcba04d8666b700863d296e89c726b40f58d3f6ec682713",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 397,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_amulet",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "0119e66230ebd14cd8a4cac5165659ca6fc54ae9a9ab013a9017d22cdcdf0cff",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 398,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_gloves",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "4c8e34386de695556ba00ed7ef0c3afa7d4df694caf65b6a4b90813cd52cfe14",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 399,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_belt",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "a4f04d50ab8c683124eb92dfa564bc62ba789e6663bf765276540c17cd0a0c89",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 400,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_boots",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "e2e80e9fc0e9cb29121f0b0a60779a7f9bb8813bfcf74120761a91d4650e7c30",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 401,
+      "url": "https://lastepoch.tunklab.com/unique/cocooned_helmet",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "9e4bb1825b402ec59d29f42f32e26d04f56cb9e43719a490cc8033387f9f3952",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 403,
+      "url": "https://lastepoch.tunklab.com/unique/soul_of_the_mountain",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 403,
+          "monsterNameKey": "Actors.Actor_Name_Draal Queen",
+          "chanceModifier": 0,
+          "chance": 1,
+          "maxChance": 1,
+          "rarityForMaxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 13
+        }
+      ],
+      "tunklab_html_sha256": "3d2bbb9322f32503a1d391013c7661b65ffd6b00dbc8cca8156f0c7080a05275",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/DraalQueen",
+          "name": "Draal Queen"
+        }
+      ],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Draal Queen",
+        "(",
+        "100%",
+        ")"
+      ]
+    },
+    {
+      "id": 411,
+      "url": "https://lastepoch.tunklab.com/unique/countenance_of_majasa",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 411,
+          "monsterNameKey": "Actors.Actor_Name_Majasa",
+          "chanceModifier": 0,
+          "chance": 1,
+          "maxChance": 1,
+          "rarityForMaxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 5
+        }
+      ],
+      "tunklab_html_sha256": "8f960f4aa5ed328503764bfa3e9a7f11222e2be7921bfc386249bd066230a34a",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/MajasaEndgamePhase2",
+          "name": "Goddess of Blood"
+        }
+      ],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Goddess of Blood",
+        "(",
+        "100%",
+        ")"
+      ]
+    },
+    {
+      "id": 413,
+      "url": "https://lastepoch.tunklab.com/unique/shattered_worlds",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 413,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.2,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18,
+          "hostOnly": true
+        }
+      ],
+      "tunklab_html_sha256": "e658bf028409903e502a14b45db0f3cd996430db41917f6d4a6fe5962ab3642f",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+          "name": "Herald of Oblivion"
+        }
+      ],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Herald of Oblivion",
+        "(",
+        "20%",
+        ")"
+      ]
+    },
+    {
+      "id": 414,
+      "url": "https://lastepoch.tunklab.com/unique/downfall_of_the_righteous",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 415,
+      "url": "https://lastepoch.tunklab.com/unique/immortal_vise",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 415,
+          "monsterNameKey": "Actors.Actor_Name_Aberroth",
+          "chanceModifier": 0,
+          "chance": 0.8,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 18,
+          "hostOnly": true
+        }
+      ],
+      "tunklab_html_sha256": "36868b04b311b7705b4069db4bf86b2d0bee2c208c386cabc7bcdf29dcecad70",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/UberAterroth",
+          "name": "Herald of Oblivion"
+        }
+      ],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Herald of Oblivion",
+        "(",
+        "80%",
+        ")"
+      ]
+    },
+    {
+      "id": 416,
+      "url": "https://lastepoch.tunklab.com/unique/brewmasters_buckle",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 416,
+          "chanceModifier": 0,
+          "chance": 1,
+          "maxChance": 1,
+          "rarityForMaxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 20
+        }
+      ],
+      "tunklab_html_sha256": "e3ea79200ce24255b4361d4c37a139620b61ea984290a9fef7687dec9164197b",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/echo/the_grand_brewery",
+          "name": "The Grand Brewery"
+        }
+      ],
+      "tunklab_acquisition_excerpt": [
+        "Dropped by completing",
+        "The Grand Brewery",
+        "(",
+        "guaranteed",
+        ")"
+      ]
+    },
+    {
+      "id": 417,
+      "url": "https://lastepoch.tunklab.com/unique/clothos_needle",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 417,
+          "monsterNameKey": "Actors.Actor_Name_Fateweaver Clotho",
+          "chanceModifier": 0,
+          "chance": 0.3,
+          "maxChance": 0.45,
+          "rarityForMaxChance": 13,
+          "minCorruption": 0,
+          "wovenEcho": 14
+        }
+      ],
+      "tunklab_html_sha256": "97bdfb75ee2e324a2177e7dd02777998bbf3cf9a3a580b40cc42e27dd9c7c757",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/FateweaverClothoRapier",
+          "name": "Fateweaver Clotho"
+        }
+      ],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Fateweaver Clotho",
+        "(",
+        "30% - 45%",
+        ")"
+      ]
+    },
+    {
+      "id": 420,
+      "url": "https://lastepoch.tunklab.com/unique/executioners_tithe",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 422,
+      "url": "https://lastepoch.tunklab.com/unique/lightning_in_a_bottle",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 423,
+      "url": "https://lastepoch.tunklab.com/unique/legends_entwined",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "caaa4d143ed44ac9dd8b3088e535d90323100df878d1804f80ca46cffa1048d4",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 424,
+      "url": "https://lastepoch.tunklab.com/unique/tyrants_skull",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "b562043c3c37e799e8b1c1a37b696c9fdbe266a219840363be186bc8729dc7f7",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 425,
+      "url": "https://lastepoch.tunklab.com/unique/wildfire_embers",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "68f3d5b1b9d5efe29589225ff598f26105a9e419a484aec31f4db1bb67a35c80",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 426,
+      "url": "https://lastepoch.tunklab.com/unique/thicket_of_blinding_light",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "78e0cf0aadf2f4c0f8110fd5b5e4b8c326942e0a78ddad5cd6771b8ff3d26fc9",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 427,
+      "url": "https://lastepoch.tunklab.com/unique/harmony_of_the_first",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "631e6d2148827fbdb1288133ac9644eed13632ea9ae069dc6e7f4d5906bdde96",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 428,
+      "url": "https://lastepoch.tunklab.com/unique/onslaught_of_cerata",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "b27ecf97dd3c8694314b2a6270a04ab2392b4f28d31267bf9b3b819d0007270d",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 429,
+      "url": "https://lastepoch.tunklab.com/unique/blossom_of_immortal_stone",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "a157bbc8c414e1296408fab38e7582f9a8eba4b0928d076283c6e871e7e971ee",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Acquired from",
+        "Rift Beast"
+      ]
+    },
+    {
+      "id": 430,
+      "url": "https://lastepoch.tunklab.com/unique/chorus_of_the_anurok",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "c4360deb3b40e2fc1ffebc5b83e04e5976ba609865b8e549e20db0a7b5b31434",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 431,
+      "url": "https://lastepoch.tunklab.com/unique/carrion_of_creation",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "1a6487bbc5070cd9ba7a386c0fa3a69d7f46f155a8327d6fd1972d2d19c77a8f",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Acquired from",
+        "Rift Beast"
+      ]
+    },
+    {
+      "id": 432,
+      "url": "https://lastepoch.tunklab.com/unique/horn_of_the_bone_wisp",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "ff27e62950f377c6f062688b5f43fdf495f8d8fa97923d63e6993e2d0cbb6c6c",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 433,
+      "url": "https://lastepoch.tunklab.com/unique/reliquary_nest",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "561e236fd9a1ce66e7bf4b13392336794a2d3f917a2f1e99e509820f78d34c09",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 434,
+      "url": "https://lastepoch.tunklab.com/unique/mask_of_indifference",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "8654317841cf4c4bf92e439a4a1fe1ac4cbbd70d8bf6ba65496dcaeb9054620c",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 435,
+      "url": "https://lastepoch.tunklab.com/unique/permanence_of_primal_knowledge",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "76d94c0f7a85b32bcc037ca4d268d9304c8b245e8ed460852fe3bc38e55e6a48",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Acquired from",
+        "Rift Beast"
+      ]
+    },
+    {
+      "id": 436,
+      "url": "https://lastepoch.tunklab.com/unique/wings_of_discord",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "36548244509d164e29130237580e71582842fcbbde9130bac448e5115b35ea0b",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 437,
+      "url": "https://lastepoch.tunklab.com/unique/primal_cadence",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "06e356e0a4dd20023844eec49656b172b935970d211b9cb24359022f015ff3fa",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 438,
+      "url": "https://lastepoch.tunklab.com/unique/whetstone_gavel",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "8cb6ecc4a3d31b4bf8cca586d1b44d54cb24fb8e8d9b8c05e5149ab207d427c4",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 439,
+      "url": "https://lastepoch.tunklab.com/unique/truesight_glass",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "da79657c95360081f506fbc7111420e407bea019c97aab8bc36346004d899df3",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 440,
+      "url": "https://lastepoch.tunklab.com/unique/bluefeather_band",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "aeddae596a1b3703b8cfb84006f2e8993df8eced1eed8947b5e71a04d1300d90",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 441,
+      "url": "https://lastepoch.tunklab.com/unique/hydra_arc",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "fdaccc5c775f3d38f46e759db948ca9e657a6dbc353570668f47e55b13ffe9f4",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 442,
+      "url": "https://lastepoch.tunklab.com/unique/velocyns_jaw",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "0193a4f0362581f945545c56a29a1c0a0613bca005ef0b4311c3ff991828603a",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 443,
+      "url": "https://lastepoch.tunklab.com/unique/army_of_skin",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 444,
+      "url": "https://lastepoch.tunklab.com/unique/evolutions_end",
+      "is_primordial": false,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "5d01e5cb88ac69663cf514c47ae285b18d83f427d46ee86c1b792bb6d6be1ad1",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 445,
+      "url": "https://lastepoch.tunklab.com/unique/spirit_xylem",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "eff6d81e35a1913b02b0c317232ed5b6fc395ade4b1fc770ad804c98eb79826f",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 446,
+      "url": "https://lastepoch.tunklab.com/unique/fangs_of_the_berserker",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "3426f5413c244043bb102928e4592024f4bd293f308227d4312885a2c350f7fe",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 447,
+      "url": "https://lastepoch.tunklab.com/unique/bones_of_the_ancestral_pack",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "9dfab8e9d0f753f627f7a276113914c6cfc66ac3e171b96fc50dd4a2c5d30e1b",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 448,
+      "url": "https://lastepoch.tunklab.com/unique/architects_of_astral_blood",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "58e0031e406b91bd9d21bd37719bf7b19b13b1559e5667a4ba218e3117519a22",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 449,
+      "url": "https://lastepoch.tunklab.com/unique/the_butchers_crown",
+      "is_primordial": true,
+      "letools_monster_item_drops": [],
+      "tunklab_html_sha256": "eadd1df988694901e9a7a200f7137a4379fdf184af919b63060d23f99e72a843",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Not random drop"
+      ]
+    },
+    {
+      "id": 450,
+      "url": "https://lastepoch.tunklab.com/unique/unbroken_charge",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 451,
+      "url": "https://lastepoch.tunklab.com/unique/doppelgangers_mimicry",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 452,
+      "url": "https://lastepoch.tunklab.com/unique/doppelgangers_deception",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 453,
+      "url": "https://lastepoch.tunklab.com/unique/doppelgangers_facade",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 454,
+      "url": "https://lastepoch.tunklab.com/unique/abandoned_eyes_of_the_weaver",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 455,
+      "url": "https://lastepoch.tunklab.com/unique/abandoned_chitin_of_the_weaver",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 456,
+      "url": "https://lastepoch.tunklab.com/unique/kuzons_fury",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 457,
+      "url": "https://lastepoch.tunklab.com/unique/kuzons_guise",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 458,
+      "url": "https://lastepoch.tunklab.com/unique/tabi_of_dusk_and_dawn",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 459,
+      "url": "https://lastepoch.tunklab.com/unique/artifice_of_devastation",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 460,
+      "url": "https://lastepoch.tunklab.com/unique/laups_path",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 461,
+      "url": "https://lastepoch.tunklab.com/unique/ash_wake",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 463,
+      "url": "https://lastepoch.tunklab.com/unique/rahyehs_embrace",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 464,
+      "url": "https://lastepoch.tunklab.com/unique/jormuns_thirst",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 465,
+      "url": "https://lastepoch.tunklab.com/unique/jormuns_hunger",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 466,
+      "url": "https://lastepoch.tunklab.com/unique/jormuns_feast",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 467,
+      "url": "https://lastepoch.tunklab.com/unique/keplahans_pyrolith",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 468,
+      "url": "https://lastepoch.tunklab.com/unique/keplahans_cryolith",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 469,
+      "url": "https://lastepoch.tunklab.com/unique/exulis",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 469,
+          "monsterNameKey": "Actors.Actor_Name_Vision of the Observer",
+          "chanceModifier": 0,
+          "chance": 0.1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 43,
+          "hostOnly": true
+        }
+      ],
+      "tunklab_html_sha256": "9993667df4453d01942ac6f634f83bf1f262c1d3275fa2295bcbbb0c7a48f2a9",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/SuperShade",
+          "name": "Vision of the Observer"
+        }
+      ],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Vision of the Observer",
+        "(",
+        "10%",
+        ")"
+      ]
+    },
+    {
+      "id": 470,
+      "url": "https://lastepoch.tunklab.com/unique/oculus_of_ruin",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 470,
+          "monsterNameKey": "Actors.Actor_Name_Vision of the Observer",
+          "chanceModifier": 0,
+          "chance": 1,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 43,
+          "hostOnly": true
+        }
+      ],
+      "tunklab_html_sha256": "67af0cba88913e1ee69c247d37fc5bdc01fa388eb88b5c593c22d9c3bdc06163",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/SuperShade",
+          "name": "Vision of the Observer"
+        }
+      ],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Vision of the Observer",
+        "(",
+        "100%",
+        ")"
+      ]
+    },
+    {
+      "id": 471,
+      "url": "https://lastepoch.tunklab.com/unique/unbroken_legion",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 472,
+      "url": "https://lastepoch.tunklab.com/unique/heorots_repose",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 472,
+          "monsterNameKey": "Actors.Actor_Name_Morditas",
+          "chanceModifier": 0,
+          "chance": 0.2,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 46,
+          "hostOnly": true
+        }
+      ],
+      "tunklab_html_sha256": "38697a7101f442587542b6f96865fc5fc4deee5a2edad237b1a8ef362be9dc5e",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/MorditasBoss",
+          "name": "Morditas"
+        }
+      ],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "Morditas",
+        "(",
+        "20%",
+        ")"
+      ]
+    },
+    {
+      "id": 473,
+      "url": "https://lastepoch.tunklab.com/unique/eternal_font",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 474,
+      "url": "https://lastepoch.tunklab.com/unique/fused_elements",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 475,
+      "url": "https://lastepoch.tunklab.com/unique/devoured_knowledge",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 476,
+      "url": "https://lastepoch.tunklab.com/unique/death_dance",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 477,
+      "url": "https://lastepoch.tunklab.com/unique/unsated_rage",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 477,
+          "monsterNameKey": "Actors.Actor_Name_Morditas",
+          "chanceModifier": 0,
+          "chance": 0.5,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 47,
+          "hostOnly": true
+        }
+      ],
+      "tunklab_html_sha256": "b1aa9a239761aeff4fd8913c6e22772c35f0da8bb435c6df307f7de965cea5b8",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Acquired from",
+        "Rage of Morditas"
+      ]
+    },
+    {
+      "id": 478,
+      "url": "https://lastepoch.tunklab.com/unique/gift_of_the_eidolon",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 479,
+      "url": "https://lastepoch.tunklab.com/unique/withstand_the_elements",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 479,
+          "monsterNameKey": "Actors.Actor_Name_Morditas",
+          "chanceModifier": 0,
+          "chance": 0.5,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 46,
+          "hostOnly": true
+        }
+      ],
+      "tunklab_html_sha256": "6b35638e63a8c467b6f88f89639d92995a704c40fc15412f13096076e39fe463",
+      "tunklab_boss_links": [],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Acquired from",
+        "Rage of Morditas"
+      ]
+    },
+    {
+      "id": 480,
+      "url": "https://lastepoch.tunklab.com/unique/perilous_reflection",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 483,
+      "url": "https://lastepoch.tunklab.com/unique/wranglers_keepsake",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 484,
+      "url": "https://lastepoch.tunklab.com/unique/effusive_oath",
+      "is_primordial": false,
+      "letools_monster_item_drops": []
+    },
+    {
+      "id": 487,
+      "url": "https://lastepoch.tunklab.com/unique/vestige_of_imprisonment",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 487,
+          "monsterNameKey": "Actors.Actor_Name_Morditas",
+          "chanceModifier": 0,
+          "chance": 0.8,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 47,
+          "hostOnly": true
+        }
+      ],
+      "tunklab_html_sha256": "141d1fec08f2cda544b450240b793b34aebe506752035f94f985103e981f93f9",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/MorditasBossPinnacle",
+          "name": "God of Bloodshed"
+        }
+      ],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "God of Bloodshed",
+        "(",
+        "80%",
+        ")"
+      ]
+    },
+    {
+      "id": 488,
+      "url": "https://lastepoch.tunklab.com/unique/morditas_vengeance",
+      "is_primordial": false,
+      "letools_monster_item_drops": [
+        {
+          "uniqueId": 488,
+          "monsterNameKey": "Actors.Actor_Name_Morditas",
+          "chanceModifier": 0,
+          "chance": 0.2,
+          "maxChance": 0,
+          "minCorruption": 0,
+          "wovenEcho": 47,
+          "hostOnly": true
+        }
+      ],
+      "tunklab_html_sha256": "a44a2e26876b89b270c3dbc9f82a04538cc40d51843077be07f1a5dafc68cfae",
+      "tunklab_boss_links": [
+        {
+          "url": "https://lastepoch.tunklab.com/npc/MorditasBossPinnacle",
+          "name": "God of Bloodshed"
+        }
+      ],
+      "tunklab_echo_links": [],
+      "tunklab_acquisition_excerpt": [
+        "Dropped By",
+        "God of Bloodshed",
+        "(",
+        "20%",
+        ")"
+      ]
+    }
+  ]
+}
