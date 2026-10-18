@@ -2,9 +2,9 @@
 
 [掉落 T7 概率](https://bcszsz.github.io/LE-filter/probability/)：切换普通掉落与普通崇高预言，对比**最终崇高装备中至少1T7／至少2T7**的概率，并显示平均多少件出一件。区域固定100、命运默认12，可选腐化、23类装备、玩家职业及装备职业；普通随机掉落曲线随腐化变化，普通预言保持水平。预言模式保留三种镜片对比和[Excel](outputs/01a135a3-5a09-7e91-83c5-4bd333aeb5ea/普通崇高预言-T7概率.xlsx)。普通模式采用额外地图稀有度0%、无活动暗金加成的随机来源，不含额外保证稀有及特殊词缀来源。数据挖掘版本1.5.2.2，方法及复现见[概率工具说明](docs/PROPHECY_CALCULATOR.md)。
 
-[在线工作台](https://bcszsz.github.io/LE-filter/)由GitHub Pages托管。支持导入Maxroll filter XML／TXT、需求JSON，以及[LETools多角色profile并集](docs/PROFILE_IMPORT.md)，可搜索编辑、多BD组合及导出JSON／XML。粘贴1–12个角色链接即可经后端API读取并预览并集，无需书签或转存Planner；个人导入只创建个人方案，不更新已有模版，攻略网址不提取。页面先加载发布时生成的编辑数据，运行环境在后台启动；目标提取与生成仍在浏览器内处理，见[启动优化](docs/STARTUP_PERFORMANCE.md)。在线模板包含旧Maxroll Flay／Skeleton，以及独立的Allie Flay攻略／中文骷髅835攻略／冰追心／追心手里剑；四份新来源模板默认未勾选，两份Flay不合并。使用Chrome或Edge进行文件下载；Codex内置浏览器目前不能正常接收浏览器生成的下载文件。
+[在线工作台](https://bcszsz.github.io/LE-filter/)由GitHub Pages托管。支持导入Maxroll filter XML／TXT、需求JSON，以及[LETools多角色profile并集](docs/PROFILE_IMPORT.md)，可搜索编辑、多BD组合及导出JSON／XML。粘贴1–12个角色链接即可经后端API读取并预览并集，无需书签或转存Planner；角色导入先创建个人模版，再与其他模版组合新建方案，攻略网址不提取。页面先加载发布时生成的编辑数据，运行环境在后台启动；目标提取与生成仍在浏览器内处理，见[启动优化](docs/STARTUP_PERFORMANCE.md)。预设模版包含旧Maxroll Flay／Skeleton，以及独立的Allie Flay攻略／中文骷髅835攻略／冰追心／追心手里剑；四份新来源模板默认未勾选，两份Flay不合并。使用Chrome或Edge进行文件下载；Codex内置浏览器目前不能正常接收浏览器生成的下载文件。
 
-**目标工作台已可使用**：双击[start-tool.cmd](start-tool.cmd)，打开本地 <http://127.0.0.1:8765>。左侧并排“已有模版”和“我的保存”：多选只读模板并指定主BD，点击“用所选模版新建方案”后，所有已选BD生成一条可编辑保存方案。勾选不新增保存，再次应用创建新方案；已有方案可直接打开，编辑自动保存。支持导入filter提取目标、中文／英文／ID搜索多选、方案内主副套路调整、全部方案JSON备份和XML预览导出。终局五类目标、练级只填词缀与底材两份列表，共同导出一份filter。见[工具使用说明](docs/TOOL_GUIDE.md)。默认模板组合两BD98条，均启用，练级目标留空。05要求指定底材＋同BD对应部位目标T7常驻；被C1完整覆盖的底材省去重复规则。删除专门T6层，练级品质80退出、底材60退出、普通拆解50退出、原常驻拆解60退出。897附魔及腐化不计普通神像目标。
+**目标工作台已可使用**：双击[start-tool.cmd](start-tool.cmd)，打开本地 <http://127.0.0.1:8765>。左侧纵向分为“预设模版”“个人模版”“我的方案”：两类模版可混选并指定主BD，再点击“用所选模版新建方案”。个人模版可独立编辑；方案保留各BD副本，后续修改模版不覆盖已有方案。旧角色导入方案自动补入个人模版库，原方案继续保留；已有方案的“添加BD”也可从两类模版选择副BD。编辑自动保存，整套JSON备份包含模版和方案。[新版界面](docs/images/personal-template-workspaces.png)及[工具使用说明](docs/TOOL_GUIDE.md)。终局五类目标、练级只填词缀与底材两份列表，共同导出一份filter。默认模板组合两BD98条，均启用，练级目标留空。05要求指定底材＋同BD对应部位目标T7常驻；被C1完整覆盖的底材省去重复规则。删除专门T6层，练级品质80退出、底材60退出、普通拆解50退出、原常驻拆解60退出。897附魔及腐化不计普通神像目标。
 
 暗金选择器把已选项集中置顶，取消勾选即回到原部位；搜索后直接勾选，每件附一个来源、固定口径参考概率及可用图片。预言统一用100级／命运12的通用池，有reroll的世界暗金另列求索镜片概率，两者由同一个原生暗金模型计算；Boss统一取T4／开启者奖励的表内上限。依据见[掉落资料](docs/research/UNIQUE_PICKER_DROP_DATA.md)和[求索算法](docs/research/CURIOSITY_LENS_UNIQUE_PROBABILITY.md)。顶部“载入配置”移到“更多→导入方案备份”，继续支持追加恢复全部方案。
 
@@ -16,7 +16,7 @@
 
 “冰追心”为独立已有模版，与前两份攻略BD使用相同的编辑、保存、主副和生成规则。初版来自[构建器AL0dkyek](https://www.lastepochtools.com/planner/zh/AL0dkyek)，2026-10-18已按玩家提供的`LE-filter (10).xml`替换头盔、手套、腰带、弓和祭坛目标；离线重建同样以玩家修订为准。来源与目标见[中文审阅表](docs/ICE_HEARTSEEKER_PLANNER_REVIEW.md)、[终局需求](requirements/ice-heartseeker-planner-al0dkyek.endgame.json)；[练级需求](requirements/ice-heartseeker-planner-al0dkyek.leveling.json)留空。已有保存不会自动覆盖，可从模板应用新组合，或在当前方案导入新版终局需求。
 
-“追心手里剑”2026-10-19已完全按原选四个profile重新读取并重建：13暗金、10装备组（28项实际普通槽T6／T7目标）、11神像组、1祭坛，无独立05、练级留空。装备不再收T5及以下、腐化槽普通词缀和其他附加槽，也不再合并旧XML目标；神像／祭坛沿用各自体系。单独96条，与冰追心组合125／127条。[直接导入XML](outputs/profile-t6-t7-2026-10-19/追心手里剑.xml)、[全部目标](docs/SHURIKEN_MARKSMAN_REVIEW.md)及[新版终局需求](requirements/heartseeker-shuriken-marksman.endgame.json)可用于更新现有方案。普通profile导入也使用新筛选，只创建个人BD，不改已有模版或个人保存。
+“追心手里剑”2026-10-19已完全按原选四个profile重新读取并重建：13暗金、10装备组（28项实际普通槽T6／T7目标）、11神像组、1祭坛，无独立05、练级留空。装备不再收T5及以下、腐化槽普通词缀和其他附加槽，也不再合并旧XML目标；神像／祭坛沿用各自体系。单独96条，与冰追心组合125／127条。[直接导入XML](outputs/profile-t6-t7-2026-10-19/追心手里剑.xml)、[全部目标](docs/SHURIKEN_MARKSMAN_REVIEW.md)及[新版终局需求](requirements/heartseeker-shuriken-marksman.endgame.json)可用于更新现有方案。普通profile导入也使用新筛选，只创建个人模版，不改预设模版或已有方案。
 
 Allie攻略来源的Flay已按2026-10-07正文及2026-10-11玩家补充更新[终局需求](requirements/flay-lich-allie-guide.endgame.json)与[练级需求](requirements/flay-lich-allie-guide.leveling.json)：17暗金、10装备组、5神像组、1祭坛组、28种终局底材（5首选／23替代）；练级19词缀与3种底材。厚实拉贡点燃139与厚实编织者点燃／点燃火焰穿透876分别收集。祭坛要求尖塔底材3与“魔力自装备的每个腐化神像”1105同时成立，该腐化词条直接作为祭坛目标。补入短暂休息132、红戒277、虚无353、破碎世界413、流亡469、不息狂怒477，保留山之麓替代品。终局05按首选／替代分别收集，没有明确首选不猜；C1已覆盖的底材不会重复输出。Allie单独88条，与835组合141条，均启用。完整目标、部位链接冲突与来源提取时的验证边界见[双攻略需求审阅](docs/GUIDE_REQUIREMENTS_REVIEW.md)。已有保存可手动补祭坛、导入新版同id终局JSON替换该阶段，或明确从模板重置；刷新不会覆盖自己的目标修改。
 

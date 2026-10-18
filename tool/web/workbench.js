@@ -29,15 +29,50 @@
   }
   function schemeName(config){return config.builds.filter(b=>b.enabled).map(b=>b.name).join(' ＋ ')||'我的方案';}
   function activeSave(state){return state.saves.find(s=>s.id===state.active_save_id);}
+  function activeTemplate(state){return state.personal_templates.find(t=>t.id===state.active_template_id);}
+  function allTemplates(state,presets){return [...presets,...state.personal_templates];}
+  function templateConfig(state,template){return {...emptyConfig(state.draft_config),main_id:template.id,builds:[template]};}
+  function activateTemplate(state,id){
+    const template=state.personal_templates.find(t=>t.id===id);
+    if(!template)throw Error('找不到这个个人模版。');
+    state.active_template_id=id;return template;
+  }
+  function addPersonalTemplate(state,build,id){
+    if(typeof id!=='string'||!id||state.personal_templates.some(t=>t.id===id))throw Error('个人模版的ID重复或无效。');
+    const template={...copy(build),id,enabled:true};delete template.template_id;
+    configShape({version:1,main_id:id,builds:[template]});
+    state.personal_templates.push(template);
+    state.selection={ids:[id],main_id:id};
+    activateTemplate(state,id);return template;
+  }
+  function removePersonalTemplate(state,id){
+    state.personal_templates=state.personal_templates.filter(t=>t.id!==id);
+    state.selection.ids=state.selection.ids.filter(t=>t!==id);
+    if(state.selection.main_id===id)state.selection.main_id=state.selection.ids[0]||null;
+    if(state.active_template_id===id)state.active_template_id=null;
+  }
+  function recoverProfileTemplates(state,examples){
+    for(const saved of state.saves)for(const b of saved.config.builds){
+      if(b.template_id||examples.builds.some(t=>t.id===b.id)||
+         ![b.requirement_sources?.endgame,b.source].some(s=>Array.isArray(s?.profiles)&&s.profiles.length))continue;
+      const candidate={...copy(b),enabled:true};
+      let id=b.id,suffix=2;
+      while(state.personal_templates.some(t=>t.id===id)){
+        if(JSON.stringify(state.personal_templates.find(t=>t.id===id))===JSON.stringify({...candidate,id}))break;
+        id=`${b.id}-${suffix++}`;
+      }
+      if(!state.personal_templates.some(t=>t.id===id))state.personal_templates.push({...candidate,id});
+    }
+  }
   function addSave(state,config,id,name=schemeName(config)){
     configShape(config);
     if(typeof id!=='string'||!id||state.saves.some(s=>s.id===id))throw Error('保存方案的ID重复或无效。');
     const saved={id,name,config:copy(config),active_build_id:config.main_id};
-    state.saves.push(saved);state.active_save_id=id;
+    state.saves.push(saved);state.active_save_id=id;state.active_template_id=null;
     return saved;
   }
   function restore(examples,saved){
-    const state={format:FORMAT,version:2,selection:defaultSelection(examples),draft_config:emptyConfig(examples),saves:[],active_save_id:null};
+    const state={format:FORMAT,version:3,selection:defaultSelection(examples),draft_config:emptyConfig(examples),personal_templates:[],saves:[],active_save_id:null,active_template_id:null};
     if(!saved)return state;
     if(saved.version===1&&Array.isArray(saved.builds)){
       configShape(saved);
@@ -46,22 +81,35 @@
       state.selection={ids:[...new Set(ids)],main_id:config.builds.find(b=>b.id===config.main_id)?.template_id||ids[0]||null};
       state.draft_config={...copy(config),main_id:null,builds:[]};
       if(config.builds.length)addSave(state,config,'legacy-workspace',schemeName(config));
+      recoverProfileTemplates(state,examples);
       return state;
     }
-    if(saved.format!==FORMAT||saved.version!==2||!Array.isArray(saved.saves)||!Array.isArray(saved.selection?.ids))throw Error('这不是支持的保存方案文件。');
+    if(saved.format!==FORMAT||![2,3].includes(saved.version)||!Array.isArray(saved.saves)||!Array.isArray(saved.selection?.ids))throw Error('这不是支持的保存方案文件。');
     const restored=copy(saved),ids=new Set();
+    if(saved.version===2){restored.personal_templates=[];restored.active_template_id=null;}
+    if(!Array.isArray(restored.personal_templates))throw Error('个人模版库格式不正确。');
+    restored.version=3;
     configShape(restored.draft_config);
     if(restored.draft_config.builds.length)throw Error('模板选择草稿不能包含BD副本。');
     for(const s of restored.saves){
       if(!s||typeof s.id!=='string'||!s.id||ids.has(s.id)||typeof s.name!=='string')throw Error('保存方案格式不正确或ID重复。');
       configShape(s.config);attachOrigins(s.config,examples);ids.add(s.id);
     }
-    restored.selection.ids=[...new Set(restored.selection.ids)].filter(id=>examples.builds.some(t=>t.id===id));
+    if(saved.version===2)recoverProfileTemplates(restored,examples);
+    const templateIds=new Set(examples.builds.map(t=>t.id));
+    for(const t of restored.personal_templates){
+      configShape({version:1,main_id:t.id,builds:[t]});
+      if(templateIds.has(t.id)||t.enabled!==true)throw Error('个人模版的ID重复或状态不正确。');
+      templateIds.add(t.id);
+    }
+    restored.selection.ids=[...new Set(restored.selection.ids)].filter(id=>templateIds.has(id));
     if(!restored.selection.ids.includes(restored.selection.main_id))restored.selection.main_id=restored.selection.ids[0]||null;
     if(restored.active_save_id!==null&&!ids.has(restored.active_save_id))throw Error('找不到当前保存方案。');
+    if(restored.active_template_id!==null&&!restored.personal_templates.some(t=>t.id===restored.active_template_id))throw Error('找不到当前个人模版。');
     return restored;
   }
   function setTemplateEnabled(state,templates,id,enabled){
+    templates=allTemplates(state,templates);
     if(!templates.some(t=>t.id===id))throw Error('找不到这个模板。');
     const ids=new Set(state.selection.ids);
     if(enabled)ids.add(id);else ids.delete(id);
@@ -73,17 +121,28 @@
     state.selection.main_id=id;
   }
   function applyTemplates(state,templates,id){
-    const selected=templates.filter(t=>state.selection.ids.includes(t.id));
-    if(!selected.length)throw Error('请先选择至少一个已有模版。');
+    const selected=allTemplates(state,templates).filter(t=>state.selection.ids.includes(t.id));
+    if(!selected.length)throw Error('请先选择至少一个模版。');
     if(!selected.some(t=>t.id===state.selection.main_id))throw Error('请从已选模板中选择主BD。');
     const settings=activeSave(state)?.config||state.draft_config;
     const config={...copy(settings),main_id:state.selection.main_id,builds:selected.map(t=>({...copy(t),enabled:true,template_id:t.id}))};
     return addSave(state,config,id);
   }
+  function appendTemplates(state,templates,ids){
+    const saved=activeSave(state),library=allTemplates(state,templates);
+    if(!saved||state.active_template_id)throw Error('请先打开要添加BD的方案。');
+    if(!ids.length||ids.some(id=>!library.some(t=>t.id===id)))throw Error('请选择要添加的模版。');
+    const existing=new Set(saved.config.builds.flatMap(b=>[b.id,b.template_id]));
+    const added=library.filter(t=>ids.includes(t.id)&&!existing.has(t.id)).map(t=>({...copy(t),enabled:true,template_id:t.id}));
+    saved.config.builds.push(...added);
+    if(!saved.config.builds.some(b=>b.enabled&&b.id===saved.config.main_id))saved.config.main_id=added[0]?.id||null;
+    if(added.length)saved.active_build_id=added[0].id;
+    return added;
+  }
   function activateSave(state,id){
     const saved=state.saves.find(s=>s.id===id);
     if(!saved)throw Error('找不到这个保存方案。');
-    state.active_save_id=id;return saved;
+    state.active_save_id=id;state.active_template_id=null;return saved;
   }
   function removeSave(state,id){
     const index=state.saves.findIndex(s=>s.id===id);
@@ -92,19 +151,40 @@
     if(state.active_save_id===id)state.active_save_id=state.saves[Math.min(index,state.saves.length-1)]?.id||null;
   }
   function mergeSaves(state,incoming,newId){
+    const templateIds=new Map();
+    for(const template of incoming.personal_templates){
+      const existing=state.personal_templates.find(t=>t.id===template.id);
+      let id=template.id;
+      if(existing&&JSON.stringify(existing)!==JSON.stringify(template))id=newId();
+      if(!existing||id!==template.id)state.personal_templates.push({...copy(template),id});
+      templateIds.set(template.id,id);
+    }
     let active;
     for(const saved of incoming.saves){
-      const added=addSave(state,saved.config,newId(),saved.name);
-      added.active_build_id=saved.active_build_id;
+      const config=copy(saved.config),buildIds=new Map();
+      for(const b of config.builds){
+        const id=templateIds.get(b.template_id||b.id);
+        if(!id)continue;
+        if(b.id===(b.template_id||b.id)){buildIds.set(b.id,id);b.id=id;}
+        b.template_id=id;
+      }
+      config.main_id=buildIds.get(config.main_id)||config.main_id;
+      const added=addSave(state,config,newId(),saved.name);
+      added.active_build_id=buildIds.get(saved.active_build_id)||saved.active_build_id;
       if(saved.id===incoming.active_save_id)active=added;
     }
     if(active)state.active_save_id=active.id;
+    if(!incoming.saves.length){
+      state.draft_config=copy(incoming.draft_config);
+      state.selection={ids:incoming.selection.ids.map(id=>templateIds.get(id)||id),main_id:templateIds.get(incoming.selection.main_id)||incoming.selection.main_id};
+    }
+    if(incoming.active_template_id)state.active_template_id=templateIds.get(incoming.active_template_id);
     return activeSave(state);
   }
   function resetBuild(config,templates,id){
     const index=config.builds.findIndex(b=>b.id===id),b=config.builds[index];
     const template=templates.find(t=>t.id===(b?.template_id||b?.id));
-    if(!template)throw Error('这个BD没有对应的已有模版。');
+    if(!template)throw Error('这个BD没有对应的模版。');
     config.builds[index]={...copy(template),id:b.id,name:b.name,enabled:b.enabled,template_id:template.id};
     return config.builds[index];
   }
@@ -120,14 +200,8 @@
     b.requirement_sources||={};b.requirement_sources[data.stage]=copy(data.source);
     return b;
   }
-  function importProfiles(state,data,buildId,saveId,destination='new-save'){
-    let saved=activeSave(state);
-    if(destination==='new-save'||!saved)saved=addSave(state,emptyConfig(saved?.config||state.draft_config),saveId,data.name);
-    if(saved.config.builds.some(b=>b.id===buildId))throw Error('个人BD的ID重复。');
-    const b={id:buildId,name:data.name,enabled:true,profiles:{endgame:copy(data.profile),leveling:emptyLeveling()},requirement_sources:{endgame:copy(data.source)}};
-    saved.config.builds.push(b);
-    if(!saved.config.builds.some(b=>b.enabled&&b.id===saved.config.main_id))saved.config.main_id=b.id;
-    saved.active_build_id=b.id;return saved;
+  function importProfiles(state,data,id){
+    return addPersonalTemplate(state,{name:data.name,profiles:{endgame:copy(data.profile),leveling:emptyLeveling()},requirement_sources:{endgame:copy(data.source)}},id);
   }
   function selectionValues(chosen,preserveOrder=false){
     const values=[...chosen].map(Number);
@@ -171,17 +245,18 @@
     const configs=[state.draft_config,...state.saves.map(s=>s.config)];
     // Only current profiles can bypass the blocking migration. Python retains
     // all target validation and the conversion of legacy leveling formats.
-    if(configs.some(c=>c.common!==undefined&&(c.common===null||typeof c.common!=='object'||Array.isArray(c.common))||c.builds.some(b=>
+    if(configs.some(c=>c.common!==undefined&&(c.common===null||typeof c.common!=='object'||Array.isArray(c.common))))return false;
+    if([...configs.flatMap(c=>c.builds),...state.personal_templates].some(b=>
       !Array.isArray(b.profiles.leveling.affixes)||!Array.isArray(b.profiles.leveling.bases)||
       'leveling_slots' in b.profiles.endgame||
-      ['uniques','equipment','altars','idols','bases'].some(k=>!Array.isArray(b.profiles.endgame[k])))))return false;
+      ['uniques','equipment','altars','idols','bases'].some(k=>!Array.isArray(b.profiles.endgame[k]))))return false;
     const settings=configs.map(c=>({...copy(defaults),...c.common}));
     if(settings.some(c=>!Array.isArray(c.unique_idols)||c.unique_idols.some(id=>!Number.isInteger(id)||!defaults.unique_idols.includes(id))||
       Object.keys(defaults).some(k=>typeof defaults[k]==='boolean'&&typeof c[k]!=='boolean')))return false;
     configs.forEach((c,i)=>{c.common=settings[i];c.common.unique_idols=[...new Set(c.common.unique_idols)].sort((a,b)=>a-b);});
     return true;
   }
-  const api={library,restore,emptyConfig,activeSave,addSave,setTemplateEnabled,setTemplateMain,applyTemplates,activateSave,removeSave,mergeSaves,resetBuild,importRequirement,importProfiles,selectionValues,moveAffix,placeAffix,expandUniqueSets,groupUniques,uniquePickerGroups,prepareFastState};
+  const api={library,restore,emptyConfig,activeSave,activeTemplate,allTemplates,templateConfig,activateTemplate,addPersonalTemplate,removePersonalTemplate,addSave,setTemplateEnabled,setTemplateMain,applyTemplates,appendTemplates,activateSave,removeSave,mergeSaves,resetBuild,importRequirement,importProfiles,selectionValues,moveAffix,placeAffix,expandUniqueSets,groupUniques,uniquePickerGroups,prepareFastState};
   root.LEWorkbench=api;
   if(typeof module!=='undefined')module.exports=api;
 })(globalThis);

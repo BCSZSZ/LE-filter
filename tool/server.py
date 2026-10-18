@@ -56,7 +56,7 @@ class Handler(BaseHTTPRequestHandler):
             payload = json.loads(self.rfile.read(size))
             if self.path == "/api/download":
                 name = payload["name"]
-                if name not in {"LE-filter.xml", "LE-filter-endgame.xml", "LE-filter-leveling.xml", "LE-filter-targets.json", "LE-filter-requirements.json"}:
+                if name not in {"LE-filter.xml", "LE-filter-endgame.xml", "LE-filter-leveling.xml", "LE-filter-targets.json", "LE-filter-requirements.json", "LE-filter-workspaces.json"}:
                     raise ValueError("下载文件名不正确。")
                 token = uuid.uuid4().hex
                 mime = "application/xml" if name.endswith(".xml") else "application/json"

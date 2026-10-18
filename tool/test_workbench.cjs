@@ -224,4 +224,81 @@ test('fast startup fills current format defaults and leaves legacy migrations to
     const malformed=copy(state);malformed.saves[0].config.common=common;
     const previous=copy(malformed);assert.equal(W.prepareFastState(malformed,defaults),false);assert.deepEqual(malformed,previous);
   }
+  const personal=W.addPersonalTemplate(state,templates[0],'fast-personal');
+  personal.profiles.leveling={equipment:[{type:'HELMET',affixes:[1],bases:[]}]};
+  const oldTemplate=copy(state);assert.equal(W.prepareFastState(state,defaults),false);assert.deepEqual(state,oldTemplate);
+});
+
+test('personal and preset templates combine with independent editable copies and one main BD',()=>{
+  const {examples,templates,state}=setup(),before=copy(templates);
+  const personal=W.addPersonalTemplate(state,{...copy(templates[0]),name:'我的巫妖'},'my-lich');
+  assert.equal(state.saves.length,0);assert.equal(W.activeTemplate(state),personal);
+  W.setTemplateEnabled(state,templates,templates[1].id,true);
+  W.setTemplateMain(state,'my-lich');
+  const saved=W.applyTemplates(state,templates,'mixed');
+  assert.equal(saved.config.builds.length,2);assert.equal(saved.config.main_id,'my-lich');assert.equal(state.active_template_id,null);
+  const b=saved.config.builds.find(b=>b.id==='my-lich');
+  assert.equal(b.template_id,personal.id);b.profiles.endgame.uniques=[];
+  assert.notDeepEqual(b.profiles.endgame.uniques,personal.profiles.endgame.uniques);
+  personal.profiles.leveling.affixes.push(88);assert.deepEqual(b.profiles.leveling.affixes,[502]);
+  const restored=W.restore(examples,JSON.parse(JSON.stringify(state)));
+  assert.deepEqual(restored,state);assert.deepEqual(templates,before);
+  W.removePersonalTemplate(restored,'my-lich');
+  assert.deepEqual(restored.saves,state.saves);assert(!restored.selection.ids.includes('my-lich'));
+});
+
+test('adding a secondary BD from either template pool preserves the existing scheme and main BD',()=>{
+  const {templates,state}=setup();
+  const personal=W.addPersonalTemplate(state,{...copy(templates[0]),name:'我的巫妖'},'my-lich');
+  const saved=W.applyTemplates(state,templates,'lich'),before=copy(saved.config.builds[0]);
+  saved.config.common.unique_idols=[];
+  W.addPersonalTemplate(state,{...copy(templates[1]),name:'个人副BD'},'my-secondary');
+  W.activateSave(state,saved.id);
+  const added=W.appendTemplates(state,templates,[templates[1].id,'my-secondary']);
+  assert.equal(added.length,2);assert.equal(saved.config.builds.length,3);
+  assert.deepEqual(saved.config.builds[0],before);assert.equal(saved.config.main_id,personal.id);
+  assert.deepEqual(saved.config.common.unique_idols,[]);
+  assert.deepEqual(W.appendTemplates(state,templates,[templates[1].id]),[]);
+  const snapshot=copy(saved);assert.throws(()=>W.appendTemplates(state,templates,['missing']));assert.deepEqual(saved,snapshot);
+  added[1].profiles.endgame.idols=[];assert.notDeepEqual(state.personal_templates[1].profiles.endgame.idols,[]);
+});
+
+test('v2 profile schemes recover personal templates once while preserving every scheme and edited variant',()=>{
+  const {examples,templates,state}=setup(),saved=W.applyTemplates(state,templates,'existing');
+  const b=saved.config.builds[0];delete b.template_id;b.id='old-profile';b.name='天梯剥皮巫妖';
+  b.requirement_sources={endgame:{profiles:[{url:'https://www.lastepochtools.com/profile/test/character/Lich'}]}};
+  saved.config.main_id=b.id;saved.active_build_id=b.id;
+  const other=copy(saved);other.id='variant';other.config.builds[0].profiles.endgame.uniques=[];state.saves.push(other);
+  const duplicate=copy(saved);duplicate.id='duplicate';state.saves.push(duplicate);
+  const old=copy(state);old.version=2;delete old.personal_templates;delete old.active_template_id;
+  const before=copy(old),restored=W.restore(examples,old);
+  assert.equal(restored.version,3);assert.equal(restored.personal_templates.length,2);
+  assert.deepEqual(restored.saves,before.saves);assert.deepEqual(old,before);
+  assert.deepEqual(restored.personal_templates[0].profiles,saved.config.builds[0].profiles);
+  assert.deepEqual(restored.personal_templates[1].profiles,other.config.builds[0].profiles);
+  assert.deepEqual(W.restore(examples,JSON.parse(JSON.stringify(restored))),restored);
+  W.appendTemplates(restored,templates,[templates[1].id]);
+  assert.equal(W.activeSave(restored).config.builds.length,2);assert.equal(W.activeSave(restored).config.main_id,'old-profile');
+  W.removePersonalTemplate(restored,'old-profile');
+  assert.equal(W.restore(examples,JSON.parse(JSON.stringify(restored))).personal_templates.length,1);
+});
+
+test('personal-only backups restore and collisions preserve template variants and their scheme ownership',()=>{
+  const {examples,templates,state}=setup();
+  const personal=W.addPersonalTemplate(state,{...copy(templates[0]),name:'我的巫妖'},'mine');
+  const original=copy(state),target=W.restore(examples);let sequence=0;
+  W.mergeSaves(target,W.restore(examples,original),()=>`new-${++sequence}`);
+  assert.equal(target.saves.length,0);assert.deepEqual(target.personal_templates,state.personal_templates);
+  assert.deepEqual(target.selection,state.selection);assert.equal(target.active_template_id,'mine');
+  const saved=W.applyTemplates(state,templates,'scheme'),incoming=W.restore(examples,state);
+  incoming.personal_templates[0].profiles.endgame.uniques=[];
+  const before=copy(state);
+  W.mergeSaves(state,incoming,()=>`new-${++sequence}`);
+  assert.equal(state.personal_templates.length,2);assert.deepEqual(state.personal_templates[0],personal);
+  const added=W.activeSave(state),newTemplate=state.personal_templates[1];
+  assert.equal(added.config.builds[0].template_id,newTemplate.id);assert.equal(added.config.main_id,newTemplate.id);
+  assert.equal(added.active_build_id,newTemplate.id);assert.deepEqual(saved,before.saves[0]);
+  assert.deepEqual(W.restore(examples,JSON.parse(JSON.stringify(state))),state);
+  const malformed=copy(state);malformed.personal_templates[0].id=templates[0].id;
+  assert.throws(()=>W.restore(examples,malformed));
 });

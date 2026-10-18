@@ -2,7 +2,13 @@
 
 更新时间：2026-10-19，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
-## 最新2026-10-19：已选暗金置顶与启动等待优化
+## 最新2026-10-19：个人模版与组合方案分离
+
+- 角色链接读取完成后只保存可编辑个人模版，不再直接建方案。左栏纵向“预设模版／个人模版／我的方案”，两类模版混选并指定唯一主BD后新建方案。预设只读，个人可改目标／改名，方案是独立副本；已有方案的“添加BD”支持两库多选，也保留空白BD。当前BD可另存为个人模版。[说明](TOOL_GUIDE.md)及[界面验证图](images/personal-template-workspaces.png)。
+- 状态及整套备份升v3，新增personal_templates与active_template_id，沿用v2存储键并兼容v1／v2。旧角色导入方案自动补个人模版，原方案及不同编辑版本保留；仅迁移一次。备份包含个人模版和全部方案，处理个人模版ID冲突及导入方案引用，不覆盖已有数据。单BD需求同id仅替换当前编辑对象的对应阶段。
+- 本地完整回归120项、JS状态／启动／角色协议36项通过；浏览器实际链接读取创建个人模版、跨库组合、给原方案添加预设／个人副BD、旧v2角色方案恢复、刷新及模版独立编辑均已核对。原生成引擎、6份预设及冻结输入保持，默认98条；详细结果见[验证记录](../analysis/personal-template-validation.json)。未做游戏客户端及浏览器Blob下载实测。
+
+## 此前2026-10-19：已选暗金置顶与启动等待优化
 
 - 暗金选择器顶部独立“已选择”分类，取消勾选按原部位／ID顺序归位；筛选后不重复显示，每次打开回到顶部。搜索、关闭不应用、套装补全与明确目标保存契约保持。
 - 原启动路径本地首次可操作3001.5ms，复测2678.8ms；其中Pyodide约2045ms。改为构建时由原Python代码生成编辑快照，约585KB／gzip94KB；运行包与Python并行下载、后台加载，正常格式方案可先编辑及自动保存，完整校验在后台针对副本执行，不回写或覆盖加载期间的编辑。旧练级格式保持阻塞原迁移，缺失快照回退原路径。

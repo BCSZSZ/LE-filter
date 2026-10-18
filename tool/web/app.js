@@ -15,7 +15,9 @@ const categories = () => mode==='leveling'?levelingCategories:endgameCategories;
 let catalog, examples, templates, state, config, activeId, mode='endgame', category='uniques', view='editor', selection, imported, generated, toastTimer, previewRequest=0, draggingAffix;
 let profileImport,profileReadController,profileReadRequest=0;
 const workspace=globalThis.LEWorkbench;
-const currentSave = () => workspace.activeSave(state);
+const currentSave = () => state.active_template_id?undefined:workspace.activeSave(state);
+const currentTemplate = () => workspace.activeTemplate(state);
+const templateLibrary = () => workspace.allTemplates(state,templates);
 const workbenchReady = () => !!currentSave() && config.builds.some(b=>b.enabled);
 const emptyProfile = () => ({uniques:[],equipment:[],altars:[],idols:[],bases:[]});
 const emptyLeveling = () => ({affixes:[],bases:[]});
@@ -38,12 +40,16 @@ async function api(path,payload){
 function save(invalidate=true){
   if(invalidate){generated=null;previewRequest++;}
   if(currentSave())currentSave().active_build_id=activeId;
-  try{localStorage.setItem(STORAGE,JSON.stringify(state));$('save-state').textContent=currentSave()?'方案已自动保存':'模板选择已记住';}
+  try{localStorage.setItem(STORAGE,JSON.stringify(state));$('save-state').textContent=currentTemplate()?'个人模版已自动保存':currentSave()?'方案已自动保存':'模版选择已记住';}
   catch{$('save-state').textContent='请用“保存配置”备份';}
 }
 function selectionChanged(){save(false);render();}
 function openSave(saved){
+  workspace.activateSave(state,saved.id);
   config=saved.config;activeId=saved.active_build_id||config.main_id;mode='endgame';category='uniques';view='editor';save();render();
+}
+function openTemplate(template){
+  workspace.activateTemplate(state,template.id);activeId=template.id;mode='endgame';category='uniques';view='editor';save();render();
 }
 function ensureSave(name){
   if(!currentSave()){
@@ -67,32 +73,46 @@ async function download(text,name){
   const a=document.createElement('a');a.href=result.url;a.download=name;document.body.append(a);a.click();a.remove();
 }
 function render(){
-  const saved=currentSave();config=saved?.config||state.draft_config;
-  const selected=config.builds.filter(b=>b.enabled),ready=workbenchReady();
+  const saved=currentSave(),personal=currentTemplate();config=personal?workspace.templateConfig(state,personal):saved?.config||state.draft_config;
+  const selected=config.builds.filter(b=>b.enabled),ready=!!personal||workbenchReady(),schemeReady=workbenchReady();
   if(!selected.some(b=>b.id===activeId))activeId=selected.find(b=>b.id===config.main_id)?.id||selected[0]?.id;
-  $('templates').innerHTML=templates.map(t=>{
+  const templateCard=(t,isPersonal=false)=>{
     const checked=state.selection.ids.includes(t.id);
-    return `<div class="template-card ${checked?'selected':''}"><label class="template-choice"><input type="checkbox" data-template-enable="${esc(t.id)}" ${checked?'checked':''} aria-label="选择模板：${esc(t.name)}"><strong>${esc(t.name)}</strong></label><small>已有模版 · 只读</small><label class="template-main"><input type="radio" name="template-main" data-template-main="${esc(t.id)}" ${checked&&t.id===state.selection.main_id?'checked':''} ${checked?'':'disabled'} aria-label="将${esc(t.name)}设为主BD">主BD</label></div>`;
-  }).join('');
+    return `<div class="template-card ${checked?'selected':''} ${personal?.id===t.id?'editing':''}"><label class="template-choice"><input type="checkbox" data-template-enable="${esc(t.id)}" ${checked?'checked':''} aria-label="选择模版：${esc(t.name)}"><strong>${esc(t.name)}</strong></label><label class="template-main"><input type="radio" name="template-main" data-template-main="${esc(t.id)}" ${checked&&t.id===state.selection.main_id?'checked':''} ${checked?'':'disabled'} aria-label="将${esc(t.name)}设为主BD">主BD</label>${isPersonal?`<small>${personal?.id===t.id?'正在编辑':'可反复用于新方案'}</small><div class="template-actions"><button data-edit-template="${esc(t.id)}" aria-label="编辑个人模版：${esc(t.name)}">编辑</button><button data-remove-template="${esc(t.id)}" aria-label="删除个人模版：${esc(t.name)}">×</button></div>`:''}</div>`;
+  };
+  $('templates').innerHTML=templates.map(t=>templateCard(t)).join('');
+  $('personal-templates').innerHTML=state.personal_templates.map(t=>templateCard(t,true)).join('')||'<p class="saved-empty">从角色链接创建，或将方案中的BD另存为个人模版。</p>';
   $('builds').innerHTML=state.saves.map(s=>{
     const members=s.config.builds.filter(b=>b.enabled),main=members.find(b=>b.id===s.config.main_id);
-    return `<div class="save-card ${s.id===state.active_save_id?'editing':''}"><button class="build-name" data-save="${esc(s.id)}" aria-pressed="${s.id===state.active_save_id}">${esc(s.name)}</button><small>${members.length}个BD${main?` · 主BD：${esc(main.name)}`:' · 尚未启用BD'}</small><div class="build-meta"><span>${s.id===state.active_save_id?'正在编辑':'点击继续编辑'}</span><button class="remove-build" data-remove-save="${esc(s.id)}" aria-label="删除方案：${esc(s.name)}">×</button></div></div>`;
-  }).join('')||'<p class="saved-empty">勾选模版后，点击“用所选模版新建方案”，整个组合保存为一条方案。</p>';
+    return `<div class="save-card ${saved?.id===s.id?'editing':''}"><button class="build-name" data-save="${esc(s.id)}" aria-pressed="${saved?.id===s.id}">${esc(s.name)}</button><small>${members.length}个BD${main?` · 主BD：${esc(main.name)}`:' · 尚未启用BD'}</small><div class="build-meta"><span>${saved?.id===s.id?'正在编辑':'点击继续编辑'}</span><button class="remove-build" data-remove-save="${esc(s.id)}" aria-label="删除方案：${esc(s.name)}">×</button></div></div>`;
+  }).join('')||'<p class="saved-empty">选择上方模版，新建一个可编辑的组合方案。</p>';
+  const chosenMain=templateLibrary().find(t=>t.id===state.selection.main_id);
+  $('template-selection-note').textContent=state.selection.ids.length?`已选${state.selection.ids.length}个模版 · 主BD：${chosenMain?.name||'未指定'}`:'从两类模版中选择一个或多个BD，并指定主BD。';
   $('apply-builds').textContent=`用所选模版新建方案（${state.selection.ids.length}）`;
   $('apply-builds').disabled=!state.selection.ids.length;
   const commonView=view==='common';
-  $('build-title').textContent=commonView?'共通规则':saved?saved.name:'BD编辑工作台';
+  $('build-title').textContent=commonView?'共通规则':personal?personal.name:saved?saved.name:'BD编辑工作台';
+  $('workspace-kind').textContent=personal?'PERSONAL TEMPLATE':'SAVED SCHEME';
+  $('workspace-description').hidden=!personal;
+  $('workspace-description').textContent='个人模版 · 修改自动保存；新建方案时复制，已有方案不受影响。';
   $('workspace-builds').hidden=!saved||!config.builds.length;$('workspace-controls').hidden=!ready;$('workspace-empty').hidden=ready||commonView;
   $('workspace-builds').innerHTML=saved?config.builds.map(b=>`<div class="workspace-bd ${b.enabled&&b.id===activeId?'active':''}"><input type="checkbox" data-enable="${esc(b.id)}" ${b.enabled?'checked':''} aria-label="在方案中启用${esc(b.name)}"><button data-workspace-build="${esc(b.id)}" ${b.enabled?'':'disabled'}><span class="dot ${b.id===config.main_id?'pink':'blue'}"></span>${esc(b.name)}</button><label><input type="radio" name="scheme-main" data-main="${esc(b.id)}" ${b.enabled&&b.id===config.main_id?'checked':''} ${b.enabled?'':'disabled'} aria-label="将方案内${esc(b.name)}设为主BD">主BD</label><button class="remove-build" data-remove-build="${esc(b.id)}" aria-label="从方案移除${esc(b.name)}">×</button></div>`).join(''):'';
   $('workspace-message').textContent=saved?'尚未启用BD':'尚未生成方案';
-  $('workspace-help').textContent=saved?'启用方案内的BD，或添加自定义BD。':'在左侧多选已有模版，指定主BD，再点击“用所选模版新建方案”。';
-  $('scheme-toolbar').hidden=!saved||commonView;
+  $('workspace-help').textContent=saved?'启用方案内的BD，或点击“添加BD”从模版选择。':'在左侧选择预设或个人模版，指定主BD，再点击“用所选模版新建方案”。';
+  $('scheme-toolbar').hidden=!ready&&!saved||commonView;
   $('current-build').textContent=ready?`正在编辑：${build().name}`:'';
   $('rename-save').hidden=!saved||commonView;
   $('rename-build').hidden=!ready||commonView;
-  $('reset-build').hidden=!ready||commonView||!templates.some(t=>t.id===(build()?.template_id||activeId));
+  $('rename-build').textContent=personal?'重命名模版':'重命名BD';
+  $('add-build').hidden=!!personal;
+  $('save-as-template').hidden=!schemeReady||commonView;
+  $('reset-build').hidden=!!personal||!ready||commonView||!templateLibrary().some(t=>t.id===(build()?.template_id||activeId));
+  $('common-button').hidden=!!personal;
+  $('export-controls').hidden=!!personal;
+  document.querySelector('[data-view="preview"]').hidden=!!personal;
   $('common-button').classList.toggle('active',commonView);
-  ['preview-button','export-xml','save-requirements','extra-t7'].forEach(id=>$(id).disabled=!ready);
+  ['preview-button','export-xml','extra-t7'].forEach(id=>$(id).disabled=!schemeReady);
+  $('save-requirements').disabled=!ready;
   document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));
   document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));
   $('editor').hidden=!ready||view!=='editor';$('preview').hidden=!ready||view!=='preview';
@@ -257,11 +277,24 @@ async function analyzeImport(assignments){
   }catch(e){$('apply-import').disabled=true;toast(e.message,true);}
 }
 
-$('templates').onchange=e=>{
+function changeTemplateSelection(e){
   if(e.target.dataset.templateEnable)workspace.setTemplateEnabled(state,templates,e.target.dataset.templateEnable,e.target.checked);
   if(e.target.dataset.templateMain)workspace.setTemplateMain(state,e.target.dataset.templateMain);
   selectionChanged();
+}
+$('templates').onchange=changeTemplateSelection;
+$('personal-templates').onchange=changeTemplateSelection;
+$('personal-templates').onclick=e=>{
+  const edit=e.target.closest('[data-edit-template]');if(edit){openTemplate(workspace.activateTemplate(state,edit.dataset.editTemplate));return;}
+  const remove=e.target.closest('[data-remove-template]');if(remove){
+    const editing=currentTemplate()?.id===remove.dataset.removeTemplate;
+    workspace.removePersonalTemplate(state,remove.dataset.removeTemplate);
+    const saved=workspace.activeSave(state);
+    if(editing&&saved)openSave(saved);else{save();render();}
+    toast('个人模版已删除，已有方案保留。');
+  }
 };
+$('add-template').onclick=()=>openTemplate(workspace.addPersonalTemplate(state,{name:'我的新BD',profiles:{endgame:emptyProfile(),leveling:emptyLeveling()}},crypto.randomUUID()));
 $('builds').addEventListener('click',e=>{
   const edit=e.target.closest('[data-save]');if(edit){openSave(workspace.activateSave(state,edit.dataset.save));return;}
   const remove=e.target.closest('[data-remove-save]');if(remove){workspace.removeSave(state,remove.dataset.removeSave);activeId=currentSave()?.active_build_id;view='editor';save();render();}
@@ -279,7 +312,21 @@ $('workspace-builds').onclick=e=>{
   const remove=e.target.closest('[data-remove-build]');if(remove){config.builds=config.builds.filter(b=>b.id!==remove.dataset.removeBuild);if(config.main_id===remove.dataset.removeBuild)config.main_id=config.builds.find(b=>b.enabled)?.id;save();render();}
 };
 $('add-save').onclick=()=>{const saved=workspace.addSave(state,workspace.emptyConfig(config),crypto.randomUUID(),'自定义方案');config=saved.config;addCustomBuild();};
-$('add-build').onclick=addCustomBuild;
+$('add-build').onclick=()=>{
+  const existing=new Set(config.builds.flatMap(b=>[b.id,b.template_id]));
+  $('add-bd-list').innerHTML=[['预设模版',templates],['个人模版',state.personal_templates]].map(([title,pool])=>`<h3>${title}</h3>${pool.map(t=>`<label class="bd-template-option"><input type="checkbox" data-add-template="${esc(t.id)}" ${existing.has(t.id)?'disabled':''}><span>${esc(t.name)}</span>${existing.has(t.id)?'<small>已在方案中</small>':''}</label>`).join('')||'<p class="saved-empty">尚无个人模版，可从角色链接创建。</p>'}`).join('');
+  $('confirm-add-bds').disabled=true;$('add-bd-dialog').showModal();
+};
+$('add-bd-list').onchange=()=>{$('confirm-add-bds').disabled=!$('add-bd-list').querySelector('input:checked');};
+$('confirm-add-bds').onclick=()=>{
+  try{
+    const ids=[...$('add-bd-list').querySelectorAll('input:checked')].map(input=>input.dataset.addTemplate);
+    const added=workspace.appendTemplates(state,templates,ids);
+    $('add-bd-dialog').close();openSave(workspace.activeSave(state));toast(`已添加${added.length}个BD，原有需求和主BD保留。`);
+  }catch(e){toast(e.message,true);}
+};
+$('add-custom-bd').onclick=()=>{$('add-bd-dialog').close();addCustomBuild();};
+$('save-as-template').onclick=()=>{const template=workspace.addPersonalTemplate(state,build(),crypto.randomUUID());openTemplate(template);toast('已另存为个人模版，可与其他模版组合新建方案。');};
 $('rename-save').onclick=()=>{
   const saved=currentSave(),input=document.createElement('input');input.type='text';input.value=saved.name;input.setAttribute('aria-label','方案名称');$('build-title').replaceChildren(input);input.focus();input.select();
   input.onblur=()=>{saved.name=input.value.trim()||'未命名方案';save();render();};input.onkeydown=e=>{if(e.key==='Enter')input.blur();};
@@ -290,7 +337,7 @@ $('rename-build').onclick=()=>{
 };
 $('reset-build').onclick=()=>{$('reset-name').textContent=build().name;$('reset-dialog').showModal();};
 $('confirm-reset').onclick=()=>{
-  workspace.resetBuild(config,templates,activeId);$('reset-dialog').close();save();render();toast('这个副本已恢复为最新版模板。');
+  workspace.resetBuild(config,templateLibrary(),activeId);$('reset-dialog').close();save();render();toast('这个副本已恢复为对应模版的当前内容。');
 };
 $('common-button').onclick=()=>{view='common';render();};
 for(const [id,key] of [['common-experimentals-enabled','exalted_experimentals_enabled'],['common-uniques-enabled','common_uniques_enabled'],['common-sets-enabled','common_sets_enabled']]){
@@ -360,7 +407,7 @@ $('export-xml').onclick=async()=>{
   if(!workbenchReady())return toast('请先创建或打开包含已启用BD的保存方案。');
   try{const out=await api('/api/generate',{config});await download(out.xml,'LE-filter.xml');toast(`已导出${out.count}条规则，包含终局和练级目标。${out.warnings.join(' ')}`);}catch(e){toast(e.message,true);}
 };
-$('save-config').onclick=async()=>{try{await download(JSON.stringify(state,null,2),'LE-filter-workspaces.json');toast('已备份全部保存方案及各方案的主BD、两阶段目标和共通规则。');}catch(e){toast(e.message,true);}};
+$('save-config').onclick=async()=>{try{await download(JSON.stringify(state,null,2),'LE-filter-workspaces.json');toast('已备份个人模版、全部方案及各方案的主BD、两阶段目标和共通规则。');}catch(e){toast(e.message,true);}};
 $('save-requirements').onclick=async()=>{
   try{const document=await api('/api/requirements/export',{build:build(),stage:mode});await download(JSON.stringify(document,null,2),'LE-filter-requirements.json');toast(`已保存本BD的${mode==='endgame'?'终局':'练级'}需求。`);}catch(e){toast(e.message,true);}
 };
@@ -397,7 +444,7 @@ async function analyzeProfiles(bundle,request=profileReadRequest){
     profileImport=result;
     if(!$('profiles-name').value.trim())$('profiles-name').value=profileImport.name;
     $('profiles-links').value=profileImport.source.profiles.map(p=>p.url).join('\n');
-    $('profiles-result').innerHTML=`<h3>${esc(profileImport.source.name)}</h3><div class="import-summary">${endgameCategories.map(([key,title])=>`<span class="stat">${title} <strong>${profileImport.profile[key].length}</strong>${key==='uniques'?'项':'组'}</span>`).join('')}</div><p>腐化／附魔参考单列，练级目标留空。保存后可逐项编辑、预览和导出filter。</p>${profileImport.source.warnings.map(w=>`<p class="warning">${esc(w)}</p>`).join('')}<details><summary>查看${profileImport.source.profiles.length}个来源角色</summary>${profileImport.source.profiles.map(p=>`<p><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.character)} · ${esc(p.account)}</a>，${p.items.length}件物品</p>`).join('')}</details>`;
+    $('profiles-result').innerHTML=`<h3>${esc(profileImport.source.name)}</h3><div class="import-summary">${endgameCategories.map(([key,title])=>`<span class="stat">${title} <strong>${profileImport.profile[key].length}</strong>${key==='uniques'?'项':'组'}</span>`).join('')}</div><p>腐化／附魔参考单列，练级目标留空。保存为个人模版后，可与其他模版一起新建方案。</p>${profileImport.source.warnings.map(w=>`<p class="warning">${esc(w)}</p>`).join('')}<details><summary>查看${profileImport.source.profiles.length}个来源角色</summary>${profileImport.source.profiles.map(p=>`<p><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.character)} · ${esc(p.account)}</a>，${p.items.length}件物品</p>`).join('')}</details>`;
     $('apply-profiles').disabled=false;
   }catch(e){if(request===profileReadRequest){$('profiles-result').textContent=`导入失败：${e.message}`;toast(e.message,true);}}
 }
@@ -410,15 +457,21 @@ $('profiles-file').onchange=async e=>{
 $('apply-profiles').onclick=()=>{
   if(!profileImport)return;
   const data={...profileImport,name:$('profiles-name').value.trim()||profileImport.name};
-  const saved=workspace.importProfiles(state,data,crypto.randomUUID(),crypto.randomUUID(),$('profiles-destination').value);
-  $('profiles-dialog').close();openSave(saved);toast('角色并集已保存为个人BD，可编辑并导出filter。');
+  const template=workspace.importProfiles(state,data,crypto.randomUUID());
+  $('profiles-dialog').close();openTemplate(template);toast('已保存个人模版并选中，可加选其他BD，再新建方案。');
 };
 $('requirements-file').onchange=async e=>{
   try{
     const file=e.target.files[0];if(!file)return;
     const data=await api('/api/requirements/import',{document:JSON.parse(await file.text())});
+    const personal=currentTemplate();
+    if(personal&&data.id===personal.id){
+      personal.name=data.name;personal.profiles[data.stage]=copy(data.profile);
+      personal.requirement_sources||={};personal.requirement_sources[data.stage]=copy(data.source);
+      mode=data.stage;category=categories()[0][0];view='editor';save();render();toast('已更新个人模版的当前阶段，已有方案保留。');return;
+    }
     ensureSave(data.name);
-    const b=workspace.importRequirement(config,templates,data);
+    const b=workspace.importRequirement(config,templateLibrary(),data);
     activeId=b.id;mode=data.stage;category=categories()[0][0];view='editor';save();render();toast('已更新当前保存方案中的BD需求，另一阶段及主BD设置保留。');
   }catch(e){toast(e.message,true);}finally{e.target.value='';}
 };
@@ -427,13 +480,18 @@ $('config-file').onchange=async e=>{
   try{
     const file=e.target.files[0];if(!file)return;
     const loaded=await validateState(workspace.restore(examples,JSON.parse(await file.text())));
-    if(!loaded.saves.length){state.draft_config=loaded.draft_config;state.selection=loaded.selection;save();render();toast('文件没有保存方案，已载入模板选择及共通规则草稿。');return;}
-    openSave(workspace.mergeSaves(state,loaded,()=>crypto.randomUUID()));toast(`已加入${loaded.saves.length}条保存方案，已有保存保留。`);
+    const saved=workspace.mergeSaves(state,loaded,()=>crypto.randomUUID());
+    if(currentTemplate())openTemplate(currentTemplate());else if(saved)openSave(saved);else{save();render();}
+    toast(`已载入${loaded.personal_templates.length}个个人模版和${loaded.saves.length}条方案，已有内容保留。`);
   }catch(e){toast(e.message,true);}finally{e.target.value='';}
 };
 async function validateState(loaded){
   loaded.draft_config=(await api('/api/validate',{config:loaded.draft_config})).config;
   for(const saved of loaded.saves)saved.config=(await api('/api/validate',{config:saved.config})).config;
+  if(loaded.personal_templates.length){
+    const check={...workspace.emptyConfig(loaded.draft_config),main_id:loaded.personal_templates[0].id,builds:loaded.personal_templates};
+    loaded.personal_templates=(await api('/api/validate',{config:check})).config.builds;
+  }
   return loaded;
 }
 async function init(){

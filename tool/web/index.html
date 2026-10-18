@@ -11,13 +11,13 @@
 </header>
 <div class="layout">
   <aside>
-    <div class="library-columns">
-      <section aria-label="已有模版"><div class="aside-heading"><span>已有模版</span><small>只读</small></div><div id="templates"></div></section>
-      <section aria-label="我的保存"><div class="aside-heading"><span>我的保存</span><button id="add-save" aria-label="新增自定义方案">＋</button></div><div id="builds"></div></section>
+    <div class="template-library">
+      <section aria-label="预设模版"><div class="aside-heading"><span>预设模版</span><small>只读</small></div><div id="templates"></div></section>
+      <section aria-label="个人模版"><div class="aside-heading"><span>个人模版</span><button id="add-template" aria-label="新增空白个人模版">＋</button></div><div id="personal-templates"></div><button id="import-profiles" class="wide dashed">从角色链接创建模版</button></section>
     </div>
-    <p class="library-note">多选已有模版并指定主BD，新建后整个组合加入“我的保存”，编辑自动保存。</p>
+    <p id="template-selection-note" class="library-note">从两类模版中选择一个或多个BD，并指定主BD。</p>
     <button id="apply-builds" class="wide primary">用所选模版新建方案</button>
-    <button id="import-profiles" class="wide dashed">从角色链接创建</button>
+    <section class="saved-library" aria-label="我的方案"><div class="aside-heading"><span>我的方案</span><button id="add-save" aria-label="新增自定义方案">＋</button></div><div id="builds"></div></section>
     <details id="sidebar-more" class="sidebar-more">
       <summary>更多</summary>
       <div class="sidebar-more-actions">
@@ -31,10 +31,10 @@
     <div class="sidebar-bottom"><span class="online-dot"></span>离线词库 <span id="catalog-version"></span></div>
   </aside>
   <main>
-    <div class="main-heading"><div><p class="eyebrow">SAVED SCHEME</p><h1 id="build-title">目标配置</h1></div><div class="heading-actions"><button id="common-button">共通规则</button><button id="rename-save" hidden>重命名方案</button></div></div>
+    <div class="main-heading"><div><p id="workspace-kind" class="eyebrow">SAVED SCHEME</p><h1 id="build-title">目标配置</h1><p id="workspace-description" class="muted" hidden></p></div><div class="heading-actions"><button id="common-button">共通规则</button><button id="rename-save" hidden>重命名方案</button></div></div>
     <nav id="workspace-builds" class="scheme-members" aria-label="方案内BD" hidden></nav>
-    <div id="scheme-toolbar" class="scheme-toolbar" hidden><span id="current-build"></span><div><button id="add-build">添加BD</button><button id="reset-build" hidden>从模板重置BD</button><button id="rename-build" hidden>重命名BD</button></div></div>
-    <section id="workspace-empty" class="panel empty"><strong id="workspace-message"></strong><p id="workspace-help">在左侧多选已有模版，指定主BD，再点击“用所选模版新建方案”。</p></section>
+    <div id="scheme-toolbar" class="scheme-toolbar" hidden><span id="current-build"></span><div><button id="add-build">添加BD</button><button id="save-as-template" hidden>另存为个人模版</button><button id="reset-build" hidden>从模版重置BD</button><button id="rename-build" hidden>重命名BD</button></div></div>
+    <section id="workspace-empty" class="panel empty"><strong id="workspace-message"></strong><p id="workspace-help">在左侧选择预设或个人模版，指定主BD，再点击“用所选模版新建方案”。</p></section>
     <div id="workspace-controls" class="workspace-bar" hidden><div class="segmented"><button data-mode="endgame" class="active">终局目标</button><button data-mode="leveling">练级目标</button></div><div class="view-tabs"><button data-view="editor" class="active">填写目标</button><button data-view="preview">规则预览</button></div></div>
     <section id="common-rules" class="panel" hidden>
       <div class="panel-heading"><div><h2>共通显示规则</h2><p class="muted">随当前保存方案保存；创建新方案时沿用当前共通设置。</p></div></div>
@@ -59,7 +59,7 @@
       <div class="panel-heading"><div><h2>将要生成的规则</h2><p class="muted">按实际优先级排列。这里展示基底门槛与四档提示。</p></div><input id="preview-search" type="search" placeholder="过滤部位、名称或档位" aria-label="过滤预览规则"></div>
       <div id="preview-summary" class="notice"></div><div id="preview-rules"></div>
     </section>
-    <footer class="export-bar"><label><input id="extra-t7" type="checkbox">保留额外单T7阶段储备 <small>85级自动退出，可提前关闭</small></label><div><button id="preview-button">预览规则</button><button id="export-xml" class="primary">导出filter</button></div></footer>
+    <footer id="export-controls" class="export-bar"><label><input id="extra-t7" type="checkbox">保留额外单T7阶段储备 <small>85级自动退出，可提前关闭</small></label><div><button id="preview-button">预览规则</button><button id="export-xml" class="primary">导出filter</button></div></footer>
   </main>
 </div>
 <dialog id="picker">
@@ -70,8 +70,14 @@
 </dialog>
 <dialog id="reset-dialog">
   <div class="dialog-heading"><h2>从模板重置</h2><button data-close="reset-dialog" aria-label="关闭重置">×</button></div>
-  <p class="reset-message">将“<strong id="reset-name"></strong>”的终局、练级目标恢复为最新版已有模版。这个副本的目标修改会被替换。</p>
+  <p class="reset-message">将“<strong id="reset-name"></strong>”的终局、练级目标恢复为对应模版的当前内容。这个副本的目标修改会被替换。</p>
   <div class="dialog-footer"><button data-close="reset-dialog">取消</button><button id="confirm-reset" class="primary">重置这个副本</button></div>
+</dialog>
+<dialog id="add-bd-dialog">
+  <div class="dialog-heading"><div><p class="eyebrow">ADD TO SCHEME</p><h2>从模版添加BD</h2></div><button data-close="add-bd-dialog" aria-label="关闭添加BD">×</button></div>
+  <p class="dialog-note">选择要加入当前方案的BD，现有目标和主BD保持。</p>
+  <div id="add-bd-list"></div>
+  <div class="dialog-footer"><button id="add-custom-bd">添加空白BD</button><button id="confirm-add-bds" class="primary" disabled>加入当前方案</button></div>
 </dialog>
 <dialog id="group-dialog">
   <div class="dialog-heading"><h2 id="group-title"></h2><button data-close="group-dialog" aria-label="关闭分组">×</button></div>
@@ -90,14 +96,14 @@
 </dialog>
 <dialog id="profiles-dialog" class="large-dialog">
   <div class="dialog-heading"><div><p class="eyebrow">LETOOLS PROFILES</p><h2>角色配装取并集</h2></div><button data-close="profiles-dialog" aria-label="关闭角色导入">×</button></div>
-  <p>粘贴同一个BD的1–12个profile链接，每行一个。装备词缀只取实际普通槽的T6／T7，腐化槽普通词缀不计；暗金、神像、祭坛和明确普通底材一并合入个人BD。</p>
-  <label class="field-label">个人BD名称<input id="profiles-name" type="text" placeholder="例如：我的追心手里剑"></label>
+  <p>粘贴同一个BD的1–12个profile链接，每行一个。装备词缀只取实际普通槽的T6／T7，腐化槽普通词缀不计；暗金、神像、祭坛和明确普通底材一并保存为个人模版。</p>
+  <label class="field-label">个人模版名称<input id="profiles-name" type="text" placeholder="例如：我的追心手里剑"></label>
   <textarea id="profiles-links" placeholder="https://www.lastepochtools.com/profile/账号/character/角色" aria-label="LETools角色链接（每行一个）"></textarea>
   <button id="read-profiles" class="primary">读取角色并预览并集</button>
-  <p class="muted">读取当前公开配装，重复链接只读取一次；任意角色读取失败都不会保存部分结果。核对后保存到“我的保存”，已有模版保持原样。</p>
+  <p class="muted">读取当前公开配装，重复链接只读取一次；任意角色读取失败都不会保存部分结果。核对后加入“个人模版”，再与其他模版一起选择、新建方案。</p>
   <details><summary>导入已有角色JSON</summary><label class="file-drop">选择角色JSON<input id="profiles-file" type="file" accept=".json"></label></details>
   <div id="profiles-result" role="status"></div>
-  <div class="dialog-footer"><label>导入到 <select id="profiles-destination"><option value="new-save">新建个人方案</option><option value="current-save">当前方案，添加独立BD</option></select></label><button id="apply-profiles" class="primary" disabled>保存个人BD</button></div>
+  <div class="dialog-footer"><span class="muted">保存模版后可继续编辑，也可勾选其他BD组合。</span><button id="apply-profiles" class="primary" disabled>保存个人模版</button></div>
 </dialog>
 <input id="config-file" type="file" accept=".json" hidden>
 <input id="requirements-file" type="file" accept=".json" hidden>
