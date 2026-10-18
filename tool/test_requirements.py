@@ -7,7 +7,7 @@ import engine as e
 from requirements import read_document, write_document
 from build_guide_835_requirements import build_document, build_leveling_document
 from build_flay_allie_requirements import build_documents as build_allie_documents
-from build_ice_heartseeker_requirements import build_documents as build_ice_documents
+from build_ice_heartseeker_requirements import PLAYER_SOURCE, build_documents as build_ice_documents
 from test_engine import first
 
 
@@ -19,7 +19,7 @@ def as_build(document):
 
 
 class RequirementTests(unittest.TestCase):
-    def test_ice_planner_roundtrip_and_empty_independent_leveling(self):
+    def test_ice_player_revision_roundtrip_and_empty_independent_leveling(self):
         endgame, leveling = build_ice_documents()
         self.assertEqual(endgame["id"], "ice-heartseeker-planner-al0dkyek")
         self.assertEqual(endgame["name"], "冰追心")
@@ -27,18 +27,23 @@ class RequirementTests(unittest.TestCase):
                          {"uniques": 11, "equipment": 10, "altars": 1, "idols": 4, "bases": 0})
         self.assertEqual(endgame["targets"]["uniques"], [2, 19, 146, 159, 211, 402, 413, 439, 477, 479, 487])
         equipment = {g["type"]: g for g in endgame["targets"]["equipment"]}
-        self.assertEqual(equipment["BOW"]["affixes"], [672, 432, 20])
+        self.assertEqual(equipment["HELMET"]["affixes"], [503, 489, 17])
+        self.assertEqual(equipment["GLOVES"]["affixes"], [503, 17, 5])
+        self.assertEqual(equipment["BELT"]["affixes"], [16, 59, 17, 330])
+        self.assertEqual(equipment["BOW"]["affixes"], [672, 432])
         self.assertEqual(equipment["BOW"]["corrupted"], [969])
         self.assertEqual(equipment["RING"]["affixes"], [503, 17, 19])
         self.assertEqual(equipment["RING"]["corrupted"], [1075])
-        self.assertEqual({aid for row in endgame["source"]["fixed_affix_references"] for aid in row["ids"]},
+        self.assertEqual(endgame["source"]["file"], PLAYER_SOURCE.relative_to(e.ROOT).as_posix())
+        self.assertEqual(endgame["source"]["updated"], "2026-10-18")
+        self.assertEqual({aid for row in endgame["source"]["planner_reference"]["fixed_affix_references"] for aid in row["ids"]},
                          {1145, 1147, 1126, 1117})
         omen = next(g for g in endgame["targets"]["idols"] if g["type"] == "IDOL_1x3")
         self.assertEqual((omen["bases"], omen["affixes"]), ([14], [743, 492, 462, 491]))
         heretic = next(g for g in endgame["targets"]["idols"] if g["type"] == "IDOL_2x2")
         self.assertEqual((heretic["affixes"], heretic["enchanted"]), ([743, 492], [892]))
         self.assertEqual(endgame["targets"]["altars"],
-                         [{"type": "IDOL_ALTAR", "bases": [9], "affixes": [1095, 1089, 1100, 1096, 1093]}])
+                         [{"type": "IDOL_ALTAR", "bases": [9], "affixes": [1095, 1089, 1093]}])
         self.assertEqual(leveling["targets"], {"affixes": [], "bases": []})
         build = as_build(endgame)
         build["requirement_sources"]["leveling"] = leveling["source"]
@@ -47,11 +52,12 @@ class RequirementTests(unittest.TestCase):
             self.assertEqual(document, frozen)
             self.assertEqual(write_document(build, document["stage"]), frozen)
 
-    def test_ice_planner_targets_use_current_base_rules(self):
+    def test_ice_player_revision_reproduces_complete_xml_with_current_base_rules(self):
         endgame, _ = build_ice_documents()
         build = as_build(endgame)
         config = {"version": 1, "main_id": build["id"], "extra_t7": True, "builds": [build]}
         output = e.generate(config)
+        self.assertEqual(output["xml"].encode("utf-8"), PLAYER_SOURCE.read_bytes())
         self.assertFalse(output["warnings"])
         bow = next(g for g in endgame["targets"]["equipment"] if g["type"] == "BOW")
         self.assertTrue(bow["affixes"])

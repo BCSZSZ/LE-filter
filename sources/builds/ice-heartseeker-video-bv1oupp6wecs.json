@@ -1,0 +1,92 @@
+{
+  "url": "https://www.bilibili.com/video/BV1oupP6wEcS/",
+  "retrieved_on": "2026-10-18",
+  "timezone": "Asia/Tokyo",
+  "evidence_scope": "Selected server-rendered page metadata and description only. No video/audio, transcript, comments, pinned post, or equipment recommendation was reviewed.",
+  "page_request": {
+    "method": "GET",
+    "status": 200,
+    "response_encoding": "gzip",
+    "received_bytes_sha256": "65c3786a4255ee5297463f251f24195eefc1f8a68b2abd432bb417c004577a59",
+    "decoded_html_sha256": "492da26bd06a556bb018acf5fd8772d241f503f1046ba0c4091452039bbe8568",
+    "metadata_location": "window.__INITIAL_STATE__.videoData; description also rendered in #v_desc .desc-info-text"
+  },
+  "metadata": {
+    "bvid": "BV1oupP6wEcS",
+    "aid": 117394743755869,
+    "cid": 42518710211,
+    "title": "最后纪元S5_追心箭天下第一，这版本不玩你会后悔的。",
+    "duration": 1287,
+    "desc": "N卡驱动力的录制录的视频为什么没有鼠标呀？奇奇怪怪。\n有任何问题可以直接来直播间，每天都会25小时直播，或者发私信。\n友情提示：追心箭只适合WASD移动或者手柄。鼠标移动丢伤害，丢操作。\n以下是BD构筑链接，实时同步\nhttps://www.lastepochtools.com/profile/zh/Hema_/character/Hema11",
+    "owner": {
+      "mid": 3493086374136733,
+      "name": "爱晒太阳的小河马"
+    },
+    "pages": [
+      {
+        "cid": 42518710211,
+        "page": 1,
+        "from": "vupload",
+        "part": "最后纪元S5_追心箭天下第一，这版本不玩你会后悔的。",
+        "duration": 1287,
+        "vid": "",
+        "weblink": "",
+        "dimension": {
+          "width": 2560,
+          "height": 1440,
+          "rotate": 0
+        },
+        "first_frame": "http://i1.hdslb.com/bfs/storyff/_00003deta9p5g8oaa2uqxqp0vvn7l4b_firsti.jpg",
+        "ctime": 1791302587
+      }
+    ],
+    "subtitle": {
+      "allow_submit": false,
+      "list": []
+    }
+  },
+  "published_at_jst": "2026-10-07T01:03:07+09:00",
+  "published_timestamp": 1791302587,
+  "tags": [
+    "S5",
+    "BD构筑",
+    "追心箭",
+    "冰追心",
+    "游侠",
+    "最后纪元"
+  ],
+  "author_link_from_description": "https://www.lastepochtools.com/profile/zh/Hema_/character/Hema11",
+  "sectionsInfo": {},
+  "observations": [
+    "The title, author and description identify this video as the S5 cold Heartseeker build topic.",
+    "The description links to a live character profile and says it synchronizes in real time. This is not the same URL as the frozen AL0dkyek planner snapshot.",
+    "The initial videoData.subtitle.list is empty; this only describes this page response and does not prove that Bilibili has no captions or an ASR transcript.",
+    "The server-rendered page contains a generic course-summary panel reading 暂无课程总结, with no actual chapter data extracted.",
+    "No pinned-comment content was present in the selected server-rendered page evidence. This does not prove there is no pinned comment."
+  ],
+  "access_limits": [
+    {
+      "surface": "web.open",
+      "url": "https://www.bilibili.com/video/BV1oupP6wEcS/",
+      "result": "Internal Error: inaccessible via web text reader"
+    },
+    {
+      "surface": "ordinary public HTTP metadata API",
+      "url": "https://api.bilibili.com/x/web-interface/view?bvid=BV1oupP6wEcS",
+      "result": "HTTP 412 Precondition Failed; did not retry with signatures, login, token workarounds, or CAPTCHA bypass"
+    },
+    {
+      "surface": "browser",
+      "result": "cua.createBrowserTab(iab, url) returned Browser is not available; cua.getState returned apps=[] and browsers=[] in this research subthread"
+    }
+  ],
+  "video_content_reviewed": false,
+  "transcript_obtained": false,
+  "comments_reviewed": false,
+  "equipment_recommendations_confirmed": [],
+  "additional_browser_observation": {
+    "reported_by": "main task agent",
+    "scope": "Visible page observation, not video playback",
+    "result": "The main task could open the original page in its IAB and see the same title, author, publication display and description/link. The player was an empty container labeled 哔哩哔哩播放器; no transcript, chapter content or equipment recommendation was obtained."
+  }
+}

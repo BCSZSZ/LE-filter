@@ -1,8 +1,16 @@
 # 后续工作 memo
 
-更新时间：2026-10-17，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+更新时间：2026-10-18，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
-## 最新2026-10-17追加：第三份新来源模板“冰追心”
+## 最新2026-10-18：冰追心改用玩家修订
+
+- 玩家要求以自己按实战与作者建议修改的版本替换官方模板，最终提供`E:/download/Chrome/LE-filter (10).xml`。原样冻结于`sources/builds/ice-heartseeker-player-2026-10-18.xml`，SHA-256为`8facbd4310b104d7b3b447565faba68aa5d808cb534de3ad09375559f601eb61`；该文件只作为来源数据。
+- 头盔删除7／25，手套以5替换80，腰带删除52并加入17／330，弓删除20，祭坛删除1100／1096。11暗金、4神像组、其他装备目标及空练级保持。重建后的独立79条XML与玩家文件逐字节一致。
+- `build_ice_heartseeker_requirements.py`默认从冻结玩家XML提取本BD目标，Planner初版生成函数仅供来源对照；普通目标完整替换，不并回已删除项。XML不含界面优先级，沿用仍保留项的原顺序、新项追加。未编码的腐化／附魔与固定能力参考明确标为旧Planner来源，固定能力改存`source.planner_reference.fixed_affix_references`，不作为本次XML或视频确认。
+- 作者视频只读到元数据、简介与实时角色链接，未取得视频装备讲解或字幕，不能逐条核验；以玩家修订为准。证据与边界见[视频核验记录](ICE_HEARTSEEKER_VIDEO_REVIEW.md)。当前目标表及五处差异见[冰追心审阅](ICE_HEARTSEEKER_PLANNER_REVIEW.md)。原始Planner快照、其他BD、基底、引擎及历史XML保持。
+- 官方模板仍默认未勾选；已有保存不自动覆盖。更新已有方案时导入同id新版终局JSON，只替换冰追心终局阶段。全套70项测试、20组组合审计及4组WASM完整输出对照通过。组合数量及200条上限保持；验证记录见[目标验证](../analysis/ice-heartseeker-validation.json)及[WASM对照](../analysis/ice-heartseeker-wasm-validation.json)。
+
+## 此前2026-10-17追加：第三份新来源模板“冰追心”初版
 
 - 玩家指定[构建器AL0dkyek](https://www.lastepochtools.com/planner/zh/AL0dkyek)，要求先生成初版、后续指摘。新增稳定id `ice-heartseeker-planner-al0dkyek`、名称“冰追心”，与Allie及835攻略模板同等收集，支持独立主副、组合、编辑及需求导出；保留旧Strict两份及两份Flay身份。官方库共五份模板，三份新来源默认未勾选，已有保存不自动加入或覆盖。
 - 来源为赛季5、1.5.2、100级神射手当前终局配装。读取实际物品编辑器各已选词缀的链接／阶数，冻结UI摘录及解码快照；不是原生Planner JSON响应。构建器自带filter遗漏暗金后加词缀，不能用其空弓目标池代替配装。原始普通词缀、腐化／附魔、固定随机池与提取边界见[冰追心审阅](ICE_HEARTSEEKER_PLANNER_REVIEW.md)。

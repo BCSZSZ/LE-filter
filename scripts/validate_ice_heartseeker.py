@@ -1,4 +1,4 @@
-"""Audit the new planner template and combinations without running the game."""
+"""Audit the player's replacement template without running the game."""
 from copy import deepcopy
 import hashlib
 import json
@@ -11,8 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tool"))
 import engine as e
 from browser_runtime import browser_bootstrap
-from build_ice_heartseeker_requirements import BUILD_ID, SOURCE, build_documents
-from extract_ice_heartseeker_planner import RAW, build_snapshot
+from build_ice_heartseeker_requirements import BUILD_ID, SOURCE, PLAYER_SOURCE, build_documents, build_planner_documents
+from extract_ice_heartseeker_planner import build_snapshot
 from requirements import read_document, write_document
 from test_engine import first, parsed
 
@@ -71,6 +71,17 @@ def main():
         build["enabled"] = build["id"] == BUILD_ID
     output = e.generate(config)
     assert e.generate(config) == output
+    assert output["xml"].encode("utf-8") == PLAYER_SOURCE.read_bytes()
+    changes = []
+    original, _ = build_planner_documents()
+    for category in ("equipment", "altars", "idols"):
+        for group in documents[0]["targets"][category]:
+            previous = next(g for g in original["targets"][category]
+                            if (g["type"], g["bases"]) == (group["type"], group["bases"]))
+            added = sorted(set(group["affixes"]) - set(previous["affixes"]))
+            removed = sorted(set(previous["affixes"]) - set(group["affixes"]))
+            if added or removed:
+                changes.append({"category": category, "type": group["type"], "added": added, "removed": removed})
     checks = []
     for group in template["profiles"]["endgame"]["equipment"]:
         for aid in group["affixes"]:
@@ -85,22 +96,23 @@ def main():
             checks.append({"type": group["type"], "base": group["bases"][0], "affix": aid, "category": row["category"]})
 
     protected = {}
-    added_inputs = {SOURCE.relative_to(ROOT).as_posix(), RAW.relative_to(ROOT).as_posix(),
-                    *(f"requirements/{BUILD_ID}.{stage}.json" for stage in ("endgame", "leveling"))}
+    changed_inputs = {f"requirements/{BUILD_ID}.endgame.json"}
     tracked = subprocess.check_output(["git", "ls-files", "-z", "sources", "templates", "filters", "requirements",
                                        "tool/engine.py", "tool/requirements.py"], cwd=ROOT).decode("utf-8").split("\0")
     for name in filter(None, tracked):
-        if name in added_inputs:
+        if name in changed_inputs:
             continue
         committed = subprocess.check_output(["git", "show", f"HEAD:{name}"], cwd=ROOT)
         current = (ROOT / name).read_bytes()
         assert committed == current, name
         protected[name] = hashlib.sha256(current).hexdigest()
     result = {
-        "status": "passed", "date": "2026-10-17", "gameExecutionTested": False,
+        "status": "passed", "date": "2026-10-18", "gameExecutionTested": False,
         "baselineCommit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
-        "source": {"file": SOURCE.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
-                   "url": documents[0]["source"]["url"]},
+        "source": {"file": PLAYER_SOURCE.relative_to(ROOT).as_posix(),
+                   "sha256": hashlib.sha256(PLAYER_SOURCE.read_bytes()).hexdigest(),
+                   "originalFilename": documents[0]["source"]["original_filename"]},
+        "completePlayerXmlEqual": True, "targetChangesFromPlanner": changes,
         "targetCounts": {key: len(values) for key, values in documents[0]["targets"].items()},
         "levelingEmpty": True, "templateInitiallySelected": False, "defaultOutputUnchanged": True,
         "requirementsRoundtrip": True, "deterministic": True, "scenarios": scenarios,

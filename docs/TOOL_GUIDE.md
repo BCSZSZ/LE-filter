@@ -6,7 +6,7 @@
 
 打开[GitHub Pages工作台](https://bcszsz.github.io/LE-filter/)，首次等待运行环境加载。网页支持Maxroll filter文件／XML文本和共通需求JSON导入，没有网址提取入口；导入内容与生成计算在浏览器内完成。配置保存在当前浏览器，跨设备用“保存配置”与“载入配置”转移。
 
-左侧并排“官方模板”和“我的保存”。官方模板提供五个独立BD：旧Maxroll Strict的Flay／Skeleton，以及Allie Flay攻略／中文流血骷髅835攻略／冰追心构建器。冰追心与前两份攻略模板同等收集，终局目标来自玩家指定的[AL0dkyek](https://www.lastepochtools.com/planner/zh/AL0dkyek)，练级留空，待玩家补充；逐项目标与来源边界见[冰追心审阅](ICE_HEARTSEEKER_PLANNER_REVIEW.md)。三份新来源模板默认未勾选。官方栏支持多选，主BD只能在已勾选项中指定；取消主BD时自动改选另一项。首次预选旧Strict两BD，但“我的保存”为空。勾选、改选主BD或“选择默认组合”都只改变待应用的选择，当前保存与编辑不受影响。
+左侧并排“官方模板”和“我的保存”。官方模板提供五个独立BD：旧Maxroll Strict的Flay／Skeleton，以及Allie Flay攻略／中文流血骷髅835攻略／冰追心。冰追心与前两份攻略模板同等收集，初版来自玩家指定的[AL0dkyek](https://www.lastepochtools.com/planner/zh/AL0dkyek)，当前终局目标以2026-10-18玩家导出的`LE-filter (10).xml`为准，练级留空；逐项目标与来源边界见[冰追心审阅](ICE_HEARTSEEKER_PLANNER_REVIEW.md)。三份新来源模板默认未勾选。官方栏支持多选，主BD只能在已勾选项中指定；取消主BD时自动改选另一项。首次预选旧Strict两BD，但“我的保存”为空。勾选、改选主BD或“选择默认组合”都只改变待应用的选择，当前保存与编辑不受影响。
 
 点击“应用所选BD”，所有已选模板生成一条组合保存方案，包含各自两阶段目标、来源以及所选主BD。再次应用生成新的模板副本，不覆盖以前的保存。“我的保存”一条记录就是一套组合，点击记录直接继续编辑；两份Flay在同一方案内仍保留独立BD身份，不互补目标。
 

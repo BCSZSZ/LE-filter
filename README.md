@@ -10,7 +10,7 @@
 
 新增[共通BD需求JSON格式](docs/REQUIREMENTS_FORMAT.md)：filter与攻略先提供一个BD／一个阶段的目标，网页可导入、修改并保存回该格式，再由基底生成filter。攻略835的[流血骷髅终局需求](requirements/bleed-skeleton-roamer-guide-835.endgame.json)含25暗金／套装、13装备组、3神像组、1祭坛、3独立底材；另有[练级需求](requirements/bleed-skeleton-roamer-guide-835.leveling.json)，8词缀、5底材。练级按1项目标→总阶数5→8收紧，单可用目标T5兜底，跨BD不能合计。见[中文审阅表](docs/BLEED_SKELETON_GUIDE_REVIEW.md)。旧Strict与历史XML保留。
 
-“冰追心”依据玩家提供的[构建器AL0dkyek](https://www.lastepochtools.com/planner/zh/AL0dkyek)新增为独立官方模板，与前两份攻略BD使用相同的编辑、保存、主副和生成规则。初版按当前终局配装提取，来源与目标见[中文审阅表](docs/ICE_HEARTSEEKER_PLANNER_REVIEW.md)、[终局需求](requirements/ice-heartseeker-planner-al0dkyek.endgame.json)；[练级需求](requirements/ice-heartseeker-planner-al0dkyek.leveling.json)留空，待玩家补充。已有保存不会自动插入新BD，可勾选模板后应用新组合，或在当前方案导入终局需求。
+“冰追心”为独立官方模板，与前两份攻略BD使用相同的编辑、保存、主副和生成规则。初版来自[构建器AL0dkyek](https://www.lastepochtools.com/planner/zh/AL0dkyek)，2026-10-18已按玩家提供的`LE-filter (10).xml`替换头盔、手套、腰带、弓和祭坛目标；离线重建同样以玩家修订为准。来源与目标见[中文审阅表](docs/ICE_HEARTSEEKER_PLANNER_REVIEW.md)、[终局需求](requirements/ice-heartseeker-planner-al0dkyek.endgame.json)；[练级需求](requirements/ice-heartseeker-planner-al0dkyek.leveling.json)留空。已有保存不会自动覆盖，可从模板应用新组合，或在当前方案导入新版终局需求。
 
 Allie攻略来源的Flay已按2026-10-07正文及2026-10-11玩家补充更新[终局需求](requirements/flay-lich-allie-guide.endgame.json)与[练级需求](requirements/flay-lich-allie-guide.leveling.json)：17暗金、10装备组、5神像组、1祭坛组、28种终局底材（5首选／23替代）；练级19词缀与3种底材。厚实拉贡点燃139与厚实编织者点燃／点燃火焰穿透876分别收集。祭坛要求尖塔底材3与“魔力自装备的每个腐化神像”1105同时成立，该腐化词条直接作为祭坛目标。补入短暂休息132、红戒277、虚无353、破碎世界413、流亡469、不息狂怒477，保留山之麓替代品。终局05按首选／替代分别收集，没有明确首选不猜；C1已覆盖的底材不会重复输出。Allie单独86条，与835组合139条，均启用。完整目标、部位链接冲突与来源提取时的验证边界见[双攻略需求审阅](docs/GUIDE_REQUIREMENTS_REVIEW.md)。已有保存可手动补祭坛、导入新版同id终局JSON替换该阶段，或明确从模板重置；刷新不会覆盖自己的目标修改。
 

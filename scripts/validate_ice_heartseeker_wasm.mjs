@@ -15,7 +15,7 @@ try {
     assert.deepStrictEqual(result, value.output, name);
     cases.push({name, count:result.count, sha256:result.sha256, completeOutputEqual:true});
   }
-  const result = {status:'passed', date:'2026-10-17', runtime:'Pyodide 314.0.7 / Node.js',
+  const result = {status:'passed', date:'2026-10-18', runtime:'Pyodide 314.0.7 / Node.js',
     scope:'Packaged WASM runtime compared with native Python: complete XML, rule metadata and warnings.',
     browserDownloadTested:false, gameExecutionTested:false, cases};
   writeFileSync(new URL('../analysis/ice-heartseeker-wasm-validation.json', import.meta.url), JSON.stringify(result,null,2)+'\n');

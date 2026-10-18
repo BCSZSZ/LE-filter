@@ -25,9 +25,7 @@
         "affixes": [
           503,
           489,
-          7,
-          17,
-          25
+          17
         ]
       },
       {
@@ -44,7 +42,7 @@
         "affixes": [
           503,
           17,
-          80
+          5
         ],
         "corrupted": [
           1027
@@ -64,8 +62,9 @@
         "bases": [],
         "affixes": [
           16,
-          52,
-          59
+          59,
+          17,
+          330
         ],
         "corrupted": [
           997
@@ -76,8 +75,7 @@
         "bases": [],
         "affixes": [
           672,
-          432,
-          20
+          432
         ],
         "corrupted": [
           969
@@ -135,8 +133,6 @@
         "affixes": [
           1095,
           1089,
-          1100,
-          1096,
           1093
         ]
       }
@@ -206,55 +202,72 @@
     "bases": []
   },
   "source": {
-    "name": "冰追心 · Last Epoch Tools 构建器 AL0dkyek",
-    "url": "https://www.lastepochtools.com/planner/zh/AL0dkyek",
-    "extracted_on": "2026-10-17",
-    "sha256": "37be1dccd00b15011b13c2d0476b476ab30e834e1fc978f9f10f3c3fc5a3a8a4",
-    "scope": "玩家指定构建器的当前终局配装；装备后加词缀、神像、祭坛及明确普通底材",
-    "fixed_affix_references": [
-      {
-        "slot": "hands",
-        "type": "GLOVES",
-        "ids": [
-          1145,
-          1147
-        ]
-      },
-      {
-        "slot": "ring1",
-        "type": "RING",
-        "ids": [
-          1126
-        ]
-      },
-      {
-        "slot": "ring2",
-        "type": "RING",
-        "ids": [
-          1117
-        ]
-      }
-    ],
-    "unique_idol_references": [
-      {
-        "slot": "idol3",
-        "unique_id": 211,
-        "type": "IDOL_2x2",
-        "bases": [
-          5
-        ],
-        "corrupted": [
-          1029
-        ]
-      }
-    ],
+    "name": "冰追心 · 玩家修订XML",
+    "file": "sources/builds/ice-heartseeker-player-2026-10-18.xml",
+    "original_filename": "LE-filter (10).xml",
+    "updated": "2026-10-18",
+    "sha256": "8facbd4310b104d7b3b447565faba68aa5d808cb534de3ad09375559f601eb61",
+    "scope": "玩家导出的冰追心终局目标完整替换；共通规则仍由原引擎生成",
+    "planner_reference": {
+      "name": "冰追心 · Last Epoch Tools 构建器 AL0dkyek",
+      "url": "https://www.lastepochtools.com/planner/zh/AL0dkyek",
+      "extracted_on": "2026-10-17",
+      "sha256": "37be1dccd00b15011b13c2d0476b476ab30e834e1fc978f9f10f3c3fc5a3a8a4",
+      "scope": "玩家指定构建器的当前终局配装；装备后加词缀、神像、祭坛及明确普通底材",
+      "fixed_affix_references": [
+        {
+          "slot": "hands",
+          "type": "GLOVES",
+          "ids": [
+            1145,
+            1147
+          ]
+        },
+        {
+          "slot": "ring1",
+          "type": "RING",
+          "ids": [
+            1126
+          ]
+        },
+        {
+          "slot": "ring2",
+          "type": "RING",
+          "ids": [
+            1117
+          ]
+        }
+      ],
+      "unique_idol_references": [
+        {
+          "slot": "idol3",
+          "unique_id": 211,
+          "type": "IDOL_2x2",
+          "bases": [
+            5
+          ],
+          "corrupted": [
+            1029
+          ]
+        }
+      ],
+      "warnings": [
+        "保留构建器明确选择的全部后加词缀，包括低阶候选，供玩家后续调整优先级或删减。",
+        "暗金固有属性、暗金自身底材、技能及祝福不转成普通词缀素材要求。",
+        "神像按所示类型与底材收集普通0／5目标，附魔4与腐化6只作参考；祭坛腐化作为实际目标。",
+        "暗金固定随机池词缀7另存来源参考，不加入普通T7素材池或增加暗金属性数值门槛。",
+        "暗金神像按暗金ID收集，其附加参考另存来源，不生成普通神像目标层。",
+        "构建器未提供练级路线或替代配装，练级需求留空。"
+      ]
+    },
+    "video_reference": {
+      "url": "https://www.bilibili.com/video/BV1oupP6wEcS/",
+      "verification": "仅取得页面元数据与简介，未核验视频中的逐条推荐；以玩家修订为准"
+    },
     "warnings": [
-      "保留构建器明确选择的全部后加词缀，包括低阶候选，供玩家后续调整优先级或删减。",
-      "暗金固有属性、暗金自身底材、技能及祝福不转成普通词缀素材要求。",
-      "神像按所示类型与底材收集普通0／5目标，附魔4与腐化6只作参考；祭坛腐化作为实际目标。",
-      "暗金固定随机池词缀7另存来源参考，不加入普通T7素材池或增加暗金属性数值门槛。",
-      "暗金神像按暗金ID收集，其附加参考另存来源，不生成普通神像目标层。",
-      "构建器未提供练级路线或替代配装，练级需求留空。"
+      "XML不保存界面词条优先级；保留原列表中仍选中的词条顺序，新词条按XML顺序追加。",
+      "XML未编码的腐化、附魔及固定属性参考沿用冻结Planner，并非本次XML确认的推荐。",
+      "未从终局或共通拆解池推断练级目标；练级需求独立留空。"
     ]
   }
 }

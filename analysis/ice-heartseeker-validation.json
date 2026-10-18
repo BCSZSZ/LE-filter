@@ -1,13 +1,63 @@
 {
   "status": "passed",
-  "date": "2026-10-17",
+  "date": "2026-10-18",
   "gameExecutionTested": false,
-  "baselineCommit": "e636edeab17056e0ebbfc8b536f3c38b353ad5d9",
+  "baselineCommit": "54d90eb830bb7f70de61a8a66416b9d565f6aed1",
   "source": {
-    "file": "sources/builds/letools-planner-al0dkyek-extracted.json",
-    "sha256": "37be1dccd00b15011b13c2d0476b476ab30e834e1fc978f9f10f3c3fc5a3a8a4",
-    "url": "https://www.lastepochtools.com/planner/zh/AL0dkyek"
+    "file": "sources/builds/ice-heartseeker-player-2026-10-18.xml",
+    "sha256": "8facbd4310b104d7b3b447565faba68aa5d808cb534de3ad09375559f601eb61",
+    "originalFilename": "LE-filter (10).xml"
   },
+  "completePlayerXmlEqual": true,
+  "targetChangesFromPlanner": [
+    {
+      "category": "equipment",
+      "type": "HELMET",
+      "added": [],
+      "removed": [
+        7,
+        25
+      ]
+    },
+    {
+      "category": "equipment",
+      "type": "GLOVES",
+      "added": [
+        5
+      ],
+      "removed": [
+        80
+      ]
+    },
+    {
+      "category": "equipment",
+      "type": "BELT",
+      "added": [
+        17,
+        330
+      ],
+      "removed": [
+        52
+      ]
+    },
+    {
+      "category": "equipment",
+      "type": "BOW",
+      "added": [],
+      "removed": [
+        20
+      ]
+    },
+    {
+      "category": "altars",
+      "type": "IDOL_ALTAR",
+      "added": [],
+      "removed": [
+        1096,
+        1100
+      ]
+    }
+  ],
   "targetCounts": {
     "uniques": 11,
     "equipment": 10,
@@ -28,7 +78,7 @@
       "main": "ice-heartseeker-planner-al0dkyek",
       "status": "generated",
       "count": 79,
-      "sha256": "f49571cd9989545b56febe7660cf2ad53b05396c8be7ac2a0e218183cbcee710"
+      "sha256": "8facbd4310b104d7b3b447565faba68aa5d808cb534de3ad09375559f601eb61"
     },
     {
       "selected": [
@@ -39,7 +89,7 @@
       "main": "flay-mana-lich",
       "status": "generated",
       "count": 130,
-      "sha256": "8e3a715026ee9e8c074b4edcc46ffbc05193488f8eaafa87b1637bafc5620de8"
+      "sha256": "88629fedf07b94ed2634f2edd5b02e70104c2d3a12f226f2340da20bba983f50"
     },
     {
       "selected": [
@@ -50,7 +100,7 @@
       "main": "ice-heartseeker-planner-al0dkyek",
       "status": "generated",
       "count": 130,
-      "sha256": "b83610ccb06a521350b60012e71e587a5377f3961f375875d402e2d57b11ca31"
+      "sha256": "91e355cec527f6ac699bdb39a00e48cbc02e406bf4b2872bb66fb73e81501e88"
     },
     {
       "selected": [
@@ -61,7 +111,7 @@
       "main": "skeleton-necromancer",
       "status": "generated",
       "count": 130,
-      "sha256": "60e137d8a7c8368a431eceb62a28b0ffb4c40e8f59dd74bf118427b44d4a0f19"
+      "sha256": "086aa22463c30fd047afc54700a8385300c2c3e91a7b57505782c857bf0375b2"
     },
     {
       "selected": [
@@ -72,7 +122,7 @@
       "main": "bleed-skeleton-roamer-guide-835",
       "status": "generated",
       "count": 173,
-      "sha256": "186e7f5bb13ae88ec799c46c06dd848708ef0dd6070656675ef2d07e13e3f714"
+      "sha256": "1e02b2caf2fdd2be9428a9715e5bc4c52a51a78636128379e211b4ad23b3e1b5"
     },
     {
       "selected": [
@@ -83,7 +133,7 @@
       "main": "flay-lich-allie-guide",
       "status": "generated",
       "count": 173,
-      "sha256": "edf94239e6e93a17d51d187e0e6feb84e0d5b56f870134b18234e318e9a1f1b6"
+      "sha256": "3928e2b77c66c70ca08b040c04dc77ab193ee0143911953dd792e8ff09aff849"
     },
     {
       "selected": [
@@ -94,7 +144,7 @@
       "main": "ice-heartseeker-planner-al0dkyek",
       "status": "generated",
       "count": 173,
-      "sha256": "bc90a71918136c81694917eee51efe1650e03bfda3f04fa361663b7493db574d"
+      "sha256": "3a4b4056391afb1a2e3eef4c143d63f458f78fd4f14523126f5bb4ae68855b81"
     },
     {
       "selected": [
@@ -169,7 +219,7 @@
       "main": "ice-heartseeker-planner-al0dkyek",
       "status": "generated",
       "count": 106,
-      "sha256": "10a7e9cb96c2c610f90c97ee38a454a4cbcee75475197b72c0305720502cc14a"
+      "sha256": "973b2f1ed44e42bbd83431745a178bd31a65997dffd618a4151198022777734c"
     },
     {
       "selected": [
@@ -179,7 +229,7 @@
       "main": "skeleton-necromancer",
       "status": "generated",
       "count": 106,
-      "sha256": "96cd7560d3bc81973ed3be05de77c92f018d8765524c93db2653e90a7cb74662"
+      "sha256": "fcbb619c0052e725043ca140c932bf9cd0681fef25c87fb3ab09f2b37c975503"
     },
     {
       "selected": [
@@ -189,7 +239,7 @@
       "main": "flay-mana-lich",
       "status": "generated",
       "count": 103,
-      "sha256": "b1cafcae96126c935b7cab2f933e986b35ffc6f4614db37ba9831ab20239166d"
+      "sha256": "467a2bb689af59860913dd2aca840d420a5cd800c12d3d1932b995744afa0c33"
     },
     {
       "selected": [
@@ -199,7 +249,7 @@
       "main": "ice-heartseeker-planner-al0dkyek",
       "status": "generated",
       "count": 103,
-      "sha256": "6b0d77a6d43e62a933f397ae85c5b7a22b6643650171725f6259d78c5e764706"
+      "sha256": "de8d8f3b48b67d3b990f9c86cc440ad1fe3c33c1adbb36585253e335a1eebb8d"
     },
     {
       "selected": [
@@ -209,7 +259,7 @@
       "main": "flay-lich-allie-guide",
       "status": "generated",
       "count": 120,
-      "sha256": "d8b5b3b9e024df1a14be5db3cd15acfa4d5f5fef7675963402812c0d197f8b0e"
+      "sha256": "88d343182924e45336b54c280685feb7e9f46a5aff814d84393448e99ff189bc"
     },
     {
       "selected": [
@@ -219,7 +269,7 @@
       "main": "ice-heartseeker-planner-al0dkyek",
       "status": "generated",
       "count": 120,
-      "sha256": "cc53966425897d96962dbf0ecc4ed0c2636c67f415b7a3acc88dcb7b0cad5d13"
+      "sha256": "06badd33e04589480ffe6711bd12d2b2deb5424d56c7f5b27a46ce56e35d9633"
     },
     {
       "selected": [
@@ -229,7 +279,7 @@
       "main": "bleed-skeleton-roamer-guide-835",
       "status": "generated",
       "count": 133,
-      "sha256": "23780671e9519d9d172ed08a6f14c1bb7945b505cc6eb082859bccbe53166cf9"
+      "sha256": "d007ed1c0a50c6333ec8c12c67423c2f4ab1e60a7cbe4a9e91a351fb47c057d0"
     },
     {
       "selected": [
@@ -239,7 +289,7 @@
       "main": "ice-heartseeker-planner-al0dkyek",
       "status": "generated",
       "count": 133,
-      "sha256": "67f65fb7d977f1cd5b46132bf234501ae4c806694455b6c337b4fbd2acac15b2"
+      "sha256": "95bf08a1c94718f0711e8b19dee6cb0365e1f8704ba90ed65f6ddc014abb84c0"
     }
   ],
   "symbolicCases": [
@@ -257,19 +307,7 @@
     },
     {
       "type": "HELMET",
-      "affix": 7,
-      "tier": 7,
-      "category": "BD目标单T7"
-    },
-    {
-      "type": "HELMET",
       "affix": 17,
-      "tier": 7,
-      "category": "BD目标单T7"
-    },
-    {
-      "type": "HELMET",
-      "affix": 25,
       "tier": 7,
       "category": "BD目标单T7"
     },
@@ -299,7 +337,7 @@
     },
     {
       "type": "GLOVES",
-      "affix": 80,
+      "affix": 5,
       "tier": 7,
       "category": "BD目标单T7"
     },
@@ -329,13 +367,19 @@
     },
     {
       "type": "BELT",
-      "affix": 52,
+      "affix": 59,
       "tier": 7,
       "category": "BD目标单T7"
     },
     {
       "type": "BELT",
-      "affix": 59,
+      "affix": 17,
+      "tier": 7,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "BELT",
+      "affix": 330,
       "tier": 7,
       "category": "BD目标单T7"
     },
@@ -348,12 +392,6 @@
     {
       "type": "BOW",
       "affix": 432,
-      "tier": 7,
-      "category": "BD目标单T7"
-    },
-    {
-      "type": "BOW",
-      "affix": 20,
       "tier": 7,
       "category": "BD目标单T7"
     },
@@ -444,18 +482,6 @@
     {
       "type": "IDOL_ALTAR",
       "base": 9,
-      "affix": 1100,
-      "category": "祭坛一项目标"
-    },
-    {
-      "type": "IDOL_ALTAR",
-      "base": 9,
-      "affix": 1096,
-      "category": "祭坛一项目标"
-    },
-    {
-      "type": "IDOL_ALTAR",
-      "base": 9,
       "affix": 1093,
       "category": "祭坛一项目标"
     }
@@ -468,11 +494,14 @@
     "requirements/bleed-skeleton-roamer-guide-835.leveling.json": "46fb51f53b8383abfbb2a2feb88bfbe975a218039715485b2d8dfaee1d25de99",
     "requirements/flay-lich-allie-guide.endgame.json": "2a904049a9a2aa82d0a0ab490d52c74477f934175f51d8332418462ca238fd1d",
     "requirements/flay-lich-allie-guide.leveling.json": "71c601489ef6b3716ece19b2f45892221467150135f57a795e170537a42be3c6",
+    "requirements/ice-heartseeker-planner-al0dkyek.leveling.json": "63e65c4bb0b8309657177bf6c3a1ecdb576b85d3faec2c93d055b4d482b7833b",
     "sources/Raxx's S5 Ultimate Filter v1.0.txt": "146465750ab794175676f73b7251ddba610c42c4508bb16b614b6d4982036288",
     "sources/builds/flay-mana-lich-guide.json": "1b7f6180f1fd32818c223e5d8daa1c4e9a2a8c405094d8a9a126c5c6ccef0fd8",
     "sources/builds/flay-mana-lich.json": "fe5932f3f5990bcffa88cef0e882789855d89cbba89c2d66ed1768f6ea531ba7",
     "sources/builds/letools-allie-flay-extracted.json": "0aa01939bd5cb4a672baafef58737b942543f7a57f72af4ea9bc5e8ee2c5cf88",
     "sources/builds/letools-guide-zh-835-extracted.json": "aa964dc554078bf8fb20b856515f683db13a1d359734af5b6965195ac701ce9f",
+    "sources/builds/letools-planner-al0dkyek-extracted.json": "37be1dccd00b15011b13c2d0476b476ab30e834e1fc978f9f10f3c3fc5a3a8a4",
+    "sources/builds/letools-planner-al0dkyek-ui.json": "6b4f44d7530696c6cdfe33fc625c8ad385f73de0045d0e683714ad52c5dd4dd8",
     "sources/builds/manifest.json": "b88e7550b8cf6ca5ddc6bfe13376be1b6a2c79c5de50712c829e6b87f778c481",
     "sources/builds/maxroll-flay-mana-lich-strict.xml": "4e70c8b9111a28ae257aea7b561d931ac99629a6054646ce18a3ce5e3458995c",
     "sources/builds/maxroll-reference-supplement.json": "a8f94e45f86bd8b8e77ae7d09d22869e70dc9436ca9a9113970ecb6a552a9970",

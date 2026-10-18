@@ -1,16 +1,19 @@
-"""Build the Ice Heartseeker targets from the frozen planner snapshot, offline."""
+"""Rebuild Ice Heartseeker from the player's frozen revision, offline."""
 from copy import deepcopy
 import hashlib
 import json
 import sys
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tool"))
-from engine import CATALOG, MANIFEST
+from engine import CATALOG, MANIFEST, extract, inspect_rule
 from requirements import read_document
 
 SOURCE = ROOT / "sources/builds/letools-planner-al0dkyek-extracted.json"
+PLAYER_SOURCE = ROOT / "sources/builds/ice-heartseeker-player-2026-10-18.xml"
+PLAYER_SHA256 = "8facbd4310b104d7b3b447565faba68aa5d808cb534de3ad09375559f601eb61"
 BUILD_ID = "ice-heartseeker-planner-al0dkyek"
 TYPE_IDS = json.loads((ROOT / "sources/game-reference.json").read_text(encoding="utf-8"))["equipment_enum"]
 TYPES = {value: key for key, value in TYPE_IDS.items()}
@@ -35,7 +38,7 @@ def affix_groups(item):
     return result
 
 
-def build_documents():
+def build_planner_documents():
     facts = json.loads(SOURCE.read_text(encoding="utf-8"))
     planner = facts["planner"]
     targets = {key: [] for key in ("uniques", "equipment", "altars", "idols", "bases")}
@@ -119,6 +122,71 @@ def build_documents():
     leveling["source"]["warnings"] = ["当前来源只提供终局配装，未从终局推断练级目标。"]
     for document in (endgame, leveling):
         read_document(document)
+    return endgame, leveling
+
+
+def build_documents():
+    planner, leveling = build_planner_documents()
+    raw = PLAYER_SOURCE.read_bytes()
+    if hashlib.sha256(raw).hexdigest() != PLAYER_SHA256:
+        raise ValueError("玩家修订XML与冻结哈希不符。")
+    root = ET.fromstring(raw)
+    rules = root.find("rules")
+    # Recover only this BD's explicit target layers. Common pools and thresholds
+    # belong to the engine, and must not become BD targets or leveling goals.
+    rules[:] = sorted(rules, key=lambda node: int(node.findtext("Order")))
+    labels = {"BD目标单T7": "equipment", "神像一普通目标": "idols",
+              "祭坛一项目标": "altars", "BD暗金0LP也留": "uniques"}
+    assignments = {}
+    for index, node in enumerate(rules, 1):
+        row = inspect_rule(node)
+        assignments[str(index)] = next((category for label, category in labels.items()
+                                       if row["enabled"] and row["name"].startswith(f"[主 {label}] 冰追心 ")), "")
+    recovered = extract(ET.tostring(root, encoding="unicode"), assignments)
+    if recovered["warnings"]:
+        raise ValueError(recovered["warnings"])
+    targets = {key: [] for key in planner["targets"]}
+    targets["uniques"] = recovered["profile"]["uniques"]
+    for category in ("equipment", "altars", "idols", "bases"):
+        for item in recovered["profile"][category]:
+            group = {key: deepcopy(item[key]) for key in ("type", "bases", "affixes", "pair_bases", "corrupted", "enchanted")
+                     if key in item and (item[key] or key in {"bases", "affixes"})}
+            group.setdefault("bases", [])
+            if group.get("pair_bases") == group["bases"]:
+                group.pop("pair_bases")
+            previous = next((g for g in planner["targets"][category]
+                             if g["type"] == group["type"] and g.get("bases", []) == group["bases"]), {})
+            # Generated XML sorts IDs and cannot recover the user's UI priority.
+            # Retain surviving source order; append new IDs in XML order.
+            old_order = previous.get("affixes", [])
+            group["affixes"] = [aid for aid in old_order if aid in group.get("affixes", [])] + [
+                aid for aid in group.get("affixes", []) if aid not in old_order]
+            # These references were never emitted into XML. Retain them with
+            # explicit Planner provenance; they do not add matching targets.
+            for field in ("corrupted", "enchanted"):
+                if previous.get(field) and not group.get(field):
+                    group[field] = deepcopy(previous[field])
+            targets[category].append(group)
+    source = {
+        "name": "冰追心 · 玩家修订XML",
+        "file": PLAYER_SOURCE.relative_to(ROOT).as_posix(),
+        "original_filename": "LE-filter (10).xml",
+        "updated": "2026-10-18",
+        "sha256": PLAYER_SHA256,
+        "scope": "玩家导出的冰追心终局目标完整替换；共通规则仍由原引擎生成",
+        "planner_reference": planner["source"],
+        "video_reference": {
+            "url": "https://www.bilibili.com/video/BV1oupP6wEcS/",
+            "verification": "仅取得页面元数据与简介，未核验视频中的逐条推荐；以玩家修订为准",
+        },
+        "warnings": [
+            "XML不保存界面词条优先级；保留原列表中仍选中的词条顺序，新词条按XML顺序追加。",
+            "XML未编码的腐化、附魔及固定属性参考沿用冻结Planner，并非本次XML确认的推荐。",
+            "未从终局或共通拆解池推断练级目标；练级需求独立留空。",
+        ],
+    }
+    endgame = {**planner, "targets": targets, "source": source}
+    read_document(endgame)
     return endgame, leveling
 
 

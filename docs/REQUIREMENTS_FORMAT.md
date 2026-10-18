@@ -81,4 +81,4 @@ document = write_document(build, "endgame")  # 编辑后的目标保存回同一
 
 Allie攻略来源的Flay也使用同一格式：[终局需求](../requirements/flay-lich-allie-guide.endgame.json)、[练级需求](../requirements/flay-lich-allie-guide.leveling.json)。与旧Maxroll Flay使用不同id；同一攻略的两个阶段使用同id。[两篇攻略的完整审阅与网页读回结果](GUIDE_REQUIREMENTS_REVIEW.md)记录了目标、来源冲突及玩家补充的祭坛目标。
 
-冰追心构建器初版也使用同一格式：[终局需求](../requirements/ice-heartseeker-planner-al0dkyek.endgame.json)、[空练级需求](../requirements/ice-heartseeker-planner-al0dkyek.leveling.json)，稳定id为`ice-heartseeker-planner-al0dkyek`。来源是指定构建器的当前配装，装备固有属性与暗金专属效果不转成素材词缀，已有配装不自动推断练级路线。原始数字ID、分类和待玩家指摘项见[冰追心审阅](ICE_HEARTSEEKER_PLANNER_REVIEW.md)。
+冰追心也使用同一格式：[终局需求](../requirements/ice-heartseeker-planner-al0dkyek.endgame.json)、[空练级需求](../requirements/ice-heartseeker-planner-al0dkyek.leveling.json)，稳定id为`ice-heartseeker-planner-al0dkyek`。2026-10-18终局需求改以玩家提供的XML为准，`source.file`及`sha256`记录冻结修订；原构建器证据放在`source.planner_reference`。XML未编码的腐化／附魔参考沿用Planner并明确标注，普通目标完整替换，已删除目标不会在重建时补回。XML不能恢复界面优先级，保留仍选中词条的原顺序并追加新增项；练级不从终局推断。原始数字ID、分类和修订对照见[冰追心审阅](ICE_HEARTSEEKER_PLANNER_REVIEW.md)。
