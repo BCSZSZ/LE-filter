@@ -23,8 +23,31 @@
     "profile_dialog_opens": true,
     "apply_creates_one_independent_scheme": true,
     "existing_saves_still_visible": true,
-    "default_shortcut_removed": true
+    "default_shortcut_removed": true,
+    "keyboard_expansion_verified": true
   },
   "game_client_tested": false,
-  "browser_blob_download_tested": false
+  "browser_blob_download_tested": false,
+  "publication": {
+    "url": "https://bcszsz.github.io/LE-filter/",
+    "commit": "7822788a5756c8674c3bdc0115e0095262255120",
+    "workflow": "https://github.com/BCSZSZ/LE-filter/actions/runs/39119764564",
+    "status": "success",
+    "client_revision": "e22f70e8696e39f4",
+    "html_entries_verified": true
+  },
+  "production_browser": {
+    "entries_verified": true,
+    "more_collapsed_initially": true,
+    "more_contains_three_actions": true,
+    "filter_dialog_opens": true,
+    "selection_closes_more": true,
+    "profile_dialog_opens": true,
+    "existing_saved_scheme_retained": "我的追心手里剑",
+    "existing_save_count": 3,
+    "screenshots": [
+      "docs/images/sidebar-actions-live.png",
+      "docs/images/sidebar-actions-live-more.png"
+    ]
+  }
 }
