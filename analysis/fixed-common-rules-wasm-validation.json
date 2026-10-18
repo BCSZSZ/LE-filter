@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "date": "2026-10-19",
+  "runtime": "Pyodide 314.0.7 / Node.js",
+  "browserDownloadTested": false,
+  "gameExecutionTested": false,
+  "cases": [
+    {
+      "name": "bootstrap",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "default_strict",
+      "count": 98,
+      "sha256": "bf9eebbff8de328e42517ad70a68fbfaea30ec19d988d8c9f8b4585357d4c8d6",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "heartseeker-shuriken-marksman",
+      "count": 100,
+      "sha256": "ffbf20ba0374f14b0d50c123ba03155d7c933257cc5349604e6bfa9e60de1f4c",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "ice_shuriken",
+      "count": 129,
+      "sha256": "057471943cdee5c81dad5302d760315b91e9109cc78398fc6d6a7f8545b8a577",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "no_bd_targets",
+      "count": 36,
+      "sha256": "4d52a51eca306392eb4753e971153eb9ace9e45e958329f3459578cc037a140b",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "all_common_ids_are_bd_targets",
+      "count": 42,
+      "sha256": "7076978a01b7da11af40922c79bfed71c0341107fca54288af85da9306e7c124",
+      "completeOutputEqual": true
+    }
+  ]
+}

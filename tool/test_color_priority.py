@@ -48,7 +48,7 @@ class ColorPriorityTests(unittest.TestCase):
                 for lp in (0, 1, 4):
                     self.assert_style(output, {"uid": uid, "lp": lp, "rarity": "UNIQUE"}, "7", "10", 4)
 
-    def test_t0_and_needle_do_not_leave_shadowed_bd_rules(self):
+    def test_t0_and_needle_keep_bd_priority_with_complete_common_rules(self):
         for targets in ([61], [277], [344], [61, 277, 344]):
             config = self.config()
             for build in config["builds"]:
@@ -58,7 +58,7 @@ class ColorPriorityTests(unittest.TestCase):
             output = e.generate(config)
             self.assertEqual(config, before)
             for row in output["rules"]:
-                if row["tier"] < 4:
+                if row["tier"] < 4 and (row["owners"] or row["category"].startswith("BD暗金")):
                     self.assertFalse(set(row["uniques"]) & e.ULTRA_RARE_UNIQUES, row)
                 if row["category"] == "BD暗金0LP也留":
                     self.assertNotIn(344, row["uniques"], row)

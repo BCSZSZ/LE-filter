@@ -45,7 +45,7 @@ def build():
                        "remove": "Only legacy non-set uniques that can drop randomly and have zero reroll.",
                        "add": "All visible non-set equipment uniques with positive random-drop reroll.",
                        "sets": "All visible set items, regardless of reroll; one separately switchable rule.",
-                       "deduplication": "T0 and enabled BD targets keep their earlier protection; omit covered lower-tier IDs."},
+                       "deduplication": "Keep common rules and their full pools fixed, including T0 and enabled BD overlap; first match selects the earlier cue."},
             "counts": {"old_uniques": len(old_uniques), "removed_uniques": len(removed),
                        "added_uniques": len(positive - old_uniques), "uniques": len(uniques),
                        "sets": len(sets), "set_groups": len(relationships), "added_sets": len(sets - legacy)},
@@ -60,14 +60,14 @@ def render(document):
     metadata = {u["id"]: u for u in read("sources/tunklab-unique-reroll-2026-10-18.json")["items"]}
     added = set(document["added_unique_ids"])
     lines = ["# 当前通用暗金与全部套装保护", "",
-             "2026-10-18玩家确认后已落实到生成器。暗金与套装分别一条规则、两个独立开关，均默认开启；崇高实验默认关闭。", "",
+             "2026-10-18落实保护范围，2026-10-19按玩家要求固定通用名单。暗金与套装分别一条规则、两个独立开关，均默认开启；崇高实验默认关闭。", "",
              "## 当前口径", "",
              "①②③④只讨论非套装暗金装备。旧138暗金中，茧化23、世界随机reroll=0的7、限定Boss／裂隙体系60、正reroll47、其他特殊奖励1。套装全部独立，既不进入②，也不随暗金reroll筛选移除。", "",
              "- **暗金181种**：旧138种移出②的7种，补入缺少的50种正reroll暗金。保留全部旧茧化、原限定来源与特殊奖励，正reroll暗金共97种已全部覆盖。",
              "- **套装61件／24套**：覆盖当前冻结词库全部套装，包含蜂农三件及旧名单之外40件，不受reroll筛选影响。",
              "- **生成两条规则**：`[通用暗金0LP保护]`、`[通用套装保护]`。每条只用一份UniqueModifiersCondition；新增ID不加Rolls、LP、WW或角色等级门槛，保留旧非赛季条目的原Rolls对象。",
-             "- 六件T0仍用独立最高彗星提示；10种可选暗金神像及先驱者之针344仍各自独立。上述181种含六件T0，页面暗金展开列表显示其余175种。",
-             "- T0与启用BD已覆盖的ID省去低档重复；默认Strict两BD仍96条，通用规则实际161暗金／61套装。关掉通用开关仍保留BD明确需求、套装补全及更高LP／WW规则。",
+             "- 六件T0仍用独立最高彗星提示；10种可选暗金神像及先驱者之针344仍各自独立。页面和通用暗金规则均显示完整181种，包含六件T0。",
+             "- 通用暗金固定181种、套装固定61件，共通神像按自己的选择保留完整名单；与T0或BD重合也保留，由游戏按Order首次命中前方规则。切换BD及主副不裁剪通用名单。关掉通用开关仍保留BD明确需求、套装补全及更高LP／WW规则。",
              "- 已有浏览器保存的开关和BD目标保留；刷新页面后重新导出XML、导入游戏，才会更新游戏中的filter。", "",
              "## 移出通用暗金的7种", "",
              "只移出世界随机且基础reroll为0的暗金；这里不包含任何套装。", "",
@@ -90,6 +90,7 @@ def render(document):
               "- [运行期名单](../sources/common-unique-protection.json)：181暗金／61套装及新增、移出ID；源文件哈希完整保留。",
               "- [旧名单分类研究](COMMON_UNIQUE_CLASSIFICATION.md)和[纯reroll历史对照](COMMON_UNIQUE_COMPARISON.md)保留作为旧口径证据；此前204种候选包含套装筛选，已由本文181暗金＋全部61套装的242种基础池替代。",
               "- `python -X utf8 scripts/build_common_unique_protection.py`离线重建名单与本文；运行期不访问Tunklab、网络或开发缓存，Pages运行ZIP包含新名单。",
+              "- [2026-10-19固定通用规则核查](COMMON_RULE_STABILITY.md)：同类去重、WW补充规则、首次命中和当前验证；此前记录中的161／175计数属于旧生成逻辑。",
               "- [原生与8组开关验证](../analysis/common-protection-pool-validation.json)、[7组WASM完整输出对照](../analysis/common-protection-pool-wasm-validation.json)、[网页开关／刷新／预览核对](../analysis/common-protection-pool-browser-validation.json)及[界面截图](images/common-protection-pool.jpg)。旧基底、赛季名单、BD需求及历史XML字节保持。验证不是游戏客户端实测。", ""]
     return "\n".join(lines)
 

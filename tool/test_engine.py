@@ -277,7 +277,7 @@ class ToolTests(unittest.TestCase):
         config["common"] = {"unique_idols_enabled": True, "unique_idols": [211]}
         config["builds"][0]["profiles"]["endgame"]["uniques"] = [211]
         out = e.generate(config)
-        self.assertFalse(any(r["category"] == "共通暗金神像" for r in out["rules"]))
+        self.assertEqual(next(r["uniques"] for r in out["rules"] if r["category"] == "共通暗金神像"), [211])
         self.assertEqual(first(out, "IDOL_2x2", uid=211, rarity="UNIQUE")["category"], "BD暗金0LP也留")
         config["common"]["unique_idols_enabled"] = False
         self.assertEqual(first(e.generate(config), "IDOL_2x2", uid=211, rarity="UNIQUE")["category"], "BD暗金0LP也留")
@@ -316,8 +316,7 @@ class ToolTests(unittest.TestCase):
             self.assertTrue(all(e.CATALOG["uniques"][str(uid)]["set"] == (row["category"] == "通用套装保护") for uid in row["uniques"]))
             actual.update({int(u.findtext("UniqueId")): u for u in c})
         original = [u for n in [15, 16] for u in e.condition(e.BASE[n], "UniqueModifiersCondition")]
-        bd_ids = {uid for b in self.config["builds"] if b["enabled"] for uid in e.expand_unique_sets(b["profiles"]["endgame"]["uniques"])}
-        expected = e.COMMON_ZERO_LP_IDS - e.ULTRA_RARE_UNIQUES - bd_ids
+        expected = e.COMMON_ZERO_LP_IDS
         self.assertEqual(set(actual), expected)
         self.assertEqual(sum(len(row["uniques"]) for _, row in common), len(expected))
         for uid in (e.SEASONAL_UNIQUES & expected) | ((set(actual) - {int(u.findtext("UniqueId")) for u in original})):

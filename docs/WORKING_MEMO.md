@@ -3,7 +3,14 @@
 更新时间：2026-10-19，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
 
-## 最新2026-10-19：暗金附加信息精简
+## 最新2026-10-19：通用规则保持完整
+
+- 玩家要求非BD通用规则固定，按游戏首次命中决定提示。已取消通用暗金／套装／暗金神像的BD与T0扣除、针通用规则替换、WW通用池扣除与追加，以及同条件合并误删通用规则。通用暗金及网页名单完整181种，套装61件；WW各保留原412项和Rolls，名单外BD目标用独立规则补充。
+- [同类去重清单及边界](COMMON_RULE_STABILITY.md)也列出保留的BD专属压缩：共享暗金归属、C1覆盖05、目标层完整覆盖和等价BD规则合并。职业拆解开关仍按BD目标适配；保存、需求、套装扩展、主副配色及优先级保持。此前161／175／167池大小与97／98手里剑规则数为旧逻辑记录。
+- 当前Strict98、Allie88、835101、Allie＋835141、冰追心81、追心手里剑100；冰＋手里剑129–131，原四BD169–184。超过200仍报错且不截断。
+- 114项完整回归通过；11场景的36条独立通用规则除Order外逐字段一致，6组打包WASM完整响应与原生一致。56份冻结输入／需求／基底／历史XML字节保持，保护来源JSON仅更新生成策略说明、物品ID范围不变。[原生验证](../analysis/fixed-common-rules-validation.json)、[WASM验证](../analysis/fixed-common-rules-wasm-validation.json)。均未作游戏客户端或浏览器下载实测。
+
+## 此前2026-10-19：暗金附加信息精简
 
 - 按玩家要求，暗金选择器只留搜索与勾选，按部位分组；职业／部位筛选、只看已选／旧项开关及多来源展开退出暗金界面，词缀与底材原控件保留。每件只显示一个主要来源、一个固定参考值及图片。
 - 预言固定100级／命运12／无镜片通用池，不计职业偏置；Boss／特殊取主要来源的最高tier／开启者奖励表内上限，按单次独立奖励。未知固定概率的机制保留简短文字。完整原生研究字段保留，界面只读`display`。

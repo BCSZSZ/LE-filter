@@ -1,0 +1,1034 @@
+{
+  "status": "passed",
+  "date": "2026-10-19",
+  "fixedIndependentRuleCount": 36,
+  "scenarios": [
+    {
+      "name": "default_strict",
+      "count": 98,
+      "before_count": 97,
+      "fixed_independent_rules": 36,
+      "common_uniques": 181,
+      "common_sets": 61,
+      "common_idols": 10,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "ww": 0,
+          "category": "通用暗金0LP保护",
+          "role": "通用",
+          "tier": 1,
+          "color": "3",
+          "sound": "铁匠"
+        },
+        {
+          "lp": 1,
+          "ww": 0,
+          "category": "任意LP=1",
+          "role": "通用",
+          "tier": 2,
+          "color": "4",
+          "sound": "开始"
+        },
+        {
+          "lp": 2,
+          "ww": 0,
+          "category": "任意LP=2",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 3,
+          "ww": 0,
+          "category": "任意LP≥3",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        },
+        {
+          "lp": 0,
+          "ww": 14,
+          "category": "名单WW14–16",
+          "role": "通用",
+          "tier": 2,
+          "color": "4",
+          "sound": "开始"
+        },
+        {
+          "lp": 0,
+          "ww": 17,
+          "category": "名单WW17–19",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 0,
+          "ww": 20,
+          "category": "WW20+",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        }
+      ]
+    },
+    {
+      "name": "skeleton-necromancer",
+      "count": 73,
+      "before_count": 72,
+      "fixed_independent_rules": 36,
+      "common_uniques": 181,
+      "common_sets": 61,
+      "common_idols": 10,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "ww": 0,
+          "category": "通用暗金0LP保护",
+          "role": "通用",
+          "tier": 1,
+          "color": "3",
+          "sound": "铁匠"
+        },
+        {
+          "lp": 1,
+          "ww": 0,
+          "category": "任意LP=1",
+          "role": "通用",
+          "tier": 2,
+          "color": "4",
+          "sound": "开始"
+        },
+        {
+          "lp": 2,
+          "ww": 0,
+          "category": "任意LP=2",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 3,
+          "ww": 0,
+          "category": "任意LP≥3",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        },
+        {
+          "lp": 0,
+          "ww": 14,
+          "category": "名单WW14–16",
+          "role": "通用",
+          "tier": 2,
+          "color": "4",
+          "sound": "开始"
+        },
+        {
+          "lp": 0,
+          "ww": 17,
+          "category": "名单WW17–19",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 0,
+          "ww": 20,
+          "category": "WW20+",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        }
+      ]
+    },
+    {
+      "name": "flay-mana-lich",
+      "count": 70,
+      "before_count": 69,
+      "fixed_independent_rules": 36,
+      "common_uniques": 181,
+      "common_sets": 61,
+      "common_idols": 10,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "ww": 0,
+          "category": "通用暗金0LP保护",
+          "role": "通用",
+          "tier": 1,
+          "color": "3",
+          "sound": "铁匠"
+        },
+        {
+          "lp": 1,
+          "ww": 0,
+          "category": "任意LP=1",
+          "role": "通用",
+          "tier": 2,
+          "color": "4",
+          "sound": "开始"
+        },
+        {
+          "lp": 2,
+          "ww": 0,
+          "category": "任意LP=2",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 3,
+          "ww": 0,
+          "category": "任意LP≥3",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        },
+        {
+          "lp": 0,
+          "ww": 14,
+          "category": "名单WW14–16",
+          "role": "通用",
+          "tier": 2,
+          "color": "4",
+          "sound": "开始"
+        },
+        {
+          "lp": 0,
+          "ww": 17,
+          "category": "名单WW17–19",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 0,
+          "ww": 20,
+          "category": "WW20+",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        }
+      ]
+    },
+    {
+      "name": "flay-lich-allie-guide",
+      "count": 88,
+      "before_count": 87,
+      "fixed_independent_rules": 36,
+      "common_uniques": 181,
+      "common_sets": 61,
+      "common_idols": 10,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "ww": 0,
+          "category": "通用暗金0LP保护",
+          "role": "通用",
+          "tier": 1,
+          "color": "3",
+          "sound": "铁匠"
+        },
+        {
+          "lp": 1,
+          "ww": 0,
+          "category": "任意LP=1",
+          "role": "通用",
+          "tier": 2,
+          "color": "4",
+          "sound": "开始"
+        },
+        {
+          "lp": 2,
+          "ww": 0,
+          "category": "任意LP=2",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 3,
+          "ww": 0,
+          "category": "任意LP≥3",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        },
+        {
+          "lp": 0,
+          "ww": 14,
+          "category": "名单WW14–16",
+          "role": "通用",
+          "tier": 2,
+          "color": "4",
+          "sound": "开始"
+        },
+        {
+          "lp": 0,
+          "ww": 17,
+          "category": "名单WW17–19",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 0,
+          "ww": 20,
+          "category": "WW20+",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        }
+      ]
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835",
+      "count": 101,
+      "before_count": 100,
+      "fixed_independent_rules": 36,
+      "common_uniques": 181,
+      "common_sets": 61,
+      "common_idols": 10,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "ww": 0,
+          "category": "通用暗金0LP保护",
+          "role": "通用",
+          "tier": 1,
+          "color": "3",
+          "sound": "铁匠"
+        },
+        {
+          "lp": 1,
+          "ww": 0,
+          "category": "任意LP=1",
+          "role": "通用",
+          "tier": 2,
+          "color": "4",
+          "sound": "开始"
+        },
+        {
+          "lp": 2,
+          "ww": 0,
+          "category": "任意LP=2",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 3,
+          "ww": 0,
+          "category": "任意LP≥3",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        },
+        {
+          "lp": 0,
+          "ww": 14,
+          "category": "名单WW14–16",
+          "role": "通用",
+          "tier": 2,
+          "color": "4",
+          "sound": "开始"
+        },
+        {
+          "lp": 0,
+          "ww": 17,
+          "category": "名单WW17–19",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 0,
+          "ww": 20,
+          "category": "WW20+",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        }
+      ]
+    },
+    {
+      "name": "ice-heartseeker-planner-al0dkyek",
+      "count": 81,
+      "before_count": 80,
+      "fixed_independent_rules": 36,
+      "common_uniques": 181,
+      "common_sets": 61,
+      "common_idols": 10,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "ww": 0,
+          "category": "通用暗金0LP保护",
+          "role": "通用",
+          "tier": 1,
+          "color": "3",
+          "sound": "铁匠"
+        },
+        {
+          "lp": 1,
+          "ww": 0,
+          "category": "任意LP=1",
+          "role": "通用",
+          "tier": 2,
+          "color": "4",
+          "sound": "开始"
+        },
+        {
+          "lp": 2,
+          "ww": 0,
+          "category": "任意LP=2",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 3,
+          "ww": 0,
+          "category": "任意LP≥3",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        },
+        {
+          "lp": 0,
+          "ww": 14,
+          "category": "名单WW14–16",
+          "role": "通用",
+          "tier": 2,
+          "color": "4",
+          "sound": "开始"
+        },
+        {
+          "lp": 0,
+          "ww": 17,
+          "category": "名单WW17–19",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 0,
+          "ww": 20,
+          "category": "WW20+",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        }
+      ]
+    },
+    {
+      "name": "heartseeker-shuriken-marksman",
+      "count": 100,
+      "before_count": 98,
+      "fixed_independent_rules": 36,
+      "common_uniques": 181,
+      "common_sets": 61,
+      "common_idols": 10,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "ww": 0,
+          "category": "BD暗金0LP也留",
+          "role": "主",
+          "tier": 1,
+          "color": "8",
+          "sound": "铁匠"
+        },
+        {
+          "lp": 1,
+          "ww": 0,
+          "category": "BD暗金1LP",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 2,
+          "ww": 0,
+          "category": "BD暗金2LP",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        },
+        {
+          "lp": 3,
+          "ww": 0,
+          "category": "任意LP≥3",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        },
+        {
+          "lp": 0,
+          "ww": 14,
+          "category": "名单WW14–16",
+          "role": "主",
+          "tier": 2,
+          "color": "8",
+          "sound": "开始"
+        },
+        {
+          "lp": 0,
+          "ww": 17,
+          "category": "名单WW17–19",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 0,
+          "ww": 20,
+          "category": "WW20+",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        }
+      ]
+    },
+    {
+      "name": "allie_835",
+      "count": 141,
+      "before_count": 140,
+      "fixed_independent_rules": 36,
+      "common_uniques": 181,
+      "common_sets": 61,
+      "common_idols": 10,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "ww": 0,
+          "category": "通用暗金0LP保护",
+          "role": "通用",
+          "tier": 1,
+          "color": "3",
+          "sound": "铁匠"
+        },
+        {
+          "lp": 1,
+          "ww": 0,
+          "category": "任意LP=1",
+          "role": "通用",
+          "tier": 2,
+          "color": "4",
+          "sound": "开始"
+        },
+        {
+          "lp": 2,
+          "ww": 0,
+          "category": "任意LP=2",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 3,
+          "ww": 0,
+          "category": "任意LP≥3",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        },
+        {
+          "lp": 0,
+          "ww": 14,
+          "category": "名单WW14–16",
+          "role": "通用",
+          "tier": 2,
+          "color": "4",
+          "sound": "开始"
+        },
+        {
+          "lp": 0,
+          "ww": 17,
+          "category": "名单WW17–19",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 0,
+          "ww": 20,
+          "category": "WW20+",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        }
+      ]
+    },
+    {
+      "name": "ice_shuriken",
+      "count": 129,
+      "before_count": 127,
+      "fixed_independent_rules": 36,
+      "common_uniques": 181,
+      "common_sets": 61,
+      "common_idols": 10,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "ww": 0,
+          "category": "BD暗金0LP也留",
+          "role": "主",
+          "tier": 1,
+          "color": "8",
+          "sound": "铁匠"
+        },
+        {
+          "lp": 1,
+          "ww": 0,
+          "category": "BD暗金1LP",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 2,
+          "ww": 0,
+          "category": "BD暗金2LP",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        },
+        {
+          "lp": 3,
+          "ww": 0,
+          "category": "任意LP≥3",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        },
+        {
+          "lp": 0,
+          "ww": 14,
+          "category": "名单WW14–16",
+          "role": "主",
+          "tier": 2,
+          "color": "8",
+          "sound": "开始"
+        },
+        {
+          "lp": 0,
+          "ww": 17,
+          "category": "名单WW17–19",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 0,
+          "ww": 20,
+          "category": "WW20+",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        }
+      ]
+    },
+    {
+      "name": "no_bd_targets",
+      "count": 36,
+      "before_count": null,
+      "fixed_independent_rules": 36,
+      "common_uniques": 181,
+      "common_sets": 61,
+      "common_idols": 10,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "ww": 0,
+          "category": "通用暗金0LP保护",
+          "role": "通用",
+          "tier": 1,
+          "color": "3",
+          "sound": "铁匠"
+        },
+        {
+          "lp": 1,
+          "ww": 0,
+          "category": "任意LP=1",
+          "role": "通用",
+          "tier": 2,
+          "color": "4",
+          "sound": "开始"
+        },
+        {
+          "lp": 2,
+          "ww": 0,
+          "category": "任意LP=2",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 3,
+          "ww": 0,
+          "category": "任意LP≥3",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        },
+        {
+          "lp": 0,
+          "ww": 14,
+          "category": "名单WW14–16",
+          "role": "通用",
+          "tier": 2,
+          "color": "4",
+          "sound": "开始"
+        },
+        {
+          "lp": 0,
+          "ww": 17,
+          "category": "名单WW17–19",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 0,
+          "ww": 20,
+          "category": "WW20+",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        }
+      ]
+    },
+    {
+      "name": "all_common_ids_are_bd_targets",
+      "count": 42,
+      "before_count": null,
+      "fixed_independent_rules": 36,
+      "common_uniques": 181,
+      "common_sets": 61,
+      "common_idols": 10,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "ww": 0,
+          "category": "BD暗金0LP也留",
+          "role": "主",
+          "tier": 1,
+          "color": "8",
+          "sound": "铁匠"
+        },
+        {
+          "lp": 1,
+          "ww": 0,
+          "category": "BD暗金1LP",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 2,
+          "ww": 0,
+          "category": "BD暗金2LP",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        },
+        {
+          "lp": 3,
+          "ww": 0,
+          "category": "任意LP≥3",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        },
+        {
+          "lp": 0,
+          "ww": 14,
+          "category": "名单WW14–16",
+          "role": "主",
+          "tier": 2,
+          "color": "8",
+          "sound": "开始"
+        },
+        {
+          "lp": 0,
+          "ww": 17,
+          "category": "名单WW17–19",
+          "role": "通用",
+          "tier": 3,
+          "color": "5",
+          "sound": "灵感"
+        },
+        {
+          "lp": 0,
+          "ww": 20,
+          "category": "WW20+",
+          "role": "通用",
+          "tier": 4,
+          "color": "7",
+          "sound": "彗星"
+        }
+      ]
+    }
+  ],
+  "deterministic": true,
+  "commonSourceIdsUnchanged": true,
+  "preservedFiles": {
+    "sources/common-unique-drop-sources-2026-10-18.json": "cad91cb9add4b0a81de598d90986ed49ecb5ea376444466e9935535cc73733a4",
+    "sources/filter-style-reference.json": "37a26db4058ded7f88963d1559a9e369a7c1d74f7894778b63165e05f54b7d39",
+    "sources/game-reference.json": "2f4e8198a2b936b3b639cad53d3f196bab4b3a6fb37bfdaaf002d4995655317b",
+    "sources/item-sets.json": "beeee982d41f3fa91f7f320a5587cb951f25f20b6658c3cd3ab80730f64fa040",
+    "sources/manifest.json": "3904c8a1cf61db4e6671056f0f95bf9a690d2b581763d548f3f0979c79aa1e23",
+    "sources/Raxx's S5 Ultimate Filter v1.0.txt": "146465750ab794175676f73b7251ddba610c42c4508bb16b614b6d4982036288",
+    "sources/seasonal-unique-protection.json": "dd03763aca0d16990d5b0e77214da3486a5761abc92193d22c4f2761babc02f5",
+    "sources/shuriken-corruption-data.json": "cba66149d1fc8beccfcaba7b34fadd80c627803b9df97173119fe195baefc9ce",
+    "sources/t7-equipment-pools.json": "651c401f24de466cb83cc5e79ba4e382f8b57fa1f4b4a84858b431d0300d9645",
+    "sources/t7-natural-type-selection.json": "300c0927e1cc6e9b7b595817d43d4fa88cfb099bda159170c9557d31ca213861",
+    "sources/tool-catalog.json": "cedeabebdd1efb6bb8257b2c70b095cce3dd6169505864f50aea4b3cfbfe60e8",
+    "sources/tunklab-unique-reroll-2026-10-18.json": "dd3a4e2893e72b5579c79c38e36a959da1310a4d3a57c261d34e976283dc291c",
+    "sources/ultra-rare-uniques.json": "dcc58fe5f567c3c1e9a6c12487a27d15033b5dfdf29495c5d3844ed585bdb387",
+    "sources/unique-drop-catalog.json": "33430400aa9495968930303bfa4419fcc075dcd4616b3fb93016c0d66073ac87",
+    "sources/unique-drop-inputs-2026-10-18.json": "75b0ee19b67e9ddee77e6a47c22625b406e4419fb537fb06864aded0c59e1934",
+    "sources/unique-drop-native-evidence-2026-10-18.json": "07eb3bc4321882b85538161c04fa475324ded272a757eb95272a4e213a3ee1c5",
+    "sources/zero-reroll-drop-sources-2026-10-18.json": "daae367b4b5b35b6c58eb997acf08d7c22bb219008d1bb970a7da65becf4b375",
+    "sources/builds/flay-mana-lich-guide.json": "1b7f6180f1fd32818c223e5d8daa1c4e9a2a8c405094d8a9a126c5c6ccef0fd8",
+    "sources/builds/flay-mana-lich.json": "fe5932f3f5990bcffa88cef0e882789855d89cbba89c2d66ed1768f6ea531ba7",
+    "sources/builds/heartseeker-shuriken-profiles-2026-10-18.json": "b541f03b5d6da1df5a4c5c5e0a8c4715ace855799b0f0176e996579134c8f248",
+    "sources/builds/ice-heartseeker-player-2026-10-18.xml": "8facbd4310b104d7b3b447565faba68aa5d808cb534de3ad09375559f601eb61",
+    "sources/builds/ice-heartseeker-video-bv1oupp6wecs.json": "abd375e925c13922b38c890e39f62926fee321ddc7b8cec3435754a9b67283eb",
+    "sources/builds/letools-allie-flay-extracted.json": "0aa01939bd5cb4a672baafef58737b942543f7a57f72af4ea9bc5e8ee2c5cf88",
+    "sources/builds/letools-character-api-2026-10-18.json": "848c3be0959fda8b037c6c79c64b7c3b95846c1448231659cc32649695b028bb",
+    "sources/builds/letools-guide-zh-835-extracted.json": "aa964dc554078bf8fb20b856515f683db13a1d359734af5b6965195ac701ce9f",
+    "sources/builds/letools-planner-al0dkyek-extracted.json": "37be1dccd00b15011b13c2d0476b476ab30e834e1fc978f9f10f3c3fc5a3a8a4",
+    "sources/builds/letools-planner-al0dkyek-ui.json": "6b4f44d7530696c6cdfe33fc625c8ad385f73de0045d0e683714ad52c5dd4dd8",
+    "sources/builds/manifest.json": "b88e7550b8cf6ca5ddc6bfe13376be1b6a2c79c5de50712c829e6b87f778c481",
+    "sources/builds/maxroll-character-api-2026-10-18.json": "27ba25834e7c77fc22437be541c44a598cd1eae892a6d44db9d22396c6f4edf1",
+    "sources/builds/maxroll-flay-mana-lich-strict.xml": "4e70c8b9111a28ae257aea7b561d931ac99629a6054646ce18a3ce5e3458995c",
+    "sources/builds/maxroll-reference-supplement.json": "a8f94e45f86bd8b8e77ae7d09d22869e70dc9436ca9a9113970ecb6a552a9970",
+    "sources/builds/maxroll-shuriken-marksman-very-strict.xml": "9a79e7351c3a114e746839a4fd8e605cfc8ffc53ab59cfbe1bf17e0ab4312cdf",
+    "sources/builds/maxroll-skeleton-necromancer-strict.xml": "5033341708ab5594cfcb70448bf3c6084333f03efa4388e5d4c6f4b1409dbade",
+    "sources/builds/maxroll-skeleton-necromancer-very-strict.xml": "7e9bb43a06383fad155298c642991e41cf9d125911702e46c8e508634cf55cb1",
+    "sources/builds/maxroll-strict-manifest.json": "be601551ff46051a0af6ce6ad8ad61e384d6a6ea68c5097b2d96f56c97394354",
+    "sources/builds/review-reference.json": "df489714f6491d6610de0a4257af5a8c7df2b0b3a28983ed659d9759854f96bc",
+    "sources/builds/skeleton-equipment-priorities.png": "a4a853ebd7eb9be59a1ad6d4e64a2451a2eef9e054396df317049a107ff5b0b4",
+    "sources/builds/skeleton-idol-priorities.png": "234aae7df50c586954bf7ce5e82b89d295594ca7baec05ec0022227f7e8cbaf1",
+    "sources/builds/skeleton-investigation-manifest.json": "d70f0726d870281661a96664716bcbac217967ce651b5f6836bf0b37f43a3d99",
+    "sources/builds/skeleton-necromancer.json": "456c46bb25c88dc6077ce4189dcd89e268eb12aa8893f44cbe19e35202cc988d",
+    "sources/builds/strict-variable-reference.json": "0e42a2ff8ca467519900bb85edb4ac3fe851cf75e9f86774dcee18453e07bd9a",
+    "sources/builds/transfer-reference.json": "f571190f25cd97b2bbc292d9ec5463cbb46ef20a6937e16a6a5023f056b0f9e2",
+    "sources/video-era/Raxx-S5-2026-10-01.txt": "f0e329df63af9737185bf6d5fdd71cb7663c932ddf954773c56c90a6d8c440ed",
+    "templates/base-manifest.json": "ad19178a51cff97cb61017448c7ca36fca963ec5672914ff90a2c54a564cbee1",
+    "templates/LE-base-v1.xml": "725e8ce0dc642f0e0bd60ae50f3b9c168b775ecee96fcf1064f1a39c3caae4d4",
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer-v2.xml": "b98ac8760726009ece4bef27bde7f6ad9cc2d2806e8996630ecbb96d41e1e71c",
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml": "ddfb6889366162de32eaf4a9dbd050f23496a1d902189cff340b5ec444da6ec9",
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer.xml": "a6026b9a065042ead7e4e9bd1461b20f0687a148d5a087669b6763c7f461cc78",
+    "requirements/bleed-skeleton-roamer-guide-835.endgame.json": "7272c54e9a6436fd4a4617c469d9613dc6e54b1378abd4c41c3408f8376c537d",
+    "requirements/bleed-skeleton-roamer-guide-835.leveling.json": "46fb51f53b8383abfbb2a2feb88bfbe975a218039715485b2d8dfaee1d25de99",
+    "requirements/flay-lich-allie-guide.endgame.json": "2a904049a9a2aa82d0a0ab490d52c74477f934175f51d8332418462ca238fd1d",
+    "requirements/flay-lich-allie-guide.leveling.json": "71c601489ef6b3716ece19b2f45892221467150135f57a795e170537a42be3c6",
+    "requirements/heartseeker-shuriken-marksman.endgame.json": "c89b2fa81bc7f638526c6423d1fc35c0a00905980ab4772c35f01bfd7b508c5a",
+    "requirements/heartseeker-shuriken-marksman.leveling.json": "3b751549d16541894004f7aaef75591e451417847f4ae47131e739175221ab29",
+    "requirements/ice-heartseeker-planner-al0dkyek.endgame.json": "0dbb3b0f3a6fb4bb8b1d68f95545a49cfc574a418a299b842b89d9460b15e7ed",
+    "requirements/ice-heartseeker-planner-al0dkyek.leveling.json": "63e65c4bb0b8309657177bf6c3a1ecdb576b85d3faec2c93d055b4d482b7833b"
+  },
+  "bdClassShatterSwitchesRemainTargetDependent": [
+    84,
+    85,
+    86,
+    87,
+    88
+  ],
+  "gameExecutionTested": false,
+  "browserDownloadTested": false,
+  "unitTests": {
+    "command": "python -X utf8 -m unittest discover -s tool -v",
+    "passed": 114
+  },
+  "combinationRuleCounts": [
+    {
+      "selection": "four",
+      "main": "bleed-skeleton-roamer-guide-835",
+      "count": 178,
+      "overLimit": false
+    },
+    {
+      "selection": "four",
+      "main": "flay-lich-allie-guide",
+      "count": 169,
+      "overLimit": false
+    },
+    {
+      "selection": "four",
+      "main": "flay-mana-lich",
+      "count": 184,
+      "overLimit": false
+    },
+    {
+      "selection": "four",
+      "main": "skeleton-necromancer",
+      "count": 184,
+      "overLimit": false
+    },
+    {
+      "selection": "five",
+      "main": "bleed-skeleton-roamer-guide-835",
+      "count": 212,
+      "overLimit": true
+    },
+    {
+      "selection": "five",
+      "main": "flay-lich-allie-guide",
+      "count": 203,
+      "overLimit": true
+    },
+    {
+      "selection": "five",
+      "main": "flay-mana-lich",
+      "count": 218,
+      "overLimit": true
+    },
+    {
+      "selection": "five",
+      "main": "ice-heartseeker-planner-al0dkyek",
+      "count": 218,
+      "overLimit": true
+    },
+    {
+      "selection": "five",
+      "main": "skeleton-necromancer",
+      "count": 218,
+      "overLimit": true
+    },
+    {
+      "selection": "six",
+      "main": "bleed-skeleton-roamer-guide-835",
+      "count": 262,
+      "overLimit": true
+    },
+    {
+      "selection": "six",
+      "main": "flay-lich-allie-guide",
+      "count": 253,
+      "overLimit": true
+    },
+    {
+      "selection": "six",
+      "main": "flay-mana-lich",
+      "count": 268,
+      "overLimit": true
+    },
+    {
+      "selection": "six",
+      "main": "heartseeker-shuriken-marksman",
+      "count": 264,
+      "overLimit": true
+    },
+    {
+      "selection": "six",
+      "main": "ice-heartseeker-planner-al0dkyek",
+      "count": 268,
+      "overLimit": true
+    },
+    {
+      "selection": "six",
+      "main": "skeleton-necromancer",
+      "count": 268,
+      "overLimit": true
+    },
+    {
+      "selection": "allie_835_ice",
+      "main": "bleed-skeleton-roamer-guide-835",
+      "count": 175,
+      "overLimit": false
+    },
+    {
+      "selection": "allie_835_ice",
+      "main": "flay-lich-allie-guide",
+      "count": 175,
+      "overLimit": false
+    },
+    {
+      "selection": "allie_835_ice",
+      "main": "ice-heartseeker-planner-al0dkyek",
+      "count": 175,
+      "overLimit": false
+    },
+    {
+      "selection": "strict_ice",
+      "main": "flay-mana-lich",
+      "count": 132,
+      "overLimit": false
+    },
+    {
+      "selection": "strict_ice",
+      "main": "ice-heartseeker-planner-al0dkyek",
+      "count": 132,
+      "overLimit": false
+    },
+    {
+      "selection": "strict_ice",
+      "main": "skeleton-necromancer",
+      "count": 132,
+      "overLimit": false
+    },
+    {
+      "selection": "ice_shuriken",
+      "main": "heartseeker-shuriken-marksman",
+      "count": 129,
+      "overLimit": false
+    },
+    {
+      "selection": "ice_shuriken",
+      "main": "ice-heartseeker-planner-al0dkyek",
+      "count": 131,
+      "overLimit": false
+    }
+  ]
+}

@@ -5,7 +5,7 @@ import unittest
 
 import engine as e
 from compare_common_unique_protection import compare
-from test_engine import first
+from test_engine import first, parsed
 
 
 class CommonProtectionTests(unittest.TestCase):
@@ -126,6 +126,63 @@ class CommonProtectionTests(unittest.TestCase):
         output = e.generate(config)
         for uid in e.SET_MEMBERS[5]:
             self.assertEqual(first(output, e.CATALOG["uniques"][str(uid)]["type"], uid=uid, rarity="SET")["category"], "BD暗金0LP也留")
+
+    def test_common_unique_and_set_pools_remain_complete_with_bd_and_t0_overlap(self):
+        config = self.config()
+        config["builds"][0]["profiles"]["endgame"]["uniques"] = [337, 61, 77]
+        output = e.generate(config)
+        rows = {row["category"]: row for row in output["rules"]}
+        self.assertEqual(set(rows["通用暗金0LP保护"]["uniques"]), e.COMMON_UNIQUE_IDS)
+        self.assertEqual(set(rows["通用套装保护"]["uniques"]), e.COMMON_SET_IDS)
+        self.assertEqual(set(e.bootstrap()["catalog"]["common_unique_ids"]), e.COMMON_UNIQUE_IDS)
+        self.assertEqual(first(output, "BOOTS", uid=337, rarity="UNIQUE")["category"], "BD暗金0LP也留")
+        self.assertEqual(first(output, uid=61, rarity="UNIQUE")["category"], "T0极稀有暗金0LP起")
+        self.assertEqual(first(output, uid=77, rarity="SET")["category"], "BD暗金0LP也留")
+
+    def test_common_idol_survives_an_identical_earlier_bd_predicate(self):
+        config = self.config()
+        config["common"] = e.default_common()
+        config["common"]["unique_idols"] = [211]
+        config["builds"][0]["profiles"]["endgame"]["uniques"] = [211, 344]
+        output = e.generate(config)
+        rows = [row for row in output["rules"] if row["category"] == "共通暗金神像"]
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["uniques"], [211])
+        self.assertEqual((rows[0]["role"], rows[0]["owners"]), ("通用", []))
+        needle = [row for row in output["rules"] if row["category"] == "先驱者之针常驻" and not row["owners"]]
+        self.assertEqual(len(needle), 1)
+        self.assertEqual(needle[0]["uniques"], [344])
+        self.assertEqual(first(output, "IDOL_2x2", uid=211, rarity="UNIQUE")["category"], "BD暗金0LP也留")
+        self.assertEqual(first(output, "IDOL_1x1_ETERRA", uid=344, rarity="UNIQUE")["role"], "主")
+
+    def test_generic_unique_rules_are_identical_when_bd_targets_or_main_change(self):
+        categories = {"通用暗金0LP保护", "通用套装保护", "共通暗金神像", "先驱者之针常驻",
+                      "名单WW14–16", "名单WW17–19", "WW20+", "任意LP=1", "任意LP=2", "任意LP≥3"}
+
+        def generic_rules(output):
+            result = {}
+            for node, row in zip(parsed(output), output["rules"]):
+                if row["category"] in categories and not row["owners"]:
+                    node.find("Order").text = "0"
+                    result[row["category"]] = e.tree(node)
+            self.assertEqual(set(result), categories)
+            return result
+
+        config = self.config()
+        baseline = generic_rules(e.generate(config))
+        main = config["builds"][0]
+        other = deepcopy(main)
+        other.update(id="b", name="B")
+        config["builds"].append(other)
+        main["profiles"]["endgame"]["uniques"] = [337, 211, 344, 61, 77, 487]
+        other["profiles"]["endgame"]["uniques"] = [337, 277, 246, 78, 488]
+        for main_id in ("a", "b"):
+            config["main_id"] = main_id
+            before = deepcopy(config)
+            self.assertEqual(generic_rules(e.generate(config)), baseline)
+            self.assertEqual(config, before)
+        main["enabled"] = False
+        self.assertEqual(generic_rules(e.generate(config)), baseline)
 
 
 if __name__ == "__main__":

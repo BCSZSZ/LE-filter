@@ -29,8 +29,7 @@ def main():
             node = deepcopy(e.BASE[15])
             e.select_uniques(node, [uid])
             expected[uid] = deepcopy(e.condition(node, "UniqueModifiersCondition")[0])
-    claimed = {uid for b in boot["builds"] if b["enabled"] for uid in e.expand_unique_sets(b["profiles"]["endgame"]["uniques"])}
-    expected = {uid: node for uid, node in expected.items() if uid in approved - e.ULTRA_RARE_UNIQUES - claimed}
+    expected = {uid: node for uid, node in expected.items() if uid in approved}
     output = e.generate(boot)
     actual = {int(u.findtext("UniqueId")): u for node, row in zip(parsed(output), output["rules"])
               if row["category"] in {"通用暗金0LP保护", "通用套装保护"}

@@ -103,7 +103,7 @@ function render(){
   $('common-sets-enabled').checked=config.common.common_sets_enabled;
   $('common-unique-targets').innerHTML=chips(catalog.common_unique_ids,'uniques');
   $('common-set-targets').innerHTML=chips(catalog.common_set_ids,'uniques');
-  $('common-uniques-summary').textContent=`查看暗金保护名单（${catalog.common_unique_ids.length}种，T0另列）`;
+  $('common-uniques-summary').textContent=`查看暗金保护名单（${catalog.common_unique_ids.length}种，含6件T0）`;
   $('common-sets-summary').textContent=`查看全部套装（${catalog.common_set_ids.length}件）`;
   $('common-idols-enabled').checked=config.common.unique_idols_enabled;
   $('common-idol-targets').innerHTML=config.common.unique_idols.length?chips(config.common.unique_idols,'uniques'):'<small>未选择暗金神像</small>';

@@ -259,7 +259,7 @@ def remove_shadowed_targets(entries):
     Compare only scopes, ordinary counts with identical tier predicates, and
     identical remaining conditions. Frozen rules and combined scores stay out.
     """
-    categories = MULTI_T7_CATEGORIES | {"BD目标单T7", "非目标T7＋BD目标", "神像一普通目标", "神像两普通目标"}
+    categories = {"双T7含BD目标T7", "BD目标单T7", "非目标T7＋BD目标", "神像一普通目标", "神像两普通目标"}
     kept, result = [], []
     for rule, row in entries:
         if row["category"] not in categories or rule.findtext("isEnabled") != "true":
@@ -386,17 +386,11 @@ def generate(config, mode="endgame"):
         return r
 
     def split_unique_ownership(entry):
-        """Comet/Inspiration use tier colors; lower cues retain BD ID colors."""
+        """Add lower-tier BD colors while preserving the complete common rule."""
         rule, row = entry
-        if row["tier"] == 4:
+        if row["tier"] >= 3:
             return [entry]
         selected = next((c for c in rule.find("conditions") if c.get(XSI + "type") == "UniqueModifiersCondition"), None)
-        if selected is not None:
-            selected[:] = [u for u in selected if int(u.findtext("UniqueId")) not in ULTRA_RARE_UNIQUES]
-            if not len(selected):
-                return []
-        if row["tier"] == 3:
-            return [entry]
         variants = []
         for b, ids in owned_uniques:
             ids = ids & set(inspect_rule(rule)["unique_ids"]) if selected is not None else ids
@@ -413,13 +407,6 @@ def generate(config, mode="endgame"):
             role = "主" if b["id"] == config["main_id"] else "副"
             copy.find("nameOverride").text = f"[{role} {row['category']}] {b['name']}"
             variants.append((copy, {**row, "role": role, "owners": [b["name"]]}))
-        if selected is not None:
-            remaining = [u for u in selected if int(u.findtext("UniqueId")) not in claimed]
-            if not remaining:
-                return variants
-            fallback = deepcopy(rule)
-            condition(fallback, "UniqueModifiersCondition")[:] = deepcopy(remaining)
-            entry = (fallback, row)
         return [*variants, entry]
 
     # Every Comet cue, including T0, takes color priority over BD identity.
@@ -502,7 +489,7 @@ def generate(config, mode="endgame"):
             r.find("conditions").append(deepcopy(condition(BASE[n], "PotentialCondition")))
             potential(r, "LegendaryPotential", lp, lp)
     common = config["common"]
-    common_idol_ids = set(common["unique_idols"]) - claimed
+    common_idol_ids = set(common["unique_idols"])
     if common_idol_ids:
         r = add(15, "共通暗金神像", 1, name="[共通：暗金神像]")
         select_uniques(r, common_idol_ids)
@@ -514,14 +501,24 @@ def generate(config, mode="endgame"):
         r = add(n, f"WW{ww}+" if ww == 20 else f"名单WW{ww}–{ww + 2}", tier)
         potential(r, "WeaversWill", ww, None if ww == 20 else ww + 2)
         if ww < 20:
+            common_entry = deepcopy(replacements[n][-1])
             c = condition(r, "UniqueModifiersCondition")
             missing = all_targets - set(inspect_rule(r)["unique_ids"])
             tmp = deepcopy(BASE[15])
             select_uniques(tmp, missing)
             c.extend(deepcopy(condition(tmp, "UniqueModifiersCondition")[:]))
-    for n in (12, 13, 14):
-        replacements[n] = [variant for entry in replacements[n]
-                           for variant in (split_unique_ownership(entry) if not entry[1]["owners"] and entry[1]["category"] not in {"任意LP=1", "任意LP=2"} else [entry])]
+            variants = split_unique_ownership(replacements[n].pop())
+            if tier == 2:
+                replacements[n].extend(variants[:-1])
+            elif missing:
+                # Targets outside the frozen WW list get a separate BD rule.
+                # The common WW predicate and its original Rolls stay fixed.
+                target_rule, target_row = variants[-1]
+                pool = condition(target_rule, "UniqueModifiersCondition")
+                pool[:] = [u for u in pool if int(u.findtext("UniqueId")) in missing]
+                target_rule.find("nameOverride").text = "[灵感 BD暗金WW17–19]"
+                replacements[n].append((target_rule, {**target_row, "category": "BD暗金WW17–19"}))
+            replacements[n].append(common_entry)
     # Apply the approved unique pool and all sets. Retained non-seasonal
     # entries keep their original Rolls; newly added IDs have no roll gate.
     r = deepcopy(BASE[15])
@@ -533,7 +530,7 @@ def generate(config, mode="endgame"):
     tmp = deepcopy(BASE[15])
     select_uniques(tmp, COMMON_ZERO_LP_IDS - set(inspect_rule(r)["unique_ids"]))
     c.extend(deepcopy(condition(tmp, "UniqueModifiersCondition")[:]))
-    c[:] = [u for u in c if int(u.findtext("UniqueId")) in COMMON_ZERO_LP_IDS - ULTRA_RARE_UNIQUES - claimed]
+    c[:] = [u for u in c if int(u.findtext("UniqueId")) in COMMON_ZERO_LP_IDS]
     for key, is_set, category in (("common_uniques_enabled", False, "通用暗金0LP保护"),
                                   ("common_sets_enabled", True, "通用套装保护")):
         selected = [u for u in c if CATALOG["uniques"][u.findtext("UniqueId")]["set"] == is_set]
@@ -680,13 +677,16 @@ def generate(config, mode="endgame"):
     result.sort(key=priority)
     result = merge_equipment_scopes(result)
     result = remove_shadowed_targets(result)
-    # Deduplicate identical predicates, preserving main ownership and cue priority.
+    # Merge identical BD predicates. Common rules keep their own complete entry
+    # even when an earlier BD or another common rule has the same predicate.
     merged, rows = {}, []
     for rule, row in result:
         # Disabled entries remain in the source/config and return when enabled.
         if rule.findtext("isEnabled") != "true":
             continue
         key = (signature(rule), rule.findtext("type"))
+        if not row["owners"] and not row["category"].startswith("BD暗金"):
+            key += (row["category"], row["source_raxx_rule"])
         if key in merged:
             merged[key][1]["owners"] += [name for name in row["owners"] if name not in merged[key][1]["owners"]]
         else:
@@ -731,7 +731,7 @@ def bootstrap():
     catalog = deepcopy(CATALOG)
     catalog["item_sets"] = deepcopy(ITEM_SETS)
     catalog["ultra_rare_uniques"] = sorted(ULTRA_RARE_UNIQUES)
-    catalog["common_unique_ids"] = sorted(COMMON_UNIQUE_IDS - ULTRA_RARE_UNIQUES)
+    catalog["common_unique_ids"] = sorted(COMMON_UNIQUE_IDS)
     catalog["common_set_ids"] = sorted(COMMON_SET_IDS)
     catalog["equipment_types"] = MANIFEST["scope_types"]
     examples = []

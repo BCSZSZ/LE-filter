@@ -7,7 +7,7 @@
     "remove": "Only legacy non-set uniques that can drop randomly and have zero reroll.",
     "add": "All visible non-set equipment uniques with positive random-drop reroll.",
     "sets": "All visible set items, regardless of reroll; one separately switchable rule.",
-    "deduplication": "T0 and enabled BD targets keep their earlier protection; omit covered lower-tier IDs."
+    "deduplication": "Keep common rules and their full pools fixed, including T0 and enabled BD overlap; first match selects the earlier cue."
   },
   "counts": {
     "old_uniques": 138,

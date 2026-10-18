@@ -1,0 +1,2508 @@
+{
+  "as_of": "2026-10-19",
+  "scope": "Current frozen game 1.5.2.2 data; generated XML, not a game-client drop test.",
+  "positive_equipment": {
+    "count": 97,
+    "native_and_tunklab_match": true,
+    "ids": [
+      11,
+      30,
+      35,
+      37,
+      38,
+      45,
+      53,
+      61,
+      66,
+      71,
+      73,
+      76,
+      80,
+      84,
+      91,
+      92,
+      93,
+      104,
+      108,
+      125,
+      126,
+      132,
+      133,
+      136,
+      145,
+      147,
+      149,
+      167,
+      168,
+      169,
+      172,
+      176,
+      181,
+      183,
+      187,
+      195,
+      196,
+      197,
+      198,
+      208,
+      220,
+      221,
+      222,
+      224,
+      229,
+      232,
+      235,
+      242,
+      249,
+      250,
+      251,
+      252,
+      268,
+      269,
+      270,
+      272,
+      274,
+      275,
+      277,
+      290,
+      304,
+      306,
+      307,
+      310,
+      316,
+      318,
+      323,
+      327,
+      332,
+      334,
+      335,
+      336,
+      337,
+      338,
+      342,
+      351,
+      356,
+      368,
+      373,
+      374,
+      375,
+      376,
+      414,
+      420,
+      443,
+      450,
+      458,
+      459,
+      461,
+      463,
+      471,
+      473,
+      475,
+      476,
+      478,
+      483,
+      484
+    ],
+    "missing_from_base_pool": []
+  },
+  "scenarios": [
+    {
+      "id": "no_bd_targets",
+      "rule_count": 35,
+      "common_rule_count": 175,
+      "zero_lp_unconditional_coverage": 242,
+      "missing_protected_ids": [],
+      "positive_equipment_covered": 97,
+      "razorfall_target": false,
+      "razorfall_in_common_rule": true,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "number": 15,
+          "name": "[通用暗金0LP保护]",
+          "category": "通用暗金0LP保护",
+          "role": "通用",
+          "sound": "铁匠",
+          "action": "SHOW"
+        },
+        {
+          "lp": 1,
+          "number": 11,
+          "name": "[通用 任意LP=1] ",
+          "category": "任意LP=1",
+          "role": "通用",
+          "sound": "开始",
+          "action": "SHOW"
+        },
+        {
+          "lp": 2,
+          "number": 8,
+          "name": "[通用 任意LP=2] ",
+          "category": "任意LP=2",
+          "role": "通用",
+          "sound": "灵感",
+          "action": "SHOW"
+        },
+        {
+          "lp": 3,
+          "number": 5,
+          "name": "[通用 任意LP≥3] ",
+          "category": "任意LP≥3",
+          "role": "通用",
+          "sound": "彗星",
+          "action": "SHOW"
+        }
+      ],
+      "deduplicated_from_common": [
+        {
+          "id": 61,
+          "en": "Orian's Eye",
+          "zh": "奥利安之眼",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 208,
+          "en": "Ravenous Void",
+          "zh": "贪婪虚空",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 277,
+          "en": "Red Ring of Atlaria",
+          "zh": "阿特拉里亚的红戒指",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 473,
+          "en": "Eternal Font",
+          "zh": "永恒之池",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 476,
+          "en": "Death Dance",
+          "zh": "死亡之舞",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 478,
+          "en": "Gift of the Eidolon",
+          "zh": "幻灵赠礼",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        }
+      ],
+      "narrowed_roll_bounds": []
+    },
+    {
+      "id": "default_strict_pair",
+      "rule_count": 97,
+      "common_rule_count": 161,
+      "zero_lp_unconditional_coverage": 242,
+      "missing_protected_ids": [],
+      "positive_equipment_covered": 97,
+      "razorfall_target": false,
+      "razorfall_in_common_rule": true,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "number": 75,
+          "name": "[通用暗金0LP保护]",
+          "category": "通用暗金0LP保护",
+          "role": "通用",
+          "sound": "铁匠",
+          "action": "SHOW"
+        },
+        {
+          "lp": 1,
+          "number": 71,
+          "name": "[通用 任意LP=1] ",
+          "category": "任意LP=1",
+          "role": "通用",
+          "sound": "开始",
+          "action": "SHOW"
+        },
+        {
+          "lp": 2,
+          "number": 19,
+          "name": "[通用 任意LP=2] ",
+          "category": "任意LP=2",
+          "role": "通用",
+          "sound": "灵感",
+          "action": "SHOW"
+        },
+        {
+          "lp": 3,
+          "number": 15,
+          "name": "[通用 任意LP≥3] ",
+          "category": "任意LP≥3",
+          "role": "通用",
+          "sound": "彗星",
+          "action": "SHOW"
+        }
+      ],
+      "deduplicated_from_common": [
+        {
+          "id": 61,
+          "en": "Orian's Eye",
+          "zh": "奥利安之眼",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 66,
+          "en": "Hollow Finger",
+          "zh": "空心手指",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[副 BD暗金0LP也留] Skeleton Necromancer ",
+            "category": "BD暗金0LP也留",
+            "role": "副",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 208,
+          "en": "Ravenous Void",
+          "zh": "贪婪虚空",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 253,
+          "en": "Foot of the Mountain",
+          "zh": "山之麓",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 40,
+            "name": "[主 BD暗金0LP也留] Flay Mana Lich ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 269,
+          "en": "Scales of Lemniscate",
+          "zh": "双纽线天平",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[副 BD暗金0LP也留] Skeleton Necromancer ",
+            "category": "BD暗金0LP也留",
+            "role": "副",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 277,
+          "en": "Red Ring of Atlaria",
+          "zh": "阿特拉里亚的红戒指",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 342,
+          "en": "Traitor's Tongue",
+          "zh": "叛徒之舌",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 40,
+            "name": "[主 BD暗金0LP也留] Flay Mana Lich ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 357,
+          "en": "Seed of Ekkidrasil",
+          "zh": "无界树种",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 40,
+            "name": "[主 BD暗金0LP也留] Flay Mana Lich ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 374,
+          "en": "Pearls of the Swine",
+          "zh": "猪猡的珍珠",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[副 BD暗金0LP也留] Skeleton Necromancer ",
+            "category": "BD暗金0LP也留",
+            "role": "副",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 415,
+          "en": "Immortal Vise",
+          "zh": "不朽台钳",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 40,
+            "name": "[主 BD暗金0LP也留] Flay Mana Lich ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 416,
+          "en": "Brewmaster's Buckle",
+          "zh": "酿酒大师的皮带扣",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 40,
+            "name": "[主 BD暗金0LP也留] Flay Mana Lich ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 420,
+          "en": "Executioner's Tithe",
+          "zh": "处刑者的献祭",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 40,
+            "name": "[主 BD暗金0LP也留] Flay Mana Lich ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 433,
+          "en": "Reliquary Nest",
+          "zh": "神圣巢穴",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 40,
+            "name": "[主 BD暗金0LP也留] Flay Mana Lich ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 469,
+          "en": "Exulis",
+          "zh": "流亡",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 40,
+            "name": "[主 BD暗金0LP也留] Flay Mana Lich ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 471,
+          "en": "Unbroken Legion",
+          "zh": "不屈军团",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[副 BD暗金0LP也留] Skeleton Necromancer ",
+            "category": "BD暗金0LP也留",
+            "role": "副",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 473,
+          "en": "Eternal Font",
+          "zh": "永恒之池",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 475,
+          "en": "Devoured Knowledge",
+          "zh": "吞噬知识",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 40,
+            "name": "[主 BD暗金0LP也留] Flay Mana Lich ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 476,
+          "en": "Death Dance",
+          "zh": "死亡之舞",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 477,
+          "en": "Unsated Rage",
+          "zh": "不息狂怒",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[副 BD暗金0LP也留] Skeleton Necromancer ",
+            "category": "BD暗金0LP也留",
+            "role": "副",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 478,
+          "en": "Gift of the Eidolon",
+          "zh": "幻灵赠礼",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        }
+      ],
+      "narrowed_roll_bounds": []
+    },
+    {
+      "id": "skeleton-necromancer",
+      "rule_count": 72,
+      "common_rule_count": 168,
+      "zero_lp_unconditional_coverage": 242,
+      "missing_protected_ids": [],
+      "positive_equipment_covered": 97,
+      "razorfall_target": false,
+      "razorfall_in_common_rule": true,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "number": 50,
+          "name": "[通用暗金0LP保护]",
+          "category": "通用暗金0LP保护",
+          "role": "通用",
+          "sound": "铁匠",
+          "action": "SHOW"
+        },
+        {
+          "lp": 1,
+          "number": 46,
+          "name": "[通用 任意LP=1] ",
+          "category": "任意LP=1",
+          "role": "通用",
+          "sound": "开始",
+          "action": "SHOW"
+        },
+        {
+          "lp": 2,
+          "number": 17,
+          "name": "[通用 任意LP=2] ",
+          "category": "任意LP=2",
+          "role": "通用",
+          "sound": "灵感",
+          "action": "SHOW"
+        },
+        {
+          "lp": 3,
+          "number": 13,
+          "name": "[通用 任意LP≥3] ",
+          "category": "任意LP≥3",
+          "role": "通用",
+          "sound": "彗星",
+          "action": "SHOW"
+        }
+      ],
+      "deduplicated_from_common": [
+        {
+          "id": 61,
+          "en": "Orian's Eye",
+          "zh": "奥利安之眼",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 66,
+          "en": "Hollow Finger",
+          "zh": "空心手指",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 37,
+            "name": "[主 BD暗金0LP也留] Skeleton Necromancer ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 208,
+          "en": "Ravenous Void",
+          "zh": "贪婪虚空",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 253,
+          "en": "Foot of the Mountain",
+          "zh": "山之麓",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 37,
+            "name": "[主 BD暗金0LP也留] Skeleton Necromancer ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 269,
+          "en": "Scales of Lemniscate",
+          "zh": "双纽线天平",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 37,
+            "name": "[主 BD暗金0LP也留] Skeleton Necromancer ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 277,
+          "en": "Red Ring of Atlaria",
+          "zh": "阿特拉里亚的红戒指",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 374,
+          "en": "Pearls of the Swine",
+          "zh": "猪猡的珍珠",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 37,
+            "name": "[主 BD暗金0LP也留] Skeleton Necromancer ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 416,
+          "en": "Brewmaster's Buckle",
+          "zh": "酿酒大师的皮带扣",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 37,
+            "name": "[主 BD暗金0LP也留] Skeleton Necromancer ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 471,
+          "en": "Unbroken Legion",
+          "zh": "不屈军团",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 37,
+            "name": "[主 BD暗金0LP也留] Skeleton Necromancer ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 473,
+          "en": "Eternal Font",
+          "zh": "永恒之池",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 476,
+          "en": "Death Dance",
+          "zh": "死亡之舞",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 477,
+          "en": "Unsated Rage",
+          "zh": "不息狂怒",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 37,
+            "name": "[主 BD暗金0LP也留] Skeleton Necromancer ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 478,
+          "en": "Gift of the Eidolon",
+          "zh": "幻灵赠礼",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        }
+      ],
+      "narrowed_roll_bounds": []
+    },
+    {
+      "id": "flay-mana-lich",
+      "rule_count": 69,
+      "common_rule_count": 166,
+      "zero_lp_unconditional_coverage": 242,
+      "missing_protected_ids": [],
+      "positive_equipment_covered": 97,
+      "razorfall_target": false,
+      "razorfall_in_common_rule": true,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "number": 48,
+          "name": "[通用暗金0LP保护]",
+          "category": "通用暗金0LP保护",
+          "role": "通用",
+          "sound": "铁匠",
+          "action": "SHOW"
+        },
+        {
+          "lp": 1,
+          "number": 44,
+          "name": "[通用 任意LP=1] ",
+          "category": "任意LP=1",
+          "role": "通用",
+          "sound": "开始",
+          "action": "SHOW"
+        },
+        {
+          "lp": 2,
+          "number": 17,
+          "name": "[通用 任意LP=2] ",
+          "category": "任意LP=2",
+          "role": "通用",
+          "sound": "灵感",
+          "action": "SHOW"
+        },
+        {
+          "lp": 3,
+          "number": 13,
+          "name": "[通用 任意LP≥3] ",
+          "category": "任意LP≥3",
+          "role": "通用",
+          "sound": "彗星",
+          "action": "SHOW"
+        }
+      ],
+      "deduplicated_from_common": [
+        {
+          "id": 61,
+          "en": "Orian's Eye",
+          "zh": "奥利安之眼",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 208,
+          "en": "Ravenous Void",
+          "zh": "贪婪虚空",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 253,
+          "en": "Foot of the Mountain",
+          "zh": "山之麓",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 35,
+            "name": "[主 BD暗金0LP也留] Flay Mana Lich ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 277,
+          "en": "Red Ring of Atlaria",
+          "zh": "阿特拉里亚的红戒指",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 342,
+          "en": "Traitor's Tongue",
+          "zh": "叛徒之舌",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 35,
+            "name": "[主 BD暗金0LP也留] Flay Mana Lich ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 357,
+          "en": "Seed of Ekkidrasil",
+          "zh": "无界树种",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 35,
+            "name": "[主 BD暗金0LP也留] Flay Mana Lich ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 415,
+          "en": "Immortal Vise",
+          "zh": "不朽台钳",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 35,
+            "name": "[主 BD暗金0LP也留] Flay Mana Lich ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 416,
+          "en": "Brewmaster's Buckle",
+          "zh": "酿酒大师的皮带扣",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 35,
+            "name": "[主 BD暗金0LP也留] Flay Mana Lich ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 420,
+          "en": "Executioner's Tithe",
+          "zh": "处刑者的献祭",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 35,
+            "name": "[主 BD暗金0LP也留] Flay Mana Lich ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 433,
+          "en": "Reliquary Nest",
+          "zh": "神圣巢穴",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 35,
+            "name": "[主 BD暗金0LP也留] Flay Mana Lich ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 469,
+          "en": "Exulis",
+          "zh": "流亡",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 35,
+            "name": "[主 BD暗金0LP也留] Flay Mana Lich ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 473,
+          "en": "Eternal Font",
+          "zh": "永恒之池",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 475,
+          "en": "Devoured Knowledge",
+          "zh": "吞噬知识",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 35,
+            "name": "[主 BD暗金0LP也留] Flay Mana Lich ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 476,
+          "en": "Death Dance",
+          "zh": "死亡之舞",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 478,
+          "en": "Gift of the Eidolon",
+          "zh": "幻灵赠礼",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        }
+      ],
+      "narrowed_roll_bounds": []
+    },
+    {
+      "id": "flay-lich-allie-guide",
+      "rule_count": 87,
+      "common_rule_count": 161,
+      "zero_lp_unconditional_coverage": 242,
+      "missing_protected_ids": [],
+      "positive_equipment_covered": 97,
+      "razorfall_target": false,
+      "razorfall_in_common_rule": true,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "number": 65,
+          "name": "[通用暗金0LP保护]",
+          "category": "通用暗金0LP保护",
+          "role": "通用",
+          "sound": "铁匠",
+          "action": "SHOW"
+        },
+        {
+          "lp": 1,
+          "number": 61,
+          "name": "[通用 任意LP=1] ",
+          "category": "任意LP=1",
+          "role": "通用",
+          "sound": "开始",
+          "action": "SHOW"
+        },
+        {
+          "lp": 2,
+          "number": 18,
+          "name": "[通用 任意LP=2] ",
+          "category": "任意LP=2",
+          "role": "通用",
+          "sound": "灵感",
+          "action": "SHOW"
+        },
+        {
+          "lp": 3,
+          "number": 14,
+          "name": "[通用 任意LP≥3] ",
+          "category": "任意LP≥3",
+          "role": "通用",
+          "sound": "彗星",
+          "action": "SHOW"
+        }
+      ],
+      "deduplicated_from_common": [
+        {
+          "id": 61,
+          "en": "Orian's Eye",
+          "zh": "奥利安之眼",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 132,
+          "en": "Transient Rest",
+          "zh": "短暂休息",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 41,
+            "name": "[主 BD暗金0LP也留] Flay魔力巫妖 · Allie攻略 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 208,
+          "en": "Ravenous Void",
+          "zh": "贪婪虚空",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 253,
+          "en": "Foot of the Mountain",
+          "zh": "山之麓",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 41,
+            "name": "[主 BD暗金0LP也留] Flay魔力巫妖 · Allie攻略 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 277,
+          "en": "Red Ring of Atlaria",
+          "zh": "阿特拉里亚的红戒指",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 342,
+          "en": "Traitor's Tongue",
+          "zh": "叛徒之舌",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 41,
+            "name": "[主 BD暗金0LP也留] Flay魔力巫妖 · Allie攻略 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 353,
+          "en": "Nihilis",
+          "zh": "虚无",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 41,
+            "name": "[主 BD暗金0LP也留] Flay魔力巫妖 · Allie攻略 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 357,
+          "en": "Seed of Ekkidrasil",
+          "zh": "无界树种",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 41,
+            "name": "[主 BD暗金0LP也留] Flay魔力巫妖 · Allie攻略 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 376,
+          "en": "Pearls of the Swine",
+          "zh": "猪猡的珍珠",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 41,
+            "name": "[主 BD暗金0LP也留] Flay魔力巫妖 · Allie攻略 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 413,
+          "en": "Shattered Worlds",
+          "zh": "破碎世界",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 41,
+            "name": "[主 BD暗金0LP也留] Flay魔力巫妖 · Allie攻略 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 415,
+          "en": "Immortal Vise",
+          "zh": "不朽台钳",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 41,
+            "name": "[主 BD暗金0LP也留] Flay魔力巫妖 · Allie攻略 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 416,
+          "en": "Brewmaster's Buckle",
+          "zh": "酿酒大师的皮带扣",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 41,
+            "name": "[主 BD暗金0LP也留] Flay魔力巫妖 · Allie攻略 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 420,
+          "en": "Executioner's Tithe",
+          "zh": "处刑者的献祭",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 41,
+            "name": "[主 BD暗金0LP也留] Flay魔力巫妖 · Allie攻略 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 433,
+          "en": "Reliquary Nest",
+          "zh": "神圣巢穴",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 41,
+            "name": "[主 BD暗金0LP也留] Flay魔力巫妖 · Allie攻略 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 469,
+          "en": "Exulis",
+          "zh": "流亡",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 41,
+            "name": "[主 BD暗金0LP也留] Flay魔力巫妖 · Allie攻略 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 473,
+          "en": "Eternal Font",
+          "zh": "永恒之池",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 475,
+          "en": "Devoured Knowledge",
+          "zh": "吞噬知识",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 41,
+            "name": "[主 BD暗金0LP也留] Flay魔力巫妖 · Allie攻略 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 476,
+          "en": "Death Dance",
+          "zh": "死亡之舞",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 477,
+          "en": "Unsated Rage",
+          "zh": "不息狂怒",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 41,
+            "name": "[主 BD暗金0LP也留] Flay魔力巫妖 · Allie攻略 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 478,
+          "en": "Gift of the Eidolon",
+          "zh": "幻灵赠礼",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        }
+      ],
+      "narrowed_roll_bounds": []
+    },
+    {
+      "id": "bleed-skeleton-roamer-guide-835",
+      "rule_count": 100,
+      "common_rule_count": 162,
+      "zero_lp_unconditional_coverage": 242,
+      "missing_protected_ids": [],
+      "positive_equipment_covered": 97,
+      "razorfall_target": false,
+      "razorfall_in_common_rule": true,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "number": 78,
+          "name": "[通用暗金0LP保护]",
+          "category": "通用暗金0LP保护",
+          "role": "通用",
+          "sound": "铁匠",
+          "action": "SHOW"
+        },
+        {
+          "lp": 1,
+          "number": 74,
+          "name": "[通用 任意LP=1] ",
+          "category": "任意LP=1",
+          "role": "通用",
+          "sound": "开始",
+          "action": "SHOW"
+        },
+        {
+          "lp": 2,
+          "number": 22,
+          "name": "[通用 任意LP=2] ",
+          "category": "任意LP=2",
+          "role": "通用",
+          "sound": "灵感",
+          "action": "SHOW"
+        },
+        {
+          "lp": 3,
+          "number": 18,
+          "name": "[通用 任意LP≥3] ",
+          "category": "任意LP≥3",
+          "role": "通用",
+          "sound": "彗星",
+          "action": "SHOW"
+        }
+      ],
+      "deduplicated_from_common": [
+        {
+          "id": 61,
+          "en": "Orian's Eye",
+          "zh": "奥利安之眼",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 66,
+          "en": "Hollow Finger",
+          "zh": "空心手指",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 47,
+            "name": "[主 BD暗金0LP也留] 流血骷髅游荡者 · 攻略835 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 91,
+          "en": "Fiery Dragon Shoes",
+          "zh": "火龙靴",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 47,
+            "name": "[主 BD暗金0LP也留] 流血骷髅游荡者 · 攻略835 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 208,
+          "en": "Ravenous Void",
+          "zh": "贪婪虚空",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 253,
+          "en": "Foot of the Mountain",
+          "zh": "山之麓",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 47,
+            "name": "[主 BD暗金0LP也留] 流血骷髅游荡者 · 攻略835 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 269,
+          "en": "Scales of Lemniscate",
+          "zh": "双纽线天平",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 47,
+            "name": "[主 BD暗金0LP也留] 流血骷髅游荡者 · 攻略835 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 277,
+          "en": "Red Ring of Atlaria",
+          "zh": "阿特拉里亚的红戒指",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 332,
+          "en": "Blood Roost",
+          "zh": "鲜血鸟栖",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 47,
+            "name": "[主 BD暗金0LP也留] 流血骷髅游荡者 · 攻略835 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 374,
+          "en": "Pearls of the Swine",
+          "zh": "猪猡的珍珠",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 47,
+            "name": "[主 BD暗金0LP也留] 流血骷髅游荡者 · 攻略835 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 413,
+          "en": "Shattered Worlds",
+          "zh": "破碎世界",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 47,
+            "name": "[主 BD暗金0LP也留] 流血骷髅游荡者 · 攻略835 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 416,
+          "en": "Brewmaster's Buckle",
+          "zh": "酿酒大师的皮带扣",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 47,
+            "name": "[主 BD暗金0LP也留] 流血骷髅游荡者 · 攻略835 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 444,
+          "en": "Evolution's End",
+          "zh": "进化终焉",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 47,
+            "name": "[主 BD暗金0LP也留] 流血骷髅游荡者 · 攻略835 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 447,
+          "en": "Bones of the Ancestral Pack",
+          "zh": "先祖集群之骨",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 47,
+            "name": "[主 BD暗金0LP也留] 流血骷髅游荡者 · 攻略835 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 469,
+          "en": "Exulis",
+          "zh": "流亡",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 47,
+            "name": "[主 BD暗金0LP也留] 流血骷髅游荡者 · 攻略835 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 471,
+          "en": "Unbroken Legion",
+          "zh": "不屈军团",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 47,
+            "name": "[主 BD暗金0LP也留] 流血骷髅游荡者 · 攻略835 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 473,
+          "en": "Eternal Font",
+          "zh": "永恒之池",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 476,
+          "en": "Death Dance",
+          "zh": "死亡之舞",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 477,
+          "en": "Unsated Rage",
+          "zh": "不息狂怒",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 47,
+            "name": "[主 BD暗金0LP也留] 流血骷髅游荡者 · 攻略835 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 478,
+          "en": "Gift of the Eidolon",
+          "zh": "幻灵赠礼",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        }
+      ],
+      "narrowed_roll_bounds": []
+    },
+    {
+      "id": "ice-heartseeker-planner-al0dkyek",
+      "rule_count": 80,
+      "common_rule_count": 170,
+      "zero_lp_unconditional_coverage": 242,
+      "missing_protected_ids": [],
+      "positive_equipment_covered": 97,
+      "razorfall_target": false,
+      "razorfall_in_common_rule": true,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "number": 58,
+          "name": "[通用暗金0LP保护]",
+          "category": "通用暗金0LP保护",
+          "role": "通用",
+          "sound": "铁匠",
+          "action": "SHOW"
+        },
+        {
+          "lp": 1,
+          "number": 54,
+          "name": "[通用 任意LP=1] ",
+          "category": "任意LP=1",
+          "role": "通用",
+          "sound": "开始",
+          "action": "SHOW"
+        },
+        {
+          "lp": 2,
+          "number": 19,
+          "name": "[通用 任意LP=2] ",
+          "category": "任意LP=2",
+          "role": "通用",
+          "sound": "灵感",
+          "action": "SHOW"
+        },
+        {
+          "lp": 3,
+          "number": 15,
+          "name": "[通用 任意LP≥3] ",
+          "category": "任意LP≥3",
+          "role": "通用",
+          "sound": "彗星",
+          "action": "SHOW"
+        }
+      ],
+      "deduplicated_from_common": [
+        {
+          "id": 61,
+          "en": "Orian's Eye",
+          "zh": "奥利安之眼",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 208,
+          "en": "Ravenous Void",
+          "zh": "贪婪虚空",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 277,
+          "en": "Red Ring of Atlaria",
+          "zh": "阿特拉里亚的红戒指",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 413,
+          "en": "Shattered Worlds",
+          "zh": "破碎世界",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 43,
+            "name": "[主 BD暗金0LP也留] 冰追心 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 439,
+          "en": "Truesight Glass",
+          "zh": "真视玻璃",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 43,
+            "name": "[主 BD暗金0LP也留] 冰追心 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 473,
+          "en": "Eternal Font",
+          "zh": "永恒之池",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 476,
+          "en": "Death Dance",
+          "zh": "死亡之舞",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 477,
+          "en": "Unsated Rage",
+          "zh": "不息狂怒",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 43,
+            "name": "[主 BD暗金0LP也留] 冰追心 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 478,
+          "en": "Gift of the Eidolon",
+          "zh": "幻灵赠礼",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 479,
+          "en": "Withstand the Elements",
+          "zh": "抵御元素",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 43,
+            "name": "[主 BD暗金0LP也留] 冰追心 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 487,
+          "en": "Vestige of Imprisonment",
+          "zh": "囚禁之迹",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 43,
+            "name": "[主 BD暗金0LP也留] 冰追心 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        }
+      ],
+      "narrowed_roll_bounds": []
+    },
+    {
+      "id": "heartseeker-shuriken-marksman",
+      "rule_count": 98,
+      "common_rule_count": 167,
+      "zero_lp_unconditional_coverage": 242,
+      "missing_protected_ids": [],
+      "positive_equipment_covered": 97,
+      "razorfall_target": true,
+      "razorfall_in_common_rule": false,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "number": 62,
+          "name": "[主 BD暗金0LP也留] 追心手里剑 ",
+          "category": "BD暗金0LP也留",
+          "role": "主",
+          "sound": "铁匠",
+          "action": "SHOW"
+        },
+        {
+          "lp": 1,
+          "number": 21,
+          "name": "[灵感 BD暗金1LP]",
+          "category": "BD暗金1LP",
+          "role": "通用",
+          "sound": "灵感",
+          "action": "SHOW"
+        },
+        {
+          "lp": 2,
+          "number": 17,
+          "name": "[彗星 BD暗金2LP]",
+          "category": "BD暗金2LP",
+          "role": "通用",
+          "sound": "彗星",
+          "action": "SHOW"
+        },
+        {
+          "lp": 3,
+          "number": 15,
+          "name": "[通用 任意LP≥3] ",
+          "category": "任意LP≥3",
+          "role": "通用",
+          "sound": "彗星",
+          "action": "SHOW"
+        }
+      ],
+      "deduplicated_from_common": [
+        {
+          "id": 61,
+          "en": "Orian's Eye",
+          "zh": "奥利安之眼",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 92,
+          "en": "Jungle Queen's Chaps of Holding",
+          "zh": "丛林女王的储物腰带",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[主 BD暗金0LP也留] 追心手里剑 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 133,
+          "en": "Xithara's Conundrum",
+          "zh": "西塔拉的谜团",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[主 BD暗金0LP也留] 追心手里剑 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 208,
+          "en": "Ravenous Void",
+          "zh": "贪婪虚空",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 256,
+          "en": "Peak of the Mountain",
+          "zh": "山之巅",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[主 BD暗金0LP也留] 追心手里剑 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 277,
+          "en": "Red Ring of Atlaria",
+          "zh": "阿特拉里亚的红戒指",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 337,
+          "en": "Razorfall",
+          "zh": "剃刀降临",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[主 BD暗金0LP也留] 追心手里剑 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 413,
+          "en": "Shattered Worlds",
+          "zh": "破碎世界",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[主 BD暗金0LP也留] 追心手里剑 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 436,
+          "en": "Wings of Discord",
+          "zh": "纷争之翼",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[主 BD暗金0LP也留] 追心手里剑 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 459,
+          "en": "Artifice of Devastation",
+          "zh": "毁灭机巧",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[主 BD暗金0LP也留] 追心手里剑 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 473,
+          "en": "Eternal Font",
+          "zh": "永恒之池",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 476,
+          "en": "Death Dance",
+          "zh": "死亡之舞",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 477,
+          "en": "Unsated Rage",
+          "zh": "不息狂怒",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[主 BD暗金0LP也留] 追心手里剑 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 478,
+          "en": "Gift of the Eidolon",
+          "zh": "幻灵赠礼",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        }
+      ],
+      "narrowed_roll_bounds": []
+    },
+    {
+      "id": "shuriken_without_337_target",
+      "rule_count": 98,
+      "common_rule_count": 168,
+      "zero_lp_unconditional_coverage": 242,
+      "missing_protected_ids": [],
+      "positive_equipment_covered": 97,
+      "razorfall_target": false,
+      "razorfall_in_common_rule": true,
+      "razorfall_first_hits": [
+        {
+          "lp": 0,
+          "number": 76,
+          "name": "[通用暗金0LP保护]",
+          "category": "通用暗金0LP保护",
+          "role": "通用",
+          "sound": "铁匠",
+          "action": "SHOW"
+        },
+        {
+          "lp": 1,
+          "number": 73,
+          "name": "[通用 任意LP=1] ",
+          "category": "任意LP=1",
+          "role": "通用",
+          "sound": "开始",
+          "action": "SHOW"
+        },
+        {
+          "lp": 2,
+          "number": 19,
+          "name": "[通用 任意LP=2] ",
+          "category": "任意LP=2",
+          "role": "通用",
+          "sound": "灵感",
+          "action": "SHOW"
+        },
+        {
+          "lp": 3,
+          "number": 15,
+          "name": "[通用 任意LP≥3] ",
+          "category": "任意LP≥3",
+          "role": "通用",
+          "sound": "彗星",
+          "action": "SHOW"
+        }
+      ],
+      "deduplicated_from_common": [
+        {
+          "id": 61,
+          "en": "Orian's Eye",
+          "zh": "奥利安之眼",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 92,
+          "en": "Jungle Queen's Chaps of Holding",
+          "zh": "丛林女王的储物腰带",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[主 BD暗金0LP也留] 追心手里剑 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 133,
+          "en": "Xithara's Conundrum",
+          "zh": "西塔拉的谜团",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[主 BD暗金0LP也留] 追心手里剑 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 208,
+          "en": "Ravenous Void",
+          "zh": "贪婪虚空",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 256,
+          "en": "Peak of the Mountain",
+          "zh": "山之巅",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[主 BD暗金0LP也留] 追心手里剑 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 277,
+          "en": "Red Ring of Atlaria",
+          "zh": "阿特拉里亚的红戒指",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 413,
+          "en": "Shattered Worlds",
+          "zh": "破碎世界",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[主 BD暗金0LP也留] 追心手里剑 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 436,
+          "en": "Wings of Discord",
+          "zh": "纷争之翼",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[主 BD暗金0LP也留] 追心手里剑 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 459,
+          "en": "Artifice of Devastation",
+          "zh": "毁灭机巧",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[主 BD暗金0LP也留] 追心手里剑 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 473,
+          "en": "Eternal Font",
+          "zh": "永恒之池",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 476,
+          "en": "Death Dance",
+          "zh": "死亡之舞",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 477,
+          "en": "Unsated Rage",
+          "zh": "不息狂怒",
+          "cause": "enabled BD target",
+          "covered_by": {
+            "number": 62,
+            "name": "[主 BD暗金0LP也留] 追心手里剑 ",
+            "category": "BD暗金0LP也留",
+            "role": "主",
+            "sound": "铁匠",
+            "action": "SHOW"
+          }
+        },
+        {
+          "id": 478,
+          "en": "Gift of the Eidolon",
+          "zh": "幻灵赠礼",
+          "cause": "T0",
+          "covered_by": {
+            "number": 1,
+            "name": "[共通：T0极稀有暗金 · 0LP起最高档]",
+            "category": "T0极稀有暗金0LP起",
+            "role": "通用",
+            "sound": "彗星",
+            "action": "SHOW"
+          }
+        }
+      ],
+      "narrowed_roll_bounds": []
+    }
+  ],
+  "deployed": {
+    "index_url": "https://bcszsz.github.io/LE-filter/",
+    "revision": "1fb0405870f8d772",
+    "runtime_url": "https://bcszsz.github.io/LE-filter/runtime.zip?v=1fb0405870f8d772",
+    "http_status": 200,
+    "last_modified_gmt": "Sun, 18 Oct 2026 14:58:02 GMT",
+    "runtime_sha256": "a756d60bba3e74fd64e7d5e06d2740399a065be2614e6192a15611acd49e43e0",
+    "razorfall_in_base_pool": true,
+    "files_checked": [
+      {
+        "file": "tool/engine.py",
+        "sha256": "00440ca700ffe8396effc026a1a123f7aa84634abdf781f0b279cdf58ed1ee64",
+        "matches_local": true
+      },
+      {
+        "file": "tool/browser_runtime.py",
+        "sha256": "b0776dc2491b0baa79f8eee7ae9e5831c8ca4d66e05fd1568165e03a204e54dd",
+        "matches_local": true
+      },
+      {
+        "file": "sources/common-unique-protection.json",
+        "sha256": "14cb512e92931a0d736e4ab951ee32c0e71132b925ab97aa6bad32bd591ff4f2",
+        "matches_local": true
+      },
+      {
+        "file": "sources/tool-catalog.json",
+        "sha256": "cedeabebdd1efb6bb8257b2c70b095cce3dd6169505864f50aea4b3cfbfe60e8",
+        "matches_local": true
+      },
+      {
+        "file": "requirements/bleed-skeleton-roamer-guide-835.endgame.json",
+        "sha256": "7272c54e9a6436fd4a4617c469d9613dc6e54b1378abd4c41c3408f8376c537d",
+        "matches_local": true
+      },
+      {
+        "file": "requirements/bleed-skeleton-roamer-guide-835.leveling.json",
+        "sha256": "46fb51f53b8383abfbb2a2feb88bfbe975a218039715485b2d8dfaee1d25de99",
+        "matches_local": true
+      },
+      {
+        "file": "requirements/flay-lich-allie-guide.endgame.json",
+        "sha256": "2a904049a9a2aa82d0a0ab490d52c74477f934175f51d8332418462ca238fd1d",
+        "matches_local": true
+      },
+      {
+        "file": "requirements/flay-lich-allie-guide.leveling.json",
+        "sha256": "71c601489ef6b3716ece19b2f45892221467150135f57a795e170537a42be3c6",
+        "matches_local": true
+      },
+      {
+        "file": "requirements/heartseeker-shuriken-marksman.endgame.json",
+        "sha256": "c89b2fa81bc7f638526c6423d1fc35c0a00905980ab4772c35f01bfd7b508c5a",
+        "matches_local": true
+      },
+      {
+        "file": "requirements/heartseeker-shuriken-marksman.leveling.json",
+        "sha256": "3b751549d16541894004f7aaef75591e451417847f4ae47131e739175221ab29",
+        "matches_local": true
+      },
+      {
+        "file": "requirements/ice-heartseeker-planner-al0dkyek.endgame.json",
+        "sha256": "0dbb3b0f3a6fb4bb8b1d68f95545a49cfc574a418a299b842b89d9460b15e7ed",
+        "matches_local": true
+      },
+      {
+        "file": "requirements/ice-heartseeker-planner-al0dkyek.leveling.json",
+        "sha256": "63e65c4bb0b8309657177bf6c3a1ecdb576b85d3faec2c93d055b4d482b7833b",
+        "matches_local": true
+      }
+    ],
+    "basis": "Exact-byte equality of deployed engine, bootstrap, catalog, pool and all requirement files; no browser or client execution implied."
+  },
+  "source_hashes": [
+    {
+      "file": "tool/engine.py",
+      "sha256": "00440ca700ffe8396effc026a1a123f7aa84634abdf781f0b279cdf58ed1ee64"
+    },
+    {
+      "file": "sources/tunklab-unique-reroll-2026-10-18.json",
+      "sha256": "dd3a4e2893e72b5579c79c38e36a959da1310a4d3a57c261d34e976283dc291c"
+    },
+    {
+      "file": "sources/unique-drop-inputs-2026-10-18.json",
+      "sha256": "75b0ee19b67e9ddee77e6a47c22625b406e4419fb537fb06864aded0c59e1934"
+    },
+    {
+      "file": "sources/common-unique-protection.json",
+      "sha256": "14cb512e92931a0d736e4ab951ee32c0e71132b925ab97aa6bad32bd591ff4f2"
+    },
+    {
+      "file": "requirements/heartseeker-shuriken-marksman.endgame.json",
+      "sha256": "c89b2fa81bc7f638526c6423d1fc35c0a00905980ab4772c35f01bfd7b508c5a"
+    }
+  ],
+  "tests": {
+    "command": "python -X utf8 -m unittest discover -s tool -p test_common_protection.py -v",
+    "passed": 7
+  },
+  "limitations": [
+    "No access to user personal saved configuration or user exported XML.",
+    "No Last Epoch client drop or filtering execution test.",
+    "All-ID checks verify enabled SHOW with only UniqueModifiersCondition, no numeric bound narrower than 0..255 (null bounds preserved), and before all HIDE rules; first-hit helper is a bounded local matcher."
+  ],
+  "research_started_on": "2026-10-18",
+  "timezone": "Asia/Tokyo"
+}
