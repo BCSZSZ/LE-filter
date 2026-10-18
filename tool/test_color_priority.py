@@ -33,7 +33,7 @@ class ColorPriorityTests(unittest.TestCase):
             output = e.generate(self.config(main))
             for uid, owner in ((475, "flay-mana-lich"), (471, "skeleton-necromancer"), (253, main)):
                 color, beam = ("8", "11") if owner == main else ("12", "15")
-                for lp, tier in ((0, 1), (1, 3), (2, 3), (3, 4), (4, 4)):
+                for lp, tier in ((0, 1), (1, 3), (2, 4), (3, 4), (4, 4)):
                     self.assert_style(output, {"uid": uid, "lp": lp, "rarity": "UNIQUE"},
                                       *(e.ALERTS[tier][4:6] if tier >= 3 else (color, beam)), tier)
                 for ww, tier in ((13, 1), (14, 2), (16, 2), (17, 3), (19, 3), (20, 4)):
@@ -65,13 +65,35 @@ class ColorPriorityTests(unittest.TestCase):
             self.assert_style(output, {"uid": 344, "rarity": "UNIQUE"},
                               *(('8', '11') if 344 in targets else ('3', '4')), 1)
 
-    def test_owned_lp1_has_one_inspiration_pool_and_lp2_uses_generic_rule(self):
-        output = e.generate(self.config())
+    def test_owned_lp1_has_one_inspiration_pool_and_lp2_has_one_comet_pool(self):
+        config = self.config()
+        before = deepcopy(config)
+        output = e.generate(config)
+        self.assertEqual(config, before)
         self.assertFalse(any(row["owners"] and row["category"] == "任意LP=1" for row in output["rules"]))
-        self.assertEqual(len([r for r in output["rules"] if r["category"] == "BD暗金1LP"]), 1)
-        for uid in (475, 471, 253):
-            self.assertEqual(first(output, uid=uid, rarity="UNIQUE", lp=1)["category"], "BD暗金1LP")
-            self.assertEqual(first(output, uid=uid, rarity="UNIQUE", lp=2)["category"], "任意LP=2")
+        targets = set().union(*(set(e.expand_unique_sets(b["profiles"]["endgame"]["uniques"]))
+                                for b in config["builds"] if b["enabled"])) - e.ULTRA_RARE_UNIQUES
+        for lp, tier in ((1, 3), (2, 4)):
+            category = f"BD暗金{lp}LP"
+            entries = [(node, row) for node, row in zip(parsed(output), output["rules"])
+                       if row["category"] == category]
+            self.assertEqual(len(entries), 1)
+            node, row = entries[0]
+            self.assertEqual((row["role"], row["owners"], row["tier"]), ("通用", [], tier))
+            self.assertEqual(set(row["uniques"]), targets)
+            self.assertEqual(sum(c.get(e.XSI + "type") == "UniqueModifiersCondition"
+                                 for c in node.find("conditions")), 1)
+            bounds = e.condition(node, "PotentialCondition")
+            self.assertEqual((bounds.findtext("MinLegendaryPotential"), bounds.findtext("MaxLegendaryPotential")),
+                             (str(lp), str(lp)))
+            for uid in (475, 471, 253):
+                self.assertEqual(first(output, uid=uid, rarity="UNIQUE", lp=lp)["category"], category)
+                self.assert_style(output, {"uid": uid, "rarity": "UNIQUE", "lp": lp},
+                                  *e.ALERTS[tier][4:6], tier)
+        self.assertEqual(first(output, uid=0, rarity="UNIQUE", lp=2)["category"], "任意LP=2")
+        secondary = next(b for b in config["builds"] if b["id"] != config["main_id"])
+        secondary["enabled"] = False
+        self.assertEqual(first(e.generate(config), uid=471, rarity="UNIQUE", lp=2)["category"], "任意LP=2")
 
     def test_inspiration_idol_pair_precedes_primary_single_target(self):
         config = deepcopy(browser_bootstrap()["config"])

@@ -197,7 +197,7 @@ class ToolTests(unittest.TestCase):
         self.assertEqual(first(self.output, "IDOL_1x2", {876: 1, 886: 1}, base=1, rarity="RARE")["tier"], 3)
 
     def test_unique_and_ww_cues(self):
-        for uid, lp, tier in [(253,0,1),(253,1,3),(253,2,3),(253,3,4),(0,1,2),(0,2,3),(0,3,4)]:
+        for uid, lp, tier in [(253,0,1),(253,1,3),(253,2,4),(253,3,4),(0,1,2),(0,2,3),(0,3,4)]:
             self.assertEqual(first(self.output,"BOOTS",{},uid=uid,lp=lp,rarity="UNIQUE")["tier"],tier)
         for ww, tier in [(1,1),(13,1),(14,2),(16,2),(17,3),(19,3),(20,4)]:
             self.assertEqual(first(self.output,"BOOTS",{},uid=253,ww=ww,rarity="UNIQUE")["tier"],tier)

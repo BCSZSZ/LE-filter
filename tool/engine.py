@@ -492,14 +492,15 @@ def generate(config, mode="endgame"):
         if ids - {HARBINGER_NEEDLE}:
             r = add(15, "BD暗金0LP也留", 1, b)
             select_uniques(r, ids - {HARBINGER_NEEDLE})
-    # All BD LP1 targets share Inspiration orange; generic LP2 already covers
-    # the same higher cue without requiring another per-build LP branch.
+    # Each LP cue uses one enabled target pool, including completed sets.
+    # T0 IDs already have unconditional Comet protection above.
     if all_targets:
-        r = add(14, "BD暗金1LP", 3, name="[灵感 BD暗金1LP]")
-        select_uniques(r, all_targets)
-        r.find("conditions").append(deepcopy(condition(BASE[14], "RarityCondition")))
-        r.find("conditions").append(deepcopy(condition(BASE[14], "PotentialCondition")))
-        potential(r, "LegendaryPotential", 1, 1)
+        for n, lp, tier in ((14, 1, 3), (13, 2, 4)):
+            r = add(n, f"BD暗金{lp}LP", tier, name=f"[{ALERTS[tier][0]} BD暗金{lp}LP]")
+            select_uniques(r, all_targets)
+            r.find("conditions").append(deepcopy(condition(BASE[n], "RarityCondition")))
+            r.find("conditions").append(deepcopy(condition(BASE[n], "PotentialCondition")))
+            potential(r, "LegendaryPotential", lp, lp)
     common = config["common"]
     common_idol_ids = set(common["unique_idols"]) - claimed
     if common_idol_ids:
@@ -719,7 +720,7 @@ def generate(config, mode="endgame"):
     root = deepcopy(BASE_ROOT)
     root.find("rules")[:] = list(reversed(rules))
     root.find("name").text = "LE Filter - " + " + ".join(b["name"] for b in builds)
-    root.find("description").text = "Raxx base; first match: Comet red, Inspiration orange, primary BD pink, secondary BD blue, then remaining generic alert tiers. Three exact T7 affixes, two T7 with at least one matching BD target T7, or two T7 with exactly three non-sealed affixes use Comet. Other two T7 use Inspiration. Non-target single T7 exits at level 85. Only exact T7 counts. Idols exclude enchantments and corruption."
+    root.find("description").text = "Raxx base; first match: Comet red, Inspiration orange, primary BD pink, secondary BD blue, then remaining generic alert tiers. BD target uniques at 2LP use Comet; target 1LP and non-target 2LP use Inspiration. Three exact T7 affixes, two T7 with at least one matching BD target T7, or two T7 with exactly three non-sealed affixes use Comet. Other two T7 use Inspiration. Non-target single T7 exits at level 85. Only exact T7 counts. Idols exclude enchantments and corruption."
     ET.indent(root, space="  ")
     xml = ET.tostring(root, encoding="unicode", xml_declaration=True) + "\n"
     return {"xml": xml, "rules": rows, "count": len(rows), "enabled": sum(r["enabled"] for r in rows),

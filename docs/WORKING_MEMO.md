@@ -3,7 +3,13 @@
 更新时间：2026-10-18，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
 
-## 最新2026-10-18追加：侧栏入口精简
+## 最新2026-10-18追加：目标暗金2LP升彗星
+
+- 启用BD的暗金目标（含套装补全项）恰好2LP改为彗星，名称红7／光柱10／声音12；恰好1LP仍为橙色灵感，非目标2LP仍为通用灵感。六件T0继续从0LP起常驻彗星，不重复加入目标LP池；WW及其他条件保持。
+- 1LP与2LP各一条共用目标池，不拆主副分支。套装补全只作用于生成，目标与配置不反写；停用BD不进入匹配池。
+- 默认Strict97、Allie87、835100、Allie＋835140；原四BD168–183条。冰追心80、追心手里剑98，两者组合127／129；原五模板202–217、六模板251–266，超过200仍明确报错。数量、首命中与其余规则原样核对见[目标2LP验证](../analysis/target-2lp-validation.json)。下方旧数量为各次修改当时记录。
+
+## 此前2026-10-18追加：侧栏入口精简
 
 - 按玩家确认，常驻入口改为“用所选模版新建方案”“从角色链接创建”“更多”。计数仍表示勾选的模版数量；三个低频操作收进默认折叠的“更多”：导入filter、导入BD需求JSON、导出本BD需求。选择操作后菜单收起。
 - 删除“选择默认组合”按钮、事件与无调用的selectDefaults辅助函数；保留首次默认选择、v1／v2恢复、模版只读与个人保存隔离。仅调整入口及文案，过滤规则、所有BD需求、角色读取后端保持。
