@@ -13,6 +13,7 @@ const endgameCategories = [
 const levelingCategories = [['affixes','所需词条','选择词条'],['bases','所需底材','添加底材']];
 const categories = () => mode==='leveling'?levelingCategories:endgameCategories;
 let catalog, examples, templates, state, config, activeId, mode='endgame', category='uniques', view='editor', selection, imported, generated, toastTimer, previewRequest=0, draggingAffix;
+let profileImport;
 const workspace=globalThis.LEWorkbench;
 const currentSave = () => workspace.activeSave(state);
 const workbenchReady = () => !!currentSave() && config.builds.some(b=>b.enabled);
@@ -71,7 +72,7 @@ function render(){
   if(!selected.some(b=>b.id===activeId))activeId=selected.find(b=>b.id===config.main_id)?.id||selected[0]?.id;
   $('templates').innerHTML=templates.map(t=>{
     const checked=state.selection.ids.includes(t.id);
-    return `<div class="template-card ${checked?'selected':''}"><label class="template-choice"><input type="checkbox" data-template-enable="${esc(t.id)}" ${checked?'checked':''} aria-label="选择模板：${esc(t.name)}"><strong>${esc(t.name)}</strong></label><small>官方模板 · 只读</small><label class="template-main"><input type="radio" name="template-main" data-template-main="${esc(t.id)}" ${checked&&t.id===state.selection.main_id?'checked':''} ${checked?'':'disabled'} aria-label="将${esc(t.name)}设为主BD">主BD</label></div>`;
+    return `<div class="template-card ${checked?'selected':''}"><label class="template-choice"><input type="checkbox" data-template-enable="${esc(t.id)}" ${checked?'checked':''} aria-label="选择模板：${esc(t.name)}"><strong>${esc(t.name)}</strong></label><small>已有模版 · 只读</small><label class="template-main"><input type="radio" name="template-main" data-template-main="${esc(t.id)}" ${checked&&t.id===state.selection.main_id?'checked':''} ${checked?'':'disabled'} aria-label="将${esc(t.name)}设为主BD">主BD</label></div>`;
   }).join('');
   $('builds').innerHTML=state.saves.map(s=>{
     const members=s.config.builds.filter(b=>b.enabled),main=members.find(b=>b.id===s.config.main_id);
@@ -84,7 +85,7 @@ function render(){
   $('workspace-builds').hidden=!saved||!config.builds.length;$('workspace-controls').hidden=!ready;$('workspace-empty').hidden=ready||commonView;
   $('workspace-builds').innerHTML=saved?config.builds.map(b=>`<div class="workspace-bd ${b.enabled&&b.id===activeId?'active':''}"><input type="checkbox" data-enable="${esc(b.id)}" ${b.enabled?'checked':''} aria-label="在方案中启用${esc(b.name)}"><button data-workspace-build="${esc(b.id)}" ${b.enabled?'':'disabled'}><span class="dot ${b.id===config.main_id?'pink':'blue'}"></span>${esc(b.name)}</button><label><input type="radio" name="scheme-main" data-main="${esc(b.id)}" ${b.enabled&&b.id===config.main_id?'checked':''} ${b.enabled?'':'disabled'} aria-label="将方案内${esc(b.name)}设为主BD">主BD</label><button class="remove-build" data-remove-build="${esc(b.id)}" aria-label="从方案移除${esc(b.name)}">×</button></div>`).join(''):'';
   $('workspace-message').textContent=saved?'尚未启用BD':'尚未生成方案';
-  $('workspace-help').textContent=saved?'启用方案内的BD，或添加自定义BD。':'在左侧多选官方模板，指定主BD，再点击“应用所选BD”创建一份保存方案。';
+  $('workspace-help').textContent=saved?'启用方案内的BD，或添加自定义BD。':'在左侧多选已有模版，指定主BD，再点击“应用所选BD”创建一份保存方案。';
   $('scheme-toolbar').hidden=!saved||commonView;
   $('current-build').textContent=ready?`正在编辑：${build().name}`:'';
   $('rename-save').hidden=!saved||commonView;
@@ -151,7 +152,12 @@ function renderSource(){
   const source=build().requirement_sources?.[mode]||build().source;
   const legacy=mode==='leveling'&&build().legacy_leveling;
   $('source-details').hidden=!source&&!legacy;
-  $('source-info').innerHTML=(source?`<p>${esc(source.name)}${source.scope?` · ${esc(source.scope)}`:''}</p>${(source.warnings||[]).map(w=>`<p class="warning">${esc(w)}</p>`).join('')}`:'')+(legacy?'<p>旧练级配置已转换为两份列表；原始数据随整套配置保存。</p>':'');
+  const sourceProfiles=Array.isArray(source?.profiles)?source.profiles.filter(p=>p&&typeof p==='object'):[];
+  const links=sourceProfiles.map(p=>{
+    try{const url=new URL(p.url);if(url.protocol!=='https:'||url.hostname!=='www.lastepochtools.com')return '';return `<p><a href="${esc(url.href)}" target="_blank" rel="noopener">${esc(p.character)} · ${esc(p.account)}</a>，${Array.isArray(p.items)?p.items.length:0}件物品</p>`;}catch{return '';}
+  }).join('');
+  const fixed=sourceProfiles.flatMap(p=>(Array.isArray(p.fixed_affix_references)?p.fixed_affix_references:[]).filter(r=>r&&Array.isArray(r.ids)).map(r=>`<p class="reference">${esc(p.character)} · ${esc(r.slot)} · 固定属性参考：${esc(r.ids.map(id=>`${label('affixes',id)} (${id})`).join('、'))}</p>`)).join('');
+  $('source-info').innerHTML=(source?`<p>${esc(source.name)}${source.scope?` · ${esc(source.scope)}`:''}</p>${links}${(source.warnings||[]).map(w=>`<p class="warning">${esc(w)}</p>`).join('')}${fixed}`:'')+(legacy?'<p>旧练级配置已转换为两份列表；原始数据随整套配置保存。</p>':'');
 }
 function openPicker(kind,field,values,types,apply,normalOnly=false,single=false,excluded=[]){
   const eligible=normalOnly?values.filter(id=>[0,5].includes(catalog.affixes[id]?.special)):values;
@@ -342,6 +348,43 @@ $('save-requirements').onclick=async()=>{
   try{const document=await api('/api/requirements/export',{build:build(),stage:mode});await download(JSON.stringify(document,null,2),'LE-filter-requirements.json');toast(`已保存本BD的${mode==='endgame'?'终局':'练级'}需求。`);}catch(e){toast(e.message,true);}
 };
 $('import-requirements').onclick=()=>$('requirements-file').click();
+$('import-profiles').onclick=()=>$('profiles-dialog').showModal();
+function invalidateProfiles(){
+  profileImport=null;$('apply-profiles').disabled=true;$('profiles-reader').hidden=true;
+  $('profiles-result').textContent='';$('profiles-bookmark').removeAttribute('href');$('profiles-open').removeAttribute('href');
+}
+$('profiles-links').oninput=invalidateProfiles;
+$('prepare-profiles').onclick=()=>{
+  invalidateProfiles();
+  try{
+    const urls=LEProfileReader.normalizeLinks($('profiles-links').value),back=new URL(location.href);back.hash='';back.search='';
+    $('profiles-bookmark').href=LEProfileReader.makeBookmarklet(urls,back.href,$('profiles-name').value);
+    $('profiles-open').href=urls[0];$('profiles-reader').hidden=false;
+    profileImport=null;$('apply-profiles').disabled=true;$('profiles-result').textContent=`${urls.length}个不同角色，准备读取。`;
+  }catch(e){toast(e.message,true);}
+};
+async function analyzeProfiles(bundle){
+  profileImport=null;$('apply-profiles').disabled=true;$('profiles-result').textContent='正在核对角色ID与目标分类…';
+  if(!$('profiles-dialog').open)$('profiles-dialog').showModal();
+  try{
+    profileImport=await api('/api/profiles/import',{bundle});
+    $('profiles-name').value=profileImport.name;
+    $('profiles-links').value=profileImport.source.profiles.map(p=>p.url).join('\n');
+    $('profiles-result').innerHTML=`<h3>${esc(profileImport.source.name)}</h3><div class="import-summary">${endgameCategories.map(([key,title])=>`<span class="stat">${title} <strong>${profileImport.profile[key].length}</strong>${key==='uniques'?'项':'组'}</span>`).join('')}</div><p>腐化／附魔参考单列，练级目标留空。保存后可逐项编辑、预览和导出filter。</p>${profileImport.source.warnings.map(w=>`<p class="warning">${esc(w)}</p>`).join('')}<details><summary>查看${profileImport.source.profiles.length}个来源角色</summary>${profileImport.source.profiles.map(p=>`<p><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.character)} · ${esc(p.account)}</a>，${p.items.length}件物品</p>`).join('')}</details>`;
+    $('apply-profiles').disabled=false;
+  }catch(e){$('profiles-result').textContent=`导入失败：${e.message}`;toast(e.message,true);}
+}
+$('profiles-file').onchange=async e=>{
+  try{const file=e.target.files[0];if(file){if(file.size>1024*1024)throw Error('角色JSON超过1MB。');await analyzeProfiles(JSON.parse(await file.text()));}}
+  catch(error){profileImport=null;$('apply-profiles').disabled=true;$('profiles-result').textContent=error.message;toast(error.message,true);}
+  finally{e.target.value='';}
+};
+$('apply-profiles').onclick=()=>{
+  if(!profileImport)return;
+  const data={...profileImport,name:$('profiles-name').value.trim()||profileImport.name};
+  const saved=workspace.importProfiles(state,data,crypto.randomUUID(),crypto.randomUUID(),$('profiles-destination').value);
+  $('profiles-dialog').close();openSave(saved);toast('角色并集已保存为个人BD，可编辑并导出filter。');
+};
 $('requirements-file').onchange=async e=>{
   try{
     const file=e.target.files[0];if(!file)return;
@@ -378,6 +421,10 @@ async function init(){
     state=await validateState(workspace.restore(examples,saved));config=currentSave()?.config||state.draft_config;
     activeId=currentSave()?.active_build_id||config.main_id;$('catalog-version').textContent=catalog.version;render();save();
     document.querySelector('.layout').inert=false;document.querySelector('.top-actions').inert=false;
+    if(location.hash.startsWith('#profile-import=')){
+      const hash=location.hash;history.replaceState(null,'',location.pathname+location.search);
+      try{await analyzeProfiles(LEProfileReader.bundleFromHash(hash));}catch(error){toast(`角色数据无效：${error.message}`,true);}
+    }
   }catch(e){toast(`无法启动：${e.message}`,true);}
 }
 init();

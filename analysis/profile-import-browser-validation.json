@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-18",
+  "status": "passed",
+  "surface": "Codex in-app browser / packaged GitHub Pages site served on localhost",
+  "checks": {
+    "sidebar_name": "已有模版",
+    "profile_entry_visible": true,
+    "three_links_including_duplicate_yield_two": true,
+    "four_links_yield_four": true,
+    "bookmarklet_is_url_encoded": true,
+    "callback_preview": {
+      "profiles": 4,
+      "uniques": 13,
+      "equipment": 10,
+      "idols": 11,
+      "altars": 1,
+      "bases": 0
+    },
+    "personal_save_count": 93,
+    "personal_save_survives_reload": true,
+    "updated_template_count": 97,
+    "template_uniques": 14,
+    "previous_personal_save_preserved_when_applying_template": true,
+    "editing_links_invalidates_previous_result": true,
+    "invalid_host_shows_error_and_clears_bookmark": true
+  },
+  "bookmarklet_real_browser_execution_tested": false,
+  "browser_blob_download_tested": false,
+  "game_client_tested": false,
+  "screenshots": {
+    "docs/images/profile-import-template.png": "dc562330ab303706d511546e68be1b5dff5bec5decf60d9ca248b97462ff7054",
+    "docs/images/profile-import-reader.png": "b2ab4429c2837ce263142d3f44c65914f8cbf6dcac0bdcf3ac2263cdd94d466d"
+  }
+}

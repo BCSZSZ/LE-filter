@@ -1,0 +1,422 @@
+{
+  "date": "2026-10-18",
+  "status": "passed",
+  "target_counts": {
+    "uniques": 14,
+    "equipment": 10,
+    "altars": 1,
+    "idols": 15,
+    "bases": 0
+  },
+  "new_uniques": [
+    {
+      "id": 92,
+      "name": "丛林女王的储物腰带"
+    },
+    {
+      "id": 402,
+      "name": "埃莱克的创新"
+    },
+    {
+      "id": 344,
+      "name": "先驱者之针"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.lastepochtools.com/profile/vsnail/character/MAONG",
+      "items": 19
+    },
+    {
+      "url": "https://www.lastepochtools.com/profile/Amhali/character/ShurikenAmhali",
+      "items": 19
+    },
+    {
+      "url": "https://www.lastepochtools.com/profile/chachapieng/character/S5Luciann",
+      "items": 19
+    },
+    {
+      "url": "https://www.lastepochtools.com/profile/47x47/character/MaadCity",
+      "items": 19
+    }
+  ],
+  "equipment_ordinary_ids": 56,
+  "cases": [
+    {
+      "selected": [
+        "skeleton-necromancer"
+      ],
+      "main": "skeleton-necromancer",
+      "count": 71,
+      "sha256": "69b02f8e14e9de9d8a61d709ac540e93f1a49fbd4f76c856a714753b280d7907"
+    },
+    {
+      "selected": [
+        "flay-mana-lich"
+      ],
+      "main": "flay-mana-lich",
+      "count": 68,
+      "sha256": "67c495d330d37fdfb32adc4574f2fe190d0b0fe10745e7672cb9e05e6927ce96"
+    },
+    {
+      "selected": [
+        "flay-lich-allie-guide"
+      ],
+      "main": "flay-lich-allie-guide",
+      "count": 86,
+      "sha256": "a83b6e4fff02137195ad378f551cdd0baaa3efcfce8a3fad5f06ec404e075ac2"
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835"
+      ],
+      "main": "bleed-skeleton-roamer-guide-835",
+      "count": 99,
+      "sha256": "2276d6ba746c06cffd8c93db19aa99ba66b81a0d908ee1a466b80aa64cfacde9"
+    },
+    {
+      "selected": [
+        "ice-heartseeker-planner-al0dkyek"
+      ],
+      "main": "ice-heartseeker-planner-al0dkyek",
+      "count": 79,
+      "sha256": "028b7338b17b197a6194da2489e391279be557b0d618ccc467735e3709aaf151"
+    },
+    {
+      "selected": [
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "count": 97,
+      "sha256": "97c58c01a5862f3c3eba3322472885a72b6c9ceae18c8cc9ecd98b15d9f3643b"
+    },
+    {
+      "selected": [
+        "heartseeker-shuriken-marksman",
+        "skeleton-necromancer"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "count": 124,
+      "sha256": "a873cd1e0a94e6305de21076b78da2adf0ad387a7c6d5d6573d5e3e0d0085890"
+    },
+    {
+      "selected": [
+        "heartseeker-shuriken-marksman",
+        "skeleton-necromancer"
+      ],
+      "main": "skeleton-necromancer",
+      "count": 124,
+      "sha256": "a0f028ea0b2255892d49e6ac44fb56d6a8f165366d0c19f53a2e4f45a27f97b4"
+    },
+    {
+      "selected": [
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "flay-mana-lich",
+      "count": 121,
+      "sha256": "7ead32c81a60831b6943b0f41d6bcd5609d774e16d07e690fab51bfd7b002ac8"
+    },
+    {
+      "selected": [
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "count": 119,
+      "sha256": "dd88a8bae7e1a327df0d0aa3b33dfbeb121b6745f7ea81e44987adb623d6b76a"
+    },
+    {
+      "selected": [
+        "flay-lich-allie-guide",
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "flay-lich-allie-guide",
+      "count": 138,
+      "sha256": "2ad58532768527a806164f4c6a1a8b7db1e47a71f62c3d621c88b9c588ad3ead"
+    },
+    {
+      "selected": [
+        "flay-lich-allie-guide",
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "count": 138,
+      "sha256": "94bdb56551706c5d5b76cf3de4a678d204ab9d2123b0d4b37fd2ed31273eb9df"
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "bleed-skeleton-roamer-guide-835",
+      "count": 151,
+      "sha256": "41c32bf1b9c01b17310df9b1cbbb5d4f5a6a5b8222369867ce3a00057b914fde"
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "count": 151,
+      "sha256": "ae64c2f2f2643eccc9e02350f8d4c4d22aef30437dfa296f561a5033d04585e7"
+    },
+    {
+      "selected": [
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "count": 126,
+      "sha256": "179a213bf19e45fef808ca828b8929dc6de60ddc6333d0ebae7d443afbb0b457"
+    },
+    {
+      "selected": [
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek"
+      ],
+      "main": "ice-heartseeker-planner-al0dkyek",
+      "count": 128,
+      "sha256": "65a338ca4c016db23bc6af6cf10406d999f614abb8bee1c0e252ee54df2f6596"
+    },
+    {
+      "selected": [
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman",
+        "skeleton-necromancer"
+      ],
+      "main": "flay-mana-lich",
+      "count": 148,
+      "sha256": "7b30f1a6d5a9fd09672e5380a5d3fdf609b2b94adc275a3b2cfd905c0d030fd2"
+    },
+    {
+      "selected": [
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman",
+        "skeleton-necromancer"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "count": 146,
+      "sha256": "74fcb8dc16cbf6f50472816754a7c20f5bdbc1de22eb238555dff16fdfa975e7"
+    },
+    {
+      "selected": [
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman",
+        "skeleton-necromancer"
+      ],
+      "main": "skeleton-necromancer",
+      "count": 148,
+      "sha256": "8d8945425e19f2e9558bdd68473466201d36b780da7e95e27d86bfb915dd6941"
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "bleed-skeleton-roamer-guide-835",
+      "count": 191,
+      "sha256": "74766d02dc32770acb768f602d7508c0afac1bf6d99c0f4c39d3423837d1b816"
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "flay-lich-allie-guide",
+      "count": 191,
+      "sha256": "ce8949aae080fb3bb33a13bed830cfb9dcefb32c1d30ae7ac19a47195e4a8700"
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "count": 191,
+      "sha256": "6f02f60fe4be475024987e7af47e1fd3c3a1e3862e41e4f42bdd9c079bf6dba0"
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek"
+      ],
+      "main": "bleed-skeleton-roamer-guide-835",
+      "error": "这些BD生成222条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+      "truncated": false
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek"
+      ],
+      "main": "flay-lich-allie-guide",
+      "error": "这些BD生成222条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+      "truncated": false
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "error": "这些BD生成220条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+      "truncated": false
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek"
+      ],
+      "main": "ice-heartseeker-planner-al0dkyek",
+      "error": "这些BD生成222条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+      "truncated": false
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek",
+        "skeleton-necromancer"
+      ],
+      "main": "bleed-skeleton-roamer-guide-835",
+      "error": "这些BD生成259条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+      "truncated": false
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek",
+        "skeleton-necromancer"
+      ],
+      "main": "flay-lich-allie-guide",
+      "error": "这些BD生成250条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+      "truncated": false
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek",
+        "skeleton-necromancer"
+      ],
+      "main": "flay-mana-lich",
+      "error": "这些BD生成265条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+      "truncated": false
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek",
+        "skeleton-necromancer"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "error": "这些BD生成261条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+      "truncated": false
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek",
+        "skeleton-necromancer"
+      ],
+      "main": "ice-heartseeker-planner-al0dkyek",
+      "error": "这些BD生成265条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+      "truncated": false
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek",
+        "skeleton-necromancer"
+      ],
+      "main": "skeleton-necromancer",
+      "error": "这些BD生成265条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+      "truncated": false
+    }
+  ],
+  "preserved_files": {
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer-v2.xml": "b98ac8760726009ece4bef27bde7f6ad9cc2d2806e8996630ecbb96d41e1e71c",
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml": "ddfb6889366162de32eaf4a9dbd050f23496a1d902189cff340b5ec444da6ec9",
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer.xml": "a6026b9a065042ead7e4e9bd1461b20f0687a148d5a087669b6763c7f461cc78",
+    "requirements/bleed-skeleton-roamer-guide-835.endgame.json": "7272c54e9a6436fd4a4617c469d9613dc6e54b1378abd4c41c3408f8376c537d",
+    "requirements/bleed-skeleton-roamer-guide-835.leveling.json": "46fb51f53b8383abfbb2a2feb88bfbe975a218039715485b2d8dfaee1d25de99",
+    "requirements/flay-lich-allie-guide.endgame.json": "2a904049a9a2aa82d0a0ab490d52c74477f934175f51d8332418462ca238fd1d",
+    "requirements/flay-lich-allie-guide.leveling.json": "71c601489ef6b3716ece19b2f45892221467150135f57a795e170537a42be3c6",
+    "requirements/heartseeker-shuriken-marksman.leveling.json": "3b751549d16541894004f7aaef75591e451417847f4ae47131e739175221ab29",
+    "requirements/ice-heartseeker-planner-al0dkyek.endgame.json": "0dbb3b0f3a6fb4bb8b1d68f95545a49cfc574a418a299b842b89d9460b15e7ed",
+    "requirements/ice-heartseeker-planner-al0dkyek.leveling.json": "63e65c4bb0b8309657177bf6c3a1ecdb576b85d3faec2c93d055b4d482b7833b",
+    "sources/Raxx's S5 Ultimate Filter v1.0.txt": "146465750ab794175676f73b7251ddba610c42c4508bb16b614b6d4982036288",
+    "sources/builds/flay-mana-lich-guide.json": "1b7f6180f1fd32818c223e5d8daa1c4e9a2a8c405094d8a9a126c5c6ccef0fd8",
+    "sources/builds/flay-mana-lich.json": "fe5932f3f5990bcffa88cef0e882789855d89cbba89c2d66ed1768f6ea531ba7",
+    "sources/builds/ice-heartseeker-player-2026-10-18.xml": "8facbd4310b104d7b3b447565faba68aa5d808cb534de3ad09375559f601eb61",
+    "sources/builds/ice-heartseeker-video-bv1oupp6wecs.json": "abd375e925c13922b38c890e39f62926fee321ddc7b8cec3435754a9b67283eb",
+    "sources/builds/letools-allie-flay-extracted.json": "0aa01939bd5cb4a672baafef58737b942543f7a57f72af4ea9bc5e8ee2c5cf88",
+    "sources/builds/letools-guide-zh-835-extracted.json": "aa964dc554078bf8fb20b856515f683db13a1d359734af5b6965195ac701ce9f",
+    "sources/builds/letools-planner-al0dkyek-extracted.json": "37be1dccd00b15011b13c2d0476b476ab30e834e1fc978f9f10f3c3fc5a3a8a4",
+    "sources/builds/letools-planner-al0dkyek-ui.json": "6b4f44d7530696c6cdfe33fc625c8ad385f73de0045d0e683714ad52c5dd4dd8",
+    "sources/builds/manifest.json": "b88e7550b8cf6ca5ddc6bfe13376be1b6a2c79c5de50712c829e6b87f778c481",
+    "sources/builds/maxroll-flay-mana-lich-strict.xml": "4e70c8b9111a28ae257aea7b561d931ac99629a6054646ce18a3ce5e3458995c",
+    "sources/builds/maxroll-reference-supplement.json": "a8f94e45f86bd8b8e77ae7d09d22869e70dc9436ca9a9113970ecb6a552a9970",
+    "sources/builds/maxroll-shuriken-marksman-very-strict.xml": "9a79e7351c3a114e746839a4fd8e605cfc8ffc53ab59cfbe1bf17e0ab4312cdf",
+    "sources/builds/maxroll-skeleton-necromancer-strict.xml": "5033341708ab5594cfcb70448bf3c6084333f03efa4388e5d4c6f4b1409dbade",
+    "sources/builds/maxroll-skeleton-necromancer-very-strict.xml": "7e9bb43a06383fad155298c642991e41cf9d125911702e46c8e508634cf55cb1",
+    "sources/builds/maxroll-strict-manifest.json": "be601551ff46051a0af6ce6ad8ad61e384d6a6ea68c5097b2d96f56c97394354",
+    "sources/builds/review-reference.json": "df489714f6491d6610de0a4257af5a8c7df2b0b3a28983ed659d9759854f96bc",
+    "sources/builds/skeleton-equipment-priorities.png": "a4a853ebd7eb9be59a1ad6d4e64a2451a2eef9e054396df317049a107ff5b0b4",
+    "sources/builds/skeleton-idol-priorities.png": "234aae7df50c586954bf7ce5e82b89d295594ca7baec05ec0022227f7e8cbaf1",
+    "sources/builds/skeleton-investigation-manifest.json": "d70f0726d870281661a96664716bcbac217967ce651b5f6836bf0b37f43a3d99",
+    "sources/builds/skeleton-necromancer.json": "456c46bb25c88dc6077ce4189dcd89e268eb12aa8893f44cbe19e35202cc988d",
+    "sources/builds/strict-variable-reference.json": "0e42a2ff8ca467519900bb85edb4ac3fe851cf75e9f86774dcee18453e07bd9a",
+    "sources/builds/transfer-reference.json": "f571190f25cd97b2bbc292d9ec5463cbb46ef20a6937e16a6a5023f056b0f9e2",
+    "sources/common-unique-drop-sources-2026-10-18.json": "cad91cb9add4b0a81de598d90986ed49ecb5ea376444466e9935535cc73733a4",
+    "sources/common-unique-protection.json": "14cb512e92931a0d736e4ab951ee32c0e71132b925ab97aa6bad32bd591ff4f2",
+    "sources/filter-style-reference.json": "37a26db4058ded7f88963d1559a9e369a7c1d74f7894778b63165e05f54b7d39",
+    "sources/game-reference.json": "2f4e8198a2b936b3b639cad53d3f196bab4b3a6fb37bfdaaf002d4995655317b",
+    "sources/item-sets.json": "beeee982d41f3fa91f7f320a5587cb951f25f20b6658c3cd3ab80730f64fa040",
+    "sources/manifest.json": "3904c8a1cf61db4e6671056f0f95bf9a690d2b581763d548f3f0979c79aa1e23",
+    "sources/seasonal-unique-protection.json": "dd03763aca0d16990d5b0e77214da3486a5761abc92193d22c4f2761babc02f5",
+    "sources/t7-equipment-pools.json": "651c401f24de466cb83cc5e79ba4e382f8b57fa1f4b4a84858b431d0300d9645",
+    "sources/t7-natural-type-selection.json": "300c0927e1cc6e9b7b595817d43d4fa88cfb099bda159170c9557d31ca213861",
+    "sources/tool-catalog.json": "cedeabebdd1efb6bb8257b2c70b095cce3dd6169505864f50aea4b3cfbfe60e8",
+    "sources/tunklab-unique-reroll-2026-10-18.json": "dd3a4e2893e72b5579c79c38e36a959da1310a4d3a57c261d34e976283dc291c",
+    "sources/ultra-rare-uniques.json": "dcc58fe5f567c3c1e9a6c12487a27d15033b5dfdf29495c5d3844ed585bdb387",
+    "sources/video-era/Raxx-S5-2026-10-01.txt": "f0e329df63af9737185bf6d5fdd71cb7663c932ddf954773c56c90a6d8c440ed",
+    "sources/zero-reroll-drop-sources-2026-10-18.json": "daae367b4b5b35b6c58eb997acf08d7c22bb219008d1bb970a7da65becf4b375",
+    "templates/LE-base-v1.xml": "725e8ce0dc642f0e0bd60ae50f3b9c168b775ecee96fcf1064f1a39c3caae4d4",
+    "templates/base-manifest.json": "ad19178a51cff97cb61017448c7ca36fca963ec5672914ff90a2c54a564cbee1",
+    "tool/engine.py": "88e06b9594e9d7343c9d50a561d0829a030450fe5a14e66ea01d68e8966d8233",
+    "tool/requirements.py": "49d1e6b4988781fe3c5300b87f1a106ca0ff36cede88989ff3fdb45e3575c01a"
+  },
+  "network_reader_validation": "same-origin fetch sequence tested with fixtures; source fields verified against fetched LETools profile/planner JavaScript and visible UI",
+  "browser_bookmark_execution_tested": false,
+  "game_client_tested": false
+}

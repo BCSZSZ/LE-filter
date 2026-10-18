@@ -1,5 +1,7 @@
 # LE-filter 工作约束
 
+- 2026-10-18角色导入：支持LETools具体profile当前配装，1–12链接同BD取并集；通过来源站同源读取书签回传浏览器，个人导入只写“我的保存”，默认新方案，不更新已有模版。追心手里剑因本次玩家明确要求，以原XML＋指定四角色更新终局；14暗金／10装备组／15神像组／1祭坛，练级仍空。普通／腐化／附魔／固定属性按冻结ID分类，不按页签猜；不同神像底材范围保留，未知ID及任一来源失败不生成部分并集。界面“官方模板”改称“已有模版”。改导入时先读docs/PROFILE_IMPORT.md，重建及验证见其中命令。
+
 - 2026-10-17多T7共通判定：至少三条恰好T7；双T7中至少一条启用BD在对应部位／底材范围的目标T7；双T7且恰好三条未封印词缀（空一普通栏），以上为彗星。其余任意双T7为灵感。删除旧BD双目标T7独立层。同类型、同底材范围的单目标彗星池可取启用BD并集，C1／C3／练级仍逐BD独立。空栏用AffixCountCondition的1前2后、2前1后两条规则，sealedType=Any，不限制封印状态。原生证据和边界见docs/COMET_DOUBLE_T7.md，验证见analysis/comet-double-t7-validation.json。
 - 命中顺序为彗星→灵感→主BD→副BD→其余档位，每个BD内部高档在前。彗星统一红色名称7／光柱10，灵感统一橙色5／7；其余主粉8／11、副蓝12／15，共享按主，通用按ALERTS档色。多T7覆盖23类普通装备，T8不计T7。副两目标神像先于主一目标。BD1LP合用一个目标ID池，2LP走通用灵感，灵感共用档色。静音BD保留身份色，非BD静音不改色。只输出启用项，条件及显示一致的类型可合并；C1覆盖的05、前置BD覆盖的低档ID、T0低档ID及完全被前置目标条件覆盖的规则省去。配置与冻结输入保留。Strict96、Allie86、83599、Allie＋835139均启用；四BD按主BD为167–182，超过200报错且不截断。10-16与10-14历史验证分别见analysis/inspiration-priority-validation.json和analysis/color-priority-validation.json。
 - 2026-10-12玩家确认极稀有规则仅6件T0：61／208／277／473／476／478。冻结sources/ultra-rare-uniques.json，运行ZIP必须包含。常驻最高彗星提示，仅一份暗金ID条件、无Rolls／LP／WW／等级门槛；0LP起声音12／图标5／最大光柱、强调开启，名称及光柱依上条配色优先级，不反写BD目标及保存。变更边界见docs/TOOL_GUIDE.md；旧金色版本验证归档在analysis/ultra-rare-validation.json。
@@ -10,7 +12,7 @@
 - 2026-10-11阶段约定沿用：非目标T7＋低阶BD目标与额外单T7储备均0–84级，85级退出，储备可提前关闭。Allie独立终局需求补厚实编织者IDOL_1x2底材1／普通词缀876，来源标记玩家补充，共5神像组；已有浏览器目标通过同id单阶段JSON更新。冻结攻略、旧Strict与历史XML保持。该日双T7金色约定已由顶部最新规则替代。
 - 终局05底材分组以preferred_bases存最多一个明确首选，bases存全部替代；原文无首选或旧输入无排序信息时不猜。每BD／类型首选一条、替代合并一条，均需对应部位BD目标恰好T7；练级不分首选／替代。Allie为5首选／23替代，现含祭坛与共通新规则共115／109、与835组合189／183；下方184等为历史数量。
 - 模板草稿与当前保存方案独立：改选模板及主BD仍可编辑／导出当前方案；只有应用才创建新副本。方案内可启用多个BD、切换编辑并调整唯一主BD，取消主BD时改选仍启用的一项。无启用BD的方案不能预览／导出。生成使用当前方案的全部启用BD，逐BD计分，不跨BD凑条件。
-- 用户已授权仓库公开与GitHub Pages发布（替代原private约定）。静态构建`scripts/build_pages.py`使用固定Pyodide 314.0.7、原Python引擎与适配器；不得重写过滤策略或增加网址提取。在线四示例保持两个攻略默认未勾选及两份Flay独立。部署流程`.github/workflows/pages.yml`只发布`.site/`；验证机器结果见`analysis/pages-validation.json`。浏览器生成内容的WASM对照不冒充Codex内置浏览器下载或游戏客户端实测。
+- 用户已授权仓库公开与GitHub Pages发布（替代原private约定）。静态构建`scripts/build_pages.py`使用固定Pyodide 314.0.7、原Python引擎与适配器；过滤策略沿用引擎，网址导入仅支持顶部新约定的角色profile。新来源模板默认未勾选，两份Flay独立。部署流程`.github/workflows/pages.yml`只发布`.site/`；验证机器结果见`analysis/pages-validation.json`。浏览器生成内容的WASM对照不冒充Codex内置浏览器下载或游戏客户端实测。
 - 共通BD需求格式见`docs/REQUIREMENTS_FORMAT.md`，适配器`tool/requirements.py`；一个BD／一个阶段保存目标和可选来源，终局五类、练级affixes与bases两类，不存基底提示、主副、R分段。同id导入只替换该阶段，保留另一阶段与主副。网页入口区分“BD需求JSON”和整套“配置”。
 - 用户明确要求两份Flay保持不同方案：旧Maxroll Strict来源`flay-mana-lich`与Allie攻略来源`flay-lich-allie-guide`分别保存、选择、编辑和导出需求，不能合并目标或互相补齐／覆盖。新攻略不得自动启用；此前181条组合验证指Allie攻略Flay＋中文骷髅835，不是两份Flay。
 - 新攻略样本`requirements/bleed-skeleton-roamer-guide-835.endgame.json`使用公共推荐表，含替代品，未绑定单一变体；重建脚本`scripts/build_guide_835_requirements.py`只读冻结已解码来源与词库。原链接压缩key、数字ID、练级目标和七个变体索引在`sources/builds/letools-guide-zh-835-extracted.json`。正文新增胸甲192不反写旧Strict。1085／1086腐化仅参考，Omen266不能按普通尺寸可出范围删去。装备类型校验采用基底全部23类，不沿用旧双BD脚本11类T7_SLOTS。

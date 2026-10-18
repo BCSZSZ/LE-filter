@@ -12,13 +12,14 @@
 <div class="layout">
   <aside>
     <div class="library-columns">
-      <section aria-label="官方模板"><div class="aside-heading"><span>官方模板</span><small>只读</small></div><div id="templates"></div></section>
+      <section aria-label="已有模版"><div class="aside-heading"><span>已有模版</span><small>只读</small></div><div id="templates"></div></section>
       <section aria-label="我的保存"><div class="aside-heading"><span>我的保存</span><button id="add-save" aria-label="新增自定义方案">＋</button></div><div id="builds"></div></section>
     </div>
-    <p class="library-note">多选官方模板并指定主BD。点击应用后，整个组合加入“我的保存”，编辑自动保存。</p>
+    <p class="library-note">多选已有模版并指定主BD。点击应用后，整个组合加入“我的保存”，编辑自动保存。</p>
     <button id="apply-builds" class="wide primary">应用所选BD</button>
     <button id="import-filter" class="wide dashed">＋ 导入filter</button>
     <button id="import-requirements" class="wide dashed">＋ 导入BD需求JSON</button>
+    <button id="import-profiles" class="wide dashed">＋ 导入LETools角色（多链接并集）</button>
     <button id="save-requirements" class="wide">保存本BD需求JSON</button>
     <button id="load-examples" class="wide subtle">选择默认组合</button>
     <div class="side-note"><span class="dot" style="background:#ff002f"></span>彗星红色优先<br><span class="dot" style="background:#ff8000"></span>其次灵感橙色（其余双T7）<br><span class="dot pink"></span>其余主套路粉色<br><span class="dot blue"></span>其余副套路蓝色<br>低档共享按主套路处理<br>勾选的BD同等收集</div>
@@ -28,7 +29,7 @@
     <div class="main-heading"><div><p class="eyebrow">SAVED SCHEME</p><h1 id="build-title">目标配置</h1></div><div class="heading-actions"><button id="common-button">共通规则</button><button id="rename-save" hidden>重命名方案</button></div></div>
     <nav id="workspace-builds" class="scheme-members" aria-label="方案内BD" hidden></nav>
     <div id="scheme-toolbar" class="scheme-toolbar" hidden><span id="current-build"></span><div><button id="add-build">添加BD</button><button id="reset-build" hidden>从模板重置BD</button><button id="rename-build" hidden>重命名BD</button></div></div>
-    <section id="workspace-empty" class="panel empty"><strong id="workspace-message"></strong><p id="workspace-help">在左侧多选官方模板，指定主BD，再点击“应用所选BD”创建一份保存方案。</p></section>
+    <section id="workspace-empty" class="panel empty"><strong id="workspace-message"></strong><p id="workspace-help">在左侧多选已有模版，指定主BD，再点击“应用所选BD”创建一份保存方案。</p></section>
     <div id="workspace-controls" class="workspace-bar" hidden><div class="segmented"><button data-mode="endgame" class="active">终局目标</button><button data-mode="leveling">练级目标</button></div><div class="view-tabs"><button data-view="editor" class="active">填写目标</button><button data-view="preview">规则预览</button></div></div>
     <section id="common-rules" class="panel" hidden>
       <div class="panel-heading"><div><h2>共通显示规则</h2><p class="muted">随当前保存方案保存；创建新方案时沿用当前共通设置。</p></div></div>
@@ -64,7 +65,7 @@
 </dialog>
 <dialog id="reset-dialog">
   <div class="dialog-heading"><h2>从模板重置</h2><button data-close="reset-dialog" aria-label="关闭重置">×</button></div>
-  <p class="reset-message">将“<strong id="reset-name"></strong>”的终局、练级目标恢复为最新版官方模板。这个副本的目标修改会被替换。</p>
+  <p class="reset-message">将“<strong id="reset-name"></strong>”的终局、练级目标恢复为最新版已有模版。这个副本的目标修改会被替换。</p>
   <div class="dialog-footer"><button data-close="reset-dialog">取消</button><button id="confirm-reset" class="primary">重置这个副本</button></div>
 </dialog>
 <dialog id="group-dialog">
@@ -82,8 +83,22 @@
   <div id="import-result"></div>
   <div class="dialog-footer"><span class="muted">未识别规则可手动指定情报分类。</span><button id="apply-import" class="primary" disabled>导入为新BD</button></div>
 </dialog>
+<dialog id="profiles-dialog" class="large-dialog">
+  <div class="dialog-heading"><div><p class="eyebrow">LETOOLS PROFILES</p><h2>角色配装取并集</h2></div><button data-close="profiles-dialog" aria-label="关闭角色导入">×</button></div>
+  <p>粘贴同一个BD的1–12个profile链接，每行一个。暗金、按部位的装备词缀、神像、祭坛和明确普通底材合并为一个个人BD。</p>
+  <label class="field-label">个人BD名称<input id="profiles-name" type="text" placeholder="例如：我的追心手里剑"></label>
+  <textarea id="profiles-links" placeholder="https://www.lastepochtools.com/profile/账号/character/角色" aria-label="LETools角色链接（每行一个）"></textarea>
+  <button id="prepare-profiles">生成读取书签</button>
+  <div id="profiles-reader" class="notice" hidden>
+    <ol><li>把 <a id="profiles-bookmark">读取LETools角色</a> 拖到浏览器收藏栏。</li><li><a id="profiles-open" target="_blank" rel="noopener">打开第一个角色页面</a>，加载完成后点击收藏栏里的读取书签，一次读取全部链接。</li><li>完成后点击“返回工作台，预览并集”，核对后创建个人方案。</li></ol>
+    <p class="muted">来源站禁止跨站读取，读取在你打开的LETools页面进行。新增个人需求，不会修改已有模版。遇到访问验证时先在该站完成；任何链接失败都不会导入半份并集。</p>
+  </div>
+  <label class="file-drop">也可选择读取书签导出的角色JSON<input id="profiles-file" type="file" accept=".json"></label>
+  <div id="profiles-result" role="status"></div>
+  <div class="dialog-footer"><label>导入到 <select id="profiles-destination"><option value="new-save">新建个人方案</option><option value="current-save">当前方案，添加独立BD</option></select></label><button id="apply-profiles" class="primary" disabled>保存个人BD</button></div>
+</dialog>
 <input id="config-file" type="file" accept=".json" hidden>
 <input id="requirements-file" type="file" accept=".json" hidden>
 <div id="toast" role="status" hidden></div>
-<script src="workbench.js"></script><script src="app.js"></script>
+<script src="workbench.js"></script><script src="profile-reader.js"></script><script src="app.js"></script>
 </body></html>

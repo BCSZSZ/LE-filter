@@ -1,0 +1,2186 @@
+{
+  "extracted_on": "2026-10-18",
+  "game_version": "1.5.2",
+  "method": "Browser UI: Profile → View in Build Planner → each equipped item and every used affix tab; item/affix link keys and the rendered item card. Not a native API response.",
+  "notes": [
+    "76物品，按可见Equipment／Idols页签逐件读取，保存全部已用词缀tab链接。",
+    "词缀类别以冻结tool-catalog为准，corruptedAffixes页签可以出现普通ID；不能按页签猜类别。",
+    "未读取技能／天赋／祝福作为过滤目标；未做游戏客户端实测。"
+  ],
+  "profiles": [
+    {
+      "url": "https://www.lastepochtools.com/profile/vsnail/character/MAONG",
+      "character": "MAONG",
+      "account": "vsnail",
+      "planner_url": "https://www.lastepochtools.com/planner/BZ38d8VY",
+      "items": [
+        {
+          "base_key": "IIwBjYJnI",
+          "card": "Implicits+40 ArmorModifiers+4 to Level of Shurikens(81% to 100%) increased Throwing Damage T7+(7 to 8) Dexterity T5(21% to 26%) increased Health T7+(30% to 45%) Fire Resistance T5(240% to 290%) increased Critical Strike ChanceYou cannot Leech Health from Critical Strikes+(2 to 5) to All AttributesRelated abilitiesShurikensTo achieve the loftiest of goals, victory must be valued over survival.Requires Level: 12Requires Faction: Circle of Fortune (Rank 5)",
+          "item_key": "UAzBMoVgNiA",
+          "name": "Peak of the Mountain",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "suffixes1",
+            "suffixes2"
+          ],
+          "slot": "head",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AGwRhQ",
+              "name": "Level of Shurikens",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AKwBgzEA",
+              "name": "Dexterity",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/suffixes/AAwVgTEA",
+              "name": "Health",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/AAwRgzEA",
+              "name": "Fire Resistance",
+              "tab": "suffixes2"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBhpAWMSA",
+          "card": "Implicits+85 ArmorModifiers(32% to 39%) increased Health T7(32% to 16%) less Damage Taken from the First Hit Received from each enemyMultiplicative with other modifiers100% increased effect of stats on your Non-Unique Idols that are a different shape to all other equipped Non-Unique IdolsFor example if you have a 4x1 idol, a 3x1 idol, and two 1x3 idols equipped, the stats on the 4x1 idol and the 3x1 idol would have 100% increased effect, but the stats on the 1x3 idols would not be changed. Ignores idols of the Unique rarity.+(2% to 4%) Critical Strike Chance+(126 to 256) Dodge Rating+(256 to 512) Dodge Rating if you have been hit recentlyRecently refers to the past 4 seconds(24% to 52%) increased Dodge Rating+(32 to 64) Ward gained when you Dodge+1 Stun Immunity(14% to 13%) Increased Evade cooldown Duration T4Related abilitiesEvade (Primalist)Evade (Mage)Evade (Sentinel)Evade (Acolyte)Evade (Rogue)Osprix elders used to tell of the Quetzal Dragons, resplendant with wings of mismatched feathers, who were never seen to roost in the same place twice. The elders speculated that having visited every peak and forest in Eterra, they traveled far over the sea in search of new lands.Requires Level: 64Requires Faction: Circle of Fortune (Rank 5)",
+          "item_key": "UAzAsoZgNiA",
+          "name": "Wings of Discord",
+          "tabs": [
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "chest",
+          "affixes": [
+            {
+              "link": "/db/suffixes/AAwVgTEA",
+              "name": "Health",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBmCYg",
+              "name": "Cannot be Stunned and Increased Evade Cooldown Duration",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBhCYwVjEg",
+          "card": "Implicits+5 Potion SlotsModifiers+(31 to 37) Throwing Damage T7(66% to 80%) increased Dodge Rating T7+(46% to 60%) Critical Strike Avoidance+(95 to 125) Dodge Rating T6+(100 to 175) Dodge Rating(5% to 10%) increased Movement Speed+(30 to 50) Ward gained when you Dodge+6% Elemental Resistance+17% Necrotic Resistance T4Many things are fickle, few more so than life itself.Requires Level: 45Requires Faction: Circle of Fortune (Rank 5)",
+          "item_key": "UAzCswRgdiA",
+          "name": "Ward Trail",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "suffixes2",
+            "corruptedAffixes"
+          ],
+          "slot": "waist",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAwDhQ",
+              "name": "Throwing Damage",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/AAwVgnEA",
+              "name": "Dodge Rating",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/AAwTg7EA",
+              "name": "Critical Strike Avoidance and Added Dodge Rating",
+              "tab": "suffixes2"
+            },
+            {
+              "link": "/db/prefixes/AIwBgTALEA",
+              "name": "Elemental Resistance and Necrotic Resistance",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBhBYwVjEg",
+          "card": "Implicits+75 Armor+(5% to 15%) EnduranceModifiers+(31 to 37) Throwing Damage T7(61% to 80%) Increased Stun Chance T5+(106 to 135) Health(8% to 10%) increased Health T7+(60% to 130%) Chance to apply Poison on Throwing Hit+(60% to 130%) Throwing Critical Strike Multiplier+2 Projectiles with ShurikensOnly affects the Rogue skill ShurikensRelated abilitiesShurikensRelated ailmentsPoisonScalebane recruits are taught to never travel south of Mes'Ork in groups of less than six. Information on Li'raka's whereabouts are valuable, so it is pertinent that one should escape alive.Requires Level: 45Requires Faction: Circle of Fortune (Rank 5)",
+          "item_key": "UAzCsEYGYBYg",
+          "name": "Li'raka's Claws",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "suffixes2"
+          ],
+          "slot": "hands",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAwDhQ",
+              "name": "Throwing Damage",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/AAwVgHEA",
+              "name": "Increased Stun Chance",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/AAwZgbEA",
+              "name": "Hybrid Health",
+              "tab": "suffixes2"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBhGYVMSA",
+          "card": "Implicits+72 Armor(15% to 18%) increased Movement Speed(24% to 50%) increased Effect of Haste on YouModifiers(26% to 30%) increased Movement Speed T7+(14 to 16) Dexterity T7(13% to 20%) increased Movement Speed+(1 to 2) to Level of Throwing Skills+(3 to 12) DexterityAerial Assault's Burst of Feathers includes 1 Umbral Blade per 20 DexterityThese Umbral Blades behave the same way as those thrown by the Twighlight Strike node on the Aerial Assault tree and cannot target the same enemies as those Umbral Blades or each otherYou gain Haste and (12 to 30)% increased Throwing Attack Speed for 2 seconds after using Aerial Assault(13% to 20%) chance to recover 8% of Aerial Assault's remaining cooldown on Throwing Hit (up to 3 times)Remaining number of cooldown recoveries resets when you use Aerial Assault+100% Chance to cleanse all ailments when you Evade2% increased Ailment Damage Taken T5Related abilitiesAerial AssaultEvade (Primalist)Evade (Mage)Evade (Sentinel)Evade (Acolyte)Evade (Rogue)Related ailmentsHasteRequires Level: 76",
+          "item_key": "UAwRmGZwdiA",
+          "name": "Razorfall",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "corruptedAffixes"
+          ],
+          "slot": "feet",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAwJgHEA",
+              "name": "Movement Speed",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AKwBgzEA",
+              "name": "Dexterity",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/prefixes/AJzCMQ",
+              "name": "Chance to Cleanse Ailments on Evade and Increased Ailment Damage Taken",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTAzCyiJA",
+          "card": "Implicits+(60 to 72) Lightning Bow DamageModifiers(42% to 52%) increased Bow Attack Speed T7+(37% to 44%) Critical Strike Multiplier T5When you directly use a bow ability, you have a (8 to 12)% chance to repeat it (1 second cooldown)When you directly use a bow ability and hit an enemy, gain 5% increased attack speed for 3 seconds, stacking up to 10 times+5% Critical Strike Chance10% Chance to cast Shurikens on Bow Crit T4Related abilitiesShurikensLightning does strike twiceRequires Level: 50Requires Class: RogueRequires Faction: Circle of Fortune (Rank 5)",
+          "item_key": "UAwRhCYHYSA",
+          "name": "Gathering Fury",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "corruptedAffixes"
+          ],
+          "slot": "weapon1",
+          "affixes": [
+            {
+              "link": "/db/prefixes/ACwZgTEA",
+              "name": "Bow Attack Speed",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AAzBsQ",
+              "name": "Critical Strike Multiplier",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/prefixes/AJwNhQ",
+              "name": "Added Critical Strike Chance and Chance to cast Shurikens on Bow Crit",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBmHYRBmKSA",
+          "card": "Implicits+(40% to 75%) Chance to apply Bleed on Bow HitModifiers(24% to 30%) increased Bow Attack Speed T7+(7 to 8) Dexterity T5+(30% to 45%) Lightning Resistance T5(100% to 125%) of Chance to Inflict Bleed on Hit gained as Bleed Chance per second with Hail of ArrowsIf bleed chance for Hail of Arrows is converted to ignite or poison chance then this added bleed chance is also converted, but still depends on your chance to inflict bleed on hit, not your chance to inflict ignite or poison on hit.25% increased Bow Attack Speed2% of Damage Over Time Leeched as Health+(25 to 45) Health+(25 to 45) Mana(-15 to -10) Hail of Arrows Mana CostIf Hail of Arrows is channeled this does not affect the channel cost+4% Critical Strike Chance7% Chance to cast Shurikens on Bow Crit T7Related abilitiesHail of ArrowsShurikensRelated ailmentsBleed\"Our enemies have been hoarding their blood for far too long. Loose the arrows and let it return to Eterra.\"Requires Level: 44Requires Faction: Circle of Fortune (Rank 5)",
+          "item_key": "UAzDMEYA4E4g",
+          "name": "Sanguine Hoard",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "weapon2",
+          "affixes": [
+            {
+              "link": "/db/prefixes/ACwZgTEA",
+              "name": "Bow Attack Speed",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AKwBgzEA",
+              "name": "Dexterity",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/suffixes/AAwJgLEA",
+              "name": "Lightning Resistance",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AJwNhQ",
+              "name": "Added Critical Strike Chance and Chance to cast Shurikens on Bow Crit",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTGIGySJA",
+          "card": "Implicits(5% to 10%) less Damage TakenModifiers+(31 to 37) Throwing Damage T7You are immune to SlowYou have HasteEffects which trigger when gaining or refreshing Haste will occur every second+(1% to 5%) Critical Strike Chance+(1 to 10) to All Attributes(10% to 100%) increased Effect of Frenzy on You+1 to Level of All SkillsRelated ailmentsSlowHasteFrenzyThe unrestrained power of countless shattered timelines, condensed into a vortex of possibilityRequires Level: 64Requires Faction: Circle of Fortune (Rank 1)",
+          "item_key": "UAwNgTALAjAzEA",
+          "name": "Shattered Worlds",
+          "tabs": [
+            "prefixes1"
+          ],
+          "slot": "relic",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAwDhQ",
+              "name": "Throwing Damage",
+              "tab": "prefixes1"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTCkKySQ",
+          "card": "Implicits+(5 to 25) HealthModifiers+(36 to 43) Throwing Damage T7+(11% to 12%) Physical Penetration T6+(129 to 176) Dodge Rating T6100% of Potion Health Converted to WardYou have no health leechYou can still regain health through methods other than health leechYou have no health regenYou can still regain health through methods other than health regen(25% to 30%) more Physical Damage while at Full Health(15% to 25%) increased Damage Over Time T2Strong in times of peace, brilliant in the day, generous in times of plenty, and absent when they fade.Requires Level: 61Requires Faction: Circle of Fortune (Rank 5)",
+          "item_key": "UAzCsEYGZKA",
+          "name": "Xithara's Conundrum",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "amulet",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAwDhQ",
+              "name": "Throwing Damage",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AAwZhQ",
+              "name": "Physical Penetration",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/suffixes/AAzAcQ",
+              "name": "Dodge Rating",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AAwdgTEA",
+              "name": "Damage Over Time",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTKotQ",
+          "card": "Implicits(6% to 10%) Increased Cooldown Recovery Speed+(1 to 2) to All AttributesModifiers+(22 to 26) Throwing Damage-5 Mana Cost for Throwing Skills T7You have Bursting RageEnemies you kill explode, dealing physical damage to enemies within 4 meters. This can chain. Each Blood Rage buff also grants 5% increased attack and cast speed and 3% increased movement speed. You cannot have multiple instances of the same Blood Rage. T1(15% to 30%) increased Effect of Frenzy on You+(10% to 20%) Endurance+(100 to 200) Endurance Threshold+(4 to 8) Strength+(4 to 8) Vitality(40% to 60%) increased Cold Damage T5Related abilitiesBloodrage Blood on DeathBursting BloodRelated ailmentsFrenzyRequires Level: 52",
+          "item_key": "UAwRmBYHZKA",
+          "name": "Unsated Rage",
+          "tabs": [
+            "sealedAffixes",
+            "prefixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "ring1",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AIzBMDYg",
+              "name": "You have Bursting Rage",
+              "tab": "sealedAffixes"
+            },
+            {
+              "link": "/db/prefixes/AKwBg7EA",
+              "name": "Throwing Damage and Reduced Mana Cost",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AAwRgbEA",
+              "name": "Cold Damage",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTKotQ",
+          "card": "Implicits(6% to 10%) Increased Cooldown Recovery Speed+(1 to 2) to All AttributesModifiers+(22 to 26) Throwing Damage-5 Mana Cost for Throwing Skills T7You have Murderous RageYour hits inflict Mark for Death, a curse which lowers all resistances by 25%. Each Blood Rage buff also grants 5% increased attack and cast speed and 3% increased movement speed. You cannot have multiple instances of the same Blood Rage. T2(15% to 30%) increased Effect of Frenzy on You+(10% to 20%) Endurance+(100 to 200) Endurance Threshold+(4 to 8) Strength+(4 to 8) Vitality(18% to 20%) increased Damage Over Time0.9% of Damage Over Time Leeched as Health T2Related abilitiesBloodrage Marked For DeathRelated ailmentsFrenzyRequires Level: 52Requires Faction: Circle of Fortune (Rank 5)",
+          "item_key": "UAwRmBYHZKA",
+          "name": "Unsated Rage",
+          "tabs": [
+            "sealedAffixes",
+            "prefixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "ring2",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AIzBMyA",
+              "name": "You have Murderous Rage",
+              "tab": "sealedAffixes"
+            },
+            {
+              "link": "/db/prefixes/AKwBg7EA",
+              "name": "Throwing Damage and Reduced Mana Cost",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBg7ALEA",
+              "name": "Increased Damage over Time and Damage over Time Leeched as Health",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Implicits10% Increased Cooldown Recovery Speed if there are no larger idols above smaller ones in the gridAn idol is considered larger than another if it takes up more squares of the grid. An idol is considered above another idol in the grid if its top left corner is closer to the top of the inventory.2 Weaver Idols equipped at MaximumModifiers(25% to 30%) increased Effect of Prefixes for Idols in Refracted SlotsAn idol is considered to be in a Refracted Slot if any part of the idol is in the slot T5(16% to 20%) increased Effect of Suffixes for Idols in Refracted SlotsAn idol is considered to be in a Refracted Slot if any part of the idol is in the slot T31% increased Health per Equipped Huge Idol T1+3 Health per Idol in a Refracted SlotThere is no additional benefit to having an idol in multiple refracted slots T2(28% to 32%) increased Effect of Prefixes and Suffixes for Idols in Refracted SlotsAn idol is considered to be in a Refracted Slot if any part of the idol is in the slot T7Requires Level: 76Minimum Drop Level: 20",
+          "item_key": "IIwBgLKyiJA",
+          "name": "Pyramidal Altar",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "suffixes1",
+            "suffixes2",
+            "corruptedAffixes"
+          ],
+          "slot": "idol_altar",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AIwBgnAzEA",
+              "name": "Effect of Prefixes for Idols in Refracted Slots",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBgnALEA",
+              "name": "Effect of Suffixes for Idols in Refracted Slots",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/suffixes/AIwBgnGQ",
+              "name": "Increased Health per Equipped Huge Idol",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/AIzAMqA",
+              "name": "Health per Idol in a Refracted Slot",
+              "tab": "suffixes2"
+            },
+            {
+              "link": "/db/prefixes/AIwBgHAnEA",
+              "name": "Effect of Prefixes and Suffixes for Idols in Refracted Slots",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(4 to 5) Vitality+(2 to 4) Health Regen T1+(1 to 3) Throwing Damage(10% to 20%) increased Throwing Damage T1Requires Level: 1Minimum Drop Level: 11",
+          "item_key": "IIwBgTA7CKtQ",
+          "name": "Humble Weaver Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1"
+          ],
+          "slot": "idol-2-2",
+          "affixes": [
+            {
+              "link": "/db/prefixes/ABwNgTEA",
+              "name": "Vitality and Added Health Regen",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ABwdgzEA",
+              "name": "Added Throwing Damage and Increased Throwing Damage",
+              "tab": "suffixes1"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(10% to 20%) Recurve Chance for Heartseeker(5% to 20%) Increased Damage while wielding a Bow T1(22% to 60%) increased Physical Throwing Damage T1(19% to 22%) increased Critical Strike Chance+(9% to 10%) Critical Strike Multiplier T6+(3 to 8) Bow Damage T1Related abilitiesHeartseekerRequires Level: 37Requires Class: RogueMinimum Drop Level: 30",
+          "item_key": "IIwBgzATCIJzSQ",
+          "name": "Heretical Huge Shadow Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "enchants1",
+            "corruptedAffixes"
+          ],
+          "slot": "idol-4-2",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AOwNgzEA",
+              "name": "Rogue Recurve Chance and Bow Damage",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ACwdgDEA",
+              "name": "Throwing Physical Damage",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/ABwTgTEA",
+              "name": "Increased Critical Strike Chance and Added Critical Strike Multiplier",
+              "tab": "enchants1"
+            },
+            {
+              "link": "/db/prefixes/AIwBgzA7EA",
+              "name": "Bow Damage",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(10% to 25%) Critical Strike Multiplier+(10% to 25%) Minion Critical Strike Multiplier T1(16% to 43%) increased Throwing Damage T1(7% to 9%) increased Critical Strike Chance+4% Critical Strike Multiplier T36% increased Throwing Damage6% Increased Damage while Dual Wielding T3Requires Level: 16Requires Class: RogueMinimum Drop Level: 20",
+          "item_key": "IIwBgzGLKIkA",
+          "name": "Heretical Adorned Majasan Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "enchants1",
+            "enchants2"
+          ],
+          "slot": "idol-1-3",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AOwFgzEA",
+              "name": "Shared Critical Strike Multiplier",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ACwTgDEA",
+              "name": "Throwing Damage",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/ABwTgTEA",
+              "name": "Increased Critical Strike Chance and Added Critical Strike Multiplier",
+              "tab": "enchants1"
+            },
+            {
+              "link": "/db/suffixes/AJwZgLEA",
+              "name": "Increased Throwing Damage and Increased Damage while Dual Wielding",
+              "tab": "enchants2"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(10% to 26%) Critical Strike Multiplier+(10% to 26%) Minion Critical Strike Multiplier T1(17% to 45%) increased Throwing Damage T1105% Chill Immunity T1Related ailmentsChillRequires Level: 1Requires Class: RogueMinimum Drop Level: 25",
+          "item_key": "IIwBgTAnCwCwvQ",
+          "name": "Grand Umbral Omen Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "idol-1-5",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AOwFgzEA",
+              "name": "Shared Critical Strike Multiplier",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ACwTgDEA",
+              "name": "Throwing Damage",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBgzMQ",
+              "name": "Chill Immunity",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(4 to 12) Dodge Rating T1+(3% to 8%) Necrotic Resistance T1Requires Level: 1Minimum Drop Level: 11",
+          "item_key": "IIwBgTArC00A",
+          "name": "Small Eterran Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1"
+          ],
+          "slot": "idol-3-1",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AIzAcQ",
+              "name": "Dodge Rating",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/AIzAsQ",
+              "name": "Necrotic Resistance",
+              "tab": "suffixes1"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(8 to 18) Dodge Rating(3% to 9%) increased Health T1+(5% to 13%) Elemental Resistance T1(13% to 15%) increased Critical Strike Chance+(6% to 7%) Critical Strike Multiplier T6(2% to 5%) increased Cooldown Recovery Speed for Evade T1Related abilitiesEvade (Primalist)Evade (Mage)Evade (Sentinel)Evade (Acolyte)Evade (Rogue)Requires Level: 37Requires Class: RogueMinimum Drop Level: 25",
+          "item_key": "IIwBgzCkJySQ",
+          "name": "Heretical Large Shadow Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "enchants1",
+            "corruptedAffixes"
+          ],
+          "slot": "idol-5-3",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AJwFgTEA",
+              "name": "Dodge Rating and Increased Health",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/AIzDsQ",
+              "name": "Elemental Resistance",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/ABwTgTEA",
+              "name": "Increased Critical Strike Chance and Added Critical Strike Multiplier",
+              "tab": "enchants1"
+            },
+            {
+              "link": "/db/prefixes/AIwBgrCQ",
+              "name": "Increased Cooldown Recovery Speed for Evade",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers(22% to 30%) increased Critical Strike Chance+(3% to 6%) Critical Strike Multiplier T1+(18% to 24%) Cold Resistance+(18% to 24%) Minion Cold Resistance T1+2% to All Resistances+2% to Minion All Resistances T1Requires Level: 1Minimum Drop Level: 11",
+          "item_key": "IIwBgTAHCKtQ",
+          "name": "Stout Weaver Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "idol-3-3",
+          "affixes": [
+            {
+              "link": "/db/prefixes/ABwdmQ",
+              "name": "Increased Critical Strike Chance and Critical Strike Multiplier",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ABzCsQ",
+              "name": "Cold Resistance and Minion Cold Resistance",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBg7CQ",
+              "name": "All Resistances for you and your Minions",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.lastepochtools.com/profile/Amhali/character/ShurikenAmhali",
+      "character": "ShurikenAmhali",
+      "account": "Amhali",
+      "items": [
+        {
+          "base_key": "IIwBjYJnI",
+          "card": "Implicits+40 ArmorModifiers+4 to Level of Shurikens(81% to 100%) increased Throwing Damage T7(75% to 95%) increased Physical Throwing Damage T6+(25% to 37%) Critical Strike Avoidance+(62 to 80) Dodge Rating T5(240% to 290%) increased Critical Strike ChanceYou cannot Leech Health from Critical Strikes+(2 to 5) to All AttributesRelated abilitiesShurikensTo achieve the loftiest of goals, victory must be valued over survival.Requires Level: 12Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAzBMoVgNiA",
+          "name": "Peak of the Mountain",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "suffixes1"
+          ],
+          "slot": "head",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AGwRhQ",
+              "name": "Level of Shurikens",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/ACwdgjEA",
+              "name": "Throwing Physical Damage",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/suffixes/AAwTg7EA",
+              "name": "Critical Strike Avoidance and Added Dodge Rating",
+              "tab": "suffixes1"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBhpAWMSA",
+          "card": "Implicits+85 ArmorModifiers(32% to 39%) increased Health T7(32% to 16%) less Damage Taken from the First Hit Received from each enemyMultiplicative with other modifiers100% increased effect of stats on your Non-Unique Idols that are a different shape to all other equipped Non-Unique IdolsFor example if you have a 4x1 idol, a 3x1 idol, and two 1x3 idols equipped, the stats on the 4x1 idol and the 3x1 idol would have 100% increased effect, but the stats on the 1x3 idols would not be changed. Ignores idols of the Unique rarity.+(2% to 4%) Critical Strike Chance+(126 to 256) Dodge Rating+(256 to 512) Dodge Rating if you have been hit recentlyRecently refers to the past 4 seconds(24% to 52%) increased Dodge Rating+(32 to 64) Ward gained when you Dodge+(150 to 164) Endurance Threshold16% of Endurance Threshold added as Ward Decay Threshold T4Osprix elders used to tell of the Quetzal Dragons, resplendant with wings of mismatched feathers, who were never seen to roost in the same place twice. The elders speculated that having visited every peak and forest in Eterra, they traveled far over the sea in search of new lands.Requires Level: 64Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAzAsoZgNiA",
+          "name": "Wings of Discord",
+          "tabs": [
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "chest",
+          "affixes": [
+            {
+              "link": "/db/suffixes/AAwVgTEA",
+              "name": "Health",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBhA4g",
+              "name": "Endurance Threshold and Endurance Threshold added as Ward Decay Threshold",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBhCY1Mg",
+          "card": "Implicits+4 Potion SlotsModifiers+(31 to 37) Throwing Damage T7(40% to 60%) increased Physical Damage T5+12 Potion Slots(25% to 50%) increased Physical Damage(25% to 50%) increased Minion Physical Damage+(5 to 10) Dexterity(25% to 50%) increased Dodge Rating for 4 seconds when you use a Potion10% More Dodge Rating for 4 seconds when you use a PotionCan stack multiple times. Each stack is multiplicative with each other and with other modifiers.+11 Throwing Damage+(28% to 33%) Chance to apply Shred Armor on Throwing Hit T4Related ailmentsShred ArmorThe lack of a bottom means that there is more material for pockets.Requires Level: 9Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAzCMwTgJiA",
+          "name": "Jungle Queen's Chaps of Holding",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "corruptedAffixes"
+          ],
+          "slot": "waist",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAwDhQ",
+              "name": "Throwing Damage",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AAwZmQ",
+              "name": "Physical Damage",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/prefixes/AJzCsQ",
+              "name": "Added Throwing Damage and Throwing Armor Shred Chance",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBhBYwVjEg",
+          "card": "Implicits+75 Armor+(5% to 15%) EnduranceModifiers+(31 to 37) Throwing Damage T7+(28% to 35%) Chance to apply Frailty on Hit T5+(46 to 68) Health5% increased Health T5+(60% to 130%) Chance to apply Poison on Throwing Hit+(60% to 130%) Throwing Critical Strike Multiplier+2 Projectiles with ShurikensOnly affects the Rogue skill Shurikens6% increased Cast Speed+17 Ward gained when you directly Cast a Spell T5Related abilitiesShurikensRelated ailmentsPoisonFrailtyScalebane recruits are taught to never travel south of Mes'Ork in groups of less than six. Information on Li'raka's whereabouts are valuable, so it is pertinent that one should escape alive.Requires Level: 45Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAzCsEYGYBYg",
+          "name": "Li'raka's Claws",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "suffixes2",
+            "corruptedAffixes"
+          ],
+          "slot": "hands",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAwDhQ",
+              "name": "Throwing Damage",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ACwJgnEA",
+              "name": "Chance to apply Frailty on Hit",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/AAwZgbEA",
+              "name": "Hybrid Health",
+              "tab": "suffixes2"
+            },
+            {
+              "link": "/db/prefixes/AIwBhFYg",
+              "name": "Increased Cast Speed and Ward gain on direct Spell Cast",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBhGYVMSA",
+          "card": "Implicits+72 Armor(15% to 18%) increased Movement Speed(24% to 50%) increased Effect of Haste on YouModifiers(26% to 30%) increased Movement Speed T7(13% to 20%) increased Movement Speed+(1 to 2) to Level of Throwing Skills+(3 to 12) DexterityAerial Assault's Burst of Feathers includes 1 Umbral Blade per 20 DexterityThese Umbral Blades behave the same way as those thrown by the Twighlight Strike node on the Aerial Assault tree and cannot target the same enemies as those Umbral Blades or each otherYou gain Haste and (12 to 30)% increased Throwing Attack Speed for 2 seconds after using Aerial Assault(13% to 20%) chance to recover 8% of Aerial Assault's remaining cooldown on Throwing Hit (up to 3 times)Remaining number of cooldown recoveries resets when you use Aerial Assault+4% Elemental Resistance+14% Necrotic Resistance T1Related abilitiesAerial AssaultRelated ailmentsHasteRequires Level: 76Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAwRmGZwdiA",
+          "name": "Razorfall",
+          "tabs": [
+            "prefixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "feet",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAwJgHEA",
+              "name": "Movement Speed",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBgTALEA",
+              "name": "Elemental Resistance and Necrotic Resistance",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTAzCyiJA",
+          "card": "Implicits+(60 to 72) Lightning Bow DamageModifiers(42% to 52%) increased Bow Attack Speed T7+(56% to 70%) Critical Strike Multiplier T6+(42% to 52%) Chance to apply Ignite on Hit T5When you directly use a bow ability, you have a (8 to 12)% chance to repeat it (1 second cooldown)When you directly use a bow ability and hit an enemy, gain 5% increased attack speed for 3 seconds, stacking up to 10 times+4% Critical Strike Chance10% Chance to cast Shurikens on Bow Crit T3Related abilitiesShurikensRelated ailmentsIgniteLightning does strike twiceRequires Level: 50Requires Class: RogueRequires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAwRhCYHYSA",
+          "name": "Gathering Fury",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "weapon1",
+          "affixes": [
+            {
+              "link": "/db/prefixes/ACwZgTEA",
+              "name": "Bow Attack Speed",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AAzBsQ",
+              "name": "Critical Strike Multiplier",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/suffixes/AAwVhQ",
+              "name": "Chance to Ignite on Hit",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AJwNhQ",
+              "name": "Added Critical Strike Chance and Chance to cast Shurikens on Bow Crit",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBmHYRBmKSA",
+          "card": "Implicits+(40% to 75%) Chance to apply Bleed on Bow HitModifiers(24% to 30%) increased Bow Attack Speed T7+(24% to 30%) Chance to apply Ignite on Hit T5+(20% to 23%) Chance to apply Blind on Hit T4(100% to 125%) of Chance to Inflict Bleed on Hit gained as Bleed Chance per second with Hail of ArrowsIf bleed chance for Hail of Arrows is converted to ignite or poison chance then this added bleed chance is also converted, but still depends on your chance to inflict bleed on hit, not your chance to inflict ignite or poison on hit.25% increased Bow Attack Speed2% of Damage Over Time Leeched as Health+(25 to 45) Health+(25 to 45) Mana(-15 to -10) Hail of Arrows Mana CostIf Hail of Arrows is channeled this does not affect the channel cost+3% Critical Strike Chance6% Chance to cast Shurikens on Bow Crit T4Related abilitiesHail of ArrowsShurikensRelated ailmentsBleedIgniteBlind\"Our enemies have been hoarding their blood for far too long. Loose the arrows and let it return to Eterra.\"Requires Level: 44Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAzDMEYA4E4g",
+          "name": "Sanguine Hoard",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "suffixes2",
+            "corruptedAffixes"
+          ],
+          "slot": "weapon2",
+          "affixes": [
+            {
+              "link": "/db/prefixes/ACwZgTEA",
+              "name": "Bow Attack Speed",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/AAwVhQ",
+              "name": "Chance to Ignite on Hit",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/AAwNmQ",
+              "name": "Chance to Blind on Hit",
+              "tab": "suffixes2"
+            },
+            {
+              "link": "/db/prefixes/AJwNhQ",
+              "name": "Added Critical Strike Chance and Chance to cast Shurikens on Bow Crit",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTGIGySJA",
+          "card": "Implicits(5% to 10%) less Damage TakenModifiers+(31 to 37) Throwing Damage T7You are immune to SlowYou have HasteEffects which trigger when gaining or refreshing Haste will occur every second+(1% to 5%) Critical Strike Chance+(1 to 10) to All Attributes(10% to 100%) increased Effect of Frenzy on You+1 to Level of All SkillsRelated ailmentsSlowHasteFrenzyThe unrestrained power of countless shattered timelines, condensed into a vortex of possibilityRequires Level: 64Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAwNgTALAjAzEA",
+          "name": "Shattered Worlds",
+          "tabs": [
+            "prefixes1"
+          ],
+          "slot": "relic",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAwDhQ",
+              "name": "Throwing Damage",
+              "tab": "prefixes1"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTCkKySQ",
+          "card": "Implicits+(5 to 25) HealthModifiers+(36 to 43) Throwing Damage T7+(11% to 12%) Physical Penetration T6+(77 to 99) Dodge Rating T5100% of Potion Health Converted to WardYou have no health leechYou can still regain health through methods other than health leechYou have no health regenYou can still regain health through methods other than health regen(25% to 30%) more Physical Damage while at Full Health+4% Void Penetration T1Strong in times of peace, brilliant in the day, generous in times of plenty, and absent when they fade.Requires Level: 61Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAzCsEYGZKA",
+          "name": "Xithara's Conundrum",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "amulet",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAwDhQ",
+              "name": "Throwing Damage",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AAwZhQ",
+              "name": "Physical Penetration",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/suffixes/AAzAcQ",
+              "name": "Dodge Rating",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AAwo",
+              "name": "Void Penetration",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTKotQ",
+          "card": "Implicits(6% to 10%) Increased Cooldown Recovery Speed+(1 to 2) to All AttributesModifiers+(22 to 26) Throwing Damage-5 Mana Cost for Throwing Skills T7You have Incisive RageCritical strikes have a 20% chance to be Deadly Strikes. Grants +10% critical strike chance. Each Blood Rage buff also grants 5% increased attack and cast speed and 3% increased movement speed. You cannot have multiple instances of the same Blood Rage. T1(15% to 30%) increased Effect of Frenzy on You+(10% to 20%) Endurance+(100 to 200) Endurance Threshold+(4 to 8) Strength+(4 to 8) VitalityRelated abilitiesBloodrage Deadly StrikesRelated ailmentsFrenzyRequires Level: 52Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAwRmBYHZKA",
+          "name": "Unsated Rage",
+          "tabs": [
+            "sealedAffixes",
+            "prefixes1"
+          ],
+          "slot": "ring1",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AIwjsQ",
+              "name": "You have Incisive Rage",
+              "tab": "sealedAffixes"
+            },
+            {
+              "link": "/db/prefixes/AKwBg7EA",
+              "name": "Throwing Damage and Reduced Mana Cost",
+              "tab": "prefixes1"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTKotQ",
+          "card": "Implicits(6% to 10%) Increased Cooldown Recovery Speed+(1 to 2) to All AttributesModifiers+(22 to 26) Throwing Damage-5 Mana Cost for Throwing Skills T7You have Murderous RageYour hits inflict Mark for Death, a curse which lowers all resistances by 25%. Each Blood Rage buff also grants 5% increased attack and cast speed and 3% increased movement speed. You cannot have multiple instances of the same Blood Rage. T3(15% to 30%) increased Effect of Frenzy on You+(10% to 20%) Endurance+(100 to 200) Endurance Threshold+(4 to 8) Strength+(4 to 8) Vitality+(20% to 21%) Physical Resistance+(20% to 21%) Void Resistance T7Related abilitiesBloodrage Marked For DeathRelated ailmentsFrenzyRequires Level: 52Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAwRmBYHZKA",
+          "name": "Unsated Rage",
+          "tabs": [
+            "sealedAffixes",
+            "prefixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "ring2",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AIzBMyA",
+              "name": "You have Murderous Rage",
+              "tab": "sealedAffixes"
+            },
+            {
+              "link": "/db/prefixes/AKwBg7EA",
+              "name": "Throwing Damage and Reduced Mana Cost",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBgTAzEA",
+              "name": "Physical Resistance and Void Resistance",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Implicits10% Increased Cooldown Recovery Speed if there are no larger idols above smaller ones in the gridAn idol is considered larger than another if it takes up more squares of the grid. An idol is considered above another idol in the grid if its top left corner is closer to the top of the inventory.2 Weaver Idols equipped at MaximumModifiers(13% to 15%) increased Effect of Prefixes for Idols in Refracted SlotsAn idol is considered to be in a Refracted Slot if any part of the idol is in the slot T2(24% to 27%) increased Effect of Prefixes and Suffixes for Idols in Refracted SlotsAn idol is considered to be in a Refracted Slot if any part of the idol is in the slot T63% Reduced Bonus Damage Taken from Critical Strikes per Equipped Heretical IdolReduces the bonus damage taken from crits. Cannot reduce damage below that of a regular hit. This stat is multiplicative with other damage modifiers, but multiple sources of this stat are additive. A Heretical Idol is an idol that has been enchanted by the Weaver's Touch. T2+4 Health per Equipped Heretical IdolA Heretical Idol is an idol that has been enchanted by the Weaver's Touch T3Requires Level: 76Requires Faction: Merchant's Guild (Rank 1)Minimum Drop Level: 20",
+          "item_key": "IIwBgLKyiJA",
+          "name": "Pyramidal Altar",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "suffixes1",
+            "suffixes2"
+          ],
+          "slot": "idol_altar",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AIwBgnAzEA",
+              "name": "Effect of Prefixes for Idols in Refracted Slots",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBgHAnEA",
+              "name": "Effect of Prefixes and Suffixes for Idols in Refracted Slots",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/suffixes/AIwBgnA7EA",
+              "name": "Reduced Bonus Damage Taken from Critical Strikes per Equipped Heretical Idol",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/AIwBgHGQ",
+              "name": "Health per Equipped Heretical Idol",
+              "tab": "suffixes2"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(10% to 25%) Critical Strike Multiplier+(10% to 25%) Minion Critical Strike Multiplier T1(16% to 43%) increased Throwing Damage T1(13% to 14%) increased Critical Strike Chance+7% Critical Strike Multiplier T5100% Slow Immunity T1Related ailmentsSlowRequires Level: 34Requires Class: RogueMinimum Drop Level: 20",
+          "item_key": "IIwBgzGLKIkA",
+          "name": "Heretical Adorned Majasan Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "enchants1",
+            "corruptedAffixes"
+          ],
+          "slot": "idol-1-3",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AOwFgzEA",
+              "name": "Shared Critical Strike Multiplier",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ACwTgDEA",
+              "name": "Throwing Damage",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/ABwTgTEA",
+              "name": "Increased Critical Strike Chance and Added Critical Strike Multiplier",
+              "tab": "enchants1"
+            },
+            {
+              "link": "/db/prefixes/AIwBgLAzEA",
+              "name": "Slow Immunity",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(10% to 20%) Recurve Chance for Heartseeker(5% to 20%) Increased Damage while wielding a Bow T1(22% to 60%) increased Physical Throwing Damage T1(6% to 8%) Increased Damage while wielding a Bow+1% Chance to repeat Bow Ability1s cooldown T3(7% to 9%) increased Critical Strike Chance+4% Critical Strike Multiplier T3Related abilitiesHeartseekerRequires Level: 16Requires Class: RogueMinimum Drop Level: 30",
+          "item_key": "IIwBgzATCIJzSQ",
+          "name": "Heretical Huge Shadow Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "enchants1",
+            "enchants2"
+          ],
+          "slot": "idol-4-2",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AOwNgzEA",
+              "name": "Rogue Recurve Chance and Bow Damage",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ACwdgDEA",
+              "name": "Throwing Physical Damage",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/AJwZgrEA",
+              "name": "Increased Damage while Wielding a Bow and Chance to Repeat Bow Attacks",
+              "tab": "enchants1"
+            },
+            {
+              "link": "/db/suffixes/ABwTgTEA",
+              "name": "Increased Critical Strike Chance and Added Critical Strike Multiplier",
+              "tab": "enchants2"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(10% to 26%) Critical Strike Multiplier+(10% to 26%) Minion Critical Strike Multiplier T1(17% to 45%) increased Throwing Damage T1(11% to 21%) increased Effect of Frenzy on You T1Related ailmentsFrenzyRequires Level: 1Requires Class: RogueMinimum Drop Level: 25",
+          "item_key": "IIwBgTAnCwCwvQ",
+          "name": "Grand Umbral Omen Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "idol-1-5",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AOwFgzEA",
+              "name": "Shared Critical Strike Multiplier",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ACwTgDEA",
+              "name": "Throwing Damage",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBgTAnEA",
+              "name": "Effect of Frenzy on You ",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(8 to 18) Dodge Rating(3% to 9%) increased Health T1+(5% to 13%) Elemental Resistance T1(13% to 15%) increased Critical Strike Chance+(6% to 7%) Critical Strike Multiplier T6Requires Level: 37Requires Class: RogueMinimum Drop Level: 25",
+          "item_key": "IIwBgzCkJySQ",
+          "name": "Heretical Large Shadow Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "enchants1"
+          ],
+          "slot": "idol-5-3",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AJwFgTEA",
+              "name": "Dodge Rating and Increased Health",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/AIzDsQ",
+              "name": "Elemental Resistance",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/ABwTgTEA",
+              "name": "Increased Critical Strike Chance and Added Critical Strike Multiplier",
+              "tab": "enchants1"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(4 to 5) Vitality+(2 to 4) Health Regen T1+(18% to 24%) Void Resistance+(18% to 24%) Minion Void Resistance T1Requires Level: 1Minimum Drop Level: 11",
+          "item_key": "IIwBgTA7CKtQ",
+          "name": "Humble Weaver Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1"
+          ],
+          "slot": "idol-2-2",
+          "affixes": [
+            {
+              "link": "/db/prefixes/ABwNgTEA",
+              "name": "Vitality and Added Health Regen",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ABwNmQ",
+              "name": "Void Resistance and Minion Void Resistance",
+              "tab": "suffixes1"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers(9 to 20) Health Gain on Kill(5% to 6%) increased Health T1+(8% to 12%) Elemental Resistance+(8% to 12%) Minion Elemental Resistance T1Requires Level: 1Minimum Drop Level: 11",
+          "item_key": "IIwBgTAHCKtQ",
+          "name": "Stout Weaver Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1"
+          ],
+          "slot": "idol-3-3",
+          "affixes": [
+            {
+              "link": "/db/prefixes/ABzAMQ",
+              "name": "Health on Kill and Increased Health",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ABzBsQ",
+              "name": "Elemental Resistance and Minion Elemental Resistance",
+              "tab": "suffixes1"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(4 to 12) Dodge Rating T1(3% to 8%) increased Physical Damage(3% to 8%) increased Minion Physical Damage T1Requires Level: 1Minimum Drop Level: 11",
+          "item_key": "IIwBgTArC00A",
+          "name": "Small Eterran Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1"
+          ],
+          "slot": "idol-3-1",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AIzAcQ",
+              "name": "Dodge Rating",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/AMwRgnEA",
+              "name": "Shared Physical Damage",
+              "tab": "suffixes1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.lastepochtools.com/profile/chachapieng/character/S5Luciann",
+      "character": "S5Luciann",
+      "account": "chachapieng",
+      "items": [
+        {
+          "base_key": "IIwBjYJnI",
+          "card": "Implicits+40 ArmorModifiers+4 to Level of Shurikens(81% to 100%) increased Throwing Damage T7+(34% to 40%) Recurve Chance for Heartseeker T7+(30% to 45%) Void Resistance T5+(66 to 85) Dodge Rating T5(240% to 290%) increased Critical Strike ChanceYou cannot Leech Health from Critical Strikes+(2 to 5) to All AttributesRelated abilitiesShurikensHeartseekerTo achieve the loftiest of goals, victory must be valued over survival.Requires Level: 12Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAzBMoVgNiA",
+          "name": "Peak of the Mountain",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "suffixes1",
+            "suffixes2"
+          ],
+          "slot": "head",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AGwRhQ",
+              "name": "Level of Shurikens",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AOwNgTEA",
+              "name": "Recurve Chance for Heartseeker",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/suffixes/AAzDsQ",
+              "name": "Void Resistance",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/AAzAcQ",
+              "name": "Dodge Rating",
+              "tab": "suffixes2"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBhpAWMSA",
+          "card": "Implicits+85 ArmorModifiers+(21 to 24) Dexterity T7(112% to 142%) increased Physical Throwing Damage T6(32% to 16%) less Damage Taken from the First Hit Received from each enemyMultiplicative with other modifiers100% increased effect of stats on your Non-Unique Idols that are a different shape to all other equipped Non-Unique IdolsFor example if you have a 4x1 idol, a 3x1 idol, and two 1x3 idols equipped, the stats on the 4x1 idol and the 3x1 idol would have 100% increased effect, but the stats on the 1x3 idols would not be changed. Ignores idols of the Unique rarity.+(2% to 4%) Critical Strike Chance+(126 to 256) Dodge Rating+(256 to 512) Dodge Rating if you have been hit recentlyRecently refers to the past 4 seconds(24% to 52%) increased Dodge Rating+(32 to 64) Ward gained when you Dodge+1 Stun Immunity(7% to 6%) Increased Evade cooldown Duration T7Related abilitiesEvade (Primalist)Evade (Mage)Evade (Sentinel)Evade (Acolyte)Evade (Rogue)Osprix elders used to tell of the Quetzal Dragons, resplendant with wings of mismatched feathers, who were never seen to roost in the same place twice. The elders speculated that having visited every peak and forest in Eterra, they traveled far over the sea in search of new lands.Requires Level: 64Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAzAsoZgNiA",
+          "name": "Wings of Discord",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "corruptedAffixes"
+          ],
+          "slot": "chest",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AKwBgzEA",
+              "name": "Dexterity",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/ACwdgjEA",
+              "name": "Throwing Physical Damage",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/prefixes/AIwBmCYg",
+              "name": "Cannot be Stunned and Increased Evade Cooldown Duration",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBhCY1Mg",
+          "card": "Implicits+4 Potion SlotsModifiers+(31 to 37) Throwing Damage T7+(66 to 85) Dodge Rating T5(66% to 80%) increased Dodge Rating T7+12 Potion Slots(25% to 50%) increased Physical Damage(25% to 50%) increased Minion Physical Damage+(5 to 10) Dexterity(25% to 50%) increased Dodge Rating for 4 seconds when you use a Potion10% More Dodge Rating for 4 seconds when you use a PotionCan stack multiple times. Each stack is multiplicative with each other and with other modifiers.The lack of a bottom means that there is more material for pockets.Requires Level: 9Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAzCMwTgJiA",
+          "name": "Jungle Queen's Chaps of Holding",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "suffixes2"
+          ],
+          "slot": "waist",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAwDhQ",
+              "name": "Throwing Damage",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/AAzAcQ",
+              "name": "Dodge Rating",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/AAwVgnEA",
+              "name": "Dodge Rating",
+              "tab": "suffixes2"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBhBYwVjEg",
+          "card": "Implicits+75 Armor+(5% to 15%) EnduranceModifiers+(31 to 37) Throwing Damage T7+(11 to 13) Dexterity T6+(151% to 200%) Chance to apply Shred Armor on Hit T7+(60% to 130%) Chance to apply Poison on Throwing Hit+(60% to 130%) Throwing Critical Strike Multiplier+2 Projectiles with ShurikensOnly affects the Rogue skill ShurikensRelated abilitiesShurikensRelated ailmentsPoisonShred ArmorScalebane recruits are taught to never travel south of Mes'Ork in groups of less than six. Information on Li'raka's whereabouts are valuable, so it is pertinent that one should escape alive.Requires Level: 45Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAzCsEYGYBYg",
+          "name": "Li'raka's Claws",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "suffixes1"
+          ],
+          "slot": "hands",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAwDhQ",
+              "name": "Throwing Damage",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AKwBgzEA",
+              "name": "Dexterity",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/suffixes/AAwDgbEA",
+              "name": "Chance to Shred Armor on Hit",
+              "tab": "suffixes1"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBhGYVMSA",
+          "card": "Implicits+72 Armor(15% to 18%) increased Movement Speed(24% to 50%) increased Effect of Haste on YouModifiers(26% to 30%) increased Movement Speed T7(13% to 20%) increased Movement Speed+(1 to 2) to Level of Throwing Skills+(3 to 12) DexterityAerial Assault's Burst of Feathers includes 1 Umbral Blade per 20 DexterityThese Umbral Blades behave the same way as those thrown by the Twighlight Strike node on the Aerial Assault tree and cannot target the same enemies as those Umbral Blades or each otherYou gain Haste and (12 to 30)% increased Throwing Attack Speed for 2 seconds after using Aerial Assault(13% to 20%) chance to recover 8% of Aerial Assault's remaining cooldown on Throwing Hit (up to 3 times)Remaining number of cooldown recoveries resets when you use Aerial AssaultRelated abilitiesAerial AssaultRelated ailmentsHasteRequires Level: 76Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAwRmGZwdiA",
+          "name": "Razorfall",
+          "tabs": [
+            "prefixes1"
+          ],
+          "slot": "feet",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAwJgHEA",
+              "name": "Movement Speed",
+              "tab": "prefixes1"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTAzCyiJA",
+          "card": "Implicits+(60 to 72) Lightning Bow DamageModifiers(42% to 52%) increased Bow Attack Speed T7+(3 to 4) Minion Melee Damage+(3 to 4) Minion Bow Damage T1When you directly use a bow ability, you have a (8 to 12)% chance to repeat it (1 second cooldown)When you directly use a bow ability and hit an enemy, gain 5% increased attack speed for 3 seconds, stacking up to 10 times+7% Critical Strike Chance12% Chance to cast Shurikens on Bow Crit T7Related abilitiesShurikensLightning does strike twiceRequires Level: 50Requires Class: RogueRequires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAwRhCYHYSA",
+          "name": "Gathering Fury",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "weapon1",
+          "affixes": [
+            {
+              "link": "/db/prefixes/ACwZgTEA",
+              "name": "Bow Attack Speed",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/AAwNgLEA",
+              "name": "Minion Melee and Bow Damage",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AJwNhQ",
+              "name": "Added Critical Strike Chance and Chance to cast Shurikens on Bow Crit",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBmHYRBmKSA",
+          "card": "Implicits+(40% to 75%) Chance to apply Bleed on Bow HitModifiers(24% to 30%) increased Bow Attack Speed T7+(7 to 8) Dexterity T5+(24% to 30%) Chance to apply Bleed on Hit T5(100% to 125%) of Chance to Inflict Bleed on Hit gained as Bleed Chance per second with Hail of ArrowsIf bleed chance for Hail of Arrows is converted to ignite or poison chance then this added bleed chance is also converted, but still depends on your chance to inflict bleed on hit, not your chance to inflict ignite or poison on hit.25% increased Bow Attack Speed2% of Damage Over Time Leeched as Health+(25 to 45) Health+(25 to 45) Mana(-15 to -10) Hail of Arrows Mana CostIf Hail of Arrows is channeled this does not affect the channel cost+2% Critical Strike Chance6% Chance to cast Shurikens on Bow Crit T3Related abilitiesHail of ArrowsShurikensRelated ailmentsBleed\"Our enemies have been hoarding their blood for far too long. Loose the arrows and let it return to Eterra.\"Requires Level: 44Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAzDMEYA4E4g",
+          "name": "Sanguine Hoard",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "weapon2",
+          "affixes": [
+            {
+              "link": "/db/prefixes/ACwZgTEA",
+              "name": "Bow Attack Speed",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AKwBgzEA",
+              "name": "Dexterity",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/suffixes/AAwNgHEA",
+              "name": "Chance to Inflict Bleed On Hit",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AJwNhQ",
+              "name": "Added Critical Strike Chance and Chance to cast Shurikens on Bow Crit",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTGIGySJA",
+          "card": "Implicits(5% to 10%) less Damage TakenModifiers+(41% to 50%) Critical Strike Multiplier T7You are immune to SlowYou have HasteEffects which trigger when gaining or refreshing Haste will occur every second+(1% to 5%) Critical Strike Chance+(1 to 10) to All Attributes(10% to 100%) increased Effect of Frenzy on You+1 to Level of All SkillsRelated ailmentsSlowHasteFrenzyThe unrestrained power of countless shattered timelines, condensed into a vortex of possibilityRequires Level: 64Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAwNgTALAjAzEA",
+          "name": "Shattered Worlds",
+          "tabs": [
+            "prefixes1"
+          ],
+          "slot": "relic",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAzBsQ",
+              "name": "Critical Strike Multiplier",
+              "tab": "prefixes1"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTCkKySQ",
+          "card": "Implicits+(5 to 25) HealthModifiers+(36 to 43) Throwing Damage T7+(8% to 9%) Physical Penetration T5+(28% to 35%) Elemental Resistance T6(64% to 76%) increased Dodge Rating T6100% of Potion Health Converted to WardYou have no health leechYou can still regain health through methods other than health leechYou have no health regenYou can still regain health through methods other than health regen(25% to 30%) more Physical Damage while at Full HealthStrong in times of peace, brilliant in the day, generous in times of plenty, and absent when they fade.Requires Level: 61Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAzCsEYGZKA",
+          "name": "Xithara's Conundrum",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "suffixes1",
+            "suffixes2"
+          ],
+          "slot": "amulet",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAwDhQ",
+              "name": "Throwing Damage",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AAwZhQ",
+              "name": "Physical Penetration",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/suffixes/AAwDmQ",
+              "name": "Elemental Resistance",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/AAwVgnEA",
+              "name": "Dodge Rating",
+              "tab": "suffixes2"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTKotQ",
+          "card": "Implicits(6% to 10%) Increased Cooldown Recovery Speed+(1 to 2) to All AttributesModifiers+(22 to 26) Throwing Damage-5 Mana Cost for Throwing Skills T7You have Bursting RageEnemies you kill explode, dealing physical damage to enemies within 4 meters. This can chain. Each Blood Rage buff also grants 5% increased attack and cast speed and 3% increased movement speed. You cannot have multiple instances of the same Blood Rage. T1(15% to 30%) increased Effect of Frenzy on You+(10% to 20%) Endurance+(100 to 200) Endurance Threshold+(4 to 8) Strength+(4 to 8) Vitality+(11% to 15%) Endurance T5Related abilitiesBloodrage Blood on DeathBursting BloodRelated ailmentsFrenzyRequires Level: 52Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAwRmBYHZKA",
+          "name": "Unsated Rage",
+          "tabs": [
+            "sealedAffixes",
+            "prefixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "ring1",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AIzBMDYg",
+              "name": "You have Bursting Rage",
+              "tab": "sealedAffixes"
+            },
+            {
+              "link": "/db/prefixes/AKwBg7EA",
+              "name": "Throwing Damage and Reduced Mana Cost",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/AAwTgTEA",
+              "name": "Endurance",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTKotQ",
+          "card": "Implicits(6% to 10%) Increased Cooldown Recovery Speed+(1 to 2) to All AttributesModifiers+(22 to 26) Throwing Damage-5 Mana Cost for Throwing Skills T7+(66 to 85) Dodge Rating T5You have Murderous RageYour hits inflict Mark for Death, a curse which lowers all resistances by 25%. Each Blood Rage buff also grants 5% increased attack and cast speed and 3% increased movement speed. You cannot have multiple instances of the same Blood Rage. T1(15% to 30%) increased Effect of Frenzy on You+(10% to 20%) Endurance+(100 to 200) Endurance Threshold+(4 to 8) Strength+(4 to 8) VitalityRelated abilitiesBloodrage Marked For DeathRelated ailmentsFrenzyRequires Level: 52Requires Faction: Merchant's Guild (Rank 1)",
+          "item_key": "UAwRmBYHZKA",
+          "name": "Unsated Rage",
+          "tabs": [
+            "sealedAffixes",
+            "prefixes1",
+            "suffixes1"
+          ],
+          "slot": "ring2",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AIzBMyA",
+              "name": "You have Murderous Rage",
+              "tab": "sealedAffixes"
+            },
+            {
+              "link": "/db/prefixes/AKwBg7EA",
+              "name": "Throwing Damage and Reduced Mana Cost",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/AAzAcQ",
+              "name": "Dodge Rating",
+              "tab": "suffixes1"
+            }
+          ]
+        },
+        {
+          "card": "Implicits10% Increased Cooldown Recovery Speed if there are no larger idols above smaller ones in the gridAn idol is considered larger than another if it takes up more squares of the grid. An idol is considered above another idol in the grid if its top left corner is closer to the top of the inventory.2 Weaver Idols equipped at MaximumModifiers(16% to 20%) increased Effect of Prefixes for Idols in Refracted SlotsAn idol is considered to be in a Refracted Slot if any part of the idol is in the slot T3(18% to 20%) increased Effect of Prefixes and Suffixes for Idols in Refracted SlotsAn idol is considered to be in a Refracted Slot if any part of the idol is in the slot T5+(24 to 27) Ward Decay Threshold per Idol in a Refracted SlotThere is no additional benefit to having an idol in multiple refracted slots T65 Corrupted Idols equipped at Maximum(46% to 52%) increased Effect of Weaver Enchantment Affixes for Idols in Refracted SlotsAn idol is considered to be in a Refracted Slot if any part of the idol is in the slot T6Requires Level: 76Minimum Drop Level: 20",
+          "item_key": "IIwBgLKyiJA",
+          "name": "Pyramidal Altar",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "idol_altar",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AIwBgnAzEA",
+              "name": "Effect of Prefixes for Idols in Refracted Slots",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBgHAnEA",
+              "name": "Effect of Prefixes and Suffixes for Idols in Refracted Slots",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/suffixes/AIzAMGYg",
+              "name": "Ward Decay Threshold per Idol in a Refracted Slot",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AIzAMA4g",
+              "name": "Corrupted Idol Limit",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(4 to 5) Vitality+(2 to 4) Health Regen T1+(18% to 24%) Necrotic Resistance+(18% to 24%) Minion Necrotic Resistance T1+2% to All Resistances+2% to Minion All Resistances T1Requires Level: 1Minimum Drop Level: 11",
+          "item_key": "IIwBgTA7CKtQ",
+          "name": "Humble Weaver Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "idol-2-2",
+          "affixes": [
+            {
+              "link": "/db/prefixes/ABwNgTEA",
+              "name": "Vitality and Added Health Regen",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ABwNg7EA",
+              "name": "Necrotic Resistance and Minion Necrotic Resistance",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBg7CQ",
+              "name": "All Resistances for you and your Minions",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(10% to 26%) Critical Strike Multiplier+(10% to 26%) Minion Critical Strike Multiplier T1(24% to 65%) increased Bow Critical Strike Chance T1(11% to 21%) increased Effect of Frenzy on You T1Related ailmentsFrenzyRequires Level: 1Requires Class: RogueMinimum Drop Level: 25",
+          "item_key": "IIwBgTAnCwCwvQ",
+          "name": "Grand Umbral Omen Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "idol-1-5",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AOwFgzEA",
+              "name": "Shared Critical Strike Multiplier",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ACwTgTEA",
+              "name": "Bow Critical Strike Chance",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBgTAnEA",
+              "name": "Effect of Frenzy on You ",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(10% to 25%) Critical Strike Multiplier+(10% to 25%) Minion Critical Strike Multiplier T1(16% to 43%) increased Throwing Damage T1100% Slow Immunity T1Related ailmentsSlowRequires Level: 1Requires Class: RogueMinimum Drop Level: 20",
+          "item_key": "IIwBgzGIgLFJA",
+          "name": "Adorned Majasan Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "idol-1-3",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AOwFgzEA",
+              "name": "Shared Critical Strike Multiplier",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ACwTgDEA",
+              "name": "Throwing Damage",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBgLAzEA",
+              "name": "Slow Immunity",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers(22% to 30%) increased Critical Strike Chance+(3% to 6%) Critical Strike Multiplier T1+(8% to 12%) Elemental Resistance+(8% to 12%) Minion Elemental Resistance T1+(5 to 14) Dodge Rating while using EvadeDoes not work if Evade is replaced by another ability T1Related abilitiesEvade (Primalist)Evade (Mage)Evade (Sentinel)Evade (Acolyte)Evade (Rogue)Requires Level: 1Minimum Drop Level: 11",
+          "item_key": "IIwBgTAHCKtQ",
+          "name": "Stout Weaver Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "idol-3-3",
+          "affixes": [
+            {
+              "link": "/db/prefixes/ABwdmQ",
+              "name": "Increased Critical Strike Chance and Critical Strike Multiplier",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ABzBsQ",
+              "name": "Elemental Resistance and Minion Elemental Resistance",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBgrAnEA",
+              "name": "Dodge Rating while using Evade",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(4 to 12) Dodge Rating T1(3% to 8%) increased Physical Damage(3% to 8%) increased Minion Physical Damage T1+(3% to 5%) Chance to apply Frailty on Hit T1Related ailmentsFrailtyRequires Level: 1Minimum Drop Level: 11",
+          "item_key": "IIwBgTArC00A",
+          "name": "Small Eterran Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "idol-3-1",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AIzAcQ",
+              "name": "Dodge Rating",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/AMwRgnEA",
+              "name": "Shared Physical Damage",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBgbAnEA",
+              "name": "Chance to apply Frailty on Hit",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(10% to 20%) Recurve Chance for Heartseeker(5% to 20%) Increased Damage while wielding a Bow T1(22% to 60%) increased Physical Throwing Damage T13% Chance to receive a Glancing Blow when hit6% increased Dodge Rating T5Related abilitiesHeartseekerRequires Level: 34Requires Class: RogueMinimum Drop Level: 30",
+          "item_key": "IIwBgzATCIJzSQ",
+          "name": "Heretical Huge Shadow Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "enchants1"
+          ],
+          "slot": "idol-4-2",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AOwNgzEA",
+              "name": "Rogue Recurve Chance and Bow Damage",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ACwdgDEA",
+              "name": "Throwing Physical Damage",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/AJwZhQ",
+              "name": "Glancing Blow chance and Increased Dodge Rating",
+              "tab": "enchants1"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(8 to 18) Dodge Rating(3% to 9%) increased Health T1(11% to 30%) increased Bow Damage T1(7% to 8%) increased Critical Strike Chance+4% Critical Strike Multiplier T4+(1 to 2) Ward Decay Threshold+(1 to 2) Ward per Second T1Requires Level: 23Requires Class: RogueMinimum Drop Level: 25",
+          "item_key": "IIwBgzCkJySQ",
+          "name": "Heretical Large Shadow Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "enchants1",
+            "enchants2"
+          ],
+          "slot": "idol-5-3",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AJwFgTEA",
+              "name": "Dodge Rating and Increased Health",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ACwTgjEA",
+              "name": "Bow Damage",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/ABwTgTEA",
+              "name": "Increased Critical Strike Chance and Added Critical Strike Multiplier",
+              "tab": "enchants1"
+            },
+            {
+              "link": "/db/suffixes/ABwTg7EA",
+              "name": "Ward decay threshold and Ward per second",
+              "tab": "enchants2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://www.lastepochtools.com/profile/47x47/character/MaadCity",
+      "character": "MaadCity",
+      "account": "47x47",
+      "items": [
+        {
+          "base_key": "IIwBjYJnI",
+          "card": "Implicits+40 ArmorModifiers+4 to Level of Shurikens(81% to 100%) increased Throwing Damage T7+(16% to 20%) Recurve Chance for Heartseeker T5(240% to 290%) increased Critical Strike ChanceYou cannot Leech Health from Critical Strikes+(2 to 5) to All Attributes+4 Dexterity8% increased Dodge Rating T1Related abilitiesShurikensHeartseekerTo achieve the loftiest of goals, victory must be valued over survival.Requires Level: 12",
+          "item_key": "UAzBMoVgNiA",
+          "name": "Peak of the Mountain",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "corruptedAffixes"
+          ],
+          "slot": "head",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AGwRhQ",
+              "name": "Level of Shurikens",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AOwNgTEA",
+              "name": "Recurve Chance for Heartseeker",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/prefixes/AIwBmHYg",
+              "name": "Added Dexterity and Increased Dodge Rating",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBhpAWMSA",
+          "card": "Implicits+85 ArmorModifiers+(21 to 24) Dexterity T7+(24% to 30%) Elemental Resistance T5(32% to 16%) less Damage Taken from the First Hit Received from each enemyMultiplicative with other modifiers100% increased effect of stats on your Non-Unique Idols that are a different shape to all other equipped Non-Unique IdolsFor example if you have a 4x1 idol, a 3x1 idol, and two 1x3 idols equipped, the stats on the 4x1 idol and the 3x1 idol would have 100% increased effect, but the stats on the 1x3 idols would not be changed. Ignores idols of the Unique rarity.+(2% to 4%) Critical Strike Chance+(126 to 256) Dodge Rating+(256 to 512) Dodge Rating if you have been hit recentlyRecently refers to the past 4 seconds(24% to 52%) increased Dodge Rating+(32 to 64) Ward gained when you Dodge+1 to Level of All Skills+(36 to 40) Mana T3Osprix elders used to tell of the Quetzal Dragons, resplendant with wings of mismatched feathers, who were never seen to roost in the same place twice. The elders speculated that having visited every peak and forest in Eterra, they traveled far over the sea in search of new lands.Requires Level: 64Requires Faction: Circle of Fortune (Rank 5)",
+          "item_key": "UAzAsoZgNiA",
+          "name": "Wings of Discord",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "chest",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AKwBgzEA",
+              "name": "Dexterity",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/AAwDmQ",
+              "name": "Elemental Resistance",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBmBYg",
+              "name": "Level of All Skills and Added Mana",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBhCYwdjEg",
+          "card": "Implicits+(33% to 47%) Poison Resistance+(33% to 47%) Cold Resistance+4 Potion SlotsModifiers+(31 to 37) Throwing Damage T7Your critical strike chance also applies to your potion uses. When a potion use crits, the health and ward you immediately gain from it is multiplied by a percentage of your critical strike multiplier.This does not increase the effect of temporary stats granted on potion use25% of Critical Strike Multiplier applies to PotionsIf a potion crits, this percentage of your Critical Multiplier will affect the potion(144 to 216) Health Gained on Potion Use(144 to 216) Ward Gained on Potion Use(12% to 24%) increased Critical Strike Chance+(12% to 24%) Critical Strike Multiplier(10% to 14%) of Potion Health Converted to Ward T1Elecoe discovered that with the right ingredients potions could be imbued with the luck of the brewer.Requires Level: 40Requires Faction: Circle of Fortune (Rank 5)",
+          "item_key": "UAzDsBZgJiA",
+          "name": "Elecoe's Innovation",
+          "tabs": [
+            "prefixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "waist",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAwDhQ",
+              "name": "Throwing Damage",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AAwDgzEA",
+              "name": "Potion Health Converted to Ward",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBhBYwVjEg",
+          "card": "Implicits+75 Armor+(5% to 15%) EnduranceModifiers+(31 to 37) Throwing Damage T7+(60% to 130%) Chance to apply Poison on Throwing Hit+(60% to 130%) Throwing Critical Strike Multiplier+2 Projectiles with ShurikensOnly affects the Rogue skill Shurikens+(7 to 8) Dexterity T5Related abilitiesShurikensRelated ailmentsPoisonScalebane recruits are taught to never travel south of Mes'Ork in groups of less than six. Information on Li'raka's whereabouts are valuable, so it is pertinent that one should escape alive.Requires Level: 45Requires Faction: Circle of Fortune (Rank 5)",
+          "item_key": "UAzCsEYGYBYg",
+          "name": "Li'raka's Claws",
+          "tabs": [
+            "prefixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "hands",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAwDhQ",
+              "name": "Throwing Damage",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AKwBgzEA",
+              "name": "Dexterity",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBhGYVMSA",
+          "card": "Implicits+72 Armor(15% to 18%) increased Movement Speed(24% to 50%) increased Effect of Haste on YouModifiers(26% to 30%) increased Movement Speed T7(13% to 20%) increased Movement Speed+(1 to 2) to Level of Throwing Skills+(3 to 12) DexterityAerial Assault's Burst of Feathers includes 1 Umbral Blade per 20 DexterityThese Umbral Blades behave the same way as those thrown by the Twighlight Strike node on the Aerial Assault tree and cannot target the same enemies as those Umbral Blades or each otherYou gain Haste and (12 to 30)% increased Throwing Attack Speed for 2 seconds after using Aerial Assault(13% to 20%) chance to recover 8% of Aerial Assault's remaining cooldown on Throwing Hit (up to 3 times)Remaining number of cooldown recoveries resets when you use Aerial AssaultRelated abilitiesAerial AssaultRelated ailmentsHasteRequires Level: 76Requires Faction: Circle of Fortune (Rank 5)",
+          "item_key": "UAwRmGZwdiA",
+          "name": "Razorfall",
+          "tabs": [
+            "prefixes1"
+          ],
+          "slot": "feet",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAwJgHEA",
+              "name": "Movement Speed",
+              "tab": "prefixes1"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTAzCyiJA",
+          "card": "Implicits+(60 to 72) Lightning Bow DamageModifiers(42% to 52%) increased Bow Attack Speed T7When you directly use a bow ability, you have a (8 to 12)% chance to repeat it (1 second cooldown)When you directly use a bow ability and hit an enemy, gain 5% increased attack speed for 3 seconds, stacking up to 10 times+5% Critical Strike Chance10% Chance to cast Shurikens on Bow Crit T5Related abilitiesShurikensLightning does strike twiceRequires Level: 50Requires Class: RogueRequires Faction: Circle of Fortune (Rank 5)",
+          "item_key": "UAwRhCYHYSA",
+          "name": "Gathering Fury",
+          "tabs": [
+            "prefixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "weapon1",
+          "affixes": [
+            {
+              "link": "/db/prefixes/ACwZgTEA",
+              "name": "Bow Attack Speed",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AJwNhQ",
+              "name": "Added Critical Strike Chance and Chance to cast Shurikens on Bow Crit",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBmHYRBmKSA",
+          "card": "Implicits+(40% to 75%) Chance to apply Bleed on Bow HitModifiers(24% to 30%) increased Bow Attack Speed T7(100% to 125%) of Chance to Inflict Bleed on Hit gained as Bleed Chance per second with Hail of ArrowsIf bleed chance for Hail of Arrows is converted to ignite or poison chance then this added bleed chance is also converted, but still depends on your chance to inflict bleed on hit, not your chance to inflict ignite or poison on hit.25% increased Bow Attack Speed2% of Damage Over Time Leeched as Health+(25 to 45) Health+(25 to 45) Mana(-15 to -10) Hail of Arrows Mana CostIf Hail of Arrows is channeled this does not affect the channel cost+2% Critical Strike Chance6% Chance to cast Shurikens on Bow Crit T3Related abilitiesHail of ArrowsShurikensRelated ailmentsBleed\"Our enemies have been hoarding their blood for far too long. Loose the arrows and let it return to Eterra.\"Requires Level: 44Requires Faction: Circle of Fortune (Rank 5)",
+          "item_key": "UAzDMEYA4E4g",
+          "name": "Sanguine Hoard",
+          "tabs": [
+            "prefixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "weapon2",
+          "affixes": [
+            {
+              "link": "/db/prefixes/ACwZgTEA",
+              "name": "Bow Attack Speed",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AJwNhQ",
+              "name": "Added Critical Strike Chance and Chance to cast Shurikens on Bow Crit",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTGIGySJA",
+          "card": "Implicits(5% to 10%) less Damage TakenModifiersYou are immune to SlowYou have HasteEffects which trigger when gaining or refreshing Haste will occur every second+(1% to 5%) Critical Strike Chance+(1 to 10) to All Attributes(10% to 100%) increased Effect of Frenzy on You+1 to Level of All SkillsRelated ailmentsSlowHasteFrenzyThe unrestrained power of countless shattered timelines, condensed into a vortex of possibilityRequires Level: 64",
+          "item_key": "UAwNgTALAjAzEA",
+          "name": "Shattered Worlds",
+          "tabs": [],
+          "slot": "relic",
+          "affixes": []
+        },
+        {
+          "base_key": "IIwBgTCkKySQ",
+          "card": "Implicits+(5 to 25) HealthModifiers+(36 to 43) Throwing Damage T7+(25% to 29%) Critical Strike Multiplier T5100% of Potion Health Converted to WardYou have no health leechYou can still regain health through methods other than health leechYou have no health regenYou can still regain health through methods other than health regen(25% to 30%) more Physical Damage while at Full Health(18% to 23%) increased Critical Strike Chance T1Strong in times of peace, brilliant in the day, generous in times of plenty, and absent when they fade.Requires Level: 61Requires Faction: Circle of Fortune (Rank 5)",
+          "item_key": "UAzCsEYGZKA",
+          "name": "Xithara's Conundrum",
+          "tabs": [
+            "prefixes1",
+            "prefixes2",
+            "corruptedAffixes"
+          ],
+          "slot": "amulet",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AAwDhQ",
+              "name": "Throwing Damage",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AAzBsQ",
+              "name": "Critical Strike Multiplier",
+              "tab": "prefixes2"
+            },
+            {
+              "link": "/db/prefixes/AAzCsQ",
+              "name": "Critical Strike Chance",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTKotQ",
+          "card": "Implicits(6% to 10%) Increased Cooldown Recovery Speed+(1 to 2) to All AttributesModifiers+(22 to 26) Throwing Damage-5 Mana Cost for Throwing Skills T7You have Berserking RageGrants Frenzy and 40% increased effect of Frenzy on you. Each Blood Rage buff also grants 5% increased attack and cast speed and 3% increased movement speed. You cannot have multiple instances of the same Blood Rage. T4(15% to 30%) increased Effect of Frenzy on You+(10% to 20%) Endurance+(100 to 200) Endurance Threshold+(4 to 8) Strength+(4 to 8) VitalityRelated abilitiesBloodrage FrenzyRelated ailmentsFrenzyRequires Level: 52Requires Faction: Circle of Fortune (Rank 8)",
+          "item_key": "UAwRmBYHZKA",
+          "name": "Unsated Rage",
+          "tabs": [
+            "sealedAffixes",
+            "prefixes1"
+          ],
+          "slot": "ring1",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AIw5A",
+              "name": "You have Berserking Rage",
+              "tab": "sealedAffixes"
+            },
+            {
+              "link": "/db/prefixes/AKwBg7EA",
+              "name": "Throwing Damage and Reduced Mana Cost",
+              "tab": "prefixes1"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTKotQ",
+          "card": "Implicits(6% to 10%) Increased Cooldown Recovery Speed+(1 to 2) to All AttributesModifiers+(22 to 26) Throwing Damage-5 Mana Cost for Throwing Skills T7You have Incisive RageCritical strikes have a 20% chance to be Deadly Strikes. Grants +10% critical strike chance. Each Blood Rage buff also grants 5% increased attack and cast speed and 3% increased movement speed. You cannot have multiple instances of the same Blood Rage. T2(15% to 30%) increased Effect of Frenzy on You+(10% to 20%) Endurance+(100 to 200) Endurance Threshold+(4 to 8) Strength+(4 to 8) Vitality+6 Intelligence+(13 to 14) Ward per Second T4Related abilitiesBloodrage Deadly StrikesRelated ailmentsFrenzyRequires Level: 52",
+          "item_key": "UAwRmBYHZKA",
+          "name": "Unsated Rage",
+          "tabs": [
+            "sealedAffixes",
+            "prefixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "ring2",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AIwjsQ",
+              "name": "You have Incisive Rage",
+              "tab": "sealedAffixes"
+            },
+            {
+              "link": "/db/prefixes/AKwBg7EA",
+              "name": "Throwing Damage and Reduced Mana Cost",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBmDYg",
+              "name": "Added Intelligence and Ward Per Second",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Implicits10% Increased Cooldown Recovery Speed if there are no larger idols above smaller ones in the gridAn idol is considered larger than another if it takes up more squares of the grid. An idol is considered above another idol in the grid if its top left corner is closer to the top of the inventory.2 Weaver Idols equipped at MaximumModifiers(25% to 30%) increased Effect of Suffixes for Idols in Refracted SlotsAn idol is considered to be in a Refracted Slot if any part of the idol is in the slot T5+4 Health per Idol in a Refracted SlotThere is no additional benefit to having an idol in multiple refracted slots T33% increased Health per Equipped Huge Idol T3(28% to 32%) increased Effect of Prefixes and Suffixes for Idols in Refracted SlotsAn idol is considered to be in a Refracted Slot if any part of the idol is in the slot T7Requires Level: 76Minimum Drop Level: 20",
+          "item_key": "IIwBgLKyiJA",
+          "name": "Pyramidal Altar",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "suffixes2",
+            "corruptedAffixes"
+          ],
+          "slot": "idol_altar",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AIwBgnALEA",
+              "name": "Effect of Suffixes for Idols in Refracted Slots",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/AIzAMqA",
+              "name": "Health per Idol in a Refracted Slot",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/AIwBgnGQ",
+              "name": "Increased Health per Equipped Huge Idol",
+              "tab": "suffixes2"
+            },
+            {
+              "link": "/db/prefixes/AIwBgHAnEA",
+              "name": "Effect of Prefixes and Suffixes for Idols in Refracted Slots",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(10% to 20%) Recurve Chance for Heartseeker(5% to 20%) Increased Damage while wielding a Bow T1(40% to 100%) Increased Shred Armor Duration T1(9% to 11%) Increased Damage while wielding a Bow+1% Chance to repeat Bow Ability1s cooldown T41% increased Minion Bow Attack Speed+1 Minion Bow Damage T1Related abilitiesHeartseekerRelated ailmentsShred ArmorRequires Level: 23Requires Class: RogueMinimum Drop Level: 30",
+          "item_key": "IIwBgzATCIJzSQ",
+          "name": "Heretical Huge Shadow Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "enchants1",
+            "enchants2"
+          ],
+          "slot": "idol-4-2",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AOwNgzEA",
+              "name": "Rogue Recurve Chance and Bow Damage",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ACwDgDEA",
+              "name": "Increased Armor Shred Duration",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/AJwZgrEA",
+              "name": "Increased Damage while Wielding a Bow and Chance to Repeat Bow Attacks",
+              "tab": "enchants1"
+            },
+            {
+              "link": "/db/suffixes/AJwJg7EA",
+              "name": "Minion Bow Attack Speed and Added Minion Bow Damage",
+              "tab": "enchants2"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(8% to 20%) Critical Strike Multiplier while Dual Wielding T1(11% to 30%) increased Throwing Damage T1(13% to 15%) increased Critical Strike Chance+(6% to 7%) Critical Strike Multiplier T6(2% to 5%) increased Armor T1Requires Level: 37Requires Class: RogueMinimum Drop Level: 25",
+          "item_key": "IIwBgTAnCJdQ",
+          "name": "Heretical Grand Majasan Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "enchants1",
+            "corruptedAffixes"
+          ],
+          "slot": "idol-1-5",
+          "affixes": [
+            {
+              "link": "/db/prefixes/ACwVgbEA",
+              "name": "Critical Strike Multiplier while Dual Wielding",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ACwTgDEA",
+              "name": "Throwing Damage",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/ABwTgTEA",
+              "name": "Increased Critical Strike Chance and Added Critical Strike Multiplier",
+              "tab": "enchants1"
+            },
+            {
+              "link": "/db/prefixes/AIwBgrAzEA",
+              "name": "Armor",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(10% to 25%) Critical Strike Multiplier+(10% to 25%) Minion Critical Strike Multiplier T1(16% to 43%) increased Throwing Damage T18% increased Throwing Damage8% Increased Damage while Dual Wielding T53% increased Damage Over Time+1% Endurance T2(1 to 4) Seconds of Frenzy after you use EvadeFrenzy is a buff that grants 20% increased attack and cast speed by default. It cannot stack. T1Related abilitiesEvade (Primalist)Evade (Mage)Evade (Sentinel)Evade (Acolyte)Evade (Rogue)Related ailmentsFrenzyRequires Level: 37Requires Class: RogueMinimum Drop Level: 20",
+          "item_key": "IIwBgzGLKIkA",
+          "name": "Heretical Adorned Majasan Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "enchants1",
+            "enchants2",
+            "corruptedAffixes"
+          ],
+          "slot": "idol-1-3",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AOwFgzEA",
+              "name": "Shared Critical Strike Multiplier",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/ACwTgDEA",
+              "name": "Throwing Damage",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/suffixes/AJwZgLEA",
+              "name": "Increased Throwing Damage and Increased Damage while Dual Wielding",
+              "tab": "enchants1"
+            },
+            {
+              "link": "/db/suffixes/ABwThQ",
+              "name": "Increased damage over time and Endurance",
+              "tab": "enchants2"
+            },
+            {
+              "link": "/db/prefixes/AIwhMQ",
+              "name": "Seconds of Frenzy after you use Evade",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers(9 to 20) Health Gain on Kill+(28 to 36) Health T1+(8% to 17%) Necrotic Resistance T1+(5 to 14) Dodge Rating while using EvadeDoes not work if Evade is replaced by another ability T1Related abilitiesEvade (Primalist)Evade (Mage)Evade (Sentinel)Evade (Acolyte)Evade (Rogue)Requires Level: 1Minimum Drop Level: 11",
+          "item_key": "IIwBgTA7CKtQ",
+          "name": "Humble Weaver Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "idol-2-2",
+          "affixes": [
+            {
+              "link": "/db/prefixes/ABwNgDEA",
+              "name": "Health on Kill and Added Health",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/AIzAsQ",
+              "name": "Necrotic Resistance",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBgrAnEA",
+              "name": "Dodge Rating while using Evade",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "card": "Modifiers+(10% to 20%) Recurve Chance for Heartseeker(5% to 20%) Increased Damage while wielding a Bow T1+(20% to 45%) Poison Resistance T1105% Slow Immunity T1Related abilitiesHeartseekerRelated ailmentsSlowRequires Level: 1Requires Class: RogueMinimum Drop Level: 25",
+          "item_key": "IIwBgzCLALJJA",
+          "name": "Large Umbral Omen Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "idol-5-3",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AOwNgzEA",
+              "name": "Rogue Recurve Chance and Bow Damage",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/AIzBsQ",
+              "name": "Poison Resistance",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBgLAzEA",
+              "name": "Slow Immunity",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        },
+        {
+          "base_key": "IIwBgTArCKtQ",
+          "card": "ModifiersBreaks if equipped when you kill a timeline boss above 90 corruption, causing that timeline boss kill to grant 3 additional Gaze of Orobyss.Only one Harbinger's Needle can be consumed at once.A needle forged by Aberroth in the heart of a black hole. It is designed to be plunged into a powerful foe, to sacrifice them to the dark god of fate.Requires Level: 1Minimum Drop Level: 11",
+          "item_key": "UAzCMGYBZKA",
+          "name": "Harbinger's Needle",
+          "tabs": [],
+          "slot": "idol-3-1",
+          "affixes": []
+        },
+        {
+          "card": "Modifiers(8% to 21%) of Potion Health Converted to Ward T1+(3% to 8%) Elemental Resistance T1+(5 to 14) Dodge Rating while using EvadeDoes not work if Evade is replaced by another ability T1Related abilitiesEvade (Primalist)Evade (Mage)Evade (Sentinel)Evade (Acolyte)Evade (Rogue)Requires Level: 1Minimum Drop Level: 11",
+          "item_key": "IIwBgTAHC00A",
+          "name": "Stout Lagonian Idol",
+          "tabs": [
+            "prefixes1",
+            "suffixes1",
+            "corruptedAffixes"
+          ],
+          "slot": "idol-3-3",
+          "affixes": [
+            {
+              "link": "/db/prefixes/AIwJgzEA",
+              "name": "Potion Health Converted to Ward",
+              "tab": "prefixes1"
+            },
+            {
+              "link": "/db/suffixes/AIzDsQ",
+              "name": "Elemental Resistance",
+              "tab": "suffixes1"
+            },
+            {
+              "link": "/db/prefixes/AIwBgrAnEA",
+              "name": "Dodge Rating while using Evade",
+              "tab": "corruptedAffixes"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

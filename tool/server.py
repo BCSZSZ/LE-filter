@@ -12,6 +12,7 @@ import xml.etree.ElementTree as ET
 from engine import extract, generate, normalize_config
 from requirements import read_document, write_document
 from browser_runtime import browser_bootstrap
+from letools import import_profiles
 
 WEB = Path(__file__).parent / "web"
 DOWNLOADS = {}
@@ -39,7 +40,7 @@ class Handler(BaseHTTPRequestHandler):
         if self.path == "/api/bootstrap":
             return self.reply(boot())
         name = "index.html" if self.path == "/" else self.path.lstrip("/")
-        if name not in {"index.html", "app.js", "workbench.js", "style.css"}:
+        if name not in {"index.html", "app.js", "workbench.js", "profile-reader.js", "style.css"}:
             return self.reply({"error": "Not found"}, 404)
         return self.reply((WEB / name).read_bytes(), mime=mimetypes.guess_type(name)[0] or "text/plain")
 
@@ -68,6 +69,8 @@ class Handler(BaseHTTPRequestHandler):
                 return self.reply(read_document(payload["document"]))
             if self.path == "/api/requirements/export":
                 return self.reply(write_document(payload["build"], payload["stage"]))
+            if self.path == "/api/profiles/import":
+                return self.reply(import_profiles(payload["bundle"]))
             if self.path == "/api/generate":
                 return self.reply(generate(payload["config"], payload.get("mode", "endgame")))
             if self.path == "/api/validate":

@@ -10,13 +10,14 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tool"))
 from engine import empty_leveling, extract, inspect_rule
 from requirements import write_document
+from letools import merge_targets
 
 BUILD_ID = "heartseeker-shuriken-marksman"
 SOURCE = ROOT / "sources/builds/maxroll-shuriken-marksman-very-strict.xml"
 SOURCE_SHA256 = "9a79e7351c3a114e746839a4fd8e605cfc8ffc53ab59cfbe1bf17e0ab4312cdf"
 
 
-def build_documents():
+def build_xml_documents():
     raw = SOURCE.read_bytes()
     if hashlib.sha256(raw).hexdigest() != SOURCE_SHA256:
         raise ValueError("追心手里剑来源XML与冻结哈希不符。")
@@ -63,6 +64,17 @@ def build_documents():
         scope="未提供本BD独立练级目标，留空待玩家补充",
         warnings=["未从终局目标或通用Alt Leveling规则推断本BD练级需求。"])
     return tuple(write_document(build, stage) for stage in ("endgame", "leveling"))
+
+
+def build_documents():
+    from extract_shuriken_profiles import extracted_document
+    endgame, leveling = build_xml_documents()
+    profiles = extracted_document()
+    endgame["targets"] = merge_targets(endgame["targets"], profiles["targets"])
+    endgame["source"] = {**profiles["source"], "name": "追心手里剑 · 原XML与四个天梯角色并集",
+                         "xml_reference": endgame["source"],
+                         "scope": "原Very Strict模板目标与玩家指定四个角色当前配装的并集；练级独立留空"}
+    return endgame, leveling
 
 
 if __name__ == "__main__":

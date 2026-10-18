@@ -5,7 +5,7 @@ import json
 import unittest
 
 import engine as e
-from build_shuriken_marksman_requirements import BUILD_ID, SOURCE, SOURCE_SHA256, build_documents
+from build_shuriken_marksman_requirements import BUILD_ID, SOURCE, SOURCE_SHA256, build_documents, build_xml_documents
 from requirements import read_document, write_document
 from test_engine import first
 
@@ -23,10 +23,11 @@ class ShurikenRequirementsTests(unittest.TestCase):
 
     def test_frozen_source_target_scope_and_requirements_roundtrip(self):
         self.assertEqual(hashlib.sha256(SOURCE.read_bytes()).hexdigest(), SOURCE_SHA256)
-        self.assertEqual({k: len(v) for k, v in self.endgame["targets"].items()},
+        original = build_xml_documents()[0]
+        self.assertEqual({k: len(v) for k, v in original["targets"].items()},
                          {"uniques": 11, "equipment": 10, "altars": 1, "idols": 7, "bases": 0})
-        self.assertEqual(self.endgame["targets"]["uniques"], [17, 133, 134, 189, 256, 271, 337, 413, 436, 459, 477])
-        groups = {g["type"]: g for g in self.endgame["targets"]["equipment"]}
+        self.assertEqual(original["targets"]["uniques"], [17, 133, 134, 189, 256, 271, 337, 413, 436, 459, 477])
+        groups = {g["type"]: g for g in original["targets"]["equipment"]}
         self.assertEqual(groups["HELMET"]["affixes"], [611, 52])
         self.assertEqual(groups["RING"]["affixes"], [507, 503])
         self.assertEqual(groups["BOW"]["affixes"], [432, 6])
@@ -54,7 +55,7 @@ class ShurikenRequirementsTests(unittest.TestCase):
         self.assertEqual(first(self.output, uid=337, rarity="UNIQUE", lp=0)["category"], "BD暗金0LP也留")
 
     def test_idol_scopes_and_special_references_do_not_change_ordinary_counts(self):
-        idols = {g["type"]: g for g in self.endgame["targets"]["idols"]}
+        idols = {g["type"]: g for g in build_xml_documents()[0]["targets"]["idols"]}
         large = idols["IDOL_1x3"]
         self.assertEqual(large["bases"], [10, 11, 12, 13, 14])
         self.assertEqual(large["pair_bases"], [4, 9, 10, 11, 12, 13, 14])

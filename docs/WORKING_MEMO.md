@@ -2,6 +2,15 @@
 
 更新时间：2026-10-18，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
+
+## 最新2026-10-18：四角色并集与个人profile导入
+
+- 玩家指定MAONG、ShurikenAmhali、S5Luciann、MaadCity与原追心手里剑XML模版取并集。冻结可见UI摘录76件于`sources/builds/heartseeker-shuriken-profiles-2026-10-18.json`；此为Profile→Planner逐件已用页签读取，不是原生API响应。原XML和其他来源保持。
+- 新模版14暗金／10装备组、56项普通部位目标／15神像组／1祭坛，无05，练级保持原空文件字节。新增92／402／344，原11种及全部原目标保留，原词缀顺序在前、新项追加。按ID分类，普通词缀可位于腐化页签；普通神像仅0／5，附魔4／腐化6及固定随机7分列。不同神像底材范围保持独立。
+- 上线“导入LETools角色（多链接并集）”：1–12具体profile链接去重；静态Pages跨站限制通过LETools同源读取书签回传或角色JSON解决，不使用公共代理。默认新建个人方案，也可向当前方案添加独立BD；新个人ID与模版身份分开，保存／刷新／需求导出及配置备份保留来源，任一来源失败不回传部分并集。用户日常导入不更新已有模版；本轮模版更新是明确授权的维护操作。界面“官方模板”统一改为“已有模版”。
+- 单独97条、四角色个人配装并集93条；与冰追心126／128条，六模板250–265条，超200报错不截断。原四／五来源及历史手里剑验证数字只作旧版本记录。复现、完整目标及验证边界见[角色导入说明](PROFILE_IMPORT.md)、[手里剑审阅](SHURIKEN_MARKSMAN_REVIEW.md)与`analysis/profile-import-*.json`。
+- 书签网络顺序使用来源字段结构夹具验证，真实目标通过可见UI交叉核对；浏览器验证回传、预览、个人保存、刷新及模版隔离。收藏栏书签真实执行、Blob下载及游戏客户端未实测，不能用WASM对照替代这些结论。
+
 ## 最新2026-10-18追加：暗金候选补齐、全部套装独立，已落实
 
 - 玩家订正①②③④只讨论非套装暗金，套装全部保留、单独一条。当前[完整规则名单](COMMON_UNIQUE_PROTECTION.md)：暗金181（旧138移出13／296／311／422／460／474／480，补50正reroll），套装61件／24套全收（比旧21件增40）。基础池242个物品ID，不是242条规则。蜂农三件从暗金②类移出并保留在套装池。

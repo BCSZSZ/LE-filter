@@ -5,6 +5,7 @@ from functools import lru_cache
 
 from engine import ROOT, bootstrap, extract, generate, normalize_config
 from requirements import read_document, write_document
+from letools import import_profiles
 
 
 @lru_cache(maxsize=1)
@@ -35,6 +36,8 @@ def dispatch_json(request):
             result = read_document(payload["document"])
         elif path == "/api/requirements/export":
             result = write_document(payload["build"], payload["stage"])
+        elif path == "/api/profiles/import":
+            result = import_profiles(payload["bundle"])
         elif path == "/api/generate":
             result = generate(payload["config"])
         elif path == "/api/validate":

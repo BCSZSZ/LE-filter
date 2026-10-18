@@ -75,7 +75,7 @@
   }
   function applyTemplates(state,templates,id){
     const selected=templates.filter(t=>state.selection.ids.includes(t.id));
-    if(!selected.length)throw Error('请先选择至少一个官方模板。');
+    if(!selected.length)throw Error('请先选择至少一个已有模版。');
     if(!selected.some(t=>t.id===state.selection.main_id))throw Error('请从已选模板中选择主BD。');
     const settings=activeSave(state)?.config||state.draft_config;
     const config={...copy(settings),main_id:state.selection.main_id,builds:selected.map(t=>({...copy(t),enabled:true,template_id:t.id}))};
@@ -105,7 +105,7 @@
   function resetBuild(config,templates,id){
     const index=config.builds.findIndex(b=>b.id===id),b=config.builds[index];
     const template=templates.find(t=>t.id===(b?.template_id||b?.id));
-    if(!template)throw Error('这个BD没有对应的官方模板。');
+    if(!template)throw Error('这个BD没有对应的已有模版。');
     config.builds[index]={...copy(template),id:b.id,name:b.name,enabled:b.enabled,template_id:template.id};
     return config.builds[index];
   }
@@ -120,6 +120,15 @@
     b.name=data.name;b.profiles[data.stage]=copy(data.profile);
     b.requirement_sources||={};b.requirement_sources[data.stage]=copy(data.source);
     return b;
+  }
+  function importProfiles(state,data,buildId,saveId,destination='new-save'){
+    let saved=activeSave(state);
+    if(destination==='new-save'||!saved)saved=addSave(state,emptyConfig(saved?.config||state.draft_config),saveId,data.name);
+    if(saved.config.builds.some(b=>b.id===buildId))throw Error('个人BD的ID重复。');
+    const b={id:buildId,name:data.name,enabled:true,profiles:{endgame:copy(data.profile),leveling:emptyLeveling()},requirement_sources:{endgame:copy(data.source)}};
+    saved.config.builds.push(b);
+    if(!saved.config.builds.some(b=>b.enabled&&b.id===saved.config.main_id))saved.config.main_id=b.id;
+    saved.active_build_id=b.id;return saved;
   }
   function selectionValues(chosen,preserveOrder=false){
     const values=[...chosen].map(Number);
@@ -150,7 +159,7 @@
     const order=new Map(catalog.equipment_types.map((type,i)=>[type,i]));
     return [...groups.values()].sort((a,b)=>(order.get(a.type)??order.size)-(order.get(b.type)??order.size));
   }
-  const api={library,restore,emptyConfig,activeSave,addSave,selectDefaults,setTemplateEnabled,setTemplateMain,applyTemplates,activateSave,removeSave,mergeSaves,resetBuild,importRequirement,selectionValues,moveAffix,placeAffix,expandUniqueSets,groupUniques};
+  const api={library,restore,emptyConfig,activeSave,addSave,selectDefaults,setTemplateEnabled,setTemplateMain,applyTemplates,activateSave,removeSave,mergeSaves,resetBuild,importRequirement,importProfiles,selectionValues,moveAffix,placeAffix,expandUniqueSets,groupUniques};
   root.LEWorkbench=api;
   if(typeof module!=='undefined')module.exports=api;
 })(globalThis);

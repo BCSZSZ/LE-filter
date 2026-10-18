@@ -1,0 +1,1678 @@
+{
+  "format": "le-filter-requirements",
+  "version": 1,
+  "id": "profile-union-e72ce22dcd97cfd2",
+  "name": "追心手里剑 · 四角色并集",
+  "stage": "endgame",
+  "targets": {
+    "uniques": [
+      256,
+      436,
+      17,
+      134,
+      337,
+      271,
+      189,
+      413,
+      133,
+      477,
+      92,
+      402,
+      344
+    ],
+    "equipment": [
+      {
+        "type": "HELMET",
+        "bases": [],
+        "affixes": [
+          611,
+          503,
+          52,
+          13,
+          471,
+          97,
+          762,
+          7,
+          8
+        ],
+        "corrupted": [
+          1017
+        ]
+      },
+      {
+        "type": "BODY_ARMOR",
+        "bases": [],
+        "affixes": [
+          52,
+          503,
+          471,
+          80
+        ],
+        "corrupted": [
+          1012,
+          1008,
+          1014
+        ]
+      },
+      {
+        "type": "BELT",
+        "bases": [],
+        "affixes": [
+          88,
+          59,
+          97,
+          30,
+          8,
+          83
+        ],
+        "corrupted": [
+          1024,
+          995
+        ]
+      },
+      {
+        "type": "GLOVES",
+        "bases": [],
+        "affixes": [
+          88,
+          58,
+          36,
+          429,
+          503,
+          86
+        ],
+        "corrupted": [
+          1005
+        ]
+      },
+      {
+        "type": "BOOTS",
+        "bases": [],
+        "affixes": [
+          28,
+          503
+        ],
+        "corrupted": [
+          991,
+          1024
+        ]
+      },
+      {
+        "type": "BOW",
+        "bases": [],
+        "affixes": [
+          432,
+          6,
+          55,
+          64
+        ],
+        "corrupted": [
+          966
+        ]
+      },
+      {
+        "type": "QUIVER",
+        "bases": [],
+        "affixes": [
+          432,
+          503,
+          24,
+          55,
+          60,
+          68
+        ],
+        "corrupted": [
+          966
+        ]
+      },
+      {
+        "type": "RELIC",
+        "bases": [],
+        "affixes": [
+          88,
+          6
+        ]
+      },
+      {
+        "type": "AMULET",
+        "bases": [],
+        "affixes": [
+          88,
+          33,
+          8,
+          72,
+          0,
+          80,
+          59,
+          6,
+          5
+        ]
+      },
+      {
+        "type": "RING",
+        "bases": [],
+        "affixes": [
+          507,
+          16,
+          92,
+          8
+        ],
+        "corrupted": [
+          1074,
+          1023,
+          1016
+        ]
+      }
+    ],
+    "altars": [
+      {
+        "type": "IDOL_ALTAR",
+        "bases": [
+          11
+        ],
+        "affixes": [
+          1093,
+          1094,
+          1099,
+          1100,
+          1089,
+          1097,
+          1088,
+          1103,
+          1108
+        ]
+      }
+    ],
+    "idols": [
+      {
+        "type": "IDOL_2x1",
+        "bases": [
+          1
+        ],
+        "affixes": [
+          862,
+          873,
+          868,
+          867,
+          860,
+          114
+        ],
+        "corrupted": [
+          1070,
+          1059
+        ]
+      },
+      {
+        "type": "IDOL_1x4",
+        "bases": [
+          9
+        ],
+        "affixes": [
+          763,
+          470,
+          480
+        ],
+        "corrupted": [
+          1037
+        ],
+        "enchanted": [
+          892,
+          935,
+          933,
+          927
+        ]
+      },
+      {
+        "type": "IDOL_2x2",
+        "bases": [
+          11
+        ],
+        "affixes": [
+          743,
+          490
+        ],
+        "enchanted": [
+          892,
+          934,
+          899
+        ],
+        "corrupted": [
+          1043,
+          1112
+        ]
+      },
+      {
+        "type": "IDOL_3x1",
+        "bases": [
+          14
+        ],
+        "affixes": [
+          743,
+          490,
+          492
+        ],
+        "corrupted": [
+          1031,
+          1029
+        ]
+      },
+      {
+        "type": "IDOL_1x1_ETERRA",
+        "bases": [
+          0
+        ],
+        "affixes": [
+          118,
+          114,
+          319
+        ],
+        "corrupted": [
+          1069
+        ]
+      },
+      {
+        "type": "IDOL_1x3",
+        "bases": [
+          9
+        ],
+        "affixes": [
+          942,
+          117,
+          491
+        ],
+        "corrupted": [
+          1050
+        ],
+        "enchanted": [
+          892,
+          897
+        ]
+      },
+      {
+        "type": "IDOL_1x2",
+        "bases": [
+          1
+        ],
+        "affixes": [
+          878,
+          885,
+          880,
+          886
+        ],
+        "corrupted": [
+          1070,
+          1059
+        ]
+      },
+      {
+        "type": "IDOL_2x2",
+        "bases": [
+          4
+        ],
+        "affixes": [
+          743,
+          490
+        ],
+        "corrupted": [
+          1043
+        ]
+      },
+      {
+        "type": "IDOL_3x1",
+        "bases": [
+          9
+        ],
+        "affixes": [
+          456,
+          490
+        ],
+        "corrupted": [
+          1053
+        ],
+        "enchanted": [
+          892
+        ]
+      },
+      {
+        "type": "IDOL_1x3",
+        "bases": [
+          14
+        ],
+        "affixes": [
+          763,
+          116
+        ],
+        "corrupted": [
+          1043
+        ]
+      },
+      {
+        "type": "IDOL_1x2",
+        "bases": [
+          0
+        ],
+        "affixes": [
+          123,
+          117
+        ],
+        "corrupted": [
+          1059
+        ]
+      }
+    ],
+    "bases": []
+  },
+  "source": {
+    "name": "LETools · 4个角色并集",
+    "profiles": [
+      {
+        "url": "https://www.lastepochtools.com/profile/vsnail/character/MAONG",
+        "account": "vsnail",
+        "character": "MAONG",
+        "data_version": "1.5.2",
+        "items": [
+          {
+            "slot": "head",
+            "item_key": "UAzBMoVgNiA",
+            "type": "HELMET",
+            "base": 2,
+            "unique_id": 256,
+            "affixes": [
+              611,
+              503,
+              52,
+              13
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "chest",
+            "item_key": "UAzAsoZgNiA",
+            "type": "BODY_ARMOR",
+            "base": 4,
+            "unique_id": 436,
+            "affixes": [
+              52
+            ],
+            "corrupted": [
+              1012
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "waist",
+            "item_key": "UAzCswRgdiA",
+            "type": "BELT",
+            "base": 5,
+            "unique_id": 17,
+            "affixes": [
+              88,
+              59,
+              97
+            ],
+            "corrupted": [
+              1024
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "hands",
+            "item_key": "UAzCsEYGYBYg",
+            "type": "GLOVES",
+            "base": 5,
+            "unique_id": 134,
+            "affixes": [
+              88,
+              58,
+              36
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "feet",
+            "item_key": "UAwRmGZwdiA",
+            "type": "BOOTS",
+            "base": 10,
+            "unique_id": 337,
+            "affixes": [
+              28,
+              503
+            ],
+            "corrupted": [
+              991
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "weapon1",
+            "item_key": "UAwRhCYHYSA",
+            "type": "BOW",
+            "base": 11,
+            "unique_id": 271,
+            "affixes": [
+              432,
+              6
+            ],
+            "corrupted": [
+              966
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "weapon2",
+            "item_key": "UAzDMEYA4E4g",
+            "type": "QUIVER",
+            "base": 3,
+            "unique_id": 189,
+            "affixes": [
+              432,
+              503,
+              24
+            ],
+            "corrupted": [
+              966
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "relic",
+            "item_key": "UAwNgTALAjAzEA",
+            "type": "RELIC",
+            "base": 62,
+            "unique_id": 413,
+            "affixes": [
+              88
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "amulet",
+            "item_key": "UAzCsEYGZKA",
+            "type": "AMULET",
+            "base": 5,
+            "unique_id": 133,
+            "affixes": [
+              88,
+              33,
+              8,
+              72
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "ring1",
+            "item_key": "UAwRmBYHZKA",
+            "type": "RING",
+            "base": 10,
+            "unique_id": 477,
+            "affixes": [
+              507,
+              16
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": [
+              1126
+            ]
+          },
+          {
+            "slot": "ring2",
+            "item_key": "UAwRmBYHZKA",
+            "type": "RING",
+            "base": 10,
+            "unique_id": 477,
+            "affixes": [
+              507
+            ],
+            "corrupted": [
+              1074
+            ],
+            "enchanted": [],
+            "fixed": [
+              1121
+            ]
+          },
+          {
+            "slot": "idol_altar",
+            "item_key": "IIwBgLKyiJA",
+            "type": "IDOL_ALTAR",
+            "base": 11,
+            "unique_id": null,
+            "affixes": [
+              1093,
+              1094,
+              1099,
+              1100,
+              1089
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "idol-1",
+            "item_key": "IIwBgTA7CKtQ",
+            "type": "IDOL_2x1",
+            "base": 1,
+            "unique_id": null,
+            "affixes": [
+              862,
+              873
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "idol-2",
+            "item_key": "IIwBgzATCIJzSQ",
+            "type": "IDOL_1x4",
+            "base": 9,
+            "unique_id": null,
+            "affixes": [
+              763,
+              470
+            ],
+            "corrupted": [
+              1037
+            ],
+            "enchanted": [
+              892
+            ],
+            "fixed": []
+          },
+          {
+            "slot": "idol-3",
+            "item_key": "IIwBgzGLKIkA",
+            "type": "IDOL_2x2",
+            "base": 11,
+            "unique_id": null,
+            "affixes": [
+              743,
+              490
+            ],
+            "corrupted": [],
+            "enchanted": [
+              892,
+              934
+            ],
+            "fixed": []
+          },
+          {
+            "slot": "idol-4",
+            "item_key": "IIwBgTAnCwCwvQ",
+            "type": "IDOL_3x1",
+            "base": 14,
+            "unique_id": null,
+            "affixes": [
+              743,
+              490
+            ],
+            "corrupted": [
+              1031
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "idol-5",
+            "item_key": "IIwBgTArC00A",
+            "type": "IDOL_1x1_ETERRA",
+            "base": 0,
+            "unique_id": null,
+            "affixes": [
+              118,
+              114
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "idol-6",
+            "item_key": "IIwBgzCkJySQ",
+            "type": "IDOL_1x3",
+            "base": 9,
+            "unique_id": null,
+            "affixes": [
+              942,
+              117
+            ],
+            "corrupted": [
+              1050
+            ],
+            "enchanted": [
+              892
+            ],
+            "fixed": []
+          },
+          {
+            "slot": "idol-7",
+            "item_key": "IIwBgTAHCKtQ",
+            "type": "IDOL_1x2",
+            "base": 1,
+            "unique_id": null,
+            "affixes": [
+              878,
+              885
+            ],
+            "corrupted": [
+              1070
+            ],
+            "enchanted": [],
+            "fixed": []
+          }
+        ],
+        "fixed_affix_references": [
+          {
+            "slot": "ring1",
+            "type": "RING",
+            "ids": [
+              1126
+            ]
+          },
+          {
+            "slot": "ring2",
+            "type": "RING",
+            "ids": [
+              1121
+            ]
+          }
+        ],
+        "unique_idol_references": []
+      },
+      {
+        "url": "https://www.lastepochtools.com/profile/Amhali/character/ShurikenAmhali",
+        "account": "Amhali",
+        "character": "ShurikenAmhali",
+        "data_version": "1.5.2",
+        "items": [
+          {
+            "slot": "head",
+            "item_key": "UAzBMoVgNiA",
+            "type": "HELMET",
+            "base": 2,
+            "unique_id": 256,
+            "affixes": [
+              611,
+              471,
+              97
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "chest",
+            "item_key": "UAzAsoZgNiA",
+            "type": "BODY_ARMOR",
+            "base": 4,
+            "unique_id": 436,
+            "affixes": [
+              52
+            ],
+            "corrupted": [
+              1008
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "waist",
+            "item_key": "UAzCMwTgJiA",
+            "type": "BELT",
+            "base": 1,
+            "unique_id": 92,
+            "affixes": [
+              88,
+              30
+            ],
+            "corrupted": [
+              995
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "hands",
+            "item_key": "UAzCsEYGYBYg",
+            "type": "GLOVES",
+            "base": 5,
+            "unique_id": 134,
+            "affixes": [
+              88,
+              429,
+              36
+            ],
+            "corrupted": [
+              1005
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "feet",
+            "item_key": "UAwRmGZwdiA",
+            "type": "BOOTS",
+            "base": 10,
+            "unique_id": 337,
+            "affixes": [
+              28
+            ],
+            "corrupted": [
+              1024
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "weapon1",
+            "item_key": "UAwRhCYHYSA",
+            "type": "BOW",
+            "base": 11,
+            "unique_id": 271,
+            "affixes": [
+              432,
+              6,
+              55
+            ],
+            "corrupted": [
+              966
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "weapon2",
+            "item_key": "UAzDMEYA4E4g",
+            "type": "QUIVER",
+            "base": 3,
+            "unique_id": 189,
+            "affixes": [
+              432,
+              55,
+              60
+            ],
+            "corrupted": [
+              966
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "relic",
+            "item_key": "UAwNgTALAjAzEA",
+            "type": "RELIC",
+            "base": 62,
+            "unique_id": 413,
+            "affixes": [
+              88
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "amulet",
+            "item_key": "UAzCsEYGZKA",
+            "type": "AMULET",
+            "base": 5,
+            "unique_id": 133,
+            "affixes": [
+              88,
+              33,
+              8,
+              0
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "ring1",
+            "item_key": "UAwRmBYHZKA",
+            "type": "RING",
+            "base": 10,
+            "unique_id": 477,
+            "affixes": [
+              507
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": [
+              1117
+            ]
+          },
+          {
+            "slot": "ring2",
+            "item_key": "UAwRmBYHZKA",
+            "type": "RING",
+            "base": 10,
+            "unique_id": 477,
+            "affixes": [
+              507
+            ],
+            "corrupted": [
+              1023
+            ],
+            "enchanted": [],
+            "fixed": [
+              1121
+            ]
+          },
+          {
+            "slot": "idol_altar",
+            "item_key": "IIwBgLKyiJA",
+            "type": "IDOL_ALTAR",
+            "base": 11,
+            "unique_id": null,
+            "affixes": [
+              1093,
+              1089,
+              1097,
+              1088
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "idol-1",
+            "item_key": "IIwBgzGLKIkA",
+            "type": "IDOL_2x2",
+            "base": 11,
+            "unique_id": null,
+            "affixes": [
+              743,
+              490
+            ],
+            "corrupted": [
+              1043
+            ],
+            "enchanted": [
+              892
+            ],
+            "fixed": []
+          },
+          {
+            "slot": "idol-2",
+            "item_key": "IIwBgzATCIJzSQ",
+            "type": "IDOL_1x4",
+            "base": 9,
+            "unique_id": null,
+            "affixes": [
+              763,
+              470
+            ],
+            "corrupted": [],
+            "enchanted": [
+              935,
+              892
+            ],
+            "fixed": []
+          },
+          {
+            "slot": "idol-3",
+            "item_key": "IIwBgTAnCwCwvQ",
+            "type": "IDOL_3x1",
+            "base": 14,
+            "unique_id": null,
+            "affixes": [
+              743,
+              490
+            ],
+            "corrupted": [
+              1029
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "idol-4",
+            "item_key": "IIwBgzCkJySQ",
+            "type": "IDOL_1x3",
+            "base": 9,
+            "unique_id": null,
+            "affixes": [
+              942,
+              117
+            ],
+            "corrupted": [],
+            "enchanted": [
+              892
+            ],
+            "fixed": []
+          },
+          {
+            "slot": "idol-5",
+            "item_key": "IIwBgTA7CKtQ",
+            "type": "IDOL_2x1",
+            "base": 1,
+            "unique_id": null,
+            "affixes": [
+              862,
+              868
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "idol-6",
+            "item_key": "IIwBgTAHCKtQ",
+            "type": "IDOL_1x2",
+            "base": 1,
+            "unique_id": null,
+            "affixes": [
+              880,
+              886
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "idol-7",
+            "item_key": "IIwBgTArC00A",
+            "type": "IDOL_1x1_ETERRA",
+            "base": 0,
+            "unique_id": null,
+            "affixes": [
+              118,
+              319
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          }
+        ],
+        "fixed_affix_references": [
+          {
+            "slot": "ring1",
+            "type": "RING",
+            "ids": [
+              1117
+            ]
+          },
+          {
+            "slot": "ring2",
+            "type": "RING",
+            "ids": [
+              1121
+            ]
+          }
+        ],
+        "unique_idol_references": []
+      },
+      {
+        "url": "https://www.lastepochtools.com/profile/chachapieng/character/S5Luciann",
+        "account": "chachapieng",
+        "character": "S5Luciann",
+        "data_version": "1.5.2",
+        "items": [
+          {
+            "slot": "head",
+            "item_key": "UAzBMoVgNiA",
+            "type": "HELMET",
+            "base": 2,
+            "unique_id": 256,
+            "affixes": [
+              611,
+              762,
+              7,
+              8
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "chest",
+            "item_key": "UAzAsoZgNiA",
+            "type": "BODY_ARMOR",
+            "base": 4,
+            "unique_id": 436,
+            "affixes": [
+              503,
+              471
+            ],
+            "corrupted": [
+              1012
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "waist",
+            "item_key": "UAzCMwTgJiA",
+            "type": "BELT",
+            "base": 1,
+            "unique_id": 92,
+            "affixes": [
+              88,
+              8,
+              59
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "hands",
+            "item_key": "UAzCsEYGYBYg",
+            "type": "GLOVES",
+            "base": 5,
+            "unique_id": 134,
+            "affixes": [
+              88,
+              503,
+              86
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "feet",
+            "item_key": "UAwRmGZwdiA",
+            "type": "BOOTS",
+            "base": 10,
+            "unique_id": 337,
+            "affixes": [
+              28
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "weapon1",
+            "item_key": "UAwRhCYHYSA",
+            "type": "BOW",
+            "base": 11,
+            "unique_id": 271,
+            "affixes": [
+              432,
+              64
+            ],
+            "corrupted": [
+              966
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "weapon2",
+            "item_key": "UAzDMEYA4E4g",
+            "type": "QUIVER",
+            "base": 3,
+            "unique_id": 189,
+            "affixes": [
+              432,
+              503,
+              68
+            ],
+            "corrupted": [
+              966
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "relic",
+            "item_key": "UAwNgTALAjAzEA",
+            "type": "RELIC",
+            "base": 62,
+            "unique_id": 413,
+            "affixes": [
+              6
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "amulet",
+            "item_key": "UAzCsEYGZKA",
+            "type": "AMULET",
+            "base": 5,
+            "unique_id": 133,
+            "affixes": [
+              88,
+              33,
+              80,
+              59
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "ring1",
+            "item_key": "UAwRmBYHZKA",
+            "type": "RING",
+            "base": 10,
+            "unique_id": 477,
+            "affixes": [
+              507,
+              92
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": [
+              1126
+            ]
+          },
+          {
+            "slot": "ring2",
+            "item_key": "UAwRmBYHZKA",
+            "type": "RING",
+            "base": 10,
+            "unique_id": 477,
+            "affixes": [
+              507,
+              8
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": [
+              1121
+            ]
+          },
+          {
+            "slot": "idol_altar",
+            "item_key": "IIwBgLKyiJA",
+            "type": "IDOL_ALTAR",
+            "base": 11,
+            "unique_id": null,
+            "affixes": [
+              1093,
+              1089,
+              1103
+            ],
+            "corrupted": [
+              1108
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "idol-1",
+            "item_key": "IIwBgTA7CKtQ",
+            "type": "IDOL_2x1",
+            "base": 1,
+            "unique_id": null,
+            "affixes": [
+              862,
+              867
+            ],
+            "corrupted": [
+              1070
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "idol-2",
+            "item_key": "IIwBgTAnCwCwvQ",
+            "type": "IDOL_3x1",
+            "base": 14,
+            "unique_id": null,
+            "affixes": [
+              743,
+              492
+            ],
+            "corrupted": [
+              1029
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "idol-3",
+            "item_key": "IIwBgzGIgLFJA",
+            "type": "IDOL_2x2",
+            "base": 4,
+            "unique_id": null,
+            "affixes": [
+              743,
+              490
+            ],
+            "corrupted": [
+              1043
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "idol-4",
+            "item_key": "IIwBgTAHCKtQ",
+            "type": "IDOL_1x2",
+            "base": 1,
+            "unique_id": null,
+            "affixes": [
+              878,
+              886
+            ],
+            "corrupted": [
+              1059
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "idol-5",
+            "item_key": "IIwBgTArC00A",
+            "type": "IDOL_1x1_ETERRA",
+            "base": 0,
+            "unique_id": null,
+            "affixes": [
+              118,
+              319
+            ],
+            "corrupted": [
+              1069
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "idol-6",
+            "item_key": "IIwBgzATCIJzSQ",
+            "type": "IDOL_1x4",
+            "base": 9,
+            "unique_id": null,
+            "affixes": [
+              763,
+              470
+            ],
+            "corrupted": [],
+            "enchanted": [
+              933
+            ],
+            "fixed": []
+          },
+          {
+            "slot": "idol-7",
+            "item_key": "IIwBgzCkJySQ",
+            "type": "IDOL_1x3",
+            "base": 9,
+            "unique_id": null,
+            "affixes": [
+              942,
+              491
+            ],
+            "corrupted": [],
+            "enchanted": [
+              892,
+              897
+            ],
+            "fixed": []
+          }
+        ],
+        "fixed_affix_references": [
+          {
+            "slot": "ring1",
+            "type": "RING",
+            "ids": [
+              1126
+            ]
+          },
+          {
+            "slot": "ring2",
+            "type": "RING",
+            "ids": [
+              1121
+            ]
+          }
+        ],
+        "unique_idol_references": []
+      },
+      {
+        "url": "https://www.lastepochtools.com/profile/47x47/character/MaadCity",
+        "account": "47x47",
+        "character": "MaadCity",
+        "data_version": "1.5.2",
+        "items": [
+          {
+            "slot": "head",
+            "item_key": "UAzBMoVgNiA",
+            "type": "HELMET",
+            "base": 2,
+            "unique_id": 256,
+            "affixes": [
+              611,
+              762
+            ],
+            "corrupted": [
+              1017
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "chest",
+            "item_key": "UAzAsoZgNiA",
+            "type": "BODY_ARMOR",
+            "base": 4,
+            "unique_id": 436,
+            "affixes": [
+              503,
+              80
+            ],
+            "corrupted": [
+              1014
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "waist",
+            "item_key": "UAzDsBZgJiA",
+            "type": "BELT",
+            "base": 7,
+            "unique_id": 402,
+            "affixes": [
+              88,
+              83
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "hands",
+            "item_key": "UAzCsEYGYBYg",
+            "type": "GLOVES",
+            "base": 5,
+            "unique_id": 134,
+            "affixes": [
+              88,
+              503
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "feet",
+            "item_key": "UAwRmGZwdiA",
+            "type": "BOOTS",
+            "base": 10,
+            "unique_id": 337,
+            "affixes": [
+              28
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "weapon1",
+            "item_key": "UAwRhCYHYSA",
+            "type": "BOW",
+            "base": 11,
+            "unique_id": 271,
+            "affixes": [
+              432
+            ],
+            "corrupted": [
+              966
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "weapon2",
+            "item_key": "UAzDMEYA4E4g",
+            "type": "QUIVER",
+            "base": 3,
+            "unique_id": 189,
+            "affixes": [
+              432
+            ],
+            "corrupted": [
+              966
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "relic",
+            "item_key": "UAwNgTALAjAzEA",
+            "type": "RELIC",
+            "base": 62,
+            "unique_id": 413,
+            "affixes": [],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "amulet",
+            "item_key": "UAzCsEYGZKA",
+            "type": "AMULET",
+            "base": 5,
+            "unique_id": 133,
+            "affixes": [
+              88,
+              6,
+              5
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "ring1",
+            "item_key": "UAwRmBYHZKA",
+            "type": "RING",
+            "base": 10,
+            "unique_id": 477,
+            "affixes": [
+              507
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": [
+              1111
+            ]
+          },
+          {
+            "slot": "ring2",
+            "item_key": "UAwRmBYHZKA",
+            "type": "RING",
+            "base": 10,
+            "unique_id": 477,
+            "affixes": [
+              507
+            ],
+            "corrupted": [
+              1016
+            ],
+            "enchanted": [],
+            "fixed": [
+              1117
+            ]
+          },
+          {
+            "slot": "idol_altar",
+            "item_key": "IIwBgLKyiJA",
+            "type": "IDOL_ALTAR",
+            "base": 11,
+            "unique_id": null,
+            "affixes": [
+              1094,
+              1100,
+              1099,
+              1089
+            ],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "idol-1",
+            "item_key": "IIwBgzATCIJzSQ",
+            "type": "IDOL_1x4",
+            "base": 9,
+            "unique_id": null,
+            "affixes": [
+              763,
+              480
+            ],
+            "corrupted": [],
+            "enchanted": [
+              935,
+              927
+            ],
+            "fixed": []
+          },
+          {
+            "slot": "idol-2",
+            "item_key": "IIwBgTAnCJdQ",
+            "type": "IDOL_3x1",
+            "base": 9,
+            "unique_id": null,
+            "affixes": [
+              456,
+              490
+            ],
+            "corrupted": [
+              1053
+            ],
+            "enchanted": [
+              892
+            ],
+            "fixed": []
+          },
+          {
+            "slot": "idol-3",
+            "item_key": "IIwBgzGLKIkA",
+            "type": "IDOL_2x2",
+            "base": 11,
+            "unique_id": null,
+            "affixes": [
+              743,
+              490
+            ],
+            "corrupted": [
+              1112
+            ],
+            "enchanted": [
+              934,
+              899
+            ],
+            "fixed": []
+          },
+          {
+            "slot": "idol-4",
+            "item_key": "IIwBgTA7CKtQ",
+            "type": "IDOL_2x1",
+            "base": 1,
+            "unique_id": null,
+            "affixes": [
+              860,
+              114
+            ],
+            "corrupted": [
+              1059
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "idol-5",
+            "item_key": "IIwBgzCLALJJA",
+            "type": "IDOL_1x3",
+            "base": 14,
+            "unique_id": null,
+            "affixes": [
+              763,
+              116
+            ],
+            "corrupted": [
+              1043
+            ],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "idol-6",
+            "item_key": "UAzCMGYBZKA",
+            "type": "IDOL_1x1_ETERRA",
+            "base": 1,
+            "unique_id": 344,
+            "affixes": [],
+            "corrupted": [],
+            "enchanted": [],
+            "fixed": []
+          },
+          {
+            "slot": "idol-7",
+            "item_key": "IIwBgTAHC00A",
+            "type": "IDOL_1x2",
+            "base": 0,
+            "unique_id": null,
+            "affixes": [
+              123,
+              117
+            ],
+            "corrupted": [
+              1059
+            ],
+            "enchanted": [],
+            "fixed": []
+          }
+        ],
+        "fixed_affix_references": [
+          {
+            "slot": "ring1",
+            "type": "RING",
+            "ids": [
+              1111
+            ]
+          },
+          {
+            "slot": "ring2",
+            "type": "RING",
+            "ids": [
+              1117
+            ]
+          }
+        ],
+        "unique_idol_references": [
+          {
+            "slot": "idol-6",
+            "unique_id": 344,
+            "affixes": [],
+            "corrupted": [],
+            "enchanted": []
+          }
+        ]
+      }
+    ],
+    "warnings": [
+      "角色当前配装按部位取并集，包含低阶及传奇后加词缀；角色词缀顺序不代表推荐优先级。",
+      "按冻结ID类别分类：普通神像只计0／5类，腐化6、附魔4另存参考；祭坛附加词缀作为实际目标。",
+      "暗金固定随机词缀7另存参考；不添加暗金固有属性、技能、祝福或练级目标。"
+    ],
+    "file": "sources/builds/heartseeker-shuriken-profiles-2026-10-18.json",
+    "sha256": "b541f03b5d6da1df5a4c5c5e0a8c4715ace855799b0f0176e996579134c8f248",
+    "extracted_on": "2026-10-18",
+    "method": "冻结可见UI摘录解码；不是原生API响应"
+  }
+}

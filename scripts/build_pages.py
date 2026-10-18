@@ -9,7 +9,7 @@ from urllib.request import urlopen
 ROOT = Path(__file__).resolve().parents[1]
 PYODIDE_VERSION = "314.0.7"
 PYODIDE_FILES = ("pyodide.mjs", "pyodide.asm.mjs", "pyodide.asm.wasm", "python_stdlib.zip", "pyodide-lock.json")
-WEB_FILES = ("index.html", "app.js", "workbench.js", "style.css", "browser.js", "worker.mjs")
+WEB_FILES = ("index.html", "app.js", "workbench.js", "profile-reader.js", "style.css", "browser.js", "worker.mjs")
 PROBABILITY_FILES = ("index.html", "app.js", "model.mjs", "style.css")
 PROBABILITY_WORKBOOK = "outputs/01a135a3-5a09-7e91-83c5-4bd333aeb5ea/普通崇高预言-T7概率.xlsx"
 
@@ -40,7 +40,7 @@ def build_probability_page(site):
 
 def build_archive(output):
     evidence = json.loads((ROOT / "analysis/raxx-variable-extraction.json").read_text(encoding="utf-8"))
-    files = ["tool/engine.py", "tool/requirements.py", "tool/browser_runtime.py",
+    files = ["tool/engine.py", "tool/requirements.py", "tool/browser_runtime.py", "tool/letools.py",
              "scripts/extract_raxx_variables.py", "scripts/generate_filter.py", "scripts/generate_current_filter.py",
              "sources/tool-catalog.json", "sources/seasonal-unique-protection.json", "sources/common-unique-protection.json", "sources/item-sets.json", "sources/ultra-rare-uniques.json", "templates/base-manifest.json", "templates/LE-base-v1.xml",
              "analysis/raxx-variable-extraction.json"]
@@ -70,7 +70,7 @@ def main():
     revision = digest.hexdigest()[:16]
     index = (site / "index.html").read_text(encoding="utf-8")
     index = index.replace('<script src="app.js">', '<script src="browser.js"></script>\n<script src="app.js">')
-    for name in ("app.js", "workbench.js", "browser.js", "style.css"):
+    for name in ("app.js", "workbench.js", "profile-reader.js", "browser.js", "style.css"):
         index = index.replace(f'"{name}"', f'"{name}?v={revision}"')
     (site / "index.html").write_text(index, encoding="utf-8", newline="\n")
     (site / ".nojekyll").touch()
