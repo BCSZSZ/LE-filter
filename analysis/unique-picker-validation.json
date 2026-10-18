@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-18",
+  "status": "passed",
+  "baselineCommit": "e93d07a2017191453059335b4e8afc6a7d24278e",
+  "gameVersion": "1.5.2.2",
+  "scope": "Unique selector display and backup entry only",
+  "denominators": {
+    "world": "One item of the corresponding ordinary Unique prophecy, area100, CoF12; class-specific where applicable",
+    "bossAndSpecial": "One independent reward opportunity; no aggregation of extra draws or repeated groups",
+    "sets": "Excluded from ordinary Unique prophecy"
+  },
+  "snapshot": {
+    "items": 489,
+    "kinds": {
+      "world": 330,
+      "special": 32,
+      "legacy": 4,
+      "boss": 123
+    },
+    "numericProphecy": 276,
+    "icons": 487,
+    "iconsVerified": 6,
+    "gameExecutionTested": false,
+    "sha256": "36095e9c7ec56acf5a4957560b6b43856ef8700c0bebfe288deddbd51e229e7a",
+    "offlineRebuildDeterministic": true
+  },
+  "validation": {
+    "unittest": {
+      "command": "python -X utf8 -m unittest discover -s tool -v",
+      "passed": 109,
+      "seconds": 130.269
+    },
+    "javascriptSyntax": "node --check tool/web/app.js",
+    "gitDiffCheck": true,
+    "isolatedRuntimeArchive": true,
+    "pagesBuild": true
+  },
+  "unchanged": {
+    "protectedChangedFiles": [],
+    "allSixTemplateConfigsEqualBaseline": true,
+    "originalCatalogEqualBaseline": true,
+    "defaultXMLBytesEqualBaseline": true,
+    "defaultRules": 97,
+    "defaultXMLSHA256": "d016f8837bdb17f739a8864c385068cfe4b614fe12e592b286e8f9406e0dac22"
+  },
+  "browser": {
+    "origin": "http://127.0.0.1:8877/",
+    "runtime": "Published static package, Pyodide WASM",
+    "topLoadButtonRemoved": true,
+    "backupImportInCollapsedMore": true,
+    "slotGroupsAndFilter": true,
+    "classExample475": {
+      "Acolyte": "6.81%",
+      "Sentinel": "1.07%",
+      "selectedCountUnchanged": true
+    },
+    "crossSlotSelectionAndApplyReload": true,
+    "cancelLeavesTargetsUnchanged": true,
+    "legacyHiddenUnlessSelectedOrOptedIn": true,
+    "commonUniqueIdolPicker": 10,
+    "genericAffixPickerUnchanged": true,
+    "wasmPreviewRules": 97,
+    "loadedIconsInSelectedSample": 11,
+    "consoleWarningsAndErrors": 0,
+    "screenshot": "docs/images/unique-picker.jpg"
+  },
+  "gameExecutionTested": false,
+  "browserBlobDownloadTested": false
+}

@@ -3,7 +3,15 @@
 更新时间：2026-10-18，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
 
-## 最新2026-10-18追加：目标暗金2LP升彗星
+## 最新2026-10-18追加：暗金选择器与备份入口
+
+- 顶部“载入配置”导入整套方案，与单BD需求JSON／filter提取不同；恢复逻辑保留，入口移到“更多→导入方案备份”。顶部仅留“保存配置”，低频菜单仍默认收起、操作后关闭。
+- 暗金选择按冻结装备部位分组，另有部位筛选；名字／ID／来源搜索与已选跨筛选保留。显示世界／Boss／特殊来源、带条件的概率与可用外链图标，失败隐藏图片。
+- 世界预言口径为100级、满命运、同类型每件普通暗金奖励，职业筛选仅用于概率；默认显示全职业范围。套装不进入普通暗金预言池。新数据独立冻结，不反写原词库或目标；运行包与本地统一读入。证据与算法复现见[暗金掉落资料](research/UNIQUE_PICKER_DROP_DATA.md)。
+- 玩家确认Boss／特殊掉落率按每次独立奖励，多次掉落不合并为一次战斗至少获得一件；有不同条件的独立奖励分别标注。
+- [验证记录](../analysis/unique-picker-validation.json)：109项回归通过，静态WASM预览仍为97条；全部六模板配置、原词库和默认XML与本次变更前一致。已检查分组／职业概率、跨筛选勾选、应用刷新、取消、旧ID与共通神像入口；[界面截图](images/unique-picker.jpg)。没有游戏客户端掉落实测。
+
+## 此前2026-10-18追加：目标暗金2LP升彗星
 
 - 启用BD的暗金目标（含套装补全项）恰好2LP改为彗星，名称红7／光柱10／声音12；恰好1LP仍为橙色灵感，非目标2LP仍为通用灵感。六件T0继续从0LP起常驻彗星，不重复加入目标LP池；WW及其他条件保持。
 - 1LP与2LP各一条共用目标池，不拆主副分支。套装补全只作用于生成，目标与配置不反写；停用BD不进入匹配池。

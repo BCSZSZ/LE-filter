@@ -7,7 +7,7 @@
 <body>
 <header class="topbar">
   <div class="brand"><span class="brandmark">LE</span><div><strong>FILTER WORKBENCH</strong><small>目标工作台 · Raxx基底</small></div></div>
-  <div class="top-actions"><span id="save-state" class="muted">本地保存</span><button id="load-config">载入配置</button><button id="save-config">保存配置</button></div>
+  <div class="top-actions"><span id="save-state" class="muted">本地保存</span><button id="save-config">保存配置</button></div>
 </header>
 <div class="layout">
   <aside>
@@ -21,6 +21,7 @@
     <details id="sidebar-more" class="sidebar-more">
       <summary>更多</summary>
       <div class="sidebar-more-actions">
+        <button id="load-config" class="wide">导入方案备份</button>
         <button id="import-filter" class="wide dashed">导入filter</button>
         <button id="import-requirements" class="wide dashed">导入BD需求JSON</button>
         <button id="save-requirements" class="wide">导出本BD需求</button>
@@ -63,8 +64,8 @@
 </div>
 <dialog id="picker">
   <div class="dialog-heading"><div><p class="eyebrow">SEARCH & SELECT</p><h2 id="picker-title"></h2></div><button data-close="picker" aria-label="关闭选择器">×</button></div>
-  <div class="picker-controls"><input id="picker-search" type="search" placeholder="搜索中文 / English / ID" aria-label="搜索词库"><label><input id="only-selected" type="checkbox">只看已选</label><label><input id="show-legacy" type="checkbox">显示旧／隐藏条目</label></div>
-  <p id="picker-note" class="picker-note" hidden></p><div id="picker-summary" class="muted"></div><div id="picker-list"></div>
+  <div class="picker-controls"><input id="picker-search" type="search" placeholder="搜索中文 / English / ID" aria-label="搜索词库"><label id="picker-slot-label" hidden>部位 <select id="picker-slot" aria-label="筛选暗金部位"></select></label><label id="picker-class-label" hidden>职业 <select id="picker-class" aria-label="暗金预言职业"><option value="">全职业范围</option><option value="Sentinel">守卫</option><option value="Mage">法师</option><option value="Primalist">原始人</option><option value="Acolyte">侍祭</option><option value="Rogue">游侠</option></select></label><label><input id="only-selected" type="checkbox">只看已选</label><label><input id="show-legacy" type="checkbox">显示旧／隐藏条目</label></div>
+  <p id="picker-note" class="picker-note" hidden></p><p id="picker-drop-context" class="picker-note" hidden></p><div id="picker-summary" class="muted"></div><div id="picker-list"></div>
   <div class="dialog-footer"><span id="selection-count"></span><button id="apply-selection" class="primary">应用选择</button></div>
 </dialog>
 <dialog id="reset-dialog">
