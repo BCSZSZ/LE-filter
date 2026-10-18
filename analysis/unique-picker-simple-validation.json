@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-19",
+  "status": "passed",
+  "baselineCommit": "357aa164e290df8c0886b38d3597301851625f8f",
+  "scope": "Static supplemental unique information; no selector settings",
+  "displayPolicy": {
+    "prophecy": "100级／命运12／无镜片／同类型通用池，不计职业偏置",
+    "boss": "主要来源，最高副本层级／开启者奖励／资料表内上限；每次独立奖励，不合并额外次数"
+  },
+  "dataset": {
+    "items": 489,
+    "sha256": "33430400aa9495968930303bfa4419fcc075dcd4616b3fb93016c0d66073ac87",
+    "originalResearchFieldsUnchanged": true,
+    "deterministicRebuild": true
+  },
+  "tests": {
+    "command": "python -X utf8 -m unittest discover -s tool -v",
+    "passed": 111,
+    "seconds": 127.046,
+    "javascriptSyntax": true,
+    "pagesBuild": true
+  },
+  "browser": {
+    "origin": "http://127.0.0.1:8877/",
+    "dropdowns": 0,
+    "visibleExtraFilters": 0,
+    "extraSourceToggles": 0,
+    "bodyArmorRows": 36,
+    "bodyArmorInfoRecords": 36,
+    "crossSearchSelectionRetained": true,
+    "cancelLeavesTargetsUnchanged": true,
+    "genericAffixFiltersStillVisible": 2,
+    "consoleWarningsAndErrors": 0,
+    "screenshot": "docs/images/unique-picker-simple.jpg"
+  },
+  "unchanged": {
+    "protectedChangedFiles": [],
+    "defaultRules": 97,
+    "defaultXMLSHA256": "d016f8837bdb17f739a8864c385068cfe4b614fe12e592b286e8f9406e0dac22"
+  },
+  "gameExecutionTested": false
+}

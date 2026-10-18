@@ -8,11 +8,21 @@ import engine
 from browser_runtime import browser_bootstrap
 from scripts.build_unique_drop_catalog import (
     CLASSES, INPUT, build, independent_reward_scenarios, prophecy_distribution,
-    reroll_distribution, single_reward_probability,
+    reference_display, reroll_distribution, single_reward_probability,
 )
 
 
 class UniqueDropMathTests(unittest.TestCase):
+    def test_fixed_display_chooses_highest_tier_host_upper_rate(self):
+        row = {"kind": "boss", "primordial": False, "cocooned": False, "locations": [{"kind": "boss", "name": "Boss", "probabilityText": "0%–100%", "scenarios": [
+            {"tier": 1, "hostOnly": True, "maximumProbability": 1.},
+            {"tier": 4, "hostOnly": False, "maximumProbability": .9},
+            {"tier": 4, "hostOnly": True, "maximumProbability": .3}]}]}
+        display = reference_display(row)
+        self.assertEqual(display["source"], "Boss")
+        self.assertEqual(display["probability"], .3)
+        self.assertEqual(display["probabilityText"], "30%")
+
     def test_finite_rerolls_match_probability_tree(self):
         rejected = [.2, .7, 1.]
         expected = [0.] * len(rejected)
@@ -87,6 +97,9 @@ class UniqueDropSnapshotTests(unittest.TestCase):
                          hashlib.sha256(INPUT.read_bytes()).hexdigest())
         self.assertFalse(self.snapshot["summary"]["gameExecutionTested"])
         for row in self.snapshot["items"].values():
+            self.assertEqual(set(row["display"]), {"kind", "source", "probability", "probabilityText"})
+            self.assertTrue(row["display"]["source"])
+            self.assertTrue(row["display"]["probabilityText"])
             self.assertIn(row["kind"], {"world", "boss", "special", "legacy"})
             self.assertTrue(row["locations"])
             self.assertTrue(row["sourceUrl"].startswith("https://"))
@@ -140,6 +153,22 @@ class UniqueDropSnapshotTests(unittest.TestCase):
         self.assertEqual(boot["catalog"]["unique_drops"], self.snapshot)
         self.assertEqual({key: value for key, value in boot["catalog"].items() if key != "unique_drops"},
                          engine.bootstrap()["catalog"])
+
+    def test_fixed_reference_uses_unbiased_pool_and_one_boss_rate(self):
+        items = self.snapshot["items"]
+        for pool in self.snapshot["prophecyPools"].values():
+            native = {i["uniqueID"]: i for i in self.inputs["uniques"]}
+            base = native[pool[0]]["baseType"]
+            factor = self.inputs["uniqueIdolBaseTypeOccurrences"].count(base) / 7 if 25 <= base <= 33 else 1
+            total_weight = sum(1 - native[uid]["rerollChance"] for uid in pool)
+            for uid in pool:
+                # All current pools have a negligible 60-rejection tail.
+                expected = factor * (1 - native[uid]["rerollChance"]) / total_weight
+                self.assertAlmostEqual(items[str(uid)]["display"]["probability"], expected, places=10)
+        self.assertEqual(items["355"]["display"]["probability"], .1)
+        self.assertAlmostEqual(items["238"]["display"]["probability"], 10 / 27)
+        self.assertEqual(items["253"]["display"]["probability"], .45)
+        self.assertEqual(items["153"]["display"]["probability"], .45)
 
     def test_native_boss_and_echo_examples_use_single_reward_rates(self):
         items = self.snapshot["items"]

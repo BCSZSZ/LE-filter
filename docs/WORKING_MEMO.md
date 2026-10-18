@@ -1,9 +1,15 @@
 # 后续工作 memo
 
-更新时间：2026-10-18，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+更新时间：2026-10-19，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
 
-## 最新2026-10-18追加：暗金选择器与备份入口
+## 最新2026-10-19：暗金附加信息精简
+
+- 按玩家要求，暗金选择器只留搜索与勾选，按部位分组；职业／部位筛选、只看已选／旧项开关及多来源展开退出暗金界面，词缀与底材原控件保留。每件只显示一个主要来源、一个固定参考值及图片。
+- 预言固定100级／命运12／无镜片通用池，不计职业偏置；Boss／特殊取主要来源的最高tier／开启者奖励表内上限，按单次独立奖励。未知固定概率的机制保留简短文字。完整原生研究字段保留，界面只读`display`。
+- [精简验证](../analysis/unique-picker-simple-validation.json)：111项回归通过，暗金选择器0个下拉菜单／0个额外筛选开关／0个多来源展开；每件一条信息记录，搜索保留勾选、关闭不写目标，词缀选择器原控件正常。原研究字段与默认97条XML保持；[新界面](images/unique-picker-simple.jpg)。
+
+## 此前2026-10-18追加：暗金选择器与备份入口
 
 - 顶部“载入配置”导入整套方案，与单BD需求JSON／filter提取不同；恢复逻辑保留，入口移到“更多→导入方案备份”。顶部仅留“保存配置”，低频菜单仍默认收起、操作后关闭。
 - 暗金选择按冻结装备部位分组，另有部位筛选；名字／ID／来源搜索与已选跨筛选保留。显示世界／Boss／特殊来源、带条件的概率与可用外链图标，失败隐藏图片。

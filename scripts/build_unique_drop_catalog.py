@@ -108,6 +108,25 @@ def range_text(values):
     return percentage(low) if math.isclose(low, high, rel_tol=1e-10, abs_tol=1e-14) else f"{percentage(low)}–{percentage(high)}"
 
 
+def reference_display(row, prophecy_probability=None):
+    """One fixed reference, with the full source evidence retained separately."""
+    location = next((loc for loc in row["locations"] if loc["kind"] == row["kind"]), row["locations"][0])
+    probability = None
+    text = location["probabilityText"]
+    if row["kind"] == "world":
+        probability = 0 if row["set"] else prophecy_probability
+        text = "需套装预言" if row["set"] else percentage(probability)
+    elif location.get("scenarios"):
+        scenario = max(location["scenarios"], key=lambda s: (s["tier"] or 0, s["hostOnly"], s["maximumProbability"]))
+        probability = scenario["maximumProbability"]
+        text = percentage(probability)
+    elif row["primordial"]:
+        text = "无固定掉率"
+    elif row["cocooned"]:
+        text = "概率未公开"
+    return {"kind": row["kind"], "source": location["name"], "probability": probability, "probabilityText": text}
+
+
 def rate_from_group(group, target):
     rate = {k: v for k, v in group.items() if k != "targets"}
     rate.update(target)
@@ -170,10 +189,13 @@ def build():
         if not item["isSetItem"]:
             unique_pools[item["baseType"]].append(item)
     probabilities = defaultdict(dict)
+    references = {}
     pools = {}
     idol_counts = Counter(frozen["uniqueIdolBaseTypeOccurrences"])
     for base, pool in sorted(unique_pools.items()):
         pools[str(base)] = [i["uniqueID"] for i in pool]
+        factor = idol_counts[base] / sum(idol_counts.values()) if 25 <= base <= 33 else 1
+        references.update({i["uniqueID"]: p * factor for i, p in zip(pool, reroll_distribution([i["rerollChance"] for i in pool]))})
         for klass, mask in CLASSES.items():
             if 25 <= base <= 33:
                 # Unique Idol first samples the cached list of base types, one
@@ -284,10 +306,12 @@ def build():
             row["locations"].append({"kind": "special", "name": "裂隙野兽：结束谱系", "url": frozen["officialSources"]["lineage"], "probabilityText": "结束谱系的奖励", "conditions": ["非世界随机掉落；奖励数量／分配概率未在该来源给出固定值"]})
         if not row["locations"]:
             row["locations"].append({"kind": "special", "name": "特殊获取", "url": source_url, "probabilityText": "当前来源／概率未核实", "conditions": ["非世界随机掉落"]})
+        row["display"] = reference_display(row, references.get(uid))
         items[str(uid)] = row
     return {"version": 1, "gameVersion": frozen["gameVersion"], "asOf": frozen["retrievedOn"],
             "context": {"areaLevel": 100, "circleOfFortuneRank": 12, "lens": "none", "denominator": "每件同类型普通暗金预言奖励；神像使用暗金神像预言", "bossRateScope": "每次独立奖励的基础掉率及其稀有度范围，额外奖励次数不合并，未计命运Boss奖励加成；副本/腐化/开启者条件逐项保留", "classCompatibilityChance": frozen["nativeRoll"]["classCompatibilityChance"], "uniqueIdolBaseTypeOccurrences": frozen["uniqueIdolBaseTypeOccurrences"]},
             "sources": {**frozen["sources"], "frozenInput": {"path": INPUT.relative_to(ROOT).as_posix(), "sha256": hashlib.sha256(INPUT.read_bytes()).hexdigest()}, "official": frozen["officialSources"]},
+            "displayPolicy": {"prophecy": "100级／命运12／无镜片／同类型通用池，不计职业偏置", "boss": "主要来源，最高副本层级／开启者奖励／资料表内上限；每次独立奖励，不合并额外次数"},
             "prophecyPools": pools, "items": items,
             "summary": {"items": len(items), "kinds": dict(Counter(i["kind"] for i in items.values())), "numericProphecy": sum(bool(i.get("prophecyByClass")) for i in items.values()), "icons": sum("iconUrl" in i for i in items.values()), "iconsVerified": len(frozen["iconValidation"]), "gameExecutionTested": False}}
 

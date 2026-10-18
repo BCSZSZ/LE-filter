@@ -63,6 +63,10 @@
       "gamblersFallacyQuest": "https://forum.lastepoch.com/t/last-epoch-tombs-of-the-erased-patch-notes/75247/8"
     }
   },
+  "displayPolicy": {
+    "prophecy": "100级／命运12／无镜片／同类型通用池，不计职业偏置",
+    "boss": "主要来源，最高副本层级／开启者奖励／资料表内上限；每次独立奖励，不合并额外次数"
+  },
   "prophecyPools": {
     "0": [
       0,
@@ -426,6 +430,12 @@
         "Primalist": 0.12260292253988431,
         "Acolyte": 0.1362370081754603,
         "Rogue": 0.1587934003501607
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07968127510853831,
+        "probabilityText": "7.97%"
       }
     },
     "1": {
@@ -466,7 +476,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/fractured_crown.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/fractured_crown.png",
+      "display": {
+        "kind": "special",
+        "source": "制作：符文·升华",
+        "probability": null,
+        "probabilityText": "符合配方时100%"
+      }
     },
     "2": {
       "kind": "world",
@@ -496,6 +512,12 @@
         "Primalist": 0.12260292253988431,
         "Acolyte": 0.1362370081754603,
         "Rogue": 0.1587934003501607
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07968127510853831,
+        "probabilityText": "7.97%"
       }
     },
     "3": {
@@ -526,6 +548,12 @@
         "Primalist": 0.12260292253988431,
         "Acolyte": 0.015936254071832842,
         "Rogue": 0.015936254071832842
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07968127510853831,
+        "probabilityText": "7.97%"
       }
     },
     "4": {
@@ -556,6 +584,12 @@
         "Primalist": 0.12260292253988431,
         "Acolyte": 0.1362370081754603,
         "Rogue": 0.1587934003501607
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07968127510853831,
+        "probabilityText": "7.97%"
       }
     },
     "5": {
@@ -578,7 +612,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/isadorarevenge.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/isadorarevenge.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "6": {
       "kind": "world",
@@ -608,6 +648,12 @@
         "Primalist": 0.12260292253988431,
         "Acolyte": 0.1362370081754603,
         "Rogue": 0.1587934003501607
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07968127510853831,
+        "probabilityText": "7.97%"
       }
     },
     "7": {
@@ -638,6 +684,12 @@
         "Primalist": 0.09030100377013502,
         "Acolyte": 0.08512680568512622,
         "Rogue": 0.09258584765379888
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.06688963216036031,
+        "probabilityText": "6.69%"
       }
     },
     "8": {
@@ -668,6 +720,12 @@
         "Primalist": 0.09030100377013502,
         "Acolyte": 0.08512680568512622,
         "Rogue": 0.09258584765379888
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.06688963216036031,
+        "probabilityText": "6.69%"
       }
     },
     "9": {
@@ -698,6 +756,12 @@
         "Primalist": 0.09030100377013502,
         "Acolyte": 0.08512680568512622,
         "Rogue": 0.09258584765379888
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.06688963216036031,
+        "probabilityText": "6.69%"
       }
     },
     "10": {
@@ -728,6 +792,12 @@
         "Primalist": 0.09030100377013502,
         "Acolyte": 0.08512680568512622,
         "Rogue": 0.09258584765379888
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.06688963216036031,
+        "probabilityText": "6.69%"
       }
     },
     "11": {
@@ -758,6 +828,12 @@
         "Primalist": 0.04515050188506751,
         "Acolyte": 0.04256340284256311,
         "Rogue": 0.04629292382689944
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.033444816080180156,
+        "probabilityText": "3.34%"
       }
     },
     "12": {
@@ -788,6 +864,12 @@
         "Primalist": 0.09030100377013502,
         "Acolyte": 0.08512680568512622,
         "Rogue": 0.09258584765379888
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.06688963216036031,
+        "probabilityText": "6.69%"
       }
     },
     "13": {
@@ -818,6 +900,12 @@
         "Primalist": 0.09030100377013502,
         "Acolyte": 0.08512680568512622,
         "Rogue": 0.09258584765379888
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.06688963216036031,
+        "probabilityText": "6.69%"
       }
     },
     "14": {
@@ -848,6 +936,12 @@
         "Primalist": 0.09030100377013502,
         "Acolyte": 0.08512680568512622,
         "Rogue": 0.09258584765379888
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.06688963216036031,
+        "probabilityText": "6.69%"
       }
     },
     "15": {
@@ -877,6 +971,12 @@
         "Primalist": 0.09615384582319908,
         "Acolyte": 0.09615384582319908,
         "Rogue": 0.09615384582319908
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09615384582319908,
+        "probabilityText": "9.62%"
       }
     },
     "16": {
@@ -899,7 +999,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/isadoratombbinding.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/isadoratombbinding.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "17": {
       "kind": "world",
@@ -928,6 +1034,12 @@
         "Primalist": 0.09615384582319908,
         "Acolyte": 0.09615384582319908,
         "Rogue": 0.09615384582319908
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09615384582319908,
+        "probabilityText": "9.62%"
       }
     },
     "18": {
@@ -957,6 +1069,12 @@
         "Primalist": 0.09615384582319908,
         "Acolyte": 0.09615384582319908,
         "Rogue": 0.09615384582319908
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09615384582319908,
+        "probabilityText": "9.62%"
       }
     },
     "19": {
@@ -986,6 +1104,12 @@
         "Primalist": 0.0684884600624762,
         "Acolyte": 0.0684884600624762,
         "Rogue": 0.0684884600624762
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0684884600624762,
+        "probabilityText": "6.85%"
       }
     },
     "20": {
@@ -1015,6 +1139,12 @@
         "Primalist": 0.0684884600624762,
         "Acolyte": 0.0684884600624762,
         "Rogue": 0.0684884600624762
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0684884600624762,
+        "probabilityText": "6.85%"
       }
     },
     "21": {
@@ -1044,6 +1174,12 @@
         "Primalist": 0.0684884600624762,
         "Acolyte": 0.0684884600624762,
         "Rogue": 0.0684884600624762
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0684884600624762,
+        "probabilityText": "6.85%"
       }
     },
     "22": {
@@ -1073,6 +1209,12 @@
         "Primalist": 0.062223881834048915,
         "Acolyte": 0.062223881834048915,
         "Rogue": 0.062223881834048915
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.062223881834048915,
+        "probabilityText": "6.22%"
       }
     },
     "23": {
@@ -1102,6 +1244,12 @@
         "Primalist": 0.062223881834048915,
         "Acolyte": 0.062223881834048915,
         "Rogue": 0.062223881834048915
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.062223881834048915,
+        "probabilityText": "6.22%"
       }
     },
     "24": {
@@ -1131,6 +1279,12 @@
         "Primalist": 0.062223881834048915,
         "Acolyte": 0.062223881834048915,
         "Rogue": 0.062223881834048915
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.062223881834048915,
+        "probabilityText": "6.22%"
       }
     },
     "25": {
@@ -1160,6 +1314,12 @@
         "Primalist": 0.062223881834048915,
         "Acolyte": 0.062223881834048915,
         "Rogue": 0.062223881834048915
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.062223881834048915,
+        "probabilityText": "6.22%"
       }
     },
     "26": {
@@ -1182,7 +1342,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/isadoragravechill.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/isadoragravechill.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "27": {
       "kind": "world",
@@ -1211,6 +1377,12 @@
         "Primalist": 0.062223881834048915,
         "Acolyte": 0.062223881834048915,
         "Rogue": 0.062223881834048915
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.062223881834048915,
+        "probabilityText": "6.22%"
       }
     },
     "28": {
@@ -1240,6 +1412,12 @@
         "Primalist": 0.1562499991268851,
         "Acolyte": 0.1562499991268851,
         "Rogue": 0.1562499991268851
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.1562499991268851,
+        "probabilityText": "15.62%"
       }
     },
     "29": {
@@ -1269,6 +1447,12 @@
         "Primalist": 0.1562499991268851,
         "Acolyte": 0.1562499991268851,
         "Rogue": 0.1562499991268851
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.1562499991268851,
+        "probabilityText": "15.62%"
       }
     },
     "30": {
@@ -1298,6 +1482,12 @@
         "Primalist": 0.015625003637978786,
         "Acolyte": 0.015625003637978786,
         "Rogue": 0.015625003637978786
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.015625003637978786,
+        "probabilityText": "1.56%"
       }
     },
     "31": {
@@ -1327,6 +1517,12 @@
         "Primalist": 0.1562499991268851,
         "Acolyte": 0.1562499991268851,
         "Rogue": 0.1562499991268851
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.1562499991268851,
+        "probabilityText": "15.62%"
       }
     },
     "32": {
@@ -1356,6 +1552,12 @@
         "Primalist": 0.2336448613749143,
         "Acolyte": 0.2336448613749143,
         "Rogue": 0.2336448613749143
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.2336448613749143,
+        "probabilityText": "23.36%"
       }
     },
     "33": {
@@ -1385,6 +1587,12 @@
         "Primalist": 0.2336448613749143,
         "Acolyte": 0.2336448613749143,
         "Rogue": 0.2336448613749143
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.2336448613749143,
+        "probabilityText": "23.36%"
       }
     },
     "34": {
@@ -1414,6 +1622,12 @@
         "Primalist": 0.09523809523809523,
         "Acolyte": 0.09523809523809523,
         "Rogue": 0.09523809523809523
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09523809523809523,
+        "probabilityText": "9.52%"
       }
     },
     "35": {
@@ -1443,6 +1657,12 @@
         "Primalist": 0.028571429706755136,
         "Acolyte": 0.028571429706755136,
         "Rogue": 0.028571429706755136
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.028571429706755136,
+        "probabilityText": "2.86%"
       }
     },
     "36": {
@@ -1472,6 +1692,12 @@
         "Primalist": 0.09523809523809523,
         "Acolyte": 0.09523809523809523,
         "Rogue": 0.09523809523809523
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09523809523809523,
+        "probabilityText": "9.52%"
       }
     },
     "37": {
@@ -1501,6 +1727,12 @@
         "Primalist": 0.15463917639800576,
         "Acolyte": 0.15463917639800576,
         "Rogue": 0.15463917639800576
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.15463917639800576,
+        "probabilityText": "15.46%"
       }
     },
     "38": {
@@ -1530,6 +1762,12 @@
         "Primalist": 0.10309278426533718,
         "Acolyte": 0.10309278426533718,
         "Rogue": 0.10309278426533718
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.10309278426533718,
+        "probabilityText": "10.31%"
       }
     },
     "39": {
@@ -1559,6 +1797,12 @@
         "Primalist": 0.20618556853067435,
         "Acolyte": 0.20618556853067435,
         "Rogue": 0.20618556853067435
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.20618556853067435,
+        "probabilityText": "20.62%"
       }
     },
     "40": {
@@ -1588,6 +1832,12 @@
         "Primalist": 0.24691358315401407,
         "Acolyte": 0.24691358315401407,
         "Rogue": 0.24691358315401407
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.2469135831540141,
+        "probabilityText": "24.69%"
       }
     },
     "41": {
@@ -1617,6 +1867,12 @@
         "Primalist": 0.25,
         "Acolyte": 0.25,
         "Rogue": 0.25
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.25,
+        "probabilityText": "25%"
       }
     },
     "42": {
@@ -1646,6 +1902,12 @@
         "Primalist": 0.25,
         "Acolyte": 0.25,
         "Rogue": 0.25
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.25,
+        "probabilityText": "25%"
       }
     },
     "43": {
@@ -1675,6 +1937,12 @@
         "Primalist": 0.25,
         "Acolyte": 0.25,
         "Rogue": 0.25
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.25,
+        "probabilityText": "25%"
       }
     },
     "44": {
@@ -1704,6 +1972,12 @@
         "Primalist": 0.13157894798758288,
         "Acolyte": 0.13157894798758288,
         "Rogue": 0.13157894798758288
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.13157894798758288,
+        "probabilityText": "13.16%"
       }
     },
     "45": {
@@ -1733,6 +2007,12 @@
         "Primalist": 0.02631578802897329,
         "Acolyte": 0.02631578802897329,
         "Rogue": 0.02631578802897329
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.026315788028973285,
+        "probabilityText": "2.63%"
       }
     },
     "46": {
@@ -1754,7 +2034,13 @@
       "set": false,
       "weaversWill": false,
       "primordial": false,
-      "cocooned": false
+      "cocooned": false,
+      "display": {
+        "kind": "legacy",
+        "source": "旧／隐藏条目",
+        "probability": null,
+        "probabilityText": "当前版本不进入随机掉落池"
+      }
     },
     "47": {
       "kind": "world",
@@ -1783,6 +2069,12 @@
         "Primalist": 0.14705882327160621,
         "Acolyte": 0.14705882327160621,
         "Rogue": 0.14705882327160621
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.14705882327160621,
+        "probabilityText": "14.71%"
       }
     },
     "48": {
@@ -1812,6 +2104,12 @@
         "Primalist": 0.14705882327160621,
         "Acolyte": 0.14705882327160621,
         "Rogue": 0.14705882327160621
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.14705882327160621,
+        "probabilityText": "14.71%"
       }
     },
     "49": {
@@ -1841,6 +2139,12 @@
         "Primalist": 0.14705882327160621,
         "Acolyte": 0.14705882327160621,
         "Rogue": 0.14705882327160621
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.14705882327160621,
+        "probabilityText": "14.71%"
       }
     },
     "50": {
@@ -1870,6 +2174,12 @@
         "Primalist": 0.09900990075637822,
         "Acolyte": 0.09900990075637822,
         "Rogue": 0.09900990075637822
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09900990075637822,
+        "probabilityText": "9.9%"
       }
     },
     "51": {
@@ -1899,6 +2209,12 @@
         "Primalist": 0.09900990075637822,
         "Acolyte": 0.09900990075637822,
         "Rogue": 0.09900990075637822
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09900990075637822,
+        "probabilityText": "9.9%"
       }
     },
     "52": {
@@ -1928,6 +2244,12 @@
         "Primalist": 0.09900990075637822,
         "Acolyte": 0.09900990075637822,
         "Rogue": 0.09900990075637822
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09900990075637822,
+        "probabilityText": "9.9%"
       }
     },
     "53": {
@@ -1957,6 +2279,12 @@
         "Primalist": 0.01980197897098565,
         "Acolyte": 0.01980197897098565,
         "Rogue": 0.01980197897098565
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.01980197897098565,
+        "probabilityText": "1.98%"
       }
     },
     "54": {
@@ -1986,6 +2314,12 @@
         "Primalist": 0.07817385923426935,
         "Acolyte": 0.07817385923426935,
         "Rogue": 0.07817385923426935
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07817385923426935,
+        "probabilityText": "7.82%"
       }
     },
     "55": {
@@ -2015,6 +2349,12 @@
         "Primalist": 0.07817385923426935,
         "Acolyte": 0.07817385923426935,
         "Rogue": 0.07817385923426935
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07817385923426935,
+        "probabilityText": "7.82%"
       }
     },
     "56": {
@@ -2044,6 +2384,12 @@
         "Primalist": 0.07817385923426935,
         "Acolyte": 0.07817385923426935,
         "Rogue": 0.07817385923426935
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07817385923426935,
+        "probabilityText": "7.82%"
       }
     },
     "57": {
@@ -2066,7 +2412,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/elementalistfrozenheart.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/elementalistfrozenheart.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "58": {
       "kind": "world",
@@ -2095,6 +2447,12 @@
         "Primalist": 0.07817385923426935,
         "Acolyte": 0.07817385923426935,
         "Rogue": 0.07817385923426935
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07817385923426935,
+        "probabilityText": "7.82%"
       }
     },
     "59": {
@@ -2124,6 +2482,12 @@
         "Primalist": 0.07817385923426935,
         "Acolyte": 0.07817385923426935,
         "Rogue": 0.07817385923426935
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07817385923426935,
+        "probabilityText": "7.82%"
       }
     },
     "60": {
@@ -2153,6 +2517,12 @@
         "Primalist": 0.07817385923426935,
         "Acolyte": 0.07817385923426935,
         "Rogue": 0.07817385923426935
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07817385923426935,
+        "probabilityText": "7.82%"
       }
     },
     "61": {
@@ -2182,6 +2552,12 @@
         "Primalist": 0.0023452135404560277,
         "Acolyte": 0.0023452135404560277,
         "Rogue": 0.0023452135404560277
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0023452135404560277,
+        "probabilityText": "0.23%"
       }
     },
     "62": {
@@ -2211,6 +2587,12 @@
         "Primalist": 0.08285004157640029,
         "Acolyte": 0.08285004157640029,
         "Rogue": 0.08285004157640029
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.08285004157640029,
+        "probabilityText": "8.29%"
       }
     },
     "63": {
@@ -2233,7 +2615,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/elementalistscorchinggrasp.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/elementalistscorchinggrasp.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "64": {
       "kind": "world",
@@ -2255,7 +2643,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/elementaliststatictouch.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/elementaliststatictouch.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "65": {
       "kind": "world",
@@ -2284,6 +2678,12 @@
         "Primalist": 0.08285004157640029,
         "Acolyte": 0.08285004157640029,
         "Rogue": 0.08285004157640029
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.08285004157640029,
+        "probabilityText": "8.29%"
       }
     },
     "66": {
@@ -2313,6 +2713,12 @@
         "Primalist": 0.06628003301420786,
         "Acolyte": 0.06628003301420786,
         "Rogue": 0.06628003301420786
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.06628003301420786,
+        "probabilityText": "6.63%"
       }
     },
     "67": {
@@ -2343,6 +2749,12 @@
         "Primalist": 0.0916908179903389,
         "Acolyte": 0.08921659113724677,
         "Rogue": 0.08261108641749668
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.046082949492294877,
+        "probabilityText": "4.61%"
       }
     },
     "68": {
@@ -2373,6 +2785,12 @@
         "Primalist": 0.0916908179903389,
         "Acolyte": 0.08921659113724677,
         "Rogue": 0.08261108641749668
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.046082949492294877,
+        "probabilityText": "4.61%"
       }
     },
     "69": {
@@ -2394,7 +2812,13 @@
       "set": false,
       "weaversWill": false,
       "primordial": false,
-      "cocooned": false
+      "cocooned": false,
+      "display": {
+        "kind": "legacy",
+        "source": "旧／隐藏条目",
+        "probability": null,
+        "probabilityText": "当前版本不进入随机掉落池"
+      }
     },
     "70": {
       "kind": "world",
@@ -2424,6 +2848,12 @@
         "Primalist": 0.0916908179903389,
         "Acolyte": 0.08921659113724677,
         "Rogue": 0.08261108641749668
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.046082949492294877,
+        "probabilityText": "4.61%"
       }
     },
     "71": {
@@ -2454,6 +2884,12 @@
         "Primalist": 0.036676325010056104,
         "Acolyte": 0.03568663432780942,
         "Rogue": 0.03304443259739689
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.018433178698214817,
+        "probabilityText": "1.84%"
       }
     },
     "72": {
@@ -2486,7 +2922,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/orchirians_petals.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/orchirians_petals.png",
+      "display": {
+        "kind": "boss",
+        "source": "巨型蔓花奥奇里安",
+        "probability": null,
+        "probabilityText": "未公开固定概率"
+      }
     },
     "73": {
       "kind": "world",
@@ -2515,6 +2957,12 @@
         "Primalist": 0.0729927004758713,
         "Acolyte": 0.0729927004758713,
         "Rogue": 0.0729927004758713
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0729927004758713,
+        "probabilityText": "7.3%"
       }
     },
     "74": {
@@ -2544,6 +2992,12 @@
         "Primalist": 0.10101010064521186,
         "Acolyte": 0.10101010064521186,
         "Rogue": 0.10101010064521186
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.10101010064521186,
+        "probabilityText": "10.1%"
       }
     },
     "75": {
@@ -2573,6 +3027,12 @@
         "Primalist": 0.09615384582319908,
         "Acolyte": 0.09615384582319908,
         "Rogue": 0.09615384582319908
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09615384582319908,
+        "probabilityText": "9.62%"
       }
     },
     "76": {
@@ -2602,6 +3062,12 @@
         "Primalist": 0.041425020788200144,
         "Acolyte": 0.041425020788200144,
         "Rogue": 0.041425020788200144
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.041425020788200144,
+        "probabilityText": "4.14%"
       }
     },
     "77": {
@@ -2624,7 +3090,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/apiarists_smoker.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/apiarists_smoker.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "78": {
       "kind": "world",
@@ -2646,7 +3118,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/apiarists_suit.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/apiarists_suit.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "79": {
       "kind": "world",
@@ -2668,7 +3146,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/apiarists_comb.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/apiarists_comb.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "80": {
       "kind": "world",
@@ -2697,6 +3181,12 @@
         "Primalist": 0.14285714285714285,
         "Acolyte": 0.14285714285714285,
         "Rogue": 0.14285714285714285
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.14285714285714285,
+        "probabilityText": "14.29%"
       }
     },
     "81": {
@@ -2727,6 +3217,12 @@
         "Primalist": 0.0916908179903389,
         "Acolyte": 0.08921659113724677,
         "Rogue": 0.08261108641749668
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.046082949492294877,
+        "probabilityText": "4.61%"
       }
     },
     "82": {
@@ -2756,6 +3252,12 @@
         "Primalist": 0.2857142857142857,
         "Acolyte": 0.2857142857142857,
         "Rogue": 0.2857142857142857
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.2857142857142857,
+        "probabilityText": "28.57%"
       }
     },
     "83": {
@@ -2785,6 +3287,12 @@
         "Primalist": 0.062223881834048915,
         "Acolyte": 0.062223881834048915,
         "Rogue": 0.062223881834048915
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.062223881834048915,
+        "probabilityText": "6.22%"
       }
     },
     "84": {
@@ -2814,6 +3322,12 @@
         "Primalist": 0.024855013460569546,
         "Acolyte": 0.024855013460569546,
         "Rogue": 0.024855013460569546
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.024855013460569546,
+        "probabilityText": "2.49%"
       }
     },
     "85": {
@@ -2836,7 +3350,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/sunforged_hammer.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/sunforged_hammer.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "86": {
       "kind": "world",
@@ -2858,7 +3378,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/sunforged_cuirass.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/sunforged_cuirass.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "87": {
       "kind": "world",
@@ -2880,7 +3406,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/sunforged_greathelm.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/sunforged_greathelm.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "88": {
       "kind": "world",
@@ -2902,7 +3434,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/blade_of_the_forgotten_knight.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/blade_of_the_forgotten_knight.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "89": {
       "kind": "world",
@@ -2924,7 +3462,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/defiance_of_the_forgotten_knight.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/defiance_of_the_forgotten_knight.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "90": {
       "kind": "world",
@@ -2946,7 +3490,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/locket_of_the_forgotten_knight.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/locket_of_the_forgotten_knight.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "91": {
       "kind": "world",
@@ -2975,6 +3525,12 @@
         "Primalist": 0.020546538835188928,
         "Acolyte": 0.020546538835188928,
         "Rogue": 0.020546538835188928
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.020546538835188928,
+        "probabilityText": "2.05%"
       }
     },
     "92": {
@@ -3004,6 +3560,12 @@
         "Primalist": 0.009615386874806238,
         "Acolyte": 0.009615386874806238,
         "Rogue": 0.009615386874806238
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.009615386874806238,
+        "probabilityText": "0.96%"
       }
     },
     "93": {
@@ -3034,6 +3596,12 @@
         "Primalist": 0.07224080274699005,
         "Acolyte": 0.010702340467879082,
         "Rogue": 0.010702340467879082
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.05351170552894161,
+        "probabilityText": "5.35%"
       }
     },
     "94": {
@@ -3056,7 +3624,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/the_last_bears_fury.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/the_last_bears_fury.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "95": {
       "kind": "world",
@@ -3078,7 +3652,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/the_last_bears_scorn.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/the_last_bears_scorn.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "96": {
       "kind": "world",
@@ -3100,7 +3680,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/the_last_bears_lament.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/the_last_bears_lament.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "97": {
       "kind": "world",
@@ -3122,7 +3708,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/halvars_pledge.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/halvars_pledge.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "98": {
       "kind": "world",
@@ -3144,7 +3736,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/halvars_stand.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/halvars_stand.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "99": {
       "kind": "world",
@@ -3166,7 +3764,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/last_gift_of_the_mountain.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/last_gift_of_the_mountain.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "100": {
       "kind": "world",
@@ -3188,7 +3792,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/pebbles_femur.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/pebbles_femur.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "101": {
       "kind": "world",
@@ -3210,7 +3820,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/pebbles_collar.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/pebbles_collar.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "102": {
       "kind": "world",
@@ -3232,7 +3848,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/pebbles_bitemarked_sash.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/pebbles_bitemarked_sash.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "103": {
       "kind": "world",
@@ -3261,6 +3883,12 @@
         "Primalist": 0.09615384582319908,
         "Acolyte": 0.09615384582319908,
         "Rogue": 0.09615384582319908
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09615384582319908,
+        "probabilityText": "9.62%"
       }
     },
     "104": {
@@ -3290,6 +3918,12 @@
         "Primalist": 0.02739538239209835,
         "Acolyte": 0.02739538239209835,
         "Rogue": 0.02739538239209835
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.02739538239209835,
+        "probabilityText": "2.74%"
       }
     },
     "105": {
@@ -3320,6 +3954,12 @@
         "Primalist": 0.015936254071832842,
         "Acolyte": 0.015936254071832842,
         "Rogue": 0.015936254071832842
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07968127510853831,
+        "probabilityText": "7.97%"
       }
     },
     "106": {
@@ -3350,6 +3990,12 @@
         "Primalist": 0.01337792563468551,
         "Acolyte": 0.08512680568512622,
         "Rogue": 0.01337792563468551
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.06688963216036031,
+        "probabilityText": "6.69%"
       }
     },
     "107": {
@@ -3380,6 +4026,12 @@
         "Primalist": 0.0916908179903389,
         "Acolyte": 0.08921659113724677,
         "Rogue": 0.08261108641749668
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.046082949492294877,
+        "probabilityText": "4.61%"
       }
     },
     "108": {
@@ -3410,6 +4062,12 @@
         "Primalist": 0.036676325010056104,
         "Acolyte": 0.03568663432780942,
         "Rogue": 0.03304443259739689
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.018433178698214817,
+        "probabilityText": "1.84%"
       }
     },
     "109": {
@@ -3581,7 +4239,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/shard_of_the_shattered_lance.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/shard_of_the_shattered_lance.png",
+      "display": {
+        "kind": "boss",
+        "source": "猎神者阿根图斯",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "110": {
       "kind": "boss",
@@ -3752,7 +4416,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/fragments_of_the_shattered_lance.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/fragments_of_the_shattered_lance.png",
+      "display": {
+        "kind": "boss",
+        "source": "猎神者阿根图斯",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "111": {
       "kind": "boss",
@@ -3923,7 +4593,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/woven_flesh.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/woven_flesh.png",
+      "display": {
+        "kind": "boss",
+        "source": "憎恶",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "112": {
       "kind": "boss",
@@ -4100,7 +4776,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/strands_of_souls.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/strands_of_souls.png",
+      "display": {
+        "kind": "boss",
+        "source": "憎恶",
+        "probability": 0.45,
+        "probabilityText": "45%"
+      }
     },
     "113": {
       "kind": "boss",
@@ -4271,7 +4953,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/ribbons_of_blood.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/ribbons_of_blood.png",
+      "display": {
+        "kind": "boss",
+        "source": "憎恶",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "114": {
       "kind": "boss",
@@ -4442,7 +5130,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/frozen_eyes_of_formosus.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/frozen_eyes_of_formosus.png",
+      "display": {
+        "kind": "boss",
+        "source": "Frost Lich Formosus",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "115": {
       "kind": "boss",
@@ -4613,7 +5307,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/last_steps_of_the_living.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/last_steps_of_the_living.png",
+      "display": {
+        "kind": "boss",
+        "source": "Frost Lich Formosus",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "116": {
       "kind": "boss",
@@ -4784,7 +5484,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/atrophy.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/atrophy.png",
+      "display": {
+        "kind": "boss",
+        "source": "“黑暗太阳”瑞耶",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "117": {
       "kind": "boss",
@@ -4955,7 +5661,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/dark_shroud_of_cinders.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/dark_shroud_of_cinders.png",
+      "display": {
+        "kind": "boss",
+        "source": "“黑暗太阳”瑞耶",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "118": {
       "kind": "boss",
@@ -5132,7 +5844,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/the_confluence_of_fate.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/the_confluence_of_fate.png",
+      "display": {
+        "kind": "boss",
+        "source": "“黑暗太阳”瑞耶",
+        "probability": 0.45,
+        "probabilityText": "45%"
+      }
     },
     "119": {
       "kind": "boss",
@@ -5303,7 +6021,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/bulwark_of_the_last_abyss.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/bulwark_of_the_last_abyss.png",
+      "display": {
+        "kind": "boss",
+        "source": "哈顿的躯壳",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "120": {
       "kind": "boss",
@@ -5474,7 +6198,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/trident_of_the_last_abyss.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/trident_of_the_last_abyss.png",
+      "display": {
+        "kind": "boss",
+        "source": "哈顿的躯壳",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "121": {
       "kind": "boss",
@@ -5645,7 +6375,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/coral_aegis.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/coral_aegis.png",
+      "display": {
+        "kind": "boss",
+        "source": "“风暴之神”拉贡",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "122": {
       "kind": "boss",
@@ -5816,7 +6552,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/alluvion.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/alluvion.png",
+      "display": {
+        "kind": "boss",
+        "source": "“风暴之神”拉贡",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "123": {
       "kind": "boss",
@@ -5987,7 +6729,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/symbol_of_demise.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/symbol_of_demise.png",
+      "display": {
+        "kind": "boss",
+        "source": "尸骸大帝",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "124": {
       "kind": "boss",
@@ -6158,7 +6906,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/dragonflame_edict.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/dragonflame_edict.png",
+      "display": {
+        "kind": "boss",
+        "source": "尸骸大帝",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "125": {
       "kind": "world",
@@ -6187,6 +6941,12 @@
         "Primalist": 0.012427504261161123,
         "Acolyte": 0.012427504261161123,
         "Rogue": 0.012427504261161123
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.012427504261161125,
+        "probabilityText": "1.24%"
       }
     },
     "126": {
@@ -6216,6 +6976,12 @@
         "Primalist": 0.01866716529198115,
         "Acolyte": 0.01866716529198115,
         "Rogue": 0.01866716529198115
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.01866716529198115,
+        "probabilityText": "1.87%"
       }
     },
     "127": {
@@ -6238,7 +7004,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/boardman_plank.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/boardman_plank.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "128": {
       "kind": "world",
@@ -6260,7 +7032,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/boardman_fallacy.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/boardman_fallacy.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "129": {
       "kind": "world",
@@ -6282,7 +7060,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/boardman_legacy.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/boardman_legacy.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "130": {
       "kind": "special",
@@ -6302,7 +7086,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/gambler_fallacy.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/gambler_fallacy.png",
+      "display": {
+        "kind": "special",
+        "source": "第二章：阿尔特姆任务",
+        "probability": null,
+        "probabilityText": "任务奖励（完成后领取）"
+      }
     },
     "131": {
       "kind": "special",
@@ -6324,7 +7114,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/avarice.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/avarice.png",
+      "display": {
+        "kind": "special",
+        "source": "任务：埃尔扎的账本",
+        "probability": null,
+        "probabilityText": "任务奖励"
+      }
     },
     "132": {
       "kind": "world",
@@ -6353,6 +7149,12 @@
         "Primalist": 0.04794192122728728,
         "Acolyte": 0.04794192122728728,
         "Rogue": 0.04794192122728728
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.04794192122728728,
+        "probabilityText": "4.79%"
       }
     },
     "133": {
@@ -6382,6 +7184,12 @@
         "Primalist": 0.05472170053208352,
         "Acolyte": 0.05472170053208352,
         "Rogue": 0.05472170053208352
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.05472170053208352,
+        "probabilityText": "5.47%"
       }
     },
     "134": {
@@ -6411,6 +7219,12 @@
         "Primalist": 0.062223881834048915,
         "Acolyte": 0.062223881834048915,
         "Rogue": 0.062223881834048915
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.062223881834048915,
+        "probabilityText": "6.22%"
       }
     },
     "135": {
@@ -6440,6 +7254,12 @@
         "Primalist": 0.08285004157640029,
         "Acolyte": 0.08285004157640029,
         "Rogue": 0.08285004157640029
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.08285004157640029,
+        "probabilityText": "8.29%"
       }
     },
     "136": {
@@ -6469,6 +7289,12 @@
         "Primalist": 0.08474576305432144,
         "Acolyte": 0.08474576305432144,
         "Rogue": 0.08474576305432144
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.08474576305432144,
+        "probabilityText": "8.47%"
       }
     },
     "137": {
@@ -6498,6 +7324,12 @@
         "Primalist": 0.11494252908999987,
         "Acolyte": 0.11494252908999987,
         "Rogue": 0.11494252908999987
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.11494252908999987,
+        "probabilityText": "11.49%"
       }
     },
     "138": {
@@ -6520,7 +7352,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/zerrick_guile.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/zerrick_guile.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "139": {
       "kind": "world",
@@ -6542,7 +7380,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/zerrick_greed.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/zerrick_greed.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "140": {
       "kind": "world",
@@ -6564,7 +7408,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/zerrick_ambition.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/zerrick_ambition.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "141": {
       "kind": "world",
@@ -6593,6 +7443,12 @@
         "Primalist": 0.11494252908999987,
         "Acolyte": 0.11494252908999987,
         "Rogue": 0.11494252908999987
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.11494252908999987,
+        "probabilityText": "11.49%"
       }
     },
     "142": {
@@ -6622,6 +7478,12 @@
         "Primalist": 0.11494252908999987,
         "Acolyte": 0.11494252908999987,
         "Rogue": 0.11494252908999987
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.11494252908999987,
+        "probabilityText": "11.49%"
       }
     },
     "143": {
@@ -6651,6 +7513,12 @@
         "Primalist": 0.09523809523809523,
         "Acolyte": 0.09523809523809523,
         "Rogue": 0.09523809523809523
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09523809523809523,
+        "probabilityText": "9.52%"
       }
     },
     "144": {
@@ -6680,6 +7548,12 @@
         "Primalist": 0.11494252908999987,
         "Acolyte": 0.11494252908999987,
         "Rogue": 0.11494252908999987
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.11494252908999987,
+        "probabilityText": "11.49%"
       }
     },
     "145": {
@@ -6709,6 +7583,12 @@
         "Primalist": 0.04950495037818911,
         "Acolyte": 0.04950495037818911,
         "Rogue": 0.04950495037818911
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.04950495037818911,
+        "probabilityText": "4.95%"
       }
     },
     "146": {
@@ -6738,6 +7618,12 @@
         "Primalist": 0.20833333346268368,
         "Acolyte": 0.20833333346268368,
         "Rogue": 0.20833333346268368
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.2083333334626837,
+        "probabilityText": "20.83%"
       }
     },
     "147": {
@@ -6767,6 +7653,12 @@
         "Primalist": 0.023970962654758808,
         "Acolyte": 0.023970962654758808,
         "Rogue": 0.023970962654758808
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.023970962654758805,
+        "probabilityText": "2.4%"
       }
     },
     "148": {
@@ -6796,6 +7688,12 @@
         "Primalist": 0.20833333346268368,
         "Acolyte": 0.20833333346268368,
         "Rogue": 0.20833333346268368
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.2083333334626837,
+        "probabilityText": "20.83%"
       }
     },
     "149": {
@@ -6825,6 +7723,12 @@
         "Primalist": 0.014598543575737446,
         "Acolyte": 0.014598543575737446,
         "Rogue": 0.014598543575737446
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.014598543575737446,
+        "probabilityText": "1.46%"
       }
     },
     "150": {
@@ -6854,6 +7758,12 @@
         "Primalist": 0.08285004157640029,
         "Acolyte": 0.08285004157640029,
         "Rogue": 0.08285004157640029
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.08285004157640029,
+        "probabilityText": "8.29%"
       }
     },
     "151": {
@@ -7031,7 +7941,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/eulogy_of_blood.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/eulogy_of_blood.png",
+      "display": {
+        "kind": "boss",
+        "source": "Frost Lich Formosus",
+        "probability": 0.45,
+        "probabilityText": "45%"
+      }
     },
     "152": {
       "kind": "boss",
@@ -7208,7 +8124,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/anchor_of_oblivion.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/anchor_of_oblivion.png",
+      "display": {
+        "kind": "boss",
+        "source": "哈顿的躯壳",
+        "probability": 0.45,
+        "probabilityText": "45%"
+      }
     },
     "153": {
       "kind": "boss",
@@ -7385,7 +8307,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/wings_of_argentus.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/wings_of_argentus.png",
+      "display": {
+        "kind": "boss",
+        "source": "猎神者阿根图斯",
+        "probability": 0.45,
+        "probabilityText": "45%"
+      }
     },
     "154": {
       "kind": "boss",
@@ -7562,7 +8490,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/eye_of_storms.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/eye_of_storms.png",
+      "display": {
+        "kind": "boss",
+        "source": "“风暴之神”拉贡",
+        "probability": 0.45,
+        "probabilityText": "45%"
+      }
     },
     "155": {
       "kind": "boss",
@@ -7739,7 +8673,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/horns_of_uhkeiros.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/horns_of_uhkeiros.png",
+      "display": {
+        "kind": "boss",
+        "source": "尸骸大帝",
+        "probability": 0.45,
+        "probabilityText": "45%"
+      }
     },
     "156": {
       "kind": "boss",
@@ -7910,7 +8850,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/gaspar_will.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/gaspar_will.png",
+      "display": {
+        "kind": "boss",
+        "source": "加斯帕长老的躯壳",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "157": {
       "kind": "boss",
@@ -8081,7 +9027,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/gaspar_acuity.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/gaspar_acuity.png",
+      "display": {
+        "kind": "boss",
+        "source": "加斯帕长老的躯壳",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "158": {
       "kind": "boss",
@@ -8255,7 +9207,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/gaspar_insight.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/gaspar_insight.png",
+      "display": {
+        "kind": "boss",
+        "source": "加斯帕长老的躯壳",
+        "probability": 0.48,
+        "probabilityText": "48%"
+      }
     },
     "159": {
       "kind": "boss",
@@ -8426,7 +9384,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/reign_of_winter.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/reign_of_winter.png",
+      "display": {
+        "kind": "boss",
+        "source": "赫罗特",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "160": {
       "kind": "boss",
@@ -8597,7 +9561,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/call_of_the_tundra.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/call_of_the_tundra.png",
+      "display": {
+        "kind": "boss",
+        "source": "赫罗特",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "161": {
       "kind": "boss",
@@ -8774,7 +9744,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/faith_of_the_frozen.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/faith_of_the_frozen.png",
+      "display": {
+        "kind": "boss",
+        "source": "赫罗特",
+        "probability": 0.45,
+        "probabilityText": "45%"
+      }
     },
     "162": {
       "kind": "boss",
@@ -8945,7 +9921,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/bhuldar_wrath.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/bhuldar_wrath.png",
+      "display": {
+        "kind": "boss",
+        "source": "火山萨满",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "163": {
       "kind": "boss",
@@ -9116,7 +10098,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/herkir_vessel.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/herkir_vessel.png",
+      "display": {
+        "kind": "boss",
+        "source": "火山萨满",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "164": {
       "kind": "boss",
@@ -9290,7 +10278,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/logi_hunger.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/logi_hunger.png",
+      "display": {
+        "kind": "boss",
+        "source": "火山萨满",
+        "probability": 0.48,
+        "probabilityText": "48%"
+      }
     },
     "165": {
       "kind": "world",
@@ -9319,6 +10313,12 @@
         "Primalist": 0.07817385923426935,
         "Acolyte": 0.07817385923426935,
         "Rogue": 0.07817385923426935
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07817385923426935,
+        "probabilityText": "7.82%"
       }
     },
     "166": {
@@ -9348,6 +10348,12 @@
         "Primalist": 0.09900990075637822,
         "Acolyte": 0.09900990075637822,
         "Rogue": 0.09900990075637822
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09900990075637822,
+        "probabilityText": "9.9%"
       }
     },
     "167": {
@@ -9377,6 +10383,12 @@
         "Primalist": 0.012444775625043309,
         "Acolyte": 0.012444775625043309,
         "Rogue": 0.012444775625043309
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.012444775625043309,
+        "probabilityText": "1.24%"
       }
     },
     "168": {
@@ -9406,6 +10418,12 @@
         "Primalist": 0.057471264544999935,
         "Acolyte": 0.057471264544999935,
         "Rogue": 0.057471264544999935
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.057471264544999935,
+        "probabilityText": "5.75%"
       }
     },
     "169": {
@@ -9435,6 +10453,12 @@
         "Primalist": 0.03649635023793565,
         "Acolyte": 0.03649635023793565,
         "Rogue": 0.03649635023793565
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.03649635023793565,
+        "probabilityText": "3.65%"
       }
     },
     "170": {
@@ -9457,7 +10481,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/unique_skeleton_mace.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/unique_skeleton_mace.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "171": {
       "kind": "world",
@@ -9479,7 +10509,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/unique_skeleton_shield.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/unique_skeleton_shield.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "172": {
       "kind": "world",
@@ -9509,6 +10545,12 @@
         "Primalist": 0.03678087822350602,
         "Acolyte": 0.004780876411524805,
         "Rogue": 0.004780876411524805
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.023904383482436314,
+        "probabilityText": "2.39%"
       }
     },
     "173": {
@@ -9531,7 +10573,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/ruby_fang_cleaver.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/ruby_fang_cleaver.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "174": {
       "kind": "world",
@@ -9553,7 +10601,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/ruby_tower_shield.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/ruby_tower_shield.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "175": {
       "kind": "boss",
@@ -9875,7 +10929,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/omnis.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/omnis.png",
+      "display": {
+        "kind": "boss",
+        "source": "奥罗比斯之影",
+        "probability": 0.0,
+        "probabilityText": "0%"
+      }
     },
     "176": {
       "kind": "world",
@@ -9904,6 +10964,12 @@
         "Primalist": 0.01563477091494885,
         "Acolyte": 0.01563477091494885,
         "Rogue": 0.01563477091494885
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.01563477091494885,
+        "probabilityText": "1.56%"
       }
     },
     "177": {
@@ -10221,7 +11287,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/siphon_of_anguish.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/siphon_of_anguish.png",
+      "display": {
+        "kind": "boss",
+        "source": "奥罗比斯之影",
+        "probability": 0.3333333333333333,
+        "probabilityText": "33.33%"
+      }
     },
     "178": {
       "kind": "boss",
@@ -10538,7 +11610,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/stymied_fate.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/stymied_fate.png",
+      "display": {
+        "kind": "boss",
+        "source": "奥罗比斯之影",
+        "probability": 0.06666666666666667,
+        "probabilityText": "6.67%"
+      }
     },
     "179": {
       "kind": "boss",
@@ -10858,7 +11936,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/apathy_maw.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/apathy_maw.png",
+      "display": {
+        "kind": "boss",
+        "source": "奥罗比斯之影",
+        "probability": 0.0,
+        "probabilityText": "0%"
+      }
     },
     "180": {
       "kind": "boss",
@@ -11180,7 +12264,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/shattered_chains.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/shattered_chains.png",
+      "display": {
+        "kind": "boss",
+        "source": "奥罗比斯之影",
+        "probability": 0.0,
+        "probabilityText": "0%"
+      }
     },
     "181": {
       "kind": "world",
@@ -11209,6 +12299,12 @@
         "Primalist": 0.14432989551354852,
         "Acolyte": 0.14432989551354852,
         "Rogue": 0.14432989551354852
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.14432989551354852,
+        "probabilityText": "14.43%"
       }
     },
     "182": {
@@ -11239,6 +12335,12 @@
         "Primalist": 0.009216589349107409,
         "Acolyte": 0.009216589349107409,
         "Rogue": 0.009216589349107409
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.046082949492294877,
+        "probabilityText": "4.61%"
       }
     },
     "183": {
@@ -11268,6 +12370,12 @@
         "Primalist": 0.04411764873455966,
         "Acolyte": 0.04411764873455966,
         "Rogue": 0.04411764873455966
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.04411764873455965,
+        "probabilityText": "4.41%"
       }
     },
     "184": {
@@ -11297,6 +12405,12 @@
         "Primalist": 0.13157894798758288,
         "Acolyte": 0.13157894798758288,
         "Rogue": 0.13157894798758288
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.13157894798758288,
+        "probabilityText": "13.16%"
       }
     },
     "185": {
@@ -11319,7 +12433,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/vilatria_storm_crown.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/vilatria_storm_crown.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "186": {
       "kind": "world",
@@ -11341,7 +12461,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/vilatria_downfall.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/vilatria_downfall.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "187": {
       "kind": "world",
@@ -11370,6 +12496,12 @@
         "Primalist": 0.009333580791574389,
         "Acolyte": 0.009333580791574389,
         "Rogue": 0.009333580791574389
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.009333580791574389,
+        "probabilityText": "0.93%"
       }
     },
     "188": {
@@ -11399,6 +12531,12 @@
         "Primalist": 0.09615384582319908,
         "Acolyte": 0.09615384582319908,
         "Rogue": 0.09615384582319908
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09615384582319908,
+        "probabilityText": "9.62%"
       }
     },
     "189": {
@@ -11428,6 +12566,12 @@
         "Primalist": 0.20833333346268368,
         "Acolyte": 0.20833333346268368,
         "Rogue": 0.20833333346268368
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.2083333334626837,
+        "probabilityText": "20.83%"
       }
     },
     "190": {
@@ -11457,6 +12601,12 @@
         "Primalist": 0.1459854009517426,
         "Acolyte": 0.1459854009517426,
         "Rogue": 0.1459854009517426
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.1459854009517426,
+        "probabilityText": "14.6%"
       }
     },
     "191": {
@@ -11486,6 +12636,12 @@
         "Primalist": 0.07817385923426935,
         "Acolyte": 0.07817385923426935,
         "Rogue": 0.07817385923426935
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07817385923426935,
+        "probabilityText": "7.82%"
       }
     },
     "192": {
@@ -11515,6 +12671,12 @@
         "Primalist": 0.16949152610864288,
         "Acolyte": 0.16949152610864288,
         "Rogue": 0.16949152610864288
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.16949152610864288,
+        "probabilityText": "16.95%"
       }
     },
     "193": {
@@ -11537,7 +12699,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/corsair_boarding_shield.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/corsair_boarding_shield.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "194": {
       "kind": "world",
@@ -11559,7 +12727,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/corsair_blood_cowl.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/corsair_blood_cowl.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "195": {
       "kind": "world",
@@ -11588,6 +12762,12 @@
         "Primalist": 0.030303031397697792,
         "Acolyte": 0.030303031397697792,
         "Rogue": 0.030303031397697792
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.030303031397697792,
+        "probabilityText": "3.03%"
       }
     },
     "196": {
@@ -11617,6 +12797,12 @@
         "Primalist": 0.030303031397697792,
         "Acolyte": 0.030303031397697792,
         "Rogue": 0.030303031397697792
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.030303031397697792,
+        "probabilityText": "3.03%"
       }
     },
     "197": {
@@ -11646,6 +12832,12 @@
         "Primalist": 0.030303031397697792,
         "Acolyte": 0.030303031397697792,
         "Rogue": 0.030303031397697792
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.030303031397697792,
+        "probabilityText": "3.03%"
       }
     },
     "198": {
@@ -11675,6 +12867,12 @@
         "Primalist": 0.009900992436217807,
         "Acolyte": 0.009900992436217807,
         "Rogue": 0.009900992436217807
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.009900992436217807,
+        "probabilityText": "0.99%"
       }
     },
     "199": {
@@ -11704,6 +12902,12 @@
         "Primalist": 0.062223881834048915,
         "Acolyte": 0.062223881834048915,
         "Rogue": 0.062223881834048915
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.062223881834048915,
+        "probabilityText": "6.22%"
       }
     },
     "200": {
@@ -11733,6 +12937,12 @@
         "Primalist": 0.08285004157640029,
         "Acolyte": 0.08285004157640029,
         "Rogue": 0.08285004157640029
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.08285004157640029,
+        "probabilityText": "8.29%"
       }
     },
     "201": {
@@ -11762,6 +12972,12 @@
         "Primalist": 0.14705882327160621,
         "Acolyte": 0.14705882327160621,
         "Rogue": 0.14705882327160621
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.14705882327160621,
+        "probabilityText": "14.71%"
       }
     },
     "202": {
@@ -11791,6 +13007,12 @@
         "Primalist": 0.062223881834048915,
         "Acolyte": 0.062223881834048915,
         "Rogue": 0.062223881834048915
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.062223881834048915,
+        "probabilityText": "6.22%"
       }
     },
     "203": {
@@ -11820,6 +13042,12 @@
         "Primalist": 0.0684884600624762,
         "Acolyte": 0.0684884600624762,
         "Rogue": 0.0684884600624762
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0684884600624762,
+        "probabilityText": "6.85%"
       }
     },
     "204": {
@@ -11849,6 +13077,12 @@
         "Primalist": 0.09615384582319908,
         "Acolyte": 0.09615384582319908,
         "Rogue": 0.09615384582319908
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09615384582319908,
+        "probabilityText": "9.62%"
       }
     },
     "205": {
@@ -11878,6 +13112,12 @@
         "Primalist": 0.1459854009517426,
         "Acolyte": 0.1459854009517426,
         "Rogue": 0.1459854009517426
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.1459854009517426,
+        "probabilityText": "14.6%"
       }
     },
     "206": {
@@ -11907,6 +13147,12 @@
         "Primalist": 0.0684884600624762,
         "Acolyte": 0.0684884600624762,
         "Rogue": 0.0684884600624762
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0684884600624762,
+        "probabilityText": "6.85%"
       }
     },
     "207": {
@@ -11937,6 +13183,12 @@
         "Primalist": 0.009216589349107409,
         "Acolyte": 0.009216589349107409,
         "Rogue": 0.08261108641749668
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.046082949492294877,
+        "probabilityText": "4.61%"
       }
     },
     "208": {
@@ -12127,6 +13379,12 @@
         "Primalist": 0.0012444764498546188,
         "Acolyte": 0.0012444764498546188,
         "Rogue": 0.0012444764498546188
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0012444764498546188,
+        "probabilityText": "0.12%"
       }
     },
     "209": {
@@ -12156,6 +13414,12 @@
         "Primalist": 0.1459854009517426,
         "Acolyte": 0.1459854009517426,
         "Rogue": 0.1459854009517426
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.1459854009517426,
+        "probabilityText": "14.6%"
       }
     },
     "210": {
@@ -12330,7 +13594,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/flayers_pride.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/flayers_pride.png",
+      "display": {
+        "kind": "boss",
+        "source": "憎恶",
+        "probability": 0.48,
+        "probabilityText": "48%"
+      }
     },
     "211": {
       "kind": "boss",
@@ -12504,7 +13774,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/throne_of_ambition.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/throne_of_ambition.png",
+      "display": {
+        "kind": "boss",
+        "source": "猎神者阿根图斯",
+        "probability": 0.48,
+        "probabilityText": "48%"
+      }
     },
     "212": {
       "kind": "boss",
@@ -12678,7 +13954,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/eternal_eclipse.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/eternal_eclipse.png",
+      "display": {
+        "kind": "boss",
+        "source": "“黑暗太阳”瑞耶",
+        "probability": 0.48,
+        "probabilityText": "48%"
+      }
     },
     "213": {
       "kind": "boss",
@@ -12852,7 +14134,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/frostbite_shackles.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/frostbite_shackles.png",
+      "display": {
+        "kind": "boss",
+        "source": "Frost Lich Formosus",
+        "probability": 0.48,
+        "probabilityText": "48%"
+      }
     },
     "214": {
       "kind": "boss",
@@ -13026,7 +14314,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/stormcarved_testament.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/stormcarved_testament.png",
+      "display": {
+        "kind": "boss",
+        "source": "“风暴之神”拉贡",
+        "probability": 0.48,
+        "probabilityText": "48%"
+      }
     },
     "215": {
       "kind": "boss",
@@ -13200,7 +14494,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/nightbringer.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/nightbringer.png",
+      "display": {
+        "kind": "boss",
+        "source": "哈顿的躯壳",
+        "probability": 0.48,
+        "probabilityText": "48%"
+      }
     },
     "216": {
       "kind": "boss",
@@ -13374,7 +14674,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/twisted_heart_of_uhkeiros.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/twisted_heart_of_uhkeiros.png",
+      "display": {
+        "kind": "boss",
+        "source": "尸骸大帝",
+        "probability": 0.48,
+        "probabilityText": "48%"
+      }
     },
     "217": {
       "kind": "boss",
@@ -13551,7 +14857,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/sacrificial_embrace.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/sacrificial_embrace.png",
+      "display": {
+        "kind": "boss",
+        "source": "加斯帕长老的躯壳",
+        "probability": 0.45,
+        "probabilityText": "45%"
+      }
     },
     "218": {
       "kind": "boss",
@@ -13725,7 +15037,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/yulia_path.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/yulia_path.png",
+      "display": {
+        "kind": "boss",
+        "source": "赫罗特",
+        "probability": 0.48,
+        "probabilityText": "48%"
+      }
     },
     "219": {
       "kind": "boss",
@@ -13902,7 +15220,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/trinity_of_flames.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/trinity_of_flames.png",
+      "display": {
+        "kind": "boss",
+        "source": "火山萨满",
+        "probability": 0.45,
+        "probabilityText": "45%"
+      }
     },
     "220": {
       "kind": "world",
@@ -13931,6 +15255,12 @@
         "Primalist": 0.03703703158622355,
         "Acolyte": 0.03703703158622355,
         "Rogue": 0.03703703158622355
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.03703703158622355,
+        "probabilityText": "3.7%"
       }
     },
     "221": {
@@ -13961,6 +15291,12 @@
         "Primalist": 0.0015936257871331896,
         "Acolyte": 0.0015936257871331896,
         "Rogue": 0.0015936257871331896
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.00796812941060347,
+        "probabilityText": "0.8%"
       }
     },
     "222": {
@@ -13991,6 +15327,12 @@
         "Primalist": 0.04904116609287226,
         "Acolyte": 0.054494800022040726,
         "Rogue": 0.0635173563541346
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.031872508143665684,
+        "probabilityText": "3.19%"
       }
     },
     "223": {
@@ -14020,6 +15362,12 @@
         "Primalist": 0.09523809523809523,
         "Acolyte": 0.09523809523809523,
         "Rogue": 0.09523809523809523
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09523809523809523,
+        "probabilityText": "9.52%"
       }
     },
     "224": {
@@ -14049,6 +15397,12 @@
         "Primalist": 0.05263157605794658,
         "Acolyte": 0.05263157605794658,
         "Rogue": 0.05263157605794658
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.05263157605794657,
+        "probabilityText": "5.26%"
       }
     },
     "225": {
@@ -14078,6 +15432,12 @@
         "Primalist": 0.09523809523809523,
         "Acolyte": 0.09523809523809523,
         "Rogue": 0.09523809523809523
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09523809523809523,
+        "probabilityText": "9.52%"
       }
     },
     "226": {
@@ -14107,6 +15467,12 @@
         "Primalist": 0.13157894798758288,
         "Acolyte": 0.13157894798758288,
         "Rogue": 0.13157894798758288
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.13157894798758288,
+        "probabilityText": "13.16%"
       }
     },
     "227": {
@@ -14129,7 +15495,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/ferebors_chisel.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/ferebors_chisel.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "228": {
       "kind": "world",
@@ -14151,7 +15523,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/ferebors_persistence.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/ferebors_persistence.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "229": {
       "kind": "world",
@@ -14180,6 +15558,12 @@
         "Primalist": 0.04109307562926269,
         "Acolyte": 0.04109307562926269,
         "Rogue": 0.04109307562926269
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.04109307562926269,
+        "probabilityText": "4.11%"
       }
     },
     "230": {
@@ -14209,6 +15593,12 @@
         "Primalist": 0.24691358315401407,
         "Acolyte": 0.24691358315401407,
         "Rogue": 0.24691358315401407
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.2469135831540141,
+        "probabilityText": "24.69%"
       }
     },
     "231": {
@@ -14238,6 +15628,12 @@
         "Primalist": 0.11494252908999987,
         "Acolyte": 0.11494252908999987,
         "Rogue": 0.11494252908999987
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.11494252908999987,
+        "probabilityText": "11.49%"
       }
     },
     "232": {
@@ -14267,6 +15663,12 @@
         "Primalist": 0.04687500160071066,
         "Acolyte": 0.04687500160071066,
         "Rogue": 0.04687500160071066
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.04687500160071066,
+        "probabilityText": "4.69%"
       }
     },
     "233": {
@@ -14296,6 +15698,12 @@
         "Primalist": 0.0684884600624762,
         "Acolyte": 0.0684884600624762,
         "Rogue": 0.0684884600624762
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0684884600624762,
+        "probabilityText": "6.85%"
       }
     },
     "234": {
@@ -14325,6 +15733,12 @@
         "Primalist": 0.2336448613749143,
         "Acolyte": 0.2336448613749143,
         "Rogue": 0.2336448613749143
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.2336448613749143,
+        "probabilityText": "23.36%"
       }
     },
     "235": {
@@ -14354,6 +15768,12 @@
         "Primalist": 0.024855013460569546,
         "Acolyte": 0.024855013460569546,
         "Rogue": 0.024855013460569546
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.024855013460569546,
+        "probabilityText": "2.49%"
       }
     },
     "236": {
@@ -14383,6 +15803,12 @@
         "Primalist": 0.16949152610864288,
         "Acolyte": 0.16949152610864288,
         "Rogue": 0.16949152610864288
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.16949152610864288,
+        "probabilityText": "16.95%"
       }
     },
     "237": {
@@ -14412,6 +15838,12 @@
         "Primalist": 0.09900990075637822,
         "Acolyte": 0.09900990075637822,
         "Rogue": 0.09900990075637822
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09900990075637822,
+        "probabilityText": "9.9%"
       }
     },
     "238": {
@@ -14731,7 +16163,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/julras_stardial.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/julras_stardial.png",
+      "display": {
+        "kind": "boss",
+        "source": "时间法师朱拉",
+        "probability": 0.37037037037037035,
+        "probabilityText": "37.04%"
+      }
     },
     "239": {
       "kind": "boss",
@@ -14991,7 +16429,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/somnia.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/somnia.png",
+      "display": {
+        "kind": "boss",
+        "source": "时间法师朱拉",
+        "probability": 0.37037037037037035,
+        "probabilityText": "37.04%"
+      }
     },
     "240": {
       "kind": "boss",
@@ -15192,7 +16636,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/julras_obsession.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/julras_obsession.png",
+      "display": {
+        "kind": "boss",
+        "source": "时间法师朱拉",
+        "probability": 0.18518518518518517,
+        "probabilityText": "18.52%"
+      }
     },
     "241": {
       "kind": "boss",
@@ -15334,7 +16784,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/vessel_of_strife.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/vessel_of_strife.png",
+      "display": {
+        "kind": "boss",
+        "source": "时间法师朱拉",
+        "probability": 0.07407407407407407,
+        "probabilityText": "7.41%"
+      }
     },
     "242": {
       "kind": "world",
@@ -15363,6 +16819,12 @@
         "Primalist": 0.045977008895556504,
         "Acolyte": 0.045977008895556504,
         "Rogue": 0.045977008895556504
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.045977008895556504,
+        "probabilityText": "4.6%"
       }
     },
     "243": {
@@ -15392,6 +16854,12 @@
         "Primalist": 0.11494252908999987,
         "Acolyte": 0.11494252908999987,
         "Rogue": 0.11494252908999987
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.11494252908999987,
+        "probabilityText": "11.49%"
       }
     },
     "244": {
@@ -15421,6 +16889,12 @@
         "Primalist": 0.24691358315401407,
         "Acolyte": 0.24691358315401407,
         "Rogue": 0.24691358315401407
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.2469135831540141,
+        "probabilityText": "24.69%"
       }
     },
     "245": {
@@ -15450,6 +16924,12 @@
         "Primalist": 0.2857142857142857,
         "Acolyte": 0.2857142857142857,
         "Rogue": 0.2857142857142857
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.2857142857142857,
+        "probabilityText": "28.57%"
       }
     },
     "246": {
@@ -15479,6 +16959,12 @@
         "Primalist": 0.14285714285714285,
         "Acolyte": 0.14285714285714285,
         "Rogue": 0.14285714285714285
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.14285714285714285,
+        "probabilityText": "14.29%"
       }
     },
     "247": {
@@ -15508,6 +16994,12 @@
         "Primalist": 0.10101010064521186,
         "Acolyte": 0.10101010064521186,
         "Rogue": 0.10101010064521186
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.10101010064521186,
+        "probabilityText": "10.1%"
       }
     },
     "248": {
@@ -15530,7 +17022,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/fleshofstone.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/fleshofstone.png",
+      "display": {
+        "kind": "legacy",
+        "source": "旧／隐藏条目",
+        "probability": null,
+        "probabilityText": "当前版本不进入随机掉落池"
+      }
     },
     "249": {
       "kind": "world",
@@ -15560,6 +17058,12 @@
         "Primalist": 0.004608294674553704,
         "Acolyte": 0.004608294674553704,
         "Rogue": 0.004608294674553704
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.023041474746147438,
+        "probabilityText": "2.3%"
       }
     },
     "250": {
@@ -15589,6 +17093,12 @@
         "Primalist": 0.07352941163580311,
         "Acolyte": 0.07352941163580311,
         "Rogue": 0.07352941163580311
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07352941163580311,
+        "probabilityText": "7.35%"
       }
     },
     "251": {
@@ -15618,6 +17128,12 @@
         "Primalist": 0.16666666614926526,
         "Acolyte": 0.16666666614926526,
         "Rogue": 0.16666666614926526
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.16666666614926526,
+        "probabilityText": "16.67%"
       }
     },
     "252": {
@@ -15647,6 +17163,12 @@
         "Primalist": 0.07812499956344254,
         "Acolyte": 0.07812499956344254,
         "Rogue": 0.07812499956344254
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07812499956344254,
+        "probabilityText": "7.81%"
       }
     },
     "253": {
@@ -15787,7 +17309,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/foot_of_the_mountain.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/foot_of_the_mountain.png",
+      "display": {
+        "kind": "boss",
+        "source": "Stone Titan's Heart",
+        "probability": 0.45,
+        "probabilityText": "45%"
+      }
     },
     "254": {
       "kind": "boss",
@@ -15927,7 +17455,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/face_of_the_mountain.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/face_of_the_mountain.png",
+      "display": {
+        "kind": "boss",
+        "source": "Stone Titan's Heart",
+        "probability": 0.18,
+        "probabilityText": "18%"
+      }
     },
     "255": {
       "kind": "boss",
@@ -16067,7 +17601,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/core_of_the_mountain.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/core_of_the_mountain.png",
+      "display": {
+        "kind": "boss",
+        "source": "Stone Titan's Heart",
+        "probability": 0.12,
+        "probabilityText": "12%"
+      }
     },
     "256": {
       "kind": "boss",
@@ -16207,7 +17747,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/peak_of_the_mountain.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/peak_of_the_mountain.png",
+      "display": {
+        "kind": "boss",
+        "source": "Stone Titan's Heart",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "257": {
       "kind": "boss",
@@ -16349,7 +17895,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/ashes_of_mortality.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/ashes_of_mortality.png",
+      "display": {
+        "kind": "boss",
+        "source": "火焰巫妖克里莫斯",
+        "probability": 0.65,
+        "probabilityText": "65%"
+      }
     },
     "258": {
       "kind": "boss",
@@ -16491,7 +18043,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/immolators_oblation.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/immolators_oblation.png",
+      "display": {
+        "kind": "boss",
+        "source": "火焰巫妖克里莫斯",
+        "probability": 0.18,
+        "probabilityText": "18%"
+      }
     },
     "259": {
       "kind": "boss",
@@ -16633,7 +18191,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/pyre_of_affliction.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/pyre_of_affliction.png",
+      "display": {
+        "kind": "boss",
+        "source": "火焰巫妖克里莫斯",
+        "probability": 0.12,
+        "probabilityText": "12%"
+      }
     },
     "260": {
       "kind": "boss",
@@ -16775,7 +18339,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/lichs_envy.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/lichs_envy.png",
+      "display": {
+        "kind": "boss",
+        "source": "火焰巫妖克里莫斯",
+        "probability": 0.3,
+        "probabilityText": "30%"
+      }
     },
     "261": {
       "kind": "boss",
@@ -16949,7 +18519,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/lichs_scorn.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/lichs_scorn.png",
+      "display": {
+        "kind": "boss",
+        "source": "Frost Lich Formosus",
+        "probability": 0.48,
+        "probabilityText": "48%"
+      }
     },
     "262": {
       "kind": "boss",
@@ -17167,7 +18743,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/penumbra.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/penumbra.png",
+      "display": {
+        "kind": "boss",
+        "source": "深红之刃",
+        "probability": 0.4,
+        "probabilityText": "40%"
+      }
     },
     "263": {
       "kind": "boss",
@@ -17385,7 +18967,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/omen_of_thunder.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/omen_of_thunder.png",
+      "display": {
+        "kind": "boss",
+        "source": "阿尔弗利克·狼喉",
+        "probability": 0.4,
+        "probabilityText": "40%"
+      }
     },
     "264": {
       "kind": "boss",
@@ -17603,7 +19191,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/vaions_chariot.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/vaions_chariot.png",
+      "display": {
+        "kind": "boss",
+        "source": "兵械大师维昂",
+        "probability": 0.4,
+        "probabilityText": "40%"
+      }
     },
     "265": {
       "kind": "special",
@@ -17722,7 +19316,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/soul_gamblers_fallacy.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/soul_gamblers_fallacy.png",
+      "display": {
+        "kind": "special",
+        "source": "灵魂赌徒格林",
+        "probability": 0.06,
+        "probabilityText": "6%"
+      }
     },
     "266": {
       "kind": "special",
@@ -17841,7 +19441,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/burning_avarice.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/burning_avarice.png",
+      "display": {
+        "kind": "special",
+        "source": "灵魂赌徒格林",
+        "probability": 0.06,
+        "probabilityText": "6%"
+      }
     },
     "267": {
       "kind": "special",
@@ -17960,7 +19566,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/ashes_of_orchirian.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/ashes_of_orchirian.png",
+      "display": {
+        "kind": "special",
+        "source": "灵魂赌徒格林",
+        "probability": 0.06,
+        "probabilityText": "6%"
+      }
     },
     "268": {
       "kind": "world",
@@ -17990,6 +19602,12 @@
         "Primalist": 0.036676325010056104,
         "Acolyte": 0.03568663432780942,
         "Rogue": 0.03304443259739689
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.018433178698214817,
+        "probabilityText": "1.84%"
       }
     },
     "269": {
@@ -18019,6 +19637,12 @@
         "Primalist": 0.12345679157700704,
         "Acolyte": 0.12345679157700704,
         "Rogue": 0.12345679157700704
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.12345679157700705,
+        "probabilityText": "12.35%"
       }
     },
     "270": {
@@ -18049,6 +19673,12 @@
         "Primalist": 0.006374501248783231,
         "Acolyte": 0.006374501248783231,
         "Rogue": 0.0635173563541346
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.031872508143665684,
+        "probabilityText": "3.19%"
       }
     },
     "271": {
@@ -18078,6 +19708,12 @@
         "Primalist": 0.11494252908999987,
         "Acolyte": 0.11494252908999987,
         "Rogue": 0.11494252908999987
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.11494252908999987,
+        "probabilityText": "11.49%"
       }
     },
     "272": {
@@ -18108,6 +19744,12 @@
         "Primalist": 0.0033444814086713774,
         "Acolyte": 0.021281701421281555,
         "Rogue": 0.0033444814086713774
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.016722408040090078,
+        "probabilityText": "1.67%"
       }
     },
     "273": {
@@ -18137,6 +19779,12 @@
         "Primalist": 0.13157894798758288,
         "Acolyte": 0.13157894798758288,
         "Rogue": 0.13157894798758288
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.13157894798758288,
+        "probabilityText": "13.16%"
       }
     },
     "274": {
@@ -18166,6 +19814,12 @@
         "Primalist": 0.0729927004758713,
         "Acolyte": 0.0729927004758713,
         "Rogue": 0.0729927004758713
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0729927004758713,
+        "probabilityText": "7.3%"
       }
     },
     "275": {
@@ -18196,6 +19850,12 @@
         "Primalist": 0.006688962817342755,
         "Acolyte": 0.006688962817342755,
         "Rogue": 0.006688962817342755
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.033444816080180156,
+        "probabilityText": "3.34%"
       }
     },
     "276": {
@@ -18225,6 +19885,12 @@
         "Primalist": 0.062223881834048915,
         "Acolyte": 0.062223881834048915,
         "Rogue": 0.062223881834048915
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.062223881834048915,
+        "probabilityText": "6.22%"
       }
     },
     "277": {
@@ -18254,6 +19920,12 @@
         "Primalist": 0.0016569992512888705,
         "Acolyte": 0.0016569992512888705,
         "Rogue": 0.0016569992512888705
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0016569992512888705,
+        "probabilityText": "0.17%"
       }
     },
     "278": {
@@ -18283,6 +19955,12 @@
         "Primalist": 0.07817385923426935,
         "Acolyte": 0.07817385923426935,
         "Rogue": 0.07817385923426935
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07817385923426935,
+        "probabilityText": "7.82%"
       }
     },
     "279": {
@@ -18312,6 +19990,12 @@
         "Primalist": 0.25,
         "Acolyte": 0.25,
         "Rogue": 0.25
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.25,
+        "probabilityText": "25%"
       }
     },
     "280": {
@@ -18341,6 +20025,12 @@
         "Primalist": 0.0684884600624762,
         "Acolyte": 0.0684884600624762,
         "Rogue": 0.0684884600624762
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0684884600624762,
+        "probabilityText": "6.85%"
       }
     },
     "281": {
@@ -18371,6 +20061,12 @@
         "Primalist": 0.009216589349107409,
         "Acolyte": 0.009216589349107409,
         "Rogue": 0.009216589349107409
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.046082949492294877,
+        "probabilityText": "4.61%"
       }
     },
     "282": {
@@ -18400,6 +20096,12 @@
         "Primalist": 0.2336448613749143,
         "Acolyte": 0.2336448613749143,
         "Rogue": 0.2336448613749143
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.2336448613749143,
+        "probabilityText": "23.36%"
       }
     },
     "283": {
@@ -18429,6 +20131,12 @@
         "Primalist": 0.10101010064521186,
         "Acolyte": 0.10101010064521186,
         "Rogue": 0.10101010064521186
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.10101010064521186,
+        "probabilityText": "10.1%"
       }
     },
     "284": {
@@ -18458,6 +20166,12 @@
         "Primalist": 0.16949152610864288,
         "Acolyte": 0.16949152610864288,
         "Rogue": 0.16949152610864288
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.16949152610864288,
+        "probabilityText": "16.95%"
       }
     },
     "285": {
@@ -18487,6 +20201,12 @@
         "Primalist": 0.16949152610864288,
         "Acolyte": 0.16949152610864288,
         "Rogue": 0.16949152610864288
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.16949152610864288,
+        "probabilityText": "16.95%"
       }
     },
     "286": {
@@ -18516,6 +20236,12 @@
         "Primalist": 0.10101010064521186,
         "Acolyte": 0.10101010064521186,
         "Rogue": 0.10101010064521186
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.10101010064521186,
+        "probabilityText": "10.1%"
       }
     },
     "287": {
@@ -18545,6 +20271,12 @@
         "Primalist": 0.062223881834048915,
         "Acolyte": 0.062223881834048915,
         "Rogue": 0.062223881834048915
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.062223881834048915,
+        "probabilityText": "6.22%"
       }
     },
     "288": {
@@ -18574,6 +20306,12 @@
         "Primalist": 0.09615384582319908,
         "Acolyte": 0.09615384582319908,
         "Rogue": 0.09615384582319908
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09615384582319908,
+        "probabilityText": "9.62%"
       }
     },
     "289": {
@@ -18603,6 +20341,12 @@
         "Primalist": 0.1459854009517426,
         "Acolyte": 0.1459854009517426,
         "Rogue": 0.1459854009517426
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.1459854009517426,
+        "probabilityText": "14.6%"
       }
     },
     "290": {
@@ -18632,6 +20376,12 @@
         "Primalist": 0.028142590442622992,
         "Acolyte": 0.028142590442622992,
         "Rogue": 0.028142590442622992
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.028142590442622992,
+        "probabilityText": "2.81%"
       }
     },
     "291": {
@@ -18662,6 +20412,12 @@
         "Primalist": 0.009216589349107409,
         "Acolyte": 0.009216589349107409,
         "Rogue": 0.08261108641749668
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.046082949492294877,
+        "probabilityText": "4.61%"
       }
     },
     "292": {
@@ -18691,6 +20447,12 @@
         "Primalist": 0.09523809523809523,
         "Acolyte": 0.09523809523809523,
         "Rogue": 0.09523809523809523
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09523809523809523,
+        "probabilityText": "9.52%"
       }
     },
     "293": {
@@ -18720,6 +20482,12 @@
         "Primalist": 0.062223881834048915,
         "Acolyte": 0.062223881834048915,
         "Rogue": 0.062223881834048915
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.062223881834048915,
+        "probabilityText": "6.22%"
       }
     },
     "294": {
@@ -18749,6 +20517,12 @@
         "Primalist": 0.08285004157640029,
         "Acolyte": 0.08285004157640029,
         "Rogue": 0.08285004157640029
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.08285004157640029,
+        "probabilityText": "8.29%"
       }
     },
     "295": {
@@ -18778,6 +20552,12 @@
         "Primalist": 0.09900990075637822,
         "Acolyte": 0.09900990075637822,
         "Rogue": 0.09900990075637822
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09900990075637822,
+        "probabilityText": "9.9%"
       }
     },
     "296": {
@@ -18807,6 +20587,12 @@
         "Primalist": 0.0684884600624762,
         "Acolyte": 0.0684884600624762,
         "Rogue": 0.0684884600624762
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0684884600624762,
+        "probabilityText": "6.85%"
       }
     },
     "297": {
@@ -18837,6 +20623,12 @@
         "Primalist": 0.0916908179903389,
         "Acolyte": 0.009216589349107409,
         "Rogue": 0.009216589349107409
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.046082949492294877,
+        "probabilityText": "4.61%"
       }
     },
     "298": {
@@ -18867,6 +20659,12 @@
         "Primalist": 0.009216589349107409,
         "Acolyte": 0.009216589349107409,
         "Rogue": 0.009216589349107409
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.046082949492294877,
+        "probabilityText": "4.61%"
       }
     },
     "299": {
@@ -18897,6 +20695,12 @@
         "Primalist": 0.009216589349107409,
         "Acolyte": 0.009216589349107409,
         "Rogue": 0.009216589349107409
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.046082949492294877,
+        "probabilityText": "4.61%"
       }
     },
     "300": {
@@ -18927,6 +20731,12 @@
         "Primalist": 0.009216589349107409,
         "Acolyte": 0.08921659113724677,
         "Rogue": 0.009216589349107409
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.046082949492294877,
+        "probabilityText": "4.61%"
       }
     },
     "301": {
@@ -18957,6 +20767,12 @@
         "Primalist": 0.009216589349107409,
         "Acolyte": 0.009216589349107409,
         "Rogue": 0.08261108641749668
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.046082949492294877,
+        "probabilityText": "4.61%"
       }
     },
     "302": {
@@ -18987,6 +20803,12 @@
         "Primalist": 0.12260292253988431,
         "Acolyte": 0.015936254071832842,
         "Rogue": 0.015936254071832842
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07968127510853831,
+        "probabilityText": "7.97%"
       }
     },
     "303": {
@@ -19016,6 +20838,12 @@
         "Primalist": 0.08285004157640029,
         "Acolyte": 0.08285004157640029,
         "Rogue": 0.08285004157640029
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.08285004157640029,
+        "probabilityText": "8.29%"
       }
     },
     "304": {
@@ -19046,6 +20874,12 @@
         "Primalist": 0.05418060172384509,
         "Acolyte": 0.051076082903680424,
         "Rogue": 0.05555150804042466
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.04013377889752291,
+        "probabilityText": "4.01%"
       }
     },
     "305": {
@@ -19075,6 +20909,12 @@
         "Primalist": 0.1459854009517426,
         "Acolyte": 0.1459854009517426,
         "Rogue": 0.1459854009517426
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.1459854009517426,
+        "probabilityText": "14.6%"
       }
     },
     "306": {
@@ -19104,6 +20944,12 @@
         "Primalist": 0.0342442300312381,
         "Acolyte": 0.0342442300312381,
         "Rogue": 0.0342442300312381
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0342442300312381,
+        "probabilityText": "3.42%"
       }
     },
     "307": {
@@ -19134,6 +20980,12 @@
         "Primalist": 0.011155377660308037,
         "Acolyte": 0.011155377660308037,
         "Rogue": 0.011155377660308037
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.055776891626102,
+        "probabilityText": "5.58%"
       }
     },
     "308": {
@@ -19163,6 +21015,12 @@
         "Primalist": 0.20618556853067435,
         "Acolyte": 0.20618556853067435,
         "Rogue": 0.20618556853067435
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.20618556853067435,
+        "probabilityText": "20.62%"
       }
     },
     "309": {
@@ -19193,6 +21051,12 @@
         "Primalist": 0.01337792563468551,
         "Acolyte": 0.01337792563468551,
         "Rogue": 0.09258584765379888
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.06688963216036031,
+        "probabilityText": "6.69%"
       }
     },
     "310": {
@@ -19222,6 +21086,12 @@
         "Primalist": 0.04123711124821135,
         "Acolyte": 0.04123711124821135,
         "Rogue": 0.04123711124821135
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.041237111248211354,
+        "probabilityText": "4.12%"
       }
     },
     "311": {
@@ -19251,6 +21121,12 @@
         "Primalist": 0.09523809523809523,
         "Acolyte": 0.09523809523809523,
         "Rogue": 0.09523809523809523
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09523809523809523,
+        "probabilityText": "9.52%"
       }
     },
     "312": {
@@ -19281,6 +21157,12 @@
         "Primalist": 0.009216589349107409,
         "Acolyte": 0.009216589349107409,
         "Rogue": 0.009216589349107409
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.046082949492294877,
+        "probabilityText": "4.61%"
       }
     },
     "313": {
@@ -19311,6 +21193,12 @@
         "Primalist": 0.01337792563468551,
         "Acolyte": 0.01337792563468551,
         "Rogue": 0.01337792563468551
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.06688963216036031,
+        "probabilityText": "6.69%"
       }
     },
     "314": {
@@ -19340,6 +21228,12 @@
         "Primalist": 0.1562499991268851,
         "Acolyte": 0.1562499991268851,
         "Rogue": 0.1562499991268851
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.1562499991268851,
+        "probabilityText": "15.62%"
       }
     },
     "315": {
@@ -19369,6 +21263,12 @@
         "Primalist": 0.16949152610864288,
         "Acolyte": 0.16949152610864288,
         "Rogue": 0.16949152610864288
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.16949152610864288,
+        "probabilityText": "16.95%"
       }
     },
     "316": {
@@ -19399,6 +21299,12 @@
         "Primalist": 0.00956175234811223,
         "Acolyte": 0.00956175234811223,
         "Rogue": 0.00956175234811223
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.04780876459018558,
+        "probabilityText": "4.78%"
       }
     },
     "317": {
@@ -19428,6 +21334,12 @@
         "Primalist": 0.10101010064521186,
         "Acolyte": 0.10101010064521186,
         "Rogue": 0.10101010064521186
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.10101010064521186,
+        "probabilityText": "10.1%"
       }
     },
     "318": {
@@ -19457,6 +21369,12 @@
         "Primalist": 0.0654205545003429,
         "Acolyte": 0.0654205545003429,
         "Rogue": 0.0654205545003429
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0654205545003429,
+        "probabilityText": "6.54%"
       }
     },
     "319": {
@@ -19509,7 +21427,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/merophage.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/merophage.png",
+      "display": {
+        "kind": "boss",
+        "source": "流亡法师",
+        "probability": 0.0125,
+        "probabilityText": "1.25%"
+      }
     },
     "320": {
       "kind": "boss",
@@ -19561,7 +21485,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/sierpins_fractal_tree.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/sierpins_fractal_tree.png",
+      "display": {
+        "kind": "boss",
+        "source": "流亡法师",
+        "probability": 0.0125,
+        "probabilityText": "1.25%"
+      }
     },
     "321": {
       "kind": "boss",
@@ -19613,7 +21543,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/mad_alchemists_ladle.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/mad_alchemists_ladle.png",
+      "display": {
+        "kind": "boss",
+        "source": "流亡法师",
+        "probability": 0.0125,
+        "probabilityText": "1.25%"
+      }
     },
     "322": {
       "kind": "boss",
@@ -19665,7 +21601,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/the_cuckoo.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/the_cuckoo.png",
+      "display": {
+        "kind": "boss",
+        "source": "流亡法师",
+        "probability": 0.0075000003,
+        "probabilityText": "0.75%"
+      }
     },
     "323": {
       "kind": "world",
@@ -19694,6 +21636,12 @@
         "Primalist": 0.0729927004758713,
         "Acolyte": 0.0729927004758713,
         "Rogue": 0.0729927004758713
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0729927004758713,
+        "probabilityText": "7.3%"
       }
     },
     "324": {
@@ -19723,6 +21671,12 @@
         "Primalist": 0.1587301589929658,
         "Acolyte": 0.1587301589929658,
         "Rogue": 0.1587301589929658
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.1587301589929658,
+        "probabilityText": "15.87%"
       }
     },
     "325": {
@@ -19752,6 +21706,12 @@
         "Primalist": 0.14285714285714285,
         "Acolyte": 0.14285714285714285,
         "Rogue": 0.14285714285714285
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.14285714285714285,
+        "probabilityText": "14.29%"
       }
     },
     "326": {
@@ -19781,6 +21741,12 @@
         "Primalist": 0.14285714285714285,
         "Acolyte": 0.14285714285714285,
         "Rogue": 0.14285714285714285
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.14285714285714285,
+        "probabilityText": "14.29%"
       }
     },
     "327": {
@@ -19810,6 +21776,12 @@
         "Primalist": 0.02884615489320289,
         "Acolyte": 0.02884615489320289,
         "Rogue": 0.02884615489320289
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.02884615489320289,
+        "probabilityText": "2.88%"
       }
     },
     "328": {
@@ -19839,6 +21811,12 @@
         "Primalist": 0.10101010064521186,
         "Acolyte": 0.10101010064521186,
         "Rogue": 0.10101010064521186
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.10101010064521186,
+        "probabilityText": "10.1%"
       }
     },
     "329": {
@@ -19868,6 +21846,12 @@
         "Primalist": 0.09900990075637822,
         "Acolyte": 0.09900990075637822,
         "Rogue": 0.09900990075637822
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09900990075637822,
+        "probabilityText": "9.9%"
       }
     },
     "330": {
@@ -19897,6 +21881,12 @@
         "Primalist": 0.14705882327160621,
         "Acolyte": 0.14705882327160621,
         "Rogue": 0.14705882327160621
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.14705882327160621,
+        "probabilityText": "14.71%"
       }
     },
     "331": {
@@ -19926,6 +21916,12 @@
         "Primalist": 0.10101010064521186,
         "Acolyte": 0.10101010064521186,
         "Rogue": 0.10101010064521186
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.10101010064521186,
+        "probabilityText": "10.1%"
       }
     },
     "332": {
@@ -19955,6 +21951,12 @@
         "Primalist": 0.024889551250086617,
         "Acolyte": 0.024889551250086617,
         "Rogue": 0.024889551250086617
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.024889551250086617,
+        "probabilityText": "2.49%"
       }
     },
     "333": {
@@ -19984,6 +21986,12 @@
         "Primalist": 0.062223881834048915,
         "Acolyte": 0.062223881834048915,
         "Rogue": 0.062223881834048915
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.062223881834048915,
+        "probabilityText": "6.22%"
       }
     },
     "334": {
@@ -20013,6 +22021,12 @@
         "Primalist": 0.09195402292944446,
         "Acolyte": 0.09195402292944446,
         "Rogue": 0.09195402292944446
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09195402292944446,
+        "probabilityText": "9.2%"
       }
     },
     "335": {
@@ -20043,6 +22057,12 @@
         "Primalist": 0.010358565241678825,
         "Acolyte": 0.08855405612608504,
         "Rogue": 0.010358565241678825
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.051792829295487314,
+        "probabilityText": "5.18%"
       }
     },
     "336": {
@@ -20072,6 +22092,12 @@
         "Primalist": 0.01904761791229248,
         "Acolyte": 0.01904761791229248,
         "Rogue": 0.01904761791229248
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.01904761791229248,
+        "probabilityText": "1.9%"
       }
     },
     "337": {
@@ -20101,6 +22127,12 @@
         "Primalist": 0.013697691196049175,
         "Acolyte": 0.013697691196049175,
         "Rogue": 0.013697691196049175
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.013697691196049175,
+        "probabilityText": "1.37%"
       }
     },
     "338": {
@@ -20130,6 +22162,12 @@
         "Primalist": 0.09876542737472707,
         "Acolyte": 0.09876542737472707,
         "Rogue": 0.09876542737472707
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09876542737472707,
+        "probabilityText": "9.88%"
       }
     },
     "339": {
@@ -20436,7 +22474,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/black_blade_of_chaos.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/black_blade_of_chaos.png",
+      "display": {
+        "kind": "boss",
+        "source": "混乱之先驱者",
+        "probability": 0.22,
+        "probabilityText": "22%"
+      }
     },
     "340": {
       "kind": "world",
@@ -20465,6 +22509,12 @@
         "Primalist": 0.08285004157640029,
         "Acolyte": 0.08285004157640029,
         "Rogue": 0.08285004157640029
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.08285004157640029,
+        "probabilityText": "8.29%"
       }
     },
     "341": {
@@ -20495,6 +22545,12 @@
         "Primalist": 0.009216589349107409,
         "Acolyte": 0.08921659113724677,
         "Rogue": 0.009216589349107409
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.046082949492294877,
+        "probabilityText": "4.61%"
       }
     },
     "342": {
@@ -20524,6 +22580,12 @@
         "Primalist": 0.06779660640246427,
         "Acolyte": 0.06779660640246427,
         "Rogue": 0.06779660640246427
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.06779660640246427,
+        "probabilityText": "6.78%"
       }
     },
     "343": {
@@ -20588,7 +22650,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/egg_of_the_forgotten.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/egg_of_the_forgotten.png",
+      "display": {
+        "kind": "legacy",
+        "source": "旧／隐藏条目",
+        "probability": null,
+        "probabilityText": "当前版本不进入随机掉落池"
+      }
     },
     "344": {
       "kind": "boss",
@@ -21588,7 +23656,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/harbingers_needle.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/harbingers_needle.png",
+      "display": {
+        "kind": "boss",
+        "source": "傲慢之先驱者",
+        "probability": 0.55,
+        "probabilityText": "55%"
+      }
     },
     "345": {
       "kind": "boss",
@@ -21894,7 +23968,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/bane_of_winter.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/bane_of_winter.png",
+      "display": {
+        "kind": "boss",
+        "source": "阿波罗斯",
+        "probability": 0.1,
+        "probabilityText": "10%"
+      }
     },
     "346": {
       "kind": "world",
@@ -21923,6 +24003,12 @@
         "Primalist": 0.09523809523809523,
         "Acolyte": 0.09523809523809523,
         "Rogue": 0.09523809523809523
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09523809523809523,
+        "probabilityText": "9.52%"
       }
     },
     "347": {
@@ -22229,7 +24315,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/the_inevitable.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/the_inevitable.png",
+      "display": {
+        "kind": "boss",
+        "source": "恐惧之先驱者",
+        "probability": 0.22,
+        "probabilityText": "22%"
+      }
     },
     "348": {
       "kind": "world",
@@ -22258,6 +24350,12 @@
         "Primalist": 0.08285004157640029,
         "Acolyte": 0.08285004157640029,
         "Rogue": 0.08285004157640029
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.08285004157640029,
+        "probabilityText": "8.29%"
       }
     },
     "349": {
@@ -22287,6 +24385,12 @@
         "Primalist": 0.09523809523809523,
         "Acolyte": 0.09523809523809523,
         "Rogue": 0.09523809523809523
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09523809523809523,
+        "probabilityText": "9.52%"
       }
     },
     "350": {
@@ -22316,6 +24420,12 @@
         "Primalist": 0.0684884600624762,
         "Acolyte": 0.0684884600624762,
         "Rogue": 0.0684884600624762
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0684884600624762,
+        "probabilityText": "6.85%"
       }
     },
     "351": {
@@ -22345,6 +24455,12 @@
         "Primalist": 0.14432989551354852,
         "Acolyte": 0.14432989551354852,
         "Rogue": 0.14432989551354852
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.14432989551354852,
+        "probabilityText": "14.43%"
       }
     },
     "352": {
@@ -22374,6 +24490,12 @@
         "Primalist": 0.13157894798758288,
         "Acolyte": 0.13157894798758288,
         "Rogue": 0.13157894798758288
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.13157894798758288,
+        "probabilityText": "13.16%"
       }
     },
     "353": {
@@ -22519,7 +24641,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/nihilis.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/nihilis.png",
+      "display": {
+        "kind": "boss",
+        "source": "阿波罗斯",
+        "probability": 0.14285714285714285,
+        "probabilityText": "14.29%"
+      }
     },
     "354": {
       "kind": "boss",
@@ -22825,7 +24953,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/wall_of_nothing.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/wall_of_nothing.png",
+      "display": {
+        "kind": "boss",
+        "source": "背叛之先驱者",
+        "probability": 0.22,
+        "probabilityText": "22%"
+      }
     },
     "355": {
       "kind": "boss",
@@ -23131,7 +25265,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/aberroths_command.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/aberroths_command.png",
+      "display": {
+        "kind": "boss",
+        "source": "阿波罗斯",
+        "probability": 0.1,
+        "probabilityText": "10%"
+      }
     },
     "356": {
       "kind": "world",
@@ -23160,6 +25300,12 @@
         "Primalist": 0.02739538239209835,
         "Acolyte": 0.02739538239209835,
         "Rogue": 0.02739538239209835
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.02739538239209835,
+        "probabilityText": "2.74%"
       }
     },
     "357": {
@@ -23305,7 +25451,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/seed_of_ekkidrasil.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/seed_of_ekkidrasil.png",
+      "display": {
+        "kind": "boss",
+        "source": "阿波罗斯",
+        "probability": 0.38095238095238093,
+        "probabilityText": "38.1%"
+      }
     },
     "358": {
       "kind": "boss",
@@ -23450,7 +25602,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/null_portent.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/null_portent.png",
+      "display": {
+        "kind": "boss",
+        "source": "阿波罗斯",
+        "probability": 0.47619047619047616,
+        "probabilityText": "47.62%"
+      }
     },
     "359": {
       "kind": "world",
@@ -23479,6 +25637,12 @@
         "Primalist": 0.062223881834048915,
         "Acolyte": 0.062223881834048915,
         "Rogue": 0.062223881834048915
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.062223881834048915,
+        "probabilityText": "6.22%"
       }
     },
     "360": {
@@ -23508,6 +25672,12 @@
         "Primalist": 0.08285004157640029,
         "Acolyte": 0.08285004157640029,
         "Rogue": 0.08285004157640029
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.08285004157640029,
+        "probabilityText": "8.29%"
       }
     },
     "361": {
@@ -23814,7 +25984,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/phase_point.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/phase_point.png",
+      "display": {
+        "kind": "boss",
+        "source": "傲慢之先驱者",
+        "probability": 0.22,
+        "probabilityText": "22%"
+      }
     },
     "362": {
       "kind": "world",
@@ -23843,6 +26019,12 @@
         "Primalist": 0.09900990075637822,
         "Acolyte": 0.09900990075637822,
         "Rogue": 0.09900990075637822
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09900990075637822,
+        "probabilityText": "9.9%"
       }
     },
     "363": {
@@ -23872,6 +26054,12 @@
         "Primalist": 0.1562499991268851,
         "Acolyte": 0.1562499991268851,
         "Rogue": 0.1562499991268851
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.1562499991268851,
+        "probabilityText": "15.62%"
       }
     },
     "364": {
@@ -24178,7 +26366,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/event_horizon.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/event_horizon.png",
+      "display": {
+        "kind": "boss",
+        "source": "阿波罗斯",
+        "probability": 0.1,
+        "probabilityText": "10%"
+      }
     },
     "365": {
       "kind": "boss",
@@ -24484,7 +26678,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/world_splitter.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/world_splitter.png",
+      "display": {
+        "kind": "boss",
+        "source": "阿波罗斯",
+        "probability": 0.1,
+        "probabilityText": "10%"
+      }
     },
     "366": {
       "kind": "boss",
@@ -24790,7 +26990,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/flames_of_midnight.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/flames_of_midnight.png",
+      "display": {
+        "kind": "boss",
+        "source": "阿波罗斯",
+        "probability": 0.1,
+        "probabilityText": "10%"
+      }
     },
     "367": {
       "kind": "boss",
@@ -25096,7 +27302,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/celestial_doom.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/celestial_doom.png",
+      "display": {
+        "kind": "boss",
+        "source": "战争之先驱者",
+        "probability": 0.22,
+        "probabilityText": "22%"
+      }
     },
     "368": {
       "kind": "world",
@@ -25125,6 +27337,12 @@
         "Primalist": 0.05472170053208352,
         "Acolyte": 0.05472170053208352,
         "Rogue": 0.05472170053208352
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.05472170053208352,
+        "probabilityText": "5.47%"
       }
     },
     "369": {
@@ -25154,6 +27372,12 @@
         "Primalist": 0.10101010064521186,
         "Acolyte": 0.10101010064521186,
         "Rogue": 0.10101010064521186
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.10101010064521186,
+        "probabilityText": "10.1%"
       }
     },
     "370": {
@@ -25184,6 +27408,12 @@
         "Primalist": 0.09030100377013502,
         "Acolyte": 0.08512680568512622,
         "Rogue": 0.09258584765379888
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.06688963216036031,
+        "probabilityText": "6.69%"
       }
     },
     "371": {
@@ -25213,6 +27443,12 @@
         "Primalist": 0.13157894798758288,
         "Acolyte": 0.13157894798758288,
         "Rogue": 0.13157894798758288
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.13157894798758288,
+        "probabilityText": "13.16%"
       }
     },
     "372": {
@@ -25242,6 +27478,12 @@
         "Primalist": 0.062223881834048915,
         "Acolyte": 0.062223881834048915,
         "Rogue": 0.062223881834048915
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.062223881834048915,
+        "probabilityText": "6.22%"
       }
     },
     "373": {
@@ -25272,6 +27514,12 @@
         "Primalist": 0.09808233766652227,
         "Acolyte": 0.1089896061343503,
         "Rogue": 0.12703471980688735
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.06374501984936194,
+        "probabilityText": "6.37%"
       }
     },
     "374": {
@@ -25301,6 +27549,12 @@
         "Primalist": 0.0469043150746091,
         "Acolyte": 0.0469043150746091,
         "Rogue": 0.0469043150746091
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0469043150746091,
+        "probabilityText": "4.69%"
       }
     },
     "375": {
@@ -25330,6 +27584,12 @@
         "Primalist": 0.0469043150746091,
         "Acolyte": 0.0469043150746091,
         "Rogue": 0.0469043150746091
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0469043150746091,
+        "probabilityText": "4.69%"
       }
     },
     "376": {
@@ -25359,6 +27619,12 @@
         "Primalist": 0.0469043150746091,
         "Acolyte": 0.0469043150746091,
         "Rogue": 0.0469043150746091
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.0469043150746091,
+        "probabilityText": "4.69%"
       }
     },
     "377": {
@@ -25388,6 +27654,12 @@
         "Primalist": 0.10101010064521186,
         "Acolyte": 0.10101010064521186,
         "Rogue": 0.10101010064521186
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.10101010064521186,
+        "probabilityText": "10.1%"
       }
     },
     "378": {
@@ -25417,6 +27689,12 @@
         "Primalist": 0.20833333346268368,
         "Acolyte": 0.20833333346268368,
         "Rogue": 0.20833333346268368
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.2083333334626837,
+        "probabilityText": "20.83%"
       }
     },
     "379": {
@@ -25439,7 +27717,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_short_sword.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_short_sword.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "380": {
       "kind": "special",
@@ -25461,7 +27745,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_cleaver.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_cleaver.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "381": {
       "kind": "special",
@@ -25483,7 +27773,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_club.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_club.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "382": {
       "kind": "special",
@@ -25505,7 +27801,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_great_sword.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_great_sword.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "383": {
       "kind": "special",
@@ -25527,7 +27829,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_great_axe.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_great_axe.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "384": {
       "kind": "special",
@@ -25549,7 +27857,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_great_mace.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_great_mace.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "385": {
       "kind": "special",
@@ -25571,7 +27885,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_spear.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_spear.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "386": {
       "kind": "special",
@@ -25593,7 +27913,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_staff.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_staff.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "387": {
       "kind": "special",
@@ -25615,7 +27941,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_cuirass.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_cuirass.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "388": {
       "kind": "special",
@@ -25637,7 +27969,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_dagger.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_dagger.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "389": {
       "kind": "special",
@@ -25659,7 +27997,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_sceptre.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_sceptre.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "390": {
       "kind": "special",
@@ -25681,7 +28025,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_wand.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_wand.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "391": {
       "kind": "special",
@@ -25703,7 +28053,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_bow.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_bow.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "392": {
       "kind": "special",
@@ -25725,7 +28081,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_quiver.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_quiver.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "393": {
       "kind": "special",
@@ -25747,7 +28109,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_shield.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_shield.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "394": {
       "kind": "special",
@@ -25769,7 +28137,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_catalyst.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_catalyst.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "395": {
       "kind": "special",
@@ -25791,7 +28165,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_relic.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_relic.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "396": {
       "kind": "special",
@@ -25813,7 +28193,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_ring.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_ring.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "397": {
       "kind": "special",
@@ -25835,7 +28221,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_amulet.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_amulet.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "398": {
       "kind": "special",
@@ -25857,7 +28249,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_gloves.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_gloves.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "399": {
       "kind": "special",
@@ -25879,7 +28277,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_belt.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_belt.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "400": {
       "kind": "special",
@@ -25901,7 +28305,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_boots.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_boots.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "401": {
       "kind": "special",
@@ -25923,7 +28333,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": true,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_helmet.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/cocooned_helmet.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：茧化物品目标",
+        "probability": null,
+        "probabilityText": "概率未公开"
+      }
     },
     "402": {
       "kind": "world",
@@ -25952,6 +28368,12 @@
         "Primalist": 0.09615384582319908,
         "Acolyte": 0.09615384582319908,
         "Rogue": 0.09615384582319908
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09615384582319908,
+        "probabilityText": "9.62%"
       }
     },
     "403": {
@@ -26017,7 +28439,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/soul_of_the_mountain.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/soul_of_the_mountain.png",
+      "display": {
+        "kind": "boss",
+        "source": "德拉尔女王",
+        "probability": 1.0,
+        "probabilityText": "100%"
+      }
     },
     "404": {
       "kind": "boss",
@@ -26082,7 +28510,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/orians_descent.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/orians_descent.png",
+      "display": {
+        "kind": "boss",
+        "source": "碎片追寻者",
+        "probability": 1.0,
+        "probabilityText": "100%"
+      }
     },
     "405": {
       "kind": "world",
@@ -26111,6 +28545,12 @@
         "Primalist": 0.14705882327160621,
         "Acolyte": 0.14705882327160621,
         "Rogue": 0.14705882327160621
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.14705882327160621,
+        "probabilityText": "14.71%"
       }
     },
     "406": {
@@ -26140,6 +28580,12 @@
         "Primalist": 0.2857142857142857,
         "Acolyte": 0.2857142857142857,
         "Rogue": 0.2857142857142857
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.2857142857142857,
+        "probabilityText": "28.57%"
       }
     },
     "407": {
@@ -26169,6 +28615,12 @@
         "Primalist": 0.13157894798758288,
         "Acolyte": 0.13157894798758288,
         "Rogue": 0.13157894798758288
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.13157894798758288,
+        "probabilityText": "13.16%"
       }
     },
     "408": {
@@ -26198,6 +28650,12 @@
         "Primalist": 0.09523809523809523,
         "Acolyte": 0.09523809523809523,
         "Rogue": 0.09523809523809523
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09523809523809523,
+        "probabilityText": "9.52%"
       }
     },
     "409": {
@@ -26317,7 +28775,13 @@
       "weaversWill": true,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/inheritance_of_the_erased.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/inheritance_of_the_erased.png",
+      "display": {
+        "kind": "boss",
+        "source": "初生编织",
+        "probability": 0.45,
+        "probabilityText": "45%"
+      }
     },
     "410": {
       "kind": "special",
@@ -26383,7 +28847,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/unearthed_memories.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/unearthed_memories.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：蔓生墓园",
+        "probability": 1.0,
+        "probabilityText": "100%"
+      }
     },
     "411": {
       "kind": "boss",
@@ -26448,7 +28918,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/countenance_of_majasa.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/countenance_of_majasa.png",
+      "display": {
+        "kind": "boss",
+        "source": "Goddess of Blood",
+        "probability": 1.0,
+        "probabilityText": "100%"
+      }
     },
     "412": {
       "kind": "boss",
@@ -26513,7 +28989,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/dominance_of_the_tundra.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/dominance_of_the_tundra.png",
+      "display": {
+        "kind": "boss",
+        "source": "伊格尼希罗斯",
+        "probability": 1.0,
+        "probabilityText": "100%"
+      }
     },
     "413": {
       "kind": "boss",
@@ -26579,7 +29061,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/shattered_worlds.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/shattered_worlds.png",
+      "display": {
+        "kind": "boss",
+        "source": "Herald of Oblivion",
+        "probability": 0.2,
+        "probabilityText": "20%"
+      }
     },
     "414": {
       "kind": "world",
@@ -26609,6 +29097,12 @@
         "Primalist": 0.00737327145181835,
         "Acolyte": 0.07137327264391125,
         "Rogue": 0.00737327145181835
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.03686635945649801,
+        "probabilityText": "3.69%"
       }
     },
     "415": {
@@ -26675,7 +29169,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/immortal_vise.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/immortal_vise.png",
+      "display": {
+        "kind": "boss",
+        "source": "Herald of Oblivion",
+        "probability": 0.8,
+        "probabilityText": "80%"
+      }
     },
     "416": {
       "kind": "special",
@@ -26740,7 +29240,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/brewmasters_buckle.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/brewmasters_buckle.png",
+      "display": {
+        "kind": "special",
+        "source": "编织回响：大酒坊",
+        "probability": 1.0,
+        "probabilityText": "100%"
+      }
     },
     "417": {
       "kind": "boss",
@@ -26806,7 +29312,13 @@
       "weaversWill": true,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/clothos_needle.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/clothos_needle.png",
+      "display": {
+        "kind": "boss",
+        "source": "命运编织者克洛托",
+        "probability": 0.45,
+        "probabilityText": "45%"
+      }
     },
     "418": {
       "kind": "boss",
@@ -26872,7 +29384,13 @@
       "weaversWill": true,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/scissor_of_atropos.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/scissor_of_atropos.png",
+      "display": {
+        "kind": "boss",
+        "source": "命运编织者阿特洛波斯",
+        "probability": 0.45,
+        "probabilityText": "45%"
+      }
     },
     "419": {
       "kind": "boss",
@@ -26938,7 +29456,13 @@
       "weaversWill": true,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/blight_of_lachesis.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/blight_of_lachesis.png",
+      "display": {
+        "kind": "boss",
+        "source": "命运编织者拉克西丝",
+        "probability": 0.45,
+        "probabilityText": "45%"
+      }
     },
     "420": {
       "kind": "world",
@@ -26967,6 +29491,12 @@
         "Primalist": 0.07812499956344254,
         "Acolyte": 0.07812499956344254,
         "Rogue": 0.07812499956344254
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.07812499956344254,
+        "probabilityText": "7.81%"
       }
     },
     "421": {
@@ -26996,6 +29526,12 @@
         "Primalist": 0.14285714285714285,
         "Acolyte": 0.14285714285714285,
         "Rogue": 0.14285714285714285
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.14285714285714285,
+        "probabilityText": "14.29%"
       }
     },
     "422": {
@@ -27025,6 +29561,12 @@
         "Primalist": 0.09615384582319908,
         "Acolyte": 0.09615384582319908,
         "Rogue": 0.09615384582319908
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09615384582319908,
+        "probabilityText": "9.62%"
       }
     },
     "423": {
@@ -27058,7 +29600,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/legends_entwined.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/legends_entwined.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "424": {
       "kind": "boss",
@@ -27091,7 +29639,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/tyrants_skull.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/tyrants_skull.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "425": {
       "kind": "boss",
@@ -27124,7 +29678,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/wildfire_embers.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/wildfire_embers.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "426": {
       "kind": "boss",
@@ -27157,7 +29717,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/thicket_of_blinding_light.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/thicket_of_blinding_light.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "427": {
       "kind": "boss",
@@ -27190,7 +29756,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/harmony_of_the_first.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/harmony_of_the_first.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "428": {
       "kind": "boss",
@@ -27223,7 +29795,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/onslaught_of_cerata.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/onslaught_of_cerata.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "429": {
       "kind": "boss",
@@ -27256,7 +29834,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/blossom_of_immortal_stone.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/blossom_of_immortal_stone.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "430": {
       "kind": "boss",
@@ -27289,7 +29873,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/chorus_of_the_anurok.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/chorus_of_the_anurok.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "431": {
       "kind": "boss",
@@ -27321,7 +29911,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/carrion_of_creation.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/carrion_of_creation.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "432": {
       "kind": "boss",
@@ -27354,7 +29950,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/horn_of_the_bone_wisp.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/horn_of_the_bone_wisp.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "433": {
       "kind": "boss",
@@ -27387,7 +29989,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/reliquary_nest.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/reliquary_nest.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "434": {
       "kind": "boss",
@@ -27420,7 +30028,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/mask_of_indifference.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/mask_of_indifference.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "435": {
       "kind": "boss",
@@ -27452,7 +30066,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/permanence_of_primal_knowledge.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/permanence_of_primal_knowledge.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "436": {
       "kind": "boss",
@@ -27485,7 +30105,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/wings_of_discord.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/wings_of_discord.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "437": {
       "kind": "boss",
@@ -27518,7 +30144,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/primal_cadence.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/primal_cadence.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "438": {
       "kind": "boss",
@@ -27551,7 +30183,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/whetstone_gavel.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/whetstone_gavel.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "439": {
       "kind": "boss",
@@ -27584,7 +30222,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/truesight_glass.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/truesight_glass.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "440": {
       "kind": "boss",
@@ -27617,7 +30261,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/bluefeather_band.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/bluefeather_band.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "441": {
       "kind": "boss",
@@ -27650,7 +30300,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/hydra_arc.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/hydra_arc.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "442": {
       "kind": "boss",
@@ -27684,7 +30340,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/velocyns_jaw.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/velocyns_jaw.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "443": {
       "kind": "world",
@@ -27713,6 +30375,12 @@
         "Primalist": 0.05136634504685715,
         "Acolyte": 0.05136634504685715,
         "Rogue": 0.05136634504685715
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.05136634504685715,
+        "probabilityText": "5.14%"
       }
     },
     "444": {
@@ -27735,7 +30403,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/evolutions_end.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/evolutions_end.png",
+      "display": {
+        "kind": "special",
+        "source": "裂隙野兽：结束谱系",
+        "probability": null,
+        "probabilityText": "结束谱系的奖励"
+      }
     },
     "445": {
       "kind": "boss",
@@ -27768,7 +30442,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/spirit_xylem.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/spirit_xylem.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "446": {
       "kind": "boss",
@@ -27801,7 +30481,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/fangs_of_the_berserker.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/fangs_of_the_berserker.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "447": {
       "kind": "boss",
@@ -27834,7 +30520,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/bones_of_the_ancestral_pack.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/bones_of_the_ancestral_pack.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "448": {
       "kind": "boss",
@@ -27867,7 +30559,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/architects_of_astral_blood.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/architects_of_astral_blood.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "449": {
       "kind": "boss",
@@ -27900,7 +30598,13 @@
       "weaversWill": false,
       "primordial": true,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/the_butchers_crown.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/the_butchers_crown.png",
+      "display": {
+        "kind": "boss",
+        "source": "裂隙野兽",
+        "probability": null,
+        "probabilityText": "无固定掉率"
+      }
     },
     "450": {
       "kind": "world",
@@ -27929,6 +30633,12 @@
         "Primalist": 0.02970297140720346,
         "Acolyte": 0.02970297140720346,
         "Rogue": 0.02970297140720346
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.02970297140720346,
+        "probabilityText": "2.97%"
       }
     },
     "451": {
@@ -27951,7 +30661,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/doppelgangers_mimicry.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/doppelgangers_mimicry.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "452": {
       "kind": "world",
@@ -27973,7 +30689,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/doppelgangers_deception.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/doppelgangers_deception.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "453": {
       "kind": "world",
@@ -27995,7 +30717,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/doppelgangers_facade.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/doppelgangers_facade.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "454": {
       "kind": "world",
@@ -28017,7 +30745,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/abandoned_eyes_of_the_weaver.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/abandoned_eyes_of_the_weaver.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "455": {
       "kind": "world",
@@ -28039,7 +30773,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/abandoned_chitin_of_the_weaver.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/abandoned_chitin_of_the_weaver.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "456": {
       "kind": "world",
@@ -28061,7 +30801,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/kuzons_fury.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/kuzons_fury.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "457": {
       "kind": "world",
@@ -28083,7 +30829,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/kuzons_guise.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/kuzons_guise.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "458": {
       "kind": "world",
@@ -28112,6 +30864,12 @@
         "Primalist": 0.04794192122728728,
         "Acolyte": 0.04794192122728728,
         "Rogue": 0.04794192122728728
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.04794192122728728,
+        "probabilityText": "4.79%"
       }
     },
     "459": {
@@ -28142,6 +30900,12 @@
         "Primalist": 0.00645161243450488,
         "Acolyte": 0.00645161243450488,
         "Rogue": 0.05782775950744677
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.03225806409525485,
+        "probabilityText": "3.23%"
       }
     },
     "460": {
@@ -28172,6 +30936,12 @@
         "Primalist": 0.0916908179903389,
         "Acolyte": 0.009216589349107409,
         "Rogue": 0.009216589349107409
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.046082949492294877,
+        "probabilityText": "4.61%"
       }
     },
     "461": {
@@ -28201,6 +30971,12 @@
         "Primalist": 0.04794192122728728,
         "Acolyte": 0.04794192122728728,
         "Rogue": 0.04794192122728728
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.04794192122728728,
+        "probabilityText": "4.79%"
       }
     },
     "462": {
@@ -28230,6 +31006,12 @@
         "Primalist": 0.1269841267213199,
         "Acolyte": 0.1269841267213199,
         "Rogue": 0.1269841267213199
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.1269841267213199,
+        "probabilityText": "12.7%"
       }
     },
     "463": {
@@ -28260,6 +31042,12 @@
         "Primalist": 0.04515050188506751,
         "Acolyte": 0.006688962817342755,
         "Rogue": 0.006688962817342755
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.033444816080180156,
+        "probabilityText": "3.34%"
       }
     },
     "464": {
@@ -28282,7 +31070,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/jormuns_thirst.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/jormuns_thirst.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "465": {
       "kind": "world",
@@ -28304,7 +31098,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/jormuns_hunger.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/jormuns_hunger.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "466": {
       "kind": "world",
@@ -28326,7 +31126,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/jormuns_feast.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/jormuns_feast.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "467": {
       "kind": "world",
@@ -28348,7 +31154,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/keplahans_pyrolith.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/keplahans_pyrolith.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "468": {
       "kind": "world",
@@ -28370,7 +31182,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/keplahans_cryolith.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/keplahans_cryolith.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "469": {
       "kind": "boss",
@@ -28436,7 +31254,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/exulis.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/exulis.png",
+      "display": {
+        "kind": "boss",
+        "source": "观察者的幻象",
+        "probability": 0.1,
+        "probabilityText": "10%"
+      }
     },
     "470": {
       "kind": "boss",
@@ -28502,7 +31326,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/oculus_of_ruin.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/oculus_of_ruin.png",
+      "display": {
+        "kind": "boss",
+        "source": "观察者的幻象",
+        "probability": 1.0,
+        "probabilityText": "100%"
+      }
     },
     "471": {
       "kind": "world",
@@ -28532,6 +31362,12 @@
         "Primalist": 0.012749003209972536,
         "Acolyte": 0.1089896061343503,
         "Rogue": 0.012749003209972536
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.06374501984936194,
+        "probabilityText": "6.37%"
       }
     },
     "472": {
@@ -28598,7 +31434,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/heorots_repose.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/heorots_repose.png",
+      "display": {
+        "kind": "boss",
+        "source": "莫迪塔斯",
+        "probability": 0.2,
+        "probabilityText": "20%"
+      }
     },
     "473": {
       "kind": "world",
@@ -28627,6 +31469,12 @@
         "Primalist": 0.00015634570555369103,
         "Acolyte": 0.00015634570555369103,
         "Rogue": 0.00015634570555369103
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.00015634570555369103,
+        "probabilityText": "0.016%"
       }
     },
     "474": {
@@ -28657,6 +31505,12 @@
         "Primalist": 0.0916908179903389,
         "Acolyte": 0.08921659113724677,
         "Rogue": 0.08261108641749668
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.046082949492294877,
+        "probabilityText": "4.61%"
       }
     },
     "475": {
@@ -28687,6 +31541,12 @@
         "Primalist": 0.010702340467879082,
         "Acolyte": 0.06810144429440332,
         "Rogue": 0.010702340467879082
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.05351170552894161,
+        "probabilityText": "5.35%"
       }
     },
     "476": {
@@ -28716,6 +31576,12 @@
         "Primalist": 6.848757830072423e-05,
         "Acolyte": 6.848757830072423e-05,
         "Rogue": 6.848757830072423e-05
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 6.848757830072423e-05,
+        "probabilityText": "0.0068%"
       }
     },
     "477": {
@@ -28782,7 +31648,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/unsated_rage.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/unsated_rage.png",
+      "display": {
+        "kind": "boss",
+        "source": "God of Bloodshed",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "478": {
       "kind": "world",
@@ -28811,6 +31683,12 @@
         "Primalist": 6.222308072625629e-05,
         "Acolyte": 6.222308072625629e-05,
         "Rogue": 6.222308072625629e-05
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 6.222308072625629e-05,
+        "probabilityText": "0.0062%"
       }
     },
     "479": {
@@ -28877,7 +31755,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/withstand_the_elements.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/withstand_the_elements.png",
+      "display": {
+        "kind": "boss",
+        "source": "莫迪塔斯",
+        "probability": 0.5,
+        "probabilityText": "50%"
+      }
     },
     "480": {
       "kind": "world",
@@ -28906,6 +31790,12 @@
         "Primalist": 0.09900990075637822,
         "Acolyte": 0.09900990075637822,
         "Rogue": 0.09900990075637822
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.09900990075637822,
+        "probabilityText": "9.9%"
       }
     },
     "481": {
@@ -28928,7 +31818,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/caretakers_wrath.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/caretakers_wrath.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "482": {
       "kind": "world",
@@ -28950,7 +31846,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/caretakers_regrowth.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/caretakers_regrowth.png",
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0,
+        "probabilityText": "需套装预言"
+      }
     },
     "483": {
       "kind": "world",
@@ -28980,6 +31882,12 @@
         "Primalist": 0.04584540899516945,
         "Acolyte": 0.004608294674553704,
         "Rogue": 0.004608294674553704
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.023041474746147438,
+        "probabilityText": "2.3%"
       }
     },
     "484": {
@@ -29010,6 +31918,12 @@
         "Primalist": 0.012749003209972536,
         "Acolyte": 0.012749003209972536,
         "Rogue": 0.012749003209972536
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.06374501984936194,
+        "probabilityText": "6.37%"
       }
     },
     "485": {
@@ -29039,6 +31953,12 @@
         "Primalist": 0.14285714285714285,
         "Acolyte": 0.14285714285714285,
         "Rogue": 0.14285714285714285
+      },
+      "display": {
+        "kind": "world",
+        "source": "世界掉落",
+        "probability": 0.14285714285714285,
+        "probabilityText": "14.29%"
       }
     },
     "486": {
@@ -29105,7 +32025,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/frostborn_solitude.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/frostborn_solitude.png",
+      "display": {
+        "kind": "boss",
+        "source": "莫迪塔斯",
+        "probability": 0.8,
+        "probabilityText": "80%"
+      }
     },
     "487": {
       "kind": "boss",
@@ -29171,7 +32097,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/vestige_of_imprisonment.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/vestige_of_imprisonment.png",
+      "display": {
+        "kind": "boss",
+        "source": "God of Bloodshed",
+        "probability": 0.8,
+        "probabilityText": "80%"
+      }
     },
     "488": {
       "kind": "boss",
@@ -29237,7 +32169,13 @@
       "weaversWill": false,
       "primordial": false,
       "cocooned": false,
-      "iconUrl": "https://lastepoch.tunklab.com/img/item/morditas_vengeance.png"
+      "iconUrl": "https://lastepoch.tunklab.com/img/item/morditas_vengeance.png",
+      "display": {
+        "kind": "boss",
+        "source": "God of Bloodshed",
+        "probability": 0.2,
+        "probabilityText": "20%"
+      }
     }
   },
   "summary": {

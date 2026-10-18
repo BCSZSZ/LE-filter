@@ -64,7 +64,7 @@
 </div>
 <dialog id="picker">
   <div class="dialog-heading"><div><p class="eyebrow">SEARCH & SELECT</p><h2 id="picker-title"></h2></div><button data-close="picker" aria-label="关闭选择器">×</button></div>
-  <div class="picker-controls"><input id="picker-search" type="search" placeholder="搜索中文 / English / ID" aria-label="搜索词库"><label id="picker-slot-label" hidden>部位 <select id="picker-slot" aria-label="筛选暗金部位"></select></label><label id="picker-class-label" hidden>职业 <select id="picker-class" aria-label="暗金预言职业"><option value="">全职业范围</option><option value="Sentinel">守卫</option><option value="Mage">法师</option><option value="Primalist">原始人</option><option value="Acolyte">侍祭</option><option value="Rogue">游侠</option></select></label><label><input id="only-selected" type="checkbox">只看已选</label><label><input id="show-legacy" type="checkbox">显示旧／隐藏条目</label></div>
+  <div class="picker-controls"><input id="picker-search" type="search" placeholder="搜索中文 / English / ID" aria-label="搜索词库"><label class="generic-picker-filter"><input id="only-selected" type="checkbox">只看已选</label><label class="generic-picker-filter"><input id="show-legacy" type="checkbox">显示旧／隐藏条目</label></div>
   <p id="picker-note" class="picker-note" hidden></p><p id="picker-drop-context" class="picker-note" hidden></p><div id="picker-summary" class="muted"></div><div id="picker-list"></div>
   <div class="dialog-footer"><span id="selection-count"></span><button id="apply-selection" class="primary">应用选择</button></div>
 </dialog>

@@ -167,11 +167,8 @@ function openPicker(kind,field,values,types,apply,normalOnly=false,single=false,
   $('picker-note').hidden=!prioritized&&field!=='uniques';
   $('picker-note').textContent=prioritized?'已选词条按优先级排列；新增词条放在最后。应用后可拖放或用↑↓调整。':field==='uniques'?'选中任意套装部件，filter会自动收集对应整套；自动补全项在所需暗金页标注。':'';
   $('picker').classList.toggle('unique-picker',kind==='uniques');
-  $('picker-slot-label').hidden=kind!=='uniques';
-  $('picker-class-label').hidden=kind!=='uniques';
   $('picker-drop-context').hidden=kind!=='uniques';
-  $('picker-drop-context').textContent='预言：100级、命运12级，每件奖励的概率 · Boss／特殊：每次独立奖励的掉落率';
-  $('picker-slot').innerHTML='<option value="">全部部位</option>'+(kind==='uniques'?workspace.groupUniques(Object.values(catalog.uniques).filter(a=>field!=='common-idols'||(a.type||'').startsWith('IDOL_')&&a.id!==344).map(a=>a.id),catalog).map(g=>`<option value="${esc(g.type??'unclassified')}">${esc(typeName(g.type))}</option>`).join(''):'');
+  $('picker-drop-context').textContent='参考：预言100级／命运12／通用池；Boss按T4／开启者的表内上限。';
   $('picker-search').value='';$('only-selected').checked=false;$('show-legacy').checked=false;
   renderPicker();$('picker').showModal();setTimeout(()=>$('picker-search').focus(),50);
 }
@@ -184,7 +181,6 @@ function renderPicker(){
     const drop=s.kind==='uniques'?catalog.unique_drops?.items?.[a.id]:null;
     if(s.excluded.includes(a.id))return false;
     if(s.field==='common-idols'&&(!(a.type||'').startsWith('IDOL_')||a.id===344))return false;
-    if(s.kind==='uniques'&&$('picker-slot').value&&(a.type??'unclassified')!==$('picker-slot').value)return false;
     const selected=s.chosen.has(String(a.id));
     if(s.kind==='affixes'&&s.normalOnly&&![0,5].includes(a.special))return false;
     if(s.kind==='affixes'&&['equipment','leveling'].includes(s.field)&&[4,6].includes(a.special))return false;
@@ -192,7 +188,7 @@ function renderPicker(){
     if(s.kind==='affixes'&&s.types.length&&!s.types.some(t=>a.types.includes(t))&&!selected)return false;
     if((a.legacy||a.hidden||drop?.kind==='legacy')&&!$('show-legacy').checked&&!selected)return false;
     if($('only-selected').checked&&!selected)return false;
-    return `${a.zh} ${a.en} ${a.id}${s.kind==='uniques'?` ${typeName(a.type)} ${(drop?.locations||[]).map(l=>l.name).join(' ')}`:''}`.toLowerCase().includes(query);
+    return `${a.zh} ${a.en} ${a.id}${s.kind==='uniques'?` ${typeName(a.type)} ${drop?.display?.source||''}`:''}`.toLowerCase().includes(query);
   });
   if(prioritized)all.sort((a,b)=>(priorities.get(String(a.id))??Infinity)-(priorities.get(String(b.id))??Infinity));
   $('picker-summary').textContent=`找到${all.length}项 · ${s.kind==='uniques'?'可搜索名字、ID、部位或掉落来源':'中文、英文和ID均可过滤'}`;
@@ -205,19 +201,8 @@ function renderPicker(){
 }
 function uniquePickRow(item,s){
   const drop=catalog.unique_drops?.items?.[item.id];
-  const link=(name,url)=>url?.startsWith('https://')?`<a href="${esc(url)}" target="_blank" rel="noopener">${esc(name)}</a>`:esc(name);
-  const locations=drop?.locations?.length?[...drop.locations]:[{name:'掉落来源未收录',probabilityText:drop?.probabilityText||'概率未收录'}];
-  const query=$('picker-search').value.trim().toLowerCase();
-  if(query)locations.sort((a,b)=>Number(b.name.toLowerCase().includes(query))-Number(a.name.toLowerCase().includes(query)));
-  const records=locations.map(location=>{
-    const world=(location.kind||drop?.kind)==='world';
-    const byClass=world?drop?.prophecyByClass?.[$('picker-class').value]:null;
-    const percent=Number(byClass)*100;
-    const probability=byClass!=null?percent.toLocaleString('zh-CN',{maximumFractionDigits:percent<.01?4:percent<.1?3:2})+'%':location.probabilityText||drop?.probabilityText||'概率未公开';
-    const conditions=(location.conditions||[]).filter(text=>!world||!text.startsWith('职业不同：')&&!text.startsWith('100级、命运12；'));
-    return `<div class="unique-drop-record"><span>${link(location.name,location.url||drop?.sourceUrl)}</span><strong>${world?'预言':'掉落'}：${esc(probability)}</strong>${conditions.length?`<small>${esc(conditions.join(' · '))}</small>`:''}</div>`;
-  });
-  const details=records.slice(0,2).join('')+(records.length>2?`<details class="unique-extra-sources"><summary>另${records.length-2}个掉落来源</summary>${records.slice(2).join('')}</details>`:'');
+  const info=drop?.display;
+  const details=`<div class="unique-drop-record"><span>${esc(info?.source||'来源未收录')}</span><strong>${info?.kind==='world'?'预言':'掉落'}：${esc(info?.probabilityText||'概率未公开')}</strong></div>`;
   const icon=drop?.iconUrl?.startsWith('https://')?`<img class="unique-icon" src="${esc(drop.iconUrl)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">`:'';
   return `<div class="unique-pick-row"><label class="unique-choice"><input type="checkbox" data-id="${item.id}" aria-label="选择暗金：${esc(item.zh)}" ${s.chosen.has(String(item.id))?'checked':''}>${icon}<span class="unique-identity"><strong>${esc(item.zh)}</strong><small>${esc(item.en)}</small><small>${item.id}${item.set?' · 套装':''}${item.legacy||item.hidden||drop?.kind==='legacy'?' · 旧／隐藏条目':''}</small></span></label><div class="unique-drop-info">${details}</div></div>`;
 }
@@ -353,7 +338,7 @@ $('targets').addEventListener('drop',e=>{
   clearAffixDrag();if(workspace.placeAffix(group,from,to)){save();render();}
 });
 $('targets').addEventListener('dragend',clearAffixDrag);
-['picker-search','picker-slot','picker-class','only-selected','show-legacy'].forEach(id=>$(id).addEventListener('input',renderPicker));
+['picker-search','only-selected','show-legacy'].forEach(id=>$(id).addEventListener('input',renderPicker));
 $('picker-list').onchange=e=>{if(e.target.dataset.id){const id=e.target.dataset.id;if(e.target.checked){if(selection.single)selection.chosen.clear();selection.chosen.add(id);}else selection.chosen.delete(id);if(selection.single||selection.kind==='affixes'&&selection.field==='equipment'||$('only-selected').checked)renderPicker();else $('selection-count').textContent=`已选${selection.chosen.size}项`;}};
 $('picker-list').addEventListener('error',e=>{if(e.target.matches('.unique-icon'))e.target.hidden=true;},true);
 $('apply-selection').onclick=()=>{selection.apply(workspace.selectionValues(selection.chosen,selection.kind==='affixes'&&selection.field==='equipment'));$('picker').close();};
