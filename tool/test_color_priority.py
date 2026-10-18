@@ -188,7 +188,8 @@ class ColorPriorityTests(unittest.TestCase):
                          {"flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835"},
                          {"flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835", ice},
                          {"flay-mana-lich", "skeleton-necromancer", ice},
-                         {b["id"] for b in config["builds"] if b["id"] != ice}):
+                         {"flay-mana-lich", "skeleton-necromancer", "flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835"},
+                         {"heartseeker-shuriken-marksman"}, {ice, "heartseeker-shuriken-marksman"}):
             for main in sorted(selected):
                 config["main_id"] = main
                 for build in config["builds"]:
@@ -201,7 +202,7 @@ class ColorPriorityTests(unittest.TestCase):
                          for r in output["rules"]]
                 self.assertEqual(bands, sorted(bands))
 
-    def test_five_templates_over_limit_report_without_truncation(self):
+    def test_all_templates_over_limit_report_without_truncation(self):
         config = deepcopy(browser_bootstrap()["config"])
         for build in config["builds"]:
             build["enabled"] = True

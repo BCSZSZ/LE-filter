@@ -1,0 +1,494 @@
+{
+  "status": "passed",
+  "date": "2026-10-18",
+  "gameExecutionTested": false,
+  "baselineCommit": "ec85d6bb9eb0286da8e9f8a28ddae72a607da120",
+  "source": {
+    "file": "sources/builds/maxroll-shuriken-marksman-very-strict.xml",
+    "sha256": "9a79e7351c3a114e746839a4fd8e605cfc8ffc53ab59cfbe1bf17e0ab4312cdf",
+    "rules": 137,
+    "orderFieldsPresent": false
+  },
+  "targetCounts": {
+    "uniques": 11,
+    "equipment": 10,
+    "altars": 1,
+    "idols": 7,
+    "bases": 0
+  },
+  "levelingEmpty": true,
+  "templateInitiallySelected": false,
+  "defaultOutputUnchanged": true,
+  "requirementsRoundtrip": true,
+  "scenarios": [
+    {
+      "selected": [
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "status": "generated",
+      "count": 85,
+      "sha256": "952151582751ee2e4d087575cf14cd80754d99920cd6cb40a994a519cefdc4e9"
+    },
+    {
+      "selected": [
+        "heartseeker-shuriken-marksman",
+        "skeleton-necromancer"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "status": "generated",
+      "count": 112,
+      "sha256": "2cb38d02215a005618be8e944880df8db0dc874562ba85b20e2f78356f5ba53e"
+    },
+    {
+      "selected": [
+        "heartseeker-shuriken-marksman",
+        "skeleton-necromancer"
+      ],
+      "main": "skeleton-necromancer",
+      "status": "generated",
+      "count": 112,
+      "sha256": "67ed57680c982dfd4447f73438f0afb472fc306d0239fb4d2f8aef1863ad974b"
+    },
+    {
+      "selected": [
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "flay-mana-lich",
+      "status": "generated",
+      "count": 107,
+      "sha256": "fabc4456ca8477e75ad42a5b5b420bf5063f50719787c69f7ce02f5e32f19206"
+    },
+    {
+      "selected": [
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "status": "generated",
+      "count": 107,
+      "sha256": "9ab4202810b4584fcc115441dd9ff04bc5bed25e458931763b0e0a86eb4da0cc"
+    },
+    {
+      "selected": [
+        "flay-lich-allie-guide",
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "flay-lich-allie-guide",
+      "status": "generated",
+      "count": 126,
+      "sha256": "11502346421d25dd4c0af52f2e63880f22671390b006ee8badb88c4e3d92bce4"
+    },
+    {
+      "selected": [
+        "flay-lich-allie-guide",
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "status": "generated",
+      "count": 126,
+      "sha256": "5a0417569402ad3d6462e2c6ad1fbdd2dceb8fe9f9afed4a25810e2f35e7653f"
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "bleed-skeleton-roamer-guide-835",
+      "status": "generated",
+      "count": 137,
+      "sha256": "57ae5578aef34c8340fa52b6422ddfda1da50a2ff4f052c4b225174764ebe98f"
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "status": "generated",
+      "count": 139,
+      "sha256": "3d99958fcae5ccfbd8586eafbbdec83e64ad56c0e4aecdd7ac5bd605e0031dd8"
+    },
+    {
+      "selected": [
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "status": "generated",
+      "count": 116,
+      "sha256": "3965fe0e172e3f9805b8b6ea57705ae44ec366269d30ff06f2fd9bea76e4b5bb"
+    },
+    {
+      "selected": [
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek"
+      ],
+      "main": "ice-heartseeker-planner-al0dkyek",
+      "status": "generated",
+      "count": 114,
+      "sha256": "46cfb58153dc5b929e167abf203eb71dffbbf2321394373997d40c489b0d7aa7"
+    },
+    {
+      "selected": [
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman",
+        "skeleton-necromancer"
+      ],
+      "main": "flay-mana-lich",
+      "status": "generated",
+      "count": 134,
+      "sha256": "7250af8d38080df6e7c7ed3626e2ecd42ddfbabcba2fd237a6bbc5686429d5f2"
+    },
+    {
+      "selected": [
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman",
+        "skeleton-necromancer"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "status": "generated",
+      "count": 134,
+      "sha256": "765fe06190b36a5b372eaf0bc40fa349a324e49dd25a1906f101532bebdf12b1"
+    },
+    {
+      "selected": [
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman",
+        "skeleton-necromancer"
+      ],
+      "main": "skeleton-necromancer",
+      "status": "generated",
+      "count": 134,
+      "sha256": "d7d0d638e0f3ce09f2e4048e492e8eb72a816c79203372b104b887cb5b53ef1d"
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "bleed-skeleton-roamer-guide-835",
+      "status": "generated",
+      "count": 177,
+      "sha256": "2b740fdb12c2a27f86dd0fa56edde7adfe819a52918b7a7cfaf017860d55e390"
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "flay-lich-allie-guide",
+      "status": "generated",
+      "count": 177,
+      "sha256": "51fe717ec6d901de8bf114c2e65fb5a9f6558627b9ff32f5110b2103432fb167"
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "heartseeker-shuriken-marksman"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "status": "generated",
+      "count": 179,
+      "sha256": "772daac2bb45908015b7fa383cdbf188a98f71e15e13b9c926c6e018dc0788a1"
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek"
+      ],
+      "main": "bleed-skeleton-roamer-guide-835",
+      "status": "rule_limit",
+      "count": 206,
+      "truncated": false
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek"
+      ],
+      "main": "flay-lich-allie-guide",
+      "status": "rule_limit",
+      "count": 206,
+      "truncated": false
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "status": "rule_limit",
+      "count": 210,
+      "truncated": false
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek"
+      ],
+      "main": "ice-heartseeker-planner-al0dkyek",
+      "status": "rule_limit",
+      "count": 206,
+      "truncated": false
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek",
+        "skeleton-necromancer"
+      ],
+      "main": "bleed-skeleton-roamer-guide-835",
+      "status": "rule_limit",
+      "count": 243,
+      "truncated": false
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek",
+        "skeleton-necromancer"
+      ],
+      "main": "flay-lich-allie-guide",
+      "status": "rule_limit",
+      "count": 234,
+      "truncated": false
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek",
+        "skeleton-necromancer"
+      ],
+      "main": "flay-mana-lich",
+      "status": "rule_limit",
+      "count": 249,
+      "truncated": false
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek",
+        "skeleton-necromancer"
+      ],
+      "main": "heartseeker-shuriken-marksman",
+      "status": "rule_limit",
+      "count": 251,
+      "truncated": false
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek",
+        "skeleton-necromancer"
+      ],
+      "main": "ice-heartseeker-planner-al0dkyek",
+      "status": "rule_limit",
+      "count": 249,
+      "truncated": false
+    },
+    {
+      "selected": [
+        "bleed-skeleton-roamer-guide-835",
+        "flay-lich-allie-guide",
+        "flay-mana-lich",
+        "heartseeker-shuriken-marksman",
+        "ice-heartseeker-planner-al0dkyek",
+        "skeleton-necromancer"
+      ],
+      "main": "skeleton-necromancer",
+      "status": "rule_limit",
+      "count": 249,
+      "truncated": false
+    }
+  ],
+  "symbolicCases": [
+    {
+      "type": "RELIC",
+      "affix": 88,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "RELIC",
+      "affix": 503,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "RING",
+      "affix": 507,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "RING",
+      "affix": 503,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "AMULET",
+      "affix": 88,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "GLOVES",
+      "affix": 88,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "GLOVES",
+      "affix": 36,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "BOOTS",
+      "affix": 28,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "BOOTS",
+      "affix": 36,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "BELT",
+      "affix": 97,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "BELT",
+      "affix": 52,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "BODY_ARMOR",
+      "affix": 52,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "BODY_ARMOR",
+      "affix": 503,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "HELMET",
+      "affix": 611,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "HELMET",
+      "affix": 52,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "QUIVER",
+      "affix": 432,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "QUIVER",
+      "affix": 503,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "BOW",
+      "affix": 432,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "BOW",
+      "affix": 6,
+      "category": "BD目标单T7"
+    },
+    {
+      "type": "IDOL_ALTAR",
+      "base": 11,
+      "affix": 1089,
+      "category": "祭坛一项目标"
+    },
+    {
+      "type": "IDOL_ALTAR",
+      "base": 11,
+      "affix": 1094,
+      "category": "祭坛一项目标"
+    },
+    {
+      "type": "IDOL_ALTAR",
+      "base": 11,
+      "affix": 1093,
+      "category": "祭坛一项目标"
+    }
+  ],
+  "preservedFiles": {
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer-v2.xml": "b98ac8760726009ece4bef27bde7f6ad9cc2d2806e8996630ecbb96d41e1e71c",
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer-v3.xml": "ddfb6889366162de32eaf4a9dbd050f23496a1d902189cff340b5ec444da6ec9",
+    "filters/Flay-Mana-Lich+Skeleton-Necromancer.xml": "a6026b9a065042ead7e4e9bd1461b20f0687a148d5a087669b6763c7f461cc78",
+    "requirements/bleed-skeleton-roamer-guide-835.endgame.json": "7272c54e9a6436fd4a4617c469d9613dc6e54b1378abd4c41c3408f8376c537d",
+    "requirements/bleed-skeleton-roamer-guide-835.leveling.json": "46fb51f53b8383abfbb2a2feb88bfbe975a218039715485b2d8dfaee1d25de99",
+    "requirements/flay-lich-allie-guide.endgame.json": "2a904049a9a2aa82d0a0ab490d52c74477f934175f51d8332418462ca238fd1d",
+    "requirements/flay-lich-allie-guide.leveling.json": "71c601489ef6b3716ece19b2f45892221467150135f57a795e170537a42be3c6",
+    "requirements/ice-heartseeker-planner-al0dkyek.endgame.json": "0dbb3b0f3a6fb4bb8b1d68f95545a49cfc574a418a299b842b89d9460b15e7ed",
+    "requirements/ice-heartseeker-planner-al0dkyek.leveling.json": "63e65c4bb0b8309657177bf6c3a1ecdb576b85d3faec2c93d055b4d482b7833b",
+    "sources/Raxx's S5 Ultimate Filter v1.0.txt": "146465750ab794175676f73b7251ddba610c42c4508bb16b614b6d4982036288",
+    "sources/builds/flay-mana-lich-guide.json": "1b7f6180f1fd32818c223e5d8daa1c4e9a2a8c405094d8a9a126c5c6ccef0fd8",
+    "sources/builds/flay-mana-lich.json": "fe5932f3f5990bcffa88cef0e882789855d89cbba89c2d66ed1768f6ea531ba7",
+    "sources/builds/ice-heartseeker-player-2026-10-18.xml": "8facbd4310b104d7b3b447565faba68aa5d808cb534de3ad09375559f601eb61",
+    "sources/builds/ice-heartseeker-video-bv1oupp6wecs.json": "abd375e925c13922b38c890e39f62926fee321ddc7b8cec3435754a9b67283eb",
+    "sources/builds/letools-allie-flay-extracted.json": "0aa01939bd5cb4a672baafef58737b942543f7a57f72af4ea9bc5e8ee2c5cf88",
+    "sources/builds/letools-guide-zh-835-extracted.json": "aa964dc554078bf8fb20b856515f683db13a1d359734af5b6965195ac701ce9f",
+    "sources/builds/letools-planner-al0dkyek-extracted.json": "37be1dccd00b15011b13c2d0476b476ab30e834e1fc978f9f10f3c3fc5a3a8a4",
+    "sources/builds/letools-planner-al0dkyek-ui.json": "6b4f44d7530696c6cdfe33fc625c8ad385f73de0045d0e683714ad52c5dd4dd8",
+    "sources/builds/manifest.json": "b88e7550b8cf6ca5ddc6bfe13376be1b6a2c79c5de50712c829e6b87f778c481",
+    "sources/builds/maxroll-flay-mana-lich-strict.xml": "4e70c8b9111a28ae257aea7b561d931ac99629a6054646ce18a3ce5e3458995c",
+    "sources/builds/maxroll-reference-supplement.json": "a8f94e45f86bd8b8e77ae7d09d22869e70dc9436ca9a9113970ecb6a552a9970",
+    "sources/builds/maxroll-skeleton-necromancer-strict.xml": "5033341708ab5594cfcb70448bf3c6084333f03efa4388e5d4c6f4b1409dbade",
+    "sources/builds/maxroll-skeleton-necromancer-very-strict.xml": "7e9bb43a06383fad155298c642991e41cf9d125911702e46c8e508634cf55cb1",
+    "sources/builds/maxroll-strict-manifest.json": "be601551ff46051a0af6ce6ad8ad61e384d6a6ea68c5097b2d96f56c97394354",
+    "sources/builds/review-reference.json": "df489714f6491d6610de0a4257af5a8c7df2b0b3a28983ed659d9759854f96bc",
+    "sources/builds/skeleton-equipment-priorities.png": "a4a853ebd7eb9be59a1ad6d4e64a2451a2eef9e054396df317049a107ff5b0b4",
+    "sources/builds/skeleton-idol-priorities.png": "234aae7df50c586954bf7ce5e82b89d295594ca7baec05ec0022227f7e8cbaf1",
+    "sources/builds/skeleton-investigation-manifest.json": "d70f0726d870281661a96664716bcbac217967ce651b5f6836bf0b37f43a3d99",
+    "sources/builds/skeleton-necromancer.json": "456c46bb25c88dc6077ce4189dcd89e268eb12aa8893f44cbe19e35202cc988d",
+    "sources/builds/strict-variable-reference.json": "0e42a2ff8ca467519900bb85edb4ac3fe851cf75e9f86774dcee18453e07bd9a",
+    "sources/builds/transfer-reference.json": "f571190f25cd97b2bbc292d9ec5463cbb46ef20a6937e16a6a5023f056b0f9e2",
+    "sources/filter-style-reference.json": "37a26db4058ded7f88963d1559a9e369a7c1d74f7894778b63165e05f54b7d39",
+    "sources/game-reference.json": "2f4e8198a2b936b3b639cad53d3f196bab4b3a6fb37bfdaaf002d4995655317b",
+    "sources/item-sets.json": "beeee982d41f3fa91f7f320a5587cb951f25f20b6658c3cd3ab80730f64fa040",
+    "sources/manifest.json": "3904c8a1cf61db4e6671056f0f95bf9a690d2b581763d548f3f0979c79aa1e23",
+    "sources/seasonal-unique-protection.json": "dd03763aca0d16990d5b0e77214da3486a5761abc92193d22c4f2761babc02f5",
+    "sources/t7-equipment-pools.json": "651c401f24de466cb83cc5e79ba4e382f8b57fa1f4b4a84858b431d0300d9645",
+    "sources/t7-natural-type-selection.json": "300c0927e1cc6e9b7b595817d43d4fa88cfb099bda159170c9557d31ca213861",
+    "sources/tool-catalog.json": "cedeabebdd1efb6bb8257b2c70b095cce3dd6169505864f50aea4b3cfbfe60e8",
+    "sources/ultra-rare-uniques.json": "dcc58fe5f567c3c1e9a6c12487a27d15033b5dfdf29495c5d3844ed585bdb387",
+    "sources/video-era/Raxx-S5-2026-10-01.txt": "f0e329df63af9737185bf6d5fdd71cb7663c932ddf954773c56c90a6d8c440ed",
+    "templates/LE-base-v1.xml": "725e8ce0dc642f0e0bd60ae50f3b9c168b775ecee96fcf1064f1a39c3caae4d4",
+    "templates/base-manifest.json": "ad19178a51cff97cb61017448c7ca36fca963ec5672914ff90a2c54a564cbee1",
+    "tool/engine.py": "5e4943827edee3b6c5bf965dcc08ca9b6b3d33377bd6495b27dbe204457c0247",
+    "tool/requirements.py": "49d1e6b4988781fe3c5300b87f1a106ca0ff36cede88989ff3fdb45e3575c01a"
+  }
+}

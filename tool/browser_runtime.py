@@ -10,7 +10,8 @@ from requirements import read_document, write_document
 @lru_cache(maxsize=1)
 def browser_bootstrap():
     result = bootstrap()
-    for slug in ("flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835", "ice-heartseeker-planner-al0dkyek"):
+    for slug in ("flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835", "ice-heartseeker-planner-al0dkyek",
+                 "heartseeker-shuriken-marksman"):
         build = {"id": slug, "enabled": False, "profiles": {}, "requirement_sources": {}}
         for stage in ("endgame", "leveling"):
             document = json.loads((ROOT / f"requirements/{slug}.{stage}.json").read_text(encoding="utf-8"))

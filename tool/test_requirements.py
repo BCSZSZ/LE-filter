@@ -200,7 +200,8 @@ class RequirementTests(unittest.TestCase):
                 self.assertEqual(len(preferred), 5)
                 self.assertFalse(any(g["type"] in {"GLOVES", "BELT", "AMULET"} for g in preferred))
         for build in config["builds"]:
-            build["enabled"] = build["id"] != "ice-heartseeker-planner-al0dkyek"
+            build["enabled"] = build["id"] in {"flay-mana-lich", "skeleton-necromancer",
+                                                "flay-lich-allie-guide", "bleed-skeleton-roamer-guide-835"}
         self.assertLessEqual(e.generate(config)["count"], 200)
 
     def test_explicit_unrestricted_idol_pair_roundtrip(self):

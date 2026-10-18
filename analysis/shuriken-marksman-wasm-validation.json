@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "date": "2026-10-18",
+  "runtime": "Pyodide 314.0.7 / Node.js",
+  "scope": "Six independent templates; packaged complete XML, metadata and warnings match native Python.",
+  "browserDownloadTested": false,
+  "gameExecutionTested": false,
+  "cases": [
+    {
+      "name": "heartseeker-shuriken-marksman/heartseeker-shuriken-marksman",
+      "count": 85,
+      "sha256": "952151582751ee2e4d087575cf14cd80754d99920cd6cb40a994a519cefdc4e9",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "heartseeker-shuriken-marksman+ice-heartseeker-planner-al0dkyek/heartseeker-shuriken-marksman",
+      "count": 116,
+      "sha256": "3965fe0e172e3f9805b8b6ea57705ae44ec366269d30ff06f2fd9bea76e4b5bb",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "heartseeker-shuriken-marksman+ice-heartseeker-planner-al0dkyek/ice-heartseeker-planner-al0dkyek",
+      "count": 114,
+      "sha256": "46cfb58153dc5b929e167abf203eb71dffbbf2321394373997d40c489b0d7aa7",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "flay-mana-lich+heartseeker-shuriken-marksman+skeleton-necromancer/heartseeker-shuriken-marksman",
+      "count": 134,
+      "sha256": "765fe06190b36a5b372eaf0bc40fa349a324e49dd25a1906f101532bebdf12b1",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+flay-lich-allie-guide+heartseeker-shuriken-marksman/heartseeker-shuriken-marksman",
+      "count": 179,
+      "sha256": "772daac2bb45908015b7fa383cdbf188a98f71e15e13b9c926c6e018dc0788a1",
+      "completeOutputEqual": true
+    }
+  ]
+}

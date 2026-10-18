@@ -1,0 +1,21 @@
+{
+  "format": "le-filter-requirements",
+  "version": 1,
+  "id": "heartseeker-shuriken-marksman",
+  "name": "追心手里剑",
+  "stage": "leveling",
+  "targets": {
+    "affixes": [],
+    "bases": []
+  },
+  "source": {
+    "name": "追心手里剑 · 玩家提供的 Shuriken Marksman XML",
+    "file": "sources/builds/maxroll-shuriken-marksman-very-strict.xml",
+    "sha256": "9a79e7351c3a114e746839a4fd8e605cfc8ffc53ab59cfbe1bf17e0ab4312cdf",
+    "extracted_on": "2026-10-18",
+    "scope": "未提供本BD独立练级目标，留空待玩家补充",
+    "warnings": [
+      "未从终局目标或通用Alt Leveling规则推断本BD练级需求。"
+    ]
+  }
+}

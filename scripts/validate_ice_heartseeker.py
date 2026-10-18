@@ -21,6 +21,10 @@ def main():
     assert build_snapshot() == json.loads(SOURCE.read_text(encoding="utf-8"))
     documents = build_documents()
     boot = deepcopy(browser_bootstrap()["config"])
+    # Keep this audit's original five-source baseline when the library grows.
+    baseline = {"flay-mana-lich", "skeleton-necromancer", "flay-lich-allie-guide",
+                "bleed-skeleton-roamer-guide-835", BUILD_ID}
+    boot["builds"] = [b for b in boot["builds"] if b["id"] in baseline]
     template = next(b for b in boot["builds"] if b["id"] == BUILD_ID)
     assert len(boot["builds"]) == 5 and not template["enabled"]
     assert e.generate(boot) == e.generate(e.bootstrap()["config"])

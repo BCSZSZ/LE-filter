@@ -1,0 +1,481 @@
+{
+  "format": "le-filter-requirements",
+  "version": 1,
+  "id": "heartseeker-shuriken-marksman",
+  "name": "追心手里剑",
+  "stage": "endgame",
+  "targets": {
+    "uniques": [
+      17,
+      133,
+      134,
+      189,
+      256,
+      271,
+      337,
+      413,
+      436,
+      459,
+      477
+    ],
+    "equipment": [
+      {
+        "type": "RELIC",
+        "bases": [],
+        "affixes": [
+          88,
+          503
+        ],
+        "corrupted": [
+          951
+        ]
+      },
+      {
+        "type": "RING",
+        "bases": [],
+        "affixes": [
+          507,
+          503
+        ],
+        "corrupted": [
+          1017
+        ]
+      },
+      {
+        "type": "AMULET",
+        "bases": [],
+        "affixes": [
+          88
+        ],
+        "corrupted": [
+          1014
+        ]
+      },
+      {
+        "type": "GLOVES",
+        "bases": [],
+        "affixes": [
+          88,
+          36
+        ],
+        "corrupted": [
+          1004
+        ]
+      },
+      {
+        "type": "BOOTS",
+        "bases": [],
+        "affixes": [
+          28,
+          36
+        ],
+        "corrupted": [
+          992
+        ]
+      },
+      {
+        "type": "BELT",
+        "bases": [],
+        "affixes": [
+          97,
+          52
+        ],
+        "corrupted": [
+          996
+        ]
+      },
+      {
+        "type": "BODY_ARMOR",
+        "bases": [],
+        "affixes": [
+          52,
+          503
+        ],
+        "corrupted": [
+          1011
+        ]
+      },
+      {
+        "type": "HELMET",
+        "bases": [],
+        "affixes": [
+          611,
+          52
+        ],
+        "corrupted": [
+          1020
+        ]
+      },
+      {
+        "type": "QUIVER",
+        "bases": [],
+        "affixes": [
+          432,
+          503
+        ],
+        "corrupted": [
+          966
+        ]
+      },
+      {
+        "type": "BOW",
+        "bases": [],
+        "affixes": [
+          432,
+          6
+        ],
+        "corrupted": [
+          966
+        ]
+      }
+    ],
+    "altars": [
+      {
+        "type": "IDOL_ALTAR",
+        "bases": [
+          11
+        ],
+        "affixes": [
+          1089,
+          1094,
+          1093
+        ]
+      }
+    ],
+    "idols": [
+      {
+        "type": "IDOL_1x3",
+        "bases": [
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "affixes": [
+          942,
+          117
+        ],
+        "corrupted": [
+          1052
+        ],
+        "enchanted": [
+          892
+        ],
+        "pair_bases": [
+          4,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "type": "IDOL_3x1",
+        "bases": [
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "affixes": [
+          743,
+          490
+        ],
+        "corrupted": [
+          1041
+        ],
+        "pair_bases": [
+          4,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "type": "IDOL_1x1_ETERRA",
+        "bases": [
+          0
+        ],
+        "affixes": [
+          116,
+          118,
+          114
+        ],
+        "corrupted": [
+          1070
+        ],
+        "pair_bases": [
+          0
+        ]
+      },
+      {
+        "type": "IDOL_2x1",
+        "bases": [
+          1
+        ],
+        "affixes": [
+          862,
+          867,
+          868
+        ],
+        "corrupted": [
+          1070
+        ],
+        "pair_bases": [
+          1
+        ]
+      },
+      {
+        "type": "IDOL_1x2",
+        "bases": [
+          1
+        ],
+        "affixes": [
+          880,
+          886
+        ],
+        "corrupted": [
+          1055
+        ],
+        "pair_bases": [
+          1
+        ]
+      },
+      {
+        "type": "IDOL_1x4",
+        "bases": [
+          4,
+          9
+        ],
+        "affixes": [
+          763,
+          470
+        ],
+        "corrupted": [
+          1041
+        ],
+        "enchanted": [
+          935
+        ],
+        "pair_bases": [
+          4,
+          9
+        ]
+      },
+      {
+        "type": "IDOL_2x2",
+        "bases": [
+          4,
+          11
+        ],
+        "affixes": [
+          743,
+          490
+        ],
+        "corrupted": [
+          1030
+        ],
+        "enchanted": [
+          892
+        ],
+        "pair_bases": [
+          4,
+          11
+        ]
+      }
+    ],
+    "bases": []
+  },
+  "source": {
+    "name": "追心手里剑 · 玩家提供的 Shuriken Marksman XML",
+    "file": "sources/builds/maxroll-shuriken-marksman-very-strict.xml",
+    "sha256": "9a79e7351c3a114e746839a4fd8e605cfc8ffc53ab59cfbe1bf17e0ab4312cdf",
+    "extracted_on": "2026-10-18",
+    "original_name": "Shuriken Marksman",
+    "original_description": "BinaQc's Very Strict - Recommended to focus on Tier 7 Items. High LP Uniques. Hides most Tier 6 Exalteds. Shows best Exalted Bases. Hides Sets.",
+    "scope": "已启用的BD专属暗金、部位T7、神像及祭坛目标；独立于冰追心",
+    "selected_rules": [
+      {
+        "x": 24,
+        "name": "1 Affix - Large Omen Idols",
+        "category": "idols",
+        "gate": "至少1项，阶数不限（advanced=false）"
+      },
+      {
+        "x": 25,
+        "name": "1 Affix - Grand Omen Idols",
+        "category": "idols",
+        "gate": "至少1项，阶数不限（advanced=false）"
+      },
+      {
+        "x": 28,
+        "name": "Strict - Small Idols",
+        "category": "idols",
+        "gate": "至少2项，阶数不限（advanced=false）"
+      },
+      {
+        "x": 29,
+        "name": "Strict - Humble Idols",
+        "category": "idols",
+        "gate": "至少2项，阶数不限（advanced=false）"
+      },
+      {
+        "x": 30,
+        "name": "Strict - Stout Idols",
+        "category": "idols",
+        "gate": "至少2项，阶数不限（advanced=false）"
+      },
+      {
+        "x": 31,
+        "name": "Strict - Grand Idols",
+        "category": "idols",
+        "gate": "至少2项，阶数不限（advanced=false）"
+      },
+      {
+        "x": 32,
+        "name": "Strict - Large Idols",
+        "category": "idols",
+        "gate": "至少2项，阶数不限（advanced=false）"
+      },
+      {
+        "x": 33,
+        "name": "Strict - Huge Idols",
+        "category": "idols",
+        "gate": "至少2项，阶数不限（advanced=false）"
+      },
+      {
+        "x": 34,
+        "name": "Strict - Adorned Idols",
+        "category": "idols",
+        "gate": "至少2项，阶数不限（advanced=false）"
+      },
+      {
+        "x": 35,
+        "name": "Strict - Large Omen Idols",
+        "category": "idols",
+        "gate": "至少2项，阶数不限（advanced=false）"
+      },
+      {
+        "x": 36,
+        "name": "Strict - Grand Omen Idols",
+        "category": "idols",
+        "gate": "至少2项，阶数不限（advanced=false）"
+      },
+      {
+        "x": 57,
+        "name": "Suffix Effect Idol Altar (Tier 6 Equivalent)",
+        "category": "altars",
+        "gate": "至少2项，单项T不限，合计T≥8"
+      },
+      {
+        "x": 58,
+        "name": "Prefix Effect Idol Altar (Tier 6 Equivalent)",
+        "category": "altars",
+        "gate": "至少2项，单项T不限，合计T≥8"
+      },
+      {
+        "x": 60,
+        "name": "Suffix Effect Idol Altar (Tier 7 Equivalent)",
+        "category": "altars",
+        "gate": "至少2项，单项T不限，合计T≥10"
+      },
+      {
+        "x": 61,
+        "name": "Prefix Effect Idol Altar (Tier 7 Equivalent)",
+        "category": "altars",
+        "gate": "至少2项，单项T不限，合计T≥10"
+      },
+      {
+        "x": 64,
+        "name": "Tier 6 Strict Idol Altar",
+        "category": "altars",
+        "gate": "至少1项，单项T≥6，合计T不限"
+      },
+      {
+        "x": 67,
+        "name": "Tier 7 - Relic",
+        "category": "equipment",
+        "gate": "至少1项，单项T≥7，合计T不限；未腐化"
+      },
+      {
+        "x": 68,
+        "name": "Tier 7 - Ring",
+        "category": "equipment",
+        "gate": "至少1项，单项T≥7，合计T不限；未腐化"
+      },
+      {
+        "x": 69,
+        "name": "Tier 7 - Amulet",
+        "category": "equipment",
+        "gate": "至少1项，单项T≥7，合计T不限；未腐化"
+      },
+      {
+        "x": 70,
+        "name": "Tier 7 - Gloves",
+        "category": "equipment",
+        "gate": "至少1项，单项T≥7，合计T不限；未腐化"
+      },
+      {
+        "x": 71,
+        "name": "Tier 7 - Boots",
+        "category": "equipment",
+        "gate": "至少1项，单项T≥7，合计T不限；未腐化"
+      },
+      {
+        "x": 72,
+        "name": "Tier 7 - Belt",
+        "category": "equipment",
+        "gate": "至少1项，单项T≥7，合计T不限；未腐化"
+      },
+      {
+        "x": 73,
+        "name": "Tier 7 - Body Armor",
+        "category": "equipment",
+        "gate": "至少1项，单项T≥7，合计T不限；未腐化"
+      },
+      {
+        "x": 74,
+        "name": "Tier 7 - Helmet",
+        "category": "equipment",
+        "gate": "至少1项，单项T≥7，合计T不限；未腐化"
+      },
+      {
+        "x": 75,
+        "name": "Tier 7 - Quiver",
+        "category": "equipment",
+        "gate": "至少1项，单项T≥7，合计T不限；未腐化"
+      },
+      {
+        "x": 76,
+        "name": "Tier 7 - Bow",
+        "category": "equipment",
+        "gate": "至少1项，单项T≥7，合计T不限；未腐化"
+      },
+      {
+        "x": 78,
+        "name": "Tier 7 Strict Idol Altar",
+        "category": "altars",
+        "gate": "至少1项，单项T≥7，合计T不限"
+      },
+      {
+        "x": 127,
+        "name": "Uniques & Sets From Planner (Optional: Add More)",
+        "category": "uniques",
+        "gate": "稀有度=UNIQUE LEGENDARY SET；未腐化"
+      }
+    ],
+    "warnings": [
+      "来源Very Strict只提供目标；LP、阶数、未腐化、颜色、声音及排序门槛由工作台现行基底决定。",
+      "普通神像仅计0／5类，附魔4与腐化6另存参考；一项与两项目标的底材范围保留来源差异。",
+      "装备词条沿用XML列表顺序，来源未声明需求重要程度，可在个人方案调整。",
+      "通用Alt Leveling规则未提供本BD独立练级路线，练级目标留空。"
+    ]
+  }
+}

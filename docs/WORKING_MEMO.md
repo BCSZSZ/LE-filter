@@ -2,7 +2,16 @@
 
 更新时间：2026-10-18，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
-## 最新2026-10-18：冰追心改用玩家修订
+## 最新2026-10-18追加：追心手里剑独立模板
+
+- 玩家粘贴`Shuriken Marksman` Very Strict XML，要求加入模板库。稳定id为`heartseeker-shuriken-marksman`、名称“追心手里剑”；默认未勾选，独立于冰追心及其他四BD。官方库现六份，默认仍仅旧Strict两BD，已有个人保存不自动插入。
+- 原样冻结`sources/builds/maxroll-shuriken-marksman-very-strict.xml`，SHA-256为`9a79e7351c3a114e746839a4fd8e605cfc8ffc53ab59cfbe1bf17e0ab4312cdf`。137条均无Order字段，文档使用物理X编号，不猜源优先级；原XML只作数据来源。
+- 通过现有导入器提取已启用的专属目标，11暗金／10装备组／7神像组／1祭坛／0独立底材。装备保留原XML词缀列表顺序；普通神像0／5与腐化6、附魔4分开；Large／Grand一项底材10–14，两项保留4／9／10–14，使用`pair_bases`。祭坛为底材11及1089／1094／1093。旧来源LP、阶数、腐化、声音等门槛不移植，沿用现行引擎。
+- 来源通用Alt Leveling及反伤神像不作为本BD练级路线，两阶段独立，练级保持空。源暗金神像与通用大池不并入本BD明确目标。完整目标与边界见[手里剑审阅](SHURIKEN_MARKSMAN_REVIEW.md)，离线重建`scripts/build_shuriken_marksman_requirements.py`；运行期只读需求JSON。
+- 手里剑独立85条，与冰追心组合114／116条，与旧Strict两BD组合134条，与Allie＋835组合177–179条。四份新来源全选206–210条，六份全选234–251条，超过200报错且不截断。原四／五来源审计固定旧来源集合，不因新增模板扩大历史验证范围；现有来源、需求、基底、引擎和历史XML保持。
+- 全套73项测试通过；27组组合、22个目标案例及45份旧输入字节保持通过；Node下5组打包WASM完整输出与原生Python相等。新验证入口`scripts/validate_shuriken_marksman.py`及`validate_shuriken_marksman_wasm.mjs`，结果见[组合验证](../analysis/shuriken-marksman-validation.json)与[WASM对照](../analysis/shuriken-marksman-wasm-validation.json)。不将模型匹配或WASM对照冒充游戏客户端实测。
+
+## 此前2026-10-18：冰追心改用玩家修订
 
 - 玩家要求以自己按实战与作者建议修改的版本替换官方模板，最终提供`E:/download/Chrome/LE-filter (10).xml`。原样冻结于`sources/builds/ice-heartseeker-player-2026-10-18.xml`，SHA-256为`8facbd4310b104d7b3b447565faba68aa5d808cb534de3ad09375559f601eb61`；该文件只作为来源数据。
 - 头盔删除7／25，手套以5替换80，腰带删除52并加入17／330，弓删除20，祭坛删除1100／1096。11暗金、4神像组、其他装备目标及空练级保持。重建后的独立79条XML与玩家文件逐字节一致。
