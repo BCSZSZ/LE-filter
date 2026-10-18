@@ -2,7 +2,13 @@
 
 更新时间：2026-10-19，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
-## 最新2026-10-19：profile实际普通槽T6／T7与追心手里剑重建
+## 最新2026-10-19：已选暗金置顶与启动等待优化
+
+- 暗金选择器顶部独立“已选择”分类，取消勾选按原部位／ID顺序归位；筛选后不重复显示，每次打开回到顶部。搜索、关闭不应用、套装补全与明确目标保存契约保持。
+- 原启动路径本地首次可操作3001.5ms，复测2678.8ms；其中Pyodide约2045ms。改为构建时由原Python代码生成编辑快照，约585KB／gzip94KB；运行包与Python并行下载、后台加载，正常格式方案可先编辑及自动保存，完整校验在后台针对副本执行，不回写或覆盖加载期间的编辑。旧练级格式保持阻塞原迁移，缺失快照回退原路径。
+- 本地优化首次可操作85.8ms，复测40.3ms；后台引擎2070.7／1895.4ms就绪。已在引擎尚为loading时创建方案及打开暗金选择器；随后原Python预览仍为98条。测量口径见[启动说明](STARTUP_PERFORMANCE.md)，120项完整回归及本地交互验证见[验证记录](../analysis/startup-selection-validation.json)。
+
+## 此前2026-10-19：profile实际普通槽T6／T7与追心手里剑重建
 
 - 玩家要求装备仅取真正打到普通槽的T6／T7；腐化槽普通ID、T5及以下、T8、封印／其他附加槽排除。普通槽的实验1类可收集。缺少阶数明确报错并要求重读，未知ID及格式仍整批失败。神像和祭坛按各自体系，不套装备阶数筛选；腐化槽普通ID同样排除。[导入约定](PROFILE_IMPORT.md)
 - 同四profile已重新读取76件，MaadCity手套、腰带、遗物发生变化。用户确认暗金、装备、神像与祭坛全部只取profile并集，不再合并旧Very Strict。新[冻结字节](../sources/builds/shuriken-profile-bundle-2026-10-19.json)及[追心手里剑需求](../requirements/heartseeker-shuriken-marksman.endgame.json)：13暗金／10装备组28目标／11神像组／1祭坛，无05、练级留空。旧XML独有459退出BD目标，通用保护仍独立。单独96条，与冰追心125／127条，六模板247–264条仍超200报错。

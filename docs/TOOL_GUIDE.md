@@ -4,7 +4,7 @@
 
 ## 在线使用
 
-打开[GitHub Pages工作台](https://bcszsz.github.io/LE-filter/)，首次等待运行环境加载。网页支持Maxroll filter文件／XML文本、共通需求JSON，以及[LETools角色profile多链接并集导入](PROFILE_IMPORT.md)。LETools角色链接通过后端从Maxroll公开角色API读取，无需书签或转存Planner；提取与生成计算在浏览器内完成。配置保存在当前浏览器，跨设备用顶部“保存配置”备份，再从“更多→导入方案备份”追加恢复。
+打开[GitHub Pages工作台](https://bcszsz.github.io/LE-filter/)，页面先恢复方案并允许编辑，运行环境在后台启动；若立刻预览或导出，将等待引擎就绪。旧格式练级数据仍先由原引擎完成迁移。网页支持Maxroll filter文件／XML文本、共通需求JSON，以及[LETools角色profile多链接并集导入](PROFILE_IMPORT.md)。LETools角色链接通过后端从Maxroll公开角色API读取，无需书签或转存Planner；提取与生成计算在浏览器内完成。配置保存在当前浏览器，跨设备用顶部“保存配置”备份，再从“更多→导入方案备份”追加恢复。
 
 左侧并排“已有模版”和“我的保存”。已有模版提供六个独立BD：旧Maxroll Strict的Flay／Skeleton，以及Allie Flay攻略／中文流血骷髅835攻略／冰追心／追心手里剑。冰追心当前终局目标以2026-10-18玩家导出的`LE-filter (10).xml`为准；追心手里剑已完全按四个指定天梯角色重新读取并取并集，装备只取实际普通槽T6／T7，不合并旧XML，稳定id为`heartseeker-shuriken-marksman`，与冰追心独立，练级同样留空；来源边界见[冰追心审阅](ICE_HEARTSEEKER_PLANNER_REVIEW.md)及[手里剑审阅](SHURIKEN_MARKSMAN_REVIEW.md)。四份新来源模板默认未勾选。已有模版栏支持多选，主BD只能在已勾选项中指定；取消主BD时自动改选另一项。首次预选旧Strict两BD，但“我的保存”为空。勾选、改选主BD都只改变待应用的选择，当前保存与编辑不受影响。
 
@@ -14,7 +14,7 @@
 
 下载JSON／XML时使用Chrome或Edge。Codex内置浏览器能编辑和预览，但测试中不能正常接收浏览器内生成的下载文件。网页版本不需要安装Python或启动本机服务。
 
-开发者运行`python -X utf8 scripts/build_pages.py`生成`.site/`，只用静态HTTP服务即可预览。GitHub Actions执行测试、打包和部署；固定Pyodide 314.0.7的必要运行文件一起发布。浏览器与本地复用`tool/engine.py`和`tool/requirements.py`，不另写一套过滤策略。
+开发者运行`python -X utf8 scripts/build_pages.py`生成`.site/`，只用静态HTTP服务即可预览。GitHub Actions执行测试、打包和部署；固定Pyodide 314.0.7的必要运行文件一起发布。浏览器与本地复用`tool/engine.py`和`tool/requirements.py`，不另写一套过滤策略。发布时由原Python代码产生`bootstrap.json`，仅省去界面不读取的暗金研究字段；完整数据仍在运行包中。快照缺失时退回原启动方式，详见[启动优化](STARTUP_PERFORMANCE.md)。
 
 ## 启动与保存
 
@@ -73,7 +73,7 @@ python -X utf8 tool/server.py --open
 | 神像词条 | 按类型、底材和普通目标池填写；至少一项开始、至少两项灵感。可以分别编辑候选层与两项层底材。 |
 | 所需底材 | 首选最多一个、替代可多选；每BD／部位首选一条、全部替代一条，均需同BD对应部位目标恰好T7，常驻。 |
 
-选择暗金时，列表按头盔、胸甲、戒指等部位分组，只需搜索和勾选。搜索支持中文、英文、ID、部位及当前展示的来源；搜索保留已勾选项目，点击“应用选择”才写入当前BD。已选的旧条目继续显示；未选的旧／隐藏项默认隐藏。
+选择暗金时，已勾选物品集中在顶部“已选择”分类，其余按头盔、胸甲、戒指等部位分组。勾选后立即移到顶部，取消勾选回到原部位和顺序；每次打开从列表顶部开始。搜索同时过滤这两个区域。搜索支持中文、英文、ID、部位及当前展示的来源；搜索保留已勾选项目，点击“应用选择”才写入当前BD。已选的旧条目继续显示；未选的旧／隐藏项默认隐藏。
 
 每件装备只附一个主要来源、固定口径参考值及可用图片。世界暗金用100级／命运12的同类型通用池，按每件预言奖励计算，不计职业偏置；有reroll的非套装暗金同时显示“预言”和“求索”，由同一个暗金抽取模型计算。套装标注需套装预言。Boss固定取最高副本层级／开启者奖励的表内单次掉率上限，多次奖励不合并。先古的裂隙野兽概率还需要进化、材料与腐化信息，目前未建模，明确标注暂未计算。资料与完整原生算法见[暗金掉落资料](research/UNIQUE_PICKER_DROP_DATA.md)和[求索机制](research/CURIOSITY_LENS_UNIQUE_PROBABILITY.md)；页面不增加设置项。图标加载失败时隐藏，选择与生成照常工作。
 

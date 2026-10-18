@@ -196,3 +196,32 @@ test('set completion is derived for display and never replaces explicitly select
     assert.deepEqual(W.expandUniqueSets([uid],catalog).sort((a,b)=>a-b),group.members);
   }
 });
+
+
+test('unique picker isolates selected IDs at the top and deselection restores slot order',()=>{
+  const catalog={equipment_types:['HELMET','CHEST','BOOTS'],uniques:{1:{type:'HELMET'},2:{type:'BOOTS'},3:{type:'CHEST'},4:{type:'BOOTS'}}};
+  const ids=[1,2,3,4],chosen=new Set(['2','3']);
+  assert.deepEqual(W.uniquePickerGroups(ids,chosen,catalog),[{selected:true,ids:[3,2]},{type:'HELMET',ids:[1]},{type:'BOOTS',ids:[4]}]);
+  chosen.delete('2');
+  assert.deepEqual(W.uniquePickerGroups(ids,chosen,catalog),[{selected:true,ids:[3]},{type:'HELMET',ids:[1]},{type:'BOOTS',ids:[2,4]}]);
+  chosen.clear();assert.deepEqual(W.uniquePickerGroups(ids,chosen,catalog),W.groupUniques(ids,catalog));
+  assert.deepEqual(W.uniquePickerGroups([1,4],new Set(['2']),catalog),[{type:'HELMET',ids:[1]},{type:'BOOTS',ids:[4]}]);
+  assert.deepEqual(ids,[1,2,3,4]);
+});
+
+test('fast startup fills current format defaults and leaves legacy migrations to Python',()=>{
+  const {examples,templates,state}=setup();W.applyTemplates(state,templates,'fast');
+  const defaults={unique_idols_enabled:true,unique_idols:[211,344],common_uniques_enabled:true,common_sets_enabled:true,exalted_experimentals_enabled:false};
+  const targets=copy(state.saves[0].config.builds),before=copy(templates);
+  state.saves[0].config.common.unique_idols=[344,211,344];
+  assert.equal(W.prepareFastState(state,defaults),true);
+  assert.deepEqual(state.saves[0].config.common.unique_idols,[211,344]);
+  assert.equal(state.saves[0].config.common.common_sets_enabled,true);
+  assert.deepEqual(state.saves[0].config.builds,targets);assert.deepEqual(templates,before);
+  const legacy=copy(state);legacy.saves[0].config.builds[0].profiles.leveling={equipment:[{type:'HELMET',affixes:[1],bases:[]}]};
+  const original=copy(legacy);assert.equal(W.prepareFastState(legacy,defaults),false);assert.deepEqual(legacy,original);
+  for(const common of [null,{unique_idols:[999999]}]){
+    const malformed=copy(state);malformed.saves[0].config.common=common;
+    const previous=copy(malformed);assert.equal(W.prepareFastState(malformed,defaults),false);assert.deepEqual(malformed,previous);
+  }
+});

@@ -2,6 +2,7 @@
 import hashlib
 import json
 import shutil
+import sys
 import zipfile
 from pathlib import Path
 from urllib.request import urlopen
@@ -53,6 +54,14 @@ def build_archive(output):
             archive.writestr(info, (ROOT / name).read_bytes())
 
 
+def build_startup_snapshot(output):
+    sys.path.insert(0, str(ROOT / "tool"))
+    from browser_runtime import browser_startup_snapshot
+    content = (json.dumps(browser_startup_snapshot(), ensure_ascii=False, separators=(",", ":")) + "\n").encode("utf-8")
+    output.write_bytes(content)
+    return content
+
+
 def main():
     site = ROOT / ".site"
     site.mkdir(exist_ok=True)
@@ -60,6 +69,7 @@ def main():
         shutil.copyfile(ROOT / "tool/web" / name, site / name)
     build_probability_page(site)
     build_archive(site / "runtime.zip")
+    startup = build_startup_snapshot(site / "bootstrap.json")
     # Hash uncompressed files so Windows and Linux produce the same revision.
     digest = hashlib.sha256()
     with zipfile.ZipFile(site / "runtime.zip") as archive:
@@ -67,9 +77,11 @@ def main():
             digest.update(name.encode() + b"\0" + archive.read(name))
     for name in WEB_FILES:
         digest.update(name.encode() + b"\0" + (site / name).read_bytes())
+    digest.update(b"bootstrap.json\0" + startup)
     revision = digest.hexdigest()[:16]
     index = (site / "index.html").read_text(encoding="utf-8")
     index = index.replace('<script src="app.js">', '<script src="browser.js"></script>\n<script src="app.js">')
+    index = index.replace('</head>', f'<link rel="preload" href="bootstrap.json?v={revision}" as="fetch" crossorigin>\n</head>')
     for name in ("app.js", "workbench.js", "profile-import.js", "browser.js", "style.css"):
         index = index.replace(f'"{name}"', f'"{name}?v={revision}"')
     (site / "index.html").write_text(index, encoding="utf-8", newline="\n")

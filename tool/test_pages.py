@@ -10,12 +10,30 @@ from copy import deepcopy
 from pathlib import Path
 
 import engine
-from browser_runtime import browser_bootstrap, dispatch_json
-from build_pages import build_archive
+from browser_runtime import browser_bootstrap, browser_startup_snapshot, dispatch_json
+from build_pages import build_archive, build_startup_snapshot
 from requirements import write_document
 
 
 class PagesTests(unittest.TestCase):
+    def test_static_bootstrap_preserves_all_editor_inputs_and_frozen_targets(self):
+        full = browser_bootstrap()
+        snapshot = browser_startup_snapshot()
+        self.assertEqual(snapshot["config"], full["config"])
+        for key in full["catalog"]:
+            if key != "unique_drops":
+                self.assertEqual(snapshot["catalog"][key], full["catalog"][key])
+        for uid, row in full["catalog"]["unique_drops"]["items"].items():
+            self.assertEqual(snapshot["catalog"]["unique_drops"]["items"][uid],
+                             {key: row[key] for key in ("kind", "display", "iconUrl") if key in row})
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "bootstrap.json"
+            first = build_startup_snapshot(path)
+            self.assertEqual(first, build_startup_snapshot(path))
+            self.assertEqual(json.loads(first), snapshot)
+            self.assertEqual(path.read_bytes(), first)
+            self.assertLess(len(first), len(json.dumps(full, ensure_ascii=False, separators=(",", ":")).encode()))
+
     def test_archive_runs_in_isolation_and_matches_local_xml(self):
         code = """
 import json

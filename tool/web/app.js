@@ -170,7 +170,7 @@ function openPicker(kind,field,values,types,apply,normalOnly=false,single=false,
   $('picker-drop-context').hidden=kind!=='uniques';
   $('picker-drop-context').textContent='参考：预言100级／命运12／通用池；Boss按T4／开启者的表内上限。';
   $('picker-search').value='';$('only-selected').checked=false;$('show-legacy').checked=false;
-  renderPicker();$('picker').showModal();setTimeout(()=>$('picker-search').focus(),50);
+  renderPicker();$('picker').showModal();$('picker-list').scrollTop=0;setTimeout(()=>$('picker-search').focus(),50);
 }
 function renderPicker(){
   const query=$('picker-search').value.trim().toLowerCase();
@@ -194,7 +194,7 @@ function renderPicker(){
   $('picker-summary').textContent=`找到${all.length}项 · ${s.kind==='uniques'?'可搜索名字、ID、部位或掉落来源':'中文、英文和ID均可过滤'}`;
   $('selection-count').textContent=`已选${s.chosen.size}项`;
   if(s.kind==='uniques'){
-    $('picker-list').innerHTML=workspace.groupUniques(all.map(a=>a.id),catalog).map(g=>`<section class="unique-pick-group" aria-label="${esc(typeName(g.type))}"><h3 class="unique-group-title">${esc(typeName(g.type))}<span>${g.ids.length}</span></h3>${g.ids.map(id=>uniquePickRow(catalog.uniques[id],s)).join('')}</section>`).join('')||'<div class="empty">没有匹配项，试试名字、部位或掉落来源。</div>';
+    $('picker-list').innerHTML=workspace.uniquePickerGroups(all.map(a=>a.id),s.chosen,catalog).map(g=>`<section class="unique-pick-group" aria-label="${esc(g.selected?'已选择':typeName(g.type))}"><h3 class="unique-group-title">${esc(g.selected?'已选择':typeName(g.type))}<span>${g.ids.length}</span></h3>${g.ids.map(id=>uniquePickRow(catalog.uniques[id],s)).join('')}</section>`).join('')||'<div class="empty">没有匹配项，试试名字、部位或掉落来源。</div>';
     return;
   }
   $('picker-list').innerHTML=all.map(a=>`<label class="pick-row"><input type="checkbox" data-id="${a.id}" ${s.chosen.has(String(a.id))?'checked':''}>${prioritized&&s.chosen.has(String(a.id))?`<span class="priority-number" aria-label="优先级${priorities.get(String(a.id))}">${priorities.get(String(a.id))}</span>`:''}<div><strong>${esc(a.zh)}</strong><small>${esc(a.en)}${s.kind==='affixes'?` · ${a.prefix?'前缀':'后缀'}${a.special===4?' · 附魔参考':a.special===6?(s.field==='altars'?' · 腐化目标':' · 腐化参考'):a.special===1?' · 实验词缀':''}`:` · 需求等级${a.level}`}${a.legacy||a.hidden?' · 旧／隐藏条目':''}</small></div><span class="id-tag">${a.id}</span></label>`).join('')||'<div class="empty">没有匹配项，试试英文或ID。</div>';
@@ -339,7 +339,7 @@ $('targets').addEventListener('drop',e=>{
 });
 $('targets').addEventListener('dragend',clearAffixDrag);
 ['picker-search','only-selected','show-legacy'].forEach(id=>$(id).addEventListener('input',renderPicker));
-$('picker-list').onchange=e=>{if(e.target.dataset.id){const id=e.target.dataset.id;if(e.target.checked){if(selection.single)selection.chosen.clear();selection.chosen.add(id);}else selection.chosen.delete(id);if(selection.single||selection.kind==='affixes'&&selection.field==='equipment'||$('only-selected').checked)renderPicker();else $('selection-count').textContent=`已选${selection.chosen.size}项`;}};
+$('picker-list').onchange=e=>{if(e.target.dataset.id){const id=e.target.dataset.id;if(e.target.checked){if(selection.single)selection.chosen.clear();selection.chosen.add(id);}else selection.chosen.delete(id);if(selection.kind==='uniques'||selection.single||selection.kind==='affixes'&&selection.field==='equipment'||$('only-selected').checked)renderPicker();else $('selection-count').textContent=`已选${selection.chosen.size}项`;}};
 $('picker-list').addEventListener('error',e=>{if(e.target.matches('.unique-icon'))e.target.hidden=true;},true);
 $('apply-selection').onclick=()=>{selection.apply(workspace.selectionValues(selection.chosen,selection.kind==='affixes'&&selection.field==='equipment'));$('picker').close();};
 document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>$(b.dataset.close).close());
@@ -443,9 +443,17 @@ async function init(){
     let saved;
     let stored;try{stored=localStorage.getItem(STORAGE)??localStorage.getItem(LEGACY_STORAGE);}catch{}
     if(stored)saved=JSON.parse(stored);
-    state=await validateState(workspace.restore(examples,saved));config=currentSave()?.config||state.draft_config;
+    const restored=workspace.restore(examples,saved);
+    const fast=globalThis.LEFilterAPI?.fastBootstrap&&workspace.prepareFastState(restored,examples.common);
+    state=fast?restored:await validateState(restored);config=currentSave()?.config||state.draft_config;
     activeId=currentSave()?.active_build_id||config.main_id;$('catalog-version').textContent=catalog.version;render();save();
     document.querySelector('.layout').inert=false;document.querySelector('.top-actions').inert=false;
+    document.documentElement.dataset.editorReadyMs=performance.now().toFixed(1);
+    if(fast){
+      const snapshot=JSON.stringify(state);
+      // Check a copy without replacing live objects or overwriting early edits.
+      validateState(copy(state)).catch(error=>{if(snapshot===JSON.stringify(state))toast(`保存方案校验失败：${error.message}`,true);});
+    }
   }catch(e){toast(`无法启动：${e.message}`,true);}
 }
 init();

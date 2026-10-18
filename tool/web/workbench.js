@@ -158,7 +158,30 @@
     const order=new Map(catalog.equipment_types.map((type,i)=>[type,i]));
     return [...groups.values()].sort((a,b)=>(order.get(a.type)??order.size)-(order.get(b.type)??order.size));
   }
-  const api={library,restore,emptyConfig,activeSave,addSave,setTemplateEnabled,setTemplateMain,applyTemplates,activateSave,removeSave,mergeSaves,resetBuild,importRequirement,importProfiles,selectionValues,moveAffix,placeAffix,expandUniqueSets,groupUniques};
+  function uniquePickerGroups(ids,chosen,catalog){
+    const selected=[],remaining=[];
+    for(const group of groupUniques(ids,catalog)){
+      const others=[];
+      for(const id of group.ids)(chosen.has(String(id))?selected:others).push(id);
+      if(others.length)remaining.push({type:group.type,ids:others});
+    }
+    return selected.length?[{selected:true,ids:selected},...remaining]:remaining;
+  }
+  function prepareFastState(state,defaults){
+    const configs=[state.draft_config,...state.saves.map(s=>s.config)];
+    // Only current profiles can bypass the blocking migration. Python retains
+    // all target validation and the conversion of legacy leveling formats.
+    if(configs.some(c=>c.common!==undefined&&(c.common===null||typeof c.common!=='object'||Array.isArray(c.common))||c.builds.some(b=>
+      !Array.isArray(b.profiles.leveling.affixes)||!Array.isArray(b.profiles.leveling.bases)||
+      'leveling_slots' in b.profiles.endgame||
+      ['uniques','equipment','altars','idols','bases'].some(k=>!Array.isArray(b.profiles.endgame[k])))))return false;
+    const settings=configs.map(c=>({...copy(defaults),...c.common}));
+    if(settings.some(c=>!Array.isArray(c.unique_idols)||c.unique_idols.some(id=>!Number.isInteger(id)||!defaults.unique_idols.includes(id))||
+      Object.keys(defaults).some(k=>typeof defaults[k]==='boolean'&&typeof c[k]!=='boolean')))return false;
+    configs.forEach((c,i)=>{c.common=settings[i];c.common.unique_idols=[...new Set(c.common.unique_idols)].sort((a,b)=>a-b);});
+    return true;
+  }
+  const api={library,restore,emptyConfig,activeSave,addSave,setTemplateEnabled,setTemplateMain,applyTemplates,activateSave,removeSave,mergeSaves,resetBuild,importRequirement,importProfiles,selectionValues,moveAffix,placeAffix,expandUniqueSets,groupUniques,uniquePickerGroups,prepareFastState};
   root.LEWorkbench=api;
   if(typeof module!=='undefined')module.exports=api;
 })(globalThis);

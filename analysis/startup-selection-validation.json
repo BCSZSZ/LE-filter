@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-19",
+  "status": "passed-local",
+  "integrationBaseCommit": "b693e03d0f23b4363a6fefc3d8ef26967f302fb4",
+  "measurementBaselineCommit": "d31a3f7f94bb9a13ae5bc8148d241c81ca455ffd",
+  "scope": "Selected Unique group and non-blocking editor startup using Python-generated snapshot",
+  "performance": {
+    "targetEditableMs": 1000,
+    "userReportedApproxMs": 5000,
+    "environment": "Codex in-app browser; localhost HTTP; new asset URL then reload; entire browser/WASM compilation cache not cleared",
+    "beforeMs": [
+      3001.5,
+      2678.8
+    ],
+    "afterMs": [
+      85.8,
+      40.3
+    ],
+    "engineReadyAfterMs": [
+      2070.7,
+      1895.4
+    ],
+    "baselineBoundaryMs": {
+      "pythonInit": 2045.3,
+      "archiveDownloadAndUnpack": 46.4,
+      "imports": 230,
+      "bootstrap": 240.8,
+      "validation": 10.5
+    },
+    "redBeforeFix": true,
+    "greenAfterFix": true,
+    "canCreateSchemeAndOpenPickerWhileEngineLoading": true,
+    "lateValidationDoesNotOverwriteEarlyScheme": true
+  },
+  "snapshot": {
+    "bytes": 584897,
+    "gzipBytes": 94366,
+    "sha256": "5c622e69ca743c260376bba9e905e03e538e6f716c01ecbac5ee8570be986560",
+    "allEditorInputsMatchPythonBootstrap": true,
+    "versionCoupledToRuntime": true,
+    "fallbackToOriginalBootstrapTested": true,
+    "legacyMigrationUsesPython": true
+  },
+  "picker": {
+    "selectedGroupFirst": true,
+    "checkMovesImmediately": true,
+    "uncheckRestoresOriginalSlotAndOrder": true,
+    "noDuplicateRows": true,
+    "searchKeepsSelection": true,
+    "cancelLeavesTargetsUnchanged": true,
+    "openingScrollTop": 0,
+    "genericPickersUnchanged": true,
+    "consoleWarningsAndErrors": 0,
+    "screenshot": "docs/images/unique-picker-selected.jpg"
+  },
+  "validation": {
+    "command": "python -X utf8 -m unittest discover -s tool -v",
+    "passed": 120,
+    "seconds": 90.913,
+    "javascriptTests": 23,
+    "finalStateGuardTargetedTestsPassed": true,
+    "pagesBuild": true,
+    "protectedChangedFiles": [],
+    "defaultRules": 98,
+    "defaultXMLSHA256": "bf9eebbff8de328e42517ad70a68fbfaea30ec19d988d8c9f8b4585357d4c8d6"
+  },
+  "gameExecutionTested": false
+}

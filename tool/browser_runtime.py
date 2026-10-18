@@ -1,6 +1,7 @@
 """Run the existing importer and generator inside the browser's Python runtime."""
 import json
 import xml.etree.ElementTree as ET
+from copy import deepcopy
 from functools import lru_cache
 
 from engine import ROOT, bootstrap, extract, generate, normalize_config
@@ -22,6 +23,16 @@ def browser_bootstrap():
             build["profiles"][stage] = data["profile"]
             build["requirement_sources"][stage] = data["source"]
         result["config"]["builds"].append(build)
+    return result
+
+
+def browser_startup_snapshot():
+    """Precompute the same editor inputs without unused research-only fields."""
+    result = deepcopy(browser_bootstrap())
+    result["catalog"]["unique_drops"] = {"items": {
+        uid: {key: row[key] for key in ("kind", "display", "iconUrl") if key in row}
+        for uid, row in result["catalog"]["unique_drops"]["items"].items()
+    }}
     return result
 
 

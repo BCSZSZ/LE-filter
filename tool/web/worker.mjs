@@ -1,15 +1,20 @@
 import {loadPyodide} from './pyodide/pyodide.mjs';
 
-const ready = (async () => {
-  const pyodide = await loadPyodide({indexURL:new URL('./pyodide/',import.meta.url).href});
-  const runtimeURL=new URL('runtime.zip',import.meta.url);
-  runtimeURL.search=new URL(import.meta.url).search;
-  const response = await fetch(runtimeURL);
+const runtimeURL=new URL('runtime.zip',import.meta.url);
+runtimeURL.search=new URL(import.meta.url).search;
+const archive=fetch(runtimeURL).then(async response=>{
   if(!response.ok)throw Error('规则和示例数据加载失败。');
-  pyodide.unpackArchive(await response.arrayBuffer(),'zip',{extractDir:'/app'});
+  return response.arrayBuffer();
+});
+const ready = (async () => {
+  const [pyodide,bytes]=await Promise.all([
+    loadPyodide({indexURL:new URL('./pyodide/',import.meta.url).href}),archive
+  ]);
+  pyodide.unpackArchive(bytes,'zip',{extractDir:'/app'});
   pyodide.runPython("import sys\nsys.path.insert(0, '/app/tool')\nfrom browser_runtime import dispatch_json");
   return pyodide;
 })();
+ready.then(()=>self.postMessage({ready:true}),error=>self.postMessage({failure:error.message}));
 
 self.onmessage = async ({data}) => {
   try {
