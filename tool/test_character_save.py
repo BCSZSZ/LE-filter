@@ -36,9 +36,10 @@ class CharacterSaveTests(unittest.TestCase):
         # A valid-looking affix in the unrelated suffix must never be imported.
         self.assertEqual(decode_item(data[:35] + [0x60, 1, 255] * 4), expected)
         altar = next(x["data"] for x in self.rows[0]["response"]["savedItems"] if x["containerID"] == 123)
-        self.assertEqual(len(decode_item(altar)["affixes"]), 5)  # 0x45 = 5, not 69
-        ordinary = [6, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0xC1, 0x70, 52, 0]
-        self.assertEqual(decode_item(ordinary)["affixes"], [{"id": 52, "tier": 8}])
+        self.assertEqual(len(decode_item(altar)["affixes"]), 4)  # 0x45 = four ordinary plus one corrupted
+        self.assertIn("corruptedAffix", decode_item(altar))
+        ordinary = [6, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0x81, 0x70, 52, 0]
+        self.assertEqual(decode_item(ordinary)["sealedAffix"], {"id": 52, "tier": 8})
         unique = data[:23] + [0x60, 52, 255]
         unique[7], unique[22] = 7, 0x24  # one affix + 4 LP; count is HIGH bits
         self.assertEqual(decode_item(unique)["affixes"], [{"id": 52, "tier": 7}])
@@ -71,3 +72,24 @@ class CharacterSaveTests(unittest.TestCase):
         expected = decode_character(save, save["characterName"])
         save["savedItems"] += [{"containerID": x, "data": []} for x in (0, 1, 33, 91, 93)]
         self.assertEqual(decode_character(save, save["characterName"]), expected)
+
+    def test_legendary_corruption_slot_is_separate_from_regular_slams(self):
+        gloves = next(x["data"] for x in self.rows[-1]["response"]["savedItems"] if x["containerID"] == 6)
+        decoded = decode_item(gloves)
+        self.assertEqual(decoded["affixes"], [{"id": 88, "tier": 7}])
+        self.assertEqual(decoded["corruptedAffix"], {"id": 503, "tier": 5})
+        # The same high bit encodes remaining WW on uncorrupted legendaries.
+        uncorrupted = list(gloves)
+        uncorrupted[8] &= ~0x10
+        self.assertEqual(decode_item(uncorrupted)["affixes"], [{"id": 88, "tier": 7}, {"id": 503, "tier": 5}])
+        self.assertNotIn("corruptedAffix", decode_item(uncorrupted))
+
+    def test_ordinary_sealed_and_corrupted_slots_precede_regular_affixes(self):
+        raw = [6, 0, 0, 0, 0, 0, 2, 3, 16, 0, 0, 0, 0, 0xC3,
+               0x30, 52, 255, 0x61, 247, 255, 0x60, 88, 255]
+        decoded = decode_item(raw)
+        self.assertEqual(decoded["sealedAffix"], {"id": 52, "tier": 4})
+        self.assertEqual(decoded["corruptedAffix"], {"id": 503, "tier": 7})
+        self.assertEqual(decoded["affixes"], [{"id": 88, "tier": 7}])
+        with self.assertRaisesRegex(ValueError, "词缀槽位"):
+            decode_item(raw[:13] + [0xC1] + raw[14:17])

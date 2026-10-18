@@ -47,7 +47,26 @@ def decode_item(data):
         if tier > 8:
             raise ValueError("角色词缀阶数编码不正确。")
         affixes.append({"id": (first & 15) * 256 + second, "tier": tier})
-    return {"id": identity, "affixes": affixes}
+    result = {"id": identity, "affixes": affixes}
+    if rarity <= 4:
+        # Ordinary items serialize regular sealed, then corrupted, then the
+        # unsealed affixes. Their two flags are outside the low-six-bit count.
+        first_regular = 0
+        for field, mask in (("sealedAffix", 0x80), ("corruptedAffix", 0x40)):
+            if data[position] & mask:
+                if first_regular >= len(affixes):
+                    raise ValueError("角色词缀槽位标志与数量不一致。")
+                result[field] = affixes[first_regular]
+                first_regular += 1
+        result["affixes"] = affixes[first_regular:]
+    elif rarity == 9 and data[base + 3] & 0x10 and data[position] & 0x80:
+        # Only corrupted legendaries use this bit for a final corruption slot.
+        # On uncorrupted WW items the same bits encode remaining Weaver's Will.
+        if not affixes:
+            raise ValueError("角色词缀槽位标志与数量不一致。")
+        result["corruptedAffix"] = affixes[-1]
+        result["affixes"] = affixes[:-1]
+    return result
 
 
 def decode_character(save, character):

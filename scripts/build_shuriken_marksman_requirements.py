@@ -1,4 +1,4 @@
-"""Build the independent Heartseeker Shuriken template from frozen XML."""
+"""Build current Shuriken from four profiles; retain the historical XML reader."""
 from copy import deepcopy
 import hashlib
 import json
@@ -10,7 +10,6 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tool"))
 from engine import empty_leveling, extract, inspect_rule
 from requirements import write_document
-from letools import merge_targets
 
 BUILD_ID = "heartseeker-shuriken-marksman"
 SOURCE = ROOT / "sources/builds/maxroll-shuriken-marksman-very-strict.xml"
@@ -68,12 +67,11 @@ def build_xml_documents():
 
 def build_documents():
     from extract_shuriken_profiles import extracted_document
-    endgame, leveling = build_xml_documents()
-    profiles = extracted_document()
-    endgame["targets"] = merge_targets(endgame["targets"], profiles["targets"])
-    endgame["source"] = {**profiles["source"], "name": "追心手里剑 · 原XML与四个天梯角色并集",
-                         "xml_reference": endgame["source"],
-                         "scope": "原Very Strict模板目标与玩家指定四个角色当前配装的并集；练级独立留空"}
+    _, leveling = build_xml_documents()
+    endgame = extracted_document()
+    endgame.update(id=BUILD_ID, name="追心手里剑")
+    endgame["source"].update(name="追心手里剑 · 四个指定角色的当前配装",
+                            scope="暗金、装备、神像与祭坛全部仅取四个profile并集；装备仅实际普通槽T6／T7，不合并旧XML目标；练级独立留空")
     return endgame, leveling
 
 

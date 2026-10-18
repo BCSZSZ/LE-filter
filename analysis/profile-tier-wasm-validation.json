@@ -1,0 +1,194 @@
+{
+  "date": "2026-10-19",
+  "status": "passed",
+  "runtime": "Pyodide 314.0.7 / Node.js",
+  "cases": [
+    {
+      "name": "four-profile-import",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "single-profile-1",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "single-profile-2",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "single-profile-3",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "single-profile-4",
+      "completeOutputEqual": true
+    },
+    {
+      "name": "personal-filter",
+      "completeOutputEqual": true,
+      "count": 96
+    },
+    {
+      "name": "skeleton-necromancer/skeleton-necromancer",
+      "completeOutputEqual": true,
+      "count": 73
+    },
+    {
+      "name": "flay-mana-lich/flay-mana-lich",
+      "completeOutputEqual": true,
+      "count": 70
+    },
+    {
+      "name": "flay-lich-allie-guide/flay-lich-allie-guide",
+      "completeOutputEqual": true,
+      "count": 88
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835/bleed-skeleton-roamer-guide-835",
+      "completeOutputEqual": true,
+      "count": 101
+    },
+    {
+      "name": "ice-heartseeker-planner-al0dkyek/ice-heartseeker-planner-al0dkyek",
+      "completeOutputEqual": true,
+      "count": 81
+    },
+    {
+      "name": "heartseeker-shuriken-marksman/heartseeker-shuriken-marksman",
+      "completeOutputEqual": true,
+      "count": 96
+    },
+    {
+      "name": "heartseeker-shuriken-marksman+skeleton-necromancer/heartseeker-shuriken-marksman",
+      "completeOutputEqual": true,
+      "count": 123
+    },
+    {
+      "name": "heartseeker-shuriken-marksman+skeleton-necromancer/skeleton-necromancer",
+      "completeOutputEqual": true,
+      "count": 123
+    },
+    {
+      "name": "flay-mana-lich+heartseeker-shuriken-marksman/flay-mana-lich",
+      "completeOutputEqual": true,
+      "count": 120
+    },
+    {
+      "name": "flay-mana-lich+heartseeker-shuriken-marksman/heartseeker-shuriken-marksman",
+      "completeOutputEqual": true,
+      "count": 120
+    },
+    {
+      "name": "flay-lich-allie-guide+heartseeker-shuriken-marksman/flay-lich-allie-guide",
+      "completeOutputEqual": true,
+      "count": 137
+    },
+    {
+      "name": "flay-lich-allie-guide+heartseeker-shuriken-marksman/heartseeker-shuriken-marksman",
+      "completeOutputEqual": true,
+      "count": 137
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+heartseeker-shuriken-marksman/bleed-skeleton-roamer-guide-835",
+      "completeOutputEqual": true,
+      "count": 150
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+heartseeker-shuriken-marksman/heartseeker-shuriken-marksman",
+      "completeOutputEqual": true,
+      "count": 150
+    },
+    {
+      "name": "heartseeker-shuriken-marksman+ice-heartseeker-planner-al0dkyek/heartseeker-shuriken-marksman",
+      "completeOutputEqual": true,
+      "count": 127
+    },
+    {
+      "name": "heartseeker-shuriken-marksman+ice-heartseeker-planner-al0dkyek/ice-heartseeker-planner-al0dkyek",
+      "completeOutputEqual": true,
+      "count": 125
+    },
+    {
+      "name": "flay-mana-lich+heartseeker-shuriken-marksman+skeleton-necromancer/flay-mana-lich",
+      "completeOutputEqual": true,
+      "count": 147
+    },
+    {
+      "name": "flay-mana-lich+heartseeker-shuriken-marksman+skeleton-necromancer/heartseeker-shuriken-marksman",
+      "completeOutputEqual": true,
+      "count": 147
+    },
+    {
+      "name": "flay-mana-lich+heartseeker-shuriken-marksman+skeleton-necromancer/skeleton-necromancer",
+      "completeOutputEqual": true,
+      "count": 147
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+flay-lich-allie-guide+heartseeker-shuriken-marksman/bleed-skeleton-roamer-guide-835",
+      "completeOutputEqual": true,
+      "count": 190
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+flay-lich-allie-guide+heartseeker-shuriken-marksman/flay-lich-allie-guide",
+      "completeOutputEqual": true,
+      "count": 190
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+flay-lich-allie-guide+heartseeker-shuriken-marksman/heartseeker-shuriken-marksman",
+      "completeOutputEqual": true,
+      "count": 190
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+flay-lich-allie-guide+heartseeker-shuriken-marksman+ice-heartseeker-planner-al0dkyek/bleed-skeleton-roamer-guide-835",
+      "completeOutputEqual": true,
+      "error": "这些BD生成219条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+flay-lich-allie-guide+heartseeker-shuriken-marksman+ice-heartseeker-planner-al0dkyek/flay-lich-allie-guide",
+      "completeOutputEqual": true,
+      "error": "这些BD生成219条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+flay-lich-allie-guide+heartseeker-shuriken-marksman+ice-heartseeker-planner-al0dkyek/heartseeker-shuriken-marksman",
+      "completeOutputEqual": true,
+      "error": "这些BD生成221条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+flay-lich-allie-guide+heartseeker-shuriken-marksman+ice-heartseeker-planner-al0dkyek/ice-heartseeker-planner-al0dkyek",
+      "completeOutputEqual": true,
+      "error": "这些BD生成219条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+flay-lich-allie-guide+flay-mana-lich+heartseeker-shuriken-marksman+ice-heartseeker-planner-al0dkyek+skeleton-necromancer/bleed-skeleton-roamer-guide-835",
+      "completeOutputEqual": true,
+      "error": "这些BD生成256条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+flay-lich-allie-guide+flay-mana-lich+heartseeker-shuriken-marksman+ice-heartseeker-planner-al0dkyek+skeleton-necromancer/flay-lich-allie-guide",
+      "completeOutputEqual": true,
+      "error": "这些BD生成247条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+flay-lich-allie-guide+flay-mana-lich+heartseeker-shuriken-marksman+ice-heartseeker-planner-al0dkyek+skeleton-necromancer/flay-mana-lich",
+      "completeOutputEqual": true,
+      "error": "这些BD生成262条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+flay-lich-allie-guide+flay-mana-lich+heartseeker-shuriken-marksman+ice-heartseeker-planner-al0dkyek+skeleton-necromancer/heartseeker-shuriken-marksman",
+      "completeOutputEqual": true,
+      "error": "这些BD生成264条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+flay-lich-allie-guide+flay-mana-lich+heartseeker-shuriken-marksman+ice-heartseeker-planner-al0dkyek+skeleton-necromancer/ice-heartseeker-planner-al0dkyek",
+      "completeOutputEqual": true,
+      "error": "这些BD生成262条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+    },
+    {
+      "name": "bleed-skeleton-roamer-guide-835+flay-lich-allie-guide+flay-mana-lich+heartseeker-shuriken-marksman+ice-heartseeker-planner-al0dkyek+skeleton-necromancer/skeleton-necromancer",
+      "completeOutputEqual": true,
+      "error": "这些BD生成262条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+    }
+  ],
+  "browserDownloadTested": false,
+  "gameClientTested": false
+}

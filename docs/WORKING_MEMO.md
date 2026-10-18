@@ -2,6 +2,13 @@
 
 更新时间：2026-10-19，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
 
+## 最新2026-10-19：profile实际普通槽T6／T7与追心手里剑重建
+
+- 玩家要求装备仅取真正打到普通槽的T6／T7；腐化槽普通ID、T5及以下、T8、封印／其他附加槽排除。普通槽的实验1类可收集。缺少阶数明确报错并要求重读，未知ID及格式仍整批失败。神像和祭坛按各自体系，不套装备阶数筛选；腐化槽普通ID同样排除。[导入约定](PROFILE_IMPORT.md)
+- 同四profile已重新读取76件，MaadCity手套、腰带、遗物发生变化。用户确认暗金、装备、神像与祭坛全部只取profile并集，不再合并旧Very Strict。新[冻结字节](../sources/builds/shuriken-profile-bundle-2026-10-19.json)及[追心手里剑需求](../requirements/heartseeker-shuriken-marksman.endgame.json)：13暗金／10装备组28目标／11神像组／1祭坛，无05、练级留空。旧XML独有459退出BD目标，通用保护仍独立。单独96条，与冰追心125／127条，六模板247–264条仍超200报错。
+- 解码保留真实槽位：普通物品封印／腐化项位于前方；腐化传奇的腐化项位于末尾，须同时核对物品已腐化标志，不能误读未腐化编织者的剩余WW。76件旧物品所有普通／封印／腐化ID及阶数与独立LETools API逐项相等。
+- 119项回归、32组组合审计、38组打包WASM完整输出对照通过，57份其他源／需求／基底／历史XML及引擎字节保持；[原生记录](../analysis/profile-tier-validation.json)、[WASM记录](../analysis/profile-tier-wasm-validation.json)、[完整目标与XML](SHURIKEN_MARKSMAN_REVIEW.md)。已有个人保存不自动覆盖，需导入同id终局JSON或重新用模版新建方案。未作游戏客户端或浏览器下载实测。
+
 
 ## 最新2026-10-19：求索镜片概率与先古文案
 

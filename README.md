@@ -16,7 +16,7 @@
 
 “冰追心”为独立已有模版，与前两份攻略BD使用相同的编辑、保存、主副和生成规则。初版来自[构建器AL0dkyek](https://www.lastepochtools.com/planner/zh/AL0dkyek)，2026-10-18已按玩家提供的`LE-filter (10).xml`替换头盔、手套、腰带、弓和祭坛目标；离线重建同样以玩家修订为准。来源与目标见[中文审阅表](docs/ICE_HEARTSEEKER_PLANNER_REVIEW.md)、[终局需求](requirements/ice-heartseeker-planner-al0dkyek.endgame.json)；[练级需求](requirements/ice-heartseeker-planner-al0dkyek.leveling.json)留空。已有保存不会自动覆盖，可从模板应用新组合，或在当前方案导入新版终局需求。
 
-“追心手里剑”已更新为原`Shuriken Marksman` Very Strict XML与玩家指定四个天梯角色的并集：14暗金、10装备组（56项普通部位目标）、15神像组、1祭坛，无独立05，练级留空。新增丛林女王的储物腰带92、埃莱克的创新402、先驱者之针344；原11种暗金及全部原目标保留。单独100条，与冰追心组合129／131条。来源、全部目标及上限见[中文审阅表](docs/SHURIKEN_MARKSMAN_REVIEW.md)；可导入[新版终局需求](requirements/heartseeker-shuriken-marksman.endgame.json)更新当前保存的对应阶段。普通用户的profile导入仅创建个人BD，不更新已有模版。
+“追心手里剑”2026-10-19已完全按原选四个profile重新读取并重建：13暗金、10装备组（28项实际普通槽T6／T7目标）、11神像组、1祭坛，无独立05、练级留空。装备不再收T5及以下、腐化槽普通词缀和其他附加槽，也不再合并旧XML目标；神像／祭坛沿用各自体系。单独96条，与冰追心组合125／127条。[直接导入XML](outputs/profile-t6-t7-2026-10-19/追心手里剑.xml)、[全部目标](docs/SHURIKEN_MARKSMAN_REVIEW.md)及[新版终局需求](requirements/heartseeker-shuriken-marksman.endgame.json)可用于更新现有方案。普通profile导入也使用新筛选，只创建个人BD，不改已有模版或个人保存。
 
 Allie攻略来源的Flay已按2026-10-07正文及2026-10-11玩家补充更新[终局需求](requirements/flay-lich-allie-guide.endgame.json)与[练级需求](requirements/flay-lich-allie-guide.leveling.json)：17暗金、10装备组、5神像组、1祭坛组、28种终局底材（5首选／23替代）；练级19词缀与3种底材。厚实拉贡点燃139与厚实编织者点燃／点燃火焰穿透876分别收集。祭坛要求尖塔底材3与“魔力自装备的每个腐化神像”1105同时成立，该腐化词条直接作为祭坛目标。补入短暂休息132、红戒277、虚无353、破碎世界413、流亡469、不息狂怒477，保留山之麓替代品。终局05按首选／替代分别收集，没有明确首选不猜；C1已覆盖的底材不会重复输出。Allie单独88条，与835组合141条，均启用。完整目标、部位链接冲突与来源提取时的验证边界见[双攻略需求审阅](docs/GUIDE_REQUIREMENTS_REVIEW.md)。已有保存可手动补祭坛、导入新版同id终局JSON替换该阶段，或明确从模板重置；刷新不会覆盖自己的目标修改。
 
@@ -24,7 +24,7 @@ Allie攻略来源的Flay已按2026-10-07正文及2026-10-11玩家补充更新[�
 
 工作台按首次命中生成：彗星→灵感→主BD→副BD→其余档位。彗星统一红色，灵感统一橙色；其余主BD粉色、副BD蓝色，共享按主，通用物品按档色。至少三T7、双T7中至少一条对应部位BD目标T7、双T7且三词条（空一栏）均为彗星；其余任意双T7为灵感。三词条按未封印的四个普通栏位计数，旧BD双目标T7独立层取消。副BD两目标神像先于主BD一目标。双T7与T0不另设金色。任意多T7覆盖全部23类普通装备，不含神像、祭坛及资源。非目标单T7＋低阶BD目标和额外单T7储备仅在0–84级显示，85级自动退出；可提前取消储备。目标单T7常驻。详见[双T7彗星判定](docs/COMET_DOUBLE_T7.md)。
 
-原有四个BD手动全选时，按主BD选择生成169–184条；冰追心单独81条，与Allie＋835三BD组合175条；原五份模板全部选择为203–218条。六份全部选择为253–268条，会按200条上限报错且不截断。当前通用规则、压缩边界及数量见[通用规则固定](docs/COMMON_RULE_STABILITY.md)与[验证](analysis/fixed-common-rules-validation.json)，此前来源目标验证见[冰追心验证](analysis/ice-heartseeker-validation.json)和[角色并集验证](analysis/profile-import-validation.json)。
+原有四个BD手动全选时，按主BD选择生成169–184条；冰追心单独81条，与Allie＋835三BD组合175条；原五份模板全部选择为203–218条。六份全部选择为247–264条，会按200条上限报错且不截断。通用规则和压缩边界见[通用规则固定](docs/COMMON_RULE_STABILITY.md)，当前角色提取及组合数量见[验证](analysis/profile-tier-validation.json)；此前来源目标验证见[冰追心验证](analysis/ice-heartseeker-validation.json)和[旧角色并集验证](analysis/profile-import-validation.json)。
 
 任一启用BD需要套装中的一件，工作台会自动收集整套，并在所需暗金页标注补全项；835攻略补齐两件后共27项，原25项来源目标保留。装备词条按优先级竖列编号，可在同部位内拖放调整并自动保存。套装关系使用已冻结的24套／61件ID映射，浏览器与本地使用同一规则。
 

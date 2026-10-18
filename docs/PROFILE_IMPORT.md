@@ -28,23 +28,26 @@ EHG开发者确认过LETools和Maxroll使用官方Character Data API，但没有
 ## 目标边界
 
 - 暗金按实际物品ID收集；暗金神像也按ID收集，暗金自身底材和固有属性不转成普通素材需求。
-- 装备普通词缀按类型合并，包含低阶、传奇合成及普通封印词缀；特殊类别按冻结词库ID判定，不能只看来源页签。腐化6、附魔4另存参考，固定随机词缀7存入来源参考。
-- 普通神像只计0／5类。不同类型、不同底材范围分别保留，同范围的候选词缀取并集，沿用现有一项／两项规则；不从多个角色锁定精确前后缀配对。
+- 装备词缀按部位取实际普通槽中恰好T6／T7的并集；T5及以下、T8、封印和其他附加槽均不进入装备目标。普通槽上的已知实验词缀也可收集，例如MaadCity腰带713。腐化槽中的普通ID明确排除，不把整件已腐化装备的合法普通槽一起排除。
+- 阶数和槽位必须来自实际数据。旧角色JSON若缺少装备普通词缀阶数，明确报错并要求重新读取，不猜T6／T7。每项原始ID、阶数、来源槽及排除原因保存在来源`affix_details`中；真正腐化6、附魔4及固定随机7继续按冻结词库另存参考。
+- 普通神像只计0／5类，腐化槽中的普通ID不入普通目标。不同类型、不同底材范围分别保留，同范围取并集，沿用一项／两项规则。神像和祭坛不套装备的T6／T7筛选。
 - 祭坛保留实际底材；其普通、腐化和附魔词缀作为实际祭坛目标。
 - 普通装备才补入其明确底材，多个底材按替代收集，不猜首选。练级独立留空，技能、天赋和祝福不导入过滤器。
 
-词条顺序保留首次来源顺序，后来的新词条追加，供玩家调整。普通角色配装中的偶然词缀也可能进入并集；导入页明确提示这一点。生成仍调用原`tool/engine.py`，保留颜色、提示、阶段、23类装备和超过200条报错的现行规则。
+词条顺序保留首次合格来源顺序，后来的新词条追加，供玩家调整。只对本次profile提取应用上述筛选，已有个人方案不自动覆盖。生成仍调用原`tool/engine.py`，保留颜色、提示、阶段、23类装备和超过200条报错的现行规则。
 
 ## 本次追心手里剑模版
 
-玩家明确要求将以下四个角色与原Very Strict模版取并集，因此本次更新了仓库里的追心手里剑终局需求。普通用户通过上述导入功能只创建个人方案。
+2026-10-19玩家确认全部需求按以下四个角色重新生成，不再与旧Very Strict模版合并。此为明确授权的模版维护；普通用户通过导入功能只创建个人方案。
 
 - [MAONG · vsnail](https://www.lastepochtools.com/profile/vsnail/character/MAONG)
 - [ShurikenAmhali · Amhali](https://www.lastepochtools.com/profile/Amhali/character/ShurikenAmhali)
 - [S5Luciann · chachapieng](https://www.lastepochtools.com/profile/chachapieng/character/S5Luciann)
 - [MaadCity · 47x47](https://www.lastepochtools.com/profile/47x47/character/MaadCity)
 
-2026-10-18从可见Profile→Planner物品编辑器逐件读取76件物品及全部已用词缀页签，冻结[原始UI摘录](../sources/builds/heartseeker-shuriken-profiles-2026-10-18.json)。该摘录不是原生API响应。解码后13种暗金／10装备组／11神像组／1祭坛；再与原模版取并集为14种暗金／10装备组、56项普通部位目标／15神像组／1祭坛，无独立05，练级留空。新增暗金为丛林女王的储物腰带92、埃莱克的创新402、先驱者之针344；原11项完整保留。完整目标见[追心手里剑审阅](SHURIKEN_MARKSMAN_REVIEW.md)。
+本次重新读取76件已装备物品，冻结[2026-10-19原始API字节](../sources/builds/shuriken-profile-bundle-2026-10-19.json)。MaadCity的手套、腰带、遗物与旧快照不同。当前13种暗金／10装备组、28项普通槽T6／T7目标／11神像组／1祭坛，无独立05，练级留空，独立生成96条。旧XML独有的毁灭机巧459退出BD目标，通用保护独立保留。完整目标及可直接导入的XML见[追心手里剑审阅](SHURIKEN_MARKSMAN_REVIEW.md)。
+
+此前14暗金／56装备目标／15神像是旧XML与profile合并的历史结果。原[UI摘录](../sources/builds/heartseeker-shuriken-profiles-2026-10-18.json)、两份2026-10-18 API快照、原XML及其他BD保持；旧模板读取函数仅供历史追溯。
 
 已有个人保存保持原样；需要更新时重新应用模版，或导入[同id新版终局需求](../requirements/heartseeker-shuriken-marksman.endgame.json)只更新该阶段。
 
@@ -54,22 +57,18 @@ EHG开发者确认过LETools和Maxroll使用官方Character Data API，但没有
 python -X utf8 scripts/extract_shuriken_profiles.py
 python -X utf8 scripts/build_shuriken_marksman_requirements.py
 python -X utf8 scripts/validate_profile_import.py
+python -X utf8 scripts/render_shuriken_profile_review.py
 python -X utf8 -m unittest discover -s tool -v
 python -X utf8 scripts/build_pages.py
 node scripts/validate_profile_import_wasm.mjs
 ```
 
-[原生检查](../analysis/profile-import-validation.json)与[WASM完整输出对照](../analysis/profile-import-wasm-validation.json)记录组合、保存输入及边界。新增原生API目标字段冻结在[sources/builds/letools-character-api-2026-10-18.json](../sources/builds/letools-character-api-2026-10-18.json)，四角色共76件，与既有UI摘录的目标集合及底材范围一致，顺序可因API字段顺序不同而不同；该夹具不重建或覆盖已有模版。
+[当前原生检查](../analysis/profile-tier-validation.json)与[WASM完整输出对照](../analysis/profile-tier-wasm-validation.json)记录profile单独重建、槽位／阶数、组合、保存输入及边界。旧[原生API](../sources/builds/letools-character-api-2026-10-18.json)与[原始字节](../sources/builds/maxroll-character-api-2026-10-18.json)提供76件独立交叉证据，普通／封印／腐化槽的ID与实际阶数逐项一致；旧[导入验证](../analysis/profile-import-validation.json)保留为此前策略记录。
 
-新通路的最小原始响应冻结在[sources/builds/maxroll-character-api-2026-10-18.json](../sources/builds/maxroll-character-api-2026-10-18.json)。76件物品逐位置比较物品类型、底材、暗金ID及普通／腐化／附魔／固定词缀池，全部等于独立LETools API结果。两枚戒指的游戏容器9／10分别对应LETools的ring2／ring1；普通词缀位于腐化槽时仍按ID保留普通类别。
+两枚戒指的游戏容器9／10分别对应LETools的ring2／ring1。词缀类别仍按冻结ID核查，但类别普通不再足以入选：还须位置为普通槽、阶数符合装备T6／T7要求。
 
-`tool/character_save.py`只解码目标身份，不计算属性roll或沿用角色装备的来源门槛。布局另与本机1.5.2.2的`ItemData.RebuildID`（RVA `0x1205E80`）／`setValuesFromSerialisation`（`0x12127E0`）静态指令核对，GameAssembly SHA256为`d5f9fb458f0e9878e697a92b590a586a52fd77e645f8bf87bb4f2b74c6c56567`：v6类型位于字节5，普通词缀数量取字节13低6位；暗金／套装字节22高3位为数量，传奇低3位为数量；随后每项3字节，首字节低4位＋次字节为ID、首字节高4位＋1为阶数。LP／封印／腐化等标志和尾部记忆／馈赠／编织信息不能被当成词缀数量或新词缀。版本2、3–5的短身份头按游戏升级拷贝布局处理；未知版本、越界和未知ID明确退出。
+`tool/character_save.py`解码身份、实际阶数和槽位，不计算属性roll。布局与本机1.5.2.2的`ItemData.RebuildID`（RVA `0x1205E80`）／`setValuesFromSerialisation`（`0x12127E0`）静态指令核对，GameAssembly SHA256为`d5f9fb458f0e9878e697a92b590a586a52fd77e645f8bf87bb4f2b74c6c56567`：v6类型位于字节5，普通词缀数量取字节13低6位；暗金／套装字节22高3位为数量，传奇低3位为数量；每项3字节，首字节低4位＋次字节为ID、首字节高4位＋1为阶数。
 
-```powershell
-python -X utf8 scripts/validate_profile_api.py
-python -X utf8 scripts/build_pages.py
-node scripts/validate_profile_api_wasm.mjs
-node --test tool/test_profile_relay.mjs
-```
+普通装备字节13的bit7／bit6分别标记封印／腐化槽，两者先于普通词缀序列；传奇腐化槽为最后一项，须同时检查字节8的bit4（物品已腐化）及字节22的bit7。未腐化编织者传奇的同一高位属于剩余WW，不能误当腐化槽。LP／封印／腐化标志和尾部记忆／馈赠等不能被当作数量或新词缀。版本2、3–5按短身份头的相对偏移处理；未知版本、槽位数量不符、越界和未知ID明确退出。
 
-后端与浏览器协议测试覆盖链接、CORS、请求大小、来源身份、整批失败、缓存去重和个人保存隔离。[API原生验证](../analysis/profile-api-validation.json)、[WASM完整输出对照](../analysis/profile-api-wasm-validation.json)及[网页验证](../analysis/profile-api-browser-validation.json)记录实际检查。游戏客户端及浏览器Blob下载不作为这些验证的结论。
+后端与浏览器协议测试`node --test tool/test_profile_relay.mjs`覆盖链接、CORS、请求大小、来源身份、整批失败、缓存去重和个人保存隔离。此前[API原生验证](../analysis/profile-api-validation.json)、[WASM完整输出对照](../analysis/profile-api-wasm-validation.json)及[网页验证](../analysis/profile-api-browser-validation.json)保留为最初API接入记录；当前目标筛选使用本节上方复现流程。游戏客户端及浏览器Blob下载不作为这些验证的结论。

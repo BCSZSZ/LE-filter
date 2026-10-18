@@ -8,6 +8,7 @@ import unittest
 
 import engine as e
 from browser_runtime import browser_bootstrap, dispatch_json
+from character_save import decode_character
 from build_shuriken_marksman_requirements import BUILD_ID, build_documents, build_xml_documents
 from extract_shuriken_profiles import profile_bundle
 from letools import TYPES, decode_key, extract_character, import_profiles, merge_targets, profile_url
@@ -21,6 +22,10 @@ class LEToolsTests(unittest.TestCase):
         cls.bundle = profile_bundle()
         cls.imported = import_profiles(cls.bundle)
 
+    def decoded_entry(self, index=0):
+        entry = self.bundle["profiles"][index]
+        return {"url": entry["url"], "data": decode_character(entry["save"], entry["save"]["characterName"])}
+
     def test_frozen_ui_records_have_76_items_and_decode_with_frozen_enum(self):
         enum = json.loads((e.ROOT / "sources/game-reference.json").read_text(encoding="utf-8"))["equipment_enum"]
         self.assertEqual({typ: i for i, typ in enumerate(TYPES)}, enum)
@@ -30,26 +35,26 @@ class LEToolsTests(unittest.TestCase):
         self.assertEqual(decode_key("UAzBMoVgNiA"), "002256")
         self.assertEqual(decode_key("IIwBgLKyiJA"), "1041011000")
 
-    def test_template_is_exact_union_and_original_priority_is_retained(self):
-        original = build_xml_documents()[0]
+    def test_template_is_exact_profile_union_without_old_xml_targets(self):
         endgame, leveling = build_documents()
-        self.assertEqual(endgame["targets"], merge_targets(original["targets"], self.imported["profile"]))
+        self.assertEqual(read_document(endgame)["profile"], self.imported["profile"])
         self.assertEqual({k: len(v) for k, v in endgame["targets"].items()},
-                         {"uniques": 14, "equipment": 10, "altars": 1, "idols": 15, "bases": 0})
-        self.assertEqual(set(endgame["targets"]["uniques"]) - set(original["targets"]["uniques"]), {92, 402, 344})
-        for group in original["targets"]["equipment"]:
-            union = next(g for g in endgame["targets"]["equipment"] if g["type"] == group["type"])
-            self.assertEqual(union["affixes"][:len(group["affixes"])], group["affixes"])
+                         {"uniques": 13, "equipment": 10, "altars": 1, "idols": 11, "bases": 0})
+        self.assertEqual(sum(len(g["affixes"]) for g in endgame["targets"]["equipment"]), 28)
+        self.assertNotIn(459, endgame["targets"]["uniques"])
+        ring = next(g for g in endgame["targets"]["equipment"] if g["type"] == "RING")
+        self.assertEqual(ring["affixes"], [507])
         self.assertEqual(leveling, build_xml_documents()[1])
 
-    def test_special_classification_uses_id_not_corruption_tab(self):
+    def test_special_classification_and_slot_origin_are_both_required(self):
         records = {p["character"]: {r["slot"]: r for r in p["items"]} for p in self.imported["source"]["profiles"]}
-        # Dexterity on MaadCity gloves is on the corrupted page but remains ID503 ordinary.
-        self.assertIn(503, records["MaadCity"]["hands"]["affixes"])
+        self.assertNotIn(503, records["MaadCity"]["hands"]["affixes"])
         self.assertNotIn(503, records["MaadCity"]["hands"]["corrupted"])
+        self.assertEqual(records["MAONG"]["head"]["affixes"], [611, 52])
+        self.assertIn(713, records["MaadCity"]["waist"]["affixes"])
         self.assertTrue(records["MAONG"]["ring1"]["fixed"])
         for group in self.imported["profile"]["equipment"]:
-            self.assertTrue(all(e.CATALOG["affixes"][str(a)]["special"] in {0, 2, 5} for a in group["affixes"]))
+            self.assertTrue(all(e.CATALOG["affixes"][str(a)]["special"] in {0, 1, 2, 5} for a in group["affixes"]))
         for group in self.imported["profile"]["idols"]:
             self.assertTrue(all(e.CATALOG["affixes"][str(a)]["special"] in {0, 5} for a in group["affixes"]))
         needle = [g for g in self.imported["profile"]["idols"] if g["type"] == "IDOL_1x1_LAGON"]
@@ -82,7 +87,7 @@ class LEToolsTests(unittest.TestCase):
         self.assertEqual({tuple(g["bases"]) for g in groups}, {(9,), (14,)})
 
     def test_normal_equipment_adds_its_base_but_unique_bases_are_not_added(self):
-        entry = deepcopy(self.bundle["profiles"][0])
+        entry = self.decoded_entry()
         profile, _ = extract_character(entry)
         self.assertEqual(profile["bases"], [])
         entry["data"]["equipment"]["head"]["id"] = "IIwBjYJnI"
@@ -100,10 +105,12 @@ class LEToolsTests(unittest.TestCase):
             with self.subTest(key=key), self.assertRaises(ValueError):
                 decode_key(key)
         bad = deepcopy(self.bundle)
+        bad["profiles"][-1] = self.decoded_entry(-1)
         bad["profiles"][-1]["data"]["equipment"]["head"]["affixes"].append({"id": "AA"})
         with self.assertRaises(ValueError):
             import_profiles(bad)
         bad = deepcopy(self.bundle)
+        bad["profiles"][-1] = self.decoded_entry(-1)
         bad["profiles"][-1]["data"]["idols"][0]["id"] = "UAzBMoVgNiA"
         with self.assertRaisesRegex(ValueError, "位置不符"):
             import_profiles(bad)
@@ -115,7 +122,8 @@ class LEToolsTests(unittest.TestCase):
                                 capture_output=True, text=True, encoding="utf-8")
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
-    def test_native_api_targets_match_visible_ui_without_replacing_template(self):
+    def test_filtered_old_native_api_targets_match_independent_provider(self):
+        from profile_proxy import compact_character
         fixture = json.loads((e.ROOT / "sources/builds/letools-character-api-2026-10-18.json").read_text(encoding="utf-8"))
         bundle = {"format": "letools-profile-bundle", "version": 1, "profiles": [
             {"url": row["url"], "data_version": row["response"]["buildInfo"]["data_version"],
@@ -131,4 +139,24 @@ class LEToolsTests(unittest.TestCase):
                 result[category] = sorted(rows, key=lambda x: json.dumps(x, sort_keys=True))
             return result
 
-        self.assertEqual(pools(imported["profile"]), pools(self.imported["profile"]))
+        native = json.loads((e.ROOT / "sources/builds/maxroll-character-api-2026-10-18.json").read_text(encoding="utf-8"))
+        other = import_profiles({"format": "letools-profile-bundle", "version": 1, "profiles": [
+            compact_character(row["response"], row["url"]) for row in native["responses"]]})
+        self.assertEqual(pools(imported["profile"]), pools(other["profile"]))
+
+    def test_equipment_targets_only_regular_t6_t7_and_keep_valid_duplicate_id(self):
+        entry = {"url": "https://www.lastepochtools.com/profile/test/character/test", "data": {
+            "equipment": {"head": {"id": {"type_id": 0, "base": 2, "unique_id": 256}, "affixes": [
+                {"id": 611, "tier": 7}, {"id": 52, "tier": 6}, {"id": 13, "tier": 5},
+                {"id": 503, "tier": 6}, {"id": 1, "tier": 8}],
+                "corruptedAffix": {"id": 503, "tier": 7}, "sealedAffix": {"id": 80, "tier": 6}}}, "idols": []}}
+        targets, source = extract_character(entry)
+        self.assertEqual(targets["equipment"][0]["affixes"], [611, 52, 503])
+        self.assertEqual(source["items"][0]["affixes"], [611, 52, 503])
+        details = source["items"][0]["affix_details"]
+        self.assertEqual({(a["id"], a["origin"]) for a in details if a["target"]},
+                         {(611, "affixes"), (52, "affixes"), (503, "affixes")})
+        broken = deepcopy(entry)
+        broken["data"]["equipment"]["head"]["affixes"][0].pop("tier")
+        with self.assertRaisesRegex(ValueError, "阶数"):
+            extract_character(broken)

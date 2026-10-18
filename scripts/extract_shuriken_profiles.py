@@ -1,4 +1,4 @@
-"""Decode the frozen, visibly selected LETools UI fields; no network."""
+"""Extract the selected public profiles from frozen native API bytes, offline."""
 from copy import deepcopy
 import hashlib
 import json
@@ -9,38 +9,19 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tool"))
 from letools import import_profiles
 
-SOURCE = ROOT / "sources/builds/heartseeker-shuriken-profiles-2026-10-18.json"
+SOURCE = ROOT / "sources/builds/shuriken-profile-bundle-2026-10-19.json"
 
 
 def profile_bundle():
     snapshot = json.loads(SOURCE.read_text(encoding="utf-8"))
-    result = {"format": "letools-profile-bundle", "version": 1, "name": "追心手里剑 · 四角色并集", "profiles": []}
-    for row in snapshot["profiles"]:
-        data = {"equipment": {}, "idols": []}
-        assert len(row["items"]) == 19, row["character"]
-        for item in row["items"]:
-            converted = {"id": item["item_key"], "affixes": []}
-            for affix in item["affixes"]:
-                value = {"id": affix["link"].split("/")[-1]}
-                field = {"sealedAffixes": "sealedAffix", "primordialAffixes": "primordialAffix",
-                         "corruptedAffixes": "corruptedAffix"}.get(affix["tab"])
-                if field:
-                    converted[field] = value
-                else:
-                    converted["affixes"].append(value)
-            if item["slot"].startswith("idol-"):
-                data["idols"].append(converted)
-            else:
-                data["equipment"][item["slot"]] = converted
-        result["profiles"].append({"url": row["url"], "data_version": snapshot["game_version"], "data": data})
-    return result
+    return deepcopy(snapshot["bundle"])
 
 
 def extracted_document():
     result = import_profiles(profile_bundle())["document"]
     result["source"].update(file=SOURCE.relative_to(ROOT).as_posix(),
                             sha256=hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
-                            extracted_on="2026-10-18", method="冻结可见UI摘录解码；不是原生API响应")
+                            extracted_on="2026-10-19", method="冻结公开角色API序列化字节；普通装备槽仅取实际T6／T7，腐化槽普通词缀排除")
     return deepcopy(result)
 
 

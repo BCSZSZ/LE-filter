@@ -195,8 +195,10 @@ def extract_character(entry):
         affixes = item.get("affixes", [])
         if not isinstance(affixes, list) or len(affixes) > 12:
             raise ValueError("物品词缀列表不正确。")
-        affixes = affixes + [item[key] for key in ("sealedAffix", "primordialAffix", "corruptedAffix") if item.get(key)]
-        for affix in affixes:
+        details = []
+        origins = [(affix, "affixes") for affix in affixes]
+        origins += [(item[key], key) for key in ("sealedAffix", "primordialAffix", "corruptedAffix") if item.get(key)]
+        for affix, origin in origins:
             if not isinstance(affix, dict):
                 raise ValueError("物品词缀数据不正确。")
             key = affix.get("id")
@@ -211,14 +213,33 @@ def extract_character(entry):
             if catalog is None:
                 raise ValueError(f"未知词缀ID {aid}，请更新词库；未将其猜成普通词缀。")
             special = catalog["special"]
-            field = {0: "affixes", 2: "affixes", 5: "affixes", 4: "enchanted", 6: "corrupted", 7: "fixed"}.get(special)
+            field = {0: "affixes", 1: "affixes", 2: "affixes", 5: "affixes", 4: "enchanted", 6: "corrupted", 7: "fixed"}.get(special)
             if field is None:
                 raise ValueError(f"词缀{aid}的特殊类别{special}暂未支持。")
             if typ.startswith("IDOL_") and typ != "IDOL_ALTAR" and field == "affixes" and special not in {0, 5}:
                 raise ValueError(f"神像词缀{aid}不属于普通0／5类。")
+            tier = affix.get("tier")
+            if tier is not None and (type(tier) is not int or not 1 <= tier <= 8):
+                raise ValueError(f"词缀{aid}的阶数不正确。")
+            if typ in MANIFEST["scope_types"] and field == "affixes" and tier is None:
+                raise ValueError(f"装备词缀{aid}缺少实际阶数，请重新读取角色；不能从旧JSON猜测T6／T7。")
+            reason = None
+            if field == "affixes":
+                if origin == "corruptedAffix":
+                    reason = "corruption_slot"
+                elif typ in MANIFEST["scope_types"]:
+                    if origin != "affixes":
+                        reason = "not_regular_slot"
+                    elif tier not in {6, 7}:
+                        reason = "not_t6_t7"
+            details.append({"id": aid, "tier": tier, "origin": origin, "classification": field,
+                            "target": not reason and (field == "affixes" or typ == "IDOL_ALTAR" and field in {"corrupted", "enchanted"}),
+                            **({"excluded": reason} if reason else {})})
+            if reason:
+                continue
             append_ids(pools[field], [aid])
         records.append({"slot": slot, "item_key": item["id"], "type": typ, "base": base,
-                        "unique_id": uid, **deepcopy(pools)})
+                        "unique_id": uid, **deepcopy(pools), "affix_details": details})
         if uid is not None:
             append_ids(targets["uniques"], [uid])
         if pools["fixed"]:
@@ -282,7 +303,7 @@ def import_profiles(bundle):
     if not isinstance(bundle.get("name", ""), str):
         raise ValueError("个人BD名称必须为文字。")
     name = bundle.get("name", "").strip() or " ＋ ".join(s["character"] for s in sources)
-    warnings = ["角色当前配装按部位取并集，包含低阶及传奇后加词缀；角色词缀顺序不代表推荐优先级。",
+    warnings = ["装备目标只取实际普通槽T6／T7的部位并集；腐化槽普通词缀、其他附加槽及T5以下不计，T8也不计；顺序不代表推荐优先级。",
                 "按冻结ID类别分类：普通神像只计0／5类，腐化6、附魔4另存参考；祭坛附加词缀作为实际目标。",
                 "暗金固定随机词缀7另存参考；不添加暗金固有属性、技能、祝福或练级目标。"]
     document = {"format": "le-filter-requirements", "version": 1, "id": "profile-union-" + digest,

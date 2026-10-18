@@ -60,11 +60,12 @@ class ShurikenRequirementsTests(unittest.TestCase):
         self.assertEqual(large["bases"], [10, 11, 12, 13, 14])
         self.assertEqual(large["pair_bases"], [4, 9, 10, 11, 12, 13, 14])
         self.assertEqual((large["affixes"], large["enchanted"], large["corrupted"]), ([942, 117], [892], [1052]))
-        for affixes, tier in (({942: 1, 892: 7, 1052: 7}, 2), ({942: 1, 117: 1}, 3)):
+        for affixes, tier in (({116: 1, 892: 7, 1043: 7}, 2), ({116: 1, 763: 1}, 3)):
             self.assertEqual(first(self.output, "IDOL_1x3", affixes, base=14, rarity="RARE", corrupted=True)["tier"], tier)
         categories = {"神像一普通目标", "神像两普通目标"}
         self.assertEqual(first(self.output, "IDOL_1x3", {942: 1}, base=4, rarity="RARE", categories=categories)["action"], "HIDE")
-        self.assertEqual(first(self.output, "IDOL_1x3", {942: 1, 117: 1}, base=4, rarity="RARE", categories=categories)["tier"], 3)
+        self.assertEqual(first(self.output, "IDOL_1x3", {942: 1, 117: 1}, base=4, rarity="RARE", categories=categories)["action"], "HIDE")
+        self.assertEqual(first(self.output, "IDOL_1x3", {942: 1, 117: 1}, base=9, rarity="RARE", categories=categories)["tier"], 3)
         self.assertEqual(first(self.output, "IDOL_1x1_ETERRA", {1070: 1}, base=0, rarity="RARE", categories=categories)["action"], "HIDE")
         for group in idols.values():
             self.assertTrue(all(e.CATALOG["affixes"][str(a)]["special"] in {0, 5} for a in group["affixes"]))
