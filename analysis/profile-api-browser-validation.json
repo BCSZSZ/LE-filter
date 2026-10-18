@@ -48,7 +48,8 @@
     "save_and_reload": true,
     "personal_rules": 93,
     "invalid_link_keeps_save_disabled": true,
-    "prior_saves_preserved": true
+    "prior_saves_preserved": true,
+    "changing_links_cancels_old_result": true
   },
   "unittest": {
     "tests": 99,
@@ -56,5 +57,40 @@
   },
   "node_relay_contract_cases": 9,
   "game_client_tested": false,
-  "browser_blob_download_tested": false
+  "browser_blob_download_tested": false,
+  "publication": {
+    "commit": "9f41afa70b37a7ede75b1f7c4512789d8fd24ca4",
+    "workflow": "https://github.com/BCSZSZ/LE-filter/actions/runs/39116744044",
+    "conclusion": "success",
+    "url": "https://bcszsz.github.io/LE-filter/",
+    "client_script": "profile-import.js?v=1e7f7b16afa2858e",
+    "bookmark_ui_removed": true,
+    "browser_verified": true
+  },
+  "production_frontend_tests": {
+    "url": "https://bcszsz.github.io/LE-filter/",
+    "observed_at": "2026-10-18T09:54:46.972590+00:00",
+    "name": "我的追心手里剑",
+    "four_links_read": true,
+    "profile_items": [
+      19,
+      19,
+      19,
+      18
+    ],
+    "counts": {
+      "uniques": 12,
+      "equipment": 10,
+      "altars": 1,
+      "idols": 11,
+      "bases": 0
+    },
+    "saved_as_new_personal_scheme": true,
+    "previous_saves_still_visible": true,
+    "personal_rules": 93,
+    "enabled_rules": 93,
+    "screenshot": "docs/images/profile-api-live-import.png",
+    "note": "Live MaadCity no longer equips unique344; 18 items versus19 in the frozen fixture. Templates retain the reviewed union and are not updated by personal imports.",
+    "save_and_reload": true
+  }
 }
