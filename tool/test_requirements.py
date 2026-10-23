@@ -61,8 +61,18 @@ class RequirementTests(unittest.TestCase):
         def bd_rules(root):
             rules = [e.inspect_rule(node) for node in root.find("rules")
                      if "冰追心" in (node.findtext("nameOverride") or "") or "双T7含BD目标T7" in (node.findtext("nameOverride") or "")]
+            # Idol groups now merge by shape; all other player rules stay exact.
+            rules = [r for r in rules if not r["name"].startswith(("[主 神像一普通目标]", "[主 神像两普通目标]"))]
             return sorted(rules, key=repr)
         self.assertEqual(bd_rules(e.ET.fromstring(output["xml"])), bd_rules(e.ET.fromstring(PLAYER_SOURCE.read_bytes())))
+        expected_idols = {"IDOL_2x2": ([11], [492, 743]),
+                          "IDOL_1x3": ([14], [462, 491, 492, 743]),
+                          "IDOL_1x1_LAGON": ([0, 1], [112, 142, 847, 850])}
+        idol_rows = [r for r in output["rules"] if r["category"].startswith("神像")]
+        self.assertEqual(len(idol_rows), 6)
+        for row in idol_rows:
+            bases, affixes = expected_idols[row["types"][0]]
+            self.assertEqual((row["bases"], row["affixes"]), (bases, [affixes]))
         self.assertFalse(output["warnings"])
         bow = next(g for g in endgame["targets"]["equipment"] if g["type"] == "BOW")
         self.assertTrue(bow["affixes"])
@@ -126,7 +136,7 @@ class RequirementTests(unittest.TestCase):
         self.assertEqual(first(result, "IDOL_1x2", {139: 1}, base=0, rarity="RARE")["tier"], 2)
         self.assertEqual(first(result, "IDOL_1x1_LAGON", {843: 1, 854: 1}, base=1, rarity="RARE")["tier"], 3)
 
-    def test_allie_stout_weaver_ignite_target(self):
+    def test_allie_stout_sources_stay_separate_but_generate_one_shape_pool(self):
         endgame, _ = build_allie_documents()
         stout = [g for g in endgame["targets"]["idols"] if g["type"] == "IDOL_1x2"]
         self.assertEqual(stout, [{"type": "IDOL_1x2", "bases": [0], "affixes": [139]},
@@ -135,11 +145,11 @@ class RequirementTests(unittest.TestCase):
         output = e.generate({"version": 1, "main_id": build["id"], "extra_t7": True, "builds": [build]})
         row = first(output, "IDOL_1x2", {876: 1}, base=1, rarity="RARE", corrupted=True)
         self.assertEqual((row["category"], row["tier"]), ("神像一普通目标", 2))
-        self.assertEqual(row["affixes"], [[876]])
-        self.assertEqual(row["bases"], [1])
+        self.assertEqual(row["affixes"], [[139, 876]])
+        self.assertEqual(row["bases"], [0, 1])
         for base, affix in ((0, 876), (1, 139)):
             self.assertEqual(first(output, "IDOL_1x2", {affix: 1}, base=base, rarity="RARE",
-                                   categories={"神像一普通目标"})["action"], "HIDE")
+                                   categories={"神像一普通目标"})["tier"], 2)
 
     def test_allie_spire_altar_corrupted_mana_is_a_matching_target(self):
         endgame, _ = build_allie_documents()

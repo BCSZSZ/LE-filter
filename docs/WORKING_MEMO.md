@@ -1,6 +1,18 @@
 # 后续工作 memo
 
-更新时间：2026-10-19，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+更新时间：2026-10-24，日本时间。当前工作台阅读顺序：README → TOOL_GUIDE → REQUIREMENTS_FORMAT → 本memo；历史v3查SOUND_STYLE_REVIEW、CURRENT_FILTER_GUIDE和CURRENT_RULES_REVIEW；冻结基底及填空来源查BASE_TEMPLATE、STRICT_VARIABLE_REVIEW和RAXX_VARIABLES，原始Raxx查FILTER_GUIDE、analysis/rules.json和sources/manifest.json。
+
+## 最新2026-10-24：神像同分组按形状合并
+
+- 玩家明确“一条”是指同BD、同形状在同一个目标数量分组内最多一条；一项开始、两项灵感两个分组保留。生成前合并本BD同类型的普通目标池，一项bases与两项pair_bases分别取来源并集；来源明确不限仍不限。空目标、仅附加参考和未提供的类型省略，主副不跨BD凑两项，保存及冻结来源不重写。
+- 普通神像一前一后；两后缀不能凑普通两项。巨型目标是前缀“游侠反曲几率与弓箭伤害”，配后缀“投掷物理伤害”或“提高护甲粉碎持续时间”。同侧目标池省去不能成立的两项层，不从来源外补词。具体新范围与例子见[生成约定](IDOL_SHAPE_RULES.md)。
+- 玩家文件142→126条，BD神像34→18条，57／59合为新49，两项30／32合为新30。Allie84、835101、Allie＋835137、冰追心79、手里剑88、冰＋手里剑115／117、默认Strict98；六预设231–251仍报200上限。132项回归及构建通过，43组核查非神像除Order外不变，66份来源／需求／基底／历史XML哈希保持。[合并XML](../outputs/idol-shape-2026-10-24/LE-filter-idol-shapes.xml)与[机器验证](../analysis/idol-shape-validation.json)。旧同名核查及仅更名副本保留历史，客户端未实测。
+
+## 此前2026-10-24：神像同名规则核查
+
+- 玩家提供142条XML，57为巨型神像底材4／9＋470／763，59为底材9＋470／480／763：部分重叠，各有独立收集范围。34条BD神像规则有11组同名标题，没有完全重复或被前方一条完整覆盖的神像规则。66／116针344的BD与通用条件相同，沿用通用规则完整保留约定。
+- 57及部分旧范围与冻结Strict一致，当前四profile预设不同；已有方案独立，不根据新预设自动覆盖。生成器仅修复标题，写入生成后实际底材，处理pair_bases与不限范围；同底材不同池再附ID区分。保存、条件、规则数量、顺序及声光字段保持。
+- 4项真实生成回归先红后绿，完整124项回归与静态发布包构建通过；43组前后对照覆盖37组可生成配置与6组超限错误，66份来源／需求／基底／历史XML保持。交付[142条更名副本](../outputs/idol-rule-audit-2026-10-24/LE-filter-idol-labels.xml)、[调查说明](IDOL_RULE_DUPLICATION_AUDIT.md)及[机器记录](../analysis/idol-rule-audit.json)。XML／Python核查不冒充游戏客户端实测。
 
 ## 最新2026-10-19：个人模版与组合方案分离
 

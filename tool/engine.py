@@ -296,6 +296,53 @@ def remove_shadowed_targets(entries):
     return result
 
 
+def merge_idol_targets(groups):
+    """Use one ordinary target pool per shape within a single BD.
+
+    Candidate and two-target scopes each take their own source union. An
+    explicitly unrestricted scope dominates finite scopes; empty pools add none.
+    Saved groups and references are not modified.
+    """
+    merged = {}
+    for group in groups:
+        if not group["affixes"]:
+            continue
+        target = merged.setdefault(group["type"], {"type": group["type"], "affixes": set(),
+                                                  "bases": set(), "pair_bases": set()})
+        target["affixes"].update(group["affixes"])
+        for field in ("bases", "pair_bases"):
+            selected = group.get(field, group["bases"])
+            if not selected:
+                target[field] = None
+            elif target[field] is not None:
+                target[field].update(selected)
+    return [{key: (sorted(value) if value is not None else []) if key != "type" else value
+             for key, value in target.items()} for target in merged.values()]
+
+
+def label_idol_rules(entries):
+    """Expose actual generated scopes in the game's rule list, after deduping."""
+    labels = defaultdict(list)
+    for rule, row in entries:
+        if row["category"] not in {"神像一普通目标", "神像两普通目标"}:
+            continue
+        facts = inspect_rule(rule)
+        typ, bases = facts["types"][0], facts["subtypes"]
+        scope = ("、".join(CATALOG["bases"][f"{typ}:{bid}"]["zh"] for bid in bases)
+                 if bases else CATALOG["types"][typ]["zh"] + "（底材不限）")
+        label = f"[{row['role']} {row['category']}] " + "、".join(row["owners"]) + " " + scope
+        rule.find("nameOverride").text = label
+        labels[label].append((rule, facts))
+    for same_name in labels.values():
+        if len(same_name) > 1:
+            # Equal base names can still have different target pools. Display
+            # their IDs without mixing pools or changing the two-target count.
+            for rule, facts in same_name:
+                bases = "／".join(map(str, facts["subtypes"])) or "不限"
+                affixes = "／".join(map(str, facts["affix_pools"][0]))
+                rule.find("nameOverride").text += f" · 底材{bases} · 词缀{affixes}"
+
+
 def validate_profile(profile):
     if profile.get("unresolved_affixes"):
         raise ValueError(f"词库未识别这些来源词缀：{profile['unresolved_affixes']}。请更新词库或取消对应来源规则的提取。")
@@ -570,8 +617,10 @@ def generate(config, mode="endgame"):
         for g in p["altars"]:
             if g["affixes"]:
                 add(127, "祭坛一项目标", 2, b, g)
-        for g in p["idols"]:
-            if len(set(g["affixes"])) >= 2:
+        for g in merge_idol_targets(p["idols"]):
+            # Ordinary idols have one prefix and one suffix. A pool containing
+            # only one side cannot meet the ordinary two-target condition.
+            if {CATALOG["affixes"][str(i)]["prefix"] for i in g["affixes"]} == {True, False}:
                 add(99, "神像两普通目标", 3, b, {**g, "bases": g.get("pair_bases", g["bases"])}, 2)
             if g["affixes"]:
                 add(99, "神像一普通目标", 2, b, g)
@@ -693,6 +742,7 @@ def generate(config, mode="endgame"):
             merged[key] = (rule, row)
     if len(merged) > 200:
         raise ValueError(f"这些BD生成{len(merged)}条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。")
+    label_idol_rules(merged.values())
     rules = []
     for i, (r, row) in enumerate(merged.values()):
         tier = row["tier"]

@@ -1,5 +1,7 @@
 # LE-filter：Raxx 基底与双 BD 收集过滤器
 
+2026-10-24神像生成更新：同BD、同形状在“一项目标”“两项目标”分组内各最多一条，分别使用开始／灵感；目标及各层底材按来源取并集，来源与保存不改写。手里剑单独88条、Allie84条、冰追心79条，默认Strict仍98条；来源介绍中的旧生成数量保留为历史，现行组合见[神像按形状合并](docs/IDOL_SHAPE_RULES.md)。玩家142条样本已合并为[126条XML](outputs/idol-shape-2026-10-24/LE-filter-idol-shapes.xml)，132项回归通过。
+
 [掉落 T7 概率](https://bcszsz.github.io/LE-filter/probability/)：切换普通掉落与普通崇高预言，对比**最终崇高装备中至少1T7／至少2T7**的概率，并显示平均多少件出一件。区域固定100、命运默认12，可选腐化、23类装备、玩家职业及装备职业；普通随机掉落曲线随腐化变化，普通预言保持水平。预言模式保留三种镜片对比和[Excel](outputs/01a135a3-5a09-7e91-83c5-4bd333aeb5ea/普通崇高预言-T7概率.xlsx)。普通模式采用额外地图稀有度0%、无活动暗金加成的随机来源，不含额外保证稀有及特殊词缀来源。数据挖掘版本1.5.2.2，方法及复现见[概率工具说明](docs/PROPHECY_CALCULATOR.md)。
 
 [在线工作台](https://bcszsz.github.io/LE-filter/)由GitHub Pages托管。支持导入Maxroll filter XML／TXT、需求JSON，以及[LETools多角色profile并集](docs/PROFILE_IMPORT.md)，可搜索编辑、多BD组合及导出JSON／XML。粘贴1–12个角色链接即可经后端API读取并预览并集，无需书签或转存Planner；角色导入先创建个人模版，再与其他模版组合新建方案，攻略网址不提取。页面先加载发布时生成的编辑数据，运行环境在后台启动；目标提取与生成仍在浏览器内处理，见[启动优化](docs/STARTUP_PERFORMANCE.md)。预设模版包含旧Maxroll Flay／Skeleton，以及独立的Allie Flay攻略／中文骷髅835攻略／冰追心／追心手里剑；四份新来源模板默认未勾选，两份Flay不合并。使用Chrome或Edge进行文件下载；Codex内置浏览器目前不能正常接收浏览器生成的下载文件。

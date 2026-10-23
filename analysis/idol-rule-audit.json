@@ -1,0 +1,1160 @@
+{
+  "date": "2026-10-24",
+  "input_name": "Pasted text.txt",
+  "input_sha256": "4d9b7151bc78acf2f13e334ba1936515316ee241142c8ce05eb58251ec8d6ea0",
+  "count": 142,
+  "bd_idol_rule_count": 34,
+  "same_predicates": [
+    [
+      66,
+      116
+    ]
+  ],
+  "wholly_shadowed_idol_rules": [],
+  "same_idol_name_groups": [
+    {
+      "name": "[主 神像两普通目标] 追心手里剑 大型神像",
+      "rules": [
+        {
+          "number": 25,
+          "name": "[主 神像两普通目标] 追心手里剑 大型神像",
+          "types": [
+            "IDOL_1x3"
+          ],
+          "bases": [
+            4,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "affixes": [
+            117,
+            942
+          ],
+          "count": 2
+        },
+        {
+          "number": 34,
+          "name": "[主 神像两普通目标] 追心手里剑 大型神像",
+          "types": [
+            "IDOL_1x3"
+          ],
+          "bases": [
+            9
+          ],
+          "affixes": [
+            117,
+            491,
+            942
+          ],
+          "count": 2
+        },
+        {
+          "number": 36,
+          "name": "[主 神像两普通目标] 追心手里剑 大型神像",
+          "types": [
+            "IDOL_1x3"
+          ],
+          "bases": [
+            14
+          ],
+          "affixes": [
+            116,
+            763
+          ],
+          "count": 2
+        }
+      ],
+      "pairs": [
+        {
+          "rules": [
+            25,
+            34
+          ],
+          "scope_overlap": true,
+          "shared_bases": [
+            9
+          ],
+          "shared_affixes": [
+            117,
+            942
+          ],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        },
+        {
+          "rules": [
+            25,
+            36
+          ],
+          "scope_overlap": true,
+          "shared_bases": [
+            14
+          ],
+          "shared_affixes": [],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        },
+        {
+          "rules": [
+            34,
+            36
+          ],
+          "scope_overlap": false,
+          "shared_bases": [],
+          "shared_affixes": [],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        }
+      ]
+    },
+    {
+      "name": "[主 神像两普通目标] 追心手里剑 宏伟神像",
+      "rules": [
+        {
+          "number": 26,
+          "name": "[主 神像两普通目标] 追心手里剑 宏伟神像",
+          "types": [
+            "IDOL_3x1"
+          ],
+          "bases": [
+            4,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "affixes": [
+            490,
+            743
+          ],
+          "count": 2
+        },
+        {
+          "number": 33,
+          "name": "[主 神像两普通目标] 追心手里剑 宏伟神像",
+          "types": [
+            "IDOL_3x1"
+          ],
+          "bases": [
+            14
+          ],
+          "affixes": [
+            490,
+            492,
+            743
+          ],
+          "count": 2
+        },
+        {
+          "number": 35,
+          "name": "[主 神像两普通目标] 追心手里剑 宏伟神像",
+          "types": [
+            "IDOL_3x1"
+          ],
+          "bases": [
+            9
+          ],
+          "affixes": [
+            456,
+            490
+          ],
+          "count": 2
+        }
+      ],
+      "pairs": [
+        {
+          "rules": [
+            26,
+            33
+          ],
+          "scope_overlap": true,
+          "shared_bases": [
+            14
+          ],
+          "shared_affixes": [
+            490,
+            743
+          ],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        },
+        {
+          "rules": [
+            26,
+            35
+          ],
+          "scope_overlap": true,
+          "shared_bases": [
+            9
+          ],
+          "shared_affixes": [
+            490
+          ],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        },
+        {
+          "rules": [
+            33,
+            35
+          ],
+          "scope_overlap": false,
+          "shared_bases": [],
+          "shared_affixes": [
+            490
+          ],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        }
+      ]
+    },
+    {
+      "name": "[主 神像两普通目标] 追心手里剑 厚实神像",
+      "rules": [
+        {
+          "number": 29,
+          "name": "[主 神像两普通目标] 追心手里剑 厚实神像",
+          "types": [
+            "IDOL_1x2"
+          ],
+          "bases": [
+            1
+          ],
+          "affixes": [
+            878,
+            880,
+            885,
+            886
+          ],
+          "count": 2
+        },
+        {
+          "number": 37,
+          "name": "[主 神像两普通目标] 追心手里剑 厚实神像",
+          "types": [
+            "IDOL_1x2"
+          ],
+          "bases": [
+            0
+          ],
+          "affixes": [
+            117,
+            123
+          ],
+          "count": 2
+        }
+      ],
+      "pairs": [
+        {
+          "rules": [
+            29,
+            37
+          ],
+          "scope_overlap": false,
+          "shared_bases": [],
+          "shared_affixes": [],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        }
+      ]
+    },
+    {
+      "name": "[主 神像两普通目标] 追心手里剑 巨型神像",
+      "rules": [
+        {
+          "number": 30,
+          "name": "[主 神像两普通目标] 追心手里剑 巨型神像",
+          "types": [
+            "IDOL_1x4"
+          ],
+          "bases": [
+            4,
+            9
+          ],
+          "affixes": [
+            470,
+            763
+          ],
+          "count": 2
+        },
+        {
+          "number": 32,
+          "name": "[主 神像两普通目标] 追心手里剑 巨型神像",
+          "types": [
+            "IDOL_1x4"
+          ],
+          "bases": [
+            9
+          ],
+          "affixes": [
+            470,
+            480,
+            763
+          ],
+          "count": 2
+        }
+      ],
+      "pairs": [
+        {
+          "rules": [
+            30,
+            32
+          ],
+          "scope_overlap": true,
+          "shared_bases": [
+            9
+          ],
+          "shared_affixes": [
+            470,
+            763
+          ],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        }
+      ]
+    },
+    {
+      "name": "[副 神像两普通目标] Flay魔力巫妖 · Allie攻略 中型神像",
+      "rules": [
+        {
+          "number": 38,
+          "name": "[副 神像两普通目标] Flay魔力巫妖 · Allie攻略 中型神像",
+          "types": [
+            "IDOL_1x1_LAGON"
+          ],
+          "bases": [
+            0
+          ],
+          "affixes": [
+            105,
+            109
+          ],
+          "count": 2
+        },
+        {
+          "number": 39,
+          "name": "[副 神像两普通目标] Flay魔力巫妖 · Allie攻略 中型神像",
+          "types": [
+            "IDOL_1x1_LAGON"
+          ],
+          "bases": [
+            1
+          ],
+          "affixes": [
+            842,
+            843,
+            854,
+            856
+          ],
+          "count": 2
+        }
+      ],
+      "pairs": [
+        {
+          "rules": [
+            38,
+            39
+          ],
+          "scope_overlap": false,
+          "shared_bases": [],
+          "shared_affixes": [],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        }
+      ]
+    },
+    {
+      "name": "[主 神像一普通目标] 追心手里剑 大型神像",
+      "rules": [
+        {
+          "number": 52,
+          "name": "[主 神像一普通目标] 追心手里剑 大型神像",
+          "types": [
+            "IDOL_1x3"
+          ],
+          "bases": [
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "affixes": [
+            117,
+            942
+          ],
+          "count": 1
+        },
+        {
+          "number": 61,
+          "name": "[主 神像一普通目标] 追心手里剑 大型神像",
+          "types": [
+            "IDOL_1x3"
+          ],
+          "bases": [
+            9
+          ],
+          "affixes": [
+            117,
+            491,
+            942
+          ],
+          "count": 1
+        },
+        {
+          "number": 63,
+          "name": "[主 神像一普通目标] 追心手里剑 大型神像",
+          "types": [
+            "IDOL_1x3"
+          ],
+          "bases": [
+            14
+          ],
+          "affixes": [
+            116,
+            763
+          ],
+          "count": 1
+        }
+      ],
+      "pairs": [
+        {
+          "rules": [
+            52,
+            61
+          ],
+          "scope_overlap": false,
+          "shared_bases": [],
+          "shared_affixes": [
+            117,
+            942
+          ],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        },
+        {
+          "rules": [
+            52,
+            63
+          ],
+          "scope_overlap": true,
+          "shared_bases": [
+            14
+          ],
+          "shared_affixes": [],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        },
+        {
+          "rules": [
+            61,
+            63
+          ],
+          "scope_overlap": false,
+          "shared_bases": [],
+          "shared_affixes": [],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        }
+      ]
+    },
+    {
+      "name": "[主 神像一普通目标] 追心手里剑 宏伟神像",
+      "rules": [
+        {
+          "number": 53,
+          "name": "[主 神像一普通目标] 追心手里剑 宏伟神像",
+          "types": [
+            "IDOL_3x1"
+          ],
+          "bases": [
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "affixes": [
+            490,
+            743
+          ],
+          "count": 1
+        },
+        {
+          "number": 60,
+          "name": "[主 神像一普通目标] 追心手里剑 宏伟神像",
+          "types": [
+            "IDOL_3x1"
+          ],
+          "bases": [
+            14
+          ],
+          "affixes": [
+            490,
+            492,
+            743
+          ],
+          "count": 1
+        },
+        {
+          "number": 62,
+          "name": "[主 神像一普通目标] 追心手里剑 宏伟神像",
+          "types": [
+            "IDOL_3x1"
+          ],
+          "bases": [
+            9
+          ],
+          "affixes": [
+            456,
+            490
+          ],
+          "count": 1
+        }
+      ],
+      "pairs": [
+        {
+          "rules": [
+            53,
+            60
+          ],
+          "scope_overlap": true,
+          "shared_bases": [
+            14
+          ],
+          "shared_affixes": [
+            490,
+            743
+          ],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        },
+        {
+          "rules": [
+            53,
+            62
+          ],
+          "scope_overlap": false,
+          "shared_bases": [],
+          "shared_affixes": [
+            490
+          ],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        },
+        {
+          "rules": [
+            60,
+            62
+          ],
+          "scope_overlap": false,
+          "shared_bases": [],
+          "shared_affixes": [
+            490
+          ],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        }
+      ]
+    },
+    {
+      "name": "[主 神像一普通目标] 追心手里剑 厚实神像",
+      "rules": [
+        {
+          "number": 56,
+          "name": "[主 神像一普通目标] 追心手里剑 厚实神像",
+          "types": [
+            "IDOL_1x2"
+          ],
+          "bases": [
+            1
+          ],
+          "affixes": [
+            878,
+            880,
+            885,
+            886
+          ],
+          "count": 1
+        },
+        {
+          "number": 64,
+          "name": "[主 神像一普通目标] 追心手里剑 厚实神像",
+          "types": [
+            "IDOL_1x2"
+          ],
+          "bases": [
+            0
+          ],
+          "affixes": [
+            117,
+            123
+          ],
+          "count": 1
+        }
+      ],
+      "pairs": [
+        {
+          "rules": [
+            56,
+            64
+          ],
+          "scope_overlap": false,
+          "shared_bases": [],
+          "shared_affixes": [],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        }
+      ]
+    },
+    {
+      "name": "[主 神像一普通目标] 追心手里剑 巨型神像",
+      "rules": [
+        {
+          "number": 57,
+          "name": "[主 神像一普通目标] 追心手里剑 巨型神像",
+          "types": [
+            "IDOL_1x4"
+          ],
+          "bases": [
+            4,
+            9
+          ],
+          "affixes": [
+            470,
+            763
+          ],
+          "count": 1
+        },
+        {
+          "number": 59,
+          "name": "[主 神像一普通目标] 追心手里剑 巨型神像",
+          "types": [
+            "IDOL_1x4"
+          ],
+          "bases": [
+            9
+          ],
+          "affixes": [
+            470,
+            480,
+            763
+          ],
+          "count": 1
+        }
+      ],
+      "pairs": [
+        {
+          "rules": [
+            57,
+            59
+          ],
+          "scope_overlap": true,
+          "shared_bases": [
+            9
+          ],
+          "shared_affixes": [
+            470,
+            763
+          ],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        }
+      ]
+    },
+    {
+      "name": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 厚实神像",
+      "rules": [
+        {
+          "number": 88,
+          "name": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 厚实神像",
+          "types": [
+            "IDOL_1x2"
+          ],
+          "bases": [
+            0
+          ],
+          "affixes": [
+            139
+          ],
+          "count": 1
+        },
+        {
+          "number": 89,
+          "name": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 厚实神像",
+          "types": [
+            "IDOL_1x2"
+          ],
+          "bases": [
+            1
+          ],
+          "affixes": [
+            876
+          ],
+          "count": 1
+        }
+      ],
+      "pairs": [
+        {
+          "rules": [
+            88,
+            89
+          ],
+          "scope_overlap": false,
+          "shared_bases": [],
+          "shared_affixes": [],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        }
+      ]
+    },
+    {
+      "name": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 中型神像",
+      "rules": [
+        {
+          "number": 90,
+          "name": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 中型神像",
+          "types": [
+            "IDOL_1x1_LAGON"
+          ],
+          "bases": [
+            0
+          ],
+          "affixes": [
+            105,
+            109
+          ],
+          "count": 1
+        },
+        {
+          "number": 91,
+          "name": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 中型神像",
+          "types": [
+            "IDOL_1x1_LAGON"
+          ],
+          "bases": [
+            1
+          ],
+          "affixes": [
+            842,
+            843,
+            854,
+            856
+          ],
+          "count": 1
+        }
+      ],
+      "pairs": [
+        {
+          "rules": [
+            90,
+            91
+          ],
+          "scope_overlap": false,
+          "shared_bases": [],
+          "shared_affixes": [],
+          "earlier_covers_later": false,
+          "later_covers_earlier": false
+        }
+      ]
+    }
+  ],
+  "relabeled": [
+    {
+      "number": 25,
+      "before": "[主 神像两普通目标] 追心手里剑 大型神像",
+      "after": "[主 神像两普通目标] 追心手里剑 大型暗影神像、异端大型暗影神像、大型原始预兆神像、大型奥术预兆神像、大型钢铁预兆神像、大型幽冥预兆神像、大型黯影预兆神像"
+    },
+    {
+      "number": 26,
+      "before": "[主 神像两普通目标] 追心手里剑 宏伟神像",
+      "after": "[主 神像两普通目标] 追心手里剑 宏伟玛加莎神像、异端宏伟玛加莎神像、宏伟原始预兆神像、宏伟奥术预兆神像、宏伟钢铁预兆神像、宏伟幽冥预兆神像、宏伟黯影预兆神像"
+    },
+    {
+      "number": 27,
+      "before": "[主 神像两普通目标] 追心手里剑 小型神像",
+      "after": "[主 神像两普通目标] 追心手里剑 小型伊泰拉神像"
+    },
+    {
+      "number": 28,
+      "before": "[主 神像两普通目标] 追心手里剑 谦卑神像",
+      "after": "[主 神像两普通目标] 追心手里剑 谦卑编织者神像"
+    },
+    {
+      "number": 29,
+      "before": "[主 神像两普通目标] 追心手里剑 厚实神像",
+      "after": "[主 神像两普通目标] 追心手里剑 厚实编织者神像"
+    },
+    {
+      "number": 30,
+      "before": "[主 神像两普通目标] 追心手里剑 巨型神像",
+      "after": "[主 神像两普通目标] 追心手里剑 巨型暗影神像、异端巨型暗影神像"
+    },
+    {
+      "number": 31,
+      "before": "[主 神像两普通目标] 追心手里剑 精装神像",
+      "after": "[主 神像两普通目标] 追心手里剑 精装玛加莎神像、异端精装玛加莎神像"
+    },
+    {
+      "number": 32,
+      "before": "[主 神像两普通目标] 追心手里剑 巨型神像",
+      "after": "[主 神像两普通目标] 追心手里剑 异端巨型暗影神像"
+    },
+    {
+      "number": 33,
+      "before": "[主 神像两普通目标] 追心手里剑 宏伟神像",
+      "after": "[主 神像两普通目标] 追心手里剑 宏伟黯影预兆神像"
+    },
+    {
+      "number": 34,
+      "before": "[主 神像两普通目标] 追心手里剑 大型神像",
+      "after": "[主 神像两普通目标] 追心手里剑 异端大型暗影神像"
+    },
+    {
+      "number": 35,
+      "before": "[主 神像两普通目标] 追心手里剑 宏伟神像",
+      "after": "[主 神像两普通目标] 追心手里剑 异端宏伟玛加莎神像"
+    },
+    {
+      "number": 36,
+      "before": "[主 神像两普通目标] 追心手里剑 大型神像",
+      "after": "[主 神像两普通目标] 追心手里剑 大型黯影预兆神像"
+    },
+    {
+      "number": 37,
+      "before": "[主 神像两普通目标] 追心手里剑 厚实神像",
+      "after": "[主 神像两普通目标] 追心手里剑 厚实拉贡神像"
+    },
+    {
+      "number": 38,
+      "before": "[副 神像两普通目标] Flay魔力巫妖 · Allie攻略 中型神像",
+      "after": "[副 神像两普通目标] Flay魔力巫妖 · Allie攻略 中型拉贡神像"
+    },
+    {
+      "number": 39,
+      "before": "[副 神像两普通目标] Flay魔力巫妖 · Allie攻略 中型神像",
+      "after": "[副 神像两普通目标] Flay魔力巫妖 · Allie攻略 中型编织者神像"
+    },
+    {
+      "number": 40,
+      "before": "[副 神像两普通目标] Flay魔力巫妖 · Allie攻略 小型神像",
+      "after": "[副 神像两普通目标] Flay魔力巫妖 · Allie攻略 小型编织者神像"
+    },
+    {
+      "number": 52,
+      "before": "[主 神像一普通目标] 追心手里剑 大型神像",
+      "after": "[主 神像一普通目标] 追心手里剑 大型原始预兆神像、大型奥术预兆神像、大型钢铁预兆神像、大型幽冥预兆神像、大型黯影预兆神像"
+    },
+    {
+      "number": 53,
+      "before": "[主 神像一普通目标] 追心手里剑 宏伟神像",
+      "after": "[主 神像一普通目标] 追心手里剑 宏伟原始预兆神像、宏伟奥术预兆神像、宏伟钢铁预兆神像、宏伟幽冥预兆神像、宏伟黯影预兆神像"
+    },
+    {
+      "number": 54,
+      "before": "[主 神像一普通目标] 追心手里剑 小型神像",
+      "after": "[主 神像一普通目标] 追心手里剑 小型伊泰拉神像"
+    },
+    {
+      "number": 55,
+      "before": "[主 神像一普通目标] 追心手里剑 谦卑神像",
+      "after": "[主 神像一普通目标] 追心手里剑 谦卑编织者神像"
+    },
+    {
+      "number": 56,
+      "before": "[主 神像一普通目标] 追心手里剑 厚实神像",
+      "after": "[主 神像一普通目标] 追心手里剑 厚实编织者神像"
+    },
+    {
+      "number": 57,
+      "before": "[主 神像一普通目标] 追心手里剑 巨型神像",
+      "after": "[主 神像一普通目标] 追心手里剑 巨型暗影神像、异端巨型暗影神像"
+    },
+    {
+      "number": 58,
+      "before": "[主 神像一普通目标] 追心手里剑 精装神像",
+      "after": "[主 神像一普通目标] 追心手里剑 精装玛加莎神像、异端精装玛加莎神像"
+    },
+    {
+      "number": 59,
+      "before": "[主 神像一普通目标] 追心手里剑 巨型神像",
+      "after": "[主 神像一普通目标] 追心手里剑 异端巨型暗影神像"
+    },
+    {
+      "number": 60,
+      "before": "[主 神像一普通目标] 追心手里剑 宏伟神像",
+      "after": "[主 神像一普通目标] 追心手里剑 宏伟黯影预兆神像"
+    },
+    {
+      "number": 61,
+      "before": "[主 神像一普通目标] 追心手里剑 大型神像",
+      "after": "[主 神像一普通目标] 追心手里剑 异端大型暗影神像"
+    },
+    {
+      "number": 62,
+      "before": "[主 神像一普通目标] 追心手里剑 宏伟神像",
+      "after": "[主 神像一普通目标] 追心手里剑 异端宏伟玛加莎神像"
+    },
+    {
+      "number": 63,
+      "before": "[主 神像一普通目标] 追心手里剑 大型神像",
+      "after": "[主 神像一普通目标] 追心手里剑 大型黯影预兆神像"
+    },
+    {
+      "number": 64,
+      "before": "[主 神像一普通目标] 追心手里剑 厚实神像",
+      "after": "[主 神像一普通目标] 追心手里剑 厚实拉贡神像"
+    },
+    {
+      "number": 88,
+      "before": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 厚实神像",
+      "after": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 厚实拉贡神像"
+    },
+    {
+      "number": 89,
+      "before": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 厚实神像",
+      "after": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 厚实编织者神像"
+    },
+    {
+      "number": 90,
+      "before": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 中型神像",
+      "after": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 中型拉贡神像"
+    },
+    {
+      "number": 91,
+      "before": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 中型神像",
+      "after": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 中型编织者神像"
+    },
+    {
+      "number": 92,
+      "before": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 小型神像",
+      "after": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 小型编织者神像"
+    }
+  ],
+  "non_name_fields_unchanged": true,
+  "scope": "XML conditions and original Python outputs; no item-spawn simulation or game-client test",
+  "generator_comparison": {
+    "before_engine_sha256": "58c97bf69262e5f24aff3b92d6915cf67eadde4b0f778029088f8bb0454533ba",
+    "after_engine_sha256": "dfae13e8bf12b8024cbb16083e4bd95182336d284caefb23d70d88ac6655516e",
+    "unchanged_source_files": 66,
+    "cases": [
+      {
+        "case": "default",
+        "count": 98,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "skeleton-necromancer|main=skeleton-necromancer",
+        "count": 73,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "flay-mana-lich|main=flay-mana-lich",
+        "count": 70,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "flay-lich-allie-guide|main=flay-lich-allie-guide",
+        "count": 88,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "bleed-skeleton-roamer-guide-835|main=bleed-skeleton-roamer-guide-835",
+        "count": 101,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "ice-heartseeker-planner-al0dkyek|main=ice-heartseeker-planner-al0dkyek",
+        "count": 81,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "heartseeker-shuriken-marksman|main=heartseeker-shuriken-marksman",
+        "count": 96,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "skeleton-necromancer+flay-mana-lich|main=skeleton-necromancer",
+        "count": 98,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "skeleton-necromancer+flay-mana-lich|main=flay-mana-lich",
+        "count": 98,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "skeleton-necromancer+flay-lich-allie-guide|main=skeleton-necromancer",
+        "count": 114,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "skeleton-necromancer+flay-lich-allie-guide|main=flay-lich-allie-guide",
+        "count": 112,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "skeleton-necromancer+bleed-skeleton-roamer-guide-835|main=skeleton-necromancer",
+        "count": 122,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "skeleton-necromancer+bleed-skeleton-roamer-guide-835|main=bleed-skeleton-roamer-guide-835",
+        "count": 120,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "skeleton-necromancer+ice-heartseeker-planner-al0dkyek|main=skeleton-necromancer",
+        "count": 108,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "skeleton-necromancer+ice-heartseeker-planner-al0dkyek|main=ice-heartseeker-planner-al0dkyek",
+        "count": 108,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "skeleton-necromancer+heartseeker-shuriken-marksman|main=skeleton-necromancer",
+        "count": 123,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "skeleton-necromancer+heartseeker-shuriken-marksman|main=heartseeker-shuriken-marksman",
+        "count": 123,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "flay-mana-lich+flay-lich-allie-guide|main=flay-mana-lich",
+        "count": 110,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "flay-mana-lich+flay-lich-allie-guide|main=flay-lich-allie-guide",
+        "count": 97,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "flay-mana-lich+bleed-skeleton-roamer-guide-835|main=flay-mana-lich",
+        "count": 125,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "flay-mana-lich+bleed-skeleton-roamer-guide-835|main=bleed-skeleton-roamer-guide-835",
+        "count": 121,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "flay-mana-lich+ice-heartseeker-planner-al0dkyek|main=flay-mana-lich",
+        "count": 105,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "flay-mana-lich+ice-heartseeker-planner-al0dkyek|main=ice-heartseeker-planner-al0dkyek",
+        "count": 105,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "flay-mana-lich+heartseeker-shuriken-marksman|main=flay-mana-lich",
+        "count": 120,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "flay-mana-lich+heartseeker-shuriken-marksman|main=heartseeker-shuriken-marksman",
+        "count": 120,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "flay-lich-allie-guide+bleed-skeleton-roamer-guide-835|main=flay-lich-allie-guide",
+        "count": 141,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "flay-lich-allie-guide+bleed-skeleton-roamer-guide-835|main=bleed-skeleton-roamer-guide-835",
+        "count": 141,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "flay-lich-allie-guide+ice-heartseeker-planner-al0dkyek|main=flay-lich-allie-guide",
+        "count": 122,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "flay-lich-allie-guide+ice-heartseeker-planner-al0dkyek|main=ice-heartseeker-planner-al0dkyek",
+        "count": 122,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "flay-lich-allie-guide+heartseeker-shuriken-marksman|main=flay-lich-allie-guide",
+        "count": 137,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "flay-lich-allie-guide+heartseeker-shuriken-marksman|main=heartseeker-shuriken-marksman",
+        "count": 137,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "bleed-skeleton-roamer-guide-835+ice-heartseeker-planner-al0dkyek|main=bleed-skeleton-roamer-guide-835",
+        "count": 135,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "bleed-skeleton-roamer-guide-835+ice-heartseeker-planner-al0dkyek|main=ice-heartseeker-planner-al0dkyek",
+        "count": 135,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "bleed-skeleton-roamer-guide-835+heartseeker-shuriken-marksman|main=bleed-skeleton-roamer-guide-835",
+        "count": 150,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "bleed-skeleton-roamer-guide-835+heartseeker-shuriken-marksman|main=heartseeker-shuriken-marksman",
+        "count": 150,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "ice-heartseeker-planner-al0dkyek+heartseeker-shuriken-marksman|main=ice-heartseeker-planner-al0dkyek",
+        "count": 125,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "ice-heartseeker-planner-al0dkyek+heartseeker-shuriken-marksman|main=heartseeker-shuriken-marksman",
+        "count": 127,
+        "only_idol_names_changed": true
+      },
+      {
+        "case": "skeleton-necromancer+flay-mana-lich+flay-lich-allie-guide+bleed-skeleton-roamer-guide-835+ice-heartseeker-planner-al0dkyek+heartseeker-shuriken-marksman|main=skeleton-necromancer",
+        "same_limit_error": "这些BD生成262条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+      },
+      {
+        "case": "skeleton-necromancer+flay-mana-lich+flay-lich-allie-guide+bleed-skeleton-roamer-guide-835+ice-heartseeker-planner-al0dkyek+heartseeker-shuriken-marksman|main=flay-mana-lich",
+        "same_limit_error": "这些BD生成262条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+      },
+      {
+        "case": "skeleton-necromancer+flay-mana-lich+flay-lich-allie-guide+bleed-skeleton-roamer-guide-835+ice-heartseeker-planner-al0dkyek+heartseeker-shuriken-marksman|main=flay-lich-allie-guide",
+        "same_limit_error": "这些BD生成247条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+      },
+      {
+        "case": "skeleton-necromancer+flay-mana-lich+flay-lich-allie-guide+bleed-skeleton-roamer-guide-835+ice-heartseeker-planner-al0dkyek+heartseeker-shuriken-marksman|main=bleed-skeleton-roamer-guide-835",
+        "same_limit_error": "这些BD生成256条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+      },
+      {
+        "case": "skeleton-necromancer+flay-mana-lich+flay-lich-allie-guide+bleed-skeleton-roamer-guide-835+ice-heartseeker-planner-al0dkyek+heartseeker-shuriken-marksman|main=ice-heartseeker-planner-al0dkyek",
+        "same_limit_error": "这些BD生成262条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+      },
+      {
+        "case": "skeleton-necromancer+flay-mana-lich+flay-lich-allie-guide+bleed-skeleton-roamer-guide-835+ice-heartseeker-planner-al0dkyek+heartseeker-shuriken-marksman|main=heartseeker-shuriken-marksman",
+        "same_limit_error": "这些BD生成264条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+      }
+    ]
+  },
+  "relabeled_xml": "outputs/idol-rule-audit-2026-10-24/LE-filter-idol-labels.xml",
+  "relabeled_xml_sha256": "0a5251b62ff0917fc4f4c6df10a0917592579c0a005de9d1556d351cc4ff7a29"
+}

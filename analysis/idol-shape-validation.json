@@ -1,0 +1,879 @@
+{
+  "date": "2026-10-24",
+  "engine_sha256": "e4c5c376d2ad0a45c7946aca720981c9d67b480d9c31fd597193819ad30f0de4",
+  "policy": "one rule per BD, idol type and ordinary target-count tier; union source pools/scopes",
+  "game_client_tested": false,
+  "generator": {
+    "cases": [
+      {
+        "case": "default",
+        "before": 98,
+        "after": 98,
+        "idol_rules": 10,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "skeleton-necromancer|main=skeleton-necromancer",
+        "before": 73,
+        "after": 73,
+        "idol_rules": 6,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "flay-mana-lich|main=flay-mana-lich",
+        "before": 70,
+        "after": 70,
+        "idol_rules": 4,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "flay-lich-allie-guide|main=flay-lich-allie-guide",
+        "before": 88,
+        "after": 84,
+        "idol_rules": 4,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "bleed-skeleton-roamer-guide-835|main=bleed-skeleton-roamer-guide-835",
+        "before": 101,
+        "after": 101,
+        "idol_rules": 6,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "ice-heartseeker-planner-al0dkyek|main=ice-heartseeker-planner-al0dkyek",
+        "before": 81,
+        "after": 79,
+        "idol_rules": 6,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "heartseeker-shuriken-marksman|main=heartseeker-shuriken-marksman",
+        "before": 96,
+        "after": 88,
+        "idol_rules": 14,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "skeleton-necromancer+flay-mana-lich|main=skeleton-necromancer",
+        "before": 98,
+        "after": 98,
+        "idol_rules": 10,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "skeleton-necromancer+flay-mana-lich|main=flay-mana-lich",
+        "before": 98,
+        "after": 98,
+        "idol_rules": 10,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "skeleton-necromancer+flay-lich-allie-guide|main=skeleton-necromancer",
+        "before": 114,
+        "after": 110,
+        "idol_rules": 10,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "skeleton-necromancer+flay-lich-allie-guide|main=flay-lich-allie-guide",
+        "before": 112,
+        "after": 108,
+        "idol_rules": 10,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "skeleton-necromancer+bleed-skeleton-roamer-guide-835|main=skeleton-necromancer",
+        "before": 122,
+        "after": 122,
+        "idol_rules": 12,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "skeleton-necromancer+bleed-skeleton-roamer-guide-835|main=bleed-skeleton-roamer-guide-835",
+        "before": 120,
+        "after": 120,
+        "idol_rules": 12,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "skeleton-necromancer+ice-heartseeker-planner-al0dkyek|main=skeleton-necromancer",
+        "before": 108,
+        "after": 106,
+        "idol_rules": 12,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "skeleton-necromancer+ice-heartseeker-planner-al0dkyek|main=ice-heartseeker-planner-al0dkyek",
+        "before": 108,
+        "after": 106,
+        "idol_rules": 12,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "skeleton-necromancer+heartseeker-shuriken-marksman|main=skeleton-necromancer",
+        "before": 123,
+        "after": 115,
+        "idol_rules": 20,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "skeleton-necromancer+heartseeker-shuriken-marksman|main=heartseeker-shuriken-marksman",
+        "before": 123,
+        "after": 115,
+        "idol_rules": 20,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "flay-mana-lich+flay-lich-allie-guide|main=flay-mana-lich",
+        "before": 110,
+        "after": 107,
+        "idol_rules": 8,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "flay-mana-lich+flay-lich-allie-guide|main=flay-lich-allie-guide",
+        "before": 97,
+        "after": 91,
+        "idol_rules": 6,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "flay-mana-lich+bleed-skeleton-roamer-guide-835|main=flay-mana-lich",
+        "before": 125,
+        "after": 125,
+        "idol_rules": 10,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "flay-mana-lich+bleed-skeleton-roamer-guide-835|main=bleed-skeleton-roamer-guide-835",
+        "before": 121,
+        "after": 121,
+        "idol_rules": 10,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "flay-mana-lich+ice-heartseeker-planner-al0dkyek|main=flay-mana-lich",
+        "before": 105,
+        "after": 103,
+        "idol_rules": 10,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "flay-mana-lich+ice-heartseeker-planner-al0dkyek|main=ice-heartseeker-planner-al0dkyek",
+        "before": 105,
+        "after": 103,
+        "idol_rules": 10,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "flay-mana-lich+heartseeker-shuriken-marksman|main=flay-mana-lich",
+        "before": 120,
+        "after": 112,
+        "idol_rules": 18,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "flay-mana-lich+heartseeker-shuriken-marksman|main=heartseeker-shuriken-marksman",
+        "before": 120,
+        "after": 112,
+        "idol_rules": 18,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "flay-lich-allie-guide+bleed-skeleton-roamer-guide-835|main=flay-lich-allie-guide",
+        "before": 141,
+        "after": 137,
+        "idol_rules": 10,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "flay-lich-allie-guide+bleed-skeleton-roamer-guide-835|main=bleed-skeleton-roamer-guide-835",
+        "before": 141,
+        "after": 137,
+        "idol_rules": 10,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "flay-lich-allie-guide+ice-heartseeker-planner-al0dkyek|main=flay-lich-allie-guide",
+        "before": 122,
+        "after": 116,
+        "idol_rules": 10,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "flay-lich-allie-guide+ice-heartseeker-planner-al0dkyek|main=ice-heartseeker-planner-al0dkyek",
+        "before": 122,
+        "after": 116,
+        "idol_rules": 10,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "flay-lich-allie-guide+heartseeker-shuriken-marksman|main=flay-lich-allie-guide",
+        "before": 137,
+        "after": 125,
+        "idol_rules": 18,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "flay-lich-allie-guide+heartseeker-shuriken-marksman|main=heartseeker-shuriken-marksman",
+        "before": 137,
+        "after": 125,
+        "idol_rules": 18,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "bleed-skeleton-roamer-guide-835+ice-heartseeker-planner-al0dkyek|main=bleed-skeleton-roamer-guide-835",
+        "before": 135,
+        "after": 133,
+        "idol_rules": 12,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "bleed-skeleton-roamer-guide-835+ice-heartseeker-planner-al0dkyek|main=ice-heartseeker-planner-al0dkyek",
+        "before": 135,
+        "after": 133,
+        "idol_rules": 12,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "bleed-skeleton-roamer-guide-835+heartseeker-shuriken-marksman|main=bleed-skeleton-roamer-guide-835",
+        "before": 150,
+        "after": 142,
+        "idol_rules": 20,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "bleed-skeleton-roamer-guide-835+heartseeker-shuriken-marksman|main=heartseeker-shuriken-marksman",
+        "before": 150,
+        "after": 142,
+        "idol_rules": 20,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "ice-heartseeker-planner-al0dkyek+heartseeker-shuriken-marksman|main=ice-heartseeker-planner-al0dkyek",
+        "before": 125,
+        "after": 115,
+        "idol_rules": 20,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "ice-heartseeker-planner-al0dkyek+heartseeker-shuriken-marksman|main=heartseeker-shuriken-marksman",
+        "before": 127,
+        "after": 117,
+        "idol_rules": 20,
+        "non_idol_rules_unchanged": true
+      },
+      {
+        "case": "skeleton-necromancer+flay-mana-lich+flay-lich-allie-guide+bleed-skeleton-roamer-guide-835+ice-heartseeker-planner-al0dkyek+heartseeker-shuriken-marksman|main=skeleton-necromancer",
+        "before_error": "这些BD生成262条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+        "after_error": "这些BD生成249条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+      },
+      {
+        "case": "skeleton-necromancer+flay-mana-lich+flay-lich-allie-guide+bleed-skeleton-roamer-guide-835+ice-heartseeker-planner-al0dkyek+heartseeker-shuriken-marksman|main=flay-mana-lich",
+        "before_error": "这些BD生成262条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+        "after_error": "这些BD生成249条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+      },
+      {
+        "case": "skeleton-necromancer+flay-mana-lich+flay-lich-allie-guide+bleed-skeleton-roamer-guide-835+ice-heartseeker-planner-al0dkyek+heartseeker-shuriken-marksman|main=flay-lich-allie-guide",
+        "before_error": "这些BD生成247条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+        "after_error": "这些BD生成231条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+      },
+      {
+        "case": "skeleton-necromancer+flay-mana-lich+flay-lich-allie-guide+bleed-skeleton-roamer-guide-835+ice-heartseeker-planner-al0dkyek+heartseeker-shuriken-marksman|main=bleed-skeleton-roamer-guide-835",
+        "before_error": "这些BD生成256条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+        "after_error": "这些BD生成243条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+      },
+      {
+        "case": "skeleton-necromancer+flay-mana-lich+flay-lich-allie-guide+bleed-skeleton-roamer-guide-835+ice-heartseeker-planner-al0dkyek+heartseeker-shuriken-marksman|main=ice-heartseeker-planner-al0dkyek",
+        "before_error": "这些BD生成262条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+        "after_error": "这些BD生成249条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+      },
+      {
+        "case": "skeleton-necromancer+flay-mana-lich+flay-lich-allie-guide+bleed-skeleton-roamer-guide-835+ice-heartseeker-planner-al0dkyek+heartseeker-shuriken-marksman|main=heartseeker-shuriken-marksman",
+        "before_error": "这些BD生成264条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。",
+        "after_error": "这些BD生成251条规则，超过200条。请减少选中的BD或目标分组；没有截断规则。"
+      }
+    ],
+    "unchanged_source_files": 66
+  },
+  "sample": {
+    "input_sha256": "4d9b7151bc78acf2f13e334ba1936515316ee241142c8ce05eb58251ec8d6ea0",
+    "before": 142,
+    "after": 126,
+    "idol_rules_before": 34,
+    "idol_rules_after": 18,
+    "non_idol_rules_unchanged_except_order": true,
+    "original_idol_cues_preserved": true,
+    "output": "outputs/idol-shape-2026-10-24/LE-filter-idol-shapes.xml",
+    "output_sha256": "8abdd41f29411be6e797cb24bda879c330c38282d404b546a2ef38e101514655",
+    "groups": [
+      {
+        "old_rules": [
+          25,
+          34,
+          36
+        ],
+        "new_rule": 25,
+        "name": "[主 神像两普通目标] 追心手里剑 大型暗影神像、异端大型暗影神像、大型原始预兆神像、大型奥术预兆神像、大型钢铁预兆神像、大型幽冥预兆神像、大型黯影预兆神像",
+        "bases": [
+          4,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "affixes": [
+          {
+            "id": 116,
+            "name": "毒素抗性"
+          },
+          {
+            "id": 117,
+            "name": "元素抗性"
+          },
+          {
+            "id": 491,
+            "name": "弓箭伤害"
+          },
+          {
+            "id": 763,
+            "name": "游侠反曲几率与弓箭伤害"
+          },
+          {
+            "id": 942,
+            "name": "躲避值与提高生命"
+          }
+        ]
+      },
+      {
+        "old_rules": [
+          26,
+          33,
+          35
+        ],
+        "new_rule": 26,
+        "name": "[主 神像两普通目标] 追心手里剑 宏伟玛加莎神像、异端宏伟玛加莎神像、宏伟原始预兆神像、宏伟奥术预兆神像、宏伟钢铁预兆神像、宏伟幽冥预兆神像、宏伟黯影预兆神像",
+        "bases": [
+          4,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "affixes": [
+          {
+            "id": 456,
+            "name": "双持时暴击伤害加成"
+          },
+          {
+            "id": 490,
+            "name": "投掷伤害"
+          },
+          {
+            "id": 492,
+            "name": "弓箭暴击几率"
+          },
+          {
+            "id": 743,
+            "name": "共享·暴击伤害加成"
+          }
+        ]
+      },
+      {
+        "old_rules": [
+          27
+        ],
+        "new_rule": 27,
+        "name": "[主 神像两普通目标] 追心手里剑 小型伊泰拉神像",
+        "bases": [
+          0
+        ],
+        "affixes": [
+          {
+            "id": 114,
+            "name": "腐化抗性"
+          },
+          {
+            "id": 116,
+            "name": "毒素抗性"
+          },
+          {
+            "id": 118,
+            "name": "躲避值"
+          },
+          {
+            "id": 319,
+            "name": "共享·物理伤害"
+          }
+        ]
+      },
+      {
+        "old_rules": [
+          28
+        ],
+        "new_rule": 28,
+        "name": "[主 神像两普通目标] 追心手里剑 谦卑编织者神像",
+        "bases": [
+          1
+        ],
+        "affixes": [
+          {
+            "id": 114,
+            "name": "腐化抗性"
+          },
+          {
+            "id": 860,
+            "name": "击杀时恢复生命与增加生命"
+          },
+          {
+            "id": 862,
+            "name": "活力与增加生命再生"
+          },
+          {
+            "id": 867,
+            "name": "腐化抗性与召唤物腐化抗性"
+          },
+          {
+            "id": 868,
+            "name": "虚空抗性与召唤物虚空抗性"
+          },
+          {
+            "id": 873,
+            "name": "增加投掷伤害与提高投掷伤害"
+          }
+        ]
+      },
+      {
+        "old_rules": [
+          29,
+          37
+        ],
+        "new_rule": 29,
+        "name": "[主 神像两普通目标] 追心手里剑 厚实拉贡神像、厚实编织者神像",
+        "bases": [
+          0,
+          1
+        ],
+        "affixes": [
+          {
+            "id": 117,
+            "name": "元素抗性"
+          },
+          {
+            "id": 123,
+            "name": "药剂恢复生命转化为能量护盾"
+          },
+          {
+            "id": 878,
+            "name": "提高暴击几率与暴击伤害加成"
+          },
+          {
+            "id": 880,
+            "name": "击杀时恢复生命与提高生命"
+          },
+          {
+            "id": 885,
+            "name": "冰霜抗性与召唤物冰霜抗性"
+          },
+          {
+            "id": 886,
+            "name": "元素抗性与召唤物元素抗性"
+          }
+        ]
+      },
+      {
+        "old_rules": [
+          30,
+          32
+        ],
+        "new_rule": 30,
+        "name": "[主 神像两普通目标] 追心手里剑 巨型暗影神像、异端巨型暗影神像",
+        "bases": [
+          4,
+          9
+        ],
+        "affixes": [
+          {
+            "id": 470,
+            "name": "投掷物理伤害"
+          },
+          {
+            "id": 480,
+            "name": "提高护甲粉碎持续时间"
+          },
+          {
+            "id": 763,
+            "name": "游侠反曲几率与弓箭伤害"
+          }
+        ]
+      },
+      {
+        "old_rules": [
+          31
+        ],
+        "new_rule": 31,
+        "name": "[主 神像两普通目标] 追心手里剑 精装玛加莎神像、异端精装玛加莎神像",
+        "bases": [
+          4,
+          11
+        ],
+        "affixes": [
+          {
+            "id": 490,
+            "name": "投掷伤害"
+          },
+          {
+            "id": 743,
+            "name": "共享·暴击伤害加成"
+          }
+        ]
+      },
+      {
+        "old_rules": [
+          38,
+          39
+        ],
+        "new_rule": 32,
+        "name": "[副 神像两普通目标] Flay魔力巫妖 · Allie攻略 中型拉贡神像、中型编织者神像",
+        "bases": [
+          0,
+          1
+        ],
+        "affixes": [
+          {
+            "id": 105,
+            "name": "生命"
+          },
+          {
+            "id": 109,
+            "name": "魔力"
+          },
+          {
+            "id": 842,
+            "name": "护甲与提高护甲"
+          },
+          {
+            "id": 843,
+            "name": "魔力与提高魔力再生"
+          },
+          {
+            "id": 854,
+            "name": "生命与魔力"
+          },
+          {
+            "id": 856,
+            "name": "耐伤与耐伤阈值"
+          }
+        ]
+      },
+      {
+        "old_rules": [
+          52,
+          61,
+          63
+        ],
+        "new_rule": 44,
+        "name": "[主 神像一普通目标] 追心手里剑 异端大型暗影神像、大型原始预兆神像、大型奥术预兆神像、大型钢铁预兆神像、大型幽冥预兆神像、大型黯影预兆神像",
+        "bases": [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "affixes": [
+          {
+            "id": 116,
+            "name": "毒素抗性"
+          },
+          {
+            "id": 117,
+            "name": "元素抗性"
+          },
+          {
+            "id": 491,
+            "name": "弓箭伤害"
+          },
+          {
+            "id": 763,
+            "name": "游侠反曲几率与弓箭伤害"
+          },
+          {
+            "id": 942,
+            "name": "躲避值与提高生命"
+          }
+        ]
+      },
+      {
+        "old_rules": [
+          53,
+          60,
+          62
+        ],
+        "new_rule": 45,
+        "name": "[主 神像一普通目标] 追心手里剑 异端宏伟玛加莎神像、宏伟原始预兆神像、宏伟奥术预兆神像、宏伟钢铁预兆神像、宏伟幽冥预兆神像、宏伟黯影预兆神像",
+        "bases": [
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "affixes": [
+          {
+            "id": 456,
+            "name": "双持时暴击伤害加成"
+          },
+          {
+            "id": 490,
+            "name": "投掷伤害"
+          },
+          {
+            "id": 492,
+            "name": "弓箭暴击几率"
+          },
+          {
+            "id": 743,
+            "name": "共享·暴击伤害加成"
+          }
+        ]
+      },
+      {
+        "old_rules": [
+          54
+        ],
+        "new_rule": 46,
+        "name": "[主 神像一普通目标] 追心手里剑 小型伊泰拉神像",
+        "bases": [
+          0
+        ],
+        "affixes": [
+          {
+            "id": 114,
+            "name": "腐化抗性"
+          },
+          {
+            "id": 116,
+            "name": "毒素抗性"
+          },
+          {
+            "id": 118,
+            "name": "躲避值"
+          },
+          {
+            "id": 319,
+            "name": "共享·物理伤害"
+          }
+        ]
+      },
+      {
+        "old_rules": [
+          55
+        ],
+        "new_rule": 47,
+        "name": "[主 神像一普通目标] 追心手里剑 谦卑编织者神像",
+        "bases": [
+          1
+        ],
+        "affixes": [
+          {
+            "id": 114,
+            "name": "腐化抗性"
+          },
+          {
+            "id": 860,
+            "name": "击杀时恢复生命与增加生命"
+          },
+          {
+            "id": 862,
+            "name": "活力与增加生命再生"
+          },
+          {
+            "id": 867,
+            "name": "腐化抗性与召唤物腐化抗性"
+          },
+          {
+            "id": 868,
+            "name": "虚空抗性与召唤物虚空抗性"
+          },
+          {
+            "id": 873,
+            "name": "增加投掷伤害与提高投掷伤害"
+          }
+        ]
+      },
+      {
+        "old_rules": [
+          56,
+          64
+        ],
+        "new_rule": 48,
+        "name": "[主 神像一普通目标] 追心手里剑 厚实拉贡神像、厚实编织者神像",
+        "bases": [
+          0,
+          1
+        ],
+        "affixes": [
+          {
+            "id": 117,
+            "name": "元素抗性"
+          },
+          {
+            "id": 123,
+            "name": "药剂恢复生命转化为能量护盾"
+          },
+          {
+            "id": 878,
+            "name": "提高暴击几率与暴击伤害加成"
+          },
+          {
+            "id": 880,
+            "name": "击杀时恢复生命与提高生命"
+          },
+          {
+            "id": 885,
+            "name": "冰霜抗性与召唤物冰霜抗性"
+          },
+          {
+            "id": 886,
+            "name": "元素抗性与召唤物元素抗性"
+          }
+        ]
+      },
+      {
+        "old_rules": [
+          57,
+          59
+        ],
+        "new_rule": 49,
+        "name": "[主 神像一普通目标] 追心手里剑 巨型暗影神像、异端巨型暗影神像",
+        "bases": [
+          4,
+          9
+        ],
+        "affixes": [
+          {
+            "id": 470,
+            "name": "投掷物理伤害"
+          },
+          {
+            "id": 480,
+            "name": "提高护甲粉碎持续时间"
+          },
+          {
+            "id": 763,
+            "name": "游侠反曲几率与弓箭伤害"
+          }
+        ]
+      },
+      {
+        "old_rules": [
+          58
+        ],
+        "new_rule": 50,
+        "name": "[主 神像一普通目标] 追心手里剑 精装玛加莎神像、异端精装玛加莎神像",
+        "bases": [
+          4,
+          11
+        ],
+        "affixes": [
+          {
+            "id": 490,
+            "name": "投掷伤害"
+          },
+          {
+            "id": 743,
+            "name": "共享·暴击伤害加成"
+          }
+        ]
+      },
+      {
+        "old_rules": [
+          88,
+          89
+        ],
+        "new_rule": 74,
+        "name": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 厚实拉贡神像、厚实编织者神像",
+        "bases": [
+          0,
+          1
+        ],
+        "affixes": [
+          {
+            "id": 139,
+            "name": "击中时施加点燃几率"
+          },
+          {
+            "id": 876,
+            "name": "击中时施加点燃几率与点燃伤害火焰抗性穿透"
+          }
+        ]
+      },
+      {
+        "old_rules": [
+          90,
+          91
+        ],
+        "new_rule": 75,
+        "name": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 中型拉贡神像、中型编织者神像",
+        "bases": [
+          0,
+          1
+        ],
+        "affixes": [
+          {
+            "id": 105,
+            "name": "生命"
+          },
+          {
+            "id": 109,
+            "name": "魔力"
+          },
+          {
+            "id": 842,
+            "name": "护甲与提高护甲"
+          },
+          {
+            "id": 843,
+            "name": "魔力与提高魔力再生"
+          },
+          {
+            "id": 854,
+            "name": "生命与魔力"
+          },
+          {
+            "id": 856,
+            "name": "耐伤与耐伤阈值"
+          }
+        ]
+      },
+      {
+        "old_rules": [
+          92
+        ],
+        "new_rule": 76,
+        "name": "[副 神像一普通目标] Flay魔力巫妖 · Allie攻略 小型编织者神像",
+        "bases": [
+          2
+        ],
+        "affixes": [
+          {
+            "id": 835,
+            "name": "虚空抗性与召唤物虚空抗性"
+          },
+          {
+            "id": 837,
+            "name": "物理抗性与召唤物物理抗性"
+          }
+        ]
+      }
+    ]
+  }
+}
